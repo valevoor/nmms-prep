@@ -110,7 +110,7 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
         <section className="card question" key={q.id}>
           <div className="q-head">
             <span className="muted">{q.generated ? t.common.practiceQuestion : t.common.bookQ(q.bookNo)}</span>
-            <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : t.common.findMissing}</span>
+            <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : topic.missing === 'direction' ? t.common.findDirection : t.common.findMissing}</span>
           </div>
           <QuestionStem q={q} reveal={chosen ? q.options[q.answer] : undefined} />
           <Options q={q} chosen={chosen} reveal={!!chosen} onPick={pick} />

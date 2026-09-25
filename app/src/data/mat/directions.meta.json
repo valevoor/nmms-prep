@@ -1,0 +1,36 @@
+{
+  "topic": "directions",
+  "intro": "Direction questions describe a walk, a map or a turn. Draw it: put north at the top and east on the right, then follow each step.",
+  "tips": [
+    {
+      "title": "Draw the compass first",
+      "body": "Write N at the top, E on the right, S at the bottom and W on the left. Halfway between them are NE, SE, SW and NW."
+    },
+    {
+      "title": "Left and right depend on where you face",
+      "body": "Facing north, right is east. Facing south, right is west. Facing east, right is south. Turn the page to check if you're unsure."
+    },
+    {
+      "title": "Cancel opposite moves",
+      "body": "Add up all the north and south moves, then all the east and west moves. Opposite moves cancel each other out."
+    },
+    {
+      "title": "Straight-line distance",
+      "body": "If you end up a metres east–west and b metres north–south of the start, the distance is √(a² + b²). Look out for 3, 4, 5 and 6, 8, 10."
+    },
+    {
+      "title": "Shadows",
+      "body": "In the morning the sun is in the east, so shadows point west. In the evening the sun is in the west, so shadows point east."
+    },
+    {
+      "title": "Rotated directions",
+      "body": "If one direction becomes another, count the steps round the compass (45° each) and turn every direction by the same amount."
+    }
+  ],
+  "workedExamples": [
+    "dr-b04",
+    "dr-b11",
+    "dr-b08",
+    "dr-b01"
+  ]
+}

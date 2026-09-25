@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { Question } from '../../types'
 import { generateCoding } from '../generators/coding'
+import { generateDirections } from '../generators/directions'
 import { generateRuleQuestion, generateWrongNumber } from '../generators/games'
 import { generateLetterSeries, LETTER_PATTERNS } from '../generators/letterSeries'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../generators/numberAnalogy'
@@ -13,7 +14,8 @@ const KANNADA = /[ಀ-೿]/
  * English words, which always have lowercase letters. Not maths ("n² + n", "×2") and not puzzle
  * terms in capitals ("JPZ", "NMMN"), which stay as they are in every language.
  */
-const WORDS = /[a-z]{2,}/
+// Unit abbreviations (km, cm) stay the same in Kannada.
+const WORDS = /\b(?!(?:km|cm)\b)[a-z]{2,}/
 
 /** Every sentence with English words must have a Kannada version written in Kannada script. */
 function expectKannada(q: Question) {
@@ -47,6 +49,11 @@ describe('generated questions carry Kannada', () => {
   it('coding–decoding', () => {
     const rng = mulberry32(23)
     for (let n = 0; n < 1000; n++) expectKannada(generateCoding(rng))
+  })
+
+  it('directions', () => {
+    const rng = mulberry32(31)
+    for (let n = 0; n < 1000; n++) expectKannada(generateDirections(rng))
   })
 
   it('odd one out', () => {

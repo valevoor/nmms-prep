@@ -397,6 +397,67 @@ a {
   gap: 10px;
 }
 
+/* ---------- directions diagrams (components/MapDiagram.tsx) ---------- */
+
+.map {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 8px auto;
+  overflow: visible;
+}
+
+.map-walk,
+.map-link,
+.map-compass path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.map-walk {
+  stroke: var(--primary);
+  stroke-width: 3;
+}
+
+.map-link {
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 5;
+}
+
+.map-start {
+  fill: var(--surface);
+  stroke: var(--primary);
+  stroke-width: 2.5;
+}
+
+.map-end,
+.map-point {
+  fill: var(--primary);
+}
+
+.map text {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.map .map-len {
+  fill: var(--muted);
+  font-weight: 600;
+}
+
+.map-compass path {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.map .map-compass text {
+  fill: var(--muted);
+}
+
 /* ---------- text questions (components/QuestionStem.tsx) ---------- */
 
 .stem {

@@ -5,7 +5,7 @@ An offline practice app (PWA) for the NMMS **Mental Ability Test**, for Class 8 
 ## Scope and product decisions
 
 - **English and Kannada.** An EN / ಕನ್ನಡ switch covers the whole app. All the Kannada is an unreviewed draft (see README, "Kannada"). Every new chapter needs `<topic>.kn.json` and `<topic>.meta.kn.json`, and generators build every sentence in both languages (`both()` in `lib/i18n/gen.ts`).
-- **MAT only, one chapter at a time.** Done so far: Ch 14 Number Analogy, Ch 17 Number Series, Ch 18 Odd One Out: Numbers, Ch 19 Find the Wrong Number, Ch 21 Letter Series and Ch 23 Coding–Decoding (batch 1 complete). The agreed plan is the 21 text-based MAT chapters in batches of 3–4, each built in full (book questions, checker, generator, tips, Kannada). Picture chapters (1–13, 24, 33) come later, because the app has no image support yet. Don't start on SAT, a backend or logins without asking.
+- **MAT only, one chapter at a time.** Done so far: Ch 14 Number Analogy, Ch 17 Number Series, Ch 18 Odd One Out: Numbers, Ch 19 Find the Wrong Number, Ch 21 Letter Series, Ch 23 Coding–Decoding and Ch 31 Directions. The agreed plan is the 21 text-based MAT chapters in batches of 3–4, each built in full (book questions, checker, generator, tips, Kannada). Picture chapters (1–13, 24, 33) come later, because the app has no image support yet. Don't start on SAT, a backend or logins without asking.
 - **No story or narrative modes.** A detective-story mode was built and then removed because the user didn't like it. Short puzzle games like "Guess the rule" are what the user wants.
 - **The theme starts on Light**, even on phones set to dark mode, and has a Light / Dark / Auto switch on Home. Classroom projectors need light.
 - **Learn is the highlighted (blue) button** on each topic card.
@@ -57,7 +57,8 @@ app/src/
 5. **Add a generator** in `lib/generators/`. Practice's "More practice", 5 of the 15 Quick test questions and Classroom's "New questions" all depend on one. Test it to prove exactly one option is correct.
 6. Add the chapter to `READY_TOPICS`, remove it from `UPCOMING_MAT`, and add a "Guess the rule" game if the chapter suits one.
 7. **Kannada:** write `<topic>.kn.json` and `<topic>.meta.kn.json`, and list the chapter in `data/chapters.ts`. The app's Kannada lookup, `tools/check_i18n.ts` and `tools/export_i18n.ts` all read that list.
-8. **Question layouts:** `series` (default), `analogy`, `odd` (the four options are the question) and `text` (a `prompt` sentence plus an optional `table`, shown by `components/QuestionStem.tsx`). Each generator needs an independent test proving exactly one option is right.
+8. **Book Kannada:** some chapters (e.g. Directions) print proper Kannada in the rendered pages. Use that wording for questions and options instead of drafting; only the text extraction is garbled.
+9. **Question layouts:** `series` (default), `analogy`, `odd` (the four options are the question) and `text` (a `prompt` sentence plus an optional `table`, shown by `components/QuestionStem.tsx`). Each generator needs an independent test proving exactly one option is right.
 
 ## Content rules
 

@@ -7,6 +7,10 @@ import codingKn from './mat/coding-decoding.kn.json'
 import coding from './mat/coding-decoding.json'
 import codingMetaKn from './mat/coding-decoding.meta.kn.json'
 import codingMeta from './mat/coding-decoding.meta.json'
+import directionsKn from './mat/directions.kn.json'
+import directions from './mat/directions.json'
+import directionsMetaKn from './mat/directions.meta.kn.json'
+import directionsMeta from './mat/directions.meta.json'
 import letterSeriesKn from './mat/letter-series.kn.json'
 import letterSeries from './mat/letter-series.json'
 import letterSeriesMetaKn from './mat/letter-series.meta.kn.json'
@@ -58,4 +62,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('wrong-number', 'Find the Wrong Number', wrongNumber, wrongNumberMeta, wrongNumberKn, wrongNumberMetaKn),
   c('letter-series', 'Letter Series', letterSeries, letterSeriesMeta, letterSeriesKn, letterSeriesMetaKn),
   c('coding-decoding', 'Coding–Decoding', coding, codingMeta, codingKn, codingMetaKn),
+  c('directions', 'Directions', directions, directionsMeta, directionsKn, directionsMetaKn),
 ]

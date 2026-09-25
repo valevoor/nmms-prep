@@ -6,12 +6,15 @@ import numberAnalogyMeta from './mat/number-analogy.meta.json'
 import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
 import coding from './mat/coding-decoding.json'
+import directions from './mat/directions.json'
+import directionsMeta from './mat/directions.meta.json'
 import codingMeta from './mat/coding-decoding.meta.json'
 import oddOne from './mat/odd-one-numbers.json'
 import oddOneMeta from './mat/odd-one-numbers.meta.json'
 import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
 import { generateCoding } from '../lib/generators/coding'
+import { generateDirections } from '../lib/generators/directions'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
 import { generateOddOne } from '../lib/generators/oddOne'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/generators/numberAnalogy'
@@ -25,7 +28,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -95,11 +98,19 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'code',
     generate: generateCoding,
   },
+  {
+    id: 'directions',
+    chapter: 31,
+    name: 'Directions',
+    questions: visible(directions.questions as Question[]),
+    meta: directionsMeta,
+    missing: 'direction',
+    generate: generateDirections,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
 export const UPCOMING_MAT: { chapter: number; name: string }[] = [
-  { chapter: 31, name: 'Directions' },
   { chapter: 32, name: 'Blood Relations' },
   { chapter: 34, name: 'Calendar' },
   { chapter: 35, name: 'Clock' },

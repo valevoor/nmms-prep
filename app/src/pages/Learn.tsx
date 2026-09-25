@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Page } from '../components/Page'
+import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
@@ -36,6 +37,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       {q.layout === 'text' && <QuestionStem q={q} />}
       {(q.layout === 'odd' || q.layout === 'text') && <Options q={q} reveal={done} />}
       {step > 0 && <p className="rule">{text.rule}</p>}
+      {done && <MapDiagram q={q} />}
       {done && <p className="working">{text.working}</p>}
       <div className="actions">
         {!done ? (

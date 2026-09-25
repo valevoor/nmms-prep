@@ -115,7 +115,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
             {source === 'book' ? t.common.bookQ(q.bookNo) : t.classroom.newQuestion} · {index + 1}
             {source === 'book' && t.classroom.of(list.length)}
           </span>
-          <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : t.common.findMissing}</span>
+          <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : topic.missing === 'direction' ? t.common.findDirection : t.common.findMissing}</span>
         </div>
         <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} />
         <Options q={q} size="lg" reveal={revealed} />

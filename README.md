@@ -9,6 +9,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 19, *Find the Wrong Number* ("35, 39, 48, 64, 89, 115"): all 16 book questions, every one confirmed by the book's analysis. The explanation shows the series with the right number put back.
 - MAT Chapter 18, *Odd One Out: Numbers* ("363, 462, 584, 792"): 23 of the 25 book questions. Q2 and Q22 are hidden (`needs-review`) because each has two defensible answers; the notes explain both. The generator rejects any set where a simple property (odd/even, prime, square, divisible by 3, 5 or 11…) would point to a different option.
 - MAT Chapter 23, *Coding–Decoding* ("HOME is coded as IQPI. How is STEM coded?"): all 13 book questions, including the two code-table puzzles. Two book typos are corrected, each with a note (Q5's code YENKNOM, Q7's option "2O15…"). The generator covers the chapter's seven codes and rejects any example that two codes could explain.
+- MAT Chapter 31, *Directions*: all 15 book questions, with the book's own Kannada wording for the questions and options. Explanations draw the walk or the map (`components/MapDiagram.tsx`). The generator makes walks, distances, turns, rotated compasses and town maps.
 
 Each chapter also has a generator that makes unlimited new practice questions.
 

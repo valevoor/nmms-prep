@@ -1,3 +1,4 @@
+export type Compass4 = 'N' | 'E' | 'S' | 'W'
 export type OptionKey = 'A' | 'B' | 'C' | 'D'
 export const OPTION_KEYS: OptionKey[] = ['A', 'B', 'C', 'D']
 
@@ -40,6 +41,13 @@ export type PatternId =
   // Book-only (not generated)
   | 'code-mixed'
   | 'code-table'
+  // Directions (Chapter 31)
+  | 'dir-walk'
+  | 'dir-distance'
+  | 'dir-turns'
+  | 'dir-rotate'
+  | 'dir-places'
+  | 'dir-other'
 
 export interface Question {
   id: string
@@ -51,6 +59,12 @@ export interface Question {
   prompt?: string
   /** 'text' layout: an optional table shown above the prompt, e.g. words and their codes. */
   table?: string[][]
+  /** A walk to draw in the explanation: moves of [N/E/S/W, distance], from the start. */
+  path?: [Compass4, number][]
+  /** Places to draw in the explanation: [label, x (east), y (north)]. */
+  points?: [string, number, number][]
+  /** A dashed line to draw between two points (or 'start' and 'end' of the path). */
+  link?: [string, string]
   options: Record<OptionKey, string>
   answer: OptionKey
   /** One-line rule shown in the explanation. */

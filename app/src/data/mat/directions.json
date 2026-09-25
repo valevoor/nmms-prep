@@ -1,0 +1,512 @@
+{
+  "topic": "directions",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 31 (questions: PDF pages 87–89, solutions: PDF pages 165–167)",
+  "questions": [
+    {
+      "id": "dr-b01",
+      "bookNo": 1,
+      "sourcePage": 87,
+      "keyFrom": "book",
+      "pattern": "dir-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "One morning Uday and Vishal were talking to each other face to face at a crossing. If Vishal's shadow was exactly to the left of Uday, which direction was Uday facing?",
+      "options": {
+        "A": "East",
+        "B": "West",
+        "C": "North",
+        "D": "South"
+      },
+      "answer": "C",
+      "rule": "In the morning the sun is in the east, so shadows fall to the west. Vishal's shadow is on Uday's left, so Uday's left is west.",
+      "working": "If your left is west, you are facing north"
+    },
+    {
+      "id": "dr-b02",
+      "bookNo": 2,
+      "sourcePage": 87,
+      "keyFrom": "book",
+      "pattern": "dir-rotate",
+      "layout": "text",
+      "terms": [],
+      "prompt": "If South-East becomes North, North-East becomes West, and so on, what will West become?",
+      "options": {
+        "A": "North-East",
+        "B": "North-West",
+        "C": "South-East",
+        "D": "South-West"
+      },
+      "answer": "C",
+      "rule": "South-East → North is a turn of 135° anticlockwise, and North-East → West is the same turn. Every direction turns the same way.",
+      "working": "West turned 135° anticlockwise is South-East"
+    },
+    {
+      "id": "dr-b03",
+      "bookNo": 3,
+      "sourcePage": 87,
+      "keyFrom": "book",
+      "pattern": "dir-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Rahul put his timepiece on the table so that at 6 P.M. the hour hand points north. In which direction will the minute hand point at 9.15 P.M.?",
+      "options": {
+        "A": "South-East",
+        "B": "South",
+        "C": "North",
+        "D": "West"
+      },
+      "answer": "D",
+      "rule": "At 6 o'clock the hour hand points at 6, so the 6 on the dial faces north and the 12 faces south. The dial is upside down: 3 faces west and 9 faces east.",
+      "working": "At 9.15 the minute hand points at 3, which faces west"
+    },
+    {
+      "id": "dr-b04",
+      "bookNo": 4,
+      "sourcePage": 87,
+      "keyFrom": "book",
+      "pattern": "dir-walk",
+      "layout": "text",
+      "terms": [],
+      "prompt": "From his house, Lokesh went 15 km north. Then he turned west and covered 10 km. Then he turned south and covered 5 km. Finally, turning east, he covered 10 km. In which direction is he from his house?",
+      "path": [
+        [
+          "N",
+          15
+        ],
+        [
+          "W",
+          10
+        ],
+        [
+          "S",
+          5
+        ],
+        [
+          "E",
+          10
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "East",
+        "B": "West",
+        "C": "North",
+        "D": "South"
+      },
+      "answer": "C",
+      "rule": "Draw the walk: 15 km north, 10 km west, 5 km south, 10 km east.",
+      "working": "The 10 km west and 10 km east cancel, and 15 − 5 = 10 km north is left, so he is north of his house"
+    },
+    {
+      "id": "dr-b05",
+      "bookNo": 5,
+      "sourcePage": 87,
+      "keyFrom": "book",
+      "pattern": "dir-distance",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Two cars start from opposite ends of a main road, 150 km apart. The first car runs 25 km, turns right and runs 15 km. It then turns left and runs another 25 km, and then turns back to reach the main road. Meanwhile, because of a minor breakdown, the other car has run only 35 km along the main road. What is the distance between the two cars now?",
+      "options": {
+        "A": "65 km",
+        "B": "75 km",
+        "C": "80 km",
+        "D": "85 km"
+      },
+      "answer": "A",
+      "rule": "The first car's detour (right, then left, then back to the road) still moves it 25 + 25 = 50 km along the road. The second car has moved 35 km towards it.",
+      "working": "150 − 50 − 35 = 65 km"
+    },
+    {
+      "id": "dr-b06",
+      "bookNo": 6,
+      "sourcePage": 88,
+      "keyFrom": "book",
+      "pattern": "dir-walk",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Starting from point X, Jayant walked 15 m west. He turned left and walked 20 m. He then turned left and walked 15 m. After this he turned right and walked 12 m. How far and in which direction is Jayant now from X?",
+      "path": [
+        [
+          "W",
+          15
+        ],
+        [
+          "S",
+          20
+        ],
+        [
+          "E",
+          15
+        ],
+        [
+          "S",
+          12
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "32 m South",
+        "B": "47 m East",
+        "C": "42 m North",
+        "D": "27 m South"
+      },
+      "answer": "A",
+      "rule": "Facing west, a left turn is south; facing south, a left turn is east; facing east, a right turn is south.",
+      "working": "The 15 m west and 15 m east cancel, and 20 + 12 = 32 m is all to the south",
+      "note": "The English key prints \"47m, South\", but the option it marks (A) and the Kannada key both say 32 m South."
+    },
+    {
+      "id": "dr-b07",
+      "bookNo": 7,
+      "sourcePage": 88,
+      "keyFrom": "book",
+      "pattern": "dir-walk",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A boy rode his bicycle northward, then turned left and rode 1 km, and again turned left and rode 2 km. He found himself 1 km west of his starting point. How far did he ride northward at first?",
+      "path": [
+        [
+          "N",
+          2
+        ],
+        [
+          "W",
+          1
+        ],
+        [
+          "S",
+          2
+        ]
+      ],
+      "options": {
+        "A": "1 km",
+        "B": "2 km",
+        "C": "3 km",
+        "D": "5 km"
+      },
+      "answer": "B",
+      "rule": "North, then left (west) 1 km, then left again (south) 2 km.",
+      "working": "He ends level with the start, 1 km to its west, so the 2 km south exactly undid the ride north: 2 km"
+    },
+    {
+      "id": "dr-b08",
+      "bookNo": 8,
+      "sourcePage": 88,
+      "keyFrom": "book",
+      "pattern": "dir-places",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Some boys are sitting in three rows, all facing north. A is in the middle row. P is just to the right of A, in the same row. Q is just behind P, and R is to the north of A. In which direction of R is Q?",
+      "points": [
+        [
+          "A",
+          0,
+          0
+        ],
+        [
+          "P",
+          1,
+          0
+        ],
+        [
+          "Q",
+          1,
+          -1
+        ],
+        [
+          "R",
+          0,
+          1
+        ]
+      ],
+      "link": [
+        "R",
+        "Q"
+      ],
+      "options": {
+        "A": "North-West",
+        "B": "South-West",
+        "C": "North-East",
+        "D": "South-East"
+      },
+      "answer": "D",
+      "rule": "Everyone faces north, so 'right' is east and 'behind' is south: P is east of A, Q is south of P, and R is north of A.",
+      "working": "From R, Q is further south and further east: south-east"
+    },
+    {
+      "id": "dr-b09",
+      "bookNo": 9,
+      "sourcePage": 88,
+      "keyFrom": "book",
+      "pattern": "dir-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "To go to the university, Hemant started from his house in the east and came to a crossing. The road to the left ends at a theatre, and straight ahead is the hospital. In which direction is the university?",
+      "options": {
+        "A": "North",
+        "B": "South",
+        "C": "East",
+        "D": "West"
+      },
+      "answer": "A",
+      "rule": "Coming from the east, Hemant walks west. At the crossing the left road (south) goes to the theatre and straight ahead (west) is the hospital.",
+      "working": "The road back east goes home, so the only road left for the university is the one to the north"
+    },
+    {
+      "id": "dr-b10",
+      "bookNo": 10,
+      "sourcePage": 88,
+      "keyFrom": "book",
+      "pattern": "dir-distance",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Ravi left home and cycled 10 km south, then turned right and cycled 5 km, then turned right again and cycled 10 km. After this he turned left and cycled 10 km. How many kilometres must he cycle to reach home in a straight line?",
+      "path": [
+        [
+          "S",
+          10
+        ],
+        [
+          "W",
+          5
+        ],
+        [
+          "N",
+          10
+        ],
+        [
+          "W",
+          10
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "10 km",
+        "B": "15 km",
+        "C": "20 km",
+        "D": "25 km"
+      },
+      "answer": "B",
+      "rule": "Facing south, a right turn is west; facing west, a right turn is north; facing north, a left turn is west.",
+      "working": "The 10 km south and 10 km north cancel, so he is 5 + 10 = 15 km west of home"
+    },
+    {
+      "id": "dr-b11",
+      "bookNo": 11,
+      "sourcePage": 89,
+      "keyFrom": "book",
+      "pattern": "dir-distance",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A child went 90 m east to look for his father, then turned right and went 20 m. After this he turned right, and after 30 m he reached his uncle's house. His father was not there. From there he went 100 m north and met his father. How far from the starting point did he meet his father?",
+      "path": [
+        [
+          "E",
+          90
+        ],
+        [
+          "S",
+          20
+        ],
+        [
+          "W",
+          30
+        ],
+        [
+          "N",
+          100
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "80 m",
+        "B": "100 m",
+        "C": "120 m",
+        "D": "150 m"
+      },
+      "answer": "B",
+      "rule": "East 90 m, right (south) 20 m, right (west) 30 m, then north 100 m.",
+      "working": "He ends 90 − 30 = 60 m east and 100 − 20 = 80 m north of the start: √(60² + 80²) = √10000 = 100 m"
+    },
+    {
+      "id": "dr-b12",
+      "bookNo": 12,
+      "sourcePage": 89,
+      "keyFrom": "book",
+      "pattern": "dir-distance",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Umesh went directly from P to Q, which is 9 feet away. Then he turned right and walked 4 feet. After this he turned right and walked the same distance as from P to Q. Finally he turned right and walked 3 feet. How far is he now from P?",
+      "path": [
+        [
+          "E",
+          9
+        ],
+        [
+          "S",
+          4
+        ],
+        [
+          "W",
+          9
+        ],
+        [
+          "N",
+          3
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "6 feet",
+        "B": "5 feet",
+        "C": "1 foot",
+        "D": "0 feet"
+      },
+      "answer": "C",
+      "rule": "Draw it with P to Q going east. Then the right turns point south, west and north in turn.",
+      "working": "The 9 feet east and 9 feet west cancel, and 4 − 3 = 1 foot is left: he is 1 foot from P"
+    },
+    {
+      "id": "dr-b13",
+      "bookNo": 13,
+      "sourcePage": 89,
+      "keyFrom": "book",
+      "pattern": "dir-places",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Village Q is to the north of village P. Village R is to the east of village Q. Village S is to the left of village P. In which direction is village S with respect to village R?",
+      "points": [
+        [
+          "P",
+          0,
+          0
+        ],
+        [
+          "Q",
+          0,
+          1
+        ],
+        [
+          "R",
+          1,
+          1
+        ],
+        [
+          "S",
+          -1,
+          0
+        ]
+      ],
+      "link": [
+        "R",
+        "S"
+      ],
+      "options": {
+        "A": "West",
+        "B": "South-West",
+        "C": "South",
+        "D": "North-West"
+      },
+      "answer": "B",
+      "rule": "Q is north of P, R is east of Q, and S is to the west of P (the left side, with north at the top).",
+      "working": "From R, S is further west and further south: south-west"
+    },
+    {
+      "id": "dr-b14",
+      "bookNo": 14,
+      "sourcePage": 89,
+      "keyFrom": "book",
+      "pattern": "dir-distance",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Madhu walks 15 m north, then turns left at 90° and walks 30 m, then turns right and walks 25 m. How far is she from the starting point, and in which direction?",
+      "path": [
+        [
+          "N",
+          15
+        ],
+        [
+          "W",
+          30
+        ],
+        [
+          "N",
+          25
+        ]
+      ],
+      "link": [
+        "start",
+        "end"
+      ],
+      "options": {
+        "A": "55 m, North-East",
+        "B": "50 m, North-West",
+        "C": "60 m, North",
+        "D": "50 m, West"
+      },
+      "answer": "B",
+      "rule": "North 15 m, left (west) 30 m, right (north) 25 m.",
+      "working": "She is 15 + 25 = 40 m north and 30 m west of the start: √(40² + 30²) = √2500 = 50 m, to the north-west"
+    },
+    {
+      "id": "dr-b15",
+      "bookNo": 15,
+      "sourcePage": 89,
+      "keyFrom": "book",
+      "pattern": "dir-places",
+      "layout": "text",
+      "terms": [],
+      "prompt": "There are four towns P, Q, R and T. Q is to the south-west of P. R is to the east of Q and to the south-east of P. T is to the north of R, in line with QP. In which direction of P is T?",
+      "points": [
+        [
+          "P",
+          0,
+          0
+        ],
+        [
+          "Q",
+          -1,
+          -1
+        ],
+        [
+          "R",
+          1,
+          -1
+        ],
+        [
+          "T",
+          1,
+          1
+        ]
+      ],
+      "link": [
+        "P",
+        "T"
+      ],
+      "options": {
+        "A": "South-East",
+        "B": "North-East",
+        "C": "North",
+        "D": "East"
+      },
+      "answer": "B",
+      "rule": "Q is south-west of P. R is east of Q and south-east of P, so P is above the middle of QR. T is north of R, on the line through Q and P.",
+      "working": "The line from Q through P keeps going north-east, and T is on it: T is north-east of P"
+    }
+  ]
+}
