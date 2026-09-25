@@ -24,6 +24,13 @@ npm run preview         # serve the build (needed to test offline mode)
 
 Before finishing a change, run `npm test`, `npm run check:content`, `npm run lint` and `npm run build`. For UI changes, also check the page in a browser at 360px width in light and dark. There must be no sideways page scroll and no console errors.
 
+## Deployment
+
+- **Live at https://valevoor.github.io/nmms-prep/** (public repo `valevoor/nmms-prep`).
+- **Pushing to `main` deploys.** `.github/workflows/deploy.yml` runs lint, tests, `check:content` and build, then publishes `app/dist` to GitHub Pages.
+- **Before you push:** a push goes live for students within minutes, so run the checks locally first. Only commit or push when the user asks.
+- **Asset paths:** `vite.config.ts` uses `base: './'` so the app works under the `/nmms-prep/` path. Keep all asset paths relative.
+
 ## Layout
 
 ```

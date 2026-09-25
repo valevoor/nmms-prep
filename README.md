@@ -42,9 +42,13 @@ npm run build            # production build in app/dist
 npm run preview          # serve the build (to test offline mode)
 ```
 
-## Put it online
+## Live site
 
-`app/dist` is a plain static site with relative paths. You can host it anywhere: GitHub Pages, Netlify, Cloudflare Pages or a school server. Then share the link or a QR code.
+**https://valevoor.github.io/nmms-prep/**
+
+Every push to `main` publishes automatically via GitHub Actions (`.github/workflows/deploy.yml`). The workflow runs lint, the tests and the answer checks, then builds and deploys. If any check fails, nothing is published and the live site stays as it was. Progress is shown under the repository's **Actions** tab.
+
+To share the app, send the link, or print a QR code of it for the classroom. Students open it once and tap "Add to Home Screen"; after that it works offline, and updates arrive the next time they open it.
 
 ## Content notes
 
