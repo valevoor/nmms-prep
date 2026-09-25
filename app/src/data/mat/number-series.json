@@ -1,0 +1,197 @@
+{
+  "topic": "number-series",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 17 (questions: PDF pages 59–60, solutions: PDF pages 136–138)",
+  "questions": [
+    {
+      "id": "ns-b01", "bookNo": 1, "sourcePage": 59, "keyFrom": "book", "pattern": "prime",
+      "terms": ["2", "3", "5", "7", "11", "?", "17"],
+      "options": { "A": "12", "B": "13", "C": "14", "D": "15" }, "answer": "B",
+      "rule": "These are all prime numbers, in order.",
+      "working": "The prime number after 11 is 13."
+    },
+    {
+      "id": "ns-b02", "bookNo": 2, "sourcePage": 59, "keyFrom": "book", "pattern": "second-difference",
+      "terms": ["1", "6", "15", "?", "45", "66", "91"],
+      "options": { "A": "25", "B": "26", "C": "27", "D": "28" }, "answer": "D",
+      "rule": "The difference grows by 4 each time.",
+      "ops": ["+5", "+9", "+13", "+17", "+21", "+25"],
+      "working": "15 + 13 = 28"
+    },
+    {
+      "id": "ns-b03", "bookNo": 3, "sourcePage": 59, "keyFrom": "book", "pattern": "alternating",
+      "terms": ["6", "17", "10", "15", "16", "13", "24", "?", "?"],
+      "options": { "A": "11, 34", "B": "11, 28", "C": "34, 11", "D": "34, 16" }, "answer": "A",
+      "rule": "Two series are mixed together. 1st, 3rd, 5th… terms: 6, 10, 16, 24 (+4, +6, +8, +10). 2nd, 4th, 6th… terms: 17, 15, 13 (−2 each time).",
+      "working": "Next comes the 2nd series: 13 − 2 = 11. Then the 1st series: 24 + 10 = 34."
+    },
+    {
+      "id": "ns-b04", "bookNo": 4, "sourcePage": 59, "keyFrom": "book", "pattern": "digit-rule",
+      "terms": ["6305", "5204", "4123", "?", "221"],
+      "options": { "A": "352", "B": "343", "C": "362", "D": "386" }, "answer": "C",
+      "rule": "First digit × last digit = the number in the middle. First digits go 6, 5, 4, 3, 2 and last digits go 5, 4, 3, 2, 1.",
+      "working": "First digit 3, last digit 2, middle 3 × 2 = 6 → 362"
+    },
+    {
+      "id": "ns-b05", "bookNo": 5, "sourcePage": 59, "keyFrom": "book", "pattern": "multiply-divide",
+      "terms": ["360", "?", "18", "6", "3", "3"],
+      "options": { "A": "87", "B": "72", "C": "65", "D": "71" }, "answer": "B",
+      "rule": "Each number is divided by 5, 4, 3, 2, 1 in turn. (Read from the right: ×1, ×2, ×3, ×4, ×5.)",
+      "ops": ["÷5", "÷4", "÷3", "÷2", "÷1"],
+      "working": "360 ÷ 5 = 72 (check: 72 ÷ 4 = 18)"
+    },
+    {
+      "id": "ns-b06", "bookNo": 6, "sourcePage": 59, "keyFrom": "book", "pattern": "power-plus",
+      "terms": ["3", "15", "?", "63", "99", "143"],
+      "options": { "A": "27", "B": "35", "C": "45", "D": "56" }, "answer": "B",
+      "rule": "Squares of even numbers minus 1: 2²−1, 4²−1, 6²−1, 8²−1, 10²−1, 12²−1.",
+      "working": "6² − 1 = 36 − 1 = 35"
+    },
+    {
+      "id": "ns-b07", "bookNo": 7, "sourcePage": 59, "keyFrom": "book", "pattern": "difference-powers",
+      "terms": ["7", "8", "16", "43", "?", "232"],
+      "options": { "A": "115", "B": "112", "C": "107", "D": "109" }, "answer": "C",
+      "rule": "The differences are cubes: 1³, 2³, 3³, 4³, 5³.",
+      "ops": ["+1", "+8", "+27", "+64", "+125"],
+      "working": "43 + 64 = 107 (check: 107 + 125 = 232)"
+    },
+    {
+      "id": "ns-b08", "bookNo": 8, "sourcePage": 59, "keyFrom": "book", "pattern": "power-plus",
+      "terms": ["30", "67", "128", "?", "346"],
+      "options": { "A": "218", "B": "219", "C": "248", "D": "236" }, "answer": "B",
+      "rule": "n³ + 3: 3³+3, 4³+3, 5³+3, 6³+3, 7³+3.",
+      "working": "6³ + 3 = 216 + 3 = 219"
+    },
+    {
+      "id": "ns-b09", "bookNo": 9, "sourcePage": 60, "keyFrom": "book", "pattern": "fraction",
+      "terms": ["1/3", "4/5", "5/11", "6/19", "?"],
+      "options": { "A": "10/11", "B": "18/15", "C": "13/23", "D": "6/19" }, "answer": "C",
+      "rule": "Numerator + denominator is a perfect square: 1+3 = 4, 4+5 = 9, 5+11 = 16, 6+19 = 25.",
+      "working": "The next sum must be 6² = 36. Only 13 + 23 = 36."
+    },
+    {
+      "id": "ns-b10", "bookNo": 10, "sourcePage": 60, "keyFrom": "book", "pattern": "power-pairs",
+      "terms": ["1", "1", "4", "8", "9", "27", "16", "?"],
+      "options": { "A": "32", "B": "64", "C": "81", "D": "256" }, "answer": "B",
+      "rule": "Pairs of square and cube: 1², 1³, 2², 2³, 3², 3³, 4², 4³.",
+      "working": "4³ = 64"
+    },
+    {
+      "id": "ns-b11", "bookNo": 11, "sourcePage": 60, "keyFrom": "book", "pattern": "multiply-divide",
+      "terms": ["360", "72", "18", "6", "3", "?"],
+      "options": { "A": "1", "B": "2", "C": "3", "D": "4" }, "answer": "C",
+      "rule": "Each number is divided by 5, 4, 3, 2, 1 in turn.",
+      "ops": ["÷5", "÷4", "÷3", "÷2", "÷1"],
+      "working": "3 ÷ 1 = 3"
+    },
+    {
+      "id": "ns-b12", "bookNo": 12, "sourcePage": 60, "keyFrom": "book", "pattern": "power-plus",
+      "terms": ["3", "14", "39", "84", "?", "258"],
+      "options": { "A": "155", "B": "162", "C": "158", "D": "169" }, "answer": "A",
+      "rule": "n³ + n² + n: 1+1+1, 8+4+2, 27+9+3, 64+16+4, …",
+      "working": "5³ + 5² + 5 = 125 + 25 + 5 = 155"
+    },
+    {
+      "id": "ns-b13", "bookNo": 13, "sourcePage": 60, "keyFrom": "book", "pattern": "mixed-operation",
+      "terms": ["4", "8", "15", "28", "53", "?"],
+      "options": { "A": "110", "B": "102", "C": "107", "D": "121" }, "answer": "B",
+      "rule": "Multiply by 2, then subtract 0, 1, 2, 3, 4 in turn.",
+      "ops": ["×2−0", "×2−1", "×2−2", "×2−3", "×2−4"],
+      "working": "53 × 2 − 4 = 102"
+    },
+    {
+      "id": "ns-b14", "bookNo": 14, "sourcePage": 60, "keyFrom": "solved", "pattern": "repeating-difference",
+      "terms": ["2", "26", "74", "98", "146", "?"],
+      "options": { "A": "170", "B": "168", "C": "175", "D": "172" }, "answer": "A",
+      "rule": "The differences repeat: +24, +48, +24, +48, …",
+      "ops": ["+24", "+48", "+24", "+48", "+24"],
+      "working": "146 + 24 = 170"
+    },
+    {
+      "id": "ns-b18", "bookNo": 18, "sourcePage": 60, "keyFrom": "solved", "pattern": "power-plus",
+      "terms": ["0", "4", "18", "48", "?", "180"],
+      "options": { "A": "110", "B": "141", "C": "100", "D": "125" }, "answer": "C",
+      "rule": "n³ − n²: 1−1, 8−4, 27−9, 64−16, …",
+      "working": "5³ − 5² = 125 − 25 = 100 (check: 6³ − 6² = 216 − 36 = 180)"
+    },
+    {
+      "id": "ns-b20", "bookNo": 20, "sourcePage": 60, "keyFrom": "solved", "pattern": "power-plus",
+      "terms": ["350", "222", "?", "68", "30", "10"],
+      "options": { "A": "145", "B": "130", "C": "168", "D": "170" }, "answer": "B",
+      "rule": "n³ + n, going down: 7³+7, 6³+6, 5³+5, 4³+4, 3³+3, 2³+2.",
+      "working": "5³ + 5 = 125 + 5 = 130"
+    },
+    {
+      "id": "ns-b22", "bookNo": 22, "sourcePage": 60, "keyFrom": "solved", "pattern": "mixed-operation",
+      "status": "needs-review",
+      "terms": ["4", "4", "9", "29", "111", "?"],
+      "options": { "A": "228", "B": "232", "C": "599", "D": "565" }, "answer": "C",
+      "rule": "Likely ×1+0, ×2+1, ×3+2, ×4+3, ×5+4, but that gives 119, not 111.",
+      "working": "No option fits the series as printed. If 111 is a typo for 119, the answer is 119 × 5 + 4 = 599.",
+      "note": "Hidden from students until the series is checked against the original paper."
+    },
+    {
+      "id": "ns-b23", "bookNo": 23, "sourcePage": 60, "keyFrom": "solved", "pattern": "power-plus",
+      "terms": ["2", "12", "36", "80", "?", "252"],
+      "options": { "A": "110", "B": "100", "C": "120", "D": "150" }, "answer": "D",
+      "rule": "n³ + n²: 1+1, 8+4, 27+9, 64+16, …",
+      "working": "5³ + 5² = 125 + 25 = 150 (check: 6³ + 6² = 216 + 36 = 252)"
+    },
+    {
+      "id": "ns-b24", "bookNo": 24, "sourcePage": 60, "keyFrom": "solved", "pattern": "mixed-operation",
+      "terms": ["10", "22", "46", "94", "?"],
+      "options": { "A": "180", "B": "184", "C": "190", "D": "140" }, "answer": "C",
+      "rule": "Multiply by 2, then add 2.",
+      "ops": ["×2+2", "×2+2", "×2+2", "×2+2"],
+      "working": "94 × 2 + 2 = 190"
+    },
+    {
+      "id": "ns-b25", "bookNo": 25, "sourcePage": 60, "keyFrom": "book", "pattern": "mixed-operation",
+      "terms": ["2", "5", "9", "19", "37", "?"],
+      "options": { "A": "73", "B": "75", "C": "76", "D": "78" }, "answer": "B",
+      "rule": "Multiply by 2, then add +1, −1, +1, −1, … in turn.",
+      "ops": ["×2+1", "×2−1", "×2+1", "×2−1", "×2+1"],
+      "working": "37 × 2 + 1 = 75"
+    },
+    {
+      "id": "ns-b26", "bookNo": 26, "sourcePage": 60, "keyFrom": "solved", "pattern": "mixed-operation",
+      "terms": ["2", "7", "27", "107", "?"],
+      "options": { "A": "227", "B": "327", "C": "427", "D": "527" }, "answer": "C",
+      "rule": "Multiply by 4, then subtract 1.",
+      "ops": ["×4−1", "×4−1", "×4−1", "×4−1"],
+      "working": "107 × 4 − 1 = 427"
+    },
+    {
+      "id": "ns-b27", "bookNo": 27, "sourcePage": 60, "keyFrom": "solved", "pattern": "arithmetic",
+      "terms": ["134", "245", "356", "467", "?"],
+      "options": { "A": "579", "B": "578", "C": "568", "D": "478" }, "answer": "B",
+      "rule": "Add 111 each time (every digit goes up by 1).",
+      "ops": ["+111", "+111", "+111", "+111"],
+      "working": "467 + 111 = 578"
+    },
+    {
+      "id": "ns-b28", "bookNo": 28, "sourcePage": 60, "keyFrom": "solved", "pattern": "mixed-operation",
+      "terms": ["4", "9", "21", "47", "?", "211", "433"],
+      "options": { "A": "99", "B": "94", "C": "101", "D": "111" }, "answer": "C",
+      "rule": "Multiply by 2, then add the odd numbers 1, 3, 5, 7, 9, 11 in turn.",
+      "ops": ["×2+1", "×2+3", "×2+5", "×2+7", "×2+9", "×2+11"],
+      "working": "47 × 2 + 7 = 101 (check: 101 × 2 + 9 = 211)"
+    },
+    {
+      "id": "ns-b29", "bookNo": 29, "sourcePage": 60, "keyFrom": "solved", "pattern": "second-difference",
+      "terms": ["17", "15", "12", "8", "?"],
+      "options": { "A": "5", "B": "3", "C": "4", "D": "6" }, "answer": "B",
+      "rule": "Subtract 2, 3, 4, 5 in turn.",
+      "ops": ["−2", "−3", "−4", "−5"],
+      "working": "8 − 5 = 3",
+      "note": "The book prints the third number as \"1.`2\". It is a typo for 12."
+    },
+    {
+      "id": "ns-b30", "bookNo": 30, "sourcePage": 60, "keyFrom": "book", "pattern": "mixed-operation",
+      "terms": ["3", "9", "21", "?", "93"],
+      "options": { "A": "45", "B": "43", "C": "46", "D": "49" }, "answer": "A",
+      "rule": "Multiply by 2, then add 3.",
+      "ops": ["×2+3", "×2+3", "×2+3", "×2+3"],
+      "working": "21 × 2 + 3 = 45 (check: 45 × 2 + 3 = 93)"
+    }
+  ]
+}

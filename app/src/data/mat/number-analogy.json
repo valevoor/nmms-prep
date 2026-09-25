@@ -1,0 +1,111 @@
+{
+  "topic": "number-analogy",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 14 (questions: PDF page 54, solutions: PDF page 131)",
+  "questions": [
+    {
+      "id": "na-b01", "bookNo": 1, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["28", "4", "504", "?"],
+      "options": { "A": "69", "B": "72", "C": "83", "D": "95" }, "answer": "B",
+      "rule": "Divide by 7: 28 ÷ 7 = 4.",
+      "working": "504 ÷ 7 = 72"
+    },
+    {
+      "id": "na-b02", "bookNo": 2, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["56", "121", "75", "?"],
+      "options": { "A": "140", "B": "144", "C": "152", "D": "189" }, "answer": "B",
+      "rule": "Add the two digits, then square: 5 + 6 = 11, and 11² = 121.",
+      "working": "7 + 5 = 12, and 12² = 144"
+    },
+    {
+      "id": "na-b03", "bookNo": 3, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["32", "2", "?", "3"],
+      "options": { "A": "173", "B": "213", "C": "243", "D": "148" }, "answer": "C",
+      "rule": "The first number is the second number to the power 5: 2⁵ = 32.",
+      "working": "3⁵ = 3 × 3 × 3 × 3 × 3 = 243"
+    },
+    {
+      "id": "na-b04", "bookNo": 4, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["23", "51", "37", "?"],
+      "options": { "A": "74", "B": "84", "C": "93", "D": "104" }, "answer": "B",
+      "rule": "Double the number, then add its digits: 23 × 2 + (2 + 3) = 46 + 5 = 51.",
+      "working": "37 × 2 + (3 + 7) = 74 + 10 = 84"
+    },
+    {
+      "id": "na-b05", "bookNo": 5, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["12", "156", "?", "210"],
+      "options": { "A": "13", "B": "11", "C": "15", "D": "14" }, "answer": "D",
+      "rule": "n² + n: 12² + 12 = 144 + 12 = 156.",
+      "working": "14² + 14 = 196 + 14 = 210, so the missing number is 14"
+    },
+    {
+      "id": "na-b06", "bookNo": 6, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["8", "256", "12", "?"],
+      "options": { "A": "680", "B": "854", "C": "832", "D": "864" }, "answer": "D",
+      "rule": "Cube the number, then halve it: 8³ ÷ 2 = 512 ÷ 2 = 256.",
+      "working": "12³ ÷ 2 = 1728 ÷ 2 = 864"
+    },
+    {
+      "id": "na-b07", "bookNo": 7, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["5", "150", "7", "?"],
+      "options": { "A": "340", "B": "353", "C": "392", "D": "370" }, "answer": "C",
+      "rule": "n³ + n²: 5³ + 5² = 125 + 25 = 150.",
+      "working": "7³ + 7² = 343 + 49 = 392"
+    },
+    {
+      "id": "na-b08", "bookNo": 8, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["2783", "3142", "4565", "?"],
+      "options": { "A": "9012", "B": "4321", "C": "4362", "D": "8624" }, "answer": "B",
+      "rule": "Look at the digit sums: 2 + 7 + 8 + 3 = 20 and 3 + 1 + 4 + 2 = 10. The second number's digits add up to half of the first's.",
+      "working": "4 + 5 + 6 + 5 = 20, so the answer's digits must add up to 10. Only 4321 works: 4 + 3 + 2 + 1 = 10."
+    },
+    {
+      "id": "na-b09", "bookNo": 9, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["625", "7", "576", "?"],
+      "options": { "A": "12", "B": "6", "C": "24", "D": "8" }, "answer": "B",
+      "rule": "Take the square root, then add its digits: √625 = 25, and 2 + 5 = 7.",
+      "working": "√576 = 24, and 2 + 4 = 6"
+    },
+    {
+      "id": "na-b10", "bookNo": 10, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["18", "50", "98", "?"],
+      "options": { "A": "164", "B": "163", "C": "160", "D": "162" }, "answer": "D",
+      "rule": "All four are 2 × an odd square: 18 = 2 × 3², 50 = 2 × 5², 98 = 2 × 7².",
+      "working": "Next comes 2 × 9² = 2 × 81 = 162"
+    },
+    {
+      "id": "na-b11", "bookNo": 11, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["41", "9", "85", "?"],
+      "options": { "A": "3", "B": "9", "C": "13", "D": "40" }, "answer": "B",
+      "rule": "Subtract the digits, then square: (4 − 1)² = 3² = 9.",
+      "working": "(8 − 5)² = 3² = 9"
+    },
+    {
+      "id": "na-b12", "bookNo": 12, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["169", "39", "?", "48"],
+      "options": { "A": "236", "B": "248", "C": "256", "D": "294" }, "answer": "C",
+      "rule": "The first number is n², the second is n × 3: 169 = 13², and 13 × 3 = 39.",
+      "working": "48 = 16 × 3, so the missing number is 16² = 256"
+    },
+    {
+      "id": "na-b13", "bookNo": 13, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["250", "10", "128", "?"],
+      "options": { "A": "62", "B": "34", "C": "18", "D": "8" }, "answer": "D",
+      "rule": "The first number is n³ × 2, the second is n × 2: 250 = 5³ × 2, and 5 × 2 = 10.",
+      "working": "128 = 4³ × 2, so the answer is 4 × 2 = 8"
+    },
+    {
+      "id": "na-b14", "bookNo": 14, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["7", "329", "9", "?"],
+      "options": { "A": "549", "B": "632", "C": "711", "D": "678" }, "answer": "C",
+      "rule": "n³ − 2n: 7³ − (7 × 2) = 343 − 14 = 329.",
+      "working": "9³ − (9 × 2) = 729 − 18 = 711"
+    },
+    {
+      "id": "na-b15", "bookNo": 15, "sourcePage": 54, "keyFrom": "book", "pattern": "analogy", "layout": "analogy",
+      "terms": ["24", "13", "?", "29"],
+      "options": { "A": "56", "B": "44", "C": "42", "D": "58" }, "answer": "A",
+      "rule": "Halve the number, then add 1: 24 ÷ 2 + 1 = 13.",
+      "working": "56 ÷ 2 + 1 = 29, so the missing number is 56"
+    }
+  ]
+}
