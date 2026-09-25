@@ -5,6 +5,10 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 **Covered so far:**
 - MAT Chapter 17, *Number Series*: 24 checked book questions.
 - MAT Chapter 14, *Number Analogy* ("28 : 4 :: 504 : ?"): all 15 book questions, every one confirmed by the book's key.
+- MAT Chapter 21, *Letter Series* ("K, M, P, T, Y, ?"): all 21 book questions. The book's key is wrong on Q15, Q18 and Q20, so those answers are worked out by us and each has a note explaining why.
+- MAT Chapter 19, *Find the Wrong Number* ("35, 39, 48, 64, 89, 115"): all 16 book questions, every one confirmed by the book's analysis. The explanation shows the series with the right number put back.
+- MAT Chapter 18, *Odd One Out: Numbers* ("363, 462, 584, 792"): 23 of the 25 book questions. Q2 and Q22 are hidden (`needs-review`) because each has two defensible answers; the notes explain both. The generator rejects any set where a simple property (odd/even, prime, square, divisible by 3, 5 or 11…) would point to a different option.
+- MAT Chapter 23, *Coding–Decoding* ("HOME is coded as IQPI. How is STEM coded?"): all 13 book questions, including the two code-table puzzles. Two book typos are corrected, each with a note (Q5's code YENKNOM, Q7's option "2O15…"). The generator covers the chapter's seven codes and rejects any example that two codes could explain.
 
 Each chapter also has a generator that makes unlimited new practice questions.
 
@@ -26,6 +30,8 @@ Both chapters have a "🔎 Guess the rule" link on their card. Each game is 10 p
 
 The questions are generated, and every option is checked so that exactly one rule fits.
 
+**Language:** an EN / ಕನ್ನಡ switch at the top of the Home and Classroom screens changes the whole app, including questions, explanations, tips and the games. English is the default, and the choice is saved on the device. See [Kannada](#kannada) below.
+
 **Theme:** a ☀️ / 🌙 / 🌓 (Light / Dark / Auto) switch at the top of the Home screen. It starts on Light, even on phones set to dark mode. Auto follows the phone's setting. The choice is saved on the device.
 
 Progress is saved on the device (IndexedDB). After the first visit the app works fully offline, and it can be installed with "Add to Home Screen".
@@ -37,7 +43,8 @@ cd app
 npm install
 npm run dev              # development server
 npm test                 # generator tests (1,000 questions per pattern and game)
-npm run check:content    # checks every book answer (both chapters) against its rule
+npm run check:content    # checks every book answer against its rule, and that all book content has Kannada
+npm run i18n:export      # writes kannada-review.csv (English next to Kannada) for a reviewer
 npm run build            # production build in app/dist
 npm run preview          # serve the build (to test offline mode)
 ```
@@ -56,6 +63,30 @@ To share the app, send the link, or print a QR code of it for the classroom. Stu
 - **Repeated questions:** Q15, 16, 17, 19 and 21 repeat earlier questions, so they were dropped.
 - **Q22 is hidden** (`status: "needs-review"`). No rule fits the series as printed (4, 4, 9, 29, 111, ?). If 111 is a typo for 119, the answer is C (599). Check it against the original paper, then remove the status.
 - **Q29:** the book prints "17, 15, 1.\`2, 8". This is taken to be 12.
+
+## Kannada
+
+> **The Kannada text is a first draft and has not been reviewed.** Have a Kannada-speaking teacher check it before students rely on it.
+
+**Where the text lives:**
+
+| Text | File |
+|---|---|
+| Buttons, headings, labels | `app/src/lib/i18n/en.ts` (source) and `kn.ts`, which has a glossary of fixed terms at the top |
+| Book questions (rule, working, note) | `app/src/data/mat/<topic>.kn.json`, keyed by question id. Lines that are pure maths can be left out; they fall back to English |
+| Intro and tips | `app/src/data/mat/<topic>.meta.kn.json`, in the same order as the English tips |
+| Generated explanations and Guess-the-rule options | `app/src/lib/i18n/gen.ts` |
+
+Numbers stay in Western digits, as in the NMMS papers.
+
+**Checks:**
+- The build fails if `kn.ts` is missing any key from `en.ts`.
+- `npm run check:content` fails if a book question or tip has no Kannada.
+- `npm test` checks that 1,000 generated questions of every kind carry Kannada with no English words left.
+
+**Review workflow:** run `npm run i18n:export`, and send `kannada-review.csv` to the reviewer. It opens in Excel or Google Sheets, and the reviewer writes corrections in the "reviewer comment" column. Copy the corrections into the files above, then remove the draft notes (the `_note` field in the JSON files and the comment at the top of `kn.ts` and `gen.ts`).
+
+**Adding a chapter** also means adding its `.kn.json` and `.meta.kn.json` files and listing the chapter in `app/src/data/chapters.ts`. The app, the coverage check and the export all read that list.
 
 ## Adding the next chapter
 

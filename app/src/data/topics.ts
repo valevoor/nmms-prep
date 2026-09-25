@@ -3,9 +3,20 @@ import numberSeries from './mat/number-series.json'
 import numberSeriesMeta from './mat/number-series.meta.json'
 import numberAnalogy from './mat/number-analogy.json'
 import numberAnalogyMeta from './mat/number-analogy.meta.json'
+import letterSeries from './mat/letter-series.json'
+import letterSeriesMeta from './mat/letter-series.meta.json'
+import coding from './mat/coding-decoding.json'
+import codingMeta from './mat/coding-decoding.meta.json'
+import oddOne from './mat/odd-one-numbers.json'
+import oddOneMeta from './mat/odd-one-numbers.meta.json'
+import wrongNumber from './mat/wrong-number.json'
+import wrongNumberMeta from './mat/wrong-number.meta.json'
+import { generateCoding } from '../lib/generators/coding'
+import { generateLetterSeries } from '../lib/generators/letterSeries'
+import { generateOddOne } from '../lib/generators/oddOne'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/generators/numberAnalogy'
 import { generateNumberSeries } from '../lib/generators/numberSeries'
-import { generateRuleQuestion } from '../lib/generators/games'
+import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
   id: string
@@ -13,17 +24,13 @@ export interface ReadyTopic {
   name: string
   questions: Question[]
   meta: TopicMeta
+  /** What the student looks for in each question; changes the "Find the missing …" prompt. */
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
-  /** "Guess the rule" game; shown only for topics that have one. */
+  /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
   guessRule?: {
     make: () => Question
-    /** Question shown above each puzzle. */
-    prompt: string
-    /** One line under the link on Home. */
-    blurb: string
-    /** Explanation on the game's start screen. */
-    intro: string
   }
 }
 
@@ -39,9 +46,6 @@ export const READY_TOPICS: ReadyTopic[] = [
     generate: generateNumberSeries,
     guessRule: {
       make: () => generateRuleQuestion(),
-      prompt: 'Which rule does this series follow?',
-      blurb: 'Spot the secret pattern in each series',
-      intro: 'Every series follows a secret rule. Look at the numbers and pick the rule. No calculating the answer, just spot the pattern!',
     },
   },
   {
@@ -53,17 +57,48 @@ export const READY_TOPICS: ReadyTopic[] = [
     generate: generateNumberAnalogy,
     guessRule: {
       make: () => generateAnalogyRuleQuestion(),
-      prompt: 'Which rule links both pairs?',
-      blurb: 'Spot the rule that links each pair',
-      intro: 'Each puzzle shows a complete analogy, like 6 : 42 :: 9 : 63. Find the one rule that turns the first number of each pair into the second. No blanks to fill, just spot the rule!',
     },
+  },
+  {
+    id: 'letter-series',
+    chapter: 21,
+    name: 'Letter Series',
+    questions: visible(letterSeries.questions as Question[]),
+    meta: letterSeriesMeta as TopicMeta,
+    missing: 'letters',
+    generate: generateLetterSeries,
+  },
+  {
+    id: 'wrong-number',
+    chapter: 19,
+    name: 'Find the Wrong Number',
+    questions: visible(wrongNumber.questions as Question[]),
+    meta: wrongNumberMeta,
+    missing: 'wrong',
+    generate: generateWrongNumber,
+  },
+  {
+    id: 'odd-one-numbers',
+    chapter: 18,
+    name: 'Odd One Out: Numbers',
+    questions: visible(oddOne.questions as Question[]),
+    meta: oddOneMeta,
+    missing: 'odd',
+    generate: generateOddOne,
+  },
+  {
+    id: 'coding-decoding',
+    chapter: 23,
+    name: 'Coding–Decoding',
+    questions: visible(coding.questions as Question[]),
+    meta: codingMeta as TopicMeta,
+    missing: 'code',
+    generate: generateCoding,
   },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
 export const UPCOMING_MAT: { chapter: number; name: string }[] = [
-  { chapter: 21, name: 'Letter Series' },
-  { chapter: 23, name: 'Coding–Decoding' },
   { chapter: 31, name: 'Directions' },
   { chapter: 32, name: 'Blood Relations' },
   { chapter: 34, name: 'Calendar' },

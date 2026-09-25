@@ -1,0 +1,37 @@
+{
+  "topic": "coding-decoding",
+  "intro": "In coding, a word is changed by a fixed rule. Work out the rule from the example, then use it on the new word, or undo it to find a hidden word.",
+  "cheatSheet": "alphabet",
+  "tips": [
+    {
+      "title": "Write the letters as numbers",
+      "body": "Put A = 1 … Z = 26 under both words. The gap between them shows the shift: +3 means every letter moves 3 places."
+    },
+    {
+      "title": "Opposite letters add up to 27",
+      "body": "In the A ↔ Z code, A + Z = B + Y = 27. So a letter's code is 27 minus its place: G (7) → 20, which is T."
+    },
+    {
+      "title": "Check the order too",
+      "body": "If the code uses the same letters as the word, the word may just be written backwards, or pairs of letters may have swapped places."
+    },
+    {
+      "title": "Growing steps",
+      "body": "If the shift changes from letter to letter (+1, +2, +3…), write the step under each letter before you work anything out."
+    },
+    {
+      "title": "Decoding? Undo the steps",
+      "body": "To go from a code back to a word, undo each step in reverse order: if the code was shifted and then reversed, un-reverse first, then shift back."
+    },
+    {
+      "title": "Tables of words and codes",
+      "body": "When the digits are jumbled, compare two words that share exactly one letter: the one digit their codes share belongs to that letter."
+    }
+  ],
+  "workedExamples": [
+    "cd-b01",
+    "cd-b03",
+    "cd-b02",
+    "cd-b09"
+  ]
+}

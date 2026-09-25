@@ -17,7 +17,9 @@ export function fillBlanks(terms: string[], answer: string): string[] {
 }
 
 /** Plain-text version of a question's terms, e.g. "1, 4, 9, ?" or "28 : 4 :: 504 : ?". */
-export function termsText(terms: string[], layout?: 'series' | 'analogy'): string {
+export function termsText(terms: string[], layout?: 'series' | 'analogy' | 'odd' | 'text'): string {
+  // Odd-one-out items can be pairs ("5, 50"), so they are separated with dots.
+  if (layout === 'odd') return terms.join(' · ')
   if (layout !== 'analogy') return terms.join(', ')
   const [a, b, c, d] = terms
   return `${a} : ${b} :: ${c} : ${d}`

@@ -6,18 +6,18 @@ import { NumberGrid } from './NumberGrid'
 import { ShrinkFlip } from './ShrinkFlip'
 import { ZigZagSplit } from './ZigZagSplit'
 
-export interface TipVisual {
-  Visual: ComponentType<{ step: number }>
-  /** Label of the button that moves to each next step; empty for visuals with their own controls. */
-  buttons: string[]
-}
+/** `label` describes the picture for screen readers. */
+export type VisualProps = { step: number; label: string }
 
-/** Visuals for the Learn page tips, keyed by the `visual` id in a topic's meta JSON. */
-export const TIP_VISUALS: Record<string, TipVisual> = {
-  hop: { Visual: HopArrows, buttons: ['Show me', 'Next hop', 'Next hop', 'Next hop'] },
-  growth: { Visual: GrowthShapes, buttons: ['Show squares', 'Show doubling'] },
-  shrink: { Visual: ShrinkFlip, buttons: ['Show me', 'Flip it'] },
-  zigzag: { Visual: ZigZagSplit, buttons: ['Colour the places', 'Split it'] },
-  grid: { Visual: NumberGrid, buttons: [] },
-  check: { Visual: AnswerCheck, buttons: ['Try 7', 'Try 8'] },
+/**
+ * Visuals for the Learn page tips, keyed by the `visual` id in a topic's meta JSON. Their step
+ * buttons and labels are in lib/i18n (tipVisuals); a visual with no buttons has its own controls.
+ */
+export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
+  hop: HopArrows,
+  growth: GrowthShapes,
+  shrink: ShrinkFlip,
+  zigzag: ZigZagSplit,
+  grid: NumberGrid,
+  check: AnswerCheck,
 }

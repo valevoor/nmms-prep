@@ -1,0 +1,37 @@
+{
+  "topic": "letter-series",
+  "intro": "A letter series is a list of letters (or groups of letters) that follows a hidden rule. Turn the letters into numbers, find the rule, then fill in the missing term.",
+  "cheatSheet": "alphabet",
+  "tips": [
+    {
+      "title": "Number the letters",
+      "body": "Write A = 1, B = 2 … Z = 26. Remember EJOTY: E = 5, J = 10, O = 15, T = 20, Y = 25. Now a letter series is just a number series."
+    },
+    {
+      "title": "Count the jumps",
+      "body": "Count how many letters you jump between neighbours. Equal jumps (+3, +3), growing jumps (+2, +3, +4) and jumps in pairs (+2, +2, +3, +3) are the most common."
+    },
+    {
+      "title": "After Z comes A",
+      "body": "The alphabet goes round in a circle. Y + 6 is E: count on past Z, or work out 25 + 6 = 31 and take away 26."
+    },
+    {
+      "title": "Groups? Split them into columns",
+      "body": "For groups like BY, GT, LO, look at the 1st letters on their own (B, G, L), then the 2nd letters (Y, T, O). Each column has its own rule."
+    },
+    {
+      "title": "Back and forth? Two series",
+      "body": "If the letters jump back and forth, as in C, K, D, L, E, M, split them into odd places (C, D, E) and even places (K, L, M)."
+    },
+    {
+      "title": "Look for shuffled blocks",
+      "body": "Groups like EGF, HJI, KML use letters in a row (E F G) written in a fixed order. Find the order once, then use it on the next block."
+    }
+  ],
+  "workedExamples": [
+    "ls-b01",
+    "ls-b02",
+    "ls-b04",
+    "ls-b05"
+  ]
+}

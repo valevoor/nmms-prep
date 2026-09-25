@@ -1,5 +1,7 @@
 import { OPTION_KEYS } from '../../types'
 import type { OptionKey, PatternId, Question } from '../../types'
+import { both, same } from '../i18n/gen'
+import type { Text } from '../i18n/gen'
 
 export type Rng = () => number
 
@@ -34,12 +36,12 @@ const sup = (p: 2 | 3) => (p === 2 ? '²' : '³')
 export interface Draft {
   pattern: PatternId
   values: number[]
-  rule: string
+  rule: Text
   ops?: string[]
   /** Indices that may be blanked out. Defaults to 2..end. */
   blanks?: number[]
   /** Custom working line; defaults to applying ops[i-1] to the previous term. */
-  explain?: (i: number) => string
+  explain?: (i: number) => Text
   /** Tempting wrong answers (common mistakes) for blank index i. */
   traps: (i: number) => number[]
 }
@@ -55,7 +57,7 @@ function arithmetic(rng: Rng): Draft {
   return {
     pattern: 'arithmetic',
     values,
-    rule: down ? `Subtract ${d} each time.` : `Add ${d} each time.`,
+    rule: both((m) => (down ? m.subtractEach(d) : m.addEach(d))),
     ops: values.slice(1).map(() => sign(step)),
     traps: (i) => [values[i] + step, values[i] - 1, values[i] + 1],
   }
@@ -72,7 +74,7 @@ function secondDifference(rng: Rng): Draft {
   return {
     pattern: 'second-difference',
     values,
-    rule: `The difference grows by ${k} each time.`,
+    rule: both((m) => m.diffGrows(k)),
     ops: diffs.map(sign),
     traps: (i) => [values[i] - k, values[i] + k, values[i] + 1],
   }
@@ -89,7 +91,7 @@ function repeatingDifference(rng: Rng): Draft {
   return {
     pattern: 'repeating-difference',
     values,
-    rule: `The differences repeat: +${d1}, +${d2}, +${d1}, +${d2}, …`,
+    rule: both((m) => m.diffsRepeat(d1, d2)),
     ops: diffs.map(sign),
     traps: (i) => {
       const other = diffs[i - 1] === d1 ? d2 : d1
@@ -113,17 +115,14 @@ function alternating(rng: Rng): Draft {
   }
   const values = A.flatMap((x, i) => [x, B[i]])
   const aSteps = A.slice(1).map((x, i) => x - A[i])
-  const aDesc = growing ? aSteps.map(sign).join(', ') : `${sign(p0)} each time`
-  const bDesc = `${downB ? `−${q}` : `+${q}`} each time`
+  const bStep = downB ? `−${q}` : `+${q}`
   return {
     pattern: 'alternating',
     values,
     blanks: [6, 7],
-    rule: `Two series are mixed. 1st, 3rd, 5th… terms: ${A.join(', ')} (${aDesc}). 2nd, 4th, 6th… terms: ${B.join(', ')} (${bDesc}).`,
+    rule: both((m) => m.mixed(A.join(', '), growing ? aSteps.map(sign).join(', ') : m.eachTime(sign(p0)), B.join(', '), m.eachTime(bStep))),
     explain: (i) =>
-      i % 2 === 0
-        ? `This place belongs to the 1st series: ${A[2]} ${spaced(sign(aSteps[2]))} = ${A[3]}`
-        : `This place belongs to the 2nd series: ${B[2]} ${spaced(downB ? `−${q}` : `+${q}`)} = ${B[3]}`,
+      both((m) => (i % 2 === 0 ? m.inFirst(`${A[2]} ${spaced(sign(aSteps[2]))} = ${A[3]}`) : m.inSecond(`${B[2]} ${spaced(bStep)} = ${B[3]}`))),
     traps: (i) => (i % 2 === 0 ? [B[3], A[3] + 1, A[2] + aSteps[1]] : [A[3], B[3] + (downB ? q : -q) * 2, B[3] + 1]),
   }
 }
@@ -137,7 +136,7 @@ function multiplyDivide(rng: Rng): Draft {
     return {
       pattern: 'multiply-divide',
       values,
-      rule: `Multiply by ${m} each time.`,
+      rule: both((t) => t.multiplyEach(m)),
       ops: values.slice(1).map(() => `×${m}`),
       traps: (i) => [values[i - 1] + values[i - 1], values[i] + m, values[i] - 1],
     }
@@ -149,7 +148,7 @@ function multiplyDivide(rng: Rng): Draft {
     return {
       pattern: 'multiply-divide',
       values: up,
-      rule: 'Multiply by 1, 2, 3, 4, 5 in turn.',
+      rule: both((m) => m.multiplyInTurn),
       ops: [1, 2, 3, 4, 5].map((m) => `×${m}`),
       traps: (i) => [up[i - 1] * (i + 1), up[i] + i, up[i] - 1],
     }
@@ -159,7 +158,7 @@ function multiplyDivide(rng: Rng): Draft {
     pattern: 'multiply-divide',
     values,
     blanks: [1, 2, 3, 4],
-    rule: 'Each number is divided by 5, 4, 3, 2, 1 in turn. (Read from the right: ×1, ×2, ×3, ×4, ×5.)',
+    rule: both((m) => m.divideInTurn),
     ops: [5, 4, 3, 2, 1].map((m) => `÷${m}`),
     traps: (i) => [Math.round(values[i - 1] / (6 - i + 1)), values[i] + 1, values[i] * 2],
   }
@@ -182,12 +181,9 @@ function mixedOperation(rng: Rng): Draft {
   const values = [a]
   for (const add of adds) values.push(values[values.length - 1] * m + add)
   const opStr = (add: number) => `×${m}${add === 0 ? '−0' : sign(add)}`
-  const rule =
-    kind === 'const'
-      ? `Multiply by ${m}, then ${c > 0 ? `add ${c}` : `subtract ${-c}`}.`
-      : kind === 'increasing'
-        ? `Multiply by ${m}, then add ${adds.join(', ')} in turn.`
-        : `Multiply by ${m}, then add +1, −1, +1, −1, … in turn.`
+  const rule = both((t) =>
+    kind === 'const' ? t.multiplyThen(m, c) : kind === 'increasing' ? t.multiplyThenAddList(m, adds.join(', ')) : t.multiplyThenAlternate(m),
+  )
   return {
     pattern: 'mixed-operation',
     values,
@@ -214,11 +210,11 @@ function powerPlus(rng: Rng): Draft {
   return {
     pattern: 'power-plus',
     values,
-    rule: `n${sup(p)}${extra}: ${shown}, …`,
+    rule: same(`n${sup(p)}${extra}: ${shown}, …`),
     explain: (i) => {
       const n = ns[i]
       const add = kind === 'c' ? c : s * n
-      return `${n}${sup(p)} ${add < 0 ? '−' : '+'} ${Math.abs(add)} = ${n ** p} ${add < 0 ? '−' : '+'} ${Math.abs(add)} = ${values[i]}`
+      return same(`${n}${sup(p)} ${add < 0 ? '−' : '+'} ${Math.abs(add)} = ${n ** p} ${add < 0 ? '−' : '+'} ${Math.abs(add)} = ${values[i]}`)
     },
     traps: (i) => [ns[i] ** p, values[i] + 1, values[i] - 1, values[i] + 2 * ns[i]],
   }
@@ -234,7 +230,7 @@ function differencePowers(rng: Rng): Draft {
   return {
     pattern: 'difference-powers',
     values,
-    rule: `The differences are ${p === 2 ? 'squares' : 'cubes'}: ${diffs.map((_, i) => `${s + i}${sup(p)}`).join(', ')}.`,
+    rule: both((m) => m.diffsArePowers(p, diffs.map((_, i) => `${s + i}${sup(p)}`).join(', '))),
     ops: diffs.map(sign),
     traps: (i) => [values[i - 1] + (s + i) ** p, values[i] + 1, values[i] - 1],
   }
@@ -249,8 +245,8 @@ function prime(rng: Rng): Draft {
   return {
     pattern: 'prime',
     values,
-    rule: 'These are prime numbers, in order.',
-    explain: (i) => `The prime number after ${values[i - 1]} is ${values[i]}.`,
+    rule: both((m) => m.primesInOrder),
+    explain: (i) => both((m) => m.primeAfter(values[i - 1], values[i])),
     traps: (i) => [values[i] + 1, values[i] - 1, values[i] + 2].filter((x) => !PRIMES.includes(x)),
   }
 }
@@ -264,8 +260,8 @@ function powerPairs(rng: Rng): Draft {
     pattern: 'power-pairs',
     values,
     blanks: [5, 6, 7],
-    rule: `Pairs of square and cube: ${values.map((_, i) => label(i)).join(', ')}.`,
-    explain: (i) => `${label(i)} = ${values[i]}`,
+    rule: both((m) => m.squareCubePairs(values.map((_, i) => label(i)).join(', '))),
+    explain: (i) => same(`${label(i)} = ${values[i]}`),
     traps: (i) => {
       const n = s + Math.floor(i / 2)
       return i % 2 === 0 ? [n ** 3, (n - 1) ** 3 + 1, n * 2] : [n ** 4, n * n * 2, n ** 3 + n]
@@ -317,12 +313,13 @@ export function generateNumberSeries(rng: Rng = Math.random, pattern?: PatternId
   const options = Object.fromEntries(OPTION_KEYS.map((k, j) => [k, String(order[j])])) as Record<OptionKey, string>
   const answerKey = OPTION_KEYS[order.indexOf(answer)]
 
-  let working: string
+  let working: Text
   if (d.explain) working = d.explain(i)
   else {
     const ops = d.ops!
-    working = `${d.values[i - 1]} ${spaced(ops[i - 1])} = ${answer}`
-    if (i + 1 < d.values.length) working += ` (check: ${answer} ${spaced(ops[i])} = ${d.values[i + 1]})`
+    const sum = `${d.values[i - 1]} ${spaced(ops[i - 1])} = ${answer}`
+    const check = i + 1 < d.values.length ? `${answer} ${spaced(ops[i])} = ${d.values[i + 1]}` : undefined
+    working = both((m) => sum + (check ? m.check(check) : ''))
   }
 
   return {
@@ -330,10 +327,11 @@ export function generateNumberSeries(rng: Rng = Math.random, pattern?: PatternId
     terms: d.values.map((v, j) => (j === i ? '?' : String(v))),
     options,
     answer: answerKey,
-    rule: d.rule,
+    rule: d.rule.en,
     ops: d.ops,
-    working,
+    working: working.en,
     pattern: d.pattern,
     generated: true,
+    kn: { rule: d.rule.kn, working: working.kn },
   }
 }

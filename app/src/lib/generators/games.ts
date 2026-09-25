@@ -2,25 +2,11 @@ import { OPTION_KEYS } from '../../types'
 import type { OptionKey, PatternId, Question } from '../../types'
 import { buildSeries, GENERATOR_PATTERNS, int, pick, shuffle, spaced } from './numberSeries'
 import type { Rng } from './numberSeries'
+import { both, GEN } from '../i18n/gen'
 import { isPrime } from '../series'
 
-/** Plain rule names for "Guess the rule". */
-export const PATTERN_LABELS: Record<PatternId, string> = {
-  arithmetic: 'Add or subtract the same number each time',
-  'second-difference': 'The gap grows by the same amount each time',
-  'repeating-difference': 'Two gaps take turns: +a, +b, +a, +b…',
-  alternating: 'Two different series are mixed together',
-  'multiply-divide': 'Multiply or divide at every step',
-  'mixed-operation': 'Multiply, then add or subtract a number',
-  'power-plus': 'Squares or cubes, with something added or taken away',
-  'difference-powers': 'The gaps are squares or cubes',
-  prime: 'Prime numbers in order',
-  'power-pairs': 'A square, then a cube, in pairs',
-  // Book-only patterns (not generated), listed for completeness.
-  'digit-rule': 'A rule about the digits',
-  fraction: 'A rule about numerator and denominator',
-  analogy: 'The same rule links both pairs',
-}
+/** Plain rule names for "Guess the rule" (English; every language is in lib/i18n/gen.ts). */
+export const PATTERN_LABELS: Record<PatternId, string> = GEN.en.patterns
 
 // ---------- does a series fit a rule? ----------
 
@@ -116,18 +102,20 @@ export function generateRuleQuestion(rng: Rng = Math.random): Question {
     ).slice(0, 3)
     if (others.length < 3) continue
     const order = shuffle(rng, [pattern, ...others])
-    const options = Object.fromEntries(OPTION_KEYS.map((k, j) => [k, PATTERN_LABELS[order[j]]])) as Record<OptionKey, string>
+    const labels = (l: 'en' | 'kn') => Object.fromEntries(OPTION_KEYS.map((k, j) => [k, GEN[l].patterns[order[j]]])) as Record<OptionKey, string>
+    const working = both((m) => m.soTheRuleIs(m.patterns[pattern]))
     return {
       id: newId('rule', rng),
       kind: 'rule',
       terms: d.values.map(String),
-      options,
+      options: labels('en'),
       answer: OPTION_KEYS[order.indexOf(pattern)],
-      rule: d.rule,
+      rule: d.rule.en,
       ops: d.ops,
-      working: `So the rule is: ${PATTERN_LABELS[pattern]}.`,
+      working: working.en,
       pattern,
       generated: true,
+      kn: { rule: d.rule.kn, working: working.kn, options: labels('kn') },
     }
   }
 }
@@ -167,9 +155,8 @@ export function generateWrongNumber(rng: Rng = Math.random): Question {
     const picked = shuffle(rng, [j, ...shuffle(rng, candidates).slice(0, 3)])
     const options = Object.fromEntries(OPTION_KEYS.map((k, n) => [k, String(shown[picked[n]])])) as Record<OptionKey, string>
 
-    let working: string
-    if (d.ops) working = `${wrongValue} is wrong. It should be ${v[j - 1]} ${spaced(d.ops[j - 1])} = ${correct}.`
-    else working = `${wrongValue} is not a prime number. The prime after ${v[j - 1]} is ${correct}.`
+    const ops = d.ops
+    const working = both((m) => (ops ? m.wrongShouldBe(wrongValue, `${v[j - 1]} ${spaced(ops[j - 1])} = ${correct}`) : m.notPrime(wrongValue, v[j - 1], correct)))
 
     return {
       id: newId('wrong', rng),
@@ -177,13 +164,14 @@ export function generateWrongNumber(rng: Rng = Math.random): Question {
       terms: shown.map(String),
       options,
       answer: OPTION_KEYS[picked.indexOf(j)],
-      rule: d.rule,
+      rule: d.rule.en,
       ops: d.ops,
-      working,
+      working: working.en,
       pattern,
       generated: true,
       wrongIndex: j,
       fix: String(correct),
+      kn: { rule: d.rule.kn, working: working.kn },
     }
   }
 }

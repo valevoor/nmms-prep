@@ -1,0 +1,32 @@
+{
+  "topic": "wrong-number",
+  "intro": "One number in each series breaks the pattern. Find the rule the other numbers follow; the number that doesn't fit is the answer.",
+  "tips": [
+    {
+      "title": "Find the rule from the numbers that agree",
+      "body": "Most of the series follows one rule. Work it out from the numbers that fit, then test every number against it."
+    },
+    {
+      "title": "Check both sides",
+      "body": "A wrong number breaks the pattern twice: the gap before it and the gap after it both look odd. The number between two odd gaps is usually the wrong one."
+    },
+    {
+      "title": "Try the usual rules",
+      "body": "Differences, ×2 ± 1, squares and cubes (n² + 1, n³ − 3, n³ + n) and two mixed series cover most questions."
+    },
+    {
+      "title": "Up and down? Split the series",
+      "body": "If the numbers jump up and down, check the odd places and the even places separately. Each part has its own rule."
+    },
+    {
+      "title": "Look inside the numbers",
+      "body": "If no series rule fits, look at the digits of each number. For example, in 147 and 258 the middle digit is the average of the outer two."
+    }
+  ],
+  "workedExamples": [
+    "wn-b01",
+    "wn-b07",
+    "wn-b03",
+    "wn-b16"
+  ]
+}

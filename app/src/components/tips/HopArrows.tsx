@@ -1,3 +1,4 @@
+import type { VisualProps } from './index'
 import { HOP } from './examples'
 import { ArrowHead, Box } from './shapes'
 
@@ -5,11 +6,11 @@ const X = (i: number) => 30 + i * 60
 const BOX_Y = 80
 
 /** Tip 1: a curved "+4" hop appears over each gap, one per step; the last hop fills the blank. */
-export function HopArrows({ step }: { step: number }) {
+export function HopArrows({ step, label }: VisualProps) {
   const terms = [...HOP.terms, HOP.answer]
   const last = terms.length - 1
   return (
-    <svg className="tv" viewBox="0 0 300 104" role="img" aria-label={`${HOP.terms.join(', ')}, ? — each number is ${HOP.op} more than the one before`}>
+    <svg className="tv" viewBox="0 0 300 104" role="img" aria-label={label}>
       {terms.slice(1).map((_, i) => {
         const [x1, x2] = [X(i) + 6, X(i + 1) - 6]
         const mid = (x1 + x2) / 2

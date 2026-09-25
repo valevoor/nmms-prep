@@ -1,17 +1,20 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Explanation } from '../components/Explanation'
+import { LangSwitch } from '../components/LangSwitch'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
-import { SeriesView } from '../components/SeriesView'
+import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { useCountdown } from '../lib/countdown'
 import type { ReadyTopic } from '../data/topics'
+import { useT } from '../lib/i18n'
 import type { Question } from '../types'
 
 type Source = 'book' | 'fresh'
 const TIME_CHOICES = [30, 60, 90, 120]
 
 export function Classroom({ topic }: { topic: ReadyTopic }) {
+  const t = useT()
   const [source, setSource] = useState<Source>('book')
   const [fresh, setFresh] = useState<Question[]>(() => (topic.generate ? [topic.generate()] : []))
   const list = source === 'book' ? topic.questions : fresh
@@ -71,63 +74,74 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
   }, [go])
 
   return (
-    <Page title={`Classroom: ${topic.name}`} back="" wide right={<TimerBadge left={left} total={seconds} />}>
+    <Page
+      title={t.classroom.title(t.chapters[topic.chapter] ?? topic.name)}
+      back=""
+      wide
+      right={
+        <div className="topbar-switches">
+          <LangSwitch />
+          <TimerBadge left={left} total={seconds} />
+        </div>
+      }
+    >
       <div className="class-controls">
-        <div className="seg" role="group" aria-label="Question source">
+        <div className="seg" role="group" aria-label={t.classroom.source}>
           <button className={source === 'book' ? 'on' : ''} onClick={() => switchSource('book')}>
-            Book questions
+            {t.classroom.book}
           </button>
           <button className={source === 'fresh' ? 'on' : ''} onClick={() => switchSource('fresh')} disabled={!topic.generate}>
-            New questions
+            {t.classroom.fresh}
           </button>
         </div>
         <label className="time-pick">
-          Time per question
+          {t.classroom.timePer}
           <select value={seconds} onChange={(e) => (setSeconds(Number(e.target.value)), setTimerKey((k) => k + 1), setRunning(false))}>
             {TIME_CHOICES.map((s) => (
               <option key={s} value={s}>
-                {s}s
+                {t.classroom.seconds(s)}
               </option>
             ))}
           </select>
         </label>
         <button className="btn" onClick={() => (left === 0 && setTimerKey((k) => k + 1), setRunning((r) => !r))}>
-          {running ? '⏸ Pause' : '▶ Start timer'}
+          {running ? t.classroom.pause : t.classroom.startTimer}
         </button>
       </div>
 
       <section className="card question class-card">
         <div className="q-head">
           <span>
-            {source === 'book' ? `Book Q${q.bookNo}` : 'New question'} · {index + 1}
-            {source === 'book' && ` of ${list.length}`}
+            {source === 'book' ? t.common.bookQ(q.bookNo) : t.classroom.newQuestion} · {index + 1}
+            {source === 'book' && t.classroom.of(list.length)}
           </span>
-          <span className="muted">Find the missing number</span>
+          <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : t.common.findMissing}</span>
         </div>
-        <SeriesView terms={q.terms} size="lg" reveal={revealed ? q.options[q.answer] : undefined} layout={q.layout} />
+        <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} />
         <Options q={q} size="lg" reveal={revealed} />
         {explained && <Explanation q={q} size="lg" />}
       </section>
 
       <div className="class-nav">
         <button className="btn btn-lg" onClick={() => go(-1)} disabled={index === 0}>
-          ← Prev
+          {t.classroom.prev}
         </button>
         {!revealed ? (
           <button className="btn btn-primary btn-lg" onClick={() => setRevealed(true)}>
-            Reveal answer
+            {t.classroom.reveal}
           </button>
         ) : (
           <button className="btn btn-primary btn-lg" onClick={() => setExplained((x) => !x)}>
-            {explained ? 'Hide explanation' : 'Show explanation'}
+            {explained ? t.classroom.hideExplanation : t.classroom.showExplanation}
           </button>
         )}
         <button className="btn btn-lg" onClick={() => go(1)} disabled={source === 'book' && index === list.length - 1}>
-          Next →
+          {t.common.next}
         </button>
       </div>
       <p className="kbd-help muted">
-        Keys: <kbd>Space</kbd> reveal · <kbd>E</kbd> explain · <kbd>←</kbd> <kbd>→</kbd> move · <kbd>T</kbd> timer · <kbd>F</kbd> full screen
+        {t.classroom.keys} <kbd>Space</kbd> {t.classroom.keyReveal} · <kbd>E</kbd> {t.classroom.keyExplain} · <kbd>←</kbd> <kbd>→</kbd> {t.classroom.keyMove} · <kbd>T</kbd>{' '}
+        {t.classroom.keyTimer} · <kbd>F</kbd> {t.classroom.keyFull}
       </p>
     </Page>
   )

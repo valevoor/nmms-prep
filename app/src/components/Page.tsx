@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useT } from '../lib/i18n'
 import { href } from '../lib/router'
 
 interface Props {
@@ -10,11 +11,12 @@ interface Props {
 }
 
 export function Page({ title, back, right, wide, children }: Props) {
+  const t = useT()
   return (
     <div className={`page${wide ? ' page-wide' : ''}`}>
       <header className="topbar">
         {back !== undefined ? (
-          <a className="back" href={href(back)} aria-label="Back">
+          <a className="back" href={href(back)} aria-label={t.common.back}>
             ←
           </a>
         ) : (

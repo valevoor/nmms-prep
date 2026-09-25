@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Explanation } from './Explanation'
 import { Options } from './Options'
-import { SeriesView } from './SeriesView'
+import { QuestionStem } from './QuestionStem'
+import { useT } from '../lib/i18n'
 import type { OptionKey, Question } from '../types'
 
 interface Props {
@@ -16,6 +17,7 @@ const sameSeries = (a?: Question, b?: Question) => !!a && !!b && a.terms.join() 
 
 /** A fixed number of generated questions with feedback after each (used by "Guess the rule"). */
 export function RoundGame({ make, rounds, prompt, onFinish }: Props) {
+  const t = useT()
   const [qs, setQs] = useState<Question[]>(() => [make()])
   const [results, setResults] = useState<boolean[]>([])
   const [chosen, setChosen] = useState<OptionKey | undefined>()
@@ -43,20 +45,20 @@ export function RoundGame({ make, rounds, prompt, onFinish }: Props) {
 
   return (
     <section className="card question game-card" key={q.id}>
-      <div className="round-dots" aria-label={`Question ${qs.length} of ${rounds}`}>
+      <div className="round-dots" aria-label={t.game.questionOf(qs.length, rounds)}>
         {Array.from({ length: rounds }, (_, i) => (
           <span key={i} className={`dot${i < results.length ? (results[i] ? ' dot-good' : ' dot-bad') : i === results.length ? ' dot-now' : ''}`} />
         ))}
       </div>
       <p className="game-prompt">{prompt}</p>
-      <SeriesView terms={q.terms} layout={q.layout} />
+      <QuestionStem q={q} />
       <Options q={q} chosen={chosen} reveal={!!chosen} onPick={pick} />
       {chosen && (
         <div className={`feedback ${correct ? 'feedback-good' : 'feedback-bad'}`} role="status">
-          <p className="feedback-title">{correct ? '✓ Correct!' : `✗ Not quite. The answer is ${q.answer}.`}</p>
+          <p className="feedback-title">{correct ? t.common.correct : t.common.notQuite(q.answer)}</p>
           <Explanation q={q} />
           <button className="btn btn-primary btn-lg" onClick={next} autoFocus>
-            {results.length >= rounds ? 'See how you did' : 'Next →'}
+            {results.length >= rounds ? t.game.seeHow : t.common.next}
           </button>
         </div>
       )}

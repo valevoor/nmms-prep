@@ -1,0 +1,32 @@
+{
+  "topic": "odd-one-numbers",
+  "intro": "Three of the four numbers (or pairs) follow the same rule, and one doesn't. Find the rule the three share; the one left over is the answer.",
+  "tips": [
+    {
+      "title": "Find what three have in common",
+      "body": "Look for a rule that three of them share: all prime, all squares, all divisible by 11, digits that add up to the same total…"
+    },
+    {
+      "title": "Look inside the digits",
+      "body": "Many questions use the digits: the middle digit is the sum or product of the outer two, or all the digits add up to the same total."
+    },
+    {
+      "title": "Pairs? Find the link",
+      "body": "For pairs like 5, 50 and 11, 242, work out how the second number comes from the first (here 2 × n²), then test each pair."
+    },
+    {
+      "title": "Know the special numbers",
+      "body": "Learn the primes up to 100, the squares up to 20² and the cubes up to 10³. They give the most common rules."
+    },
+    {
+      "title": "Don't stop at odd or even",
+      "body": "If one number is just odd or even, look for a deeper rule as well. The question usually means the deeper rule."
+    }
+  ],
+  "workedExamples": [
+    "oo-b01",
+    "oo-b14",
+    "oo-b19",
+    "oo-b12"
+  ]
+}

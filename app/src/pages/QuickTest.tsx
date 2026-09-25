@@ -2,10 +2,13 @@ import { useCallback, useRef, useState } from 'react'
 import { Explanation } from '../components/Explanation'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
-import { SeriesView } from '../components/SeriesView'
+import { Rich } from '../components/Rich'
+import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { mmss, useCountdown } from '../lib/countdown'
 import type { ReadyTopic } from '../data/topics'
+import { useLocale, useT } from '../lib/i18n'
+import { questionText } from '../lib/i18n/content'
 import { recordAnswer, recordTest } from '../lib/progress'
 import { href } from '../lib/router'
 import { termsText } from '../lib/series'
@@ -25,6 +28,9 @@ function buildTest(topic: ReadyTopic): Question[] {
 type Phase = 'intro' | 'running' | 'done'
 
 export function QuickTest({ topic }: { topic: ReadyTopic }) {
+  const t = useT()
+  const locale = useLocale()
+  const name = t.chapters[topic.chapter] ?? topic.name
   const [phase, setPhase] = useState<Phase>('intro')
   const [qs, setQs] = useState<Question[]>([])
   const [answers, setAnswers] = useState<Record<string, OptionKey>>({})
@@ -67,19 +73,18 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
 
   if (phase === 'intro')
     return (
-      <Page title="Quick test" back="">
+      <Page title={t.test.title} back="">
         <section className="card intro">
-          <h2>{topic.name}: quick test</h2>
+          <h2>{t.test.heading(name)}</h2>
           <ul className="rules">
-            <li>
-              <strong>{TOTAL} questions</strong> in <strong>{SECONDS / 60} minutes</strong>. That's about 1 minute each, like the real exam.
-            </li>
-            <li>You can skip questions and come back to them.</li>
-            <li>Answers and explanations are shown after you submit.</li>
-            <li>The test submits itself when the time runs out.</li>
+            {t.test.rules(TOTAL, SECONDS / 60).map((r) => (
+              <li key={r.join()}>
+                <Rich parts={r} />
+              </li>
+            ))}
           </ul>
           <button className="btn btn-primary btn-lg" onClick={start}>
-            Start test
+            {t.test.start}
           </button>
         </section>
       </Page>
@@ -90,30 +95,30 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
     const pct = Math.round((100 * score) / qs.length)
     const skipped = qs.filter((q) => !answers[q.id]).length
     return (
-      <Page title="Test results" back="">
+      <Page title={t.test.results} back="">
         <section className="card result">
           <p className="big-score">
             {score}/{qs.length}
           </p>
           <p className="result-pct">{pct}%</p>
           <p className={pct >= 40 ? 'pass' : 'fail'}>
-            {pct >= 75 ? 'Excellent work!' : pct >= 40 ? 'Above the 40% pass mark. Keep improving!' : 'Below the 40% pass mark. Review the explanations below and try again.'}
+            {pct >= 75 ? t.test.excellent : pct >= 40 ? t.test.abovePass : t.test.belowPass}
           </p>
           <p className="muted">
-            Time used {mmss(usedSeconds)}
-            {skipped > 0 && ` · ${skipped} skipped`}
+            {t.test.timeUsed(mmss(usedSeconds))}
+            {skipped > 0 && t.test.skippedCount(skipped)}
           </p>
           <div className="actions">
             <button className="btn btn-primary" onClick={start}>
-              New test
+              {t.test.newTest}
             </button>
             <a className="btn" href={href(`t/${topic.id}/practice?mode=mistakes`)}>
-              Retry mistakes
+              {t.test.retryMistakes}
             </a>
           </div>
         </section>
 
-        <h2 className="section-title">Review</h2>
+        <h2 className="section-title">{t.test.review}</h2>
         <ol className="review">
           {qs.map((q, i) => {
             const a = answers[q.id]
@@ -123,9 +128,9 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
                 <button className="review-head" onClick={() => setOpen(open === q.id ? null : q.id)} aria-expanded={open === q.id}>
                   <span className="review-mark">{ok ? '✓' : a ? '✗' : '–'}</span>
                   <span className="review-q">
-                    {i + 1}. {termsText(q.terms, q.layout)}
+                    {i + 1}. {q.layout === 'text' ? questionText(q, locale).prompt : termsText(q.terms, q.layout)}
                   </span>
-                  <span className="muted">{ok ? q.answer : `${a ?? 'skipped'} → ${q.answer}`}</span>
+                  <span className="muted">{ok ? q.answer : `${a ?? t.test.skipped} → ${q.answer}`}</span>
                 </button>
                 {open === q.id && (
                   <div className="review-body">
@@ -144,42 +149,40 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
   const q = qs[index]
   const answered = Object.keys(answers).length
   return (
-    <Page title="Quick test" back="" right={<TimerBadge left={left} total={SECONDS} />}>
+    <Page title={t.test.title} back="" right={<TimerBadge left={left} total={SECONDS} />}>
       <section className="card question">
         <div className="q-head">
-          <span>
-            Question {index + 1} of {qs.length}
-          </span>
-          <span className="muted">{answered} answered</span>
+          <span>{t.test.questionOf(index + 1, qs.length)}</span>
+          <span className="muted">{t.test.answered(answered)}</span>
         </div>
-        <SeriesView terms={q.terms} layout={q.layout} />
+        <QuestionStem q={q} />
         <Options q={q} chosen={answers[q.id]} onPick={(k) => setAnswers((s) => ({ ...s, [q.id]: k }))} />
         <div className="nav-row">
           <button className="btn" disabled={index === 0} onClick={() => setIndex(index - 1)}>
-            ← Back
+            {t.test.back}
           </button>
           {index < qs.length - 1 ? (
             <button className="btn btn-primary" onClick={() => setIndex(index + 1)}>
-              Next →
+              {t.common.next}
             </button>
           ) : (
-            <button className="btn btn-primary" onClick={() => (answered < qs.length && !confirm(`${qs.length - answered} question(s) not answered. Submit anyway?`) ? null : submit())}>
-              Submit
+            <button className="btn btn-primary" onClick={() => (answered < qs.length && !confirm(t.test.notAnswered(qs.length - answered)) ? null : submit())}>
+              {t.test.submit}
             </button>
           )}
         </div>
       </section>
 
-      <nav className="palette" aria-label="Jump to question">
+      <nav className="palette" aria-label={t.test.jump}>
         {qs.map((x, i) => (
-          <button key={x.id} className={`pal${answers[x.id] ? ' pal-done' : ''}${i === index ? ' pal-current' : ''}`} onClick={() => setIndex(i)} aria-label={`Question ${i + 1}${answers[x.id] ? ', answered' : ''}`}>
+          <button key={x.id} className={`pal${answers[x.id] ? ' pal-done' : ''}${i === index ? ' pal-current' : ''}`} onClick={() => setIndex(i)} aria-label={t.test.palette(i + 1, !!answers[x.id])}>
             {i + 1}
           </button>
         ))}
       </nav>
       <div className="submit-row">
-        <button className="btn btn-ghost" onClick={() => confirm('Submit the test now?') && submit()}>
-          Submit test
+        <button className="btn btn-ghost" onClick={() => confirm(t.test.submitNow) && submit()}>
+          {t.test.submitTest}
         </button>
       </div>
     </Page>

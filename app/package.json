@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest run",
-    "check:content": "tsx ../tools/check_number_series.ts && tsx ../tools/check_number_analogy.ts"
+    "check:content": "tsx ../tools/check_number_series.ts && tsx ../tools/check_number_analogy.ts && tsx ../tools/check_letter_series.ts && tsx ../tools/check_wrong_number.ts && tsx ../tools/check_odd_one.ts && tsx ../tools/check_coding.ts && tsx ../tools/check_i18n.ts",
+    "i18n:export": "tsx ../tools/export_i18n.ts"
   },
   "dependencies": {
     "idb-keyval": "^6.3.0",

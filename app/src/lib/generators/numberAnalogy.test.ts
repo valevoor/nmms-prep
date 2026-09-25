@@ -27,7 +27,7 @@ describe('number analogy generator', () => {
 
 describe('analogy Guess the rule', () => {
   it('has a unique name for every rule', () => {
-    expect(new Set(ANALOGY_RULES.map((r) => r.name)).size).toBe(ANALOGY_RULES.length)
+    expect(new Set(ANALOGY_RULES.map((r) => r.name.en)).size).toBe(ANALOGY_RULES.length)
   })
 
   it('makes 2000 questions where exactly one named rule links both pairs', () => {
@@ -41,7 +41,7 @@ describe('analogy Guess the rule', () => {
       const [a, b, c, d] = q.terms.map(Number)
       expect(new Set(Object.values(q.options)).size, ctx).toBe(4)
       for (const [k, name] of Object.entries(q.options)) {
-        const rule = ANALOGY_RULES.find((r) => r.name === name)!
+        const rule = ANALOGY_RULES.find((r) => r.name.en === name)!
         expect(rule, `${name} :: ${ctx}`).toBeDefined()
         expect(rule.f(a) === b && rule.f(c) === d, `${k}=${name} :: ${ctx}`).toBe(k === q.answer)
       }

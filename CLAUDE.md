@@ -4,8 +4,8 @@ An offline practice app (PWA) for the NMMS **Mental Ability Test**, for Class 8 
 
 ## Scope and product decisions
 
-- **English only.** The PDF is bilingual, but the app uses only the English text.
-- **MAT only, one chapter at a time.** Done so far: Ch 17 Number Series and Ch 14 Number Analogy. Don't start on SAT, a backend or logins without asking.
+- **English and Kannada.** An EN / ಕನ್ನಡ switch covers the whole app. All the Kannada is an unreviewed draft (see README, "Kannada"). Every new chapter needs `<topic>.kn.json` and `<topic>.meta.kn.json`, and generators build every sentence in both languages (`both()` in `lib/i18n/gen.ts`).
+- **MAT only, one chapter at a time.** Done so far: Ch 14 Number Analogy, Ch 17 Number Series, Ch 18 Odd One Out: Numbers, Ch 19 Find the Wrong Number, Ch 21 Letter Series and Ch 23 Coding–Decoding (batch 1 complete). The agreed plan is the 21 text-based MAT chapters in batches of 3–4, each built in full (book questions, checker, generator, tips, Kannada). Picture chapters (1–13, 24, 33) come later, because the app has no image support yet. Don't start on SAT, a backend or logins without asking.
 - **No story or narrative modes.** A detective-story mode was built and then removed because the user didn't like it. Short puzzle games like "Guess the rule" are what the user wants.
 - **The theme starts on Light**, even on phones set to dark mode, and has a Light / Dark / Auto switch on Home. Classroom projectors need light.
 - **Learn is the highlighted (blue) button** on each topic card.
@@ -56,11 +56,14 @@ app/src/
 4. **Verify every answer.** Write `tools/check_<topic>.ts`, which applies an independent rule to each question and checks that the key's answer fits and no other option does. Add it to `check:content`.
 5. **Add a generator** in `lib/generators/`. Practice's "More practice", 5 of the 15 Quick test questions and Classroom's "New questions" all depend on one. Test it to prove exactly one option is correct.
 6. Add the chapter to `READY_TOPICS`, remove it from `UPCOMING_MAT`, and add a "Guess the rule" game if the chapter suits one.
+7. **Kannada:** write `<topic>.kn.json` and `<topic>.meta.kn.json`, and list the chapter in `data/chapters.ts`. The app's Kannada lookup, `tools/check_i18n.ts` and `tools/export_i18n.ts` all read that list.
+8. **Question layouts:** `series` (default), `analogy`, `odd` (the four options are the question) and `text` (a `prompt` sentence plus an optional `table`, shown by `components/QuestionStem.tsx`). Each generator needs an independent test proving exactly one option is right.
 
 ## Content rules
 
 - **The book's answer keys are incomplete and sometimes wrong** (numbering drifts, typos). Never trust a key without checking it.
 - **`keyFrom`:** set `"book"` when the answer is from the book's key, and `"solved"` when we worked it out. The app shows which one to students.
+- **Odd one out:** if another obvious property (prime, square…) makes a *different* option the odd one, the question has two answers. Mark it `needs-review` with a note, as for Ch 18 Q2 and Q22. A difference that is only odd/even doesn't count.
 - **Unclear questions:** if a question can't be resolved, set `"status": "needs-review"` with a `note`. It is hidden from students. Number Series Q22 is in this state, pending a check against the original paper. Don't guess a fix.
 - **Duplicate questions** in the book are dropped.
 - **Generators must never produce two correct options.** For "Guess the rule", every wrong option is checked against the series or pair (see `fitsPattern` and `fitsAnalogy`), and questions that two rules could explain are skipped.

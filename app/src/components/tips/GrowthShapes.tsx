@@ -1,3 +1,4 @@
+import type { VisualProps } from './index'
 import { DOUBLING, SQUARES } from './examples'
 import { Reveal } from './shapes'
 
@@ -5,10 +6,10 @@ const X = (i: number) => 45 + i * 70
 const DOT = 10
 
 /** Tip 2: step 1 draws each square number as a square of dots; step 2 grows bars that double each time. */
-export function GrowthShapes({ step }: { step: number }) {
+export function GrowthShapes({ step, label }: VisualProps) {
   const max = Math.max(...DOUBLING.values)
   return (
-    <svg className="tv" viewBox="0 0 300 250" role="img" aria-label="1, 4, 9, 16 are squares of 1, 2, 3, 4. 2, 4, 8, 16 double each time.">
+    <svg className="tv" viewBox="0 0 300 250" role="img" aria-label={label}>
       {SQUARES.map((v, i) => {
         const n = i + 1
         const size = (n - 1) * DOT

@@ -1,0 +1,123 @@
+{
+  "topic": "wrong-number",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 19 (questions: PDF page 62, solutions: PDF pages 143–144)",
+  "questions": [
+    {
+      "id": "wn-b01", "bookNo": 1, "sourcePage": 62, "keyFrom": "book", "pattern": "difference-powers", "kind": "wrong",
+      "terms": ["35", "39", "48", "64", "89", "115"],
+      "options": {"A": "39", "B": "48", "C": "64", "D": "115"}, "answer": "D", "wrongIndex": 5, "fix": "125",
+      "rule": "The differences are squares: 2², 3², 4², 5², 6² (4, 9, 16, 25, 36).",
+      "ops": ["+4", "+9", "+16", "+25", "+36"],
+      "working": "89 + 36 = 125, not 115",
+      "note": "The book's key prints \"(B) 115\", but 115 is option D."
+    },
+    {
+      "id": "wn-b02", "bookNo": 2, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["5", "24", "61", "122", "214"],
+      "options": {"A": "61", "B": "122", "C": "24", "D": "214"}, "answer": "D", "wrongIndex": 4, "fix": "213",
+      "rule": "n³ − 3: 2³ − 3, 3³ − 3, 4³ − 3, 5³ − 3, 6³ − 3.",
+      "working": "6³ − 3 = 216 − 3 = 213, not 214"
+    },
+    {
+      "id": "wn-b03", "bookNo": 3, "sourcePage": 62, "keyFrom": "book", "pattern": "alternating", "kind": "wrong",
+      "terms": ["7", "6", "9", "11", "13", "16", "16", "21", "19"],
+      "options": {"A": "7", "B": "9", "C": "21", "D": "6"}, "answer": "B", "wrongIndex": 2, "fix": "10",
+      "rule": "Two series are mixed. 2nd, 4th, 6th… terms: 6, 11, 16, 21 (+5). 1st, 3rd, 5th… terms go up by 3: 7, 10, 13, 16, 19.",
+      "working": "7 + 3 = 10, not 9"
+    },
+    {
+      "id": "wn-b04", "bookNo": 4, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["320", "640", "1250", "2160", "3430"],
+      "options": {"A": "320", "B": "1250", "C": "2160", "D": "3430"}, "answer": "A", "wrongIndex": 0, "fix": "270",
+      "rule": "n³ × 10: 3³ × 10, 4³ × 10, 5³ × 10, 6³ × 10, 7³ × 10.",
+      "working": "3³ × 10 = 27 × 10 = 270, not 320"
+    },
+    {
+      "id": "wn-b05", "bookNo": 5, "sourcePage": 62, "keyFrom": "book", "pattern": "sum-previous", "kind": "wrong",
+      "terms": ["3", "4", "7", "11", "18", "29", "57"],
+      "options": {"A": "4", "B": "18", "C": "57", "D": "29"}, "answer": "C", "wrongIndex": 6, "fix": "47",
+      "rule": "Each number is the sum of the two before it: 3 + 4 = 7, 4 + 7 = 11, 7 + 11 = 18, …",
+      "working": "18 + 29 = 47, not 57"
+    },
+    {
+      "id": "wn-b06", "bookNo": 6, "sourcePage": 62, "keyFrom": "book", "pattern": "digit-rule", "kind": "wrong",
+      "terms": ["134", "147", "258", "345", "357"],
+      "options": {"A": "134", "B": "147", "C": "258", "D": "357"}, "answer": "A", "wrongIndex": 0,
+      "rule": "In each number the middle digit is the average of the outer two: 147 → (1 + 7) ÷ 2 = 4, 258 → (2 + 8) ÷ 2 = 5.",
+      "working": "134: (1 + 4) ÷ 2 = 2.5, not 3, so 134 breaks the rule"
+    },
+    {
+      "id": "wn-b07", "bookNo": 7, "sourcePage": 62, "keyFrom": "book", "pattern": "mixed-operation", "kind": "wrong",
+      "terms": ["2", "5", "9", "19", "37", "75", "150"],
+      "options": {"A": "9", "B": "19", "C": "75", "D": "150"}, "answer": "D", "wrongIndex": 6, "fix": "149",
+      "rule": "×2 + 1 and ×2 − 1 take turns.",
+      "ops": ["×2+1", "×2−1", "×2+1", "×2−1", "×2+1", "×2−1"],
+      "working": "75 × 2 − 1 = 149, not 150"
+    },
+    {
+      "id": "wn-b08", "bookNo": 8, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["2", "10", "30", "67", "130"],
+      "options": {"A": "2", "B": "10", "C": "30", "D": "67"}, "answer": "D", "wrongIndex": 3, "fix": "68",
+      "rule": "n³ + n: 1³ + 1, 2³ + 2, 3³ + 3, 4³ + 4, 5³ + 5.",
+      "working": "4³ + 4 = 64 + 4 = 68, not 67"
+    },
+    {
+      "id": "wn-b09", "bookNo": 9, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["12", "36", "80", "150", "250"],
+      "options": {"A": "36", "B": "80", "C": "250", "D": "12"}, "answer": "C", "wrongIndex": 4, "fix": "252",
+      "rule": "n³ + n²: 2³ + 2², 3³ + 3², 4³ + 4², 5³ + 5², 6³ + 6².",
+      "working": "6³ + 6² = 216 + 36 = 252, not 250"
+    },
+    {
+      "id": "wn-b10", "bookNo": 10, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["2", "14", "39", "84", "155"],
+      "options": {"A": "2", "B": "39", "C": "84", "D": "155"}, "answer": "A", "wrongIndex": 0, "fix": "3",
+      "rule": "n³ + n² + n: 1³ + 1² + 1, 2³ + 2² + 2, 3³ + 3² + 3, 4³ + 4² + 4, 5³ + 5² + 5.",
+      "working": "1³ + 1² + 1 = 3, not 2"
+    },
+    {
+      "id": "wn-b11", "bookNo": 11, "sourcePage": 62, "keyFrom": "book", "pattern": "alternating", "kind": "wrong",
+      "terms": ["15", "18", "29", "36", "54", "72"],
+      "options": {"A": "15", "B": "18", "C": "54", "D": "29"}, "answer": "C", "wrongIndex": 4, "fix": "57",
+      "rule": "Two series are mixed. 2nd, 4th, 6th… terms double: 18, 36, 72. 1st, 3rd, 5th… terms are ×2 − 1: 15, 29, 57.",
+      "working": "29 × 2 − 1 = 57, not 54"
+    },
+    {
+      "id": "wn-b12", "bookNo": 12, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["2", "10", "30", "68", "120"],
+      "options": {"A": "120", "B": "10", "C": "30", "D": "68"}, "answer": "A", "wrongIndex": 4, "fix": "130",
+      "rule": "n³ + n: 1³ + 1, 2³ + 2, 3³ + 3, 4³ + 4, 5³ + 5.",
+      "working": "5³ + 5 = 125 + 5 = 130, not 120"
+    },
+    {
+      "id": "wn-b13", "bookNo": 13, "sourcePage": 62, "keyFrom": "book", "pattern": "alternating", "kind": "wrong",
+      "terms": ["81", "64", "27", "16", "9", "4", "3", "1", "0"],
+      "options": {"A": "27", "B": "16", "C": "3", "D": "0"}, "answer": "D", "wrongIndex": 8, "fix": "1",
+      "rule": "Two series are mixed: powers of 3 going down (3⁴, 3³, 3², 3¹, 3⁰) and powers of 4 going down (4³, 4², 4¹, 4⁰).",
+      "working": "3⁰ = 1, not 0"
+    },
+    {
+      "id": "wn-b14", "bookNo": 14, "sourcePage": 62, "keyFrom": "book", "pattern": "mixed-operation", "kind": "wrong",
+      "terms": ["2", "7", "23", "72", "210"],
+      "options": {"A": "2", "B": "7", "C": "23", "D": "210"}, "answer": "D", "wrongIndex": 4, "fix": "220",
+      "rule": "×3 + 1, ×3 + 2, ×3 + 3, ×3 + 4.",
+      "ops": ["×3+1", "×3+2", "×3+3", "×3+4"],
+      "working": "72 × 3 + 4 = 220, not 210"
+    },
+    {
+      "id": "wn-b15", "bookNo": 15, "sourcePage": 62, "keyFrom": "book", "pattern": "difference-powers", "kind": "wrong",
+      "terms": ["2", "3", "7", "16", "32", "67"],
+      "options": {"A": "3", "B": "7", "C": "16", "D": "67"}, "answer": "D", "wrongIndex": 5, "fix": "57",
+      "rule": "The differences are squares: 1, 4, 9, 16, 25.",
+      "ops": ["+1", "+4", "+9", "+16", "+25"],
+      "working": "32 + 25 = 57, not 67"
+    },
+    {
+      "id": "wn-b16", "bookNo": 16, "sourcePage": 62, "keyFrom": "book", "pattern": "power-plus", "kind": "wrong",
+      "terms": ["120", "80", "50", "24", "10", "0"],
+      "options": {"A": "120", "B": "50", "C": "30", "D": "24"}, "answer": "A", "wrongIndex": 0, "fix": "122",
+      "rule": "Odd squares going down, with +1 and −1 taking turns: 11² + 1, 9² − 1, 7² + 1, 5² − 1, 3² + 1, 1² − 1.",
+      "working": "11² + 1 = 121 + 1 = 122, not 120"
+    }
+  ]
+}

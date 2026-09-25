@@ -1,0 +1,160 @@
+{
+  "topic": "letter-series",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 21 (questions: PDF pages 66–67, solutions: PDF pages 146–148)",
+  "questions": [
+    {
+      "id": "ls-b01", "bookNo": 1, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-growing",
+      "terms": ["K", "M", "P", "T", "Y", "?"],
+      "options": {"A": "D", "B": "B", "C": "C", "D": "E"}, "answer": "D",
+      "rule": "The jumps grow: +2, +3, +4, +5, +6. After Z, count on from A.",
+      "ops": ["+2", "+3", "+4", "+5", "+6"],
+      "working": "Y (25) + 6 = 31, and 31 − 26 = 5, which is E"
+    },
+    {
+      "id": "ls-b02", "bookNo": 2, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["BY", "GT", "LO", "QJ", "?"],
+      "options": {"A": "VE", "B": "VF", "C": "VD", "D": "UE"}, "answer": "A",
+      "rule": "1st letters go forward 5 (B, G, L, Q). 2nd letters go back 5 (Y, T, O, J).",
+      "working": "Q + 5 = V and J − 5 = E, so VE"
+    },
+    {
+      "id": "ls-b03", "bookNo": 3, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["CAX", "DEW", "EIV", "FOU", "?"],
+      "options": {"A": "GVT", "B": "VUT", "C": "GUT", "D": "TUG"}, "answer": "C",
+      "rule": "1st letters go forward 1 (C, D, E, F). The middle letters are the vowels A, E, I, O. Last letters go back 1 (X, W, V, U).",
+      "working": "F + 1 = G, the vowel after O is U, and U − 1 = T, so GUT"
+    },
+    {
+      "id": "ls-b04", "bookNo": 4, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-alternating",
+      "terms": ["C", "K", "D", "L", "E", "M", "F", "N", "G", "?", "?"],
+      "options": {"A": "H, I", "B": "O, H", "C": "O, P", "D": "H, O"}, "answer": "B",
+      "rule": "Two series are mixed: C, D, E, F, G in the odd places and K, L, M, N in the even places.",
+      "working": "Next comes the even-place series: N + 1 = O. Then the odd-place series: G + 1 = H. So O, H"
+    },
+    {
+      "id": "ls-b05", "bookNo": 5, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-block",
+      "terms": ["EGF", "HJI", "KML", "NPO", "?"],
+      "options": {"A": "QRS", "B": "QTR", "C": "QSR", "D": "PQR"}, "answer": "C",
+      "rule": "Each group starts 3 letters after the one before (E, H, K, N). Inside a group: the 1st letter, then +2, then +1 (E, G, F).",
+      "working": "Q, then Q + 2 = S, then Q + 1 = R, so QSR"
+    },
+    {
+      "id": "ls-b06", "bookNo": 6, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-word",
+      "terms": ["ENVIRONMENT", "NVIRONMEN", "VIRONME", "?"],
+      "options": {"A": "VIRONM", "B": "IRONM", "C": "IRONME", "D": "IRON"}, "answer": "B",
+      "rule": "Each word drops the first and last letters of the word before.",
+      "working": "VIRONME without V and E is IRONM"
+    },
+    {
+      "id": "ls-b07", "bookNo": 7, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-step",
+      "terms": ["G", "J", "M", "P", "S", "?", "?"],
+      "options": {"A": "V, Y", "B": "T, U", "C": "U, V", "D": "X, U"}, "answer": "A",
+      "rule": "Add 3 each time.",
+      "ops": ["+3", "+3", "+3", "+3", "+3", "+3"],
+      "working": "S + 3 = V, and V + 3 = Y"
+    },
+    {
+      "id": "ls-b08", "bookNo": 8, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["Z2A", "X4D", "V6G", "T8J", "?"],
+      "options": {"A": "K10M", "B": "R01M", "C": "R10M", "D": "R18M"}, "answer": "C",
+      "rule": "1st letters go back 2 (Z, X, V, T). The numbers go up 2 (2, 4, 6, 8). Last letters go forward 3 (A, D, G, J).",
+      "working": "T − 2 = R, 8 + 2 = 10 and J + 3 = M, so R10M"
+    },
+    {
+      "id": "ls-b09", "bookNo": 9, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-block",
+      "terms": ["ACDB", "EGHF", "IKLJ", "?"],
+      "options": {"A": "MOPN", "B": "MNOP", "C": "MONP", "D": "MPON"}, "answer": "A",
+      "rule": "Each group uses 4 letters in a row, written in the order 1st, 3rd, 4th, 2nd: A B C D becomes A C D B.",
+      "working": "The next 4 letters are M N O P, written M O P N"
+    },
+    {
+      "id": "ls-b10", "bookNo": 10, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["XC", "VE", "TG", "RI", "?"],
+      "options": {"A": "PK", "B": "AZ", "C": "QL", "D": "PH"}, "answer": "A",
+      "rule": "1st letters go back 2 (X, V, T, R). 2nd letters go forward 2 (C, E, G, I).",
+      "working": "R − 2 = P and I + 2 = K, so PK"
+    },
+    {
+      "id": "ls-b11", "bookNo": 11, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-step",
+      "terms": ["B", "G", "L", "Q", "V", "?"],
+      "options": {"A": "A", "B": "W", "C": "Z", "D": "B"}, "answer": "A",
+      "rule": "Add 5 each time. After Z, count on from A.",
+      "ops": ["+5", "+5", "+5", "+5", "+5"],
+      "working": "V (22) + 5 = 27, and 27 − 26 = 1, which is A"
+    },
+    {
+      "id": "ls-b12", "bookNo": 12, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["KFU", "LEV", "?", "NCX", "OBY"],
+      "options": {"A": "MPW", "B": "MDW", "C": "MOW", "D": "WDM"}, "answer": "B",
+      "rule": "1st letters go forward 1 (K, L, M, N, O). 2nd letters go back 1 (F, E, D, C, B). 3rd letters go forward 1 (U, V, W, X, Y).",
+      "working": "M, D and W, so MDW"
+    },
+    {
+      "id": "ls-b13", "bookNo": 13, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-growing",
+      "terms": ["B", "D", "F", "I", "L", "P", "?"],
+      "options": {"A": "T", "B": "S", "C": "R", "D": "U"}, "answer": "A",
+      "rule": "The jumps go +2, +2, +3, +3, +4, +4.",
+      "ops": ["+2", "+2", "+3", "+3", "+4", "+4"],
+      "working": "P (16) + 4 = 20, which is T"
+    },
+    {
+      "id": "ls-b14", "bookNo": 14, "sourcePage": 66, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["BC", "DF", "FI", "HL", "?"],
+      "options": {"A": "JK", "B": "JO", "C": "KJ", "D": "JL"}, "answer": "B",
+      "rule": "1st letters go forward 2 (B, D, F, H). 2nd letters go forward 3 (C, F, I, L).",
+      "working": "H + 2 = J and L + 3 = O, so JO"
+    },
+    {
+      "id": "ls-b15", "bookNo": 15, "sourcePage": 66, "keyFrom": "solved", "pattern": "letter-groups",
+      "terms": ["BDF", "DGK", "FJP", "HMU", "?"],
+      "options": {"A": "JPY", "B": "IPY", "C": "JPZ", "D": "JPA"}, "answer": "C",
+      "rule": "1st letters go forward 2 (B, D, F, H), 2nd letters forward 3 (D, G, J, M), 3rd letters forward 5 (F, K, P, U).",
+      "working": "H + 2 = J, M + 3 = P and U + 5 = Z, so JPZ",
+      "note": "The book's key says A (JPY), but its own worked diagram adds 5 to the last letters: F, K, P, U, then Z."
+    },
+    {
+      "id": "ls-b16", "bookNo": 16, "sourcePage": 67, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["2A10", "4B12", "8D15", "16G19", "?"],
+      "options": {"A": "32J24", "B": "32K24", "C": "32K23", "D": "32K32"}, "answer": "B",
+      "rule": "First numbers double (2, 4, 8, 16). Letters jump +1, +2, +3 (A, B, D, G). Last numbers go up 2, 3, 4 (10, 12, 15, 19).",
+      "working": "16 × 2 = 32, G + 4 = K and 19 + 5 = 24, so 32K24"
+    },
+    {
+      "id": "ls-b17", "bookNo": 17, "sourcePage": 67, "keyFrom": "book", "pattern": "letter-groups",
+      "terms": ["VUEF", "TSGH", "RQIJ", "POKL", "?"],
+      "options": {"A": "NMMN", "B": "NMMS", "C": "MNMN", "D": "MMNN"}, "answer": "A",
+      "rule": "The first two letters count backwards in pairs (VU, TS, RQ, PO). The last two count forwards in pairs (EF, GH, IJ, KL).",
+      "working": "NM, then MN, so NMMN"
+    },
+    {
+      "id": "ls-b18", "bookNo": 18, "sourcePage": 67, "keyFrom": "solved", "pattern": "letter-mixed",
+      "terms": ["X2Y3Z5", "X7Y11Z13", "X17Y19Z23", "?"],
+      "options": {"A": "X29Y31Z37", "B": "X24Y25Z26", "C": "X25Y27Z29", "D": "X29Y31Z33"}, "answer": "A",
+      "rule": "X, Y and Z stay the same. The numbers are the prime numbers in order: 2, 3, 5, 7, 11, 13, 17, 19, 23.",
+      "working": "The next primes are 29, 31 and 37, so X29Y31Z37",
+      "note": "The book's key says D (X29Y31Z33), but 33 is not a prime number (33 = 3 × 11)."
+    },
+    {
+      "id": "ls-b19", "bookNo": 19, "sourcePage": 67, "keyFrom": "book", "pattern": "letter-block",
+      "terms": ["EFD", "HIG", "KLJ", "?"],
+      "options": {"A": "MNO", "B": "NOM", "C": "MON", "D": "NON"}, "answer": "B",
+      "rule": "Each group is 3 letters in a row, written 2nd, 3rd, 1st: D E F becomes E F D. The groups start at D, G, J (+3).",
+      "working": "The next 3 letters are M N O, written N O M"
+    },
+    {
+      "id": "ls-b20", "bookNo": 20, "sourcePage": 67, "keyFrom": "solved", "pattern": "letter-mixed",
+      "terms": ["KBL", "LBK", "MBN", "NBM", "?"],
+      "options": {"A": "OBC", "B": "OBP", "C": "PBO", "D": "OBL"}, "answer": "B",
+      "rule": "B stays in the middle. The outside letters come in pairs, K L then M N, and each pair is written forwards, then backwards.",
+      "working": "The next pair is O P, written forwards: OBP",
+      "note": "The book's key says C (PBO). That is the backwards form, which would come 6th, after OBP."
+    },
+    {
+      "id": "ls-b21", "bookNo": 21, "sourcePage": 67, "keyFrom": "book", "pattern": "letter-position",
+      "terms": ["D-4", "H-8", "L-12", "P-16", "?"],
+      "options": {"A": "T-20", "B": "J-20", "C": "I-20", "D": "S-20"}, "answer": "A",
+      "rule": "Each letter is shown with its place in the alphabet, and the letters jump by 4.",
+      "working": "P + 4 = T, the 20th letter, so T-20"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "topic": "coding-decoding",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 23 (questions: PDF pages 70–72, solutions: PDF pages 152–154)",
+  "questions": [
+    {
+      "id": "cd-b01",
+      "bookNo": 1,
+      "sourcePage": 70,
+      "keyFrom": "book",
+      "pattern": "code-steps",
+      "layout": "text",
+      "terms": [],
+      "prompt": "HOME is coded as IQPI. How is STEM coded?",
+      "options": {
+        "A": "TVHQ",
+        "B": "TUFN",
+        "C": "TUHQ",
+        "D": "TVGP"
+      },
+      "answer": "A",
+      "rule": "The letters move +1, +2, +3, +4, one step for each place in the word: H → I, O → Q, M → P, E → I.",
+      "working": "S + 1 = T, T + 2 = V, E + 3 = H and M + 4 = Q, so TVHQ"
+    },
+    {
+      "id": "cd-b02",
+      "bookNo": 2,
+      "sourcePage": 70,
+      "keyFrom": "book",
+      "pattern": "code-shift-reverse",
+      "layout": "text",
+      "terms": [],
+      "prompt": "PHOBN is the code for MANGO. Which word has the code NFFO?",
+      "options": {
+        "A": "NAME",
+        "B": "NEAM",
+        "C": "NEEM",
+        "D": "NEET"
+      },
+      "answer": "C",
+      "rule": "Each letter of MANGO moves 1 place forward (N B O H P), then the code is written backwards: PHOBN.",
+      "working": "Undo the steps: NFFO backwards is OFFN, and moving each letter 1 place back gives NEEM"
+    },
+    {
+      "id": "cd-b03",
+      "bookNo": 3,
+      "sourcePage": 70,
+      "keyFrom": "book",
+      "pattern": "code-opposite",
+      "layout": "text",
+      "terms": [],
+      "prompt": "BENGALURU is coded as YVMTZOFIF. How is SHIMOGA coded?",
+      "options": {
+        "A": "YVMTZAG",
+        "B": "HSNGAZA",
+        "C": "HSRNLTZ",
+        "D": "HSNRLTZ"
+      },
+      "answer": "C",
+      "rule": "Each letter is swapped with its opposite letter: A ↔ Z, B ↔ Y, C ↔ X, and so on (B → Y, E → V, N → M).",
+      "working": "S → H, H → S, I → R, M → N, O → L, G → T and A → Z, so HSRNLTZ"
+    },
+    {
+      "id": "cd-b04",
+      "bookNo": 4,
+      "sourcePage": 70,
+      "keyFrom": "book",
+      "pattern": "code-swap",
+      "layout": "text",
+      "terms": [],
+      "prompt": "TWENTY is written as WTNEYT. How is THIRTY written?",
+      "options": {
+        "A": "HTRIYT",
+        "B": "THIRTY",
+        "C": "HTIRYT",
+        "D": "HRTITY"
+      },
+      "answer": "A",
+      "rule": "Each pair of letters swaps places: TW → WT, EN → NE, TY → YT.",
+      "working": "TH → HT, IR → RI and TY → YT, so HTRIYT"
+    },
+    {
+      "id": "cd-b05",
+      "bookNo": 5,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-reverse",
+      "layout": "text",
+      "terms": [],
+      "prompt": "YEKNOM is the code for MONKEY. Which word has the code REGIT?",
+      "options": {
+        "A": "TIGER",
+        "B": "LIONS",
+        "C": "SHEEP",
+        "D": "GOATS"
+      },
+      "answer": "A",
+      "rule": "The word is written backwards.",
+      "working": "REGIT backwards is TIGER",
+      "note": "The book prints the code as YENKNOM, with an extra N. MONKEY backwards is YEKNOM."
+    },
+    {
+      "id": "cd-b06",
+      "bookNo": 6,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-number",
+      "layout": "text",
+      "terms": [],
+      "prompt": "TITAN is written as 20920114. How is WORD written?",
+      "options": {
+        "A": "12315184",
+        "B": "2315184",
+        "C": "230151804",
+        "D": "2315174"
+      },
+      "answer": "B",
+      "rule": "Each letter is written as its place in the alphabet: T = 20, I = 9, T = 20, A = 1, N = 14.",
+      "working": "W = 23, O = 15, R = 18 and D = 4, so 2315184"
+    },
+    {
+      "id": "cd-b07",
+      "bookNo": 7,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-mixed",
+      "layout": "text",
+      "terms": [],
+      "prompt": "POTATO is coded as 1615TA2015. What is the code for TOMATO?",
+      "options": {
+        "A": "2015MA2015",
+        "B": "TO1513AT15",
+        "C": "TO152015",
+        "D": "2015M1T52"
+      },
+      "answer": "A",
+      "rule": "The first two and the last two letters become their places in the alphabet; the middle two stay as letters: PO → 16 15, TA stays, TO → 20 15.",
+      "working": "TO → 2015, MA stays, TO → 2015, so 2015MA2015",
+      "note": "The book prints option A as 2O15MA2015, with the letter O in place of the digit 0."
+    },
+    {
+      "id": "cd-b08",
+      "bookNo": 8,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-shift",
+      "layout": "text",
+      "terms": [],
+      "prompt": "BUNDLE is coded as EXQGOH. What is the code for MOTHER?",
+      "options": {
+        "A": "PRWKHU",
+        "B": "PQSJGT",
+        "C": "PLSJGT",
+        "D": "PQWKUH"
+      },
+      "answer": "A",
+      "rule": "Each letter moves 3 places forward in the alphabet: B → E, U → X, N → Q.",
+      "working": "M → P, O → R, T → W, H → K, E → H and R → U, so PRWKHU"
+    },
+    {
+      "id": "cd-b09",
+      "bookNo": 9,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-table",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The code uses one digit for each letter, but the digits are not in the same order as the letters. What is the code for BEAN?",
+      "table": [
+        [
+          "PAN",
+          "372"
+        ],
+        [
+          "NIB",
+          "643"
+        ],
+        [
+          "BET",
+          "156"
+        ],
+        [
+          "TIP",
+          "241"
+        ]
+      ],
+      "options": {
+        "A": "3576",
+        "B": "6543",
+        "C": "5763",
+        "D": "6573"
+      },
+      "answer": "D",
+      "rule": "Compare words that share a letter. PAN and NIB share only N, and their codes share only 3, so N = 3. In the same way P = 2, I = 4 and T = 1, which leaves A = 7, B = 6 and E = 5.",
+      "working": "B = 6, E = 5, A = 7 and N = 3, so 6573"
+    },
+    {
+      "id": "cd-b10",
+      "bookNo": 10,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-table",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The code uses one digit for each letter, but the digits are not in the same order as the letters. What is the code for PAINT?",
+      "table": [
+        [
+          "PAN",
+          "372"
+        ],
+        [
+          "NIB",
+          "643"
+        ],
+        [
+          "BET",
+          "156"
+        ],
+        [
+          "TIP",
+          "241"
+        ]
+      ],
+      "options": {
+        "A": "24713",
+        "B": "27431",
+        "C": "13427",
+        "D": "42731"
+      },
+      "answer": "B",
+      "rule": "Compare words that share a letter. PAN and NIB share only N, and their codes share only 3, so N = 3. In the same way P = 2, I = 4 and T = 1, which leaves A = 7, B = 6 and E = 5.",
+      "working": "P = 2, A = 7, I = 4, N = 3 and T = 1, so 27431"
+    },
+    {
+      "id": "cd-b11",
+      "bookNo": 11,
+      "sourcePage": 71,
+      "keyFrom": "book",
+      "pattern": "code-table",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The code uses one digit for each letter, but the digits are not in the same order as the letters. What is the code for TAB?",
+      "table": [
+        [
+          "PAN",
+          "372"
+        ],
+        [
+          "NIB",
+          "643"
+        ],
+        [
+          "BET",
+          "156"
+        ],
+        [
+          "TIP",
+          "241"
+        ]
+      ],
+      "options": {
+        "A": "761",
+        "B": "146",
+        "C": "567",
+        "D": "176"
+      },
+      "answer": "D",
+      "rule": "Compare words that share a letter. PAN and NIB share only N, and their codes share only 3, so N = 3. In the same way P = 2, I = 4 and T = 1, which leaves A = 7, B = 6 and E = 5.",
+      "working": "T = 1, A = 7 and B = 6, so 176"
+    },
+    {
+      "id": "cd-b12",
+      "bookNo": 12,
+      "sourcePage": 72,
+      "keyFrom": "book",
+      "pattern": "code-table",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The code uses one digit for each letter, but the digits are not in the same order as the letters. What is the code for MEAN?",
+      "table": [
+        [
+          "MIN",
+          "315"
+        ],
+        [
+          "PIT",
+          "238"
+        ],
+        [
+          "BAN",
+          "954"
+        ],
+        [
+          "TEN",
+          "725"
+        ]
+      ],
+      "options": {
+        "A": "1795",
+        "B": "7951",
+        "C": "1759",
+        "D": "9751"
+      },
+      "answer": "A",
+      "rule": "Compare words that share a letter. MIN and PIT share only I, and their codes share only 3, so I = 3. In the same way N = 5, M = 1, T = 2, P = 8 and E = 7. A and B are 9 and 4, in some order.",
+      "working": "M = 1, E = 7 and N = 5, so the code is 1 7 _ 5. Only 1795 fits, which also shows A = 9"
+    },
+    {
+      "id": "cd-b13",
+      "bookNo": 13,
+      "sourcePage": 72,
+      "keyFrom": "book",
+      "pattern": "code-table",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The code uses one digit for each letter, but the digits are not in the same order as the letters. What is the code for BEATER?",
+      "table": [
+        [
+          "MIN",
+          "315"
+        ],
+        [
+          "PIT",
+          "238"
+        ],
+        [
+          "BAN",
+          "954"
+        ],
+        [
+          "TEN",
+          "725"
+        ]
+      ],
+      "options": {
+        "A": "479276",
+        "B": "497276",
+        "C": "972764",
+        "D": "427628"
+      },
+      "answer": "A",
+      "rule": "Compare words that share a letter. MIN and PIT share only I, and their codes share only 3, so I = 3. In the same way N = 5, M = 1, T = 2, P = 8 and E = 7. A and B are 9 and 4, in some order.",
+      "working": "From Q12, A = 9, so B = 4. BEATE → 4 7 9 2 7, and only 479276 starts like that",
+      "note": "R is not in the table, so the options have to decide its digit."
+    }
+  ]
+}

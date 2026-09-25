@@ -1,3 +1,4 @@
+import type { VisualProps } from './index'
 import { ZIGZAG } from './examples'
 import { Box, GapArrow, Reveal } from './shapes'
 
@@ -8,7 +9,7 @@ const Y = (v: number) => 108 - v * 2.8
  * Tip 4: a zig-zag line chart. Step 1 colours odd and even places; step 2 joins each colour with
  * its own straight line and writes the two series out underneath.
  */
-export function ZigZagSplit({ step }: { step: number }) {
+export function ZigZagSplit({ step, label }: VisualProps) {
   const v = ZIGZAG.values
   const pts = v.map((x, i) => [X(i), Y(x)] as const)
   const line = (sel: number) =>
@@ -20,7 +21,7 @@ export function ZigZagSplit({ step }: { step: number }) {
   const even = v.filter((_, i) => i % 2 === 1)
   const tone = (i: number) => (step < 1 ? '' : i % 2 === 0 ? ' tv-pt-primary' : ' tv-pt-accent')
   return (
-    <svg className="tv" viewBox="0 0 300 206" role="img" aria-label={`${v.join(', ')} zig-zags. Odd places: ${odd.join(', ')} (${ZIGZAG.oddOp}). Even places: ${even.join(', ')} (${ZIGZAG.evenOp}).`}>
+    <svg className="tv" viewBox="0 0 300 206" role="img" aria-label={label}>
       <path className="tv-zig" d={pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y}`).join('')} />
       <Reveal on={step >= 2}>
         <path className="tv-join tv-join-primary" d={line(0)} />

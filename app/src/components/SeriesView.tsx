@@ -1,12 +1,15 @@
 import type React from 'react'
+import { useT } from '../lib/i18n'
 import { fillBlanks } from '../lib/series'
 
 /** Renders "a/b" as a stacked fraction, anything else as text. */
 export function Term({ value }: { value: string }) {
-  const frac = !value.includes(',') && value.match(/^(\d+)\/(\d+)$/)
+  const t = useT()
+  // Also letter "fractions" such as 17/GA (Chapter 18).
+  const frac = !value.includes(',') && value.match(/^([0-9A-Z]+)\/([0-9A-Z]+)$/)
   if (frac)
     return (
-      <span className="frac" aria-label={`${frac[1]} over ${frac[2]}`}>
+      <span className="frac" aria-label={t.series.over(frac[1], frac[2])}>
         <span>{frac[1]}</span>
         <span>{frac[2]}</span>
       </span>
@@ -26,18 +29,21 @@ interface Props {
   reveal?: string
   size?: 'md' | 'lg'
   /** 'analogy' shows "A : B :: C : D" instead of commas. */
-  layout?: 'series' | 'analogy'
+  /** 'odd' (odd one out) has no series to show: the question is just the options. */
+  layout?: 'series' | 'analogy' | 'odd' | 'text'
 }
 
 /** What goes between neighbouring terms. */
 const ANALOGY_SEPS = [':', '::', ':']
 
 export function SeriesView({ terms, ops, opsShown, reveal, size = 'md', layout = 'series' }: Props) {
+  const tr = useT()
+  if (layout === 'odd' || layout === 'text') return null
   const analogy = layout === 'analogy'
   const filled = reveal ? fillBlanks(terms, reveal) : terms
   // Screen readers skip the ":" separators, so spell the analogy out.
-  const said = filled.map((t) => (t === '?' ? 'what' : t))
-  const label = analogy ? `${said[0]} is to ${said[1]} as ${said[2]} is to ${said[3]}` : 'Number series'
+  const said = filled.map((t) => (t === '?' ? tr.series.what : t))
+  const label = analogy ? tr.series.isToAs(said[0], said[1], said[2], said[3]) : tr.series.numberSeries
   const shown = opsShown ?? ops?.length ?? 0
   // Long labels (×2+11) don't fit under the gaps on a phone, so show them as a list of steps instead.
   const asList = !!ops?.some((op) => op.length > 3)
@@ -48,7 +54,7 @@ export function SeriesView({ terms, ops, opsShown, reveal, size = 'md', layout =
           const blank = terms[i] === '?'
           return (
             <div key={i} className={`term${blank ? (reveal ? ' term-revealed' : ' term-blank') : ''}`} style={{ gridColumn: 2 * i + 1, gridRow: 1 }}>
-              {blank && !reveal ? <span aria-label="missing number">?</span> : <Term value={t} />}
+              {blank && !reveal ? <span aria-label={tr.series.missingNumber}>?</span> : <Term value={t} />}
             </div>
           )
         })}

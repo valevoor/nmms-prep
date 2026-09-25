@@ -1,15 +1,19 @@
 import { useState } from 'react'
+import { useT } from '../../lib/i18n'
+import type { Dict } from '../../lib/i18n'
 import type { TopicMeta } from '../../types'
 import { TIP_VISUALS } from './index'
 
 type Tip = TopicMeta['tips'][number]
+type Stepped = Exclude<keyof Dict['tipVisuals'], 'grid'>
 
 /** A Learn page tip: a tap-through picture when the tip has a visual, plain text otherwise. */
 export function TipCard({ tip, n }: { tip: Tip; n: number }) {
+  const t = useT()
   const [step, setStep] = useState(0)
-  const entry = tip.visual ? TIP_VISUALS[tip.visual] : undefined
+  const Visual = tip.visual ? TIP_VISUALS[tip.visual] : undefined
 
-  if (!entry)
+  if (!Visual)
     return (
       <section className="card tip">
         <span className="tip-num">{n}</span>
@@ -18,7 +22,8 @@ export function TipCard({ tip, n }: { tip: Tip; n: number }) {
       </section>
     )
 
-  const { Visual, buttons } = entry
+  const words = tip.visual && tip.visual !== 'grid' ? t.tipVisuals[tip.visual as Stepped] : undefined
+  const buttons = words?.buttons ?? []
   const done = step >= buttons.length
   return (
     <section className="card tip tip-visual">
@@ -27,18 +32,18 @@ export function TipCard({ tip, n }: { tip: Tip; n: number }) {
         <h3>{tip.title}</h3>
       </header>
       <div className="tip-figure">
-        <Visual step={step} />
+        <Visual step={step} label={words?.label ?? ''} />
       </div>
       {tip.caption && <p className="tip-caption">{tip.caption}</p>}
       {buttons.length > 0 && (
         <div className="actions">
           <button className={`btn${done ? '' : ' btn-primary'}`} onClick={() => setStep(done ? 0 : step + 1)}>
-            {done ? 'Start again' : buttons[step]}
+            {done ? t.common.startAgain : buttons[step]}
           </button>
         </div>
       )}
       <details className="tip-why">
-        <summary>Why?</summary>
+        <summary>{t.learn.why}</summary>
         <p>{tip.body}</p>
       </details>
     </section>

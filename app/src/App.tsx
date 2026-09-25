@@ -1,4 +1,5 @@
 import { Page } from './components/Page'
+import { useT } from './lib/i18n'
 import { getTopic } from './data/topics'
 import { href, useRoute } from './lib/router'
 import { Classroom } from './pages/Classroom'
@@ -12,11 +13,12 @@ import { GuessRule } from './pages/GuessRule'
 const MODES: PracticeMode[] = ['book', 'more', 'mistakes']
 
 function NotFound() {
+  const t = useT()
   return (
-    <Page title="Not found" back="">
-      <p>That page doesn't exist.</p>
+    <Page title={t.common.notFound} back="">
+      <p>{t.common.notFoundBody}</p>
       <a className="btn btn-primary" href={href('')}>
-        Go home
+        {t.common.goHome}
       </a>
     </Page>
   )

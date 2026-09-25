@@ -33,6 +33,24 @@ const ART: Record<number, ReactNode> = {
       <Tile x={30} y={27} label="?" accent />
     </>
   ),
+  // Odd One Out: Numbers
+  18: (
+    <>
+      <Tile x={4} y={4} w={18} label="7" />
+      <Tile x={26} y={4} w={18} label="11" />
+      <Tile x={4} y={26} w={18} label="13" />
+      <Tile x={26} y={26} w={18} label="9" accent />
+    </>
+  ),
+  // Find the Wrong Number
+  19: (
+    <>
+      <Tile x={2} y={15} label="2" />
+      <Tile x={17} y={15} label="4" />
+      <Tile x={32} y={15} label="7" accent />
+      <path d="M31 13l16 22" className="art-hand" />
+    </>
+  ),
   // Letter Series
   21: (
     <>

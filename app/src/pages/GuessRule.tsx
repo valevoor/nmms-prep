@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Page } from '../components/Page'
 import { RoundGame } from '../components/RoundGame'
 import type { ReadyTopic } from '../data/topics'
+import { useT } from '../lib/i18n'
 import { recordBest, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
 
@@ -10,6 +11,8 @@ const GAME = 'guess-rule'
 
 /** Look at a series and pick the rule it follows. Keeps a best score per topic. */
 export function GuessRule({ topic }: { topic: ReadyTopic }) {
+  const t = useT()
+  const text = t.game.topics[topic.id]
   const best = useProgress(topic.id).best[GAME]
   const [round, setRound] = useState(0)
   const [phase, setPhase] = useState<'intro' | 'playing' | 'done'>('intro')
@@ -26,50 +29,46 @@ export function GuessRule({ topic }: { topic: ReadyTopic }) {
   }
 
   return (
-    <Page title="Guess the rule" back="">
+    <Page title={t.game.title} back="">
       {phase === 'intro' && (
         <section className="card intro">
           <span className="game-icon" aria-hidden>
             🔎
           </span>
-          <h2>Guess the rule</h2>
-          <p className="muted">{topic.guessRule?.intro}</p>
-          <p>{ROUNDS} puzzles. Read the explanation after each one.</p>
+          <h2>{t.game.title}</h2>
+          <p className="muted">{text?.intro}</p>
+          <p>{t.game.puzzles(ROUNDS)}</p>
           {best !== undefined && (
-            <p className="chip">
-              Your best: {best}/{ROUNDS}
-            </p>
+            <p className="chip">{t.game.best(best, ROUNDS)}</p>
           )}
           <div className="actions">
             <button className="btn btn-primary btn-lg" onClick={play}>
-              Start
+              {t.game.start}
             </button>
           </div>
         </section>
       )}
 
       {phase === 'playing' && topic.guessRule && (
-        <RoundGame key={round} make={topic.guessRule.make} rounds={ROUNDS} prompt={topic.guessRule.prompt} onFinish={finish} />
+        <RoundGame key={round} make={topic.guessRule.make} rounds={ROUNDS} prompt={text?.prompt ?? ''} onFinish={finish} />
       )}
 
       {phase === 'done' && (
         <section className="card result">
-          {result.record && <span className="stamp">New record!</span>}
+          {result.record && <span className="stamp">{t.game.record}</span>}
           <p className="big-score">
             {result.score}/{ROUNDS}
           </p>
-          <p className="result-pct">rules spotted</p>
+          <p className="result-pct">{t.game.spotted}</p>
           {!result.record && best !== undefined && (
-            <p className="muted">
-              Your best: {best}/{ROUNDS}
-            </p>
+            <p className="muted">{t.game.best(best, ROUNDS)}</p>
           )}
           <div className="actions">
             <button className="btn btn-primary" onClick={play}>
-              Play again
+              {t.game.playAgain}
             </button>
             <a className="btn" href={href(`t/${topic.id}/learn`)}>
-              Review the tips
+              {t.game.reviewTips}
             </a>
           </div>
         </section>
