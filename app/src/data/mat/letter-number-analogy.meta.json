@@ -1,0 +1,37 @@
+{
+  "topic": "letter-number-analogy",
+  "intro": "In a letter–number analogy, letters are turned into numbers (or other letters) by a rule. Find the rule from the first pair, then use it on the second.",
+  "cheatSheet": "alphabet",
+  "tips": [
+    {
+      "title": "Write the places under the letters",
+      "body": "Put A = 1 … Z = 26 under each letter. Most of these questions are about those numbers, not the letters themselves."
+    },
+    {
+      "title": "One letter, one number? Think squares",
+      "body": "If a single letter goes to a big number, check its square and the square of its neighbour: M = 13, and 196 = 14²."
+    },
+    {
+      "title": "A word and a number? Add the places",
+      "body": "Add up the places of the word's letters. Then see how the total became the number: the same, doubled, halved, squared or square-rooted."
+    },
+    {
+      "title": "Letters to letters? Find each step",
+      "body": "Write the step under each letter (+2, +3, +4…). The steps often grow, or go up and down in turn."
+    },
+    {
+      "title": "Opposite letters add up to 27",
+      "body": "A ↔ Z, B ↔ Y, C ↔ X … A letter's opposite is 27 minus its place: D (4) → 23, which is W."
+    },
+    {
+      "title": "Check every option",
+      "body": "Long codes often differ in just one or two letters. Work out the whole answer first, then compare it letter by letter."
+    }
+  ],
+  "workedExamples": [
+    "ln-b03",
+    "ln-b15",
+    "ln-b12",
+    "ln-b07"
+  ]
+}

@@ -48,16 +48,40 @@ export function SeriesView({ terms, ops, opsShown, reveal, size = 'md', layout =
   const said = filled.map((t) => (t === '?' ? tr.series.what : t))
   const label = analogy ? tr.series.isToAs(said[0], said[1], said[2], said[3]) : tr.series.numberSeries
   const shown = opsShown ?? ops?.length ?? 0
+  const cell = (i: number) => {
+    const blank = terms[i] === '?'
+    return blank && !reveal ? <span aria-label={tr.series.missingNumber}>?</span> : <Term value={filled[i]} />
+  }
+  const cls = (i: number) => `term${terms[i] === '?' ? (reveal ? ' term-revealed' : ' term-blank') : ''}`
+  // An analogy wraps after "::" when it doesn't fit one line (LIGHT : KMHJFHGISU :: SOUND : ? on a phone).
+  if (analogy && !ops)
+    return (
+      <div className={`series-scroll series-${size} analogy-wrap`} style={{ '--n': Math.max(terms.length, Math.ceil(Math.max(filled[0].length + filled[1].length, filled[2].length + filled[3].length) / 3)) } as React.CSSProperties} role="group" aria-label={label}>
+        {[0, 2].map((i) => (
+          <span key={i} className="pair">
+            <span className={cls(i)}>{cell(i)}</span>
+            <span className="comma sep" aria-hidden>
+              :
+            </span>
+            <span className={cls(i + 1)}>{cell(i + 1)}</span>
+            {i === 0 && (
+              <span className="comma sep" aria-hidden>
+                ::
+              </span>
+            )}
+          </span>
+        ))}
+      </div>
+    )
   // Long labels (×2+11) don't fit under the gaps on a phone, so show them as a list of steps instead.
   const asList = !!ops?.some((op) => op.length > 3)
   return (
     <div className={`series-scroll series-${size}`} style={{ '--n': terms.length } as React.CSSProperties}>
       <div className="series" style={{ gridTemplateColumns: `repeat(${terms.length - 1}, auto auto) auto` }} role="group" aria-label={label}>
-        {filled.map((t, i) => {
-          const blank = terms[i] === '?'
+        {filled.map((_, i) => {
           return (
-            <div key={i} className={`term${blank ? (reveal ? ' term-revealed' : ' term-blank') : ''}`} style={{ gridColumn: 2 * i + 1, gridRow: 1 }}>
-              {blank && !reveal ? <span aria-label={tr.series.missingNumber}>?</span> : <Term value={t} />}
+            <div key={i} className={cls(i)} style={{ gridColumn: 2 * i + 1, gridRow: 1 }}>
+              {cell(i)}
             </div>
           )
         })}

@@ -180,6 +180,24 @@ const genEn = {
   seqRule: 'Go through the series one place at a time and mark every place that fits, then count the marks. Primes: 2, 3, 5, 7; squares: 1, 4, 9; vowels: A, E, I, O, U.',
   seqFound: (list: string, n: number) => (n ? `They are: ${list}. That makes ${n}.` : 'No place fits, so the answer is 0.'),
 
+  // Letter–number analogy
+  lnSum: (kind: string) =>
+    ({
+      sum: "Add the letters' places (A = 1 … Z = 26).",
+      double: "Add the letters' places (A = 1 … Z = 26), then double the total.",
+      half: "Add the letters' places (A = 1 … Z = 26), then halve the total.",
+      square: "Add the letters' places (A = 1 … Z = 26), then square the total.",
+      root: "Add the letters' places (A = 1 … Z = 26), then take the square root.",
+    })[kind]!,
+  lnLetter: (kind: string) =>
+    ({
+      sq: "Square the letter's place: M = 13 → 13² = 169.",
+      sq1: "Add 1 to the letter's place, then square it: M = 13 → 14² = 196.",
+      dbl: "Double the letter's place: M = 13 → 26.",
+      tri: "Multiply the letter's place by 3: M = 13 → 39.",
+    })[kind]!,
+  lnShift: (list: string) => `Each letter moves by ${list} places in turn.`,
+
   // Clock
   angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
   angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
@@ -258,6 +276,10 @@ const genEn = {
     'clock-other': 'Clock facts',
     'seq-count': 'Count the places in a sequence that fit a rule',
     'seq-position': 'Find a term by its position',
+    'ln-sum': 'Add up the letters\' places, then change the total',
+    'ln-letter': 'Turn a letter\'s place into a number',
+    'ln-shift': 'Move each letter by a set number of places',
+    'ln-other': 'Letters and numbers swapped by a rule',
   } as Record<PatternId, string>,
 }
 
@@ -424,6 +446,23 @@ const genKn: GenText = {
   seqRule: 'ಸರಣಿಯನ್ನು ಒಂದೊಂದೇ ಸ್ಥಾನವಾಗಿ ನೋಡಿ, ಹೊಂದುವ ಪ್ರತಿ ಸ್ಥಾನವನ್ನು ಗುರುತಿಸಿ, ನಂತರ ಗುರುತುಗಳನ್ನು ಎಣಿಸಿ. ಅವಿಭಾಜ್ಯ: 2, 3, 5, 7; ವರ್ಗ: 1, 4, 9; ಸ್ವರಗಳು: A, E, I, O, U.',
   seqFound: (list, n) => (n ? `ಅವು: ${list}. ಒಟ್ಟು ${n}.` : 'ಯಾವ ಸ್ಥಾನವೂ ಹೊಂದುವುದಿಲ್ಲ, ಆದ್ದರಿಂದ ಉತ್ತರ 0.'),
 
+  lnSum: (kind) =>
+    ({
+      sum: 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ (A = 1 … Z = 26).',
+      double: 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ (A = 1 … Z = 26), ನಂತರ ಮೊತ್ತವನ್ನು ದ್ವಿಗುಣಗೊಳಿಸಿ.',
+      half: 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ (A = 1 … Z = 26), ನಂತರ ಮೊತ್ತವನ್ನು ಅರ್ಧ ಮಾಡಿ.',
+      square: 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ (A = 1 … Z = 26), ನಂತರ ಮೊತ್ತದ ವರ್ಗ ಮಾಡಿ.',
+      root: 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ (A = 1 … Z = 26), ನಂತರ ವರ್ಗಮೂಲ ತೆಗೆಯಿರಿ.',
+    })[kind]!,
+  lnLetter: (kind) =>
+    ({
+      sq: 'ಅಕ್ಷರದ ಸ್ಥಾನದ ವರ್ಗ ಮಾಡಿ: M = 13 → 13² = 169.',
+      sq1: 'ಅಕ್ಷರದ ಸ್ಥಾನಕ್ಕೆ 1 ಕೂಡಿಸಿ, ನಂತರ ವರ್ಗ ಮಾಡಿ: M = 13 → 14² = 196.',
+      dbl: 'ಅಕ್ಷರದ ಸ್ಥಾನವನ್ನು ದ್ವಿಗುಣಗೊಳಿಸಿ: M = 13 → 26.',
+      tri: 'ಅಕ್ಷರದ ಸ್ಥಾನವನ್ನು 3 ರಿಂದ ಗುಣಿಸಿ: M = 13 → 39.',
+    })[kind]!,
+  lnShift: (list) => `ಪ್ರತಿ ಅಕ್ಷರವೂ ಕ್ರಮವಾಗಿ ${list} ಸ್ಥಾನ ಸರಿಯುತ್ತದೆ.`,
+
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
   angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
   angleWork: (h, m, hd, md, diff, ans) => `ಗಂಟೆಯ ಮುಳ್ಳು: 30 × ${h} + ½ × ${m} = ${hd}°. ನಿಮಿಷದ ಮುಳ್ಳು: 6 × ${m} = ${md}°. ವ್ಯತ್ಯಾಸ: ${diff}, ಆದ್ದರಿಂದ ಉತ್ತರ ${ans}`,
@@ -498,6 +537,10 @@ const genKn: GenText = {
     'clock-other': 'ಗಡಿಯಾರದ ಸಂಗತಿಗಳು',
     'seq-count': 'ನಿಯಮಕ್ಕೆ ಹೊಂದುವ ಸ್ಥಳಗಳನ್ನು ಎಣಿಸಿ',
     'seq-position': 'ಸ್ಥಾನದಿಂದ ಪದವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ',
+    'ln-sum': 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ, ನಂತರ ಮೊತ್ತವನ್ನು ಬದಲಿಸಿ',
+    'ln-letter': 'ಅಕ್ಷರದ ಸ್ಥಾನವನ್ನು ಸಂಖ್ಯೆಯಾಗಿ ಬದಲಿಸಿ',
+    'ln-shift': 'ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ನಿಗದಿತ ಸ್ಥಾನಗಳಷ್ಟು ಸರಿಸಿ',
+    'ln-other': 'ನಿಯಮದಂತೆ ಅಕ್ಷರ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಬದಲಾವಣೆ',
   },
 }
 

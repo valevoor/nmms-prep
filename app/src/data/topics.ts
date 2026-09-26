@@ -10,6 +10,8 @@ import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
+import letterNumber from './mat/letter-number-analogy.json'
+import letterNumberMeta from './mat/letter-number-analogy.meta.json'
 import calendar from './mat/calendar.json'
 import calendarMeta from './mat/calendar.meta.json'
 import clock from './mat/clock.json'
@@ -29,6 +31,7 @@ import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
+import { generateLetterNumber } from '../lib/generators/letterNumber'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
 import { generateOddLetters } from '../lib/generators/oddLetters'
 import { generateOddOne } from '../lib/generators/oddOne'
@@ -167,6 +170,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: numberSequenceMeta,
     missing: 'answer',
     generate: generateSequence,
+  },
+  {
+    id: 'letter-number-analogy',
+    chapter: 22,
+    name: 'Letter–Number Analogy',
+    questions: visible(letterNumber.questions as Question[]),
+    meta: letterNumberMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateLetterNumber,
   },
 ]
 

@@ -74,6 +74,11 @@ export type PatternId =
   // Number sequence counting (Chapter 20)
   | 'seq-count'
   | 'seq-position'
+  // Letter–number analogy (Chapter 22)
+  | 'ln-sum'
+  | 'ln-letter'
+  | 'ln-shift'
+  | 'ln-other'
 
 export interface Question {
   id: string

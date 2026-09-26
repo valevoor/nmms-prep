@@ -1,0 +1,353 @@
+{
+  "topic": "letter-number-analogy",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 22 (questions: PDF pages 67–68, solutions: PDF pages 149–152)",
+  "questions": [
+    {
+      "id": "ln-b01",
+      "bookNo": 1,
+      "sourcePage": 67,
+      "keyFrom": "book",
+      "pattern": "ln-other",
+      "layout": "analogy",
+      "terms": [
+        "LIGHT",
+        "KMHJFHGISU",
+        "SOUND",
+        "?"
+      ],
+      "options": {
+        "A": "RTNPTVMOCE",
+        "B": "RTNPVTMOCE",
+        "C": "RTNPTVOMCE",
+        "D": "RTNPTVMOEC"
+      },
+      "answer": "A",
+      "rule": "Each letter becomes the two letters beside it, the one before and the one after: L → KM, I → HJ, G → FH, H → GI, T → SU.",
+      "working": "S → RT, O → NP, U → TV, N → MO, D → CE, so RTNPTVMOCE"
+    },
+    {
+      "id": "ln-b02",
+      "bookNo": 2,
+      "sourcePage": 67,
+      "keyFrom": "book",
+      "pattern": "ln-shift",
+      "layout": "analogy",
+      "terms": [
+        "PIGEON",
+        "RGJBSJ",
+        "PARROT",
+        "?"
+      ],
+      "options": {
+        "A": "RYUORP",
+        "B": "RYOUSP",
+        "C": "RYVUSP",
+        "D": "RYUOSP"
+      },
+      "answer": "D",
+      "rule": "The letters move +2, −2, +3, −3, +4, −4 in turn: P → R, I → G, G → J, E → B, O → S, N → J.",
+      "working": "P + 2 = R, A − 2 = Y, R + 3 = U, R − 3 = O, O + 4 = S, T − 4 = P, so RYUOSP"
+    },
+    {
+      "id": "ln-b03",
+      "bookNo": 3,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-letter",
+      "layout": "analogy",
+      "terms": [
+        "M",
+        "196",
+        "?",
+        "289"
+      ],
+      "options": {
+        "A": "O",
+        "B": "P",
+        "C": "Q",
+        "D": "R"
+      },
+      "answer": "B",
+      "rule": "Add 1 to the letter's place, then square it: M = 13 → 14² = 196.",
+      "working": "289 = 17², and 17 − 1 = 16, which is P"
+    },
+    {
+      "id": "ln-b04",
+      "bookNo": 4,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-letter",
+      "layout": "analogy",
+      "terms": [
+        "RK",
+        "324/121",
+        "NH",
+        "?"
+      ],
+      "options": {
+        "A": "100/144",
+        "B": "144/196",
+        "C": "196/64",
+        "D": "64/100"
+      },
+      "answer": "C",
+      "rule": "Square each letter's place: R = 18 → 18² = 324, K = 11 → 11² = 121.",
+      "working": "N = 14 → 196 and H = 8 → 64, so 196/64"
+    },
+    {
+      "id": "ln-b05",
+      "bookNo": 5,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-other",
+      "layout": "analogy",
+      "terms": [
+        "AEROPLANE",
+        "ARPAENLOE",
+        "HELICOPTER",
+        "?"
+      ],
+      "options": {
+        "A": "HLCPERTOEI",
+        "B": "HLCPERTEOI",
+        "C": "—",
+        "D": "—"
+      },
+      "answer": "C",
+      "rule": "Write the letters in odd places first (A R P A E), then the letters in even places from the back (N L O E).",
+      "working": "Odd places of HELICOPTER: H L C P E; even places from the back: R T O I E; so HLCPERTOIE",
+      "status": "needs-review",
+      "note": "The book prints only options A (HLCPERTOEI) and B (HLCPERTEOI). Its key says C, HLCPERTOIE, which is the right answer but is not printed, so this question is hidden."
+    },
+    {
+      "id": "ln-b06",
+      "bookNo": 6,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-shift",
+      "layout": "analogy",
+      "terms": [
+        "CSMK",
+        "HNHP",
+        "FVRJ",
+        "?"
+      ],
+      "options": {
+        "A": "KQRO",
+        "B": "KAON",
+        "C": "KQWE",
+        "D": "KQMO"
+      },
+      "answer": "D",
+      "rule": "The letters move +5, −5, −5, +5: C → H, S → N, M → H, K → P.",
+      "working": "F + 5 = K, V − 5 = Q, R − 5 = M, J + 5 = O, so KQMO"
+    },
+    {
+      "id": "ln-b07",
+      "bookNo": 7,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-other",
+      "layout": "analogy",
+      "terms": [
+        "F12O23E18",
+        "6L15W5R",
+        "L5A22E19",
+        "?"
+      ],
+      "options": {
+        "A": "12E1U5S",
+        "B": "12EAV5S",
+        "C": "12E1V519",
+        "D": "12E1V5S"
+      },
+      "answer": "D",
+      "rule": "Each letter becomes its place number and each number becomes the letter in that place: F → 6, 12 → L, O → 15, 23 → W, E → 5, 18 → R.",
+      "working": "L → 12, 5 → E, A → 1, 22 → V, E → 5, 19 → S, so 12E1V5S"
+    },
+    {
+      "id": "ln-b08",
+      "bookNo": 8,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-sum",
+      "layout": "analogy",
+      "terms": [
+        "SBF/RVX",
+        "3/4",
+        "CAD/KIG",
+        "?"
+      ],
+      "options": {
+        "A": "2/3",
+        "B": "3/2",
+        "C": "1/3",
+        "D": "3/4"
+      },
+      "answer": "A",
+      "rule": "Add up the letters' places, then take the cube root: SBF = 19 + 2 + 6 = 27 = 3³ and RVX = 18 + 22 + 24 = 64 = 4³.",
+      "working": "CAD = 3 + 1 + 4 = 8 = 2³ and KIG = 11 + 9 + 7 = 27 = 3³, so 2/3"
+    },
+    {
+      "id": "ln-b09",
+      "bookNo": 9,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-other",
+      "layout": "analogy",
+      "terms": [
+        "PTI/DHU",
+        "WSF/KGR",
+        "RVG/FJS",
+        "?"
+      ],
+      "options": {
+        "A": "VQH/IET",
+        "B": "UQH/IDT",
+        "C": "UQH/IET",
+        "D": "UQH/IER"
+      },
+      "answer": "C",
+      "rule": "Change every letter to its opposite (A ↔ Z, B ↔ Y …) and swap the top and bottom: DHU → WSF goes on top, PTI → KGR goes below.",
+      "working": "FJS → UQH on top and RVG → IET below, so UQH/IET"
+    },
+    {
+      "id": "ln-b10",
+      "bookNo": 10,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-sum",
+      "layout": "analogy",
+      "terms": [
+        "√MGP",
+        "6",
+        "√RTZ",
+        "?"
+      ],
+      "options": {
+        "A": "5",
+        "B": "8",
+        "C": "7",
+        "D": "9"
+      },
+      "answer": "B",
+      "rule": "Add the letters' places, then take the square root: M + G + P = 13 + 7 + 16 = 36, and √36 = 6.",
+      "working": "R + T + Z = 18 + 20 + 26 = 64, and √64 = 8"
+    },
+    {
+      "id": "ln-b11",
+      "bookNo": 11,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-sum",
+      "layout": "analogy",
+      "terms": [
+        "HL/ID",
+        "66",
+        "PG/KJ",
+        "?"
+      ],
+      "options": {
+        "A": "55",
+        "B": "99",
+        "C": "77",
+        "D": "88"
+      },
+      "answer": "D",
+      "rule": "Add all four letters' places, then double: H + L + I + D = 8 + 12 + 9 + 4 = 33, and 33 × 2 = 66.",
+      "working": "P + G + K + J = 16 + 7 + 11 + 10 = 44, and 44 × 2 = 88"
+    },
+    {
+      "id": "ln-b12",
+      "bookNo": 12,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-shift",
+      "layout": "analogy",
+      "terms": [
+        "BAT",
+        "DDX",
+        "CUP",
+        "?"
+      ],
+      "options": {
+        "A": "EVS",
+        "B": "EXS",
+        "C": "EXT",
+        "D": "DXT"
+      },
+      "answer": "C",
+      "rule": "The letters move +2, +3, +4: B → D, A → D, T → X.",
+      "working": "C + 2 = E, U + 3 = X, P + 4 = T, so EXT"
+    },
+    {
+      "id": "ln-b13",
+      "bookNo": 13,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-other",
+      "layout": "analogy",
+      "terms": [
+        "TEACHER",
+        "18V8X1V20",
+        "STUDENT",
+        "?"
+      ],
+      "options": {
+        "A": "20MV4F20H",
+        "B": "20M5W21G19",
+        "C": "20M4W21G19",
+        "D": "T13E23U7S"
+      },
+      "answer": "B",
+      "rule": "Write the word backwards (R E H C A E T). Then letters in odd places become their place numbers (R = 18, H = 8, A = 1, T = 20) and letters in even places become their opposite letters (E ↔ V, C ↔ X).",
+      "working": "STUDENT backwards is T N E D U T S: T = 20, N → M, E = 5, D → W, U = 21, T → G, S = 19, so 20M5W21G19"
+    },
+    {
+      "id": "ln-b14",
+      "bookNo": 14,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-sum",
+      "layout": "analogy",
+      "terms": [
+        "DAISY",
+        "29",
+        "OXLIP",
+        "?"
+      ],
+      "options": {
+        "A": "32",
+        "B": "35",
+        "C": "38",
+        "D": "19"
+      },
+      "answer": "C",
+      "rule": "Add the letters' places, then halve: 4 + 1 + 9 + 19 + 25 = 58, and 58 ÷ 2 = 29.",
+      "working": "15 + 24 + 12 + 9 + 16 = 76, and 76 ÷ 2 = 38"
+    },
+    {
+      "id": "ln-b15",
+      "bookNo": 15,
+      "sourcePage": 68,
+      "keyFrom": "book",
+      "pattern": "ln-sum",
+      "layout": "analogy",
+      "terms": [
+        "EMU",
+        "1521",
+        "OWL",
+        "?"
+      ],
+      "options": {
+        "A": "2025",
+        "B": "2304",
+        "C": "2500",
+        "D": "2809"
+      },
+      "answer": "C",
+      "rule": "Add the letters' places, then square: 5 + 13 + 21 = 39, and 39² = 1521.",
+      "working": "15 + 23 + 12 = 50, and 50² = 2500"
+    }
+  ]
+}

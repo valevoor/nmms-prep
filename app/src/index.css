@@ -677,6 +677,28 @@ a {
   padding: 4px;
 }
 
+/* A long analogy: "A : B ::" and "C : D" wrap as two whole pairs. */
+.analogy-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 6px;
+}
+
+.analogy-wrap .pair {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.analogy-wrap .term {
+  display: inline-block;
+}
+
+.analogy-wrap .term-revealed {
+  padding: 0 0.35em;
+}
+
 .series {
   display: inline-grid;
   align-items: center;
