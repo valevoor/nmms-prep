@@ -8,6 +8,7 @@ import { generateDirections } from '../generators/directions'
 import { generateRuleQuestion, generateWrongNumber } from '../generators/games'
 import { generateLetterSeries, LETTER_PATTERNS } from '../generators/letterSeries'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../generators/numberAnalogy'
+import { generateOddLetters } from '../generators/oddLetters'
 import { generateOddOne } from '../generators/oddOne'
 import { GENERATOR_PATTERNS, generateNumberSeries, mulberry32 } from '../generators/numberSeries'
 import { GEN } from './gen'
@@ -72,6 +73,11 @@ describe('generated questions carry Kannada', () => {
   it('directions', () => {
     const rng = mulberry32(31)
     for (let n = 0; n < 1000; n++) expectKannada(generateDirections(rng))
+  })
+
+  it('odd one out: letters', () => {
+    const rng = mulberry32(16)
+    for (let n = 0; n < 1000; n++) expectKannada(generateOddLetters(rng))
   })
 
   it('odd one out', () => {

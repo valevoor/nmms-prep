@@ -39,6 +39,10 @@ import oddOneKn from './mat/odd-one-numbers.kn.json'
 import oddOne from './mat/odd-one-numbers.json'
 import oddOneMetaKn from './mat/odd-one-numbers.meta.kn.json'
 import oddOneMeta from './mat/odd-one-numbers.meta.json'
+import oddLettersKn from './mat/odd-one-letters.kn.json'
+import oddLetters from './mat/odd-one-letters.json'
+import oddLettersMetaKn from './mat/odd-one-letters.meta.kn.json'
+import oddLettersMeta from './mat/odd-one-letters.meta.json'
 import wrongNumberKn from './mat/wrong-number.kn.json'
 import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMetaKn from './mat/wrong-number.meta.kn.json'
@@ -78,4 +82,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('blood-relations', 'Blood Relations', blood, bloodMeta, bloodKn, bloodMetaKn),
   c('calendar', 'Calendar', calendar, calendarMeta, calendarKn, calendarMetaKn),
   c('clock', 'Clock', clock, clockMeta, clockKn, clockMetaKn),
+  c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
 ]

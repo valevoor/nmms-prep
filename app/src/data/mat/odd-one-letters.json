@@ -1,0 +1,353 @@
+{
+  "topic": "odd-one-letters",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 16 (questions: PDF page 58, solutions: PDF pages 134–135)",
+  "questions": [
+    {
+      "id": "ol-b01",
+      "bookNo": 1,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "PONML",
+        "CBAZY",
+        "BAXYZ",
+        "KJIHG"
+      ],
+      "options": {
+        "A": "PONML",
+        "B": "CBAZY",
+        "C": "BAXYZ",
+        "D": "KJIHG"
+      },
+      "answer": "C",
+      "rule": "The others go backwards through the alphabet one letter at a time (after A comes Z): P O N M L, C B A Z Y, K J I H G.",
+      "working": "BAXYZ goes back from B to A, then forwards X Y Z"
+    },
+    {
+      "id": "ol-b02",
+      "bookNo": 2,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "AJKL",
+        "IXYZ",
+        "EPQR",
+        "VABC"
+      ],
+      "options": {
+        "A": "AJKL",
+        "B": "IXYZ",
+        "C": "EPQR",
+        "D": "VABC"
+      },
+      "answer": "D",
+      "rule": "The others start with a vowel (A, I, E), followed by three letters in a row.",
+      "working": "VABC starts with V, which is not a vowel"
+    },
+    {
+      "id": "ol-b03",
+      "bookNo": 3,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "CA",
+        "MO",
+        "RP",
+        "YW"
+      ],
+      "options": {
+        "A": "CA",
+        "B": "MO",
+        "C": "RP",
+        "D": "YW"
+      },
+      "answer": "B",
+      "rule": "The others go back 2 places: C → A, R → P, Y → W.",
+      "working": "MO goes forward 2: M → O"
+    },
+    {
+      "id": "ol-b04",
+      "bookNo": 4,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "status": "needs-review",
+      "terms": [
+        "ABD",
+        "ABA",
+        "AFI",
+        "AIF"
+      ],
+      "options": {
+        "A": "ABD",
+        "B": "ABA",
+        "C": "AFI",
+        "D": "AIF"
+      },
+      "answer": "A",
+      "rule": "The book's rule: write the letters' places side by side. ABA → 121 = 11², AFI → 169 = 13², AIF → 196 = 14².",
+      "working": "ABD → 124, which is not a square number",
+      "note": "Hidden until checked: ABA is also an odd one out, as the only group that reads the same backwards. The question has two defensible answers."
+    },
+    {
+      "id": "ol-b05",
+      "bookNo": 5,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "XUSR",
+        "EBZY",
+        "IFDC",
+        "SOML"
+      ],
+      "options": {
+        "A": "XUSR",
+        "B": "EBZY",
+        "C": "IFDC",
+        "D": "SOML"
+      },
+      "answer": "D",
+      "rule": "In the others, 2 letters are skipped, then 1, then none: X (W V) U (T) S R.",
+      "working": "SOML skips 3 letters first: S (R Q P) O"
+    },
+    {
+      "id": "ol-b06",
+      "bookNo": 6,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "CPGT",
+        "JWBO",
+        "MZAN",
+        "EVKP"
+      ],
+      "options": {
+        "A": "CPGT",
+        "B": "JWBO",
+        "C": "MZAN",
+        "D": "EVKP"
+      },
+      "answer": "D",
+      "rule": "The others are two pairs of letters 13 places apart (A–N, B–O, C–P …): C–P and G–T, J–W and B–O, M–Z and A–N.",
+      "working": "In EVKP, E + 13 is R, not V"
+    },
+    {
+      "id": "ol-b07",
+      "bookNo": 7,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "DHBP",
+        "KSCY",
+        "LRFH",
+        "HRVN"
+      ],
+      "options": {
+        "A": "DHBP",
+        "B": "KSCY",
+        "C": "LRFH",
+        "D": "HRVN"
+      },
+      "answer": "B",
+      "rule": "In the others every letter is in an even place in the alphabet: D H B P → 4, 8, 2, 16.",
+      "working": "KSCY → 11, 19, 3, 25 are all odd places"
+    },
+    {
+      "id": "ol-b08",
+      "bookNo": 8,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "DGK",
+        "KCN",
+        "JFD",
+        "MGT"
+      ],
+      "options": {
+        "A": "DGK",
+        "B": "KCN",
+        "C": "JFD",
+        "D": "MGT"
+      },
+      "answer": "C",
+      "rule": "In the others the places of the first two letters add up to the third: D + G = 4 + 7 = 11 = K.",
+      "working": "J + F = 10 + 6 = 16, which is P, not D"
+    },
+    {
+      "id": "ol-b09",
+      "bookNo": 9,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "HKLM",
+        "VWFI",
+        "NXYZ",
+        "CQSO"
+      ],
+      "options": {
+        "A": "HKLM",
+        "B": "VWFI",
+        "C": "NXYZ",
+        "D": "CQSO"
+      },
+      "answer": "D",
+      "rule": "The others are made only of straight lines.",
+      "working": "C, Q, S and O are all curved"
+    },
+    {
+      "id": "ol-b10",
+      "bookNo": 10,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "AZXU",
+        "TSQN",
+        "MLJG",
+        "FECA"
+      ],
+      "options": {
+        "A": "AZXU",
+        "B": "TSQN",
+        "C": "MLJG",
+        "D": "FECA"
+      },
+      "answer": "D",
+      "rule": "In the others the letters go back 1, then 2, then 3: A → Z → X → U (after A comes Z).",
+      "working": "FECA goes back 1, 2, 2: F → E → C → A"
+    },
+    {
+      "id": "ol-b11",
+      "bookNo": 11,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "LF",
+        "BD",
+        "IC",
+        "YE"
+      ],
+      "options": {
+        "A": "LF",
+        "B": "BD",
+        "C": "IC",
+        "D": "YE"
+      },
+      "answer": "A",
+      "rule": "In the others the places of the two letters multiply to a cube: B × D = 2 × 4 = 8, I × C = 9 × 3 = 27, Y × E = 25 × 5 = 125.",
+      "working": "L × F = 12 × 6 = 72, which is not a cube"
+    },
+    {
+      "id": "ol-b12",
+      "bookNo": 12,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "CJ 13",
+        "MP 29",
+        "BJ 20",
+        "FO 21"
+      ],
+      "options": {
+        "A": "CJ 13",
+        "B": "MP 29",
+        "C": "BJ 20",
+        "D": "FO 21"
+      },
+      "answer": "C",
+      "rule": "In the others the number is the sum of the letters' places: C + J = 3 + 10 = 13.",
+      "working": "B + J = 2 + 10 = 12, not 20"
+    },
+    {
+      "id": "ol-b13",
+      "bookNo": 13,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "RDJY",
+        "EAPS",
+        "YRYK",
+        "CTIZ"
+      ],
+      "options": {
+        "A": "RDJY",
+        "B": "EAPS",
+        "C": "YRYK",
+        "D": "CTIZ"
+      },
+      "answer": "C",
+      "rule": "In the others no letter is repeated.",
+      "working": "Y appears twice in YRYK"
+    },
+    {
+      "id": "ol-b14",
+      "bookNo": 14,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "BDGK",
+        "PRUY",
+        "XZCG",
+        "ACEG"
+      ],
+      "options": {
+        "A": "BDGK",
+        "B": "PRUY",
+        "C": "XZCG",
+        "D": "ACEG"
+      },
+      "answer": "D",
+      "rule": "In the others the jumps between letters are +2, +3, +4: B → D → G → K (after Z comes A).",
+      "working": "ACEG jumps +2, +2, +2"
+    },
+    {
+      "id": "ol-b15",
+      "bookNo": 15,
+      "sourcePage": 58,
+      "keyFrom": "book",
+      "pattern": "odd-one",
+      "layout": "odd",
+      "terms": [
+        "DAC",
+        "MED",
+        "OJB",
+        "YUR"
+      ],
+      "options": {
+        "A": "DAC",
+        "B": "MED",
+        "C": "OJB",
+        "D": "YUR"
+      },
+      "answer": "B",
+      "rule": "In the others the letters' places add up to a cube: D + A + C = 4 + 1 + 3 = 8, O + J + B = 27, Y + U + R = 64.",
+      "working": "M + E + D = 13 + 5 + 4 = 22, which is not a cube"
+    }
+  ]
+}

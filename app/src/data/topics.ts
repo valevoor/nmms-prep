@@ -16,6 +16,8 @@ import coding from './mat/coding-decoding.json'
 import directions from './mat/directions.json'
 import directionsMeta from './mat/directions.meta.json'
 import codingMeta from './mat/coding-decoding.meta.json'
+import oddLetters from './mat/odd-one-letters.json'
+import oddLettersMeta from './mat/odd-one-letters.meta.json'
 import oddOne from './mat/odd-one-numbers.json'
 import oddOneMeta from './mat/odd-one-numbers.meta.json'
 import wrongNumber from './mat/wrong-number.json'
@@ -26,6 +28,7 @@ import { generateClock } from '../lib/generators/clock'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
+import { generateOddLetters } from '../lib/generators/oddLetters'
 import { generateOddOne } from '../lib/generators/oddOne'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/generators/numberAnalogy'
 import { generateNumberSeries } from '../lib/generators/numberSeries'
@@ -143,6 +146,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: clockMeta,
     missing: 'answer',
     generate: generateClock,
+  },
+  {
+    id: 'odd-one-letters',
+    chapter: 16,
+    name: 'Odd One Out: Letters',
+    questions: visible(oddLetters.questions as Question[]),
+    meta: oddLettersMeta as TopicMeta,
+    missing: 'odd',
+    generate: generateOddLetters,
   },
 ]
 

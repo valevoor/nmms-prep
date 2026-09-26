@@ -1,0 +1,33 @@
+{
+  "topic": "odd-one-letters",
+  "intro": "Three of the four letter groups follow the same rule, and one doesn't. Turn the letters into their places in the alphabet (A = 1 … Z = 26) and look for the rule.",
+  "cheatSheet": "alphabet",
+  "tips": [
+    {
+      "title": "Number the letters",
+      "body": "Write each letter's place under it: A = 1 … Z = 26 (remember EJOTY: 5, 10, 15, 20, 25). Most rules become number rules."
+    },
+    {
+      "title": "Look at the jumps",
+      "body": "Find how far each letter is from the next: equal jumps (+2, +2), growing jumps (+1, +2, +3) or backwards (−1, −1)."
+    },
+    {
+      "title": "Pairs 13 apart",
+      "body": "A–N, B–O, C–P … Z–M are opposite each other when the alphabet is written in two rows of 13."
+    },
+    {
+      "title": "Vowels and repeats",
+      "body": "Check whether the groups start with a vowel, contain one, or repeat a letter. These simple rules come up often."
+    },
+    {
+      "title": "Add or multiply the places",
+      "body": "Some rules use arithmetic on the places: the first two add up to the third, or the product is a cube or square."
+    }
+  ],
+  "workedExamples": [
+    "ol-b06",
+    "ol-b08",
+    "ol-b10",
+    "ol-b01"
+  ]
+}

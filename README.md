@@ -13,6 +13,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 32, *Blood Relations*: 13 of the 15 book questions. The key is wrong on Q1, Q4, Q5 and Q9 (each corrected with a note), and Q3 and Q11 are hidden because none of their options is right. Explanations draw a family tree (`components/FamilyTreeView.tsx`), and Learn has a table of relation names in both languages.
 - MAT Chapter 34, *Calendar*: all 15 book questions, each checked against the real calendar (`tools/check_calendar.ts`). The generator covers days after N days, weekdays in a month or year, counting days between dates, and weeks to days.
 - MAT Chapter 35, *Clock*: 9 of the 11 book questions, checked from the hand positions (`tools/check_clock.ts`). The key is wrong on Q2 (corrected); Q3 (water image) and Q4 (mirror image) are hidden because no option is right. Explanations draw the clock face (`components/ClockFace.tsx`).
+- MAT Chapter 16, *Odd One Out: Letters*: 14 of the 15 book questions. Q4 is hidden because ABA (the only palindrome) is as good an answer as the key's ABD.
 
 Each chapter also has a generator that makes unlimited new practice questions.
 

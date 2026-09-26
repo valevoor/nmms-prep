@@ -158,6 +158,15 @@ const genEn = {
   weeksRule: 'One week has 7 days.',
   weeksWork: (w: number, d: number, t: number) => `${w} × 7 + ${d} = ${w * 7} + ${d} = ${t} days`,
 
+  // Odd one out: letters
+  olStep: (k: number, back: boolean, ex: string) => `In the others each letter is ${k} place${k === 1 ? '' : 's'} ${back ? 'before' : 'after'} the one before it: ${ex}.`,
+  olGrowing: (ex: string) => `In the others the jumps between letters are +1, +2, +3: ${ex}.`,
+  olOpposite: (ex: string) => `The others are two pairs of letters 13 places apart (A–N, B–O, C–P …): ${ex}.`,
+  olSum: (ex: string) => `In the others the places of the first two letters add up to the place of the third: ${ex}.`,
+  olEven: (ex: string) => `In the others every letter is in an even place in the alphabet: ${ex}.`,
+  olJumps: (odd: string, list: string) => `${odd} jumps ${list}`,
+  olOddPlace: (c: string, n: number) => `${c} is in place ${n}, which is odd`,
+
   // Clock
   angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
   angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
@@ -379,6 +388,14 @@ const genKn: GenText = {
   countRule: 'ಮೊದಲ ತಿಂಗಳಲ್ಲಿ ಉಳಿದ ದಿನಗಳನ್ನು (ಮೊದಲ ದಿನ ಸೇರಿ) ಎಣಿಸಿ, ನಡುವಿನ ಪ್ರತಿ ಪೂರ್ಣ ತಿಂಗಳನ್ನು ಕೂಡಿಸಿ, ನಂತರ ಕೊನೆಯ ತಿಂಗಳ ದಿನಗಳನ್ನು ಕೂಡಿಸಿ.',
   weeksRule: 'ಒಂದು ವಾರದಲ್ಲಿ 7 ದಿನಗಳು.',
   weeksWork: (w, d, t) => `${w} × 7 + ${d} = ${w * 7} + ${d} = ${t} ದಿನಗಳು`,
+
+  olStep: (k, back, ex) => `ಉಳಿದವುಗಳಲ್ಲಿ ಪ್ರತಿ ಅಕ್ಷರವೂ ಹಿಂದಿನದಕ್ಕಿಂತ ${k} ಸ್ಥಾನ ${back ? 'ಹಿಂದೆ' : 'ಮುಂದೆ'} ಇದೆ: ${ex}.`,
+  olGrowing: (ex) => `ಉಳಿದವುಗಳಲ್ಲಿ ಅಕ್ಷರಗಳ ನಡುವಿನ ಜಿಗಿತಗಳು +1, +2, +3: ${ex}.`,
+  olOpposite: (ex) => `ಉಳಿದವು 13 ಸ್ಥಾನಗಳ ಅಂತರದ ಎರಡು ಜೋಡಿ ಅಕ್ಷರಗಳು (A–N, B–O, C–P …): ${ex}.`,
+  olSum: (ex) => `ಉಳಿದವುಗಳಲ್ಲಿ ಮೊದಲ ಎರಡು ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳ ಮೊತ್ತ ಮೂರನೆಯದರ ಸ್ಥಾನ: ${ex}.`,
+  olEven: (ex) => `ಉಳಿದವುಗಳಲ್ಲಿ ಪ್ರತಿ ಅಕ್ಷರವೂ ವರ್ಣಮಾಲೆಯ ಸಮ ಸ್ಥಾನದಲ್ಲಿದೆ: ${ex}.`,
+  olJumps: (odd, list) => `${odd} ${list} ಜಿಗಿಯುತ್ತದೆ`,
+  olOddPlace: (c, n) => `${c} ${n}ನೇ ಸ್ಥಾನದಲ್ಲಿದೆ, ಅದು ಬೆಸ ಸ್ಥಾನ`,
 
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
   angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
