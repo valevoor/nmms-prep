@@ -1,3 +1,9 @@
+/** People placed by column and generation (0 = oldest), and the lines between them. */
+export interface FamilyTree {
+  people: [string, number, number][]
+  lines: [string, string, 'child' | 'married' | 'sibling'][]
+}
+
 export type Compass4 = 'N' | 'E' | 'S' | 'W'
 export type OptionKey = 'A' | 'B' | 'C' | 'D'
 export const OPTION_KEYS: OptionKey[] = ['A', 'B', 'C', 'D']
@@ -48,6 +54,9 @@ export type PatternId =
   | 'dir-rotate'
   | 'dir-places'
   | 'dir-other'
+  // Blood relations (Chapter 32)
+  | 'rel-chain'
+  | 'rel-other'
 
 export interface Question {
   id: string
@@ -65,6 +74,8 @@ export interface Question {
   points?: [string, number, number][]
   /** A dashed line to draw between two points (or 'start' and 'end' of the path). */
   link?: [string, string]
+  /** A family tree to draw in the explanation (Blood Relations). */
+  tree?: FamilyTree
   options: Record<OptionKey, string>
   answer: OptionKey
   /** One-line rule shown in the explanation. */
@@ -108,5 +119,5 @@ export interface TopicMeta {
   tips: { title: string; body: string; visual?: string; caption?: string }[]
   workedExamples: string[]
   /** What the Learn page's cheat sheet shows: squares, cubes and primes (default), or letter positions. */
-  cheatSheet?: 'numbers' | 'alphabet'
+  cheatSheet?: 'numbers' | 'alphabet' | 'relations'
 }

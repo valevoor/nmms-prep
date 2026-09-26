@@ -123,6 +123,20 @@ const genEn = {
   kmNorth: (d: number) => `${d} km north`,
   kmSouth: (d: number) => `${d} km south`,
 
+  // Blood relations. Keys: the relation of X to Y, plus X's sex (and, for uncles and aunts, the parent's sex).
+  rel: {
+    father: 'father', mother: 'mother', son: 'son', daughter: 'daughter', brother: 'brother', sister: 'sister',
+    husband: 'husband', wife: 'wife', grandfather: 'grandfather', grandmother: 'grandmother', grandson: 'grandson',
+    granddaughter: 'granddaughter', 'uncle-f': 'uncle', 'uncle-m': 'uncle', 'aunt-f': 'aunt', 'aunt-m': 'aunt',
+    'father-in-law': 'father-in-law', 'mother-in-law': 'mother-in-law', 'son-in-law': 'son-in-law',
+    'daughter-in-law': 'daughter-in-law', 'cousin': 'cousin',
+  } as Record<string, string>,
+  relFact: (a: string, word: string, b: string) => `${a} is the ${word} of ${b}.`,
+  relAsk: (x: string, y: string) => `How is ${x} related to ${y}?`,
+  relStep: (a: string, word: string, b: string) => `${a} is the ${word} of ${b}`,
+  relSo: (steps: string, x: string, y: string, word: string) => `${steps}, so ${x} is the ${word} of ${y}.`,
+  relRule: 'Draw a family tree: parents above their children, brothers and sisters side by side, husband and wife joined.',
+
   // Games
   soTheRuleIs: (name: string) => `So the rule is: ${name}.`,
   wrongShouldBe: (w: number, sum: string) => `${w} is wrong. It should be ${sum}.`,
@@ -167,6 +181,8 @@ const genEn = {
     'dir-rotate': 'Every direction turns by the same angle',
     'dir-places': 'Place towns by their directions',
     'dir-other': 'Directions from the sun, a clock or roads',
+    'rel-chain': 'Follow a chain of relations',
+    'rel-other': 'Work out a relation from a description',
   } as Record<PatternId, string>,
 }
 
@@ -282,6 +298,18 @@ const genKn: GenText = {
   kmNorth: (d) => `${d} km ಉತ್ತರಕ್ಕೆ`,
   kmSouth: (d) => `${d} km ದಕ್ಷಿಣಕ್ಕೆ`,
 
+  rel: {
+    father: 'ತಂದೆ', mother: 'ತಾಯಿ', son: 'ಮಗ', daughter: 'ಮಗಳು', brother: 'ಸಹೋದರ', sister: 'ಸಹೋದರಿ',
+    husband: 'ಗಂಡ', wife: 'ಹೆಂಡತಿ', grandfather: 'ಅಜ್ಜ', grandmother: 'ಅಜ್ಜಿ', grandson: 'ಮೊಮ್ಮಗ',
+    granddaughter: 'ಮೊಮ್ಮಗಳು', 'uncle-f': 'ಚಿಕ್ಕಪ್ಪ', 'uncle-m': 'ಸೋದರ ಮಾವ', 'aunt-f': 'ಸೋದರತ್ತೆ', 'aunt-m': 'ಚಿಕ್ಕಮ್ಮ',
+    'father-in-law': 'ಮಾವ', 'mother-in-law': 'ಅತ್ತೆ', 'son-in-law': 'ಅಳಿಯ', 'daughter-in-law': 'ಸೊಸೆ', cousin: 'ಸಹೋದರ ಸಂಬಂಧಿ',
+  },
+  relFact: (a, word, b) => `${a} ಯು ${b} ಯ ${word}.`,
+  relAsk: (x, y) => `${x} ಯು ${y} ಗೆ ಏನಾಗಬೇಕು?`,
+  relStep: (a, word, b) => `${a} ಯು ${b} ಯ ${word}`,
+  relSo: (steps, x, y, word) => `${steps}, ಆದ್ದರಿಂದ ${x} ಯು ${y} ಯ ${word}.`,
+  relRule: 'ಕುಟುಂಬ ವೃಕ್ಷವನ್ನು ಚಿತ್ರಿಸಿ: ಮಕ್ಕಳ ಮೇಲೆ ಪೋಷಕರು, ಅಕ್ಕಪಕ್ಕದಲ್ಲಿ ಸಹೋದರ ಸಹೋದರಿಯರು, ಮತ್ತು ಗಂಡ ಹೆಂಡತಿಯನ್ನು ಜೋಡಿಸಿ.',
+
   soTheRuleIs: (name) => `ಆದ್ದರಿಂದ ನಿಯಮ: ${name}.`,
   wrongShouldBe: (w, sum) => `${w} ತಪ್ಪು. ಅದು ${sum} ಆಗಿರಬೇಕು.`,
   notPrime: (w, prev, next) => `${w} ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆ ಅಲ್ಲ. ${prev} ರ ನಂತರದ ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆ ${next}.`,
@@ -324,6 +352,8 @@ const genKn: GenText = {
     'dir-rotate': 'ಪ್ರತಿ ದಿಕ್ಕೂ ಅದೇ ಕೋನದಷ್ಟು ತಿರುಗುತ್ತದೆ',
     'dir-places': 'ಊರುಗಳನ್ನು ಅವುಗಳ ದಿಕ್ಕುಗಳ ಪ್ರಕಾರ ಇರಿಸಿ',
     'dir-other': 'ಸೂರ್ಯ, ಗಡಿಯಾರ ಅಥವಾ ರಸ್ತೆಗಳಿಂದ ದಿಕ್ಕುಗಳು',
+    'rel-chain': 'ಸಂಬಂಧಗಳ ಸರಪಳಿಯನ್ನು ಅನುಸರಿಸಿ',
+    'rel-other': 'ವಿವರಣೆಯಿಂದ ಸಂಬಂಧವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ',
   },
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Page } from '../components/Page'
+import { FamilyTreeView } from '../components/FamilyTreeView'
 import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
 import { QuestionStem } from '../components/QuestionStem'
@@ -38,6 +39,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       {(q.layout === 'odd' || q.layout === 'text') && <Options q={q} reveal={done} />}
       {step > 0 && <p className="rule">{text.rule}</p>}
       {done && <MapDiagram q={q} />}
+      {done && <FamilyTreeView q={q} />}
       {done && <p className="working">{text.working}</p>}
       <div className="actions">
         {!done ? (
@@ -80,7 +82,21 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
       ))}
 
       <h2 className="section-title">{t.learn.cheatSheet}</h2>
-      {meta.cheatSheet === 'alphabet' ? (
+      {meta.cheatSheet === 'relations' ? (
+        <section className="card cheats">
+          <h3>{t.learn.relationsTitle}</h3>
+          <table className="relations-table">
+            <tbody>
+              {t.learn.relations.map(([who, name]) => (
+                <tr key={who}>
+                  <td>{who}</td>
+                  <td>{name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ) : meta.cheatSheet === 'alphabet' ? (
         <section className="card cheats">
           <h3>{t.learn.alphabet}</h3>
           <div className="alphabet-grid">

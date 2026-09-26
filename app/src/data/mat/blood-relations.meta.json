@@ -1,0 +1,33 @@
+{
+  "topic": "blood-relations",
+  "intro": "Blood relation questions describe a family in words. Draw a family tree as you read: parents above their children, brothers and sisters side by side.",
+  "cheatSheet": "relations",
+  "tips": [
+    {
+      "title": "Draw as you read",
+      "body": "Write down each person as you meet them. Put parents above their children, brothers and sisters side by side, and join husband and wife."
+    },
+    {
+      "title": "Mark who is male and who is female",
+      "body": "Son, brother, father and husband tell you a person is male; daughter, sister, mother and wife tell you female. \"P is the child of Q\" tells you neither."
+    },
+    {
+      "title": "Read long phrases one step at a time",
+      "body": "\"My mother's husband's sister\": my mother → her husband (my father) → his sister (my aunt)."
+    },
+    {
+      "title": "Brothers and sisters share parents",
+      "body": "If R is S's sister and P is S's father, then P is R's father too."
+    },
+    {
+      "title": "Know the names",
+      "body": "A father's or mother's brother is an uncle; a son's wife is a daughter-in-law; a sister's husband is a brother-in-law. See the table below."
+    }
+  ],
+  "workedExamples": [
+    "br-b12",
+    "br-b13",
+    "br-b04",
+    "br-b10"
+  ]
+}

@@ -3,6 +3,10 @@
  * the Kannada coverage check (tools/check_i18n.ts) and the review export (tools/export_i18n.ts) all
  * read this list. A new chapter is added here once.
  */
+import bloodKn from './mat/blood-relations.kn.json'
+import blood from './mat/blood-relations.json'
+import bloodMetaKn from './mat/blood-relations.meta.kn.json'
+import bloodMeta from './mat/blood-relations.meta.json'
 import codingKn from './mat/coding-decoding.kn.json'
 import coding from './mat/coding-decoding.json'
 import codingMetaKn from './mat/coding-decoding.meta.kn.json'
@@ -63,4 +67,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('letter-series', 'Letter Series', letterSeries, letterSeriesMeta, letterSeriesKn, letterSeriesMetaKn),
   c('coding-decoding', 'Coding–Decoding', coding, codingMeta, codingKn, codingMetaKn),
   c('directions', 'Directions', directions, directionsMeta, directionsKn, directionsMetaKn),
+  c('blood-relations', 'Blood Relations', blood, bloodMeta, bloodKn, bloodMetaKn),
 ]

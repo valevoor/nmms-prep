@@ -5,6 +5,8 @@ import numberAnalogy from './mat/number-analogy.json'
 import numberAnalogyMeta from './mat/number-analogy.meta.json'
 import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
+import blood from './mat/blood-relations.json'
+import bloodMeta from './mat/blood-relations.meta.json'
 import coding from './mat/coding-decoding.json'
 import directions from './mat/directions.json'
 import directionsMeta from './mat/directions.meta.json'
@@ -13,6 +15,7 @@ import oddOne from './mat/odd-one-numbers.json'
 import oddOneMeta from './mat/odd-one-numbers.meta.json'
 import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
+import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
@@ -28,7 +31,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -107,11 +110,19 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'direction',
     generate: generateDirections,
   },
+  {
+    id: 'blood-relations',
+    chapter: 32,
+    name: 'Blood Relations',
+    questions: visible(blood.questions as Question[]),
+    meta: bloodMeta as TopicMeta,
+    missing: 'relation',
+    generate: generateBloodRelation,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
 export const UPCOMING_MAT: { chapter: number; name: string }[] = [
-  { chapter: 32, name: 'Blood Relations' },
   { chapter: 34, name: 'Calendar' },
   { chapter: 35, name: 'Clock' },
   { chapter: 8, name: 'Mirror Image' },

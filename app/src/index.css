@@ -458,6 +458,55 @@ a {
   fill: var(--muted);
 }
 
+/* ---------- family trees (components/FamilyTreeView.tsx) ---------- */
+
+.tree {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px auto;
+  overflow: visible;
+}
+
+.tree-line,
+.tree-link {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tree-line {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.tree-link {
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 5;
+}
+
+.tree-person rect {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.tree-asked rect {
+  fill: var(--primary-soft);
+  stroke: var(--primary);
+}
+
+.tree text {
+  font-size: 14px;
+  font-weight: 800;
+  fill: var(--text);
+}
+
+.tree .tree-asked text {
+  fill: var(--primary);
+}
+
 /* ---------- text questions (components/QuestionStem.tsx) ---------- */
 
 .stem {
@@ -489,6 +538,24 @@ a {
 
 .stem-lg .code-table {
   font-size: 1.4rem;
+}
+
+.relations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.relations-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.relations-table td:last-child {
+  font-weight: 700;
+  color: var(--primary);
+  text-align: right;
 }
 
 .alphabet-grid {

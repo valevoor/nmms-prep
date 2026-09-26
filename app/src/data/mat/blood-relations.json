@@ -1,0 +1,707 @@
+{
+  "topic": "blood-relations",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 32 (questions: PDF pages 90–92, key: PDF page 168)",
+  "questions": [
+    {
+      "id": "br-b01",
+      "bookNo": 1,
+      "sourcePage": 90,
+      "keyFrom": "solved",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "P and Q are brothers. R and S are sisters. P's son is S's brother. How is Q related to R?",
+      "tree": {
+        "people": [
+          [
+            "P",
+            1,
+            0
+          ],
+          [
+            "Q",
+            2,
+            0
+          ],
+          [
+            "R",
+            0,
+            1
+          ],
+          [
+            "S",
+            1,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "P",
+            "Q",
+            "sibling"
+          ],
+          [
+            "P",
+            "R",
+            "child"
+          ],
+          [
+            "P",
+            "S",
+            "child"
+          ],
+          [
+            "R",
+            "S",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "Q",
+        "R"
+      ],
+      "options": {
+        "A": "Brother",
+        "B": "Father",
+        "C": "Son",
+        "D": "Uncle"
+      },
+      "answer": "D",
+      "rule": "P's son is S's brother, so S (and her sister R) are also P's children.",
+      "working": "Q is the brother of R's father P, so Q is R's uncle",
+      "note": "The book's key says B (Father), but its own diagram marks Q as R's uncle."
+    },
+    {
+      "id": "br-b02",
+      "bookNo": 2,
+      "sourcePage": 91,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Amit is the son of Rahul. Rahul's sister Sarika has a son, Sonu, and a daughter, Rita. Raju is Sonu's maternal uncle. How is Rita related to Raju?",
+      "options": {
+        "A": "Sister",
+        "B": "Daughter",
+        "C": "Niece",
+        "D": "Aunt"
+      },
+      "answer": "C",
+      "rule": "Raju is Sonu's maternal uncle, so he is the brother of Sonu's mother, Sarika.",
+      "working": "Rita is the daughter of Raju's sister, so Rita is Raju's niece"
+    },
+    {
+      "id": "br-b03",
+      "bookNo": 3,
+      "sourcePage": 91,
+      "keyFrom": "book",
+      "pattern": "rel-other",
+      "layout": "text",
+      "status": "needs-review",
+      "terms": [],
+      "prompt": "Pointing to a photo, a man said, “Her only brother's son is the brother of my wife.” How is the lady related to the man?",
+      "options": {
+        "A": "Aunt",
+        "B": "Grandmother",
+        "C": "Mother-in-law",
+        "D": "Sister of maternal uncle"
+      },
+      "answer": "D",
+      "rule": "The lady's brother's son is the wife's brother, so the lady's brother is the wife's father: the man's father-in-law.",
+      "working": "So the lady is the sister of the man's father-in-law. None of the options says that",
+      "note": "Hidden until checked: the key says D (sister of maternal uncle), but the lady is the sister of the man's father-in-law (his wife's aunt). No option fits exactly."
+    },
+    {
+      "id": "br-b04",
+      "bookNo": 4,
+      "sourcePage": 91,
+      "keyFrom": "solved",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "P is the father of R. S is a son of Q. T is the brother of P. R is a sister of S. How is Q related to T?",
+      "tree": {
+        "people": [
+          [
+            "T",
+            0,
+            0
+          ],
+          [
+            "P",
+            1,
+            0
+          ],
+          [
+            "Q",
+            2,
+            0
+          ],
+          [
+            "R",
+            1,
+            1
+          ],
+          [
+            "S",
+            2,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "T",
+            "P",
+            "sibling"
+          ],
+          [
+            "P",
+            "Q",
+            "married"
+          ],
+          [
+            "P",
+            "R",
+            "child"
+          ],
+          [
+            "Q",
+            "S",
+            "child"
+          ],
+          [
+            "R",
+            "S",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "Q",
+        "T"
+      ],
+      "options": {
+        "A": "Wife",
+        "B": "Sister-in-law",
+        "C": "Brother-in-law",
+        "D": "Daughter-in-law"
+      },
+      "answer": "B",
+      "rule": "R and S are brother and sister, so they have the same parents. P is their father, so Q is their mother, P's wife.",
+      "working": "Q is the wife of T's brother P, so Q is T's sister-in-law",
+      "note": "The book's key says C (Brother-in-law), but Q is the mother of R and S, so Q is a woman: T's sister-in-law."
+    },
+    {
+      "id": "br-b05",
+      "bookNo": 5,
+      "sourcePage": 91,
+      "keyFrom": "solved",
+      "pattern": "rel-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Pointing to a boy, a girl said, “He is the son of the daughter of my uncle's father.” How is the boy related to the girl?",
+      "options": {
+        "A": "Brother",
+        "B": "Uncle",
+        "C": "Brother-in-law",
+        "D": "Son"
+      },
+      "answer": "A",
+      "rule": "The girl's uncle's father is her grandfather, and his daughter is her mother (or her aunt).",
+      "working": "The son of her mother is her brother. (An aunt's son would be a cousin, which is not an option.) So he is her brother",
+      "note": "The book's key says C (Brother-in-law; the Kannada option C is nephew), but neither fits: the boy is the girl's brother or cousin, and only Brother is offered."
+    },
+    {
+      "id": "br-b06",
+      "bookNo": 6,
+      "sourcePage": 91,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Anand is the son of Prema. Raju is the brother of Prema. Neha has a daughter, Rashmi. Neha is the sister of Raju. How is Anand related to Rashmi?",
+      "options": {
+        "A": "Uncle",
+        "B": "Brother-in-law",
+        "C": "Cousin",
+        "D": "Sister"
+      },
+      "answer": "C",
+      "rule": "Prema, Raju and Neha are brothers and sisters. Anand is Prema's son, and Rashmi is Neha's daughter.",
+      "working": "Their mothers are sisters, so Anand is Rashmi's cousin",
+      "note": "The English book says “Rashmi has a daughter Neha”. The Kannada says Neha has a daughter Rashmi, which is the reading the key's answer needs."
+    },
+    {
+      "id": "br-b07",
+      "bookNo": 7,
+      "sourcePage": 91,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Anand and Badri are brothers. Vasanth is the sister of Anand. Deva is the brother of Eashwari. Eashwari is the daughter of Badri. Who is Deva's uncle?",
+      "options": {
+        "A": "Anand",
+        "B": "Eashwar",
+        "C": "Badri",
+        "D": "Vasanth"
+      },
+      "answer": "A",
+      "rule": "Eashwari is Badri's daughter and Deva is her brother, so Badri is Deva's father.",
+      "working": "Deva's father's brother is Anand, so Anand is Deva's uncle. (Badri is his father, and Vasanth is his aunt.)"
+    },
+    {
+      "id": "br-b08",
+      "bookNo": 8,
+      "sourcePage": 91,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A is the brother of F. C is the daughter of A. F's daughter is K. G is the brother of C. Who is G's uncle?",
+      "tree": {
+        "people": [
+          [
+            "A",
+            1,
+            0
+          ],
+          [
+            "F",
+            2,
+            0
+          ],
+          [
+            "G",
+            0,
+            1
+          ],
+          [
+            "C",
+            1,
+            1
+          ],
+          [
+            "K",
+            2,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "A",
+            "F",
+            "sibling"
+          ],
+          [
+            "A",
+            "G",
+            "child"
+          ],
+          [
+            "A",
+            "C",
+            "child"
+          ],
+          [
+            "G",
+            "C",
+            "sibling"
+          ],
+          [
+            "F",
+            "K",
+            "child"
+          ]
+        ]
+      },
+      "link": [
+        "G",
+        "F"
+      ],
+      "options": {
+        "A": "F",
+        "B": "K",
+        "C": "C",
+        "D": "A"
+      },
+      "answer": "A",
+      "rule": "G is C's brother, so G is also A's son.",
+      "working": "F is the brother of G's father A, so F is G's uncle",
+      "note": "The English doesn't say that F is a man, which “uncle” needs. The Kannada version says F is A's brother."
+    },
+    {
+      "id": "br-b09",
+      "bookNo": 9,
+      "sourcePage": 92,
+      "keyFrom": "solved",
+      "pattern": "rel-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Introducing Y, X said, “He is the husband of the granddaughter of my father's father.” How is Y related to X?",
+      "options": {
+        "A": "Brother",
+        "B": "Son",
+        "C": "Brother-in-law",
+        "D": "Son-in-law"
+      },
+      "answer": "C",
+      "rule": "The granddaughter of X's father's father is X's sister (or cousin).",
+      "working": "Y is her husband, so Y is X's brother-in-law",
+      "note": "The book's key says A (Brother), but Y is married to X's sister, which makes him X's brother-in-law."
+    },
+    {
+      "id": "br-b10",
+      "bookNo": 10,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Pointing to a woman, Raju said, “She is the daughter of the mother of my mother's husband.” How is the woman related to Raju?",
+      "options": {
+        "A": "Aunt",
+        "B": "Granddaughter",
+        "C": "Daughter",
+        "D": "Sister"
+      },
+      "answer": "A",
+      "rule": "Raju's mother's husband is his father, and his father's mother is Raju's grandmother.",
+      "working": "The grandmother's daughter is his father's sister: Raju's aunt"
+    },
+    {
+      "id": "br-b11",
+      "bookNo": 11,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-other",
+      "layout": "text",
+      "status": "needs-review",
+      "terms": [],
+      "prompt": "Pointing to a lady, Kumar said, “Your mother's husband's sister is my mother-in-law.” How is Kumar related to that lady?",
+      "options": {
+        "A": "Daughter",
+        "B": "Granddaughter",
+        "C": "Mother",
+        "D": "Sister"
+      },
+      "answer": "D",
+      "rule": "The lady's mother's husband is her father, and his sister is her aunt. That aunt is Kumar's mother-in-law.",
+      "working": "So Kumar's wife is the lady's cousin. Kumar is a man, but every option is a woman's relation",
+      "note": "Hidden until checked: none of the options can describe Kumar, who is a man. The key says D (Sister); the question may have meant Kumar's wife."
+    },
+    {
+      "id": "br-b12",
+      "bookNo": 12,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A is the mother of B. C is the son of A. D is the brother of E. E is the daughter of B. Who is D's grandmother?",
+      "tree": {
+        "people": [
+          [
+            "A",
+            0,
+            0
+          ],
+          [
+            "B",
+            0,
+            1
+          ],
+          [
+            "C",
+            1,
+            1
+          ],
+          [
+            "E",
+            0,
+            2
+          ],
+          [
+            "D",
+            1,
+            2
+          ]
+        ],
+        "lines": [
+          [
+            "A",
+            "B",
+            "child"
+          ],
+          [
+            "A",
+            "C",
+            "child"
+          ],
+          [
+            "B",
+            "C",
+            "sibling"
+          ],
+          [
+            "B",
+            "E",
+            "child"
+          ],
+          [
+            "B",
+            "D",
+            "child"
+          ],
+          [
+            "E",
+            "D",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "D",
+        "A"
+      ],
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "E is B's daughter and D is E's brother, so D is B's son.",
+      "working": "B's mother is A, so A is D's grandmother"
+    },
+    {
+      "id": "br-b13",
+      "bookNo": 13,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "E is the son of A. D is the son of B. E is married to C. C is the daughter of B. How is D related to E?",
+      "tree": {
+        "people": [
+          [
+            "A",
+            0,
+            0
+          ],
+          [
+            "B",
+            2,
+            0
+          ],
+          [
+            "E",
+            0,
+            1
+          ],
+          [
+            "C",
+            1,
+            1
+          ],
+          [
+            "D",
+            2,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "A",
+            "E",
+            "child"
+          ],
+          [
+            "B",
+            "C",
+            "child"
+          ],
+          [
+            "B",
+            "D",
+            "child"
+          ],
+          [
+            "E",
+            "C",
+            "married"
+          ],
+          [
+            "C",
+            "D",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "D",
+        "E"
+      ],
+      "options": {
+        "A": "Brother",
+        "B": "Uncle",
+        "C": "Maternal uncle",
+        "D": "Brother-in-law"
+      },
+      "answer": "D",
+      "rule": "C and D are both B's children, so D is C's brother.",
+      "working": "D is the brother of E's wife, so D is E's brother-in-law"
+    },
+    {
+      "id": "br-b14",
+      "bookNo": 14,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A is the brother of B. C and D are brothers. A's son is D's brother. How is B related to C?",
+      "tree": {
+        "people": [
+          [
+            "A",
+            1,
+            0
+          ],
+          [
+            "B",
+            2,
+            0
+          ],
+          [
+            "C",
+            0,
+            1
+          ],
+          [
+            "D",
+            1,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "A",
+            "B",
+            "sibling"
+          ],
+          [
+            "A",
+            "C",
+            "child"
+          ],
+          [
+            "A",
+            "D",
+            "child"
+          ],
+          [
+            "C",
+            "D",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "B",
+        "C"
+      ],
+      "options": {
+        "A": "Brother-in-law",
+        "B": "Brother",
+        "C": "Father-in-law",
+        "D": "Uncle"
+      },
+      "answer": "D",
+      "rule": "A's son is D's brother, so C and D are A's sons.",
+      "working": "B is the brother of their father A, so B is C's uncle"
+    },
+    {
+      "id": "br-b15",
+      "bookNo": 15,
+      "sourcePage": 92,
+      "keyFrom": "book",
+      "pattern": "rel-chain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A is the brother of B. C is the father of D. E is the mother of B. A and D are brothers. How is E related to C?",
+      "tree": {
+        "people": [
+          [
+            "C",
+            0,
+            0
+          ],
+          [
+            "E",
+            2,
+            0
+          ],
+          [
+            "D",
+            0,
+            1
+          ],
+          [
+            "A",
+            1,
+            1
+          ],
+          [
+            "B",
+            2,
+            1
+          ]
+        ],
+        "lines": [
+          [
+            "C",
+            "E",
+            "married"
+          ],
+          [
+            "C",
+            "D",
+            "child"
+          ],
+          [
+            "E",
+            "B",
+            "child"
+          ],
+          [
+            "D",
+            "A",
+            "sibling"
+          ],
+          [
+            "A",
+            "B",
+            "sibling"
+          ]
+        ]
+      },
+      "link": [
+        "E",
+        "C"
+      ],
+      "options": {
+        "A": "Sister",
+        "B": "Wife",
+        "C": "Daughter",
+        "D": "Mother"
+      },
+      "answer": "B",
+      "rule": "A, B and D are brothers and sisters, so they share parents: C is their father and E is their mother.",
+      "working": "E is the mother of C's children, so E is C's wife",
+      "note": "The English options in the book are Sister, Sister-in-law, Niece and Wife. The key (B) matches the Kannada options, used here, where B is Wife."
+    }
+  ]
+}
