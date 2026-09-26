@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { Question } from '../../types'
 import { generateBloodRelation } from '../generators/bloodRelations'
+import { generateCalendar } from '../generators/calendar'
 import { generateCoding } from '../generators/coding'
 import { generateDirections } from '../generators/directions'
 import { generateRuleQuestion, generateWrongNumber } from '../generators/games'
@@ -50,6 +51,11 @@ describe('generated questions carry Kannada', () => {
   it('coding–decoding', () => {
     const rng = mulberry32(23)
     for (let n = 0; n < 1000; n++) expectKannada(generateCoding(rng))
+  })
+
+  it('calendar', () => {
+    const rng = mulberry32(34)
+    for (let n = 0; n < 1000; n++) expectKannada(generateCalendar(rng))
   })
 
   it('blood relations', () => {

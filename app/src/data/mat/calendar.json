@@ -1,0 +1,292 @@
+{
+  "topic": "calendar",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 34 (questions: PDF pages 96–97, solutions: PDF pages 170–172)",
+  "questions": [
+    {
+      "id": "ca-b01",
+      "bookNo": 1,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "What was the day of the week on 1 June 2001?",
+      "options": {
+        "A": "Monday",
+        "B": "Wednesday",
+        "C": "Friday",
+        "D": "Sunday"
+      },
+      "answer": "C",
+      "rule": "Count the odd days (days left over after whole weeks). 2000 whole years have 0 odd days. In 2001: January 3, February 0, March 3, April 2, May 3, and 1 June adds 1.",
+      "working": "3 + 0 + 3 + 2 + 3 + 1 = 12 odd days, and 12 = 7 + 5. Counting 0 = Sunday, 5 is Friday"
+    },
+    {
+      "id": "ca-b02",
+      "bookNo": 2,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-weeks",
+      "layout": "text",
+      "terms": [],
+      "prompt": "How many days are there in 6 weeks and 8 days?",
+      "options": {
+        "A": "64",
+        "B": "48",
+        "C": "14",
+        "D": "50"
+      },
+      "answer": "D",
+      "rule": "One week has 7 days.",
+      "working": "6 × 7 + 8 = 42 + 8 = 50 days"
+    },
+    {
+      "id": "ca-b03",
+      "bookNo": 3,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "On what date in January 1601 did the first Saturday fall?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "C",
+      "rule": "1600 whole years have 0 odd days, and 1 January adds 1, so 1 January 1601 was a Monday (0 = Sunday, 1 = Monday).",
+      "working": "Monday is the 1st, so the first Saturday is 5 days later: 6 January"
+    },
+    {
+      "id": "ca-b04",
+      "bookNo": 4,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-same-month",
+      "layout": "text",
+      "terms": [],
+      "prompt": "If the 6th day of a month is a Friday, what day of the week is the 14th day of the month?",
+      "options": {
+        "A": "Saturday",
+        "B": "Wednesday",
+        "C": "Friday",
+        "D": "Sunday"
+      },
+      "answer": "A",
+      "rule": "Days 7 apart fall on the same weekday.",
+      "working": "14 − 6 = 8 days = 1 week + 1 day, so one day after Friday: Saturday"
+    },
+    {
+      "id": "ca-b05",
+      "bookNo": 5,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-after",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Today is Sunday. What day will it be after 78 days?",
+      "options": {
+        "A": "Monday",
+        "B": "Wednesday",
+        "C": "Friday",
+        "D": "Sunday"
+      },
+      "answer": "A",
+      "rule": "Only the days left over after whole weeks matter.",
+      "working": "78 = 11 × 7 + 1, so one day after Sunday: Monday"
+    },
+    {
+      "id": "ca-b06",
+      "bookNo": 6,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Rajesh celebrated his birthday on 14 March 2022, a Monday. On which day of the week will he celebrate his birthday the next year?",
+      "options": {
+        "A": "Sunday",
+        "B": "Tuesday",
+        "C": "Friday",
+        "D": "Monday"
+      },
+      "answer": "B",
+      "rule": "From 14 March 2022 to 14 March 2023 is 365 days (February 2023 has 28 days).",
+      "working": "365 = 52 × 7 + 1, so one day after Monday: Tuesday"
+    },
+    {
+      "id": "ca-b07",
+      "bookNo": 7,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-same-month",
+      "layout": "text",
+      "terms": [],
+      "prompt": "1 December 1991 was a Sunday. Which date was the fourth Wednesday of December 1991?",
+      "options": {
+        "A": "17.12.1991",
+        "B": "25.12.1991",
+        "C": "24.12.1991",
+        "D": "31.12.1991"
+      },
+      "answer": "B",
+      "rule": "1 December is a Sunday, so the first Wednesday is 4 December.",
+      "working": "The Wednesdays are 4, 11, 18 and 25, so the fourth is 25.12.1991"
+    },
+    {
+      "id": "ca-b08",
+      "bookNo": 8,
+      "sourcePage": 96,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which year after 1991 has exactly the same calendar as 1991?",
+      "options": {
+        "A": "2000",
+        "B": "2002",
+        "C": "1997",
+        "D": "1998"
+      },
+      "answer": "B",
+      "rule": "Two years share a calendar when the odd days between them add up to a whole number of weeks, and neither (or both) is a leap year. An ordinary year adds 1 odd day, a leap year adds 2.",
+      "working": "1991 to 2001: 1 + 2 + 1 + 1 + 1 + 2 + 1 + 1 + 1 + 2 + 1 = 14 odd days = 2 weeks. So 2002 starts on the same day as 1991, and neither is a leap year"
+    },
+    {
+      "id": "ca-b09",
+      "bookNo": 9,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-after",
+      "layout": "text",
+      "terms": [],
+      "prompt": "If the day before yesterday was Saturday, what day will the day after tomorrow be?",
+      "options": {
+        "A": "Thursday",
+        "B": "Wednesday",
+        "C": "Saturday",
+        "D": "Tuesday"
+      },
+      "answer": "B",
+      "rule": "The day before yesterday was Saturday, so yesterday was Sunday and today is Monday.",
+      "working": "Tomorrow is Tuesday, so the day after tomorrow is Wednesday"
+    },
+    {
+      "id": "ca-b10",
+      "bookNo": 10,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a 30-day month that begins on a Saturday, every second and fourth Saturday and every Sunday is a holiday. How many working days are there in that month?",
+      "options": {
+        "A": "28",
+        "B": "24",
+        "C": "25",
+        "D": "23"
+      },
+      "answer": "D",
+      "rule": "Day 1 is a Saturday, so the Saturdays are 1, 8, 15, 22, 29 and the Sundays are 2, 9, 16, 23, 30.",
+      "working": "Holidays: 5 Sundays + the 2nd and 4th Saturdays (8 and 22) = 7, so 30 − 7 = 23 working days"
+    },
+    {
+      "id": "ca-b11",
+      "bookNo": 11,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The last day of a century can be a:",
+      "options": {
+        "A": "Tuesday",
+        "B": "Thursday",
+        "C": "Saturday",
+        "D": "Friday"
+      },
+      "answer": "D",
+      "rule": "100 years have 5 odd days, so the 1st century ends on a Friday. 200 years (10 = 3 odd days) end on a Wednesday, 300 years (15 = 1) on a Monday, and 400 years (0) on a Sunday.",
+      "working": "A century can only end on a Monday, Wednesday, Friday or Sunday. Of the options, only Friday"
+    },
+    {
+      "id": "ca-b12",
+      "bookNo": 12,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "How many leap years are there in a period of 100 years?",
+      "options": {
+        "A": "25",
+        "B": "24",
+        "C": "4",
+        "D": "26"
+      },
+      "answer": "B",
+      "rule": "Every 4th year is a leap year: 100 ÷ 4 = 25. But a century year is a leap year only if it divides by 400.",
+      "working": "In an ordinary century the 100th year is not a leap year: 25 − 1 = 24"
+    },
+    {
+      "id": "ca-b13",
+      "bookNo": 13,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "How many days are there from 26 January 1996 to 15 May 1996?",
+      "options": {
+        "A": "110",
+        "B": "111",
+        "C": "112",
+        "D": "113"
+      },
+      "answer": "B",
+      "rule": "Count both days: 26–31 January is 6 days. 1996 is a leap year, so February has 29. Then March 31, April 30 and 1–15 May.",
+      "working": "6 + 29 + 31 + 30 + 15 = 111 days",
+      "note": "The book counts both 26 January and 15 May. Counting only the days after 26 January gives 110."
+    },
+    {
+      "id": "ca-b14",
+      "bookNo": 14,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-after",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Virat went to the market 10 days ago. He goes to the market only on Sundays. What day of the week is today?",
+      "options": {
+        "A": "Monday",
+        "B": "Wednesday",
+        "C": "Saturday",
+        "D": "Tuesday"
+      },
+      "answer": "B",
+      "rule": "Ten days ago was a Sunday.",
+      "working": "10 = 7 + 3, so today is 3 days after Sunday: Wednesday"
+    },
+    {
+      "id": "ca-b15",
+      "bookNo": 15,
+      "sourcePage": 97,
+      "keyFrom": "book",
+      "pattern": "cal-date",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Kiran was born on 5 March 2000. That year, Republic Day (26 January) was on a Wednesday. On which day of the week was Kiran born?",
+      "options": {
+        "A": "Sunday",
+        "B": "Wednesday",
+        "C": "Saturday",
+        "D": "Tuesday"
+      },
+      "answer": "A",
+      "rule": "From 26 January to 5 March 2000: 5 more days in January, 29 in February (2000 is a leap year) and 5 in March.",
+      "working": "5 + 29 + 5 = 39 = 5 × 7 + 4, so 4 days after Wednesday: Sunday"
+    }
+  ]
+}

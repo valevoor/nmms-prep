@@ -6,6 +6,7 @@ import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { useCountdown } from '../lib/countdown'
+import { askLabel } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useT } from '../lib/i18n'
 import type { Question } from '../types'
@@ -115,7 +116,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
             {source === 'book' ? t.common.bookQ(q.bookNo) : t.classroom.newQuestion} · {index + 1}
             {source === 'book' && t.classroom.of(list.length)}
           </span>
-          <span className="muted">{topic.missing === 'letters' ? t.common.findMissingLetters : topic.missing === 'wrong' ? t.common.findWrong : topic.missing === 'odd' ? t.common.findOdd : topic.missing === 'code' ? t.common.findCode : topic.missing === 'direction' ? t.common.findDirection : topic.missing === 'relation' ? t.common.findRelation : t.common.findMissing}</span>
+          <span className="muted">{askLabel(t, topic)}</span>
         </div>
         <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} />
         <Options q={q} size="lg" reveal={revealed} />

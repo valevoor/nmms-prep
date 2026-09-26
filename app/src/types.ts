@@ -57,6 +57,13 @@ export type PatternId =
   // Blood relations (Chapter 32)
   | 'rel-chain'
   | 'rel-other'
+  // Calendar (Chapter 34)
+  | 'cal-after'
+  | 'cal-same-month'
+  | 'cal-date'
+  | 'cal-count'
+  | 'cal-weeks'
+  | 'cal-other'
 
 export interface Question {
   id: string

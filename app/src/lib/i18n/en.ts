@@ -22,6 +22,7 @@ export const en = {
     findCode: 'Crack the code',
     findDirection: 'Work out the direction',
     findRelation: 'Work out the relation',
+    findAnswer: 'Work it out',
     start: 'Start',
     end: 'End',
     bookQ: (n: number | undefined) => `Book Q${n}`,

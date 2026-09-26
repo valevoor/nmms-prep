@@ -29,6 +29,7 @@ export const kn: Dict = {
     findCode: 'ಸಂಕೇತವನ್ನು ಬಿಡಿಸಿ',
     findDirection: 'ದಿಕ್ಕನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ',
     findRelation: 'ಸಂಬಂಧವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ',
+    findAnswer: 'ಲೆಕ್ಕ ಮಾಡಿ',
     start: 'ಪ್ರಾರಂಭ',
     end: 'ಕೊನೆ',
     bookQ: (n) => `ಪುಸ್ತಕ ಪ್ರ. ${n}`,

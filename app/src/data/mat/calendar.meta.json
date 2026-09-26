@@ -1,0 +1,36 @@
+{
+  "topic": "calendar",
+  "intro": "Calendar questions ask which day of the week a date falls on, or how many days lie between dates. The key idea is odd days: the days left over after whole weeks.",
+  "tips": [
+    {
+      "title": "Odd days",
+      "body": "Divide the number of days by 7. The whole weeks change nothing; the remainder (the odd days) moves the weekday on. 100 days = 14 weeks + 2, so it's 2 days later."
+    },
+    {
+      "title": "Number the weekdays",
+      "body": "Count 0 = Sunday, 1 = Monday, 2 = Tuesday … 6 = Saturday. Then \"5 odd days from the start\" means Friday."
+    },
+    {
+      "title": "Month odd days",
+      "body": "A 31-day month has 3 odd days, a 30-day month 2, and February 0 (or 1 in a leap year)."
+    },
+    {
+      "title": "Year odd days",
+      "body": "An ordinary year has 1 odd day and a leap year 2. 100 years have 5, 200 years 3, 300 years 1 and 400 years 0."
+    },
+    {
+      "title": "Leap years",
+      "body": "A year is a leap year if it divides by 4, but a century year (like 1900) only if it divides by 400. So 2000 was a leap year and 1900 wasn't."
+    },
+    {
+      "title": "Counting days between dates",
+      "body": "Read the question carefully: \"from 26 January to 15 May\" in this book counts both days. Write each month's days and add them."
+    }
+  ],
+  "workedExamples": [
+    "ca-b05",
+    "ca-b15",
+    "ca-b01",
+    "ca-b10"
+  ]
+}

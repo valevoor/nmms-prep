@@ -11,6 +11,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 23, *Coding–Decoding* ("HOME is coded as IQPI. How is STEM coded?"): all 13 book questions, including the two code-table puzzles. Two book typos are corrected, each with a note (Q5's code YENKNOM, Q7's option "2O15…"). The generator covers the chapter's seven codes and rejects any example that two codes could explain.
 - MAT Chapter 31, *Directions*: all 15 book questions, with the book's own Kannada wording for the questions and options. Explanations draw the walk or the map (`components/MapDiagram.tsx`). The generator makes walks, distances, turns, rotated compasses and town maps.
 - MAT Chapter 32, *Blood Relations*: 13 of the 15 book questions. The key is wrong on Q1, Q4, Q5 and Q9 (each corrected with a note), and Q3 and Q11 are hidden because none of their options is right. Explanations draw a family tree (`components/FamilyTreeView.tsx`), and Learn has a table of relation names in both languages.
+- MAT Chapter 34, *Calendar*: all 15 book questions, each checked against the real calendar (`tools/check_calendar.ts`). The generator covers days after N days, weekdays in a month or year, counting days between dates, and weeks to days.
 
 Each chapter also has a generator that makes unlimited new practice questions.
 

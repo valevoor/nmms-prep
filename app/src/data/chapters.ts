@@ -7,6 +7,10 @@ import bloodKn from './mat/blood-relations.kn.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
+import calendarKn from './mat/calendar.kn.json'
+import calendar from './mat/calendar.json'
+import calendarMetaKn from './mat/calendar.meta.kn.json'
+import calendarMeta from './mat/calendar.meta.json'
 import codingKn from './mat/coding-decoding.kn.json'
 import coding from './mat/coding-decoding.json'
 import codingMetaKn from './mat/coding-decoding.meta.kn.json'
@@ -68,4 +72,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('coding-decoding', 'Coding–Decoding', coding, codingMeta, codingKn, codingMetaKn),
   c('directions', 'Directions', directions, directionsMeta, directionsKn, directionsMetaKn),
   c('blood-relations', 'Blood Relations', blood, bloodMeta, bloodKn, bloodMetaKn),
+  c('calendar', 'Calendar', calendar, calendarMeta, calendarKn, calendarMetaKn),
 ]

@@ -1,3 +1,4 @@
+import type { Dict } from '../lib/i18n'
 import type { Question, TopicMeta } from '../types'
 import numberSeries from './mat/number-series.json'
 import numberSeriesMeta from './mat/number-series.meta.json'
@@ -7,6 +8,8 @@ import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
+import calendar from './mat/calendar.json'
+import calendarMeta from './mat/calendar.meta.json'
 import coding from './mat/coding-decoding.json'
 import directions from './mat/directions.json'
 import directionsMeta from './mat/directions.meta.json'
@@ -16,6 +19,7 @@ import oddOneMeta from './mat/odd-one-numbers.meta.json'
 import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
 import { generateBloodRelation } from '../lib/generators/bloodRelations'
+import { generateCalendar } from '../lib/generators/calendar'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
@@ -31,7 +35,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -119,14 +123,37 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'relation',
     generate: generateBloodRelation,
   },
+  {
+    id: 'calendar',
+    chapter: 34,
+    name: 'Calendar',
+    questions: visible(calendar.questions as Question[]),
+    meta: calendarMeta,
+    missing: 'answer',
+    generate: generateCalendar,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
 export const UPCOMING_MAT: { chapter: number; name: string }[] = [
-  { chapter: 34, name: 'Calendar' },
   { chapter: 35, name: 'Clock' },
   { chapter: 8, name: 'Mirror Image' },
 ]
+
+/** The short instruction above each question, e.g. "Find the missing number". */
+export function askLabel(t: Dict, topic: ReadyTopic): string {
+  const labels: Record<NonNullable<ReadyTopic['missing']>, string> = {
+    number: t.common.findMissing,
+    letters: t.common.findMissingLetters,
+    wrong: t.common.findWrong,
+    odd: t.common.findOdd,
+    code: t.common.findCode,
+    direction: t.common.findDirection,
+    relation: t.common.findRelation,
+    answer: t.common.findAnswer,
+  }
+  return labels[topic.missing ?? 'number']
+}
 
 export function getTopic(id: string): ReadyTopic | undefined {
   return READY_TOPICS.find((t) => t.id === id)
