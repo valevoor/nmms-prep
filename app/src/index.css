@@ -687,7 +687,11 @@ a {
 
 .analogy-wrap .pair {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+.analogy-wrap .term {
   white-space: nowrap;
 }
 
@@ -1892,4 +1896,56 @@ kbd {
 :lang(kn) .section-title {
   text-transform: none;
   letter-spacing: 0;
+}
+
+/* ---------- number table (Number Patterns) ---------- */
+
+.number-grid {
+  margin: 4px 0 12px;
+}
+
+.number-grid table {
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.number-grid td {
+  border: 1px solid var(--border);
+  min-width: 2.2em;
+  padding: 5px 4px;
+  text-align: center;
+}
+
+.number-grid td.ng-first {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.number-grid td.ng-second {
+  background: var(--good-soft);
+  color: var(--good);
+}
+
+.number-grid figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.ng-key {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 3px;
+  vertical-align: -0.1em;
+  margin-left: 6px;
+}
+
+.ng-key.ng-first {
+  background: var(--accent);
+}
+
+.ng-key.ng-second {
+  background: var(--good);
 }

@@ -1,5 +1,6 @@
 import { useQuestionText } from '../lib/i18n/content'
 import type { Question } from '../types'
+import { NumberGrid } from './NumberGrid'
 import { SeriesView } from './SeriesView'
 
 interface Props {
@@ -12,7 +13,13 @@ interface Props {
 /** The question itself: a series or analogy, or (layout 'text') a sentence with an optional table and sequence. */
 export function QuestionStem({ q, reveal, size = 'md' }: Props) {
   const { prompt } = useQuestionText(q)
-  if (q.layout !== 'text') return <SeriesView terms={q.terms} reveal={reveal} size={size} layout={q.layout} />
+  if (q.layout !== 'text')
+    return (
+      <>
+        <NumberGrid q={q} />
+        <SeriesView terms={q.terms} reveal={reveal} size={size} layout={q.layout} />
+      </>
+    )
   return (
     <div className={`stem stem-${size}`}>
       {q.table && (

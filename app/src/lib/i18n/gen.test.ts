@@ -5,6 +5,7 @@ import { generateCalendar } from '../generators/calendar'
 import { generateClock } from '../generators/clock'
 import { generateCoding } from '../generators/coding'
 import { generateLetterNumber } from '../generators/letterNumber'
+import { generateNumberPatterns } from '../generators/numberPatterns'
 import { generateDirections } from '../generators/directions'
 import { generateRuleQuestion, generateWrongNumber } from '../generators/games'
 import { generateLetterSeries, LETTER_PATTERNS } from '../generators/letterSeries'
@@ -60,6 +61,11 @@ describe('generated questions carry Kannada', () => {
   it('letter–number analogy', () => {
     const rng = mulberry32(22)
     for (let n = 0; n < 1000; n++) expectKannada(generateLetterNumber(rng))
+  })
+
+  it('number patterns', () => {
+    const rng = mulberry32(15)
+    for (let n = 0; n < 1000; n++) expectKannada(generateNumberPatterns(rng))
   })
 
   it('clock', () => {

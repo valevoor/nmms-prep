@@ -4,6 +4,7 @@ import { ClockFace } from '../components/ClockFace'
 import { FamilyTreeView } from '../components/FamilyTreeView'
 import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
+import { NumberGrid } from '../components/NumberGrid'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
@@ -24,6 +25,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
   return (
     <section className="card example">
       <h3>{t.learn.example(n)}</h3>
+      <NumberGrid q={q} reveal={done} />
       {q.kind === 'wrong' ? (
         // "Find the wrong number": at the end, show the series repaired, with the right number in place.
         <SeriesView
@@ -83,8 +85,8 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
         <WorkedExample key={q.id} q={q} n={i + 1} />
       ))}
 
-      <h2 className="section-title">{t.learn.cheatSheet}</h2>
-      {meta.cheatSheet === 'relations' ? (
+      {meta.cheatSheet !== 'none' && <h2 className="section-title">{t.learn.cheatSheet}</h2>}
+      {meta.cheatSheet === 'none' ? null : meta.cheatSheet === 'relations' ? (
         <section className="card cheats">
           <h3>{t.learn.relationsTitle}</h3>
           <table className="relations-table">

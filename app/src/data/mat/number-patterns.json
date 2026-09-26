@@ -1,0 +1,1182 @@
+{
+  "topic": "number-patterns",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 15 (questions: PDF pages 55–57, solutions: PDF pages 132–133)",
+  "questions": [
+    {
+      "id": "np-b01",
+      "bookNo": 1,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-flip",
+      "layout": "analogy",
+      "terms": [
+        "1 11 15 21",
+        "21 27 35 37",
+        "6 8 16 22",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      ],
+      "options": {
+        "A": "10 16 22 26",
+        "B": "22 28 32 42",
+        "C": "16 22 26 36",
+        "D": "22 16 8 6"
+      },
+      "answer": "B",
+      "rule": "In the table, the second group is the first one flipped left to right, like a mirror image. Flip the first pair's other group the same way.",
+      "working": "21 → 22, 27 → 28, 35 → 32, 37 → 42, so 22 28 32 42"
+    },
+    {
+      "id": "np-b02",
+      "bookNo": 2,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "12 13 24 25",
+        "11 14 23 26",
+        "8 17 20 29",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      ],
+      "options": {
+        "A": "30 19 18 7",
+        "B": "7 18 19 30",
+        "C": "26 23 14 11",
+        "D": "9 16 21 28"
+      },
+      "answer": "B",
+      "rule": "In the table, the second group has the same shape as the first, moved 4 columns right. Move the first pair's other group 4 columns right too.",
+      "working": "11 → 7, 14 → 18, 23 → 19, 26 → 30, so 7 18 19 30",
+      "note": "The book prints 12 13 14 25; the first group is the column 12 13 24 25 (14 is a misprint for 24)."
+    },
+    {
+      "id": "np-b03",
+      "bookNo": 3,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "4 9 16",
+        "121 100 81",
+        "16 25 36",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      ],
+      "options": {
+        "A": "9 16 25",
+        "B": "36 49 81",
+        "C": "144 121 100",
+        "D": "81 64 49"
+      },
+      "answer": "D",
+      "rule": "These are squares of table numbers: 4 9 16 are 2² 3² 4² from the top row, and 121 100 81 are 11² 10² 9², the numbers just below them. 16 25 36 are 4² 5² 6², moved 2 columns right, so take the squares of the numbers below 4, 5 and 6.",
+      "working": "4² 5² 6² → the numbers below are 9 8 7, so 81 64 49",
+      "note": "The Kannada key prints C by mistake; its own working (squares of 9, 8, 7) gives D."
+    },
+    {
+      "id": "np-b04",
+      "bookNo": 4,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-flip",
+      "layout": "analogy",
+      "terms": [
+        "3 14 25",
+        "36 23 10",
+        "4 17 30",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "18 29 40",
+        "B": "30 41 33",
+        "C": "31 20 9",
+        "D": "25 38 34"
+      },
+      "answer": "C",
+      "rule": "In the table, the second group is the first one flipped left to right, like a mirror image. Flip the first pair's other group the same way.",
+      "working": "36 → 31, 23 → 20, 10 → 9, so 31 20 9"
+    },
+    {
+      "id": "np-b05",
+      "bookNo": 5,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "6 18 30",
+        "7 19 31",
+        "1 13 25",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "2 14 26",
+        "B": "12 24 36",
+        "C": "11 23 35",
+        "D": "25 13 1"
+      },
+      "answer": "B",
+      "rule": "In the table, the second group has the same shape as the first, moved 5 columns left. Move the first pair's other group 5 columns left too.",
+      "working": "7 → 12, 19 → 24, 31 → 36, so 12 24 36",
+      "note": "The book prints 113 25; it is 1 13 25."
+    },
+    {
+      "id": "np-b06",
+      "bookNo": 6,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "37 38 39",
+        "42 41 40",
+        "36 35 34",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "35 34 33",
+        "B": "32 33 34",
+        "C": "31 32 33",
+        "D": "33 32 31"
+      },
+      "answer": "C",
+      "rule": "In the table, the second group has the same shape as the first, moved 1 row down. Move the first pair's other group 1 row down too.",
+      "working": "42 → 31, 41 → 32, 40 → 33, so 31 32 33",
+      "note": "The book prints 42 41 10; it is 42 41 40, as its key says."
+    },
+    {
+      "id": "np-b07",
+      "bookNo": 7,
+      "sourcePage": 56,
+      "keyFrom": "book",
+      "pattern": "grid-flip",
+      "layout": "analogy",
+      "terms": [
+        "6 18 30 29",
+        "8 9 10 22",
+        "1 13 25 26",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "26 38 35 36",
+        "B": "26 38 35 34",
+        "C": "11 10 22 34",
+        "D": "11 10 9 21"
+      },
+      "answer": "D",
+      "rule": "In the table, the second group is the first one flipped left to right, like a mirror image. Flip the first pair's other group the same way.",
+      "working": "8 → 11, 9 → 10, 10 → 9, 22 → 21, so 11 10 9 21"
+    },
+    {
+      "id": "np-b08",
+      "bookNo": 8,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "2 14 26 15 4",
+        "4 16 28 17 6",
+        "35 23 11 22 33",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "33 21 9 20 31",
+        "B": "33 21 9 22 35",
+        "C": "9 20 31 19 7",
+        "D": "33 21 9 20 32"
+      },
+      "answer": "A",
+      "rule": "In the table, the second group has the same shape as the first, moved 4 rows down. Move the first pair's other group 4 rows down too.",
+      "working": "4 → 33, 16 → 21, 28 → 9, 17 → 20, 6 → 31, so 33 21 9 20 31",
+      "note": "The book leaves out the last number of the second group, 33."
+    },
+    {
+      "id": "np-b09",
+      "bookNo": 9,
+      "sourcePage": 57,
+      "keyFrom": "solved",
+      "pattern": "grid-flip",
+      "layout": "analogy",
+      "terms": [
+        "24 11 22 9 20 7",
+        "19 8 21 10 23 12",
+        "13 2 15 4 17 6",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        [
+          36,
+          35,
+          34,
+          33,
+          32,
+          31
+        ],
+        [
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7
+        ]
+      ],
+      "options": {
+        "A": "18 5 16 3 14 1",
+        "B": "13 26 15 28",
+        "C": "25 14 27 16 29 18",
+        "D": "1 14 3 16 5 18"
+      },
+      "answer": "A",
+      "rule": "In the table, the second group is the first one flipped top to bottom, like a mirror image. Flip the first pair's other group the same way.",
+      "working": "19 → 18, 8 → 5, 21 → 16, 10 → 3, 23 → 14, 12 → 1, so 18 5 16 3 14 1",
+      "note": "The English key says C and the Kannada key says D. Neither follows the pattern: flipping 19 8 21 10 23 12 top to bottom gives 18 5 16 3 14 1 (A). D has the same numbers in the opposite order."
+    },
+    {
+      "id": "np-b10",
+      "bookNo": 10,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "1 14 25 32 19",
+        "2 13 26 31 20",
+        "3 16 27 34 21",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "22 33 15 4",
+        "B": "16 27 34 21 10",
+        "C": "4 15 28 33 22",
+        "D": "4 16 27 34 25"
+      },
+      "answer": "C",
+      "rule": "In the table, the second group has the same shape as the first, moved 2 rows down. Move the first pair's other group 2 rows down too.",
+      "working": "2 → 4, 13 → 15, 26 → 28, 31 → 33, 20 → 22, so 4 15 28 33 22",
+      "note": "The book prints the answer in the question by mistake (4 15 28 33 22 ?)."
+    },
+    {
+      "id": "np-b11",
+      "bookNo": 11,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-flip",
+      "layout": "analogy",
+      "terms": [
+        "13 26 33",
+        "33 20 7",
+        "17 28 33",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "33 22 11",
+        "B": "11 22 33",
+        "C": "34 35 36",
+        "D": "33 22 31"
+      },
+      "answer": "A",
+      "rule": "In the table, the second group is the first one flipped top to bottom, like a mirror image. Flip the first pair's other group the same way.",
+      "working": "33 → 33, 20 → 22, 7 → 11, so 33 22 11"
+    },
+    {
+      "id": "np-b12",
+      "bookNo": 12,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "1 2 3",
+        "16 17 18",
+        "25 26 27",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "36 35 34",
+        "B": "33 32 31",
+        "C": "28 29 30",
+        "D": "34 35 36"
+      },
+      "answer": "D",
+      "rule": "In the table, the second group has the same shape as the first, moved 2 columns right. Move the first pair's other group 2 columns right too.",
+      "working": "16 → 34, 17 → 35, 18 → 36, so 34 35 36"
+    },
+    {
+      "id": "np-b13",
+      "bookNo": 13,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "7 31 13",
+        "8 32 14",
+        "11 35 17",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "12 36 18",
+        "B": "18 16 12",
+        "C": "5 29 23",
+        "D": "11 23 35"
+      },
+      "answer": "A",
+      "rule": "In the table, the second group has the same shape as the first, moved 4 rows down. Move the first pair's other group 4 rows down too.",
+      "working": "8 → 12, 32 → 36, 14 → 18, so 12 36 18"
+    },
+    {
+      "id": "np-b14",
+      "bookNo": 14,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "31 20 9",
+        "25 32 21",
+        "13 26 33",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "14 27 23",
+        "B": "1 14 27",
+        "C": "1 14 34",
+        "D": "27 14 1"
+      },
+      "answer": "B",
+      "rule": "In the table, the second group has the same shape as the first, moved 2 columns left. Move the first pair's other group 2 columns left too.",
+      "working": "25 → 1, 32 → 14, 21 → 27, so 1 14 27"
+    },
+    {
+      "id": "np-b15",
+      "bookNo": 15,
+      "sourcePage": 57,
+      "keyFrom": "book",
+      "pattern": "grid-shift",
+      "layout": "analogy",
+      "terms": [
+        "5 6 18 30 29",
+        "29 30 36 24 23",
+        "1 2 14 26 25",
+        "?"
+      ],
+      "grid": [
+        [
+          1,
+          13,
+          25,
+          31,
+          19,
+          7
+        ],
+        [
+          2,
+          14,
+          26,
+          32,
+          20,
+          8
+        ],
+        [
+          3,
+          15,
+          27,
+          33,
+          21,
+          9
+        ],
+        [
+          4,
+          16,
+          28,
+          34,
+          22,
+          10
+        ],
+        [
+          5,
+          17,
+          29,
+          35,
+          23,
+          11
+        ],
+        [
+          6,
+          18,
+          30,
+          36,
+          24,
+          12
+        ]
+      ],
+      "options": {
+        "A": "25 36 32 20 19",
+        "B": "19 20 32 26 25",
+        "C": "26 25 31 19 20",
+        "D": "20 19 31 25 26"
+      },
+      "answer": "A",
+      "rule": "In the table, the second group has the same shape as the first, moved 4 rows up. Move the first pair's other group 4 rows up too.",
+      "working": "29 → 25, 30 → 26, 36 → 32, 24 → 20, 23 → 19: 25 26 32 20 19 is not an option",
+      "note": "Moving 29 30 36 24 23 four rows up gives 25 26 32 20 19, which is not an option. The Kannada key says A, which has 36 in place of 26; the English key gives no answer. So this question is hidden.",
+      "status": "needs-review"
+    }
+  ]
+}

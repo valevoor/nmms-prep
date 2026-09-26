@@ -79,6 +79,9 @@ export type PatternId =
   | 'ln-letter'
   | 'ln-shift'
   | 'ln-other'
+  // Number patterns (Chapter 15)
+  | 'grid-shift'
+  | 'grid-flip'
 
 export interface Question {
   id: string
@@ -100,6 +103,8 @@ export interface Question {
   tree?: FamilyTree
   /** A clock face to draw in the explanation: [hours, minutes]. */
   clock?: [number, number]
+  /** A number table the question's groups are taken from (Number Patterns); rows of numbers. */
+  grid?: number[][]
   options: Record<OptionKey, string>
   answer: OptionKey
   /** One-line rule shown in the explanation. */
@@ -143,5 +148,5 @@ export interface TopicMeta {
   tips: { title: string; body: string; visual?: string; caption?: string }[]
   workedExamples: string[]
   /** What the Learn page's cheat sheet shows: squares, cubes and primes (default), or letter positions. */
-  cheatSheet?: 'numbers' | 'alphabet' | 'relations'
+  cheatSheet?: 'numbers' | 'alphabet' | 'relations' | 'none'
 }

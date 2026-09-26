@@ -198,6 +198,18 @@ const genEn = {
     })[kind]!,
   lnShift: (list: string) => `Each letter moves by ${list} places in turn.`,
 
+  // Number patterns (a table of numbers)
+  gridMove: (rows: number, cols: number) =>
+    [
+      rows && `${Math.abs(rows)} row${Math.abs(rows) === 1 ? '' : 's'} ${rows > 0 ? 'down' : 'up'}`,
+      cols && `${Math.abs(cols)} column${Math.abs(cols) === 1 ? '' : 's'} ${cols > 0 ? 'right' : 'left'}`,
+    ]
+      .filter(Boolean)
+      .join(' and '),
+  gridShift: (move: string) => `In the table, the second group has the same shape as the first, moved ${move}. Move the first pair's other group ${move} too.`,
+  gridFlip: (lr: boolean) =>
+    `In the table, the second group is the first one flipped ${lr ? 'left to right' : 'top to bottom'}, like a mirror image. Flip the first pair's other group the same way.`,
+
   // Clock
   angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
   angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
@@ -280,6 +292,8 @@ const genEn = {
     'ln-letter': 'Turn a letter\'s place into a number',
     'ln-shift': 'Move each letter by a set number of places',
     'ln-other': 'Letters and numbers swapped by a rule',
+    'grid-shift': 'The same shape, moved across the table',
+    'grid-flip': 'The same shape, flipped like a mirror image',
   } as Record<PatternId, string>,
 }
 
@@ -463,6 +477,12 @@ const genKn: GenText = {
     })[kind]!,
   lnShift: (list) => `ಪ್ರತಿ ಅಕ್ಷರವೂ ಕ್ರಮವಾಗಿ ${list} ಸ್ಥಾನ ಸರಿಯುತ್ತದೆ.`,
 
+  gridMove: (rows, cols) =>
+    [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
+  gridShift: (move) => `ಕೋಷ್ಟಕದಲ್ಲಿ ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ ಅದೇ ಆಕಾರದಲ್ಲಿದೆ, ${move} ಸರಿಸಲಾಗಿದೆ. ಮೊದಲ ಜೋಡಿಯ ಇನ್ನೊಂದು ಗುಂಪನ್ನೂ ${move} ಸರಿಸಿ.`,
+  gridFlip: (lr) =>
+    `ಕೋಷ್ಟಕದಲ್ಲಿ ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ ಕನ್ನಡಿ ಬಿಂಬ, ${lr ? 'ಎಡದಿಂದ ಬಲಕ್ಕೆ' : 'ಮೇಲಿನಿಂದ ಕೆಳಕ್ಕೆ'} ತಿರುಗಿಸಲಾಗಿದೆ. ಮೊದಲ ಜೋಡಿಯ ಇನ್ನೊಂದು ಗುಂಪನ್ನೂ ಅದೇ ರೀತಿ ತಿರುಗಿಸಿ.`,
+
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
   angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
   angleWork: (h, m, hd, md, diff, ans) => `ಗಂಟೆಯ ಮುಳ್ಳು: 30 × ${h} + ½ × ${m} = ${hd}°. ನಿಮಿಷದ ಮುಳ್ಳು: 6 × ${m} = ${md}°. ವ್ಯತ್ಯಾಸ: ${diff}, ಆದ್ದರಿಂದ ಉತ್ತರ ${ans}`,
@@ -541,6 +561,8 @@ const genKn: GenText = {
     'ln-letter': 'ಅಕ್ಷರದ ಸ್ಥಾನವನ್ನು ಸಂಖ್ಯೆಯಾಗಿ ಬದಲಿಸಿ',
     'ln-shift': 'ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ನಿಗದಿತ ಸ್ಥಾನಗಳಷ್ಟು ಸರಿಸಿ',
     'ln-other': 'ನಿಯಮದಂತೆ ಅಕ್ಷರ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಬದಲಾವಣೆ',
+    'grid-shift': 'ಅದೇ ಆಕಾರ, ಕೋಷ್ಟಕದಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ',
+    'grid-flip': 'ಅದೇ ಆಕಾರ, ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ತಿರುಗಿಸಲಾಗಿದೆ',
   },
 }
 

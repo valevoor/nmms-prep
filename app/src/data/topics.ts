@@ -12,6 +12,8 @@ import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
+import numberPatterns from './mat/number-patterns.json'
+import numberPatternsMeta from './mat/number-patterns.meta.json'
 import calendar from './mat/calendar.json'
 import calendarMeta from './mat/calendar.meta.json'
 import clock from './mat/clock.json'
@@ -31,6 +33,7 @@ import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
+import { generateNumberPatterns } from '../lib/generators/numberPatterns'
 import { generateLetterNumber } from '../lib/generators/letterNumber'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
 import { generateOddLetters } from '../lib/generators/oddLetters'
@@ -47,7 +50,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -180,6 +183,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateLetterNumber,
   },
+  {
+    id: 'number-patterns',
+    chapter: 15,
+    name: 'Number Patterns',
+    questions: visible(numberPatterns.questions as Question[]),
+    meta: numberPatternsMeta as TopicMeta,
+    missing: 'grid',
+    generate: generateNumberPatterns,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -198,6 +210,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     direction: t.common.findDirection,
     relation: t.common.findRelation,
     answer: t.common.findAnswer,
+    grid: t.common.findGrid,
   }
   return labels[topic.missing ?? 'number']
 }

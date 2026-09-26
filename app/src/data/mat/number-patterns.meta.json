@@ -1,0 +1,36 @@
+{
+  "topic": "number-patterns",
+  "intro": "Each question comes with a table of numbers. The groups of numbers are shapes in that table. Find how the first shape moved to make the third group, then move the second group the same way.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Find every number in the table",
+      "body": "Put a finger on each number of the first group. Seeing where they sit (a line, a corner, a zigzag) is the whole question."
+    },
+    {
+      "title": "Compare the two left-hand groups",
+      "body": "The first group and the third group have the same shape. Work out how the shape moved: some rows down, some columns across, or flipped."
+    },
+    {
+      "title": "Move the answer group the same way",
+      "body": "Do exactly the same move to the second group of the first pair. Read the new cells in the same order."
+    },
+    {
+      "title": "Mirror images flip the order across",
+      "body": "If the shape is flipped left to right, the first column swaps with the last, the second with the second-last, and so on."
+    },
+    {
+      "title": "Watch the order of the numbers",
+      "body": "Two options often hold the same numbers in a different order. Only one keeps the order of the first pair."
+    },
+    {
+      "title": "Check the table's layout first",
+      "body": "Tables are filled in different ways: row by row, snaking back and forth, or column by column. Look at how the numbers run before you start."
+    }
+  ],
+  "workedExamples": [
+    "np-b12",
+    "np-b04",
+    "np-b09"
+  ]
+}

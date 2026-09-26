@@ -11,6 +11,10 @@ import letterNumberKn from './mat/letter-number-analogy.kn.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMetaKn from './mat/letter-number-analogy.meta.kn.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
+import numberPatternsKn from './mat/number-patterns.kn.json'
+import numberPatterns from './mat/number-patterns.json'
+import numberPatternsMetaKn from './mat/number-patterns.meta.kn.json'
+import numberPatternsMeta from './mat/number-patterns.meta.json'
 import calendarKn from './mat/calendar.kn.json'
 import calendar from './mat/calendar.json'
 import calendarMetaKn from './mat/calendar.meta.kn.json'
@@ -92,5 +96,6 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('clock', 'Clock', clock, clockMeta, clockKn, clockMetaKn),
   c('number-sequence', 'Number Sequence', numberSequence, numberSequenceMeta, numberSequenceKn, numberSequenceMetaKn),
   c('letter-number-analogy', 'Letter–Number Analogy', letterNumber, letterNumberMeta, letterNumberKn, letterNumberMetaKn),
+  c('number-patterns', 'Number Patterns', numberPatterns, numberPatternsMeta, numberPatternsKn, numberPatternsMetaKn),
   c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
 ]

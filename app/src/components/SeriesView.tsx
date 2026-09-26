@@ -17,7 +17,8 @@ export function Term({ value }: { value: string }) {
         </span>
       </>
     )
-  return <>{value}</>
+  // A group of numbers from a table (Number Patterns): wider gaps so 1 11 15 21 reads as four numbers.
+  return <>{/^\d+( \d+)+$/.test(value) ? value.replace(/ /g, '\u2002') : value}</>
 }
 
 const spaced = (op: string) => op.replace(/([+−×÷])/g, ' $1 ').replace(/\s+/g, ' ').trim()

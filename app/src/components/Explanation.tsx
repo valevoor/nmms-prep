@@ -4,6 +4,7 @@ import { useQuestionText } from '../lib/i18n/content'
 import { ClockFace } from './ClockFace'
 import { FamilyTreeView } from './FamilyTreeView'
 import { MapDiagram } from './MapDiagram'
+import { NumberGrid } from './NumberGrid'
 import { SeriesView } from './SeriesView'
 
 export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg' }) {
@@ -22,6 +23,7 @@ export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg
           <SeriesView terms={q.terms} ops={q.ops} reveal={q.kind === 'rule' ? undefined : q.options[q.answer]} size={size} layout={q.layout} />
         )
       )}
+      <NumberGrid q={q} reveal />
       <MapDiagram q={q} />
       <FamilyTreeView q={q} />
       <ClockFace q={q} />

@@ -15,6 +15,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 35, *Clock*: 9 of the 11 book questions, checked from the hand positions (`tools/check_clock.ts`). The key is wrong on Q2 (corrected); Q3 (water image) and Q4 (mirror image) are hidden because no option is right. Explanations draw the clock face (`components/ClockFace.tsx`).
 - MAT Chapter 16, *Odd One Out: Letters*: 14 of the 15 book questions. Q4 is hidden because ABA (the only palindrome) is as good an answer as the key's ABD.
 - MAT Chapter 20, *Number Sequence* (counting places that fit a rule): 19 of the 20 book questions, each recounted by `tools/check_number_sequence.ts`. The key misses a pair in Q15 (corrected); Q7 is hidden because the true count (9) is not an option.
+- MAT Chapter 15, *Number Patterns* (shapes of numbers in a table, shifted or flipped): 14 of the 15 book questions, each re-solved on its table by `tools/check_number_patterns.ts` (a plain shift is preferred to a flip, as in the book). Several printed typos are corrected with a note; Q9's two keys (C and D) are both wrong, so the solved answer A is used; Q15 is hidden because the right answer is not an option.
 - MAT Chapter 22, *Letter–Number Analogy* (letters turned into numbers or other letters by a rule): 14 of the 15 book questions, each rule re-applied by `tools/check_letter_number_analogy.ts`. Q5 is hidden: the book prints only options A and B, and the key's answer C (HLCPERTOIE) is missing.
 
 Each chapter also has a generator that makes unlimited new practice questions.
