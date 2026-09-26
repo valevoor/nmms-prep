@@ -1,5 +1,7 @@
 import type { Dict } from '../lib/i18n'
 import type { Question, TopicMeta } from '../types'
+import numberSequence from './mat/number-sequence.json'
+import numberSequenceMeta from './mat/number-sequence.meta.json'
 import numberSeries from './mat/number-series.json'
 import numberSeriesMeta from './mat/number-series.meta.json'
 import numberAnalogy from './mat/number-analogy.json'
@@ -32,6 +34,7 @@ import { generateOddLetters } from '../lib/generators/oddLetters'
 import { generateOddOne } from '../lib/generators/oddOne'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/generators/numberAnalogy'
 import { generateNumberSeries } from '../lib/generators/numberSeries'
+import { generateSequence } from '../lib/generators/sequence'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -155,6 +158,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: oddLettersMeta as TopicMeta,
     missing: 'odd',
     generate: generateOddLetters,
+  },
+  {
+    id: 'number-sequence',
+    chapter: 20,
+    name: 'Number Sequence',
+    questions: visible(numberSequence.questions as Question[]),
+    meta: numberSequenceMeta,
+    missing: 'answer',
+    generate: generateSequence,
   },
 ]
 

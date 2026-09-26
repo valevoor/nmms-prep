@@ -31,6 +31,10 @@ import numberAnalogyKn from './mat/number-analogy.kn.json'
 import numberAnalogy from './mat/number-analogy.json'
 import numberAnalogyMetaKn from './mat/number-analogy.meta.kn.json'
 import numberAnalogyMeta from './mat/number-analogy.meta.json'
+import numberSequenceKn from './mat/number-sequence.kn.json'
+import numberSequence from './mat/number-sequence.json'
+import numberSequenceMetaKn from './mat/number-sequence.meta.kn.json'
+import numberSequenceMeta from './mat/number-sequence.meta.json'
 import numberSeriesKn from './mat/number-series.kn.json'
 import numberSeries from './mat/number-series.json'
 import numberSeriesMetaKn from './mat/number-series.meta.kn.json'
@@ -82,5 +86,6 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('blood-relations', 'Blood Relations', blood, bloodMeta, bloodKn, bloodMetaKn),
   c('calendar', 'Calendar', calendar, calendarMeta, calendarKn, calendarMetaKn),
   c('clock', 'Clock', clock, clockMeta, clockKn, clockMetaKn),
+  c('number-sequence', 'Number Sequence', numberSequence, numberSequenceMeta, numberSequenceKn, numberSequenceMetaKn),
   c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
 ]

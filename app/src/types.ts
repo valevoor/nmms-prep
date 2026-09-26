@@ -71,6 +71,9 @@ export type PatternId =
   | 'clock-turn'
   | 'clock-gain'
   | 'clock-other'
+  // Number sequence counting (Chapter 20)
+  | 'seq-count'
+  | 'seq-position'
 
 export interface Question {
   id: string

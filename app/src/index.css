@@ -577,6 +577,24 @@ a {
   font-size: 1.6rem;
 }
 
+.stem-seq {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  word-spacing: 0.15em;
+  overflow-wrap: anywhere;
+}
+
+.stem-lg .stem-seq {
+  font-size: 1.7rem;
+}
+
 .code-table {
   border-collapse: collapse;
   margin: 0 0 12px;

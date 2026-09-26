@@ -167,6 +167,19 @@ const genEn = {
   olJumps: (odd: string, list: string) => `${odd} jumps ${list}`,
   olOddPlace: (c: string, n: number) => `${c} is in place ${n}, which is odd`,
 
+  // Number sequence (counting)
+  seqEvenAfterPrime: 'In the series below, how many times does an even number come immediately after a prime number?',
+  seqOddBetweenEven: 'In the series below, how many times does an odd number come between two even numbers?',
+  seqEvenBetweenPrimes: 'In the series below, looking at three numbers in a row, how many times does an even number come between two prime numbers?',
+  seqOddAfterSquare: 'In the series below, how many times does an odd number come immediately after a square number?',
+  seqDiff: (k: number) => `In the series below, how many pairs of neighbouring numbers differ by ${k}?`,
+  seqSum: (k: number) => `In the series below, how many pairs of neighbouring numbers add up to ${k}?`,
+  seqAfterNot: (x: number, y: number, z: number) => `In the series below, how many ${x}s come immediately after ${y} but are not immediately followed by ${z}?`,
+  seqConsBetweenVowels: 'In the letter series below, how many times does a consonant come between two vowels?',
+  seqLetterAfterVowel: (c: string) => `In the letter series below, how many times does the letter ${c} come immediately after a vowel?`,
+  seqRule: 'Go through the series one place at a time and mark every place that fits, then count the marks. Primes: 2, 3, 5, 7; squares: 1, 4, 9; vowels: A, E, I, O, U.',
+  seqFound: (list: string, n: number) => (n ? `They are: ${list}. That makes ${n}.` : 'No place fits, so the answer is 0.'),
+
   // Clock
   angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
   angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
@@ -243,6 +256,8 @@ const genEn = {
     'clock-turn': 'How far a hand turns',
     'clock-gain': 'A clock that gains or loses time',
     'clock-other': 'Clock facts',
+    'seq-count': 'Count the places in a sequence that fit a rule',
+    'seq-position': 'Find a term by its position',
   } as Record<PatternId, string>,
 }
 
@@ -397,6 +412,18 @@ const genKn: GenText = {
   olJumps: (odd, list) => `${odd} ${list} ಜಿಗಿಯುತ್ತದೆ`,
   olOddPlace: (c, n) => `${c} ${n}ನೇ ಸ್ಥಾನದಲ್ಲಿದೆ, ಅದು ಬೆಸ ಸ್ಥಾನ`,
 
+  seqEvenAfterPrime: 'ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆಯ ನಂತರ ತಕ್ಷಣ ಸಮ ಸಂಖ್ಯೆ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?',
+  seqOddBetweenEven: 'ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ಎರಡು ಸಮ ಸಂಖ್ಯೆಗಳ ನಡುವೆ ಬೆಸ ಸಂಖ್ಯೆ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?',
+  seqEvenBetweenPrimes: 'ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ಮೂರು ಅನುಕ್ರಮ ಸಂಖ್ಯೆಗಳನ್ನು ಪರಿಗಣಿಸಿದಾಗ, ಎರಡು ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆಗಳ ನಡುವೆ ಸಮ ಸಂಖ್ಯೆ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?',
+  seqOddAfterSquare: 'ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ವರ್ಗ ಸಂಖ್ಯೆಯ ನಂತರ ತಕ್ಷಣ ಬೆಸ ಸಂಖ್ಯೆ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?',
+  seqDiff: (k) => `ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ಅಕ್ಕಪಕ್ಕದ ಸಂಖ್ಯೆಗಳ ವ್ಯತ್ಯಾಸ ${k} ಆಗಿರುವ ಜೋಡಿಗಳು ಎಷ್ಟು?`,
+  seqSum: (k) => `ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ಅಕ್ಕಪಕ್ಕದ ಸಂಖ್ಯೆಗಳ ಮೊತ್ತ ${k} ಆಗಿರುವ ಜೋಡಿಗಳು ಎಷ್ಟು?`,
+  seqAfterNot: (x, y, z) => `ಕೆಳಗಿನ ಸರಣಿಯಲ್ಲಿ ${y} ರ ನಂತರ ತಕ್ಷಣ ಬಂದಿರುವ ಆದರೆ ${z} ಕ್ಕಿಂತ ತಕ್ಷಣ ಮುಂಚೆ ಬಾರದಿರುವ ${x} ಗಳು ಎಷ್ಟು?`,
+  seqConsBetweenVowels: 'ಕೆಳಗಿನ ಅಕ್ಷರ ಸರಣಿಯಲ್ಲಿ ಎರಡು ಸ್ವರಗಳ ನಡುವೆ ವ್ಯಂಜನ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?',
+  seqLetterAfterVowel: (c) => `ಕೆಳಗಿನ ಅಕ್ಷರ ಸರಣಿಯಲ್ಲಿ ಸ್ವರದ ನಂತರ ತಕ್ಷಣ ${c} ಅಕ್ಷರ ಎಷ್ಟು ಬಾರಿ ಬಂದಿದೆ?`,
+  seqRule: 'ಸರಣಿಯನ್ನು ಒಂದೊಂದೇ ಸ್ಥಾನವಾಗಿ ನೋಡಿ, ಹೊಂದುವ ಪ್ರತಿ ಸ್ಥಾನವನ್ನು ಗುರುತಿಸಿ, ನಂತರ ಗುರುತುಗಳನ್ನು ಎಣಿಸಿ. ಅವಿಭಾಜ್ಯ: 2, 3, 5, 7; ವರ್ಗ: 1, 4, 9; ಸ್ವರಗಳು: A, E, I, O, U.',
+  seqFound: (list, n) => (n ? `ಅವು: ${list}. ಒಟ್ಟು ${n}.` : 'ಯಾವ ಸ್ಥಾನವೂ ಹೊಂದುವುದಿಲ್ಲ, ಆದ್ದರಿಂದ ಉತ್ತರ 0.'),
+
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
   angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
   angleWork: (h, m, hd, md, diff, ans) => `ಗಂಟೆಯ ಮುಳ್ಳು: 30 × ${h} + ½ × ${m} = ${hd}°. ನಿಮಿಷದ ಮುಳ್ಳು: 6 × ${m} = ${md}°. ವ್ಯತ್ಯಾಸ: ${diff}, ಆದ್ದರಿಂದ ಉತ್ತರ ${ans}`,
@@ -469,6 +496,8 @@ const genKn: GenText = {
     'clock-turn': 'ಮುಳ್ಳು ಎಷ್ಟು ತಿರುಗುತ್ತದೆ',
     'clock-gain': 'ಮುಂದೆ ಅಥವಾ ಹಿಂದೆ ಓಡುವ ಗಡಿಯಾರ',
     'clock-other': 'ಗಡಿಯಾರದ ಸಂಗತಿಗಳು',
+    'seq-count': 'ನಿಯಮಕ್ಕೆ ಹೊಂದುವ ಸ್ಥಳಗಳನ್ನು ಎಣಿಸಿ',
+    'seq-position': 'ಸ್ಥಾನದಿಂದ ಪದವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ',
   },
 }
 

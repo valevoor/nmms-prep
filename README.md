@@ -14,6 +14,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 34, *Calendar*: all 15 book questions, each checked against the real calendar (`tools/check_calendar.ts`). The generator covers days after N days, weekdays in a month or year, counting days between dates, and weeks to days.
 - MAT Chapter 35, *Clock*: 9 of the 11 book questions, checked from the hand positions (`tools/check_clock.ts`). The key is wrong on Q2 (corrected); Q3 (water image) and Q4 (mirror image) are hidden because no option is right. Explanations draw the clock face (`components/ClockFace.tsx`).
 - MAT Chapter 16, *Odd One Out: Letters*: 14 of the 15 book questions. Q4 is hidden because ABA (the only palindrome) is as good an answer as the key's ABD.
+- MAT Chapter 20, *Number Sequence* (counting places that fit a rule): 19 of the 20 book questions, each recounted by `tools/check_number_sequence.ts`. The key misses a pair in Q15 (corrected); Q7 is hidden because the true count (9) is not an option.
 
 Each chapter also has a generator that makes unlimited new practice questions.
 

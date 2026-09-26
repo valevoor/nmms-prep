@@ -1,0 +1,32 @@
+{
+  "topic": "number-sequence",
+  "intro": "Sequence questions give a long row of numbers or letters and ask you to count the places that fit a rule, like \"an even number just after a prime\".",
+  "tips": [
+    {
+      "title": "Read the rule word by word",
+      "body": "\"Immediately after\" means the very next place. \"Between\" means one on each side. \"Not immediately followed by\" rules some places out."
+    },
+    {
+      "title": "Mark, then count",
+      "body": "Go through the row once, from left to right, and mark each place that fits. Then count the marks. Counting in your head is where mistakes creep in."
+    },
+    {
+      "title": "Know the special numbers",
+      "body": "Primes under 10: 2, 3, 5, 7 (1 is not prime). Squares: 0, 1, 4, 9. Factors of 4: 1, 2, 4. Vowels: A, E, I, O, U."
+    },
+    {
+      "title": "Overlaps count",
+      "body": "In 3 6 9, both 3 6 and 6 9 are pairs that differ by 3. Don't skip a number just because it was part of the last match."
+    },
+    {
+      "title": "Positions",
+      "body": "For \"the 6th letter to the left of the 8th\", find the 8th first, then count 6 back: 8 − 6 = the 2nd letter."
+    }
+  ],
+  "workedExamples": [
+    "ns2-b01",
+    "ns2-b03",
+    "ns2-b17",
+    "ns2-b14"
+  ]
+}
