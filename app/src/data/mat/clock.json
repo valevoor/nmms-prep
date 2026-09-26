@@ -1,0 +1,253 @@
+{
+  "topic": "clock",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 35 (questions: PDF pages 98–99, key: PDF page 173)",
+  "questions": [
+    {
+      "id": "cl-b01",
+      "bookNo": 1,
+      "sourcePage": 98,
+      "keyFrom": "book",
+      "pattern": "clock-turn",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A clock shows 9 o'clock in the morning. Through how many degrees will the hour hand turn by the time the clock shows 3 o'clock in the afternoon?",
+      "clock": [
+        3,
+        0
+      ],
+      "options": {
+        "A": "145°",
+        "B": "150°",
+        "C": "160°",
+        "D": "180°"
+      },
+      "answer": "D",
+      "rule": "The hour hand turns 30° every hour (360° in 12 hours).",
+      "working": "9 am to 3 pm is 6 hours: 6 × 30° = 180°"
+    },
+    {
+      "id": "cl-b02",
+      "bookNo": 2,
+      "sourcePage": 98,
+      "keyFrom": "solved",
+      "pattern": "clock-angle",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the reflex angle between the minute hand and the hour hand at 6:30 pm.",
+      "clock": [
+        6,
+        30
+      ],
+      "options": {
+        "A": "340°",
+        "B": "315°",
+        "C": "345°",
+        "D": "300°"
+      },
+      "answer": "C",
+      "rule": "The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.",
+      "working": "Hour hand: 30 × 6 + ½ × 30 = 195°. Minute hand: 6 × 30 = 180°. They are 15° apart, so the reflex angle is 360° − 15° = 345°",
+      "note": "The book's key says B (315°), but the hands are only 15° apart at 6:30, so the reflex angle is 345°."
+    },
+    {
+      "id": "cl-b03",
+      "bookNo": 3,
+      "sourcePage": 98,
+      "keyFrom": "book",
+      "pattern": "clock-other",
+      "layout": "text",
+      "status": "needs-review",
+      "terms": [],
+      "prompt": "If the water image of a clock shows 2:25, what is the actual time?",
+      "options": {
+        "A": "9:35",
+        "B": "2:05",
+        "C": "3:05",
+        "D": "4:35"
+      },
+      "answer": "C",
+      "rule": "A water image turns the clock upside down.",
+      "working": "The book's answer is 3:05",
+      "note": "Hidden until checked: the English asks about a water image showing 2:25 and the Kannada about 9:25, and neither gives the key's 3:05 by the usual rule (take the image time away from 18:30)."
+    },
+    {
+      "id": "cl-b04",
+      "bookNo": 4,
+      "sourcePage": 98,
+      "keyFrom": "book",
+      "pattern": "clock-mirror",
+      "layout": "text",
+      "status": "needs-review",
+      "terms": [],
+      "prompt": "Looking in a mirror, a clock seems to show 4:45. What is the real time?",
+      "options": {
+        "A": "10:20",
+        "B": "9:25",
+        "C": "8:20",
+        "D": "9:20"
+      },
+      "answer": "D",
+      "rule": "A mirror swaps left and right. The real time and the mirror time always add up to 12:00 (take the mirror time away from 11:60).",
+      "working": "11:60 − 4:45 = 7:15",
+      "note": "Hidden until checked: the real time is 7:15, which is not an option, and the key's answer (6:25) isn't among the options either."
+    },
+    {
+      "id": "cl-b05",
+      "bookNo": 5,
+      "sourcePage": 98,
+      "keyFrom": "book",
+      "pattern": "clock-mirror",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Looking in a mirror, a clock seems to show 11:25. What is the real time?",
+      "clock": [
+        12,
+        35
+      ],
+      "options": {
+        "A": "1:35",
+        "B": "12:35",
+        "C": "1:30",
+        "D": "12:25"
+      },
+      "answer": "B",
+      "rule": "A mirror swaps left and right. The real time and the mirror time always add up to 12:00 (take the mirror time away from 11:60).",
+      "working": "11:60 − 11:25 = 0:35, which is 12:35"
+    },
+    {
+      "id": "cl-b06",
+      "bookNo": 6,
+      "sourcePage": 98,
+      "keyFrom": "book",
+      "pattern": "clock-angle",
+      "layout": "text",
+      "terms": [],
+      "prompt": "What is the angle between the minute hand and the hour hand at 5:50?",
+      "clock": [
+        5,
+        50
+      ],
+      "options": {
+        "A": "235°",
+        "B": "75°",
+        "C": "125°",
+        "D": "100°"
+      },
+      "answer": "C",
+      "rule": "The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.",
+      "working": "Hour hand: 30 × 5 + ½ × 50 = 175°. Minute hand: 6 × 50 = 300°. 300° − 175° = 125°"
+    },
+    {
+      "id": "cl-b07",
+      "bookNo": 7,
+      "sourcePage": 99,
+      "keyFrom": "book",
+      "pattern": "clock-angle",
+      "layout": "text",
+      "terms": [],
+      "prompt": "What is the angle between the hands of a clock at 9:10?",
+      "clock": [
+        9,
+        10
+      ],
+      "options": {
+        "A": "215°",
+        "B": "225°",
+        "C": "145°",
+        "D": "95°"
+      },
+      "answer": "C",
+      "rule": "The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12. \"The angle between the hands\" means the smaller angle.",
+      "working": "Hour hand: 30 × 9 + ½ × 10 = 275°. Minute hand: 6 × 10 = 60°. 275° − 60° = 215°, so the smaller angle is 360° − 215° = 145°",
+      "note": "215° is the other (reflex) angle between the same hands. By convention, \"the angle between the hands\" means the smaller one."
+    },
+    {
+      "id": "cl-b08",
+      "bookNo": 8,
+      "sourcePage": 99,
+      "keyFrom": "book",
+      "pattern": "clock-angle",
+      "layout": "text",
+      "terms": [],
+      "prompt": "What is the reflex angle between the hands of a clock at 7:28?",
+      "clock": [
+        7,
+        28
+      ],
+      "options": {
+        "A": "124°",
+        "B": "56°",
+        "C": "304°",
+        "D": "194°"
+      },
+      "answer": "C",
+      "rule": "The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.",
+      "working": "Hour hand: 30 × 7 + ½ × 28 = 224°. Minute hand: 6 × 28 = 168°. They are 56° apart, so the reflex angle is 360° − 56° = 304°"
+    },
+    {
+      "id": "cl-b09",
+      "bookNo": 9,
+      "sourcePage": 99,
+      "keyFrom": "book",
+      "pattern": "clock-gain",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A watch gains 15 minutes every day. It is set right at 12 noon. What time will it show when the real time is 4:00 am?",
+      "options": {
+        "A": "3:45 am",
+        "B": "4:10 am",
+        "C": "4:15 am",
+        "D": "4:30 am"
+      },
+      "answer": "B",
+      "rule": "The clock goes wrong by the same amount every hour, so work out the share for the hours that have passed.",
+      "working": "From 12 noon to 4:00 am is 16 hours: 15 × 16 ÷ 24 = 10 minutes fast, so it shows 4:10 am"
+    },
+    {
+      "id": "cl-b10",
+      "bookNo": 10,
+      "sourcePage": 99,
+      "keyFrom": "book",
+      "pattern": "clock-together",
+      "layout": "text",
+      "terms": [],
+      "prompt": "At what time between 6 and 7 o'clock do the minute hand and the hour hand overlap?",
+      "clock": [
+        6,
+        32.72727272727273
+      ],
+      "options": {
+        "A": "6:30 7/11",
+        "B": "6:31 6/11",
+        "C": "6:32 8/11",
+        "D": "6:32 2/11"
+      },
+      "answer": "C",
+      "rule": "The minute hand gains 5½ minute spaces on the hour hand every minute, so to gain g spaces it takes g × 12/11 minutes.",
+      "working": "At 6:00 the minute hand is 30 minute spaces behind. It catches up in 30 × 12/11 = 360/11 = 32 8/11 minutes, so 6:32 8/11"
+    },
+    {
+      "id": "cl-b11",
+      "bookNo": 11,
+      "sourcePage": 99,
+      "keyFrom": "book",
+      "pattern": "clock-together",
+      "layout": "text",
+      "terms": [],
+      "prompt": "At what time between 9 and 10 o'clock is the angle between the minute hand and the hour hand 0°?",
+      "clock": [
+        9,
+        49.09090909090909
+      ],
+      "options": {
+        "A": "9:39 8/11",
+        "B": "9:49 10/11",
+        "C": "9:49 1/11",
+        "D": "9:50 9/11"
+      },
+      "answer": "C",
+      "rule": "The minute hand gains 5½ minute spaces on the hour hand every minute, so to gain g spaces it takes g × 12/11 minutes.",
+      "working": "At 9:00 the minute hand is 45 minute spaces behind. It catches up in 45 × 12/11 = 540/11 = 49 1/11 minutes, so 9:49 1/11"
+    }
+  ]
+}

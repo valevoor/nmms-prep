@@ -1,0 +1,36 @@
+{
+  "topic": "clock",
+  "intro": "Clock questions are about the angle between the hands, the time seen in a mirror, when the hands meet, and clocks that run fast or slow.",
+  "tips": [
+    {
+      "title": "How fast the hands move",
+      "body": "The minute hand moves 6° a minute (360° an hour). The hour hand moves 30° an hour, which is ½° a minute."
+    },
+    {
+      "title": "The angle between the hands",
+      "body": "Hour hand = 30 × hours + ½ × minutes; minute hand = 6 × minutes. Subtract. If the answer is over 180°, the smaller angle is 360° minus it."
+    },
+    {
+      "title": "Reflex angle",
+      "body": "The reflex angle is the bigger way round: 360° minus the smaller angle. At 7:28 the hands are 56° apart, so the reflex angle is 304°."
+    },
+    {
+      "title": "Mirror times",
+      "body": "A clock and its mirror image always add up to 12:00. Take the mirror time away from 11:60: a mirror 4:45 is really 7:15."
+    },
+    {
+      "title": "When the hands meet",
+      "body": "The minute hand gains 5½ minute spaces a minute on the hour hand. Between h and h + 1 o'clock they meet 60h/11 minutes after h: at 6:32 8/11, for example."
+    },
+    {
+      "title": "Fast and slow clocks",
+      "body": "A clock that gains g minutes a day gains g ÷ 24 minutes each hour. Multiply by the hours that have passed."
+    }
+  ],
+  "workedExamples": [
+    "cl-b06",
+    "cl-b08",
+    "cl-b05",
+    "cl-b10"
+  ]
+}

@@ -507,6 +507,59 @@ a {
   fill: var(--primary);
 }
 
+/* ---------- clock faces (components/ClockFace.tsx) ---------- */
+
+.clockface {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 8px auto;
+}
+
+.clock-rim {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 3;
+}
+
+.clock-angle {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.clock-tick,
+.clock-hour,
+.clock-minute {
+  stroke-linecap: round;
+}
+
+.clock-tick {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.clockface .clock-num {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.clock-hour {
+  stroke: var(--text);
+  stroke-width: 5;
+}
+
+.clock-minute {
+  stroke: var(--primary);
+  stroke-width: 3.5;
+}
+
+.clock-pin {
+  fill: var(--text);
+}
+
 /* ---------- text questions (components/QuestionStem.tsx) ---------- */
 
 .stem {

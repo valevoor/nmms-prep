@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { Question } from '../../types'
 import { generateBloodRelation } from '../generators/bloodRelations'
 import { generateCalendar } from '../generators/calendar'
+import { generateClock } from '../generators/clock'
 import { generateCoding } from '../generators/coding'
 import { generateDirections } from '../generators/directions'
 import { generateRuleQuestion, generateWrongNumber } from '../generators/games'
@@ -16,8 +17,8 @@ const KANNADA = /[ಀ-೿]/
  * English words, which always have lowercase letters. Not maths ("n² + n", "×2") and not puzzle
  * terms in capitals ("JPZ", "NMMN"), which stay as they are in every language.
  */
-// Unit abbreviations (km, cm) stay the same in Kannada.
-const WORDS = /\b(?!(?:km|cm)\b)[a-z]{2,}/
+// Unit abbreviations (km, cm) and am/pm stay the same in Kannada.
+const WORDS = /\b(?!(?:km|cm|am|pm)\b)[a-z]{2,}/
 
 /** Every sentence with English words must have a Kannada version written in Kannada script. */
 function expectKannada(q: Question) {
@@ -51,6 +52,11 @@ describe('generated questions carry Kannada', () => {
   it('coding–decoding', () => {
     const rng = mulberry32(23)
     for (let n = 0; n < 1000; n++) expectKannada(generateCoding(rng))
+  })
+
+  it('clock', () => {
+    const rng = mulberry32(35)
+    for (let n = 0; n < 1000; n++) expectKannada(generateClock(rng))
   })
 
   it('calendar', () => {

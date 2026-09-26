@@ -1,6 +1,7 @@
 import type { Question } from '../types'
 import { useT } from '../lib/i18n'
 import { useQuestionText } from '../lib/i18n/content'
+import { ClockFace } from './ClockFace'
 import { FamilyTreeView } from './FamilyTreeView'
 import { MapDiagram } from './MapDiagram'
 import { SeriesView } from './SeriesView'
@@ -23,6 +24,7 @@ export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg
       )}
       <MapDiagram q={q} />
       <FamilyTreeView q={q} />
+      <ClockFace q={q} />
       <p className="working">{text.working}</p>
       {text.note && <p className="note">{text.note}</p>}
       <p className="source">

@@ -2,17 +2,20 @@ import type React from 'react'
 import { useT } from '../lib/i18n'
 import { fillBlanks } from '../lib/series'
 
-/** Renders "a/b" as a stacked fraction, anything else as text. */
+/** Renders "a/b" as a stacked fraction, and "6:32 8/11" as 6:32 with a stacked 8/11; anything else as text. */
 export function Term({ value }: { value: string }) {
   const t = useT()
-  // Also letter "fractions" such as 17/GA (Chapter 18).
-  const frac = !value.includes(',') && value.match(/^([0-9A-Z]+)\/([0-9A-Z]+)$/)
+  // Also letter "fractions" such as 17/GA (Chapter 18), and a whole part before the fraction (clock times).
+  const frac = !value.includes(',') && value.match(/^(?:(\S+) )?([0-9A-Z]+)\/([0-9A-Z]+)$/)
   if (frac)
     return (
-      <span className="frac" aria-label={t.series.over(frac[1], frac[2])}>
-        <span>{frac[1]}</span>
-        <span>{frac[2]}</span>
-      </span>
+      <>
+        {frac[1] && <>{frac[1]}&nbsp;</>}
+        <span className="frac" aria-label={t.series.over(frac[2], frac[3])}>
+          <span>{frac[2]}</span>
+          <span>{frac[3]}</span>
+        </span>
+      </>
     )
   return <>{value}</>
 }

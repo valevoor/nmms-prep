@@ -10,6 +10,8 @@ import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import calendar from './mat/calendar.json'
 import calendarMeta from './mat/calendar.meta.json'
+import clock from './mat/clock.json'
+import clockMeta from './mat/clock.meta.json'
 import coding from './mat/coding-decoding.json'
 import directions from './mat/directions.json'
 import directionsMeta from './mat/directions.meta.json'
@@ -20,6 +22,7 @@ import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
 import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCalendar } from '../lib/generators/calendar'
+import { generateClock } from '../lib/generators/clock'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
@@ -132,11 +135,19 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateCalendar,
   },
+  {
+    id: 'clock',
+    chapter: 35,
+    name: 'Clock',
+    questions: visible(clock.questions as Question[]),
+    meta: clockMeta,
+    missing: 'answer',
+    generate: generateClock,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
 export const UPCOMING_MAT: { chapter: number; name: string }[] = [
-  { chapter: 35, name: 'Clock' },
   { chapter: 8, name: 'Mirror Image' },
 ]
 

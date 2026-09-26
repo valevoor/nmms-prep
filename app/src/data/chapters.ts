@@ -11,6 +11,10 @@ import calendarKn from './mat/calendar.kn.json'
 import calendar from './mat/calendar.json'
 import calendarMetaKn from './mat/calendar.meta.kn.json'
 import calendarMeta from './mat/calendar.meta.json'
+import clockKn from './mat/clock.kn.json'
+import clock from './mat/clock.json'
+import clockMetaKn from './mat/clock.meta.kn.json'
+import clockMeta from './mat/clock.meta.json'
 import codingKn from './mat/coding-decoding.kn.json'
 import coding from './mat/coding-decoding.json'
 import codingMetaKn from './mat/coding-decoding.meta.kn.json'
@@ -73,4 +77,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('directions', 'Directions', directions, directionsMeta, directionsKn, directionsMetaKn),
   c('blood-relations', 'Blood Relations', blood, bloodMeta, bloodKn, bloodMetaKn),
   c('calendar', 'Calendar', calendar, calendarMeta, calendarKn, calendarMetaKn),
+  c('clock', 'Clock', clock, clockMeta, clockKn, clockMetaKn),
 ]

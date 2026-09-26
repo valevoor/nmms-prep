@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Page } from '../components/Page'
+import { ClockFace } from '../components/ClockFace'
 import { FamilyTreeView } from '../components/FamilyTreeView'
 import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
@@ -40,6 +41,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       {step > 0 && <p className="rule">{text.rule}</p>}
       {done && <MapDiagram q={q} />}
       {done && <FamilyTreeView q={q} />}
+      {done && <ClockFace q={q} />}
       {done && <p className="working">{text.working}</p>}
       <div className="actions">
         {!done ? (

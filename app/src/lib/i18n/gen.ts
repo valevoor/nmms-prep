@@ -158,6 +158,24 @@ const genEn = {
   weeksRule: 'One week has 7 days.',
   weeksWork: (w: number, d: number, t: number) => `${w} × 7 + ${d} = ${w * 7} + ${d} = ${t} days`,
 
+  // Clock
+  angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
+  angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
+  angleWork: (h: number, m: number, hd: string, md: number, diff: string, ans: string) =>
+    `Hour hand: 30 × ${h} + ½ × ${m} = ${hd}°. Minute hand: 6 × ${m} = ${md}°. Difference: ${diff}, so the answer is ${ans}`,
+  mirrorAsk: (t: string) => `In a mirror, a clock seems to show ${t}. What is the real time?`,
+  mirrorRule: 'A mirror swaps left and right. The real time and the mirror time always add up to 12:00 (take the mirror time away from 11:60).',
+  mirrorWork: (img: string, real: string) => `11:60 − ${img} = ${real}`,
+  togetherAsk: (h: number, opposite: boolean) => `At what time between ${h} and ${h + 1} o'clock are the hands of a clock ${opposite ? 'in a straight line, pointing opposite ways' : 'together (one on top of the other)'}?`,
+  togetherRule: 'The minute hand gains 5½ minute spaces on the hour hand every minute, so it gains 60 spaces in 60 ÷ 5½ = 60 × 2/11 minutes.',
+  togetherWork: (h: number, gap: number, mins: string) => `From ${h}:00 the minute hand must gain ${gap} minute spaces on the hour hand. That takes ${gap} × 12/11 = ${mins} minutes`,
+  handTurnAsk: (a: string, b: string) => `Through how many degrees does the hour hand turn from ${a} to ${b}?`,
+  handTurnRule: 'The hour hand turns 30° every hour (360° in 12 hours).',
+  handTurnWork: (hours: string, deg: number) => `${hours} × 30° = ${deg}°`,
+  gainAsk: (g: number, fast: boolean, set: string, t: string) => `A clock ${fast ? 'gains' : 'loses'} ${g} minutes every 24 hours. It is set right at ${set}. What time does it show when the real time is ${t}?`,
+  gainRule: 'The clock goes wrong by the same amount every hour, so work out the share for the hours that have passed.',
+  gainWork: (hrs: number, g: number, err: number, fast: boolean, shows: string) => `${hrs} hours have passed: ${g} × ${hrs} ÷ 24 = ${err} minutes ${fast ? 'fast' : 'slow'}, so it shows ${shows}`,
+
   // Games
   soTheRuleIs: (name: string) => `So the rule is: ${name}.`,
   wrongShouldBe: (w: number, sum: string) => `${w} is wrong. It should be ${sum}.`,
@@ -210,6 +228,12 @@ const genEn = {
     'cal-count': 'Count the days between two dates',
     'cal-weeks': 'Turn weeks and days into days',
     'cal-other': 'Calendar facts and odd days',
+    'clock-angle': 'The angle between the hands',
+    'clock-mirror': 'The time seen in a mirror',
+    'clock-together': 'When the hands meet or are opposite',
+    'clock-turn': 'How far a hand turns',
+    'clock-gain': 'A clock that gains or loses time',
+    'clock-other': 'Clock facts',
   } as Record<PatternId, string>,
 }
 
@@ -356,6 +380,22 @@ const genKn: GenText = {
   weeksRule: 'ಒಂದು ವಾರದಲ್ಲಿ 7 ದಿನಗಳು.',
   weeksWork: (w, d, t) => `${w} × 7 + ${d} = ${w * 7} + ${d} = ${t} ದಿನಗಳು`,
 
+  angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
+  angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
+  angleWork: (h, m, hd, md, diff, ans) => `ಗಂಟೆಯ ಮುಳ್ಳು: 30 × ${h} + ½ × ${m} = ${hd}°. ನಿಮಿಷದ ಮುಳ್ಳು: 6 × ${m} = ${md}°. ವ್ಯತ್ಯಾಸ: ${diff}, ಆದ್ದರಿಂದ ಉತ್ತರ ${ans}`,
+  mirrorAsk: (t) => `ಕನ್ನಡಿಯಲ್ಲಿ ಗಡಿಯಾರವು ${t} ತೋರಿಸುವಂತೆ ಕಾಣುತ್ತದೆ. ನಿಜವಾದ ಸಮಯ ಎಷ್ಟು?`,
+  mirrorRule: 'ಕನ್ನಡಿಯು ಎಡ ಮತ್ತು ಬಲವನ್ನು ಬದಲಿಸುತ್ತದೆ. ನಿಜವಾದ ಸಮಯ ಮತ್ತು ಕನ್ನಡಿಯ ಸಮಯದ ಮೊತ್ತ ಯಾವಾಗಲೂ 12:00 (ಕನ್ನಡಿಯ ಸಮಯವನ್ನು 11:60 ರಿಂದ ಕಳೆಯಿರಿ).',
+  mirrorWork: (img, real) => `11:60 − ${img} = ${real}`,
+  togetherAsk: (h, opposite) => `${h} ಮತ್ತು ${h + 1} ಗಂಟೆಯ ನಡುವೆ ಯಾವ ಸಮಯದಲ್ಲಿ ಗಡಿಯಾರದ ಮುಳ್ಳುಗಳು ${opposite ? 'ಒಂದೇ ನೇರ ರೇಖೆಯಲ್ಲಿ ವಿರುದ್ಧ ದಿಕ್ಕುಗಳಲ್ಲಿರುತ್ತವೆ' : 'ಒಂದರ ಮೇಲೊಂದು ಸೇರುತ್ತವೆ'}?`,
+  togetherRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ಪ್ರತಿ ನಿಮಿಷ ಗಂಟೆಯ ಮುಳ್ಳಿಗಿಂತ 5½ ನಿಮಿಷದ ಸ್ಥಳಗಳಷ್ಟು ಮುಂದೆ ಹೋಗುತ್ತದೆ, ಆದ್ದರಿಂದ 60 ಸ್ಥಳಗಳನ್ನು 60 ÷ 5½ = 60 × 2/11 ನಿಮಿಷಗಳಲ್ಲಿ ಗಳಿಸುತ್ತದೆ.',
+  togetherWork: (h, gap, mins) => `${h}:00 ರಿಂದ ನಿಮಿಷದ ಮುಳ್ಳು ಗಂಟೆಯ ಮುಳ್ಳಿಗಿಂತ ${gap} ನಿಮಿಷದ ಸ್ಥಳಗಳಷ್ಟು ಮುಂದೆ ಸಾಗಬೇಕು. ಅದಕ್ಕೆ ${gap} × 12/11 = ${mins} ನಿಮಿಷಗಳು ಬೇಕು`,
+  handTurnAsk: (a, b) => `${a} ರಿಂದ ${b} ರವರೆಗೆ ಗಂಟೆಯ ಮುಳ್ಳು ಎಷ್ಟು ಡಿಗ್ರಿ ತಿರುಗುತ್ತದೆ?`,
+  handTurnRule: 'ಗಂಟೆಯ ಮುಳ್ಳು ಪ್ರತಿ ಗಂಟೆಗೆ 30° ತಿರುಗುತ್ತದೆ (12 ಗಂಟೆಗಳಲ್ಲಿ 360°).',
+  handTurnWork: (hours, deg) => `${hours} × 30° = ${deg}°`,
+  gainAsk: (g, fast, set, t) => `ಒಂದು ಗಡಿಯಾರ ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೆ ${g} ನಿಮಿಷ ${fast ? 'ಮುಂದೆ ಹೋಗುತ್ತದೆ' : 'ಹಿಂದೆ ಬೀಳುತ್ತದೆ'}. ಅದನ್ನು ${set} ಕ್ಕೆ ಸರಿಯಾಗಿ ಇಡಲಾಗಿದೆ. ನಿಜವಾದ ಸಮಯ ${t} ಆದಾಗ ಅದು ಯಾವ ಸಮಯ ತೋರಿಸುತ್ತದೆ?`,
+  gainRule: 'ಗಡಿಯಾರವು ಪ್ರತಿ ಗಂಟೆಗೂ ಅಷ್ಟೇ ತಪ್ಪುತ್ತದೆ, ಆದ್ದರಿಂದ ಕಳೆದ ಗಂಟೆಗಳ ಪಾಲನ್ನು ಲೆಕ್ಕ ಮಾಡಿ.',
+  gainWork: (hrs, g, err, fast, shows) => `${hrs} ಗಂಟೆಗಳು ಕಳೆದಿವೆ: ${g} × ${hrs} ÷ 24 = ${err} ನಿಮಿಷ ${fast ? 'ಮುಂದೆ' : 'ಹಿಂದೆ'}, ಆದ್ದರಿಂದ ಅದು ${shows} ತೋರಿಸುತ್ತದೆ`,
+
   soTheRuleIs: (name) => `ಆದ್ದರಿಂದ ನಿಯಮ: ${name}.`,
   wrongShouldBe: (w, sum) => `${w} ತಪ್ಪು. ಅದು ${sum} ಆಗಿರಬೇಕು.`,
   notPrime: (w, prev, next) => `${w} ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆ ಅಲ್ಲ. ${prev} ರ ನಂತರದ ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆ ${next}.`,
@@ -406,6 +446,12 @@ const genKn: GenText = {
     'cal-count': 'ಎರಡು ದಿನಾಂಕಗಳ ನಡುವಿನ ದಿನಗಳನ್ನು ಎಣಿಸಿ',
     'cal-weeks': 'ವಾರ ಮತ್ತು ದಿನಗಳನ್ನು ದಿನಗಳಾಗಿ ಬದಲಿಸಿ',
     'cal-other': 'ಕ್ಯಾಲೆಂಡರ್ ಸಂಗತಿಗಳು ಮತ್ತು ಬೆಸ ದಿನಗಳು',
+    'clock-angle': 'ಮುಳ್ಳುಗಳ ನಡುವಿನ ಕೋನ',
+    'clock-mirror': 'ಕನ್ನಡಿಯಲ್ಲಿ ಕಾಣುವ ಸಮಯ',
+    'clock-together': 'ಮುಳ್ಳುಗಳು ಸೇರುವ ಅಥವಾ ವಿರುದ್ಧವಾಗುವ ಸಮಯ',
+    'clock-turn': 'ಮುಳ್ಳು ಎಷ್ಟು ತಿರುಗುತ್ತದೆ',
+    'clock-gain': 'ಮುಂದೆ ಅಥವಾ ಹಿಂದೆ ಓಡುವ ಗಡಿಯಾರ',
+    'clock-other': 'ಗಡಿಯಾರದ ಸಂಗತಿಗಳು',
   },
 }
 

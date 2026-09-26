@@ -64,6 +64,13 @@ export type PatternId =
   | 'cal-count'
   | 'cal-weeks'
   | 'cal-other'
+  // Clock (Chapter 35)
+  | 'clock-angle'
+  | 'clock-mirror'
+  | 'clock-together'
+  | 'clock-turn'
+  | 'clock-gain'
+  | 'clock-other'
 
 export interface Question {
   id: string
@@ -83,6 +90,8 @@ export interface Question {
   link?: [string, string]
   /** A family tree to draw in the explanation (Blood Relations). */
   tree?: FamilyTree
+  /** A clock face to draw in the explanation: [hours, minutes]. */
+  clock?: [number, number]
   options: Record<OptionKey, string>
   answer: OptionKey
   /** One-line rule shown in the explanation. */
