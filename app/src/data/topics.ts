@@ -39,6 +39,8 @@ import counting from './mat/counting-figures.json'
 import countingMeta from './mat/counting-figures.meta.json'
 import colouring from './mat/cubes-colouring.json'
 import colouringMeta from './mat/cubes-colouring.meta.json'
+import figNum from './mat/figure-numbers.json'
+import figNumMeta from './mat/figure-numbers.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -85,6 +87,7 @@ import { generateCubesCutting } from '../lib/generators/cubesCutting'
 import { generateDice } from '../lib/generators/dice'
 import { generateCountingFigures } from '../lib/generators/countingFigures'
 import { generateCubesColouring } from '../lib/generators/cubesColouring'
+import { generateFigureNumbers } from '../lib/generators/figureNumbers'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -373,6 +376,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: colouringMeta as TopicMeta,
     missing: 'answer',
     generate: generateCubesColouring,
+  },
+  {
+    id: 'figure-numbers',
+    chapter: 24,
+    name: 'Figures and Number Relationship',
+    questions: visible(figNum.questions as Question[]),
+    meta: figNumMeta as TopicMeta,
+    missing: 'number',
+    generate: generateFigureNumbers,
   },
 ]
 

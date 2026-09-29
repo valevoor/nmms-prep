@@ -251,6 +251,16 @@ const ART: Record<number, ReactNode> = {
       <path d="M22 16h8v8h-8zM22 16l3.3-3.3h8L30 16zM30 16l3.3-3.3v8L30 24z" className="art-tile-accent" />
     </>
   ),
+  // Figures and Number Relationship: numbers at a triangle's corners make the one in the middle
+  24: (
+    <>
+      <path d="M22 12.5L10.5 34M26 12.5l11.5 21.5M12.5 38h23" />
+      <circle cx={24} cy={8.5} r={4.5} />
+      <circle cx={8.5} cy={38} r={4.5} />
+      <circle cx={39.5} cy={38} r={4.5} />
+      <circle cx={24} cy={28} r={4} className="art-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

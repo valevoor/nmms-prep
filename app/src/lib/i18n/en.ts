@@ -85,6 +85,7 @@ export const en = {
     16: 'Odd One Out: Letters',
     20: 'Number Sequence',
     22: 'Letter–Number Analogy',
+    24: 'Figures and Number Relationship',
     25: 'Arithmetical Operations',
     26: 'Signs and Symbols',
     27: 'Number Matrix',
@@ -287,6 +288,11 @@ export const en = {
       buttons: ['1 part', '2 parts', '3 parts', 'All 4 parts'],
       label:
         'A triangle with three lines from its top to the base, which cut it into 4 thin parts. First tap: the 4 triangles made of one part each. Second tap: the 3 triangles made of two parts next to each other. Third tap: the 2 made of three parts. Last tap: the whole triangle. 4 + 3 + 2 + 1 = 10 triangles.',
+    },
+    figNumbers: {
+      buttons: ['First figure', 'Second figure', 'Use the rule'],
+      label:
+        'Three figures, each with two numbers joined to one below: 13 and 15 to 84, 36 and 54 to 270, and 45 and 63 to a missing number. First tap: in the first figure, (13 + 15) × 3 = 84. Second tap: the same rule works in the second figure, (36 + 54) × 3 = 270. Last tap: using it in the third figure, (45 + 63) × 3 = 324.',
     },
     cubeColours: {
       buttons: ['Only one colour', 'Only two colours', 'All three colours'],

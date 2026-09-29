@@ -167,6 +167,10 @@ export type PatternId =
   | 'colour-faces'
   | 'colour-only'
   | 'colour-common'
+  // Figures and number relationship (Chapter 24)
+  | 'fignum-rule'
+  | 'fignum-path'
+  | 'fignum-opposite'
 
 export interface Question {
   id: string

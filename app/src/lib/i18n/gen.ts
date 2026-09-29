@@ -378,6 +378,9 @@ const genEn = {
     'colour-faces': 'Corners 8, edges 12(n − 2), faces 6(n − 2)², inside (n − 2)³',
     'colour-only': 'Leave out the cubes that touch another face',
     'colour-common': 'Next to each other: they share an edge; opposite: never',
+    'fignum-rule': 'One rule makes a number from the others in every figure',
+    'fignum-path': 'Read the numbers in order round the figure',
+    'fignum-opposite': 'Each number goes with the one opposite it',
   } as Record<PatternId, string>,
 }
 
@@ -727,6 +730,9 @@ const genKn: GenText = {
     'colour-faces': 'ಮೂಲೆಗಳು 8, ಅಂಚುಗಳು 12(n − 2), ಮುಖಗಳು 6(n − 2)², ಒಳಗೆ (n − 2)³',
     'colour-only': 'ಇನ್ನೊಂದು ಮುಖವನ್ನು ಮುಟ್ಟುವ ಘನಗಳನ್ನು ಬಿಡಿ',
     'colour-common': 'ಪಕ್ಕದ ಮುಖಗಳು ಒಂದು ಅಂಚು ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ; ವಿರುದ್ಧ ಮುಖಗಳು ಎಂದೂ ಸಂಧಿಸುವುದಿಲ್ಲ',
+    'fignum-rule': 'ಪ್ರತಿ ಆಕೃತಿಯಲ್ಲೂ ಒಂದೇ ನಿಯಮ ಉಳಿದ ಸಂಖ್ಯೆಗಳಿಂದ ಒಂದು ಸಂಖ್ಯೆಯನ್ನು ಮಾಡುತ್ತದೆ',
+    'fignum-path': 'ಆಕೃತಿಯ ಸುತ್ತ ಸಂಖ್ಯೆಗಳನ್ನು ಕ್ರಮವಾಗಿ ಓದಿ',
+    'fignum-opposite': 'ಪ್ರತಿ ಸಂಖ್ಯೆಯೂ ಅದರ ಎದುರಿನ ಸಂಖ್ಯೆಯೊಂದಿಗೆ ಜೋಡಿ',
   },
 }
 

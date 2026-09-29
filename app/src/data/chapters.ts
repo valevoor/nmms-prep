@@ -64,6 +64,10 @@ import colouringKn from './mat/cubes-colouring.kn.json'
 import colouring from './mat/cubes-colouring.json'
 import colouringMetaKn from './mat/cubes-colouring.meta.kn.json'
 import colouringMeta from './mat/cubes-colouring.meta.json'
+import figNumKn from './mat/figure-numbers.kn.json'
+import figNum from './mat/figure-numbers.json'
+import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
+import figNumMeta from './mat/figure-numbers.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -173,4 +177,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('dice', 'Numbers in Opposite Faces', dice, diceMeta, diceKn, diceMetaKn),
   c('counting-figures', 'Counting of Figures', counting, countingMeta, countingKn, countingMetaKn),
   c('cubes-colouring', 'Cubes Colouring', colouring, colouringMeta, colouringKn, colouringMetaKn),
+  c('figure-numbers', 'Figures and Number Relationship', figNum, figNumMeta, figNumKn, figNumMetaKn),
 ]

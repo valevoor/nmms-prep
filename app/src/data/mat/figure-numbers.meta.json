@@ -1,0 +1,34 @@
+{
+  "topic": "figure-numbers",
+  "intro": "Here numbers are written in figures: circles, boxes, triangles, stars. The numbers in each figure are related by one rule, and the same rule works in every figure of the question. Find the rule from the complete figures, then use it to find the missing number.",
+  "tips": [
+    {
+      "title": "Find the rule in a complete figure, check it in the next",
+      "visual": "figNumbers",
+      "body": "Never start with the figure that has the ?. Guess a rule from the first complete figure, then check it on the second. Only a rule that works in every complete figure is the right one; then use it on the last figure.",
+      "caption": "(13 + 15) × 3 = 84 and (36 + 54) × 3 = 270, so (45 + 63) × 3 = 324."
+    },
+    {
+      "title": "Which number is the answer?",
+      "body": "Look for the number that stands apart: the one in the middle, at the bottom, in the tip of an arrow or in the corner. It is usually made from the others. If it is much bigger than the others, try adding and multiplying; if it is smaller, try taking away or dividing."
+    },
+    {
+      "title": "Rules that come up often",
+      "body": "Add (or multiply) the numbers and then multiply or divide by a fixed number: (a + b) × 3, (a + b) ÷ 5. Multiply in pairs and add: a × b + b × c + c × a. Squares and cubes: (a ÷ b)², a³ − 3, (a + b)² + (a − b)². Know the squares up to 20² and the cubes up to 10³ by heart."
+    },
+    {
+      "title": "Numbers opposite each other",
+      "body": "In a circle, a star or a box cut by its diagonals, a number often goes with the one straight across the centre from it, not with its neighbour. In a star with 81 in the middle: 4 is opposite 25, and 9 + 4² = 25."
+    },
+    {
+      "title": "Numbers going round",
+      "body": "If a figure has one blank and no rule inside each part, read the numbers in order: round the circle (clockwise or anticlockwise), or along the rows like a snake. Then it is a number series: look at the differences, or try × 2 − 4 and the like."
+    },
+    {
+      "title": "When the ? is not the answer box",
+      "body": "Sometimes the blank is one of the numbers the rule starts from. Write the rule with the ? in it and work backwards: 4 × 8 + 8 × ? + ? × 4 = 68 gives 32 + 12 × ? = 68, so ? = 3. Or try each option in the rule and keep the one that fits."
+    }
+  ],
+  "workedExamples": ["fn-b04", "fn-b05", "fn-b14", "fn-b12"],
+  "cheatSheet": "none"
+}
