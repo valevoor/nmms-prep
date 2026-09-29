@@ -144,6 +144,8 @@ export type PatternId =
   | 'fold-sheet'
   // Paper fold and punch (Chapter 7)
   | 'paper-punch'
+  // Mirror image (Chapter 8)
+  | 'mirror-image'
 
 export interface Question {
   id: string

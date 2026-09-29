@@ -112,17 +112,21 @@ export function Home() {
         <TopicCard key={x.id} t={x} />
       ))}
 
-      <h2 className="section-title">{t.home.soon}</h2>
-      <ul className="soon">
-        {UPCOMING_MAT.map((c) => (
-          <li key={c.chapter}>
-            <ChapterArt chapter={c.chapter} size={42} />
-            <span>
-              <span className="muted">{t.common.chapterShort(c.chapter)}</span> {t.chapters[c.chapter] ?? c.name}
-            </span>
-          </li>
-        ))}
-      </ul>
+      {UPCOMING_MAT.length > 0 && (
+        <>
+          <h2 className="section-title">{t.home.soon}</h2>
+          <ul className="soon">
+            {UPCOMING_MAT.map((c) => (
+              <li key={c.chapter}>
+                <ChapterArt chapter={c.chapter} size={42} />
+                <span>
+                  <span className="muted">{t.common.chapterShort(c.chapter)}</span> {t.chapters[c.chapter] ?? c.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       <p className="footnote muted">{t.home.footnote}</p>
     </Page>
   )

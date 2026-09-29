@@ -1,0 +1,26 @@
+{
+  "topic": "mirror-image",
+  "intro": "A mirror stands on the right of a figure, a word or a number. Four answer figures follow; find the one that is its mirror image. In a mirror the right part of the figure appears on the left and the left part on the right, while the top and bottom stay where they are and the size does not change.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Left and right swap, top and bottom stay",
+      "body": "Every part moves to the other side, the same distance from the middle. A part at the top stays at the top, and a part at the bottom stays at the bottom.",
+      "visual": "figMirror",
+      "caption": "The flag moves to the other side and faces the other way; nothing moves up or down."
+    },
+    {
+      "title": "Every part is flipped as well",
+      "body": "Moving the parts across is not enough: each one faces the other way too. An arrow pointing right points left, a dot on the right of a shape moves to its left, and a line sloping like / slopes like \\."
+    },
+    {
+      "title": "Words and numbers: reverse, then flip",
+      "body": "In a mirror on the right, the last letter comes first, and every letter or digit is turned round. Check both: a common wrong option reverses the order but leaves a letter unflipped, or flips the letters but keeps the order."
+    },
+    {
+      "title": "Some letters look the same",
+      "body": "A, H, I, M, O, T, U, V, W, X, Y, 0 and 8 look the same in a mirror, and so does a figure that is the same on both sides. Don't spend time on them; look at the letters and parts that do change, such as B, C, J, K, N, R, S, 3, 4, 7 and 9."
+    }
+  ],
+  "workedExamples": ["mir-b08", "mir-b12", "mir-b06"]
+}

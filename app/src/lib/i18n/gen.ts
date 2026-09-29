@@ -361,6 +361,7 @@ const genEn = {
     'venn-part': 'Read one part',
     'fold-sheet': 'Fold the sheet along the dotted line',
     'paper-punch': 'Open out the folded, punched paper',
+    'mirror-image': 'Flip it left to right, as in a mirror',
   } as Record<PatternId, string>,
 }
 
@@ -693,6 +694,7 @@ const genKn: GenText = {
     'venn-part': 'ಒಂದು ಭಾಗವನ್ನು ಓದಿ',
     'fold-sheet': 'ಚುಕ್ಕೆ ರೇಖೆಯ ಉದ್ದಕ್ಕೂ ಹಾಳೆಯನ್ನು ಮಡಿಸಿ',
     'paper-punch': 'ಮಡಿಸಿ ರಂಧ್ರ ಮಾಡಿದ ಕಾಗದವನ್ನು ಬಿಡಿಸಿ',
+    'mirror-image': 'ಕನ್ನಡಿಯಂತೆ ಎಡ-ಬಲ ಅದಲು ಬದಲು ಮಾಡಿ',
   },
 }
 

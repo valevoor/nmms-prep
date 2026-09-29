@@ -29,6 +29,7 @@ export const en = {
     findTurned: 'Which one is the same figure, turned?',
     findFolded: 'Which one is the sheet folded along the dotted line?',
     findPunched: 'How does the paper look when opened out?',
+    findMirror: 'Which one is its mirror image (mirror on the right)?',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -265,6 +266,10 @@ export const en = {
     figFold: {
       buttons: ['Fold it'],
       label: 'A square sheet with a dotted line down the middle, a triangle on the left half and a flag on the right half. The tap folds the right half over: the flag lands on the left half, as far from the fold as before, facing the other way.',
+    },
+    figMirror: {
+      buttons: ['Show the mirror image'],
+      label: 'A square with a flag on its left half and an arrow pointing right at the top, and a mirror to its right. The tap shows the mirror image: the flag moves to the right half and faces the other way, and the arrow points left, still at the top.',
     },
     figPunch: {
       buttons: ['Open it out'],

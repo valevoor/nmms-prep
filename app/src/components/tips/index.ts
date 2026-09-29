@@ -4,6 +4,7 @@ import { FigureGrow } from './FigureGrow'
 import { FigureHidden } from './FigureHidden'
 import { FoldSheet } from './FoldSheet'
 import { PaperPunch } from './PaperPunch'
+import { MirrorFlip } from './MirrorFlip'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
@@ -36,4 +37,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   venn: VennParts,
   figFold: FoldSheet,
   figPunch: PaperPunch,
+  figMirror: MirrorFlip,
 }

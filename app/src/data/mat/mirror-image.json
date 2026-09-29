@@ -1,0 +1,484 @@
+{
+ "topic": "mirror-image",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 8 (questions: PDF pages 31-32, answers: PDF page 118)",
+ "questions": [
+  {
+   "id": "mir-b01",
+   "bookNo": 1,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q01-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q01-oA.png",
+     "B": "figures/ch08/q01-oB.png",
+     "C": "figures/ch08/q01-oC.png",
+     "D": "figures/ch08/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A comes closest: the two signs in each row swap places, and < and > are turned round.",
+   "working": "In a mirror on the right, the two signs in each row change places and each one faces the other way. The rows ÷ +, < >, + − become + ÷, < >, − +. A has the first two rows right, but its bottom row is − ×.",
+   "note": "Hidden: no option is the exact mirror image. The bottom row should read − +, but A (the book's key) has − ×; B has > > in the middle row, and C and D are wrong in the top row.",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b02",
+   "bookNo": 2,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q02-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q02-oA.png",
+     "B": "figures/ch08/q02-oB.png",
+     "C": "figures/ch08/q02-oC.png",
+     "D": "figures/ch08/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "The figure is the same on both sides, so its mirror image looks just like it.",
+   "working": "Each of the four arms of the cross has two tick marks and an arrowhead at the corner, so a mirror on the right leaves the figure looking the same.",
+   "note": "Hidden: the mirror image should look the same as the figure (two ticks on every arm), but no option does: each has three or four ticks on some arms, or arrowheads turned inwards. The book's key is B.",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b03",
+   "bookNo": 3,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q03-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q03-oA.png",
+     "B": "figures/ch08/q03-oB.png",
+     "C": "figures/ch08/q03-oC.png",
+     "D": "figures/ch08/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The letters swap sides and each one is flipped.",
+   "working": "In the mirror B stays at the top and G at the bottom, both flipped; the P moves to the left and the J to the right, both flipped.",
+   "note": "Hidden: options A and C are printed exactly the same, and both are the mirror image, so the question has two right answers (the book's key is A).",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b04",
+   "bookNo": 4,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q04-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q04-oA.png",
+     "B": "figures/ch08/q04-oB.png",
+     "C": "figures/ch08/q04-oC.png",
+     "D": "figures/ch08/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "SCHOOL in a mirror: the letters in reverse order, each one flipped.",
+   "working": "The mirror shows L O O H C S from left to right, with the L, C and S turned round (O and H look the same). B leaves the C unflipped and D the L.",
+   "note": "Hidden: options A and C are printed exactly the same, and both are the correct mirror image, so the question has two right answers (the book's key is C).",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b05",
+   "bookNo": 5,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q05-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q05-oA.png",
+     "B": "figures/ch08/q05-oB.png",
+     "C": "figures/ch08/q05-oC.png",
+     "D": "figures/ch08/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the letters of CHILDREN in reverse order, each one flipped.",
+   "working": "In a mirror on the right, the last letter N comes first and every letter is turned round: N E R D L I H C, all flipped (I and H look the same). Only B has every letter flipped and in that order. A starts with the C, and C and D leave some letters unflipped."
+  },
+  {
+   "id": "mir-b06",
+   "bookNo": 6,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q06-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q06-oA.png",
+     "B": "figures/ch08/q06-oB.png",
+     "C": "figures/ch08/q06-oC.png",
+     "D": "figures/ch08/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the digits of 150847 in reverse order, each one flipped.",
+   "working": "The mirror shows the digits in reverse order, 7 4 8 0 5 1, with the 7, 4 and 5 turned round (0, 8 and 1 look the same). Only A turns all three: B leaves the 5 as it is, C the 7 and D the 4."
+  },
+  {
+   "id": "mir-b07",
+   "bookNo": 7,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q07-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q07-oA.png",
+     "B": "figures/ch08/q07-oB.png",
+     "C": "figures/ch08/q07-oC.png",
+     "D": "figures/ch08/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: 39KXGB in reverse order, each character flipped.",
+   "working": "The mirror shows B G X K 9 3 from left to right, with the B, G, K, 9 and 3 turned round (X looks the same). Only A has every character flipped and in that order."
+  },
+  {
+   "id": "mir-b08",
+   "bookNo": 8,
+   "sourcePage": 31,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q08-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q08-oA.png",
+     "B": "figures/ch08/q08-oB.png",
+     "C": "figures/ch08/q08-oC.png",
+     "D": "figures/ch08/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the two columns swap, and the dots move to the top-left.",
+   "working": "Mirroring swaps the columns: the triangle comes to the top-left and the square to the top-right, the circle to the bottom-left and the black hexagon to the bottom-right. The dots were on the top-right of the triangle and the circle, so in the mirror they are on the top-left. That is B. C still has the dots on the right; A and D do not swap the columns."
+  },
+  {
+   "id": "mir-b09",
+   "bookNo": 9,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q09-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q09-oA.png",
+     "B": "figures/ch08/q09-oB.png",
+     "C": "figures/ch08/q09-oC.png",
+     "D": "figures/ch08/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the two halves swap; the arrow points right, and the 7 and R are flipped with the dot on their left.",
+   "working": "In the mirror the half with the slanting line moves to the right and the line slopes the other way; the arrow in it now points right. The half with the 7 and R moves to the left, both characters flipped and the dot on their left. That is D. A and B keep the halves where they were; C keeps the slope and the dot as they were."
+  },
+  {
+   "id": "mir-b10",
+   "bookNo": 10,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q10-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q10-oA.png",
+     "B": "figures/ch08/q10-oB.png",
+     "C": "figures/ch08/q10-oC.png",
+     "D": "figures/ch08/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The mirror image starts at the top-right and ends with an arrow at the bottom-left pointing left.",
+   "working": "The curve starts with a ring at the top-left, bends down through a black dot and ends with an arrow at the bottom-right pointing right. In the mirror it starts at the top-right and ends at the bottom-left, pointing left.",
+   "note": "Hidden: no option is the mirror image. D has the right curve but with the ring and the black dot swapped; C (the book's key) has the ring and the dot right, but it is the figure turned a quarter turn, with the arrow pointing down.",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b11",
+   "bookNo": 11,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q11-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q11-oA.png",
+     "B": "figures/ch08/q11-oB.png",
+     "C": "figures/ch08/q11-oC.png",
+     "D": "figures/ch08/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the circle and square swap sides, and the two arrows are mirrored.",
+   "working": "In the mirror the square with the black corner moves to the bottom-left and the circle to the bottom-right. The arrow pointing up-left becomes one pointing up-right, on the left, and the arrow pointing right becomes one pointing left, on the right. That is A. B's right-hand arrow points right, C keeps the circle and square where they were, and D has the black corner in the circle.",
+   "note": "In the book's drawing, A's left-pointing arrow slopes slightly down instead of slightly up. It is still the only option that is the mirror image."
+  },
+  {
+   "id": "mir-b12",
+   "bookNo": 12,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q12-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q12-oA.png",
+     "B": "figures/ch08/q12-oB.png",
+     "C": "figures/ch08/q12-oC.png",
+     "D": "figures/ch08/q12-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the top arm now bends left, the bottom arm right, and the double arrowhead moves to the left.",
+   "working": "Mirroring turns every arrow round. At the top the line bent to the right, so in the mirror it bends to the left; at the bottom it bent left, so now it bends right. The middle line had its double arrowhead on the right; now it is on the left. Only B has all three: C keeps the double arrowhead on the right, and A and D keep the bends as they were."
+  },
+  {
+   "id": "mir-b13",
+   "bookNo": 13,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q13-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q13-oA.png",
+     "B": "figures/ch08/q13-oB.png",
+     "C": "figures/ch08/q13-oC.png",
+     "D": "figures/ch08/q13-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The circle and square swap sides, and the extra arrowheads move to the other diagonal.",
+   "working": "In the mirror the square moves to the right and the circle to the left. The diagonal with the extra arrowheads ran from bottom-left to top-right; in the mirror it runs from top-left to bottom-right.",
+   "note": "Hidden: options A and C are printed exactly the same, and both are the mirror image, so the question has two right answers (the book's key is C).",
+   "status": "needs-review"
+  },
+  {
+   "id": "mir-b14",
+   "bookNo": 14,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q14-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q14-oA.png",
+     "B": "figures/ch08/q14-oB.png",
+     "C": "figures/ch08/q14-oC.png",
+     "D": "figures/ch08/q14-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the diamond and circle at the top swap sides, and so do the square and circle at the bottom.",
+   "working": "The figure has a circle at the top-left and a diamond at the top-right, a square at the bottom-left and a circle at the bottom-right. In the mirror each moves to the other side: diamond top-left, circle top-right, circle bottom-left, square bottom-right. That is B."
+  },
+  {
+   "id": "mir-b15",
+   "bookNo": 15,
+   "sourcePage": 32,
+   "keyFrom": "book",
+   "pattern": "mirror-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch08/q15-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch08/q15-oA.png",
+     "B": "figures/ch08/q15-oB.png",
+     "C": "figures/ch08/q15-oC.png",
+     "D": "figures/ch08/q15-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the brackets are mirrored, and the two arrows still point at each other.",
+   "working": "Each bracket's top end turned left and its bottom end right; in the mirror the top turns right and the bottom left. The two arrows point towards each other, and in a mirror they still do. Only D has both: A and B keep the brackets as they were, and C has the arrows pointing away from each other."
+  }
+ ]
+}

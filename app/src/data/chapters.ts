@@ -40,6 +40,10 @@ import paperPunchKn from './mat/paper-punch.kn.json'
 import paperPunch from './mat/paper-punch.json'
 import paperPunchMetaKn from './mat/paper-punch.meta.kn.json'
 import paperPunchMeta from './mat/paper-punch.meta.json'
+import mirrorKn from './mat/mirror-image.kn.json'
+import mirror from './mat/mirror-image.json'
+import mirrorMetaKn from './mat/mirror-image.meta.kn.json'
+import mirrorMeta from './mat/mirror-image.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -143,4 +147,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('intersecting-figures', 'Intersecting Figures', intersecting, intersectingMeta, intersectingKn, intersectingMetaKn),
   c('fold-sheet', 'Figure Fold Transparent Sheet', foldSheet, foldSheetMeta, foldSheetKn, foldSheetMetaKn),
   c('paper-punch', 'Paper Fold and Punch', paperPunch, paperPunchMeta, paperPunchKn, paperPunchMetaKn),
+  c('mirror-image', 'Mirror Image', mirror, mirrorMeta, mirrorKn, mirrorMetaKn),
 ]
