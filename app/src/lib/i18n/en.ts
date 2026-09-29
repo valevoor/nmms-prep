@@ -79,6 +79,7 @@ export const en = {
     10: 'Cubes Cutting',
     11: 'Numbers in Opposite Faces',
     12: 'Counting of Figures',
+    13: 'Cubes Colouring',
     14: 'Number Analogy',
     15: 'Number Patterns',
     16: 'Odd One Out: Letters',
@@ -286,6 +287,11 @@ export const en = {
       buttons: ['1 part', '2 parts', '3 parts', 'All 4 parts'],
       label:
         'A triangle with three lines from its top to the base, which cut it into 4 thin parts. First tap: the 4 triangles made of one part each. Second tap: the 3 triangles made of two parts next to each other. Third tap: the 2 made of three parts. Last tap: the whole triangle. 4 + 3 + 2 + 1 = 10 triangles.',
+    },
+    cubeColours: {
+      buttons: ['Only one colour', 'Only two colours', 'All three colours'],
+      label:
+        'A 3 × 3 × 3 cube with a different colour on its top, front and right faces. First tap: the middle square of each face lights up; that small cube has only one colour, (3 − 2)² = 1 on each face. Second tap: the middle cube of the edge where the top and front faces meet lights up; it has only those two colours, since the 2 cubes at the ends of the edge are corners with a third colour: 3 − 2 = 1. Last tap: the corner where the top, front and right faces meet; only this 1 cube has all three colours.',
     },
     figWater: {
       buttons: ['Show the water image'],

@@ -1,0 +1,376 @@
+{
+  "topic": "cubes-colouring",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 13 (questions: PDF pages 50-53, solutions: PDF pages 129-130). The three painted cubes are cropped with tools/figures/ch13.json, and each question repeats its cube's setup (size and which colour is on which face) so it stands alone. Every count is worked out cube by cube in tools/check_cubes_colouring.ts.",
+  "questions": [
+    {
+      "id": "col-b01",
+      "bookNo": 1,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have three faces painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "12",
+        "D": "8"
+      },
+      "answer": "D",
+      "rule": "Only the corner cubes have three painted faces, and a cube has 8 corners (vertices).",
+      "working": "8 corners = 8"
+    },
+    {
+      "id": "col-b02",
+      "bookNo": 2,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have only two faces painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "24",
+        "D": "12"
+      },
+      "answer": "D",
+      "rule": "Two painted faces: the cubes along the 12 edges, leaving out the corners. With n = 3, each edge has 3 − 2 = 1 such cube.",
+      "working": "12 × (3 − 2) = 12 × 1 = 12"
+    },
+    {
+      "id": "col-b03",
+      "bookNo": 3,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have only one face painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "4",
+        "B": "1",
+        "C": "9",
+        "D": "6"
+      },
+      "answer": "D",
+      "rule": "One painted face: the middle cube of each of the 6 faces, leaving out the edges ((3 − 2)² = 1 on each face).",
+      "working": "6 × (3 − 2)² = 6 × 1 = 6"
+    },
+    {
+      "id": "col-b04",
+      "bookNo": 4,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have no face painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "3",
+        "D": "2"
+      },
+      "answer": "A",
+      "rule": "No painted face: only the cube hidden in the very middle, a cube of edge 3 − 2 = 1.",
+      "working": "(3 − 2)³ = 1³ = 1"
+    },
+    {
+      "id": "col-b05",
+      "bookNo": 5,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-only",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted with only green and yellow colours?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "18",
+        "B": "1",
+        "C": "3",
+        "D": "6"
+      },
+      "answer": "B",
+      "rule": "The green (right) and yellow (front) faces meet along one edge. That edge has 3 cubes, but the 2 at its ends are corners with a third colour. Only the middle one has just green and yellow.",
+      "working": "3 − 2 = 1",
+      "note": "The book prints \"painted with green and yellow colours\" without \"only\"; its key explains the answer as the cubes with only green and yellow, so \"only\" is added here. Counting every cube with both colours (the corners too) would give 3 (option C)."
+    },
+    {
+      "id": "col-b06",
+      "bookNo": 6,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-common",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted with red and blue colours?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "18",
+        "B": "0",
+        "C": "1",
+        "D": "6"
+      },
+      "answer": "B",
+      "rule": "Red (top) and blue (bottom) are opposite faces of the big cube. They never meet, so no small cube touches both.",
+      "working": "Opposite faces: 0"
+    },
+    {
+      "id": "col-b07",
+      "bookNo": 7,
+      "sourcePage": 51,
+      "keyFrom": "book",
+      "pattern": "colour-common",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour: red on the top, blue on the bottom, yellow in front, green on the right, and brown and purple on the back and left faces. Each edge is divided into three equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted with purple (violet), brown and blue colours?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q01a.png",
+          "figures/ch13/q01b.png"
+        ]
+      },
+      "options": {
+        "A": "18",
+        "B": "6",
+        "C": "3",
+        "D": "1"
+      },
+      "answer": "D",
+      "rule": "The purple, brown and blue faces are seen together in the back-bottom view, so they meet at one corner (vertex). Only that corner cube has all three colours.",
+      "working": "1 corner = 1"
+    },
+    {
+      "id": "col-b08",
+      "bookNo": 8,
+      "sourcePage": 52,
+      "keyFrom": "solved",
+      "pattern": "cube-cut",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with brown, blue and yellow are visible: brown in front, blue on the top and yellow on the right). Each edge is divided into 4 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are there in the given figure?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q08.png"
+        ]
+      },
+      "options": {
+        "A": "48",
+        "B": "128",
+        "C": "256",
+        "D": "64"
+      },
+      "answer": "D",
+      "rule": "Each edge is divided into 4 equal parts, so n = 4 and there are n × n × n small cubes.",
+      "working": "4³ = 4 × 4 × 4 = 64",
+      "note": "The book's key prints C (256), but its own working gives 4³ = 64, which is option D."
+    },
+    {
+      "id": "col-b09",
+      "bookNo": 9,
+      "sourcePage": 52,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with brown, blue and yellow are visible: brown in front, blue on the top and yellow on the right). Each edge is divided into 4 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have two faces painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q08.png"
+        ]
+      },
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "20",
+        "D": "24"
+      },
+      "answer": "D",
+      "rule": "Two painted faces: the cubes along the 12 edges, leaving out the corners (4 − 2 = 2 on each edge).",
+      "working": "12 × (4 − 2) = 12 × 2 = 24"
+    },
+    {
+      "id": "col-b10",
+      "bookNo": 10,
+      "sourcePage": 52,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with brown, blue and yellow are visible: brown in front, blue on the top and yellow on the right). Each edge is divided into 4 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have no face painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q08.png"
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "answer": "C",
+      "rule": "No painted face: the cubes hidden inside, which make a cube of edge 4 − 2 = 2.",
+      "working": "(4 − 2)³ = 2³ = 8"
+    },
+    {
+      "id": "col-b11",
+      "bookNo": 11,
+      "sourcePage": 52,
+      "keyFrom": "book",
+      "pattern": "colour-only",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with brown, blue and yellow are visible: brown in front, blue on the top and yellow on the right). Each edge is divided into 4 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted only with brown colour?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q08.png"
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "12",
+        "D": "8"
+      },
+      "answer": "B",
+      "rule": "On the brown face, leave out the outer ring of cubes (they touch another face). The middle cubes left have only brown.",
+      "working": "(4 − 2)² = 2² = 4"
+    },
+    {
+      "id": "col-b12",
+      "bookNo": 12,
+      "sourcePage": 52,
+      "keyFrom": "book",
+      "pattern": "colour-common",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with brown, blue and yellow are visible: brown in front, blue on the top and yellow on the right). Each edge is divided into 4 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted with all three brown, blue and yellow colours?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q08.png"
+        ]
+      },
+      "options": {
+        "A": "48",
+        "B": "1",
+        "C": "4",
+        "D": "8"
+      },
+      "answer": "B",
+      "rule": "The brown, blue and yellow faces meet at one corner (vertex). Only the small cube at that corner has all three colours.",
+      "working": "1 corner = 1"
+    },
+    {
+      "id": "col-b13",
+      "bookNo": 13,
+      "sourcePage": 53,
+      "keyFrom": "book",
+      "pattern": "colour-faces",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with saffron, purple and grey are visible: saffron in front, purple on the top and grey on the right). Each edge is divided into 5 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes have two faces painted?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q13.png"
+        ]
+      },
+      "options": {
+        "A": "58",
+        "B": "48",
+        "C": "36",
+        "D": "24"
+      },
+      "answer": "C",
+      "rule": "Two painted faces: the cubes along the 12 edges, leaving out the corners (5 − 2 = 3 on each edge).",
+      "working": "12 × (5 − 2) = 12 × 3 = 36"
+    },
+    {
+      "id": "col-b14",
+      "bookNo": 14,
+      "sourcePage": 53,
+      "keyFrom": "book",
+      "pattern": "colour-only",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with saffron, purple and grey are visible: saffron in front, purple on the top and grey on the right). Each edge is divided into 5 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted only with purple colour?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q13.png"
+        ]
+      },
+      "options": {
+        "A": "25",
+        "B": "9",
+        "C": "16",
+        "D": "21"
+      },
+      "answer": "B",
+      "rule": "On the purple face, leave out the outermost ring of cubes (they touch another face). The middle cubes left have only purple.",
+      "working": "(5 − 2)² = 3² = 9"
+    },
+    {
+      "id": "col-b15",
+      "bookNo": 15,
+      "sourcePage": 53,
+      "keyFrom": "book",
+      "pattern": "colour-only",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In the given cube, each face is painted with a particular colour (faces painted with saffron, purple and grey are visible: saffron in front, purple on the top and grey on the right). Each edge is divided into 5 equal parts by drawing line segments. As a result, the bigger cube is divided into small cubes. How many small cubes are painted with only purple and grey colours?",
+      "figures": {
+        "terms": [
+          "figures/ch13/q13.png"
+        ]
+      },
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "50"
+      },
+      "answer": "C",
+      "rule": "The purple (top) and grey (right) faces meet along one edge of 5 cubes. The 2 cubes at its ends are corners with a third colour, so leave them out.",
+      "working": "5 − 2 = 3",
+      "note": "The English question in the book has no \"only\" (its Kannada does); the key's working counts the cubes with only purple and grey, so \"only\" is added here. Counting every cube with both colours would give 5 (option A)."
+    }
+  ]
+}

@@ -375,6 +375,9 @@ const genEn = {
     'count-rectangles': 'Rectangles: (1 + 2 + …) × (1 + 2 + …)',
     'count-parallelograms': 'Parallelograms: (1 + 2 + …) × (1 + 2 + …)',
     'count-pentagons': 'Shapes with five sides',
+    'colour-faces': 'Corners 8, edges 12(n − 2), faces 6(n − 2)², inside (n − 2)³',
+    'colour-only': 'Leave out the cubes that touch another face',
+    'colour-common': 'Next to each other: they share an edge; opposite: never',
   } as Record<PatternId, string>,
 }
 
@@ -721,6 +724,9 @@ const genKn: GenText = {
     'count-rectangles': 'ಆಯತಗಳು: (1 + 2 + …) × (1 + 2 + …)',
     'count-parallelograms': 'ಸಮಾನಾಂತರ ಚತುರ್ಭುಜಗಳು: (1 + 2 + …) × (1 + 2 + …)',
     'count-pentagons': 'ಐದು ಬಾಹುಗಳ ಆಕೃತಿಗಳು',
+    'colour-faces': 'ಮೂಲೆಗಳು 8, ಅಂಚುಗಳು 12(n − 2), ಮುಖಗಳು 6(n − 2)², ಒಳಗೆ (n − 2)³',
+    'colour-only': 'ಇನ್ನೊಂದು ಮುಖವನ್ನು ಮುಟ್ಟುವ ಘನಗಳನ್ನು ಬಿಡಿ',
+    'colour-common': 'ಪಕ್ಕದ ಮುಖಗಳು ಒಂದು ಅಂಚು ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ; ವಿರುದ್ಧ ಮುಖಗಳು ಎಂದೂ ಸಂಧಿಸುವುದಿಲ್ಲ',
   },
 }
 

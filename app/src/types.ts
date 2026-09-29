@@ -163,6 +163,10 @@ export type PatternId =
   | 'count-rectangles'
   | 'count-parallelograms'
   | 'count-pentagons'
+  // Cubes colouring (Chapter 13)
+  | 'colour-faces'
+  | 'colour-only'
+  | 'colour-common'
 
 export interface Question {
   id: string

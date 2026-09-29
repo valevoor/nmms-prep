@@ -37,6 +37,8 @@ import dice from './mat/dice.json'
 import diceMeta from './mat/dice.meta.json'
 import counting from './mat/counting-figures.json'
 import countingMeta from './mat/counting-figures.meta.json'
+import colouring from './mat/cubes-colouring.json'
+import colouringMeta from './mat/cubes-colouring.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -82,6 +84,7 @@ import { generateWaterImage } from '../lib/generators/waterImage'
 import { generateCubesCutting } from '../lib/generators/cubesCutting'
 import { generateDice } from '../lib/generators/dice'
 import { generateCountingFigures } from '../lib/generators/countingFigures'
+import { generateCubesColouring } from '../lib/generators/cubesColouring'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -361,6 +364,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: countingMeta as TopicMeta,
     missing: 'answer',
     generate: generateCountingFigures,
+  },
+  {
+    id: 'cubes-colouring',
+    chapter: 13,
+    name: 'Cubes Colouring',
+    questions: visible(colouring.questions as Question[]),
+    meta: colouringMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateCubesColouring,
   },
 ]
 

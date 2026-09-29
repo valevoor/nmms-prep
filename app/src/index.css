@@ -2127,3 +2127,23 @@ kbd {
   stroke-width: 2;
   stroke-dasharray: 5 4;
 }
+
+/* Cubes Colouring tip: a cube with a different colour on its top, front and right faces. */
+.tv .tv-paint-top,
+.tv .tv-paint-front,
+.tv .tv-paint-right {
+  stroke: var(--text);
+  stroke-width: 1.2;
+}
+
+.tv .tv-paint-top {
+  fill: var(--bad-soft);
+}
+
+.tv .tv-paint-front {
+  fill: var(--accent-soft);
+}
+
+.tv .tv-paint-right {
+  fill: var(--good-soft);
+}

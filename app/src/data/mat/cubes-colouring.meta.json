@@ -1,0 +1,38 @@
+{
+  "topic": "cubes-colouring",
+  "intro": "Here a big cube has a different colour on each face and is cut into equal small cubes. You count the small cubes with 3, 2, 1 or no painted faces, the ones with only one colour or only two colours, and the ones that carry two or three given colours. The picture shows which colour is on which face; the question says it too.",
+  "tips": [
+    {
+      "title": "First find n, the cubes along one edge",
+      "body": "If each edge is divided into n equal parts, there are n × n × n = n³ small cubes. Divided into 4 parts: 4³ = 64 (Q8)."
+    },
+    {
+      "title": "Painted faces: 8, 12(n − 2), 6(n − 2)², (n − 2)³",
+      "body": "The 8 corner cubes have 3 painted faces. Each of the 12 edges has n − 2 cubes between its corners, with 2 painted faces. Each of the 6 faces has (n − 2)² middle cubes with 1 painted face. The (n − 2)³ cubes hidden inside have none. For n = 5: 8, 36, 54 and 27, which add up to 125 = 5³."
+    },
+    {
+      "title": "Only one colour: the middle of that face",
+      "visual": "cubeColours",
+      "body": "A cube with only red paint sits on the red face but away from its border, because the border cubes touch another face too. That leaves (n − 2)² on the face: for n = 5, 3² = 9 (Q14).",
+      "caption": "Tap through: only one colour, only two colours, all three colours."
+    },
+    {
+      "title": "Two colours: do the faces meet?",
+      "body": "Two faces next to each other meet along one edge of n cubes, so n small cubes have both colours. If the question says only those two colours, leave out the 2 corners at the ends (they have a third colour): n − 2. Opposite faces, such as top and bottom, never meet: 0 (Q6)."
+    },
+    {
+      "title": "Three colours: one corner, or none",
+      "body": "Three faces that are all next to each other meet at one corner, so exactly 1 small cube has all three colours (Q7, Q12). If two of the three faces are opposite, no cube has all three: 0."
+    },
+    {
+      "title": "Next to or opposite? Read the picture",
+      "body": "Faces you can see together in one view (top, front and right) are all next to each other. Each face has exactly one opposite face: top and bottom, front and back, left and right. In Q1–7 the red top and the blue bottom are opposite."
+    },
+    {
+      "title": "Any amount of one colour: the whole face",
+      "body": "Every small cube on the red face has some red, the border cubes too: n × n. For n = 4 that is 16. Read the question carefully: \"only red\" means (n − 2)², \"some red\" means n²."
+    }
+  ],
+  "workedExamples": ["col-b05", "col-b07", "col-b11", "col-b15"],
+  "cheatSheet": "none"
+}
