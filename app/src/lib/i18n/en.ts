@@ -27,6 +27,7 @@ export const en = {
     findFigure: 'Find the missing figure',
     findHidden: 'Which figure hides it?',
     findTurned: 'Which one is the same figure, turned?',
+    findFolded: 'Which one is the sheet folded along the dotted line?',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -68,6 +69,7 @@ export const en = {
     3: 'Hidden Figures',
     4: 'Similar Figures in Different Position',
     5: 'Intersecting Figures',
+    6: 'Figure Fold Transparent Sheet',
     8: 'Mirror Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
@@ -257,6 +259,10 @@ export const en = {
     figGrow: {
       buttons: ['Show the next shape'],
       label: 'A triangle, a square and a pentagon, then a blank. The next shape has one more side: a hexagon.',
+    },
+    figFold: {
+      buttons: ['Fold it'],
+      label: 'A square sheet with a dotted line down the middle, a triangle on the left half and a flag on the right half. The tap folds the right half over: the flag lands on the left half, as far from the fold as before, facing the other way.',
     },
     figHidden: {
       buttons: ['Show where it hides'],

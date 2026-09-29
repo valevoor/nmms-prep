@@ -1,0 +1,482 @@
+{
+ "topic": "fold-sheet",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 6 (questions: PDF pages 26-27, answers: PDF page 117)",
+ "questions": [
+  {
+   "id": "fold-b01",
+   "bookNo": 1,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q01-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q01-oA.png",
+     "B": "figures/ch06/q01-oB.png",
+     "C": "figures/ch06/q01-oC.png",
+     "D": "figures/ch06/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the right half of each line folds over onto the left, so every arrowhead now points left.",
+   "working": "Fold the right half over onto the left half along the dotted line. The top line: its circle stays and its arrowhead from the right lands on top of the circle, pointing left. The middle line becomes one arrow pointing left. The bottom line: its arrowhead stays, and the circle from the right lands on it. So the top and bottom lines each have a circle with an arrowhead, and the middle line is a plain arrow: that is C."
+  },
+  {
+   "id": "fold-b02",
+   "bookNo": 2,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q02-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q02-oA.png",
+     "B": "figures/ch06/q02-oB.png",
+     "C": "figures/ch06/q02-oC.png",
+     "D": "figures/ch06/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the three circles above the fold land below it, mirrored in the dotted line.",
+   "working": "Fold the upper-right half down over the lower-left half. The white circle near the middle lands between the two black circles below the fold, so the row along the fold reads black, white, black, white. The black circle at the top-right corner lands in the bottom-left corner, on top of the white circle there. On a transparent sheet the black circle shows over the white one, so that corner looks black. That is B (its third circle is black, printed grey in the scan). C has the same row but a white circle in the corner."
+  },
+  {
+   "id": "fold-b03",
+   "bookNo": 3,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q03-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q03-oA.png",
+     "B": "figures/ch06/q03-oB.png",
+     "C": "figures/ch06/q03-oC.png",
+     "D": "figures/ch06/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The right half folds onto the left: the arrows from the right point left.",
+   "working": "Fold the right half over onto the left half. In the top half, the two half-arrows from the right land pointing left, between the two that point right. In the bottom half, the double arrow from the right lands across the two upright arrows, with its heads now on the left. Only C and D show this.",
+   "note": "Hidden: options C and D are drawn exactly the same, so the question has two right answers (the book's key says C).",
+   "status": "needs-review"
+  },
+  {
+   "id": "fold-b04",
+   "bookNo": 4,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q04-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q04-oA.png",
+     "B": "figures/ch06/q04-oB.png",
+     "C": "figures/ch06/q04-oC.png",
+     "D": "figures/ch06/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: each shape on the right lands on the shape facing it on the left.",
+   "working": "Fold the right half over onto the left half. The black triangle at the top-right lands inside the empty square: a square with a black triangle. The white triangle lands on the square with a black triangle, which still shows black. The black square with a white triangle lands on the white triangle: a black square with a white triangle. The black square at the bottom-right lands on the white triangle at the bottom-left and covers it: a plain black square. That is D."
+  },
+  {
+   "id": "fold-b05",
+   "bookNo": 5,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q05-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q05-oA.png",
+     "B": "figures/ch06/q05-oB.png",
+     "C": "figures/ch06/q05-oC.png",
+     "D": "figures/ch06/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: fold the right square onto the left one; a black circle shows over a white one.",
+   "working": "Fold the right half over onto the left half. Top: the black circle lands on the white one, so it looks black. Left: the black circle from the far right lands on the white circle at the far left, so it looks black. Right: the white circle lands on the white one, so it stays white. Bottom: black on black. Black at the top, left and bottom, white on the right: that is D."
+  },
+  {
+   "id": "fold-b06",
+   "bookNo": 6,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q06-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q06-oA.png",
+     "B": "figures/ch06/q06-oB.png",
+     "C": "figures/ch06/q06-oC.png",
+     "D": "figures/ch06/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The right half folds onto the left: the arrow and the open circle land at the left joint.",
+   "working": "Fold the right half over onto the left half. The joint on the right lands on the joint on the left. Its arrow, pointing up and right, lands pointing up and left; its short line down to an open circle lands under the left joint. So the left joint should have a black dot above, an open circle below, and arrows pointing up-left and down-left.",
+   "note": "Hidden: no option matches. A (the book's key) has both arrows right, but it draws a black dot at the bottom, and a longer line, where the open circle should be.",
+   "status": "needs-review"
+  },
+  {
+   "id": "fold-b07",
+   "bookNo": 7,
+   "sourcePage": 26,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q07-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q07-oA.png",
+     "B": "figures/ch06/q07-oB.png",
+     "C": "figures/ch06/q07-oC.png",
+     "D": "figures/ch06/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The bottom half folds up onto the top half.",
+   "working": "Fold the bottom half up onto the top half. The V at the bottom lands as an upside-down V (a roof) across the top half, the upright middle line stays, and the slanting line in the top-right stays. So the top half should hold a roof, the middle line and one slanting line.",
+   "note": "Hidden: no option matches. A (the book's key) has the roof and an extra V, but no middle line; C has the roof and middle line but not the slanting line.",
+   "status": "needs-review"
+  },
+  {
+   "id": "fold-b08",
+   "bookNo": 8,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q08-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q08-oA.png",
+     "B": "figures/ch06/q08-oB.png",
+     "C": "figures/ch06/q08-oC.png",
+     "D": "figures/ch06/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the small circle on the right lands inside the square on the left.",
+   "working": "The house is the same on both sides of the fold except at the bottom: a square on the left, a small circle on the right. Fold the right half over onto the left half and the circle lands inside the square. The circle at the top folds onto its own other half, so it stays a plain (not black) half circle. A shows both."
+  },
+  {
+   "id": "fold-b09",
+   "bookNo": 9,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q09-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q09-oA.png",
+     "B": "figures/ch06/q09-oB.png",
+     "C": "figures/ch06/q09-oC.png",
+     "D": "figures/ch06/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the bottom half folds up; b turns into P and M turns upside down.",
+   "working": "Fold the bottom half up onto the top half. The letter b flips top to bottom and becomes P, and its bevelled frame lands on the plain frame at the top-left, so you see the bevelled frame round P. The M flips top to bottom and lands upside down in the top-right. A has the plain frame only; B and C have the wrong letter."
+  },
+  {
+   "id": "fold-b10",
+   "bookNo": 10,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q10-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q10-oA.png",
+     "B": "figures/ch06/q10-oB.png",
+     "C": "figures/ch06/q10-oC.png",
+     "D": "figures/ch06/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the lines below the fold swing up to close a square; the black dot lands on the open circle.",
+   "working": "Fold the lower-right half over onto the upper-left half. The two bent lines that run below the fold swing up and, with the lines already above it, close a square with one corner on the fold. The line through the middle crosses the fold at a right angle, so it folds onto itself: its black dot lands on the open circle. On a transparent sheet the black dot shows over the open circle. That is D; C has an open circle, and A and B still show the part below the fold."
+  },
+  {
+   "id": "fold-b11",
+   "bookNo": 11,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q11-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q11-oA.png",
+     "B": "figures/ch06/q11-oB.png",
+     "C": "figures/ch06/q11-oC.png",
+     "D": "figures/ch06/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the right oval lands overlapping the left one, and its slanting line runs to the bottom-left corner.",
+   "working": "Fold the right half over onto the left half. The oval on the right lands on the left, lower down, so the two ovals overlap a lot. The slanting line on the right lands as a line from the middle to the bottom-left corner, beside the one from the top-left corner. C has both ovals and both slanting lines; B and D have only one slanting line, and in A the ovals only touch."
+  },
+  {
+   "id": "fold-b12",
+   "bookNo": 12,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q12-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q12-oA.png",
+     "B": "figures/ch06/q12-oB.png",
+     "C": "figures/ch06/q12-oC.png",
+     "D": "figures/ch06/q12-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the lines at the bottom-right land at the bottom-left: a line to the corner and a V.",
+   "working": "Fold the right half over onto the left half. The top-left part stays: a line from the corner to the middle and a triangle. From the bottom-right come a line from the middle to the bottom-left corner and a V that points down. C has all of these; A and D have a line to the middle of the fold instead of to the corner, and B has no line to the corner."
+  },
+  {
+   "id": "fold-b13",
+   "bookNo": 13,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q13-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q13-oA.png",
+     "B": "figures/ch06/q13-oB.png",
+     "C": "figures/ch06/q13-oC.png",
+     "D": "figures/ch06/q13-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The lower-right half folds onto the upper-left half.",
+   "working": "Fold the lower-right half over onto the upper-left half. The part of the flat line below the fold swings up from the point where it meets the fold, and the hook at its end swings up with it, so it lands as a line across the top and a short line pointing down inside the shape.",
+   "note": "Hidden: no option matches exactly. A (the book's key) closes a rectangle, but the hook's last short line should land as a short stub inside it, and A leaves it out.",
+   "status": "needs-review"
+  },
+  {
+   "id": "fold-b14",
+   "bookNo": 14,
+   "sourcePage": 27,
+   "keyFrom": "book",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q14-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q14-oA.png",
+     "B": "figures/ch06/q14-oB.png",
+     "C": "figures/ch06/q14-oC.png",
+     "D": "figures/ch06/q14-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The upper-right half folds onto the lower-left half: the black dot lands in the empty box.",
+   "working": "Fold the upper-right half over onto the lower-left half. The box with the black dot lands on the empty box at the bottom-left, the flat stripes above the fold become upright stripes, and the stripes below the fold stay. A has an open circle, so it is out.",
+   "note": "Hidden: B, C and D differ only in the tiny ends of the stripes, too small to settle from the page, and all three have a line from the corner that the given sheet does not explain (the book's key says D).",
+   "status": "needs-review"
+  },
+  {
+   "id": "fold-b15",
+   "bookNo": 15,
+   "sourcePage": 27,
+   "keyFrom": "solved",
+   "pattern": "fold-sheet",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch06/q15-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch06/q15-oA.png",
+     "B": "figures/ch06/q15-oB.png",
+     "C": "figures/ch06/q15-oC.png",
+     "D": "figures/ch06/q15-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: every line reaches the bottom edge once the top half folds down.",
+   "working": "Fold the top half down onto the bottom half. The lines on the left hang from the top edge, so their top parts fold down to reach the bottom edge. The lines on the right already stand up from the bottom edge. So all ten lines, and the middle line, run the full height of the bottom half: that is B.",
+   "note": "The book's key says D, but in D the lines on the right stop short. They start at the bottom edge on the sheet, so after folding they still reach it; every line is full length, as in B."
+  }
+ ]
+}

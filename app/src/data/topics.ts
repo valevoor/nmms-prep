@@ -23,6 +23,8 @@ import signs from './mat/signs-symbols.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
+import foldSheet from './mat/fold-sheet.json'
+import foldSheetMeta from './mat/fold-sheet.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -61,6 +63,7 @@ import { generateNumberSeries } from '../lib/generators/numberSeries'
 import { generateSequence } from '../lib/generators/sequence'
 import { generateSigns } from '../lib/generators/signs'
 import { generateIntersecting } from '../lib/generators/venn'
+import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -70,7 +73,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -278,6 +281,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateIntersecting,
   },
+  {
+    id: 'fold-sheet',
+    chapter: 6,
+    name: 'Figure Fold Transparent Sheet',
+    questions: visible(foldSheet.questions as Question[]),
+    meta: foldSheetMeta as TopicMeta,
+    missing: 'folded',
+    generate: generateFoldSheet,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -300,6 +312,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     figure: t.common.findFigure,
     hidden: t.common.findHidden,
     turned: t.common.findTurned,
+    folded: t.common.findFolded,
   }
   return labels[topic.missing ?? 'number']
 }

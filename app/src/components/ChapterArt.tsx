@@ -188,6 +188,15 @@ const ART: Record<number, ReactNode> = {
       <circle cx={26} cy={27.5} r={2.2} className="art-tile-accent" />
     </>
   ),
+  // Figure Fold Transparent Sheet: a sheet folded along a dotted line; the flag lands mirrored
+  6: (
+    <>
+      <rect x={5} y={7} width={38} height={34} rx={2} />
+      <path d="M24 7v34" strokeDasharray="3 3" strokeLinecap="butt" />
+      <path d="M31 33V15l8 3.5-8 3.5" />
+      <path d="M17 33V15l-8 3.5 8 3.5" className="art-accent" style={{ fill: 'none' }} />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

@@ -1,0 +1,26 @@
+{
+  "topic": "fold-sheet",
+  "intro": "A figure is drawn on a transparent sheet, and a dotted line shows where to fold it. Four answer figures follow. Find the one that shows what the sheet looks like after it is folded along the dotted line.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Find which half moves",
+      "body": "The options show only one half of the sheet. That half stays where it is; the other half folds over on top of it. The paper can fold right, left, up, down or along a slant.",
+      "visual": "figFold",
+      "caption": "Fold the right half over: the flag lands on the left, the same distance from the fold, facing the other way."
+    },
+    {
+      "title": "Same distance, other side",
+      "body": "A part that was 2 squares from the fold lands 2 squares from the fold on the other side. Parts that sit on the fold line do not move."
+    },
+    {
+      "title": "Folded parts are mirrored",
+      "body": "Folding flips a part over, so it lands as a mirror image: an arrow pointing right from a vertical fold now points left, and b folded top to bottom becomes p. A part that only slides across without flipping is the usual trap."
+    },
+    {
+      "title": "The sheet is transparent",
+      "body": "Everything on both halves still shows after folding. Where a black shape lands on a white one, you see the black one."
+    }
+  ],
+  "workedExamples": ["fold-b05", "fold-b08", "fold-b09"]
+}

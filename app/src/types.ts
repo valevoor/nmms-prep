@@ -32,6 +32,8 @@ export interface Drawing {
   items: FigItem[]
   /** Straight lines [x1, y1, x2, y2] in the 100 × 100 box (Hidden Figures). */
   lines?: [number, number, number, number][]
+  /** Dotted lines [x1, y1, x2, y2], e.g. the fold line (Figure Fold Transparent Sheet). */
+  dashed?: [number, number, number, number][]
 }
 
 /** A picture: a PNG cropped from the book (path under public/), '?' for the blank, or a drawing. */
@@ -138,6 +140,8 @@ export type PatternId =
   // Intersecting figures (Chapter 5)
   | 'venn-count'
   | 'venn-part'
+  // Figure fold transparent sheet (Chapter 6)
+  | 'fold-sheet'
 
 export interface Question {
   id: string

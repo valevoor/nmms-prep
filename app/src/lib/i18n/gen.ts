@@ -359,6 +359,7 @@ const genEn = {
     'fig-hidden': 'A figure hidden in a bigger one',
     'venn-count': 'Add the parts that fit',
     'venn-part': 'Read one part',
+    'fold-sheet': 'Fold the sheet along the dotted line',
   } as Record<PatternId, string>,
 }
 
@@ -689,6 +690,7 @@ const genKn: GenText = {
     'fig-hidden': 'ದೊಡ್ಡ ಚಿತ್ರದಲ್ಲಿ ಅಡಗಿರುವ ಚಿತ್ರ',
     'venn-count': 'ಹೊಂದುವ ಭಾಗಗಳನ್ನು ಕೂಡಿಸಿ',
     'venn-part': 'ಒಂದು ಭಾಗವನ್ನು ಓದಿ',
+    'fold-sheet': 'ಚುಕ್ಕೆ ರೇಖೆಯ ಉದ್ದಕ್ಕೂ ಹಾಳೆಯನ್ನು ಮಡಿಸಿ',
   },
 }
 

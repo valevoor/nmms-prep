@@ -32,6 +32,10 @@ import intersectingKn from './mat/intersecting-figures.kn.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMetaKn from './mat/intersecting-figures.meta.kn.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
+import foldSheetKn from './mat/fold-sheet.kn.json'
+import foldSheet from './mat/fold-sheet.json'
+import foldSheetMetaKn from './mat/fold-sheet.meta.kn.json'
+import foldSheetMeta from './mat/fold-sheet.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -133,4 +137,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('hidden-figures', 'Hidden Figures', hidden, hiddenMeta, hiddenKn, hiddenMetaKn),
   c('similar-figures', 'Similar Figures in Different Position', similar, similarMeta, similarKn, similarMetaKn),
   c('intersecting-figures', 'Intersecting Figures', intersecting, intersectingMeta, intersectingKn, intersectingMetaKn),
+  c('fold-sheet', 'Figure Fold Transparent Sheet', foldSheet, foldSheetMeta, foldSheetKn, foldSheetMetaKn),
 ]

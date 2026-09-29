@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 import { AnswerCheck } from './AnswerCheck'
 import { FigureGrow } from './FigureGrow'
 import { FigureHidden } from './FigureHidden'
+import { FoldSheet } from './FoldSheet'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
@@ -32,4 +33,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   order: OrderOfOps,
   figHidden: FigureHidden,
   venn: VennParts,
+  figFold: FoldSheet,
 }
