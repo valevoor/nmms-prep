@@ -148,6 +148,11 @@ export type PatternId =
   | 'mirror-image'
   // Water image (Chapter 9)
   | 'water-image'
+  // Cubes cutting (Chapter 10)
+  | 'cube-count'
+  | 'cube-area'
+  | 'cube-cut'
+  | 'cube-paint'
 
 export interface Question {
   id: string

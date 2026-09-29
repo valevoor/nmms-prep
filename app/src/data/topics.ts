@@ -31,6 +31,8 @@ import mirror from './mat/mirror-image.json'
 import mirrorMeta from './mat/mirror-image.meta.json'
 import water from './mat/water-image.json'
 import waterMeta from './mat/water-image.meta.json'
+import cubes from './mat/cubes-cutting.json'
+import cubesMeta from './mat/cubes-cutting.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -73,6 +75,7 @@ import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
 import { generateMirrorImage } from '../lib/generators/mirrorImage'
 import { generateWaterImage } from '../lib/generators/waterImage'
+import { generateCubesCutting } from '../lib/generators/cubesCutting'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -325,6 +328,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: waterMeta as TopicMeta,
     missing: 'water',
     generate: generateWaterImage,
+  },
+  {
+    id: 'cubes-cutting',
+    chapter: 10,
+    name: 'Cubes Cutting',
+    questions: visible(cubes.questions as Question[]),
+    meta: cubesMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateCubesCutting,
   },
 ]
 

@@ -48,6 +48,10 @@ import waterKn from './mat/water-image.kn.json'
 import water from './mat/water-image.json'
 import waterMetaKn from './mat/water-image.meta.kn.json'
 import waterMeta from './mat/water-image.meta.json'
+import cubesKn from './mat/cubes-cutting.kn.json'
+import cubes from './mat/cubes-cutting.json'
+import cubesMetaKn from './mat/cubes-cutting.meta.kn.json'
+import cubesMeta from './mat/cubes-cutting.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -153,4 +157,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('paper-punch', 'Paper Fold and Punch', paperPunch, paperPunchMeta, paperPunchKn, paperPunchMetaKn),
   c('mirror-image', 'Mirror Image', mirror, mirrorMeta, mirrorKn, mirrorMetaKn),
   c('water-image', 'Water Image', water, waterMeta, waterKn, waterMetaKn),
+  c('cubes-cutting', 'Cubes Cutting', cubes, cubesMeta, cubesKn, cubesMetaKn),
 ]

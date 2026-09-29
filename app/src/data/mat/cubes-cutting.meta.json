@@ -1,0 +1,42 @@
+{
+  "topic": "cubes-cutting",
+  "intro": "Here a big cube is cut into equal small cubes. You count how many small cubes there are, how many are left after some are cut away, how many were taken away, and the area needed to cover what is left. In exam questions the big cube is often painted first, and you count the small cubes with 3, 2, 1 or no painted faces.",
+  "tips": [
+    {
+      "title": "Cutting a cube: small cubes along one edge, cubed",
+      "body": "If each edge is cut into n equal parts, there are n × n × n = n³ small cubes. When lengths are given, n = big edge ÷ small edge: a cube of edge 15 cm cut into 3 cm cubes has 15 ÷ 3 = 5 along each edge, so 5³ = 125."
+    },
+    {
+      "title": "Count layer by layer",
+      "body": "When some cubes are cut away, count one layer at a time, from the top down. In each layer, count the rows and multiply by the cubes in a row. For steps of 3 (Q3): 3 × 1 + 3 × 2 + 3 × 3 = 3 + 6 + 9 = 18."
+    },
+    {
+      "title": "Removed = full cube − what is left",
+      "body": "The full cube had n³ small cubes. The number cut away is n³ minus the cubes left, and the number needed to make it a full cube again is the same number. For Q3: 27 − 18 = 9."
+    },
+    {
+      "title": "A painted cube: where the paint lands",
+      "visual": "cubePaint",
+      "body": "Paint a cube on all its faces and cut it into n × n × n small cubes. The 8 corner cubes have 3 painted faces. Each of the 12 edges has n − 2 cubes between its corners, with 2 painted faces: 12(n − 2). Each of the 6 faces has (n − 2)² middle cubes with 1 painted face: 6(n − 2)². The (n − 2)³ cubes hidden inside have no paint.",
+      "caption": "n = 4: 8 + 24 + 24 + 8 = 64 = 4³."
+    },
+    {
+      "title": "Peel off a layer: n − 2",
+      "body": "Taking one layer of cubes off every face shortens each edge by 2 (one cube at each end). A 4 × 4 × 4 cube leaves (4 − 2)³ = 8. These are the same cubes that have no paint when the whole cube is painted."
+    },
+    {
+      "title": "Cuboids and cubes painted on some faces",
+      "body": "For an a × b × c cuboid painted all over, the rules are the same with each length: 8 corners, 4 × [(a − 2) + (b − 2) + (c − 2)] edge cubes, and (a − 2)(b − 2)(c − 2) inside. If only some faces are painted, take one layer off each painted face; what is left has no paint. Painted top and bottom only: n × n × (n − 2)."
+    },
+    {
+      "title": "Covering a shape: count the uncovered faces",
+      "body": "Each face of a small cube is 1 square unit. To cover a shape, count the faces you see from the front, back, left, right, top and bottom (the bottom too, unless it says otherwise). For the steps in Q6: 9 + 9 + 6 + 6 + 9 + 9 = 48."
+    },
+    {
+      "title": "A pile needs cubes underneath",
+      "body": "A cube you can see high up in a pile must rest on cubes you can't see. In Q12 only 10 cubes show, but each column is full down to the floor: 1 + 3 + 6 + 10 = 20. The book counts these hidden cubes too."
+    }
+  ],
+  "workedExamples": ["cc-b03", "cc-b06", "cc-b12", "cc-b15"],
+  "cheatSheet": "none"
+}

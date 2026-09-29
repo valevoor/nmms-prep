@@ -216,6 +216,14 @@ const ART: Record<number, ReactNode> = {
       <path d="M17 27v16l11-4-11-4" className="art-accent" style={{ fill: 'none' }} />
     </>
   ),
+  // Cubes Cutting: a cube cut into 3 × 3 × 3 small cubes; one corner cube is marked
+  10: (
+    <>
+      <path d="M6 16h24v24H6zM6 16l10-10h24L30 16M30 40l10-10V6" />
+      <path d="M14 16v24M22 16v24M6 24h24M6 32h24M9.3 12.7h24M12.7 9.3h24M14 16l10-10M22 16l10-10M30 24l10-10M30 32l10-10M33.3 12.7v24M36.7 9.3v24" strokeWidth={1.2} />
+      <rect x={6} y={16} width={8} height={8} className="art-tile-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

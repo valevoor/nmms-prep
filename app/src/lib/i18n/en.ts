@@ -76,6 +76,7 @@ export const en = {
     7: 'Paper Fold and Punch',
     8: 'Mirror Image',
     9: 'Water Image',
+    10: 'Cubes Cutting',
     14: 'Number Analogy',
     15: 'Number Patterns',
     16: 'Odd One Out: Letters',
@@ -268,6 +269,11 @@ export const en = {
     figFold: {
       buttons: ['Fold it'],
       label: 'A square sheet with a dotted line down the middle, a triangle on the left half and a flag on the right half. The tap folds the right half over: the flag lands on the left half, as far from the fold as before, facing the other way.',
+    },
+    cubePaint: {
+      buttons: ['3 faces painted', '2 faces painted', '1 face painted', 'No face painted'],
+      label:
+        'A 4 × 4 × 4 cube painted on every face, with its front, top and right faces drawn in small squares. First tap: the corner cubes light up; all 8 corners have 3 painted faces. Second tap: the edge cubes between the corners, 2 on each of the 12 edges, have 2 painted faces: 24. Third tap: the middle 2 × 2 squares of each of the 6 faces have 1 painted face: 24. Last tap: the 2 × 2 × 2 = 8 cubes hidden inside have no paint.',
     },
     figWater: {
       buttons: ['Show the water image'],

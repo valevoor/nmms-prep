@@ -363,6 +363,10 @@ const genEn = {
     'paper-punch': 'Open out the folded, punched paper',
     'mirror-image': 'Flip it left to right, as in a mirror',
     'water-image': 'Turn it upside down, as in water',
+    'cube-count': 'Count the small cubes layer by layer',
+    'cube-area': 'Count the uncovered faces',
+    'cube-cut': 'Cubes along one edge, cubed',
+    'cube-paint': 'Corners, edges, faces and inside',
   } as Record<PatternId, string>,
 }
 
@@ -697,6 +701,10 @@ const genKn: GenText = {
     'paper-punch': 'ಮಡಿಸಿ ರಂಧ್ರ ಮಾಡಿದ ಕಾಗದವನ್ನು ಬಿಡಿಸಿ',
     'mirror-image': 'ಕನ್ನಡಿಯಂತೆ ಎಡ-ಬಲ ಅದಲು ಬದಲು ಮಾಡಿ',
     'water-image': 'ನೀರಿನಂತೆ ಮೇಲು-ಕೆಳಗು ತಲೆಕೆಳಗಾಗಿಸಿ',
+    'cube-count': 'ಪದರ ಪದರವಾಗಿ ಚಿಕ್ಕ ಘನಗಳನ್ನು ಎಣಿಸಿ',
+    'cube-area': 'ಹೊರಗೆ ಕಾಣುವ ಮುಖಗಳನ್ನು ಎಣಿಸಿ',
+    'cube-cut': 'ಒಂದು ಅಂಚಿನ ಘನಗಳ ಸಂಖ್ಯೆಯ ಘನ',
+    'cube-paint': 'ಮೂಲೆಗಳು, ಅಂಚುಗಳು, ಮುಖಗಳು ಮತ್ತು ಒಳಭಾಗ',
   },
 }
 

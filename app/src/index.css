@@ -2107,3 +2107,23 @@ kbd {
   top: 8px;
   right: 10px;
 }
+
+/* Cubes Cutting tip: a painted cube's small squares; the lit ones share a painted-face count. */
+.tv .tv-cube {
+  fill: var(--surface);
+  stroke: var(--text);
+  stroke-width: 1.2;
+}
+
+.tv .tv-cube-lit {
+  fill: var(--primary-soft);
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+.tv .tv-cube-inside {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
