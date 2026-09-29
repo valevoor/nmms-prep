@@ -8,6 +8,7 @@ import { MirrorFlip } from './MirrorFlip'
 import { WaterFlip } from './WaterFlip'
 import { CubePaint } from './CubePaint'
 import { DiceNet } from './DiceNet'
+import { CountFan } from './CountFan'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
@@ -44,4 +45,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   figWater: WaterFlip,
   cubePaint: CubePaint,
   diceNet: DiceNet,
+  countFan: CountFan,
 }

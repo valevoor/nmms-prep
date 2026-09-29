@@ -236,6 +236,13 @@ const ART: Record<number, ReactNode> = {
       <circle cx={36.5} cy={22.5} r={2} className="art-accent" />
     </>
   ),
+  // Counting of Figures: a triangle cut by lines from its top; one of its triangles is marked
+  12: (
+    <>
+      <path d="M24 6L5 41h38zM24 6l-6 35M24 6l6 35" />
+      <path d="M24 6l-6 35h12z" className="art-tile-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

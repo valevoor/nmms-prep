@@ -157,6 +157,12 @@ export type PatternId =
   | 'dice-views'
   | 'dice-net'
   | 'dice-standard'
+  // Counting of figures (Chapter 12)
+  | 'count-triangles'
+  | 'count-squares'
+  | 'count-rectangles'
+  | 'count-parallelograms'
+  | 'count-pentagons'
 
 export interface Question {
   id: string

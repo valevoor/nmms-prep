@@ -1,0 +1,38 @@
+{
+  "topic": "counting-figures",
+  "intro": "Here a figure is made of straight lines, and you count how many triangles, squares, rectangles or parallelograms are hidden in it. Small shapes join up into bigger ones, so the trick is to count in an order that misses none and counts none twice.",
+  "tips": [
+    {
+      "title": "Lines from one corner: 1 + 2 + 3 + …",
+      "visual": "countFan",
+      "body": "When lines run from the top of a triangle to its base, every triangle has the top corner and a run of base parts next to each other. With n parts there are 1 + 2 + … + n triangles. Each full line across the triangle is cut the same way and gives the same number again.",
+      "caption": "4 parts: 4 + 3 + 2 + 1 = 10."
+    },
+    {
+      "title": "Count by size, then add",
+      "body": "Start with the smallest shapes, then those made of 2 small ones, then 3, and so on up to the whole figure. Write the numbers down and add them at the end. In a triangle cut into small triangles, count the ones pointing up and the ones pointing down at each size: 4 along each side gives 16 + 7 + 3 + 1 = 27."
+    },
+    {
+      "title": "Squares in a grid: 1² + 2² + 3² + …",
+      "body": "An n × n grid of squares has n² small squares, (n − 1)² squares of 2 × 2, and so on down to 1 square of n × n. For 4 × 4: 16 + 9 + 4 + 1 = 30. For a grid a wide and b high, a k × k square fits in (a − k + 1) × (b − k + 1) places."
+    },
+    {
+      "title": "Rectangles in a grid: (1 + 2 + …) × (1 + 2 + …)",
+      "body": "A rectangle is fixed by choosing 2 of the upright lines and 2 of the cross lines. With a boxes in a row there are 1 + 2 + … + a ways to choose the upright pair, and the same for the rows. For 4 × 4: 10 × 10 = 100. Squares are rectangles too, so they are in this count."
+    },
+    {
+      "title": "Parallelograms work the same way",
+      "body": "A grid of leaning boxes is counted like a grid of rectangles: 3 boxes in a row and 2 rows give (1 + 2 + 3) × (1 + 2) = 6 × 3 = 18 parallelograms."
+    },
+    {
+      "title": "A square with both diagonals has 8 triangles",
+      "body": "The diagonals cut a square into 4 small triangles. Two small ones next to each other make a half of the square, and there are 4 such halves: 4 + 4 = 8. Learn this and use it for figures made of such squares, then look for triangles that cross from one square into the next."
+    },
+    {
+      "title": "Check that all sides are drawn",
+      "body": "A shape counts only if every one of its sides is a drawn line. Label the corners with letters and list each shape by its corners (ABC, ACD…): this stops you counting one twice, and shows the ones that use a long line running through several parts."
+    }
+  ],
+  "workedExamples": ["cf-b01", "cf-b04", "cf-b05", "cf-b11"],
+  "cheatSheet": "none"
+}

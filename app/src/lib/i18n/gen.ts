@@ -370,6 +370,11 @@ const genEn = {
     'dice-views': 'Faces seen together are never opposite',
     'dice-net': 'In a line of squares, the 1st and 3rd are opposite',
     'dice-standard': 'A standard dice: opposite faces add up to 7',
+    'count-triangles': 'Count the triangles part by part, then by size',
+    'count-squares': 'Squares by size: 1² + 2² + 3² + …',
+    'count-rectangles': 'Rectangles: (1 + 2 + …) × (1 + 2 + …)',
+    'count-parallelograms': 'Parallelograms: (1 + 2 + …) × (1 + 2 + …)',
+    'count-pentagons': 'Shapes with five sides',
   } as Record<PatternId, string>,
 }
 
@@ -711,6 +716,11 @@ const genKn: GenText = {
     'dice-views': 'ಒಟ್ಟಿಗೆ ಕಾಣುವ ಮುಖಗಳು ಎಂದಿಗೂ ಅಭಿಮುಖವಲ್ಲ',
     'dice-net': 'ಒಂದೇ ಸಾಲಿನ ಚೌಕಗಳಲ್ಲಿ 1ನೇ ಮತ್ತು 3ನೇ ಅಭಿಮುಖ',
     'dice-standard': 'ನಿರ್ದಿಷ್ಟ ದಾಳ: ಅಭಿಮುಖ ಮುಖಗಳ ಮೊತ್ತ 7',
+    'count-triangles': 'ತ್ರಿಭುಜಗಳನ್ನು ಭಾಗ ಭಾಗವಾಗಿ, ನಂತರ ಅಳತೆಯ ಪ್ರಕಾರ ಎಣಿಸಿ',
+    'count-squares': 'ಅಳತೆಯ ಪ್ರಕಾರ ವರ್ಗಗಳು: 1² + 2² + 3² + …',
+    'count-rectangles': 'ಆಯತಗಳು: (1 + 2 + …) × (1 + 2 + …)',
+    'count-parallelograms': 'ಸಮಾನಾಂತರ ಚತುರ್ಭುಜಗಳು: (1 + 2 + …) × (1 + 2 + …)',
+    'count-pentagons': 'ಐದು ಬಾಹುಗಳ ಆಕೃತಿಗಳು',
   },
 }
 

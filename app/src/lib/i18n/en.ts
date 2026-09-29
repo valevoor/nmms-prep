@@ -78,6 +78,7 @@ export const en = {
     9: 'Water Image',
     10: 'Cubes Cutting',
     11: 'Numbers in Opposite Faces',
+    12: 'Counting of Figures',
     14: 'Number Analogy',
     15: 'Number Patterns',
     16: 'Odd One Out: Letters',
@@ -280,6 +281,11 @@ export const en = {
       buttons: ['1st and 3rd', '2nd and 4th', 'The two sides'],
       label:
         'An open dice shaped like a cross: a column of four squares, 2, 1, 5 and 6 from the top, with 3 on the left of 1 and 4 on its right. First tap: 2 and 5, the 1st and 3rd squares of the column, light up; they are opposite. Second tap: 1 and 6, the 2nd and 4th, are opposite. Last tap: the side squares 3 and 4 are opposite.',
+    },
+    countFan: {
+      buttons: ['1 part', '2 parts', '3 parts', 'All 4 parts'],
+      label:
+        'A triangle with three lines from its top to the base, which cut it into 4 thin parts. First tap: the 4 triangles made of one part each. Second tap: the 3 triangles made of two parts next to each other. Third tap: the 2 made of three parts. Last tap: the whole triangle. 4 + 3 + 2 + 1 = 10 triangles.',
     },
     figWater: {
       buttons: ['Show the water image'],
