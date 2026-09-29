@@ -36,6 +36,10 @@ import foldSheetKn from './mat/fold-sheet.kn.json'
 import foldSheet from './mat/fold-sheet.json'
 import foldSheetMetaKn from './mat/fold-sheet.meta.kn.json'
 import foldSheetMeta from './mat/fold-sheet.meta.json'
+import paperPunchKn from './mat/paper-punch.kn.json'
+import paperPunch from './mat/paper-punch.json'
+import paperPunchMetaKn from './mat/paper-punch.meta.kn.json'
+import paperPunchMeta from './mat/paper-punch.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -138,4 +142,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('similar-figures', 'Similar Figures in Different Position', similar, similarMeta, similarKn, similarMetaKn),
   c('intersecting-figures', 'Intersecting Figures', intersecting, intersectingMeta, intersectingKn, intersectingMetaKn),
   c('fold-sheet', 'Figure Fold Transparent Sheet', foldSheet, foldSheetMeta, foldSheetKn, foldSheetMetaKn),
+  c('paper-punch', 'Paper Fold and Punch', paperPunch, paperPunchMeta, paperPunchKn, paperPunchMetaKn),
 ]

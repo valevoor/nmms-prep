@@ -197,6 +197,17 @@ const ART: Record<number, ReactNode> = {
       <path d="M17 33V15l-8 3.5 8 3.5" className="art-accent" style={{ fill: 'none' }} />
     </>
   ),
+  // Paper Fold and Punch: a sheet opened out along its fold; the punched hole shows on both halves
+  7: (
+    <>
+      <rect x={5} y={7} width={38} height={34} rx={2} />
+      <path d="M24 7v34" strokeDasharray="3 3" strokeLinecap="butt" />
+      <circle cx={15} cy={18} r={3.2} />
+      <circle cx={33} cy={18} r={3.2} className="art-accent" style={{ fill: 'none' }} />
+      <circle cx={15} cy={31} r={2.2} />
+      <circle cx={33} cy={31} r={2.2} className="art-accent" style={{ fill: 'none' }} />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

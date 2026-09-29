@@ -25,6 +25,8 @@ import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
 import foldSheet from './mat/fold-sheet.json'
 import foldSheetMeta from './mat/fold-sheet.meta.json'
+import paperPunch from './mat/paper-punch.json'
+import paperPunchMeta from './mat/paper-punch.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -64,6 +66,7 @@ import { generateSequence } from '../lib/generators/sequence'
 import { generateSigns } from '../lib/generators/signs'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
+import { generatePaperPunch } from '../lib/generators/paperPunch'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -73,7 +76,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -290,6 +293,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'folded',
     generate: generateFoldSheet,
   },
+  {
+    id: 'paper-punch',
+    chapter: 7,
+    name: 'Paper Fold and Punch',
+    questions: visible(paperPunch.questions as Question[]),
+    meta: paperPunchMeta as TopicMeta,
+    missing: 'punched',
+    generate: generatePaperPunch,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -313,6 +325,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     hidden: t.common.findHidden,
     turned: t.common.findTurned,
     folded: t.common.findFolded,
+    punched: t.common.findPunched,
   }
   return labels[topic.missing ?? 'number']
 }

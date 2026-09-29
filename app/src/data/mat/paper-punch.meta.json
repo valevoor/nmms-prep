@@ -1,0 +1,26 @@
+{
+  "topic": "paper-punch",
+  "intro": "The figures on the left show a piece of paper being folded and then cut or punched; the parts cut away are shaded black. Four answer figures follow. Find the one that shows how the paper looks when it is opened out again.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Every fold doubles the holes",
+      "body": "The cut goes through every layer of the folded paper. Folded once, the paper has 2 layers, so each hole becomes 2. Folded twice, it has 4 layers, so each hole becomes 4.",
+      "visual": "figPunch",
+      "caption": "Opened out, the hole shows on both halves, the same distance from the fold."
+    },
+    {
+      "title": "Open the folds one at a time",
+      "body": "Undo the last fold first. Each fold mirrors every hole in its fold line, onto the other side at the same distance. Then undo the fold before it, mirroring all the holes again."
+    },
+    {
+      "title": "Cuts on a fold or an edge",
+      "body": "A cut on a fold opens into one shape that spans the fold: half a diamond becomes a whole diamond, half a petal a whole petal. A cut at the corner where two folds meet becomes one shape in the middle of the sheet. A cut on the outer edge becomes a notch in that edge."
+    },
+    {
+      "title": "Check the count, then the places",
+      "body": "Count the holes first: holes × layers. Then check they are mirrored, not just slid across, and that no hole sits on a line the paper was never folded along."
+    }
+  ],
+  "workedExamples": ["punch-b11", "punch-b05", "punch-b10"]
+}

@@ -142,6 +142,8 @@ export type PatternId =
   | 'venn-part'
   // Figure fold transparent sheet (Chapter 6)
   | 'fold-sheet'
+  // Paper fold and punch (Chapter 7)
+  | 'paper-punch'
 
 export interface Question {
   id: string

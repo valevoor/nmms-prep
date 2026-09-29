@@ -1,0 +1,535 @@
+{
+ "topic": "paper-punch",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 7 (questions: PDF pages 28-29, answers: PDF page 118)",
+ "questions": [
+  {
+   "id": "punch-b01",
+   "bookNo": 1,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q01-t1.png",
+     "figures/ch07/q01-t2.png",
+     "figures/ch07/q01-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q01-oA.png",
+     "B": "figures/ch07/q01-oB.png",
+     "C": "figures/ch07/q01-oC.png",
+     "D": "figures/ch07/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: folded into a quarter, so each cut triangle opens into four, mirrored in both fold lines.",
+   "working": "The sheet is folded right to left, then top to bottom, so the small square left is the bottom-left quarter, with the centre of the sheet at its top-right corner. One triangle is cut near that corner and points towards it; the other is cut near the outer corner and points into it. Unfolding mirrors them in both folds: four triangles round the centre, each pointing to the centre, and one in each corner, pointing into the corner. In A the corner triangles point the wrong way; in C the middle ones point away from the centre; D has the triangles on the middle lines. That is B."
+  },
+  {
+   "id": "punch-b02",
+   "bookNo": 2,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q02-t1.png",
+     "figures/ch07/q02-t2.png",
+     "figures/ch07/q02-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q02-oA.png",
+     "B": "figures/ch07/q02-oB.png",
+     "C": "figures/ch07/q02-oC.png",
+     "D": "figures/ch07/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the holes are mirrored in the slanting fold, so they lie along the diagonal from top-left to bottom-right.",
+   "working": "First the top-left and bottom-right corners are folded in. Then the sheet is folded along the diagonal from top-left to bottom-right, and three holes are punched along that fold. Unfolding the diagonal fold mirrors each hole across the diagonal, so the holes lie in a band along it, in pairs. The holes near the two ends also go through the folded-in corners, so they make extra holes there. C has pairs along the right diagonal, with the extra holes; D has only six; B runs along the other diagonal; A is scattered.",
+   "note": "Hidden: the key's C (ten holes) needs the two end holes to pass through the folded-in corners as well. In the scan they sit right on the edge of those corners, so it can't be settled whether they do; if not, D (six holes) is right.",
+   "status": "needs-review"
+  },
+  {
+   "id": "punch-b03",
+   "bookNo": 3,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q03-t1.png",
+     "figures/ch07/q03-t2.png",
+     "figures/ch07/q03-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q03-oA.png",
+     "B": "figures/ch07/q03-oB.png",
+     "C": "figures/ch07/q03-oC.png",
+     "D": "figures/ch07/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: folded in half twice and then across the corner, so the two holes open into four groups of four.",
+   "working": "The bottom half is folded up, then the right half onto the left, leaving the top-left quarter. Its outer corner is then folded along a slant, and two holes are punched in that corner. The slanting fold doubles the two holes into a group of four, and the two half-folds copy that group into every quarter: four groups of four holes, one near each corner. That is A. B and D show lines that are only folds, and C has too few holes."
+  },
+  {
+   "id": "punch-b04",
+   "bookNo": 4,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q04-t1.png",
+     "figures/ch07/q04-t2.png",
+     "figures/ch07/q04-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q04-oA.png",
+     "B": "figures/ch07/q04-oB.png",
+     "C": "figures/ch07/q04-oC.png",
+     "D": "figures/ch07/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: holes under a folded flap open into two, one on the flap; the ones in the middle stay single.",
+   "working": "The six-sided sheet has its bottom point folded up and its top point folded down, leaving a rectangle. Four holes are punched: one near the top, two side by side in the middle and one near the bottom. The top hole also goes through the top flap, so on unfolding it makes a second hole in the top point. The bottom hole likewise makes a second hole in the bottom point. The two middle holes are clear of both flaps and stay single. So there are six holes: four in a line down the middle and one on each side. That is C."
+  },
+  {
+   "id": "punch-b05",
+   "bookNo": 5,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q05-t1.png",
+     "figures/ch07/q05-t2.png",
+     "figures/ch07/q05-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q05-oA.png",
+     "B": "figures/ch07/q05-oB.png",
+     "C": "figures/ch07/q05-oC.png",
+     "D": "figures/ch07/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the cuts are at fold corners, so each opens into a notch in the middle of an edge.",
+   "working": "The bottom half is folded up and the left half onto the right, leaving the top-right quarter. Its top-left corner is the middle of the top edge, and its bottom-right corner is the middle of the right edge. A triangle is cut off at each of these corners (the black parts). Unfolding opens the first into a notch in the middle of the top edge and, through the other fold, the bottom edge; the second into notches in the middle of the right and left edges. Four notches, one in the middle of each side: that is B."
+  },
+  {
+   "id": "punch-b06",
+   "bookNo": 6,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q06-t1.png",
+     "figures/ch07/q06-t2.png",
+     "figures/ch07/q06-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q06-oA.png",
+     "B": "figures/ch07/q06-oB.png",
+     "C": "figures/ch07/q06-oC.png",
+     "D": "figures/ch07/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: cuts on the outer edge give zigzags on both sides; cuts on the middle fold open into diamonds.",
+   "working": "The right half is folded onto the left and the bottom half up, leaving the top-left quarter. Triangles are cut from its left edge (the edge of the sheet) and from its right edge (the middle fold). Unfolding the bottom fold doubles each column top to bottom. Unfolding the middle fold copies the left-edge zigzag to the right edge, and opens each triangle on the fold into a diamond. So: zigzags on both sides and a column of diamonds down the middle. That is B."
+  },
+  {
+   "id": "punch-b07",
+   "bookNo": 7,
+   "sourcePage": 28,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q07-t1.png",
+     "figures/ch07/q07-t2.png",
+     "figures/ch07/q07-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q07-oA.png",
+     "B": "figures/ch07/q07-oB.png",
+     "C": "figures/ch07/q07-oC.png",
+     "D": "figures/ch07/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: folded in three, so each cut at the top and bottom edge makes three notches.",
+   "working": "The left part is folded over to the right, then the right part over to the left, so the sheet is folded in three, like a letter. Triangles are cut from the top and bottom edges. Each cut goes through all three layers, so on unfolding there are three notches along the top edge and three along the bottom. That is B. The folds are all upright, so no notch can appear on the sides as in D.",
+   "note": "The book draws the two black cuts on the folded-back part of the sheet and outlines the same cuts on the strip; either way the sheet is folded in three."
+  },
+  {
+   "id": "punch-b08",
+   "bookNo": 8,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q08-t1.png",
+     "figures/ch07/q08-t2.png",
+     "figures/ch07/q08-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q08-oA.png",
+     "B": "figures/ch07/q08-oB.png",
+     "C": "figures/ch07/q08-oC.png",
+     "D": "figures/ch07/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: folded in three and then in half top to bottom, so one cut makes three notches on the top and three on the bottom.",
+   "working": "The sheet is folded in three with upright folds, then the strip is folded bottom up, so the bottom edge lies on the top edge. A triangle is cut at the top edge, through all six layers. Unfolding gives a notch in each of the three parts, on the top edge and on the bottom edge: three big notches above and three below, as in C."
+  },
+  {
+   "id": "punch-b09",
+   "bookNo": 9,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q09-t1.png",
+     "figures/ch07/q09-t2.png",
+     "figures/ch07/q09-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q09-oA.png",
+     "B": "figures/ch07/q09-oB.png",
+     "C": "figures/ch07/q09-oC.png",
+     "D": "figures/ch07/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: folded in three across and in half down the middle: three rows, each with a notch on both sides and two holes.",
+   "working": "The bottom strip is folded up and the top strip down, so the sheet is folded in three across. It is then folded in half, right onto left. A square is cut from the left edge and a round hole punched near the middle fold. Each of the three layers gets them, so there are three rows. Unfolding the middle fold copies the square notch to the right edge and the hole to the other side of the middle. Each row: a notch at each side and two holes. That is D."
+  },
+  {
+   "id": "punch-b10",
+   "bookNo": 10,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q10-t1.png",
+     "figures/ch07/q10-t2.png",
+     "figures/ch07/q10-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q10-oA.png",
+     "B": "figures/ch07/q10-oB.png",
+     "C": "figures/ch07/q10-oC.png",
+     "D": "figures/ch07/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the cut outer corner makes all four corners slanted, the step at the centre opens into a square, and the hole makes four.",
+   "working": "The bottom half is folded up and the right half onto the left, leaving the top-left quarter; its bottom-right corner is the centre of the sheet. Its outer corner is cut off along a slant, a small square is cut from the centre corner, and one hole is punched near the outer corner. Unfolding: all four corners are cut (an eight-sided shape), the four small squares at the centre join into one square hole, and there is a hole near each corner. That is A."
+  },
+  {
+   "id": "punch-b11",
+   "bookNo": 11,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q11-t1.png",
+     "figures/ch07/q11-t2.png",
+     "figures/ch07/q11-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q11-oA.png",
+     "B": "figures/ch07/q11-oB.png",
+     "C": "figures/ch07/q11-oC.png",
+     "D": "figures/ch07/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: two holes in a quarter make eight: two columns of four, close to the middle line.",
+   "working": "The round sheet is folded right onto left and then bottom up, leaving the top-left quarter. Two holes are punched one above the other, close to the upright fold. Unfolding the bottom fold gives four holes in a column; unfolding the upright fold copies the column to the other side of the middle line. Eight holes in two columns of four: that is B. C has only three rows."
+  },
+  {
+   "id": "punch-b12",
+   "bookNo": 12,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q12-t1.png",
+     "figures/ch07/q12-t2.png",
+     "figures/ch07/q12-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q12-oA.png",
+     "B": "figures/ch07/q12-oB.png",
+     "C": "figures/ch07/q12-oC.png",
+     "D": "figures/ch07/q12-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: one hole in a quarter makes four, one in each quarter, mirrored in both middle lines.",
+   "working": "The round sheet is folded right onto left and then top down, leaving the bottom-left quarter. One square hole is cut in it. Unfolding the two folds mirrors it into every quarter: four holes, placed alike round the centre. That is C. A and B have only two holes and D has five.",
+   "note": "The book draws the hole as a square standing on its corner, but every option draws the holes upright; C is the only one with four holes, one in each quarter."
+  },
+  {
+   "id": "punch-b13",
+   "bookNo": 13,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q13-t1.png",
+     "figures/ch07/q13-t2.png",
+     "figures/ch07/q13-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q13-oA.png",
+     "B": "figures/ch07/q13-oB.png",
+     "C": "figures/ch07/q13-oC.png",
+     "D": "figures/ch07/q13-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the cut at the centre corner opens into one square in the middle; the cut on the fold at the edge opens into a notch on each side.",
+   "working": "The round sheet is folded right onto left and then top down, leaving the bottom-left quarter; its top-right corner is the centre of the circle. A black square is cut at that corner, and a small square is cut on the top edge (the across fold) at the rim. Unfolding: the four corner cuts join into one square in the middle, and the rim cut opens on the across fold into a notch at the left and, through the upright fold, at the right. That is D. B also has notches at the top and bottom, which would need a cut on the upright fold."
+  },
+  {
+   "id": "punch-b14",
+   "bookNo": 14,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q14-t1.png",
+     "figures/ch07/q14-t2.png",
+     "figures/ch07/q14-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q14-oA.png",
+     "B": "figures/ch07/q14-oB.png",
+     "C": "figures/ch07/q14-oC.png",
+     "D": "figures/ch07/q14-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: half petals on the two folds open into four whole petals; the slanting petal is copied into four more.",
+   "working": "The round sheet is folded right onto left and then bottom up, leaving the top-left quarter; its bottom-right corner is the centre. Three petals are cut from that corner: one along the across fold, one along the upright fold and one on a slant between them. A petal cut along a fold opens into a whole petal, so the two folds give four petals, up, down, left and right. The slanting petal is mirrored into all four quarters. Eight petals in all: that is D."
+  },
+  {
+   "id": "punch-b15",
+   "bookNo": 15,
+   "sourcePage": 29,
+   "keyFrom": "book",
+   "pattern": "paper-punch",
+   "layout": "series",
+   "terms": [
+    "1",
+    "2",
+    "3"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch07/q15-t1.png",
+     "figures/ch07/q15-t2.png",
+     "figures/ch07/q15-t3.png"
+    ],
+    "options": {
+     "A": "figures/ch07/q15-oA.png",
+     "B": "figures/ch07/q15-oB.png",
+     "C": "figures/ch07/q15-oC.png",
+     "D": "figures/ch07/q15-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the slanting petal makes an X of four petals; each square near a fold makes a pair, on all four sides.",
+   "working": "The round sheet is folded right onto left and then top down, leaving the bottom-left quarter; its top-right corner is the centre. A petal is cut on a slant from the centre, one square near the across fold and one near the upright fold. Unfolding: the petal makes four slanting petals, an X. The square near the across fold makes a pair at the left (one above and one below the middle line) and a pair at the right. The square near the upright fold makes a pair at the bottom and a pair at the top. That is A. B has upright petals, C single squares and D no squares at the top and bottom."
+  }
+ ]
+}

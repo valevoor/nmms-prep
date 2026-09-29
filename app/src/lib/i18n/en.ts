@@ -28,6 +28,7 @@ export const en = {
     findHidden: 'Which figure hides it?',
     findTurned: 'Which one is the same figure, turned?',
     findFolded: 'Which one is the sheet folded along the dotted line?',
+    findPunched: 'How does the paper look when opened out?',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -70,6 +71,7 @@ export const en = {
     4: 'Similar Figures in Different Position',
     5: 'Intersecting Figures',
     6: 'Figure Fold Transparent Sheet',
+    7: 'Paper Fold and Punch',
     8: 'Mirror Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
@@ -263,6 +265,10 @@ export const en = {
     figFold: {
       buttons: ['Fold it'],
       label: 'A square sheet with a dotted line down the middle, a triangle on the left half and a flag on the right half. The tap folds the right half over: the flag lands on the left half, as far from the fold as before, facing the other way.',
+    },
+    figPunch: {
+      buttons: ['Open it out'],
+      label: 'A square sheet folded in half, right onto left, with one hole punched in the folded half. The tap opens it out: a second hole appears on the right half, as far from the fold as the first.',
     },
     figHidden: {
       buttons: ['Show where it hides'],
