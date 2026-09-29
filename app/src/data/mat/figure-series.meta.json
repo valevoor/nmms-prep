@@ -1,0 +1,36 @@
+{
+  "topic": "figure-series",
+  "intro": "In a figure series, each figure changes from the one before by the same rule. Find the rule, then work out the next figure before you look at the options.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Watch one thing at a time",
+      "body": "Follow one feature along the whole row: the number of sides, the number of dots or lines, where the shading is, which way an arrow points. Then check the next feature."
+    },
+    {
+      "title": "Count sides and lines",
+      "body": "Many series add one each time: triangle, square, pentagon, hexagon. Some add to one part and take away from another.",
+      "visual": "figGrow",
+      "caption": "3, 4, 5 sides, so the next shape has 6."
+    },
+    {
+      "title": "Shading and marks move round",
+      "body": "When a shaded part or a small mark moves, count how many parts or corners it moves each time, and which way.",
+      "visual": "figShade",
+      "caption": "The shading moves the same number of parts each time."
+    },
+    {
+      "title": "Two rules can take turns",
+      "body": "Sometimes figures 1, 3, 5 follow one pattern and figures 2, 4 another: black and white in turn, lying down and standing up in turn, or a count that grows every second figure."
+    },
+    {
+      "title": "Work out the answer, then find it",
+      "body": "Picture the next figure first, then look for it among the options. Wrong options are often the last figure again, or the right figure turned the wrong way."
+    }
+  ],
+  "workedExamples": [
+    "figs-b06",
+    "figs-b09",
+    "figs-b13"
+  ]
+}

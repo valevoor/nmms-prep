@@ -10,6 +10,8 @@ import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
 import figAnalogy from './mat/analogy-of-figures.json'
 import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
+import figSeries from './mat/figure-series.json'
+import figSeriesMeta from './mat/figure-series.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
@@ -33,7 +35,7 @@ import wrongNumberMeta from './mat/wrong-number.meta.json'
 import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
-import { generateFigureAnalogy, generateFigureRuleQuestion } from '../lib/generators/figures'
+import { generateFigureAnalogy, generateFigureRuleQuestion, generateFigureSeries } from '../lib/generators/figures'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateNumberPatterns } from '../lib/generators/numberPatterns'
@@ -197,6 +199,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     guessRule: {
       make: () => generateFigureRuleQuestion(),
     },
+  },
+  {
+    id: 'figure-series',
+    chapter: 2,
+    name: 'Figure Series',
+    questions: visible(figSeries.questions as Question[]),
+    meta: figSeriesMeta as TopicMeta,
+    missing: 'figure',
+    generate: generateFigureSeries,
   },
   {
     id: 'number-patterns',

@@ -153,7 +153,7 @@ const SLOTS: [number, number][] = [
 
 function smallItem(rng: Rng, [x, y]: [number, number], want?: FigItem['shape']): FigItem {
   const shape = want ?? pick(rng, ['poly', 'poly', 'circle', 'arrow', 'arrow', 'flag', 'ell', 'plus', 'dots'] as const)
-  const it: FigItem = { shape, x, y, size: shape === 'dots' ? 26 : 22, rot: 90 * int(rng, 0, 3) }
+  const it: FigItem = { shape, x, y, size: shape === 'dots' ? 26 : shape === 'dot' ? 10 : 22, rot: 90 * int(rng, 0, 3) }
   if (shape === 'poly') it.n = int(rng, 3, 5)
   if (shape === 'dots') it.n = int(rng, 1, 3)
   if (fillable(it)) it.fill = pick(rng, ['none', 'solid'] as const)
@@ -265,6 +265,108 @@ export function generateFigureRuleQuestion(rng: Rng = Math.random): Question {
       pattern: r.pattern,
       generated: true,
       kn: { rule: text.kn, working: working.kn, options: names('kn') },
+    }
+  }
+}
+
+// ---------- Chapter 2: series rules ----------
+
+export type SeriesRuleId = 'turn90' | 'turnm90' | 'shade' | 'dots' | 'sides' | 'corner' | 'turnfill'
+
+interface SeriesRule {
+  id: SeriesRuleId
+  pattern: PatternId
+  /** The next figure in the series, or undefined if the rule can't go on from this one. */
+  step: (d: Drawing) => Drawing | undefined
+}
+
+const toggleFill = (d: Drawing) => map(d, (it) => (fillable(it) ? { ...it, fill: it.fill === 'solid' ? 'none' : 'solid' } : it))
+const isCorner = (it: FigItem) => Math.abs(it.x - 50) === 20 && Math.abs(it.y - 50) === 20
+
+export const SERIES_RULES: SeriesRule[] = [
+  { id: 'turn90', pattern: 'fig-rotate', step: changed((d) => turn(d, 90)) },
+  { id: 'turnm90', pattern: 'fig-rotate', step: changed((d) => turn(d, 270)) },
+  { id: 'shade', pattern: 'fig-move', step: changed((d) => (parts(d) && d.shaded?.length ? { ...d, shaded: d.shaded.map((i) => (i + 1) % parts(d)) } : undefined)) },
+  { id: 'dots', pattern: 'fig-count', step: changed((d) => (d.items.some((it) => it.shape === 'dots') ? map(d, (it) => (it.shape !== 'dots' ? it : (it.n ?? 1) >= 6 ? undefined : { ...it, n: (it.n ?? 1) + 1 })) : undefined)) },
+  { id: 'sides', pattern: 'fig-sides', step: changed((d) => (d.items.some((it) => it.shape === 'poly') ? map(d, (it) => (it.shape !== 'poly' ? it : (it.n ?? 3) >= 7 ? undefined : { ...it, n: (it.n ?? 3) + 1 })) : undefined)) },
+  {
+    id: 'corner',
+    pattern: 'fig-move',
+    // The first shape hops to the next corner clockwise; everything else stays put.
+    step: changed((d) => (d.items[0] && isCorner(d.items[0]) ? { ...d, items: [{ ...d.items[0], x: 100 - d.items[0].y, y: d.items[0].x }, ...d.items.slice(1)] } : undefined)),
+  },
+  { id: 'turnfill', pattern: 'fig-other', step: changed((d) => (d.items.some(fillable) ? toggleFill(turn(d, 90)) : undefined)) },
+]
+
+function seriesStart(rng: Rng, id: SeriesRuleId): Drawing {
+  switch (id) {
+    case 'shade': {
+      const frame = pick(rng, ['quad', 'oct'] as const)
+      const p = frame === 'quad' ? 4 : 8
+      const first = int(rng, 0, p - 1)
+      return { frame, shaded: frame === 'quad' ? [first] : [first, (first + pick(rng, [2, 3, 4])) % p], items: [] }
+    }
+    case 'dots':
+      return { frame: pick(rng, ['square', 'circle'] as const), items: [{ shape: 'dots', n: 1, x: 50, y: 50, size: 30 }] }
+    case 'sides':
+      return { items: [{ shape: 'poly', n: 3, x: 50, y: 52, size: 72, rot: 0, fill: 'none' }, ...(rng() < 0.5 ? [{ shape: 'dot' as const, x: 50, y: 55, size: 8 }] : [])] }
+    case 'corner': {
+      const [x, y] = pick(rng, SLOTS.slice(0, 4))
+      return { frame: 'square', items: [smallItem(rng, [x, y], pick(rng, ['dot', 'circle', 'poly'] as const)), { ...smallItem(rng, [50, 50], pick(rng, ['poly', 'circle', 'plus'] as const)), size: 28 }] }
+    }
+    case 'turnfill': {
+      const d = makeDrawing(rng, 'rot90')
+      return d.items.some(fillable) ? d : { ...d, items: [...d.items.slice(0, -1), smallItem(rng, [d.items.at(-1)!.x, d.items.at(-1)!.y], 'flag')] }
+    }
+    default:
+      return makeDrawing(rng, 'rot90')
+  }
+}
+
+const seriesText = (id: SeriesRuleId) => both((m) => m.figSeriesRule(id))
+
+/** A figure series (3 or 4 figures, then ?) that one rule makes; the options are drawings. */
+export function generateFigureSeries(rng: Rng = Math.random): Question {
+  for (;;) {
+    const r = pick(rng, SERIES_RULES)
+    const shown = r.id === 'sides' ? 3 : 4
+    const figs: Drawing[] = [seriesStart(rng, r.id)]
+    for (let i = 0; i < shown && figs.length === i + 1; i++) {
+      const next = r.step(figs[i])
+      if (next) figs.push(next)
+    }
+    if (figs.length !== shown + 1) continue
+    const answer = figs[shown]
+    const last = figs[shown - 1]
+    // Every rule that makes the shown figures must give the same next one.
+    const fits = SERIES_RULES.filter((x) => figs.slice(1, shown).every((f, i) => {
+      const y = x.step(figs[i])
+      return !!y && same(y, f)
+    }))
+    if (fits.some((x) => !x.step(last) || !same(x.step(last)!, answer))) continue
+    const wrong: Drawing[] = []
+    const add = (w?: Drawing) => {
+      if (w && !same(w, answer) && !wrong.some((o) => same(o, w))) wrong.push(w)
+    }
+    const near = [last, r.step(answer), mirror(answer), turn(answer, 180), toggleFill(answer), turn(last, r.id === 'turnm90' ? 90 : 270)]
+    shuffle(rng, near).forEach((w) => wrong.length < 2 && add(w))
+    shuffle(rng, [...near, ...SERIES_RULES.map((x) => x.step(last))]).forEach((w) => add(w))
+    if (wrong.length < 3) continue
+    const order = shuffle(rng, [answer, ...wrong.slice(0, 3)]).map(clean)
+    const text = seriesText(r.id)
+    const working = both((m, l) => m.figSeriesWork(text[l], shown))
+    return {
+      id: `gen-figs-${r.id}-${(counter++).toString(36)}-${int(rng, 0, 1e9).toString(36)}`,
+      layout: 'series',
+      terms: [...figs.slice(0, shown).map((_, i) => String(i + 1)), '?'],
+      figures: { terms: [...figs.slice(0, shown).map(clean), '?'], options: Object.fromEntries(OPTION_KEYS.map((k, j) => [k, order[j]])) as Record<OptionKey, Drawing> },
+      options: { A: 'A', B: 'B', C: 'C', D: 'D' },
+      answer: OPTION_KEYS[order.findIndex((o) => same(o, answer))],
+      rule: text.en,
+      working: working.en,
+      pattern: r.pattern,
+      generated: true,
+      kn: { rule: text.kn, working: working.kn },
     }
   }
 }

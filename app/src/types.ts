@@ -113,6 +113,7 @@ export type PatternId =
   | 'fig-fill'
   | 'fig-swap'
   | 'fig-count'
+  | 'fig-move'
   | 'fig-other'
   | 'grid-flip'
 

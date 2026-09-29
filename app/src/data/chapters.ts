@@ -7,6 +7,10 @@ import figAnalogyKn from './mat/analogy-of-figures.kn.json'
 import figAnalogy from './mat/analogy-of-figures.json'
 import figAnalogyMetaKn from './mat/analogy-of-figures.meta.kn.json'
 import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
+import figSeriesKn from './mat/figure-series.kn.json'
+import figSeries from './mat/figure-series.json'
+import figSeriesMetaKn from './mat/figure-series.meta.kn.json'
+import figSeriesMeta from './mat/figure-series.meta.json'
 import bloodKn from './mat/blood-relations.kn.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
@@ -102,5 +106,6 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('letter-number-analogy', 'Letter–Number Analogy', letterNumber, letterNumberMeta, letterNumberKn, letterNumberMetaKn),
   c('number-patterns', 'Number Patterns', numberPatterns, numberPatternsMeta, numberPatternsKn, numberPatternsMetaKn),
   c('analogy-of-figures', 'Analogy of Figures', figAnalogy, figAnalogyMeta, figAnalogyKn, figAnalogyMetaKn),
+  c('figure-series', 'Figure Series', figSeries, figSeriesMeta, figSeriesKn, figSeriesMetaKn),
   c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
 ]

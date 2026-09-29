@@ -21,6 +21,12 @@ struct Band: Decodable {
   let split: Bool?
   /// The "(A)" labels sit right under the figures: drop a short last run of ink rows from each figure.
   let labelsBelow: Bool?
+  /// Each figure has its own frame and a label ("(C)") may touch it: keep just the frame and what is inside.
+  let boxed: Bool?
+  /// The "(C)" labels sit just left of unframed figures: drop a small run of ink at the left of each figure.
+  let labelsLeft: Bool?
+  /// Given rects: shave this many points off each side (to drop borders shared with the next box).
+  let inset: Double?
 }
 struct Spec: Decodable {
   let dir: String
@@ -83,7 +89,8 @@ var crops: [[CGImage]] = []
 for b in spec.bands {
   var rects: [CGRect] = []
   if let given = b.rects {
-    rects = given.map { CGRect(x: $0[0], y: $0[1], width: $0[2] - $0[0], height: $0[3] - $0[1]) }
+    let i = b.inset ?? 0
+    rects = given.map { CGRect(x: $0[0] + i, y: $0[1] + i, width: $0[2] - $0[0] - 2 * i, height: $0[3] - $0[1] - 2 * i) }
   } else {
     let bb = b.band!
     let band = CGRect(x: bb[0], y: bb[1], width: bb[2] - bb[0], height: bb[3] - bb[1])
@@ -119,6 +126,31 @@ for b in spec.bands {
         if let gapEnd = rowInk.lastIndex(of: false), CGFloat(y1 - (y0 + gapEnd)) < 12 * scale {
           let top = rowInk[..<gapEnd].lastIndex(of: true)!
           (x0, y0, x1, y1) = inkBox(Array(px[0..<((y0 + top + 1) * w)]), w, y0 + top + 1, g.0, g.1)!
+        }
+      }
+      if b.labelsLeft == true {
+        // Column runs inside the figure; small, short runs at the left are the label's characters.
+        let start = x0
+        for _ in 0..<4 {
+          let colInk = (x0...x1).map { x in (y0...y1).contains { px[$0 * w + x] < 170 } }
+          guard let gap = colInk.firstIndex(of: false), let next = colInk[gap...].firstIndex(of: true), CGFloat(x0 + gap - start) < 18 * scale else { break }
+          let rowsOfLabel = (y0...y1).filter { y in (x0..<(x0 + gap)).contains { px[y * w + $0] < 170 } }
+          if CGFloat(rowsOfLabel.count) >= 14 * scale { break }
+          (x0, y0, x1, y1) = inkBox(px, w, h, x0 + next, x1 + 1)!
+        }
+      }
+      if b.boxed == true {
+        // The frame's sides are the columns (and rows) with a long unbroken run of ink.
+        func run(_ n: Int, _ at: (Int) -> Bool) -> Int {
+          var best = 0, cur = 0
+          for k in 0..<n { cur = at(k) ? cur + 1 : 0; best = max(best, cur) }
+          return best
+        }
+        let hh = y1 - y0 + 1, ww = x1 - x0 + 1
+        let cols = (x0...x1).filter { x in run(hh) { px[(y0 + $0) * w + x] < 170 } > hh * 6 / 10 }
+        let rows = (y0...y1).filter { y in run(ww) { px[y * w + x0 + $0] < 170 } > ww * 5 / 10 }
+        if let l = cols.first, let r = cols.last, let t = rows.first, let bt = rows.last, r > l, bt > t {
+          (x0, y0, x1, y1) = (l, t, r, bt)
         }
       }
       rects.append(

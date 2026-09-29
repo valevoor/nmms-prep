@@ -14,6 +14,18 @@ function Tile({ x, y, w = 14, label, accent }: { x: number; y: number; w?: numbe
 
 /** Drawings keyed by the study material's chapter number. */
 const ART: Record<number, ReactNode> = {
+  // Figure Series: a shape gains a side each time
+  2: (
+    <>
+      <path d="M3 17l5-9 5 9z" />
+      <rect x={17} y={8} width={9} height={9} rx={1} />
+      <path d="M35 7l5 3.6-1.9 5.9h-6.2L30 10.6z" />
+      <rect x={14} y={27} width={20} height={16} rx={3.5} className="art-tile-accent" />
+      <text x={24} y={39.5} textAnchor="middle" className="art-text art-fill-accent">
+        ?
+      </text>
+    </>
+  ),
   // Analogy of Figures: a triangle turns over, so the square turns over too
   1: (
     <>

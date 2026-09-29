@@ -245,6 +245,10 @@ export const en = {
       buttons: ['Move 2 parts', 'Move 2 more', 'Move 2 more', 'Move 2 more'],
       label: 'A circle cut into 8 parts with 2 shaded parts. With each tap both shaded parts move 2 parts clockwise.',
     },
+    figGrow: {
+      buttons: ['Show the next shape'],
+      label: 'A triangle, a square and a pentagon, then a blank. The next shape has one more side: a hexagon.',
+    },
     check: {
       buttons: ['Try 7', 'Try 8'],
       label: '1, 2, 4, ?, 16, 32. Trying 7 fits the first gaps but breaks the next one. 8 fits every gap: ×2.',

@@ -4,7 +4,7 @@ import { generateBloodRelation } from '../generators/bloodRelations'
 import { generateCalendar } from '../generators/calendar'
 import { generateClock } from '../generators/clock'
 import { generateCoding } from '../generators/coding'
-import { generateFigureAnalogy, generateFigureRuleQuestion } from '../generators/figures'
+import { generateFigureAnalogy, generateFigureRuleQuestion, generateFigureSeries } from '../generators/figures'
 import { generateLetterNumber } from '../generators/letterNumber'
 import { generateNumberPatterns } from '../generators/numberPatterns'
 import { generateDirections } from '../generators/directions'
@@ -67,6 +67,11 @@ describe('generated questions carry Kannada', () => {
   it('analogy of figures', () => {
     const rng = mulberry32(1)
     for (let n = 0; n < 1000; n++) expectKannada(generateFigureAnalogy(rng))
+  })
+
+  it('figure series', () => {
+    const rng = mulberry32(2)
+    for (let n = 0; n < 1000; n++) expectKannada(generateFigureSeries(rng))
   })
 
   it('number patterns', () => {

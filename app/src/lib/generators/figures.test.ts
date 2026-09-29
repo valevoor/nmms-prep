@@ -5,7 +5,7 @@ import { DrawingView } from '../../components/Drawing'
 import { GEN } from '../i18n/gen'
 import type { Drawing, FigItem } from '../../types'
 import { OPTION_KEYS } from '../../types'
-import { generateFigureAnalogy, generateFigureRuleQuestion } from './figures'
+import { generateFigureAnalogy, generateFigureRuleQuestion, generateFigureSeries } from './figures'
 import { mulberry32 } from './numberSeries'
 
 // Independent of figures.ts: a drawing is compared by where its ink actually goes (the corner
@@ -43,7 +43,7 @@ function ink(d: Drawing): string {
     const filled = it.shape === 'dot' || it.shape === 'dots' || it.fill === 'solid'
     return `${it.shape === 'dot' ? 'circle' : it.shape}${filled ? '#' : ''}[${pts.sort().join(' ')}]`
   })
-  return [d.frame ?? '-', ...items.sort()].join(' | ')
+  return [d.frame ?? '-', [...(d.shaded ?? [])].sort().join('.'), ...items.sort()].join(' | ')
 }
 
 // The rules, written again from the chapter: turns and mirror act on the points themselves.
@@ -99,5 +99,48 @@ describe('generateFigureRuleQuestion', () => {
       expect(fitting).toEqual([q.answer])
       expect(new Set(Object.values(q.kn!.options!)).size).toBe(4)
     }
+  })
+})
+
+// Series steps, written again: turns act on the points (and the shaded parts), the rest on counts.
+const partsOf = (d: Drawing) => ({ quad: 4, oct: 8 })[d.frame as 'quad' | 'oct'] ?? 0
+const turnAll = (d: Drawing, q: number): Drawing => ({ ...turnPts(d, 90 * q), shaded: d.shaded?.map((i) => (i + (q * partsOf(d)) / 4 + partsOf(d)) % partsOf(d)) })
+const STEPS: Record<string, (d: Drawing) => Drawing | undefined> = {
+  turn90: (d) => turnAll(d, 1),
+  turnm90: (d) => turnAll(d, -1),
+  shade: (d) => (d.shaded?.length ? { ...d, shaded: d.shaded.map((i) => (i + 1) % partsOf(d)) } : undefined),
+  dots: RULES.count,
+  sides: RULES.sides,
+  corner: (d) => (d.items.length ? { ...d, items: [{ ...d.items[0], x: 100 - d.items[0].y, y: d.items[0].x }, ...d.items.slice(1)] } : undefined),
+  turnfill: (d) => RULES.fill(turnAll(d, 1)),
+}
+const next = (id: string, d: Drawing) => {
+  const out = STEPS[id](d)
+  return out ? ink(out) : ''
+}
+
+describe('generateFigureSeries', () => {
+  it('each figure follows from the one before by the stated rule, and only the answer comes next', () => {
+    const rng = mulberry32(3)
+    const seen = new Set<string>()
+    for (let n = 0; n < 3000; n++) {
+      const q = generateFigureSeries(rng)
+      const id = q.id.split('-')[2]
+      seen.add(id)
+      const figs = q.figures!.terms.slice(0, -1) as Drawing[]
+      expect(q.figures!.terms.at(-1)).toBe('?')
+      const opts = OPTION_KEYS.map((k) => ink(q.figures!.options![k] as Drawing))
+      expect(new Set(opts).size, 'four different-looking options').toBe(4)
+      const answer = opts[OPTION_KEYS.indexOf(q.answer)]
+      for (let i = 1; i < figs.length; i++) expect(next(id, figs[i - 1])).toBe(ink(figs[i]))
+      expect(next(id, figs.at(-1)!)).toBe(answer)
+      // Any other rule that makes the same figures must also point at the answer.
+      for (const other of Object.keys(STEPS)) {
+        const fits = figs.slice(1).every((f, i) => next(other, figs[i]) === ink(f))
+        if (fits) expect(next(other, figs.at(-1)!)).toBe(answer)
+      }
+      if (n % 50 === 0) for (const f of figs) expect(renderToStaticMarkup(createElement(DrawingView, { d: f, label: 'x' }))).toContain('<svg')
+    }
+    expect([...seen].sort()).toEqual(Object.keys(STEPS).sort())
   })
 })

@@ -223,6 +223,17 @@ const genEn = {
       count: 'One more dot is added',
     })[id]!,
   figWork: (rule: string) => `Compare figure 1 with figure 2: ${rule[0].toLowerCase() + rule.slice(1)}. Make the same change to figure 3 to get the answer.`,
+  figSeriesRule: (id: string) =>
+    ({
+      turn90: 'Each figure is the one before it turned a quarter turn (90°) clockwise',
+      turnm90: 'Each figure is the one before it turned a quarter turn (90°) anticlockwise',
+      shade: 'The shading moves one part clockwise each time',
+      dots: 'Each figure has one more dot than the one before',
+      sides: 'The shape gets one more side each time',
+      corner: 'The small shape moves one corner clockwise each time; the rest stays still',
+      turnfill: 'Each time the figure turns a quarter turn clockwise, and filled and empty shapes swap',
+    })[id]!,
+  figSeriesWork: (rule: string, n: number) => `${rule}. Make the same change once more to figure ${n} to get the answer.`,
   figSpot: (rule: string) => `Figure 1 → figure 2: ${rule[0].toLowerCase() + rule.slice(1)}.`,
 
   // Clock
@@ -315,6 +326,7 @@ const genEn = {
     'fig-fill': 'Filled and empty parts swap',
     'fig-swap': 'Shapes change places or change into each other',
     'fig-count': 'Parts are added or taken away',
+    'fig-move': 'Parts move round the figure',
     'fig-other': 'Several changes at once',
   } as Record<PatternId, string>,
 }
@@ -517,6 +529,17 @@ const genKn: GenText = {
       count: 'ಒಂದು ಚುಕ್ಕಿ ಹೆಚ್ಚಾಗುತ್ತದೆ',
     })[id]!,
   figWork: (rule) => `ಚಿತ್ರ 1 ಅನ್ನು ಚಿತ್ರ 2 ರೊಂದಿಗೆ ಹೋಲಿಸಿ: ${rule}. ಚಿತ್ರ 3 ಕ್ಕೂ ಇದೇ ಬದಲಾವಣೆ ಮಾಡಿದರೆ ಉತ್ತರ ಸಿಗುತ್ತದೆ.`,
+  figSeriesRule: (id) =>
+    ({
+      turn90: 'ಪ್ರತಿ ಚಿತ್ರವೂ ಹಿಂದಿನ ಚಿತ್ರವನ್ನು ಗಡಿಯಾರದ ದಿಕ್ಕಿನಲ್ಲಿ ಕಾಲು ಸುತ್ತು (90°) ತಿರುಗಿಸಿದಂತಿದೆ',
+      turnm90: 'ಪ್ರತಿ ಚಿತ್ರವೂ ಹಿಂದಿನ ಚಿತ್ರವನ್ನು ಗಡಿಯಾರದ ವಿರುದ್ಧ ದಿಕ್ಕಿನಲ್ಲಿ ಕಾಲು ಸುತ್ತು (90°) ತಿರುಗಿಸಿದಂತಿದೆ',
+      shade: 'ಕಪ್ಪು ಭಾಗ ಪ್ರತಿ ಸಲ ಗಡಿಯಾರದ ದಿಕ್ಕಿನಲ್ಲಿ ಒಂದು ಭಾಗ ಸರಿಯುತ್ತದೆ',
+      dots: 'ಪ್ರತಿ ಚಿತ್ರದಲ್ಲೂ ಹಿಂದಿನದಕ್ಕಿಂತ ಒಂದು ಚುಕ್ಕಿ ಹೆಚ್ಚು',
+      sides: 'ಪ್ರತಿ ಸಲ ಆಕೃತಿಗೆ ಒಂದು ಬಾಹು ಹೆಚ್ಚುತ್ತದೆ',
+      corner: 'ಚಿಕ್ಕ ಆಕೃತಿ ಪ್ರತಿ ಸಲ ಗಡಿಯಾರದ ದಿಕ್ಕಿನಲ್ಲಿ ಒಂದು ಮೂಲೆ ಸರಿಯುತ್ತದೆ; ಉಳಿದವು ಅಲ್ಲೇ ಇರುತ್ತವೆ',
+      turnfill: 'ಪ್ರತಿ ಸಲ ಚಿತ್ರ ಗಡಿಯಾರದ ದಿಕ್ಕಿನಲ್ಲಿ ಕಾಲು ಸುತ್ತು ತಿರುಗುತ್ತದೆ, ತುಂಬಿದ ಮತ್ತು ಖಾಲಿ ಆಕೃತಿಗಳು ಅದಲು ಬದಲಾಗುತ್ತವೆ',
+    })[id]!,
+  figSeriesWork: (rule, n) => `${rule}. ಚಿತ್ರ ${n} ಕ್ಕೆ ಇದೇ ಬದಲಾವಣೆಯನ್ನು ಇನ್ನೊಮ್ಮೆ ಮಾಡಿದರೆ ಉತ್ತರ ಸಿಗುತ್ತದೆ.`,
   figSpot: (rule) => `ಚಿತ್ರ 1 → ಚಿತ್ರ 2: ${rule}.`,
 
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
@@ -605,6 +628,7 @@ const genKn: GenText = {
     'fig-fill': 'ತುಂಬಿದ ಮತ್ತು ಖಾಲಿ ಭಾಗಗಳು ಅದಲು ಬದಲಾಗುತ್ತವೆ',
     'fig-swap': 'ಆಕೃತಿಗಳು ಸ್ಥಾನ ಅಥವಾ ರೂಪ ಬದಲಿಸುತ್ತವೆ',
     'fig-count': 'ಭಾಗಗಳು ಹೆಚ್ಚುತ್ತವೆ ಅಥವಾ ಕಡಿಮೆಯಾಗುತ್ತವೆ',
+    'fig-move': 'ಭಾಗಗಳು ಚಿತ್ರದ ಸುತ್ತ ಸರಿಯುತ್ತವೆ',
     'fig-other': 'ಒಂದೇ ಸಲ ಹಲವು ಬದಲಾವಣೆಗಳು',
   },
 }
