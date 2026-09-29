@@ -18,8 +18,10 @@ export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
   const t = useT()
   const { options } = useQuestionText(q)
   const figs = q.figures?.options
+  // Options that are whole equations (Arithmetical Operations) need the full width.
+  const wide = !figs && Object.values(options).some((v) => v.includes('='))
   return (
-    <div className={`options options-${size}${q.kind === 'rule' ? ' options-text' : ''}${figs ? ' options-fig' : ''}`} role="radiogroup" aria-label={t.common.answerOptions}>
+    <div className={`options options-${size}${q.kind === 'rule' ? ' options-text' : ''}${figs ? ' options-fig' : ''}${wide ? ' options-wide' : ''}`} role="radiogroup" aria-label={t.common.answerOptions}>
       {OPTION_KEYS.map((k) => {
         let state = ''
         if (reveal && k === q.answer) state = 'correct'

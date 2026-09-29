@@ -38,7 +38,8 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
         </table>
       )}
       <p className="stem-prompt">{prompt}</p>
-      {q.terms.length > 0 && <p className="stem-seq">{q.terms.join('\u2002')}</p>}
+      {/* "= 11" stays on one line when an equation wraps. */}
+      {q.terms.length > 0 && <p className="stem-seq">{q.terms.join('\u2002').replace(/ = /g, ' =\u00a0')}</p>}
     </div>
   )
 }

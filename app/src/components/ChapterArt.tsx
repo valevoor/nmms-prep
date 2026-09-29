@@ -129,6 +129,17 @@ const ART: Record<number, ReactNode> = {
       <circle cx={24} cy={24} r={2} className="art-accent" />
     </>
   ),
+  // Arithmetical Operations: 3 ? 4 = 12 (the missing sign is ×)
+  25: (
+    <>
+      <Tile x={1} y={5} label="3" />
+      <Tile x={17} y={5} label="?" accent />
+      <Tile x={33} y={5} label="4" />
+      <text x={24} y={40} textAnchor="middle" className="art-text">
+        = 12
+      </text>
+    </>
+  ),
   // Mirror Image
   8: (
     <>

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Question } from '../../types'
+import { generateArithmetic } from '../generators/arithmetic'
 import { generateBloodRelation } from '../generators/bloodRelations'
 import { generateCalendar } from '../generators/calendar'
 import { generateClock } from '../generators/clock'
@@ -77,6 +78,11 @@ describe('generated questions carry Kannada', () => {
   it('number patterns', () => {
     const rng = mulberry32(15)
     for (let n = 0; n < 1000; n++) expectKannada(generateNumberPatterns(rng))
+  })
+
+  it('arithmetical operations', () => {
+    const rng = mulberry32(25)
+    for (let n = 0; n < 1000; n++) expectKannada(generateArithmetic(rng))
   })
 
   it('clock', () => {

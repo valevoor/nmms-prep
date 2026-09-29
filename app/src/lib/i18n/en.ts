@@ -221,6 +221,10 @@ export const en = {
   },
   /** Step buttons and screen-reader descriptions for the tip pictures in components/tips. */
   tipVisuals: {
+    order: {
+      buttons: ['Find × and ÷', 'Work it out', 'Then + and −'],
+      label: '12 + 12 − 12 ÷ 12 − 12. First 12 ÷ 12 = 1, giving 12 + 12 − 1 − 12. Then + and − from the left: 11.',
+    },
     hop: {
       buttons: ['Show me', 'Next hop', 'Next hop', 'Next hop'],
       label: '3, 7, 11, 15, ? — each number is +4 more than the one before',

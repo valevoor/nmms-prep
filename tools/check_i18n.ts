@@ -13,8 +13,9 @@ const KANNADA = /[ಀ-೿]/
  * English words, which always have lowercase letters. Not maths ("n² + n", "×2") and not puzzle
  * terms in capitals ("JPZ", "NMMN"), which stay as they are in every language.
  */
-// Unit abbreviations (km, cm) and am/pm stay the same in Kannada.
-const WORDS = /\b(?!(?:km|cm|am|pm)\b)[a-z]{2,}/
+// Unit abbreviations (km, cm) and am/pm stay the same in Kannada, and so do the algebra terms
+// ad, abc, abcd (Arithmetical Operations Q3).
+const WORDS = /\b(?!(?:km|cm|am|pm|ad|abc|abcd)\b)[a-z]{2,}/
 
 type Text = { prompt?: string; rule?: string; working?: string; note?: string }
 type Meta = { intro: string; tips: { title: string; body: string; caption?: string }[] }

@@ -6,6 +6,7 @@ import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
 import { HopArrows } from './HopArrows'
 import { NumberGrid } from './NumberGrid'
+import { OrderOfOps } from './OrderOfOps'
 import { ShrinkFlip } from './ShrinkFlip'
 import { ZigZagSplit } from './ZigZagSplit'
 
@@ -26,4 +27,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   figTurn: FigureTurn,
   figShade: FigureShade,
   figGrow: FigureGrow,
+  order: OrderOfOps,
 }

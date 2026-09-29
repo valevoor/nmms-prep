@@ -12,6 +12,8 @@ import figAnalogy from './mat/analogy-of-figures.json'
 import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
 import figSeries from './mat/figure-series.json'
 import figSeriesMeta from './mat/figure-series.meta.json'
+import arithmetic from './mat/arithmetical-operations.json'
+import arithmeticMeta from './mat/arithmetical-operations.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
@@ -32,6 +34,7 @@ import oddOne from './mat/odd-one-numbers.json'
 import oddOneMeta from './mat/odd-one-numbers.meta.json'
 import wrongNumber from './mat/wrong-number.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
+import { generateArithmetic } from '../lib/generators/arithmetic'
 import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
@@ -217,6 +220,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: numberPatternsMeta as TopicMeta,
     missing: 'grid',
     generate: generateNumberPatterns,
+  },
+  {
+    id: 'arithmetical-operations',
+    chapter: 25,
+    name: 'Arithmetical Operations',
+    questions: visible(arithmetic.questions as Question[]),
+    meta: arithmeticMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateArithmetic,
   },
 ]
 

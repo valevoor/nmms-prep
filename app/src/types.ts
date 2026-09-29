@@ -104,6 +104,12 @@ export type PatternId =
   | 'ln-letter'
   | 'ln-shift'
   | 'ln-other'
+  // Arithmetical operations (Chapter 25)
+  | 'ops-fill'
+  | 'ops-code'
+  | 'ops-swap'
+  | 'ops-swap-num'
+  | 'ops-meaning'
   // Number patterns (Chapter 15)
   | 'grid-shift'
   // Analogy of figures (Chapter 1)

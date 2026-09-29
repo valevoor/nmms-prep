@@ -15,3 +15,6 @@ export const ZIGZAG = { values: [2, 10, 4, 20, 6, 30], oddOp: '+2', evenOp: '+10
 
 /** Tip 6: "wrong" fits the first gaps (+1, +2, +3) but breaks on the next one; "right" (×2) fits every gap. */
 export const CHECK = { values: [1, 2, 4, 8, 16, 32], blank: 3, wrong: 7, wrongOps: ['+1', '+2', '+3'], op: '×2' }
+
+/** Arithmetical Operations tip: 12 + 12 − 12 ÷ 12 − 12. The ÷ at `first` is worked out before the + and −. */
+export const BODMAS = { nums: [12, 12, 12, 12, 12], ops: ['+', '−', '÷', '−'], first: 2, answer: 11 }

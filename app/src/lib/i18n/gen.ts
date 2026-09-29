@@ -198,6 +198,21 @@ const genEn = {
     })[kind]!,
   lnShift: (list: string) => `Each letter moves by ${list} places in turn.`,
 
+  // Arithmetical operations
+  aoFillAsk: 'Put the signs in place of each * in order so that the equation is true. Which set of signs is right?',
+  aoCodeAsk: 'The table shows the sign each symbol stands for. Which option, put in place of each * in order, makes the equation true?',
+  aoSwapSignsAsk: 'Which two signs must be swapped to make the equation true?',
+  aoSwapNumsAsk: 'Which two numbers must be swapped to make the equation true?',
+  aoMeaningAsk: (pairs: [string, string][]) => {
+    const list = pairs.map(([w, m]) => `${w} means ${m}`)
+    return `Here ${list.slice(0, -1).join(', ')} and ${list[list.length - 1]}. Which equation is correct?`
+  },
+  aoRuleFill: 'Try each set of signs in turn. Do × and ÷ first (left to right), then + and −.',
+  aoRuleCode: 'Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.',
+  aoRuleSwapSigns: 'Swap the two signs everywhere they appear, then work out the left side: × and ÷ first, then + and −.',
+  aoRuleSwapNums: 'Swap the two numbers, then work out the left side: × and ÷ first, then + and −.',
+  aoRuleMeaning: 'Write each option again with the real signs, then work it out: × and ÷ first, then + and −.',
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -318,6 +333,11 @@ const genEn = {
     'ln-letter': 'Turn a letter\'s place into a number',
     'ln-shift': 'Move each letter by a set number of places',
     'ln-other': 'Letters and numbers swapped by a rule',
+    'ops-fill': 'Put signs in place of *',
+    'ops-code': 'Letters or shapes stand for signs',
+    'ops-swap': 'Swap two signs',
+    'ops-swap-num': 'Swap two numbers',
+    'ops-meaning': 'Signs with changed meanings',
     'grid-shift': 'The same shape, moved across the table',
     'grid-flip': 'The same shape, flipped like a mirror image',
     'fig-rotate': 'The figure turns',
@@ -511,6 +531,20 @@ const genKn: GenText = {
     })[kind]!,
   lnShift: (list) => `ಪ್ರತಿ ಅಕ್ಷರವೂ ಕ್ರಮವಾಗಿ ${list} ಸ್ಥಾನ ಸರಿಯುತ್ತದೆ.`,
 
+  aoFillAsk: 'ಸಮೀಕರಣ ಸರಿಯಾಗುವಂತೆ ಪ್ರತಿ * ಜಾಗದಲ್ಲಿ ಕ್ರಮವಾಗಿ ಚಿಹ್ನೆಗಳನ್ನು ಇಡಿ. ಯಾವ ಚಿಹ್ನೆಗಳ ಗುಂಪು ಸರಿ?',
+  aoCodeAsk: 'ಪ್ರತಿ ಸಂಕೇತವು ಯಾವ ಚಿಹ್ನೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ ಎಂದು ಕೋಷ್ಟಕ ತೋರಿಸುತ್ತದೆ. ಪ್ರತಿ * ಜಾಗದಲ್ಲಿ ಕ್ರಮವಾಗಿ ಇಟ್ಟಾಗ ಯಾವ ಆಯ್ಕೆಯು ಸಮೀಕರಣವನ್ನು ಸರಿಯಾಗಿಸುತ್ತದೆ?',
+  aoSwapSignsAsk: 'ಸಮೀಕರಣ ಸರಿಯಾಗಲು ಯಾವ ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಬೇಕು?',
+  aoSwapNumsAsk: 'ಸಮೀಕರಣ ಸರಿಯಾಗಲು ಯಾವ ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಬೇಕು?',
+  aoMeaningAsk: (pairs) => {
+    const list = pairs.map(([w, m]) => `${w} ಎಂದರೆ ${m}`)
+    return `ಇಲ್ಲಿ ${list.slice(0, -1).join(', ')} ಮತ್ತು ${list[list.length - 1]}. ಯಾವ ಸಮೀಕರಣ ಸರಿಯಾಗಿದೆ?`
+  },
+  aoRuleFill: 'ಪ್ರತಿ ಚಿಹ್ನೆಗಳ ಗುಂಪನ್ನು ಒಂದೊಂದಾಗಿ ಪ್ರಯತ್ನಿಸಿ. ಮೊದಲು × ಮತ್ತು ÷ (ಎಡದಿಂದ ಬಲಕ್ಕೆ), ನಂತರ + ಮತ್ತು −.',
+  aoRuleCode: 'ನಿಜವಾದ ಚಿಹ್ನೆಗಳೊಂದಿಗೆ ಸಮೀಕರಣವನ್ನು ಮತ್ತೆ ಬರೆಯಿರಿ, ನಂತರ ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
+  aoRuleSwapSigns: 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅವು ಇರುವ ಎಲ್ಲಾ ಕಡೆ ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಎಡಭಾಗವನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
+  aoRuleSwapNums: 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಎಡಭಾಗವನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
+  aoRuleMeaning: 'ಪ್ರತಿ ಆಯ್ಕೆಯನ್ನು ನಿಜವಾದ ಚಿಹ್ನೆಗಳೊಂದಿಗೆ ಮತ್ತೆ ಬರೆಯಿರಿ, ನಂತರ ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
+
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
   gridShift: (move) => `ಕೋಷ್ಟಕದಲ್ಲಿ ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ ಅದೇ ಆಕಾರದಲ್ಲಿದೆ, ${move} ಸರಿಸಲಾಗಿದೆ. ಮೊದಲ ಜೋಡಿಯ ಇನ್ನೊಂದು ಗುಂಪನ್ನೂ ${move} ಸರಿಸಿ.`,
@@ -620,6 +654,11 @@ const genKn: GenText = {
     'ln-letter': 'ಅಕ್ಷರದ ಸ್ಥಾನವನ್ನು ಸಂಖ್ಯೆಯಾಗಿ ಬದಲಿಸಿ',
     'ln-shift': 'ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ನಿಗದಿತ ಸ್ಥಾನಗಳಷ್ಟು ಸರಿಸಿ',
     'ln-other': 'ನಿಯಮದಂತೆ ಅಕ್ಷರ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಬದಲಾವಣೆ',
+    'ops-fill': '* ಜಾಗದಲ್ಲಿ ಚಿಹ್ನೆಗಳನ್ನು ಇಡಿ',
+    'ops-code': 'ಅಕ್ಷರಗಳು ಅಥವಾ ಆಕೃತಿಗಳು ಚಿಹ್ನೆಗಳನ್ನು ಸೂಚಿಸುತ್ತವೆ',
+    'ops-swap': 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ',
+    'ops-swap-num': 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ',
+    'ops-meaning': 'ಅರ್ಥ ಬದಲಾದ ಚಿಹ್ನೆಗಳು',
     'grid-shift': 'ಅದೇ ಆಕಾರ, ಕೋಷ್ಟಕದಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ',
     'grid-flip': 'ಅದೇ ಆಕಾರ, ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ತಿರುಗಿಸಲಾಗಿದೆ',
     'fig-rotate': 'ಚಿತ್ರವು ತಿರುಗುತ್ತದೆ',

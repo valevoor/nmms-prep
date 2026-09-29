@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { applyOp } from '../../lib/series'
-import { CHECK, DOUBLING, HOP, SHRINK, SQUARES, ZIGZAG } from './examples'
+import { BODMAS, CHECK, DOUBLING, HOP, SHRINK, SQUARES, ZIGZAG } from './examples'
 
 const follows = (v: number[], ops: string[]) => v.slice(1).every((x, i) => applyOp(v[i], ops[i]) === x)
 
@@ -34,5 +34,16 @@ describe('tip visual examples', () => {
     expect(follows(tried.slice(0, CHECK.blank + 1), CHECK.wrongOps)).toBe(true)
     // The next gap would have to be +4 to keep the pattern going.
     expect(applyOp(CHECK.wrong, '+4')).not.toBe(v[CHECK.blank + 1])
+  })
+
+  it('order of operations: ÷ first, then + and − from the left', () => {
+    const { nums, ops, first, answer } = BODMAS
+    expect(ops[first]).toBe('÷')
+    expect(nums[first] % nums[first + 1]).toBe(0)
+    // Every other sign is + or −, so after the ÷ the line is worked left to right.
+    const rest = [...nums.slice(0, first), nums[first] / nums[first + 1], ...nums.slice(first + 2)]
+    const restOps = ops.filter((_, i) => i !== first)
+    expect(restOps.every((s) => s === '+' || s === '−')).toBe(true)
+    expect(rest.slice(1).reduce((acc, n, i) => (restOps[i] === '+' ? acc + n : acc - n), rest[0])).toBe(answer)
   })
 })

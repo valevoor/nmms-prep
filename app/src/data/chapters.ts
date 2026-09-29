@@ -11,6 +11,10 @@ import figSeriesKn from './mat/figure-series.kn.json'
 import figSeries from './mat/figure-series.json'
 import figSeriesMetaKn from './mat/figure-series.meta.kn.json'
 import figSeriesMeta from './mat/figure-series.meta.json'
+import arithmeticKn from './mat/arithmetical-operations.kn.json'
+import arithmetic from './mat/arithmetical-operations.json'
+import arithmeticMetaKn from './mat/arithmetical-operations.meta.kn.json'
+import arithmeticMeta from './mat/arithmetical-operations.meta.json'
 import bloodKn from './mat/blood-relations.kn.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
@@ -108,4 +112,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('analogy-of-figures', 'Analogy of Figures', figAnalogy, figAnalogyMeta, figAnalogyKn, figAnalogyMetaKn),
   c('figure-series', 'Figure Series', figSeries, figSeriesMeta, figSeriesKn, figSeriesMetaKn),
   c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
+  c('arithmetical-operations', 'Arithmetical Operations', arithmetic, arithmeticMeta, arithmeticKn, arithmeticMetaKn),
 ]

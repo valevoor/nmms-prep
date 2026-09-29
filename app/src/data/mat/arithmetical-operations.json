@@ -1,0 +1,405 @@
+{
+  "topic": "arithmetical-operations",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 25 (questions: PDF pages 75–76, solutions: PDF pages 158–159)",
+  "questions": [
+    {
+      "id": "ao-b01",
+      "bookNo": 1,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-fill",
+      "layout": "text",
+      "terms": [
+        "45 * 5 * 5 * 1 * 1 = 45"
+      ],
+      "prompt": "Put the signs in place of each * in order so that the equation is true. Which set of signs is right?",
+      "options": {
+        "A": "× − + ÷",
+        "B": "+ + × ÷",
+        "C": "÷ × + −",
+        "D": "− − × ÷"
+      },
+      "answer": "C",
+      "rule": "Try each set of signs in turn. Do × and ÷ first (left to right), then + and −.",
+      "working": "45 ÷ 5 × 5 + 1 − 1 = 45 + 1 − 1 = 45"
+    },
+    {
+      "id": "ao-b02",
+      "bookNo": 2,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-fill",
+      "layout": "text",
+      "terms": [
+        "12 * 12 * 12 * 12 * 12 = 11"
+      ],
+      "prompt": "Put the signs in place of each * in order so that the equation is true. Which set of signs is right?",
+      "options": {
+        "A": "÷ × + −",
+        "B": "+ − ÷ −",
+        "C": "+ + − −",
+        "D": "× − − −"
+      },
+      "answer": "B",
+      "rule": "Try each set of signs in turn. Do × and ÷ first (left to right), then + and −.",
+      "working": "12 + 12 − 12 ÷ 12 − 12 = 12 + 12 − 1 − 12 = 11"
+    },
+    {
+      "id": "ao-b03",
+      "bookNo": 3,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-fill",
+      "layout": "text",
+      "terms": [
+        "a * ad * abc * abcd = 2a"
+      ],
+      "prompt": "Put the signs in place of each * in order so that the equation is true. Which set of signs is right?",
+      "options": {
+        "A": "+ × ÷",
+        "B": "+ − −",
+        "C": "+ ÷ ×",
+        "D": "− − +"
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Do × and ÷ first (left to right), then + and −.",
+      "working": "a + ad × abc ÷ abcd = a + (a × d × a × b × c) ÷ (a × b × c × d) = a + a = 2a"
+    },
+    {
+      "id": "ao-b04",
+      "bookNo": 4,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "50 * 40 * 30 * 20 * 10 = 100"
+      ],
+      "prompt": "K means +, L means ×, N means − and M means ÷. Which letters, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "K L N M",
+        "B": "K L M N",
+        "C": "N M L K",
+        "D": "N M K L"
+      },
+      "answer": "B",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "50 K 40 L 30 M 20 N 10 → 50 + 40 × 30 ÷ 20 − 10 = 50 + 60 − 10 = 100",
+      "table": [
+        [
+          "K",
+          "L",
+          "N",
+          "M"
+        ],
+        [
+          "+",
+          "×",
+          "−",
+          "÷"
+        ]
+      ]
+    },
+    {
+      "id": "ao-b05",
+      "bookNo": 5,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "2² * 5² * 7² * 1² = 150"
+      ],
+      "prompt": "K means +, L means ×, N means − and M means ÷. Which letters, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "M K K",
+        "B": "L K K",
+        "C": "K K M",
+        "D": "K K L"
+      },
+      "answer": "B",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "2² L 5² K 7² K 1² → 4 × 25 + 49 + 1 = 100 + 49 + 1 = 150",
+      "table": [
+        [
+          "K",
+          "L",
+          "N",
+          "M"
+        ],
+        [
+          "+",
+          "×",
+          "−",
+          "÷"
+        ]
+      ],
+      "note": "The book prints one more * after 1², but every option has only three signs, so it is left out here."
+    },
+    {
+      "id": "ao-b06",
+      "bookNo": 6,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "(5 * 2) * 15 * 105 = 1"
+      ],
+      "prompt": "□ means +, △ means ÷, ◇ means × and ○ means −. Which symbols, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "□ ◇ △",
+        "B": "△ ◇ △",
+        "C": "△ ◇ □",
+        "D": "□ △ □"
+      },
+      "answer": "A",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "(5 □ 2) ◇ 15 △ 105 → (5 + 2) × 15 ÷ 105 = 7 × 15 ÷ 105 = 105 ÷ 105 = 1",
+      "table": [
+        [
+          "□",
+          "△",
+          "◇",
+          "○"
+        ],
+        [
+          "+",
+          "÷",
+          "×",
+          "−"
+        ]
+      ]
+    },
+    {
+      "id": "ao-b07",
+      "bookNo": 7,
+      "sourcePage": 75,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "1/4 * 1/4 * 1/4 * 1/4 = 17/16"
+      ],
+      "prompt": "□ means +, △ means ÷, ◇ means × and ○ means −. Which symbols, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "◇ □ △",
+        "B": "□ ○ □",
+        "C": "△ △ ○",
+        "D": "○ □ ○"
+      },
+      "answer": "A",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "1/4 ◇ 1/4 □ 1/4 △ 1/4 → 1/4 × 1/4 + 1/4 ÷ 1/4 = 1/16 + 1 = 17/16",
+      "table": [
+        [
+          "□",
+          "△",
+          "◇",
+          "○"
+        ],
+        [
+          "+",
+          "÷",
+          "×",
+          "−"
+        ]
+      ],
+      "note": "The book's key prints no letter for this question, but its working uses ×, + and ÷, which is option A."
+    },
+    {
+      "id": "ao-b08",
+      "bookNo": 8,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-meaning",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Here + means ÷, × means +, − means × and ÷ means −. Which equation is correct?",
+      "options": {
+        "A": "{(19 + 11) ÷ 15} − 2 = 0",
+        "B": "{(19 × 11) + 15} ÷ 2 = 0",
+        "C": "{(19 ÷ 11) + 15} ÷ 2 = 0",
+        "D": "{(19 − 11) + 15} ÷ 2 = 0"
+      },
+      "answer": "B",
+      "rule": "Write each option again with the real signs (+ → ÷, × → +, − → ×, ÷ → −), then work it out: × and ÷ first, then + and −.",
+      "working": "{(19 × 11) + 15} ÷ 2 → {(19 + 11) ÷ 15} − 2 = 30 ÷ 15 − 2 = 2 − 2 = 0"
+    },
+    {
+      "id": "ao-b09",
+      "bookNo": 9,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-meaning",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Here + means ÷, × means +, − means × and ÷ means −. Which equation is correct?",
+      "options": {
+        "A": "(p − q) − q × p = 2p",
+        "B": "(p + q) − q × p = p",
+        "C": "(p + q) − q × p = 2p",
+        "D": "(p × q) × q × q = 2p"
+      },
+      "answer": "C",
+      "rule": "Write each option again with the real signs (+ → ÷, × → +, − → ×, ÷ → −), then work it out: × and ÷ first, then + and −.",
+      "working": "(p + q) − q × p → (p ÷ q) × q + p = p + p = 2p"
+    },
+    {
+      "id": "ao-b10",
+      "bookNo": 10,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-swap",
+      "layout": "text",
+      "terms": [
+        "12 + 3 × 5 ÷ 5 − 1 = 36"
+      ],
+      "prompt": "Which two signs must be swapped to make the equation true?",
+      "options": {
+        "A": "+ & ÷",
+        "B": "× & ÷",
+        "C": "× & +",
+        "D": "÷ & −"
+      },
+      "answer": "C",
+      "rule": "Swap the two signs everywhere they appear, then work out the left side: × and ÷ first, then + and −.",
+      "working": "× ↔ +: 12 × 3 + 5 ÷ 5 − 1 = 36 + 1 − 1 = 36"
+    },
+    {
+      "id": "ao-b11",
+      "bookNo": 11,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-swap",
+      "layout": "text",
+      "terms": [
+        "7 × 9 − 26 + 1 = 88"
+      ],
+      "prompt": "Which two signs must be swapped to make the equation true?",
+      "options": {
+        "A": "+ & −",
+        "B": "× & −",
+        "C": "× & +",
+        "D": "+ & ="
+      },
+      "answer": "A",
+      "rule": "Swap the two signs everywhere they appear, then work out the left side: × and ÷ first, then + and −.",
+      "working": "+ ↔ −: 7 × 9 + 26 − 1 = 63 + 26 − 1 = 88"
+    },
+    {
+      "id": "ao-b12",
+      "bookNo": 12,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-swap-num",
+      "layout": "text",
+      "terms": [
+        "5 + 6 ÷ 2 − 3 × 1 = 5"
+      ],
+      "prompt": "Which two numbers must be swapped to make the equation true?",
+      "options": {
+        "A": "3 & 2",
+        "B": "5 & 6",
+        "C": "6 & 2",
+        "D": "5 & 1"
+      },
+      "answer": "A",
+      "rule": "Swap the two numbers, then work out the left side: × and ÷ first, then + and −.",
+      "working": "3 ↔ 2: 5 + 6 ÷ 3 − 2 × 1 = 5 + 2 − 2 = 5",
+      "note": "As printed, the equation is already true (5 + 3 − 3 = 5). Of the four swaps, only 3 and 2 keeps it true."
+    },
+    {
+      "id": "ao-b13",
+      "bookNo": 13,
+      "sourcePage": 76,
+      "keyFrom": "solved",
+      "pattern": "ops-swap-num",
+      "layout": "text",
+      "terms": [
+        "12 + 9 − 10 × 11 = −77"
+      ],
+      "prompt": "Which two numbers must be swapped to make the equation true?",
+      "options": {
+        "A": "9 & 10",
+        "B": "9 & 11",
+        "C": "12 & 11",
+        "D": "10 & 11"
+      },
+      "answer": "A",
+      "rule": "Swap the two numbers, then work out the left side: × and ÷ first, then + and −.",
+      "working": "9 ↔ 10: 12 + 10 − 9 × 11 = 12 + 10 − 99 = −77",
+      "note": "The book's key says B (9 and 11), but that gives 12 + 11 − 10 × 9 = −67, not −77. Swapping 9 and 10 works."
+    },
+    {
+      "id": "ao-b14",
+      "bookNo": 14,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "[125 * 5 * 150 * 5] * 8 = 60"
+      ],
+      "prompt": "P means ÷, Q means ×, R means − and S means +. Which letters, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "P Q R S",
+        "B": "P R S Q",
+        "C": "Q R S P",
+        "D": "R S Q P"
+      },
+      "answer": "C",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "[125 Q 5 R 150 S 5] P 8 → [125 × 5 − 150 + 5] ÷ 8 = [625 − 150 + 5] ÷ 8 = 480 ÷ 8 = 60",
+      "table": [
+        [
+          "P",
+          "Q",
+          "R",
+          "S"
+        ],
+        [
+          "÷",
+          "×",
+          "−",
+          "+"
+        ]
+      ]
+    },
+    {
+      "id": "ao-b15",
+      "bookNo": 15,
+      "sourcePage": 76,
+      "keyFrom": "book",
+      "pattern": "ops-code",
+      "layout": "text",
+      "terms": [
+        "7 * 7 * 7 * 7 = 50"
+      ],
+      "prompt": "P means ÷, Q means ×, R means − and S means +. Which letters, put in place of each * in order, make the equation true?",
+      "options": {
+        "A": "Q S Q",
+        "B": "P S P",
+        "C": "Q S P",
+        "D": "S S S"
+      },
+      "answer": "C",
+      "rule": "Write the equation again with the real signs, then work it out: × and ÷ first, then + and −.",
+      "working": "7 Q 7 S 7 P 7 → 7 × 7 + 7 ÷ 7 = 49 + 1 = 50",
+      "table": [
+        [
+          "P",
+          "Q",
+          "R",
+          "S"
+        ],
+        [
+          "÷",
+          "×",
+          "−",
+          "+"
+        ]
+      ]
+    }
+  ]
+}

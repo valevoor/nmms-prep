@@ -1,0 +1,39 @@
+{
+  "topic": "arithmetical-operations",
+  "intro": "In these questions the signs of an equation are hidden, coded or mixed up. You choose the signs (or the swap) that make the equation true. Everything depends on doing × and ÷ before + and −.",
+  "tips": [
+    {
+      "title": "× and ÷ before + and −",
+      "visual": "order",
+      "body": "Work out × and ÷ first, from left to right. Then do + and −, from left to right. In 12 + 12 − 12 ÷ 12 − 12, first 12 ÷ 12 = 1, which leaves 12 + 12 − 1 − 12 = 11.",
+      "caption": "× and ÷ first, then + and −."
+    },
+    {
+      "title": "Brackets come first of all",
+      "body": "Anything inside ( ), { } or [ ] is worked out before the rest. (5 + 2) × 15 ÷ 105 = 7 × 15 ÷ 105 = 105 ÷ 105 = 1."
+    },
+    {
+      "title": "Try the options one by one",
+      "body": "Put each option's signs into the * places in order and work the equation out. Look at the answer's size first: much bigger than the numbers means a × is needed; much smaller means ÷ or −. That rules out some options straight away."
+    },
+    {
+      "title": "Letters or shapes for signs",
+      "body": "When K means +, L means × and so on, first write the equation again with the real signs, and only then work it out. 50 K 40 L 30 M 20 N 10 becomes 50 + 40 × 30 ÷ 20 − 10 = 50 + 60 − 10 = 100."
+    },
+    {
+      "title": "Signs with changed meanings",
+      "body": "If \"+ means ÷\", every + in an option is really a ÷. Rewrite the whole option before working it out: {(19 × 11) + 15} ÷ 2 becomes {(19 + 11) ÷ 15} − 2 = 2 − 2 = 0."
+    },
+    {
+      "title": "Swapping two signs or two numbers",
+      "body": "Swap the two signs (or numbers) in the equation, work out the left side and compare it with the right side. In 12 + 3 × 5 ÷ 5 − 1 = 36, swap × and +: 12 × 3 + 5 ÷ 5 − 1 = 36 + 1 − 1 = 36."
+    }
+  ],
+  "workedExamples": [
+    "ao-b02",
+    "ao-b04",
+    "ao-b08",
+    "ao-b10"
+  ],
+  "cheatSheet": "none"
+}
