@@ -1,0 +1,34 @@
+{
+  "topic": "letter-matrix",
+  "intro": "A letter matrix is a table of letters (sometimes with a number in each row) with one letter or number missing. The same rule works across every row, or down every column. Turn the letters into their places in the alphabet (A = 1 … Z = 26), find the rule from the complete rows or columns, check it, then use it on the one with the ?.",
+  "cheatSheet": "alphabet",
+  "tips": [
+    {
+      "title": "Write the places, then find the rule",
+      "visual": "letterMatrix",
+      "body": "Write each letter's place under it. Guess a rule from one complete row or column and check it on another complete one. If it doesn't work across, try down the columns. Only then use it on the line with the ?, and turn the number you get back into a letter.",
+      "caption": "F + E = 6 + 5 = 11 = K and N + D = 14 + 4 = 18 = R, so I + ? = Q gives 9 + ? = 17, ? = 8 = H."
+    },
+    {
+      "title": "Letters that step on",
+      "body": "If the letters in each row go forward, count the gaps: B → D is +2 and D → G is +3. Every row then uses the same gaps: N → P (+2) → S (+3). After Z, count on from A: Y + 5 is D."
+    },
+    {
+      "title": "Add, take away or multiply the places",
+      "body": "One letter's place is often made from the other two: F + E = K (6 + 5 = 11), O − C = L (15 − 3 = 12), C × E = O (3 × 5 = 15). A number in the row can join in too: G × 2 = N (7 × 2 = 14)."
+    },
+    {
+      "title": "Opposite letters add up to 27",
+      "body": "A ↔ Z, B ↔ Y, C ↔ X … A letter's opposite is 27 minus its place. In the row C 3 X, 3 is the place of C, and X (24) is its opposite, because 3 + 24 = 27."
+    },
+    {
+      "title": "What can the number in the row be?",
+      "body": "It may be the first letter's place (R 18 I), how many letters are skipped between the two letters (F 2 I: G and H are skipped), or the place counted back from Z of the letter between them (M 13 O: N is 14th from A and 13th from Z)."
+    },
+    {
+      "title": "Try every option",
+      "body": "When you are stuck, put each option into the ? and see which one lets the same rule work in every row or column. Only one should."
+    }
+  ],
+  "workedExamples": ["lm-b01", "lm-b04", "lm-b07", "lm-b11"]
+}

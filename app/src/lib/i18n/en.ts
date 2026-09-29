@@ -294,6 +294,11 @@ export const en = {
       label:
         'A 3 by 3 matrix. Its columns are 5, 11, 21; then 8, 17, 33; then 7, 15 and a missing number. First tap: in the first column, 5 × 2 + 11 = 21. Second tap: the same rule works in the second column, 8 × 2 + 17 = 33. Last tap: using it in the third column, 7 × 2 + 15 = 29.',
     },
+    letterMatrix: {
+      buttons: ['First column', 'Check the rule', 'Use the rule'],
+      label:
+        'A 3 by 3 letter matrix. Its columns are F, E, K; then I, a missing letter and Q; then N, D, R. First tap: each letter gets its place in the alphabet, and in the first column F + E = 6 + 5 = 11, which is K. Second tap: the same rule works in the third column, N + D = 14 + 4 = 18, which is R. Last tap: in the middle column, 9 + ? = 17, so ? = 8, which is H.',
+    },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],
       label:

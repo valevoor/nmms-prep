@@ -224,6 +224,15 @@ const genEn = {
   mxRow: (eq: string) => `In every row, call the numbers a, b and c from the left: ${eq}.`,
   mxCol: (eq: string) => `In every column, call the numbers a, b and c from the top: ${eq}.`,
 
+  // Letter matrix
+  lmPrompt: 'Find the missing letter in the matrix.',
+  lmPlaces: "Use each letter's place in the alphabet (A = 1 … Z = 26). ",
+  lmStep: (col: boolean, p: number, q: number) =>
+    `In every ${col ? 'column, from the top' : 'row, from the left'}, go forward ${p} letter${p === 1 ? '' : 's'}, then ${q} more.`,
+  lmOpp: "In every row, the number is the place of the first letter (A = 1 … Z = 26), and the last letter is the first letter's opposite: A ↔ Z, B ↔ Y, C ↔ X … (the two places add up to 27).",
+  lmSkip: 'In every row, the number is how many letters are skipped going from the first letter to the last.',
+  lmBetween: "In every row, look at the letter between the first and the last letter. The number is that letter's place counted back from Z (Z = 1 … A = 26), which is 27 − its place.",
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -389,6 +398,9 @@ const genEn = {
     'mx-row': 'One rule works across every row',
     'mx-col': 'One rule works down every column',
     'mx-other': 'Digits, letters or the same result in every row',
+    'mx-lstep': 'Letters step on by the same gaps in every row or column',
+    'mx-lcalc': "Add, take away or multiply the letters' places",
+    'mx-lnum': 'The number is a place, an opposite place or a gap',
   } as Record<PatternId, string>,
 }
 
@@ -592,6 +604,12 @@ const genKn: GenText = {
   mxPrompt: 'ಕೊಟ್ಟಿರುವ ಮಾತೃಕೆಯಲ್ಲಿ ಬಿಟ್ಟು ಹೋಗಿರುವ ಸಂಖ್ಯೆಯನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.',
   mxRow: (eq) => `ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಎಡದಿಂದ ಸಂಖ್ಯೆಗಳನ್ನು a, b ಮತ್ತು c ಎನ್ನಿ: ${eq}.`,
   mxCol: (eq) => `ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲಿ ಮೇಲಿನಿಂದ ಸಂಖ್ಯೆಗಳನ್ನು a, b ಮತ್ತು c ಎನ್ನಿ: ${eq}.`,
+  lmPrompt: 'ಕೊಟ್ಟಿರುವ ಮಾತೃಕೆಯಲ್ಲಿ ಬಿಟ್ಟು ಹೋಗಿರುವ ಅಕ್ಷರವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.',
+  lmPlaces: 'ಪ್ರತಿ ಅಕ್ಷರದ ವರ್ಣಮಾಲೆಯ ಸ್ಥಾನವನ್ನು ಬಳಸಿ (A = 1 … Z = 26). ',
+  lmStep: (col, p, q) => `ಪ್ರತಿ ${col ? 'ಕಂಬಸಾಲಿನಲ್ಲಿ ಮೇಲಿನಿಂದ' : 'ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಎಡದಿಂದ'} ${p} ಅಕ್ಷರ ಮುಂದಕ್ಕೆ ಹೋಗಿ, ನಂತರ ಇನ್ನೂ ${q} ಅಕ್ಷರ ಮುಂದಕ್ಕೆ ಹೋಗಿ.`,
+  lmOpp: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಸಂಖ್ಯೆಯು ಮೊದಲ ಅಕ್ಷರದ ಸ್ಥಾನ (A = 1 … Z = 26), ಮತ್ತು ಕೊನೆಯ ಅಕ್ಷರವು ಮೊದಲ ಅಕ್ಷರದ ವಿರುದ್ಧ ಅಕ್ಷರ: A ↔ Z, B ↔ Y, C ↔ X … (ಎರಡು ಸ್ಥಾನಗಳ ಮೊತ್ತ 27).',
+  lmSkip: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಸಂಖ್ಯೆಯು ಮೊದಲ ಅಕ್ಷರದಿಂದ ಕೊನೆಯ ಅಕ್ಷರಕ್ಕೆ ಹೋಗುವಾಗ ಬಿಟ್ಟ ಅಕ್ಷರಗಳ ಸಂಖ್ಯೆ.',
+  lmBetween: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಮೊದಲ ಮತ್ತು ಕೊನೆಯ ಅಕ್ಷರಗಳ ನಡುವಿನ ಅಕ್ಷರವನ್ನು ನೋಡಿ. ಸಂಖ್ಯೆಯು Z ನಿಂದ ಹಿಂದಕ್ಕೆ ಎಣಿಸಿದಾಗ ಆ ಅಕ್ಷರದ ಸ್ಥಾನ (Z = 1 … A = 26), ಅಂದರೆ 27 − ಅದರ ಸ್ಥಾನ.',
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -747,6 +765,9 @@ const genKn: GenText = {
     'mx-row': 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲೂ ಒಂದೇ ನಿಯಮ',
     'mx-col': 'ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲೂ ಒಂದೇ ನಿಯಮ',
     'mx-other': 'ಅಂಕಿಗಳು, ಅಕ್ಷರಗಳು ಅಥವಾ ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲೂ ಒಂದೇ ಫಲಿತಾಂಶ',
+    'mx-lstep': 'ಪ್ರತಿ ಸಾಲಿನಲ್ಲೂ ಅಕ್ಷರಗಳು ಒಂದೇ ಅಂತರದಲ್ಲಿ ಮುಂದೆ ಹೋಗುತ್ತವೆ',
+    'mx-lcalc': 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ, ಕಳೆಯಿರಿ ಅಥವಾ ಗುಣಿಸಿ',
+    'mx-lnum': 'ಸಂಖ್ಯೆಯು ಸ್ಥಾನ, ವಿರುದ್ಧ ಸ್ಥಾನ ಅಥವಾ ಅಂತರ',
   },
 }
 

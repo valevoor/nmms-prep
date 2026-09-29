@@ -22,6 +22,8 @@ import blood from './mat/blood-relations.json'
 import signs from './mat/signs-symbols.json'
 import matrix from './mat/number-matrix.json'
 import matrixMeta from './mat/number-matrix.meta.json'
+import letterMatrix from './mat/letter-matrix.json'
+import letterMatrixMeta from './mat/letter-matrix.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -81,6 +83,7 @@ import { generateNumberSeries } from '../lib/generators/numberSeries'
 import { generateSequence } from '../lib/generators/sequence'
 import { generateSigns } from '../lib/generators/signs'
 import { generateNumberMatrix } from '../lib/generators/numberMatrix'
+import { generateLetterMatrix } from '../lib/generators/letterMatrix'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -397,6 +400,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: matrixMeta as TopicMeta,
     missing: 'number',
     generate: generateNumberMatrix,
+  },
+  {
+    id: 'letter-matrix',
+    chapter: 28,
+    name: 'Letter Matrix',
+    questions: visible(letterMatrix.questions as Question[]),
+    meta: letterMatrixMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateLetterMatrix,
   },
 ]
 

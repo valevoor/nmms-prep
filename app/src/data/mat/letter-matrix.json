@@ -1,0 +1,292 @@
+{
+  "topic": "letter-matrix",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 28 \"Letter Matrix\" (questions: PDF pages 79–80, solutions: PDF pages 162–163). tools/check_letter_matrix.ts puts each option into the matrix and checks the rule in every row or column. Q8's key marks A but writes its value as 12; the letters skipped from M to V number 8, which is option A. Q15 prints its third option as \"B) Z\"; it is C.",
+  "questions": [
+    {
+      "id": "lm-b01",
+      "bookNo": 1,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lstep",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["B", "D", "G"],
+        ["H", "J", "M"],
+        ["N", "P", "?"]
+      ],
+      "options": { "A": "R", "B": "S", "C": "T", "D": "U" },
+      "answer": "B",
+      "rule": "In each row, go forward 2 letters, then 3 more (skip 1 letter, then 2).",
+      "working": "B → D (+2) → G (+3); H → J (+2) → M (+3); N → P (+2) → S (+3)"
+    },
+    {
+      "id": "lm-b02",
+      "bookNo": 2,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lstep",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["U", "W", "Z"],
+        ["A", "C", "F"],
+        ["G", "I", "?"]
+      ],
+      "options": { "A": "J", "B": "K", "C": "L", "D": "M" },
+      "answer": "C",
+      "rule": "In each row, go forward 2 letters, then 3 more (skip 1 letter, then 2).",
+      "working": "U → W (+2) → Z (+3); A → C (+2) → F (+3); G → I (+2) → L (+3)"
+    },
+    {
+      "id": "lm-b03",
+      "bookNo": 3,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["O", "T", "Y"],
+        ["C", "K", "G"],
+        ["L", "I", "?"]
+      ],
+      "options": { "A": "Q", "B": "R", "C": "S", "D": "T" },
+      "answer": "B",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter − middle letter = bottom letter.",
+      "working": "O − C = 15 − 3 = 12 = L; T − K = 20 − 11 = 9 = I; Y − G = 25 − 7 = 18 = R"
+    },
+    {
+      "id": "lm-b04",
+      "bookNo": 4,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["F", "I", "N"],
+        ["E", "?", "D"],
+        ["K", "Q", "R"]
+      ],
+      "options": { "A": "H", "B": "I", "C": "J", "D": "K" },
+      "answer": "A",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter + middle letter = bottom letter.",
+      "working": "F + E = 6 + 5 = 11 = K; N + D = 14 + 4 = 18 = R; I + ? = Q → 9 + ? = 17 → ? = 8 = H"
+    },
+    {
+      "id": "lm-b05",
+      "bookNo": 5,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["W", "S", "N"],
+        ["M", "I", "L"],
+        ["J", "?", "B"]
+      ],
+      "options": { "A": "J", "B": "K", "C": "L", "D": "M" },
+      "answer": "A",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter − middle letter = bottom letter.",
+      "working": "W − M = 23 − 13 = 10 = J; N − L = 14 − 12 = 2 = B; S − I = 19 − 9 = 10 = J"
+    },
+    {
+      "id": "lm-b06",
+      "bookNo": 6,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-lnum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["C", "3", "X"],
+        ["O", "15", "L"],
+        ["M", "13", "?"]
+      ],
+      "options": { "A": "J", "B": "K", "C": "L", "D": "N" },
+      "answer": "D",
+      "rule": "In each row, the number is the place of the first letter (A = 1 … Z = 26), and the last letter is the first letter's opposite: A ↔ Z, B ↔ Y, C ↔ X … (the two places add up to 27).",
+      "working": "C = 3, 27 − 3 = 24 = X; O = 15, 27 − 15 = 12 = L; M = 13, 27 − 13 = 14 = N"
+    },
+    {
+      "id": "lm-b07",
+      "bookNo": 7,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lnum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["R", "18", "I"],
+        ["V", "22", "E"],
+        ["Y", "25", "?"]
+      ],
+      "options": { "A": "A", "B": "B", "C": "W", "D": "X" },
+      "answer": "B",
+      "rule": "In each row, the number is the place of the first letter (A = 1 … Z = 26), and the last letter is the first letter's opposite: A ↔ Z, B ↔ Y, C ↔ X … (the two places add up to 27).",
+      "working": "R = 18, 27 − 18 = 9 = I; V = 22, 27 − 22 = 5 = E; Y = 25, 27 − 25 = 2 = B"
+    },
+    {
+      "id": "lm-b08",
+      "bookNo": 8,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lnum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["F", "2", "I"],
+        ["C", "4", "H"],
+        ["M", "?", "V"]
+      ],
+      "options": { "A": "8", "B": "6", "C": "4", "D": "2" },
+      "answer": "A",
+      "rule": "In each row, the number is how many letters are skipped going from the first letter to the last.",
+      "working": "F (6) → I (9): G and H are skipped, 9 − 6 − 1 = 2; C (3) → H (8): 8 − 3 − 1 = 4; M (13) → V (22): N to U are skipped, 22 − 13 − 1 = 8",
+      "note": "The book's key marks A but writes \"skip 12 letters after M\"; from M to V, 8 letters (N to U) are skipped, and 8 is option A."
+    },
+    {
+      "id": "lm-b09",
+      "bookNo": 9,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lnum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["M", "13", "O"],
+        ["Q", "9", "S"],
+        ["C", "?", "E"]
+      ],
+      "options": { "A": "23", "B": "21", "C": "5", "D": "6" },
+      "answer": "A",
+      "rule": "In each row, look at the letter between the first and the last letter (M, N, O → N). The number is that letter's place counted back from Z (Z = 1 … A = 26), which is 27 − its place.",
+      "working": "M, N, O: N = 14, 27 − 14 = 13; Q, R, S: R = 18, 27 − 18 = 9; C, D, E: D = 4, 27 − 4 = 23"
+    },
+    {
+      "id": "lm-b10",
+      "bookNo": 10,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lnum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["P", "10", "R"],
+        ["K", "15", "M"],
+        ["U", "?", "W"]
+      ],
+      "options": { "A": "4", "B": "5", "C": "25", "D": "24" },
+      "answer": "B",
+      "rule": "In each row, look at the letter between the first and the last letter (M, N, O → N). The number is that letter's place counted back from Z (Z = 1 … A = 26), which is 27 − its place.",
+      "working": "P, Q, R: Q = 17, 27 − 17 = 10; K, L, M: L = 12, 27 − 12 = 15; U, V, W: V = 22, 27 − 22 = 5"
+    },
+    {
+      "id": "lm-b11",
+      "bookNo": 11,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["N", "G", "2"],
+        ["X", "H", "3"],
+        ["P", "?", "4"]
+      ],
+      "options": { "A": "C", "B": "D", "C": "E", "D": "F" },
+      "answer": "B",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each row, middle letter × number = first letter.",
+      "working": "G × 2 = 7 × 2 = 14 = N; H × 3 = 8 × 3 = 24 = X; ? × 4 = P = 16 → ? = 4 = D"
+    },
+    {
+      "id": "lm-b12",
+      "bookNo": 12,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["R", "B", "9"],
+        ["U", "C", "7"],
+        ["H", "?", "8"]
+      ],
+      "options": { "A": "B", "B": "A", "C": "D", "D": "C" },
+      "answer": "B",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each row, number × middle letter = first letter.",
+      "working": "9 × B = 9 × 2 = 18 = R; 7 × C = 7 × 3 = 21 = U; 8 × ? = H = 8 → ? = 1 = A"
+    },
+    {
+      "id": "lm-b13",
+      "bookNo": 13,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lstep",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["E", "J", "M"],
+        ["Y", "D", "G"],
+        ["L", "?", "T"]
+      ],
+      "options": { "A": "Q", "B": "F", "C": "S", "D": "Z" },
+      "answer": "A",
+      "rule": "In each row, go forward 5 letters, then 3 more (skip 4 letters, then 2). After Z, count on from A.",
+      "working": "E → J (+5) → M (+3); Y → D (+5, on past Z to A) → G (+3); L → Q (+5) → T (+3)"
+    },
+    {
+      "id": "lm-b14",
+      "bookNo": 14,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["C", "F", "D"],
+        ["O", "R", "?"],
+        ["E", "C", "F"]
+      ],
+      "options": { "A": "Q", "B": "X", "C": "S", "D": "Z" },
+      "answer": "B",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter × bottom letter = middle letter.",
+      "working": "C × E = 3 × 5 = 15 = O; F × C = 6 × 3 = 18 = R; D × F = 4 × 6 = 24 = X"
+    },
+    {
+      "id": "lm-b15",
+      "bookNo": 15,
+      "sourcePage": 80,
+      "keyFrom": "book",
+      "pattern": "mx-lcalc",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["H", "F", "C"],
+        ["P", "?", "R"],
+        ["B", "D", "F"]
+      ],
+      "options": { "A": "X", "B": "A", "C": "Z", "D": "E" },
+      "answer": "A",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter × bottom letter = middle letter.",
+      "working": "H × B = 8 × 2 = 16 = P; C × F = 3 × 6 = 18 = R; F × D = 6 × 4 = 24 = X"
+    }
+  ]
+}

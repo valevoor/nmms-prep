@@ -175,6 +175,10 @@ export type PatternId =
   | 'mx-row'
   | 'mx-col'
   | 'mx-other'
+  // Letter matrix (Chapter 28)
+  | 'mx-lstep'
+  | 'mx-lcalc'
+  | 'mx-lnum'
 
 export interface Question {
   id: string

@@ -278,6 +278,23 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Letter Matrix: a 3 × 3 table of letters with the bottom right one missing
+  28: (
+    <>
+      <path d="M17.5 4v40M30.5 4v40M4 17.5h40M4 30.5h40" />
+      <rect x={4} y={4} width={40} height={40} rx={3} />
+      <text x={10.75} y={15} textAnchor="middle" className="art-text art-small">
+        B
+      </text>
+      <text x={24} y={28} textAnchor="middle" className="art-text art-small">
+        J
+      </text>
+      <rect x={31.5} y={31.5} width={11.5} height={11.5} rx={2} className="art-tile-accent" />
+      <text x={37.25} y={40.5} textAnchor="middle" className="art-text art-small art-fill-accent">
+        ?
+      </text>
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */
