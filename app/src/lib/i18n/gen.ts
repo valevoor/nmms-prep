@@ -213,6 +213,12 @@ const genEn = {
   aoRuleSwapNums: 'Swap the two numbers, then work out the left side: × and ÷ first, then + and −.',
   aoRuleMeaning: 'Write each option again with the real signs, then work it out: × and ÷ first, then + and −.',
 
+  // Signs and symbols
+  ssFillAsk: 'Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?',
+  ssSwapAsk: 'Which two signs or two numbers must be swapped to make the statement true?',
+  ssRuleFill: 'Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.',
+  ssRuleSwap: 'Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.',
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -338,6 +344,8 @@ const genEn = {
     'ops-swap': 'Swap two signs',
     'ops-swap-num': 'Swap two numbers',
     'ops-meaning': 'Signs with changed meanings',
+    'sign-fill': 'Put signs, =, < or > in place of *',
+    'sign-swap': 'Swap two signs or two numbers',
     'grid-shift': 'The same shape, moved across the table',
     'grid-flip': 'The same shape, flipped like a mirror image',
     'fig-rotate': 'The figure turns',
@@ -544,6 +552,10 @@ const genKn: GenText = {
   aoRuleSwapSigns: 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅವು ಇರುವ ಎಲ್ಲಾ ಕಡೆ ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಎಡಭಾಗವನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
   aoRuleSwapNums: 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಎಡಭಾಗವನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
   aoRuleMeaning: 'ಪ್ರತಿ ಆಯ್ಕೆಯನ್ನು ನಿಜವಾದ ಚಿಹ್ನೆಗಳೊಂದಿಗೆ ಮತ್ತೆ ಬರೆಯಿರಿ, ನಂತರ ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −.',
+  ssFillAsk: 'ಹೇಳಿಕೆ ಸರಿಯಾಗುವಂತೆ ಪ್ರತಿ * ಜಾಗದಲ್ಲಿ ಕ್ರಮವಾಗಿ ಚಿಹ್ನೆಗಳನ್ನು ಇಡಿ. ಯಾವ ಚಿಹ್ನೆಗಳ ಗುಂಪು ಸರಿ?',
+  ssSwapAsk: 'ಹೇಳಿಕೆ ಸರಿಯಾಗಲು ಯಾವ ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅಥವಾ ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಬೇಕು?',
+  ssRuleFill: 'ಪ್ರತಿ ಚಿಹ್ನೆಗಳ ಗುಂಪನ್ನು ಒಂದೊಂದಾಗಿ ಪ್ರಯತ್ನಿಸಿ. =, < ಅಥವಾ > ನ ಪ್ರತಿ ಬದಿಯನ್ನು ಬೇರೆಯಾಗಿ ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −. ನಂತರ ಎರಡು ಬದಿಗಳನ್ನು ಹೋಲಿಸಿ.',
+  ssRuleSwap: 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅಥವಾ ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಪ್ರತಿ ಬದಿಯನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −. ನಂತರ ಎರಡು ಬದಿಗಳನ್ನು ಹೋಲಿಸಿ.',
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -659,6 +671,8 @@ const genKn: GenText = {
     'ops-swap': 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ',
     'ops-swap-num': 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ',
     'ops-meaning': 'ಅರ್ಥ ಬದಲಾದ ಚಿಹ್ನೆಗಳು',
+    'sign-fill': '* ಜಾಗದಲ್ಲಿ ಚಿಹ್ನೆಗಳು, =, < ಅಥವಾ > ಇಡಿ',
+    'sign-swap': 'ಎರಡು ಚಿಹ್ನೆಗಳು ಅಥವಾ ಎರಡು ಸಂಖ್ಯೆಗಳ ಅದಲು ಬದಲು',
     'grid-shift': 'ಅದೇ ಆಕಾರ, ಕೋಷ್ಟಕದಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ',
     'grid-flip': 'ಅದೇ ಆಕಾರ, ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ತಿರುಗಿಸಲಾಗಿದೆ',
     'fig-rotate': 'ಚಿತ್ರವು ತಿರುಗುತ್ತದೆ',

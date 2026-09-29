@@ -140,6 +140,17 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Signs and Symbols: 2 ? 9, choosing between =, < and > (the answer is <)
+  26: (
+    <>
+      <Tile x={1} y={4} label="2" />
+      <Tile x={17} y={4} label="?" />
+      <Tile x={33} y={4} label="9" />
+      <Tile x={1} y={27} label="=" />
+      <Tile x={17} y={27} label="<" accent />
+      <Tile x={33} y={27} label=">" />
+    </>
+  ),
   // Mirror Image
   8: (
     <>

@@ -15,6 +15,8 @@ import figSeriesMeta from './mat/figure-series.meta.json'
 import arithmetic from './mat/arithmetical-operations.json'
 import arithmeticMeta from './mat/arithmetical-operations.meta.json'
 import blood from './mat/blood-relations.json'
+import signs from './mat/signs-symbols.json'
+import signsMeta from './mat/signs-symbols.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -49,6 +51,7 @@ import { generateOddOne } from '../lib/generators/oddOne'
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/generators/numberAnalogy'
 import { generateNumberSeries } from '../lib/generators/numberSeries'
 import { generateSequence } from '../lib/generators/sequence'
+import { generateSigns } from '../lib/generators/signs'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -229,6 +232,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: arithmeticMeta as TopicMeta,
     missing: 'answer',
     generate: generateArithmetic,
+  },
+  {
+    id: 'signs-symbols',
+    chapter: 26,
+    name: 'Signs and Symbols',
+    questions: visible(signs.questions as Question[]),
+    meta: signsMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateSigns,
   },
 ]
 

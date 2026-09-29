@@ -1,0 +1,324 @@
+{
+  "topic": "signs-symbols",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 26 (questions: PDF page 77, solutions: PDF pages 159–160). The key's numbering drifts: it has an extra entry 5 for a question that is not printed, so key 6 is Q5 … key 15 is Q14.",
+  "questions": [
+    {
+      "id": "ss-b01",
+      "bookNo": 1,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "6 * 8 * 9 * 7"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "×, <, ×",
+        "B": "+, >, +",
+        "C": "+, −, =",
+        "D": "=, ×, ÷"
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "6 × 8 < 9 × 7 → 48 < 63"
+    },
+    {
+      "id": "ss-b02",
+      "bookNo": 2,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "22 * 33 * 66 * 11"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "=, −, ÷",
+        "B": "+, =, −",
+        "C": "−, +, =",
+        "D": "+, −, ="
+      },
+      "answer": "B",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "22 + 33 = 66 − 11 → 55 = 55"
+    },
+    {
+      "id": "ss-b03",
+      "bookNo": 3,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "48 * 8 * 8 * 48"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "÷, =, +",
+        "B": "+, ÷, =",
+        "C": "+, =, −",
+        "D": "÷, ×, ="
+      },
+      "answer": "D",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "48 ÷ 8 × 8 = 48 → 6 × 8 = 48"
+    },
+    {
+      "id": "ss-b04",
+      "bookNo": 4,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "11 * 8 * 7 * 10"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "−, +, =",
+        "B": "+, −, =",
+        "C": "+, =, +",
+        "D": "−, =, +"
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "11 − 8 + 7 = 10 → 3 + 7 = 10"
+    },
+    {
+      "id": "ss-b05",
+      "bookNo": 5,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "3 * 45 * 15 * 2 * 3"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "+, ÷, +, =",
+        "B": "+, =, ×, +",
+        "C": "+, ÷, =, ×",
+        "D": "=, ÷, ×, ÷"
+      },
+      "answer": "C",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "3 + 45 ÷ 15 = 2 × 3 → 3 + 3 = 6 → 6 = 6"
+    },
+    {
+      "id": "ss-b06",
+      "bookNo": 6,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "30 * 8 * 2 * 40 * 6"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "+, ÷, =, −",
+        "B": "÷, ×, −, =",
+        "C": "=, +, ÷, ×",
+        "D": "−, =, ×, +"
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "30 + 8 ÷ 2 = 40 − 6 → 30 + 4 = 34 → 34 = 34"
+    },
+    {
+      "id": "ss-b07",
+      "bookNo": 7,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "13 * 5 * 15 * 5 * 9"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "×, <, ÷, ×",
+        "B": "×, −, >, +",
+        "C": "+, <, −, ×",
+        "D": "−, ×, >, +"
+      },
+      "answer": "B",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "13 × 5 − 15 > 5 + 9 → 65 − 15 = 50; 5 + 9 = 14 → 50 > 14"
+    },
+    {
+      "id": "ss-b08",
+      "bookNo": 8,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "18 * 3 * 5 * 17 * 47"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "÷, ×, +, =",
+        "B": "×, +, =, −",
+        "C": "÷, +, −, =",
+        "D": "×, =, ×, −"
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "18 ÷ 3 × 5 + 17 = 47 → 6 × 5 + 17 = 30 + 17 = 47"
+    },
+    {
+      "id": "ss-b09",
+      "bookNo": 9,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "23 * 8 * 4 * 21 * 7"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "=, +, ×, −",
+        "B": ">, ×, −, +",
+        "C": "=, ÷, ×, ÷",
+        "D": "<, ÷, −, +"
+      },
+      "answer": "B",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "23 > 8 × 4 − 21 + 7 → 32 − 21 + 7 = 18 → 23 > 18"
+    },
+    {
+      "id": "ss-b10",
+      "bookNo": 10,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "35 * 14 * 7 * 84 * 14"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "−, =, ÷, ×",
+        "B": "+, =, ×, ÷",
+        "C": "÷, ×, =, +",
+        "D": "×, ÷, =, −"
+      },
+      "answer": "D",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "35 × 14 ÷ 7 = 84 − 14 → 490 ÷ 7 = 70 → 70 = 70"
+    },
+    {
+      "id": "ss-b11",
+      "bookNo": 11,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-fill",
+      "layout": "text",
+      "terms": [
+        "14 * 7 * 14 * 28 * 28"
+      ],
+      "prompt": "Put the signs in place of each * in order, so that the statement is true. Which set of signs is right?",
+      "options": {
+        "A": "+, ÷, ×, =",
+        "B": "÷, +, ÷, =",
+        "C": "+, −, +, =",
+        "D": "÷, ×, +, ="
+      },
+      "answer": "A",
+      "rule": "Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "14 + 7 ÷ 14 × 28 = 28 → 14 + 1/2 × 28 = 14 + 14 = 28"
+    },
+    {
+      "id": "ss-b12",
+      "bookNo": 12,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-swap",
+      "layout": "text",
+      "terms": [
+        "91 = 7 + 36 ÷ 54 − 5"
+      ],
+      "prompt": "Which two signs or two numbers must be swapped to make the statement true?",
+      "options": {
+        "A": "91 & 54",
+        "B": "+ & ÷",
+        "C": "= & ÷",
+        "D": "7 & 5"
+      },
+      "answer": "C",
+      "rule": "Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "= ↔ ÷: 91 ÷ 7 + 36 = 54 − 5 → 13 + 36 = 49 → 49 = 49"
+    },
+    {
+      "id": "ss-b13",
+      "bookNo": 13,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-swap",
+      "layout": "text",
+      "terms": [
+        "32 × 4 ÷ 6 + 12 = 60"
+      ],
+      "prompt": "Which two signs or two numbers must be swapped to make the statement true?",
+      "options": {
+        "A": "÷ & +",
+        "B": "4 & 12",
+        "C": "× & ÷",
+        "D": "4 & 6"
+      },
+      "answer": "C",
+      "rule": "Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "× ↔ ÷: 32 ÷ 4 × 6 + 12 = 8 × 6 + 12 = 48 + 12 = 60",
+      "status": "needs-review",
+      "note": "Two options work. The key's C (swap × and ÷) gives 32 ÷ 4 × 6 + 12 = 60, but D (swap 4 and 6) gives 32 × 6 ÷ 4 + 12 = 48 + 12 = 60 too."
+    },
+    {
+      "id": "ss-b14",
+      "bookNo": 14,
+      "sourcePage": 77,
+      "keyFrom": "book",
+      "pattern": "sign-swap",
+      "layout": "text",
+      "terms": [
+        "7 + 9 ÷ 27 × 7 = 28"
+      ],
+      "prompt": "Which two signs or two numbers must be swapped to make the statement true?",
+      "options": {
+        "A": "÷ & ×",
+        "B": "÷ & +",
+        "C": "7 & 9",
+        "D": "9 & 27"
+      },
+      "answer": "D",
+      "rule": "Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "9 ↔ 27: 7 + 27 ÷ 9 × 7 = 7 + 3 × 7 = 7 + 21 = 28"
+    },
+    {
+      "id": "ss-b15",
+      "bookNo": 15,
+      "sourcePage": 77,
+      "keyFrom": "solved",
+      "pattern": "sign-swap",
+      "layout": "text",
+      "terms": [
+        "14 × 22 + 5 ÷ 2 = 81"
+      ],
+      "prompt": "Which two signs or two numbers must be swapped to make the statement true?",
+      "options": {
+        "A": "× & ÷",
+        "B": "22 & 5",
+        "C": "÷ & =",
+        "D": "14 & 22"
+      },
+      "answer": "B",
+      "rule": "Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.",
+      "working": "22 ↔ 5: 14 × 5 + 22 ÷ 2 = 70 + 11 = 81",
+      "note": "The book's key has no answer for this question; we worked it out."
+    }
+  ]
+}

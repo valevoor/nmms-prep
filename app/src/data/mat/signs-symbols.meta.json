@@ -1,0 +1,35 @@
+{
+  "topic": "signs-symbols",
+  "intro": "Here you put the signs (+, −, ×, ÷ and =, < or >) between numbers, or swap two signs or two numbers, so that the statement becomes true. The =, < or > splits it into two sides, and each side is worked out on its own.",
+  "tips": [
+    {
+      "title": "The = splits the statement in two",
+      "body": "Whatever goes in the = (or < or >) place divides the numbers into a left side and a right side. Work out each side on its own, then compare. In 22 + 33 = 66 − 11 the left side is 55 and the right side is 55."
+    },
+    {
+      "title": "× and ÷ before + and −",
+      "visual": "order",
+      "body": "On each side, work out × and ÷ first, from left to right, then + and −. In 12 + 12 − 12 ÷ 12 − 12, first 12 ÷ 12 = 1, which leaves 12 + 12 − 1 − 12 = 11.",
+      "caption": "On each side: × and ÷ first, then + and −."
+    },
+    {
+      "title": "< and > mean smaller and bigger",
+      "body": "6 × 8 < 9 × 7 says the left side (48) is smaller than the right side (63). The open mouth of < or > always faces the bigger side."
+    },
+    {
+      "title": "Find where the = goes first",
+      "body": "Look at the options: the = (or < or >) is in a different place in each. Try the likely place first. In 30 * 8 * 2 * 40 * 6, 40 − 6 = 34 and 30 + 8 ÷ 2 = 34, so the = sits between 2 and 40."
+    },
+    {
+      "title": "Swapping signs or numbers",
+      "body": "Swap exactly the two things named, even the = sign. In 91 = 7 + 36 ÷ 54 − 5, swapping = and ÷ gives 91 ÷ 7 + 36 = 54 − 5, which is 13 + 36 = 49 on both sides."
+    }
+  ],
+  "workedExamples": [
+    "ss-b02",
+    "ss-b07",
+    "ss-b12",
+    "ss-b14"
+  ],
+  "cheatSheet": "none"
+}

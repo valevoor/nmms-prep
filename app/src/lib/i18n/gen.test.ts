@@ -14,6 +14,7 @@ import { generateLetterSeries, LETTER_PATTERNS } from '../generators/letterSerie
 import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../generators/numberAnalogy'
 import { generateOddLetters } from '../generators/oddLetters'
 import { generateSequence } from '../generators/sequence'
+import { generateSigns } from '../generators/signs'
 import { generateOddOne } from '../generators/oddOne'
 import { GENERATOR_PATTERNS, generateNumberSeries, mulberry32 } from '../generators/numberSeries'
 import { GEN } from './gen'
@@ -83,6 +84,11 @@ describe('generated questions carry Kannada', () => {
   it('arithmetical operations', () => {
     const rng = mulberry32(25)
     for (let n = 0; n < 1000; n++) expectKannada(generateArithmetic(rng))
+  })
+
+  it('signs and symbols', () => {
+    const rng = mulberry32(26)
+    for (let n = 0; n < 1000; n++) expectKannada(generateSigns(rng))
   })
 
   it('clock', () => {

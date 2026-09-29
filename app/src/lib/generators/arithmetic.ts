@@ -9,7 +9,7 @@ export type Sign = '+' | '−' | '×' | '÷'
 export const SIGNS: Sign[] = ['+', '−', '×', '÷']
 
 /** An exact fraction [numerator, denominator], denominator > 0. */
-type Frac = [number, number]
+export type Frac = [number, number]
 const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : Math.abs(a))
 const frac = (n: number, d: number): Frac => {
   const g = gcd(n, d) || 1
@@ -51,7 +51,7 @@ export function evaluate(nums: number[], ops: Sign[]): Frac | undefined {
  * The value when it is easy to work out by hand: every × and ÷ step gives a whole number, and so
  * does the answer, which is not negative. Otherwise undefined.
  */
-function niceValue(nums: number[], ops: Sign[]): number | undefined {
+export function niceValue(nums: number[], ops: Sign[]): number | undefined {
   let cur = nums[0]
   for (let i = 0; i < ops.length; i++) {
     if (ops[i] === '÷' && cur % nums[i + 1] !== 0) return undefined

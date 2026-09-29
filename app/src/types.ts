@@ -110,6 +110,9 @@ export type PatternId =
   | 'ops-swap'
   | 'ops-swap-num'
   | 'ops-meaning'
+  // Signs and symbols (Chapter 26)
+  | 'sign-fill'
+  | 'sign-swap'
   // Number patterns (Chapter 15)
   | 'grid-shift'
   // Analogy of figures (Chapter 1)
