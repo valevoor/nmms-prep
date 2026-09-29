@@ -14,7 +14,7 @@ interface Props {
 /** The question itself: a series or analogy, or (layout 'text') a sentence with an optional table and sequence. */
 export function QuestionStem({ q, reveal, size = 'md' }: Props) {
   const { prompt } = useQuestionText(q)
-  if (q.figures) return <FigureStem q={q} reveal={!!reveal} size={size} />
+  if (q.figures && q.layout !== 'text') return <FigureStem q={q} reveal={!!reveal} size={size} />
   if (q.layout !== 'text')
     return (
       <>
@@ -24,6 +24,7 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
     )
   return (
     <div className={`stem stem-${size}`}>
+      {q.figures && <FigureStem q={q} size={size} />}
       {q.table && (
         <table className="code-table">
           <tbody>

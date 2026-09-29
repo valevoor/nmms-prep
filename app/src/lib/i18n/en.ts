@@ -67,6 +67,7 @@ export const en = {
     2: 'Figure Series',
     3: 'Hidden Figures',
     4: 'Similar Figures in Different Position',
+    5: 'Intersecting Figures',
     8: 'Mirror Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
@@ -264,6 +265,11 @@ export const en = {
     check: {
       buttons: ['Try 7', 'Try 8'],
       label: '1, 2, 4, ?, 16, 32. Trying 7 fits the first gaps but breaks the next one. 8 fits every gap: ×2.',
+    },
+    venn: {
+      buttons: ['Both ○ and □', 'Only ○'],
+      label:
+        'A circle, a rectangle and a triangle overlap, with a number in each part. First tap: the parts inside both the circle and the rectangle light up, 5 and 10, so 15 people are in both. Second tap: only the part of the circle outside the other two shapes lights up, 9.',
     },
     grid: {
       lightUp: 'Light up',

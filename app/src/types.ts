@@ -6,7 +6,7 @@ export interface FamilyTree {
 
 /** One shape in a generated figure. Coordinates are in a 100 × 100 box, y down; angles in degrees, clockwise. */
 export interface FigItem {
-  shape: 'poly' | 'circle' | 'dot' | 'arrow' | 'flag' | 'ell' | 'plus' | 'dots'
+  shape: 'poly' | 'circle' | 'dot' | 'arrow' | 'flag' | 'ell' | 'plus' | 'dots' | 'rect' | 'text'
   x: number
   y: number
   size: number
@@ -16,10 +16,16 @@ export interface FigItem {
   /** Mirrored left–right before turning (only changes the look of 'flag' and 'ell'). */
   flip?: boolean
   fill?: 'none' | 'solid' | 'hatch'
+  /** 'rect': its height (`size` is its width). */
+  h?: number
+  /** 'text': what is written (`size` is the font size). */
+  label?: string
 }
 
 /** A figure drawn by the app: an optional frame (a box, or a circle cut into 4 or 8 parts) and shapes. */
 export interface Drawing {
+  /** Width of the box (default 100; the height is always 100). */
+  w?: number
   frame?: 'square' | 'circle' | 'quad' | 'oct'
   /** Filled parts of a 'quad' or 'oct' frame, numbered clockwise from the top. */
   shaded?: number[]
@@ -129,6 +135,9 @@ export type PatternId =
   | 'grid-flip'
   // Hidden figures (Chapter 3)
   | 'fig-hidden'
+  // Intersecting figures (Chapter 5)
+  | 'venn-count'
+  | 'venn-part'
 
 export interface Question {
   id: string

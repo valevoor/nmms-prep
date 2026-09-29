@@ -16,7 +16,7 @@ export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg
       <p className="rule">
         <strong>{t.common.rule}</strong> {text.rule}
       </p>
-      {q.figures ? (
+      {q.figures && q.layout !== 'text' ? (
         <FigureStem q={q} reveal={q.kind !== 'rule'} size={size === 'lg' ? 'md' : 'sm'} />
       ) : q.kind === 'wrong' ? (
         // Show the repaired series: the fake number replaced by the right one (when there is one right value).

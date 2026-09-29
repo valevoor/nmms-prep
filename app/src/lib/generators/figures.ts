@@ -17,6 +17,8 @@ const TURNS: Record<FigItem['shape'], (it: FigItem) => number> = {
   arrow: () => 1,
   flag: () => 1,
   ell: () => 1,
+  rect: (it) => ((it.h ?? it.size) === it.size ? 4 : 2),
+  text: () => 1,
 }
 /** Shapes that look different when mirrored (the rest are symmetric about their own upright axis). */
 const CHIRAL = new Set<FigItem['shape']>(['flag', 'ell'])

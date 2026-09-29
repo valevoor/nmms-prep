@@ -1,0 +1,366 @@
+{
+  "topic": "intersecting-figures",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 5 (questions: PDF pages 22–24, solutions: PDF pages 115–117). Five diagrams, three questions on each; every key answer was checked by reading which shapes each number lies in.",
+  "questions": [
+    {
+      "id": "if-b01",
+      "bookNo": 1,
+      "sourcePage": 22,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of cricket players who are also badminton players.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set1.png"
+        ]
+      },
+      "options": {
+        "A": "22",
+        "B": "26",
+        "C": "42",
+        "D": "32"
+      },
+      "answer": "A",
+      "rule": "Cricket players are inside the triangle and badminton players inside the rectangle. Add every number inside both shapes.",
+      "working": "Inside the triangle and the rectangle: 12 + 10 = 22"
+    },
+    {
+      "id": "if-b02",
+      "bookNo": 2,
+      "sourcePage": 22,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of volleyball players who are both badminton players and cricket players.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set1.png"
+        ]
+      },
+      "options": {
+        "A": "18",
+        "B": "20",
+        "C": "7",
+        "D": "10"
+      },
+      "answer": "D",
+      "rule": "Volleyball is the circle, badminton the rectangle and cricket the triangle. Take the middle part, inside all three shapes.",
+      "working": "Inside the circle, the rectangle and the triangle: 10"
+    },
+    {
+      "id": "if-b03",
+      "bookNo": 3,
+      "sourcePage": 22,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The number '9' represents:",
+      "figures": {
+        "terms": [
+          "figures/ch05/set1.png"
+        ]
+      },
+      "options": {
+        "A": "Volleyball players",
+        "B": "Only volleyball players",
+        "C": "Volleyball players who are not cricket players",
+        "D": "Volleyball players who are not badminton players"
+      },
+      "answer": "B",
+      "rule": "9 is inside the circle (volleyball) but outside the rectangle and the triangle, so it stands for people who play volleyball and nothing else.",
+      "working": "Volleyball players: 9 + 6 + 10 + 5. Not cricket: 9 + 5. Not badminton: 9 + 6. Only volleyball: 9"
+    },
+    {
+      "id": "if-b04",
+      "bookNo": 4,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of students who study English.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set2.png"
+        ]
+      },
+      "options": {
+        "A": "16",
+        "B": "14",
+        "C": "29",
+        "D": "23"
+      },
+      "answer": "C",
+      "rule": "English is the rectangle. Add every number inside it, including the parts it shares with the circle and the oval.",
+      "working": "Inside the rectangle: 9 + 8 + 5 + 7 = 29"
+    },
+    {
+      "id": "if-b05",
+      "bookNo": 5,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which number represents the students who study only English?",
+      "figures": {
+        "terms": [
+          "figures/ch05/set2.png"
+        ]
+      },
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "B",
+      "rule": "Only English: inside the rectangle but outside the circle (Kannada) and the oval (Hindi).",
+      "working": "The bottom part of the rectangle: 7"
+    },
+    {
+      "id": "if-b06",
+      "bookNo": 6,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which number represents the students who study all three subjects?",
+      "figures": {
+        "terms": [
+          "figures/ch05/set2.png"
+        ]
+      },
+      "options": {
+        "A": "9",
+        "B": "8",
+        "C": "7",
+        "D": "5"
+      },
+      "answer": "B",
+      "rule": "All three: the part inside the circle, the rectangle and the oval.",
+      "working": "Inside all three shapes: 8"
+    },
+    {
+      "id": "if-b07",
+      "bookNo": 7,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of doctors is:",
+      "figures": {
+        "terms": [
+          "figures/ch05/set3.png"
+        ]
+      },
+      "options": {
+        "A": "14",
+        "B": "21",
+        "C": "17",
+        "D": "27"
+      },
+      "answer": "C",
+      "rule": "Doctors are the rectangle. Add every number inside it, including the parts it shares with the circle and the triangle.",
+      "working": "Inside the rectangle: 3 + 8 + 6 = 17"
+    },
+    {
+      "id": "if-b08",
+      "bookNo": 8,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The number of people who are dancers only.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set3.png"
+        ]
+      },
+      "options": {
+        "A": "24",
+        "B": "9",
+        "C": "30",
+        "D": "17"
+      },
+      "answer": "B",
+      "rule": "Dancers only: inside the circle but outside the triangle (swimmers) and the rectangle (doctors).",
+      "working": "The top-left part of the circle: 9"
+    },
+    {
+      "id": "if-b09",
+      "bookNo": 9,
+      "sourcePage": 23,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of dancers who are not doctors.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set3.png"
+        ]
+      },
+      "options": {
+        "A": "13",
+        "B": "30",
+        "C": "16",
+        "D": "9"
+      },
+      "answer": "C",
+      "rule": "Dancers who are not doctors: every part of the circle that is outside the rectangle, whether or not it is in the triangle.",
+      "working": "The circle above the rectangle: 9 + 7 = 16"
+    },
+    {
+      "id": "if-b10",
+      "bookNo": 10,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of people who drink tea, coffee and milk.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set4.png"
+        ]
+      },
+      "options": {
+        "A": "15",
+        "B": "19",
+        "C": "5",
+        "D": "8"
+      },
+      "answer": "C",
+      "rule": "Tea is the triangle, coffee the circle and milk the rectangle. Take the part inside all three shapes.",
+      "working": "Inside the triangle, the circle and the rectangle: 5"
+    },
+    {
+      "id": "if-b11",
+      "bookNo": 11,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of people who drink both tea and coffee.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set4.png"
+        ]
+      },
+      "options": {
+        "A": "5",
+        "B": "12",
+        "C": "15",
+        "D": "22"
+      },
+      "answer": "B",
+      "rule": "Add every number inside both the triangle (tea) and the circle (coffee), including the part that is also in the rectangle (milk).",
+      "working": "Inside the triangle and the circle: 5 + 7 = 12"
+    },
+    {
+      "id": "if-b12",
+      "bookNo": 12,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of people who drink only coffee.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set4.png"
+        ]
+      },
+      "options": {
+        "A": "15",
+        "B": "17",
+        "C": "20",
+        "D": "32"
+      },
+      "answer": "B",
+      "rule": "Only coffee: the parts of the circle outside both the triangle and the rectangle. There are two such parts, above and below the rectangle.",
+      "working": "The circle outside the triangle and the rectangle: 15 + 2 = 17"
+    },
+    {
+      "id": "if-b13",
+      "bookNo": 13,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The number of people who support all three teams: Sunrisers, CSK and MI.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set5.png"
+        ]
+      },
+      "options": {
+        "A": "25",
+        "B": "35",
+        "C": "36",
+        "D": "38"
+      },
+      "answer": "A",
+      "rule": "Sunrisers is the six-sided shape, CSK the circle and MI the rectangle. Take the part inside all three.",
+      "working": "Inside the six-sided shape, the circle and the rectangle: 25"
+    },
+    {
+      "id": "if-b14",
+      "bookNo": 14,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-part",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The number of people who support only the CSK team.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set5.png"
+        ]
+      },
+      "options": {
+        "A": "23",
+        "B": "32",
+        "C": "42",
+        "D": "29"
+      },
+      "answer": "B",
+      "rule": "Only CSK: the part of the circle outside every other shape.",
+      "working": "The top-left part of the circle: 32"
+    },
+    {
+      "id": "if-b15",
+      "bookNo": 15,
+      "sourcePage": 24,
+      "keyFrom": "book",
+      "pattern": "venn-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The total number of people who support both Sunrisers and MI.",
+      "figures": {
+        "terms": [
+          "figures/ch05/set5.png"
+        ]
+      },
+      "options": {
+        "A": "31",
+        "B": "39",
+        "C": "25",
+        "D": "64"
+      },
+      "answer": "D",
+      "rule": "Add every number inside both the six-sided shape (Sunrisers) and the rectangle (MI), including the parts also in the circle (CSK) or the triangle (RCB).",
+      "working": "Inside the six-sided shape and the rectangle: 25 + 31 + 8 = 64"
+    }
+  ]
+}

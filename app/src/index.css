@@ -2028,6 +2028,47 @@ kbd {
   color: var(--text);
 }
 
+.tv .tv-venn-lit {
+  fill: var(--primary-soft);
+  stroke: var(--primary);
+  stroke-width: 1.2;
+}
+
+/* A diagram with a question below it (Intersecting Figures): as wide as the card allows. */
+.fig-diagram {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  margin: 4px 0 14px;
+}
+
+.fig-diagram .fig-paper {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 560px;
+}
+
+.fig-diagram .fig-img {
+  width: 100%;
+  height: auto;
+}
+
+.fig-diagram .fig-svg {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+
+.fig-diagram.fig-lg .fig-paper {
+  max-width: 900px;
+}
+
+.fig-diagram.fig-lg .fig-svg {
+  max-width: 720px;
+}
+
 /* Picture options stay 2 × 2 even on phones: the key sits above the picture. */
 .options.options-fig {
   grid-template-columns: 1fr 1fr;

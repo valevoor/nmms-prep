@@ -1,0 +1,34 @@
+{
+  "topic": "intersecting-figures",
+  "intro": "Here shapes such as a circle, a rectangle and a triangle overlap, and each shape stands for a group of people (for example cricket players). The number in each part tells how many people are in exactly that part. You count the people in a group, in two groups at once, in one group only, and so on.",
+  "tips": [
+    {
+      "title": "One shape, one group",
+      "body": "First read which group each shape stands for. Then for each number, ask of every shape: is this number inside it or outside it? That tells you which groups those people belong to. A number counts only the people in its own part, not the whole shape."
+    },
+    {
+      "title": "\"Both\" means the shared part, and the middle too",
+      "visual": "venn",
+      "body": "People who are in both the circle and the rectangle sit in every part inside both shapes. That includes the middle part where all three shapes meet. In the picture: 5 + 10 = 15.",
+      "caption": "Both ○ and □: 5 + 10 = 15. Only ○: 9."
+    },
+    {
+      "title": "\"Only\" means outside every other shape",
+      "body": "\"Only coffee\" is the part of the coffee shape that no other shape covers. A shape can have two such parts, one on each side of another shape: in Q12 the circle has 15 above the rectangle and 2 below it, so 15 + 2 = 17."
+    },
+    {
+      "title": "\"Total\" means the whole shape",
+      "body": "For all the students who study English, add every number inside the English rectangle, including the parts it shares with other shapes: 9 + 8 + 5 + 7 = 29."
+    },
+    {
+      "title": "\"Not\" leaves out just one shape",
+      "body": "Dancers who are not doctors: take the parts of the dancers' circle that are outside the doctors' rectangle. They may still be inside the third shape (swimmers): 9 + 7 = 16."
+    },
+    {
+      "title": "Look closely at the lines",
+      "body": "A number drawn near a corner or a slanting line is easy to misread. Check which side of each line it is on before you add it. A part with no number has no people in it."
+    }
+  ],
+  "workedExamples": ["if-b01", "if-b04", "if-b09", "if-b12"],
+  "cheatSheet": "none"
+}

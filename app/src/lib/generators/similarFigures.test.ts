@@ -29,6 +29,12 @@ function outline(it: FigItem): Pt[] {
       return [[-r * 0.5, -r], [-r * 0.5, r], [r * 0.6, r]]
     case 'plus':
       return [[-r, 0], [r, 0], [0, -r], [0, r]]
+    case 'rect': {
+      const h = (it.h ?? it.size) / 2
+      return [[-r, -h], [r, -h], [r, h], [-r, h]]
+    }
+    case 'text':
+      return [[0, 0]]
   }
 }
 const near = (v: number) => (Math.round(v * 10 + 1e-6) / 10 + 0).toFixed(1)

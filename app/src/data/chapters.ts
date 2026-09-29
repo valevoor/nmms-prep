@@ -28,6 +28,10 @@ import signsKn from './mat/signs-symbols.kn.json'
 import signs from './mat/signs-symbols.json'
 import signsMetaKn from './mat/signs-symbols.meta.kn.json'
 import signsMeta from './mat/signs-symbols.meta.json'
+import intersectingKn from './mat/intersecting-figures.kn.json'
+import intersecting from './mat/intersecting-figures.json'
+import intersectingMetaKn from './mat/intersecting-figures.meta.kn.json'
+import intersectingMeta from './mat/intersecting-figures.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -128,4 +132,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('signs-symbols', 'Signs and Symbols', signs, signsMeta, signsKn, signsMetaKn),
   c('hidden-figures', 'Hidden Figures', hidden, hiddenMeta, hiddenKn, hiddenMetaKn),
   c('similar-figures', 'Similar Figures in Different Position', similar, similarMeta, similarKn, similarMetaKn),
+  c('intersecting-figures', 'Intersecting Figures', intersecting, intersectingMeta, intersectingKn, intersectingMetaKn),
 ]

@@ -9,6 +9,7 @@ import { HopArrows } from './HopArrows'
 import { NumberGrid } from './NumberGrid'
 import { OrderOfOps } from './OrderOfOps'
 import { ShrinkFlip } from './ShrinkFlip'
+import { VennParts } from './VennParts'
 import { ZigZagSplit } from './ZigZagSplit'
 
 /** `label` describes the picture for screen readers. */
@@ -30,4 +31,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   figGrow: FigureGrow,
   order: OrderOfOps,
   figHidden: FigureHidden,
+  venn: VennParts,
 }

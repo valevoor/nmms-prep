@@ -39,6 +39,14 @@ function Shape({ it, fill }: { it: FigItem; fill: string }) {
       )
     case 'ell':
       return <path d={`M${-r * 0.5} ${-r} V${r} H${r * 0.6}`} fill="none" />
+    case 'rect':
+      return <rect x={-r} y={-(it.h ?? it.size) / 2} width={it.size} height={it.h ?? it.size} fill={fill} />
+    case 'text':
+      return (
+        <text textAnchor="middle" dominantBaseline="central" fontSize={it.size} fill="currentColor" stroke="none" fontWeight={600}>
+          {it.label}
+        </text>
+      )
     case 'plus':
       return <path d={`M${-r} 0 H${r} M0 ${-r} V${r}`} fill="none" />
   }
@@ -89,7 +97,7 @@ export function DrawingBody({ d }: { d: Drawing }) {
 /** A figure made by the generators, drawn in the text colour so it works in light and dark. */
 export function DrawingView({ d, label }: { d: Drawing; label: string }) {
   return (
-    <svg className="fig-svg" viewBox="0 0 100 100" role="img" aria-label={label}>
+    <svg className="fig-svg" viewBox={`0 0 ${d.w ?? 100} 100`} role="img" aria-label={label}>
       <DrawingBody d={d} />
     </svg>
   )

@@ -357,6 +357,8 @@ const genEn = {
     'fig-move': 'Parts move round the figure',
     'fig-other': 'Several changes at once',
     'fig-hidden': 'A figure hidden in a bigger one',
+    'venn-count': 'Add the parts that fit',
+    'venn-part': 'Read one part',
   } as Record<PatternId, string>,
 }
 
@@ -685,6 +687,8 @@ const genKn: GenText = {
     'fig-move': 'ಭಾಗಗಳು ಚಿತ್ರದ ಸುತ್ತ ಸರಿಯುತ್ತವೆ',
     'fig-other': 'ಒಂದೇ ಸಲ ಹಲವು ಬದಲಾವಣೆಗಳು',
     'fig-hidden': 'ದೊಡ್ಡ ಚಿತ್ರದಲ್ಲಿ ಅಡಗಿರುವ ಚಿತ್ರ',
+    'venn-count': 'ಹೊಂದುವ ಭಾಗಗಳನ್ನು ಕೂಡಿಸಿ',
+    'venn-part': 'ಒಂದು ಭಾಗವನ್ನು ಓದಿ',
   },
 }
 

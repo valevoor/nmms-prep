@@ -28,7 +28,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       <h3>{t.learn.example(n)}</h3>
       <NumberGrid q={q} reveal={done} />
       {q.figures ? (
-        <FigureStem q={q} reveal={done} />
+        q.layout !== 'text' && <FigureStem q={q} reveal={done} />
       ) : q.kind === 'wrong' ? (
         // "Find the wrong number": at the end, show the series repaired, with the right number in place.
         <SeriesView

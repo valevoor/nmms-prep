@@ -179,6 +179,15 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Intersecting Figures: a circle, a rectangle and a triangle overlap; the shared part is marked
+  5: (
+    <>
+      <circle cx={19} cy={17} r={13} />
+      <rect x={6} y={24} width={36} height={15} rx={1.5} />
+      <path d="M31 8l12 32H19z" />
+      <circle cx={26} cy={27.5} r={2.2} className="art-tile-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

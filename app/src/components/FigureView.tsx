@@ -30,6 +30,15 @@ export function FigureStem({ q, reveal, size = 'md' }: StemProps) {
     if (reveal && answer) return <FigureView f={answer} label={t.common.figureOption(q.answer)} />
     return <span aria-label={t.series.what}>?</span>
   }
+  // A diagram the question is about (Intersecting Figures): shown large, with the prompt below it.
+  if (q.layout === 'text')
+    return (
+      <div className={`fig-diagram fig-${size}`} role="group" aria-label={t.common.pictureQuestion}>
+        {figs.map((f, i) => (
+          <FigureView key={i} f={f} label={t.common.figure(i + 1)} />
+        ))}
+      </div>
+    )
   const cls = (f: Figure) => `fig-term${f === '?' ? (reveal && answer ? ' term-revealed' : ' term-blank') : ''}`
   if (q.layout === 'analogy') {
     const pairs = [figs.slice(0, 2), figs.slice(2, 4)].filter((p) => p.length > 0)
