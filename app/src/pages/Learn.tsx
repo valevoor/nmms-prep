@@ -5,6 +5,7 @@ import { FamilyTreeView } from '../components/FamilyTreeView'
 import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
 import { NumberGrid } from '../components/NumberGrid'
+import { FigureStem } from '../components/FigureView'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
@@ -26,7 +27,9 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
     <section className="card example">
       <h3>{t.learn.example(n)}</h3>
       <NumberGrid q={q} reveal={done} />
-      {q.kind === 'wrong' ? (
+      {q.figures ? (
+        <FigureStem q={q} reveal={done} />
+      ) : q.kind === 'wrong' ? (
         // "Find the wrong number": at the end, show the series repaired, with the right number in place.
         <SeriesView
           terms={done && q.fix ? q.terms.map((x, i) => (i === q.wrongIndex ? '?' : x)) : q.terms}
@@ -39,7 +42,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
         <SeriesView terms={q.terms} ops={q.ops} opsShown={Math.min(step, steps)} reveal={done ? q.options[q.answer] : undefined} layout={q.layout} />
       )}
       {q.layout === 'text' && <QuestionStem q={q} />}
-      {(q.layout === 'odd' || q.layout === 'text') && <Options q={q} reveal={done} />}
+      {(q.layout === 'odd' || q.layout === 'text' || q.figures) && <Options q={q} reveal={done} />}
       {step > 0 && <p className="rule">{text.rule}</p>}
       {done && <MapDiagram q={q} />}
       {done && <FamilyTreeView q={q} />}

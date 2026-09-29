@@ -1,5 +1,7 @@
 import type { ComponentType } from 'react'
 import { AnswerCheck } from './AnswerCheck'
+import { FigureShade } from './FigureShade'
+import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
 import { HopArrows } from './HopArrows'
 import { NumberGrid } from './NumberGrid'
@@ -20,4 +22,6 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   zigzag: ZigZagSplit,
   grid: NumberGrid,
   check: AnswerCheck,
+  figTurn: FigureTurn,
+  figShade: FigureShade,
 }

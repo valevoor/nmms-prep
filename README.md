@@ -17,6 +17,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 - MAT Chapter 20, *Number Sequence* (counting places that fit a rule): 19 of the 20 book questions, each recounted by `tools/check_number_sequence.ts`. The key misses a pair in Q15 (corrected); Q7 is hidden because the true count (9) is not an option.
 - MAT Chapter 15, *Number Patterns* (shapes of numbers in a table, shifted or flipped): 14 of the 15 book questions, each re-solved on its table by `tools/check_number_patterns.ts` (a plain shift is preferred to a flip, as in the book). Several printed typos are corrected with a note; Q9's two keys (C and D) are both wrong, so the solved answer A is used; Q15 is hidden because the right answer is not an option.
 - MAT Chapter 22, *Letter–Number Analogy* (letters turned into numbers or other letters by a rule): 14 of the 15 book questions, each rule re-applied by `tools/check_letter_number_analogy.ts`. Q5 is hidden: the book prints only options A and B, and the key's answer C (HLCPERTOIE) is missing.
+- MAT Chapter 1, *Analogy of Figures*: all 15 book questions, shown as pictures cropped from the PDF (`tools/crop_figures.swift`, rects in `tools/figures/ch01.json`). Each was solved by eye and agrees with the key; `tools/check_analogy_of_figures.ts` checks the key, that every picture exists and that the four options differ. Notes explain Q7 (every option prints the oval filled), Q12 (D is the best option but not a perfect one) and Q15 (C and D differ only in a line's slant). The generator draws its own SVG puzzles (turns, mirror images, one more side, fill swaps, inside/outside swaps, one more dot).
 
 Each chapter also has a generator that makes unlimited new practice questions.
 
@@ -101,4 +102,4 @@ Numbers stay in Western digits, as in the NMMS papers.
 1. Run `swift tools/extract_pages.swift > nmms.txt` to get the text. Use `swift tools/render_pages.swift <dir> <pages…>` to see figures, fractions and superscripts, which don't survive text extraction.
 2. Write `app/src/data/mat/<topic>.json` and `<topic>.meta.json` in the same format as `number-series`.
 3. Add the topic to `READY_TOPICS` in `app/src/data/topics.ts`, and remove it from `UPCOMING_MAT`.
-4. The pages are shared across topics. `SeriesView` handles number and letter series. Picture-based chapters will need an image field on questions.
+4. The pages are shared across topics. `SeriesView` handles number and letter series. Picture questions set `figures` (book crops under `app/public/figures/`, or generated drawings), shown by `components/FigureView.tsx`.

@@ -1,0 +1,36 @@
+{
+  "topic": "analogy-of-figures",
+  "intro": "In an analogy of figures, figure 1 changes into figure 2 by a rule. Find that rule, then make the same change to figure 3 and pick the figure it gives.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Say the change in words",
+      "body": "Look at figure 1 and figure 2 and name every change: the outline, the shape inside, the number of dots or sides, the shading, and which way things point. Most book questions change 2 or 3 things at once."
+    },
+    {
+      "title": "Follow one part when a figure turns",
+      "body": "Pick one part that is easy to spot, such as a black dot or an arrow, and see where it goes. A quarter turn clockwise moves the top to the right side, and the right side to the bottom.",
+      "visual": "figTurn",
+      "caption": "Watch the black dot to see how far, and which way, the figure turns."
+    },
+    {
+      "title": "Count the parts the shading moves",
+      "body": "In a circle or square cut into parts, count how many parts each shaded piece moves, and which way. Different pieces can move by different amounts.",
+      "visual": "figShade",
+      "caption": "Both shaded parts move 2 parts clockwise each time."
+    },
+    {
+      "title": "Count sides and dots",
+      "body": "A triangle often becomes a square, and a square a pentagon: one more side. Count the dots in each part too, since 2 dots may become 3."
+    },
+    {
+      "title": "Check every option against every change",
+      "body": "Wrong options usually get one change right and another wrong. Tick off each change you found against each option; only one option passes them all."
+    }
+  ],
+  "workedExamples": [
+    "aof-b13",
+    "aof-b04",
+    "aof-b02"
+  ]
+}

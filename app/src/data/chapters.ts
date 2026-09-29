@@ -3,6 +3,10 @@
  * the Kannada coverage check (tools/check_i18n.ts) and the review export (tools/export_i18n.ts) all
  * read this list. A new chapter is added here once.
  */
+import figAnalogyKn from './mat/analogy-of-figures.kn.json'
+import figAnalogy from './mat/analogy-of-figures.json'
+import figAnalogyMetaKn from './mat/analogy-of-figures.meta.kn.json'
+import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
 import bloodKn from './mat/blood-relations.kn.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
@@ -97,5 +101,6 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('number-sequence', 'Number Sequence', numberSequence, numberSequenceMeta, numberSequenceKn, numberSequenceMetaKn),
   c('letter-number-analogy', 'Letter–Number Analogy', letterNumber, letterNumberMeta, letterNumberKn, letterNumberMetaKn),
   c('number-patterns', 'Number Patterns', numberPatterns, numberPatternsMeta, numberPatternsKn, numberPatternsMetaKn),
+  c('analogy-of-figures', 'Analogy of Figures', figAnalogy, figAnalogyMeta, figAnalogyKn, figAnalogyMetaKn),
   c('odd-one-letters', 'Odd One Out: Letters', oddLetters, oddLettersMeta, oddLettersKn, oddLettersMetaKn),
 ]

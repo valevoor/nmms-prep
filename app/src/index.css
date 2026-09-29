@@ -1949,3 +1949,119 @@ kbd {
 .ng-key.ng-second {
   background: var(--good);
 }
+
+/* ---------- picture questions (figure chapters) ---------- */
+
+.fig-stem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 6px;
+  margin: 14px 0;
+  --fig-h: 76px;
+}
+
+.fig-sm {
+  --fig-h: 56px;
+  justify-content: flex-start;
+}
+
+.fig-lg {
+  --fig-h: clamp(90px, 16vw, 170px);
+}
+
+.fig-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fig-sep {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.fig-term {
+  display: inline-grid;
+  place-items: center;
+  min-width: calc(var(--fig-h) * 0.8);
+  min-height: var(--fig-h);
+}
+
+.fig-term.term-blank {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.fig-term.term-revealed {
+  padding: 3px;
+}
+
+/* Book pictures are black on white, so they sit on white paper in both themes. */
+.fig-paper {
+  display: inline-grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 3px;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.fig-img {
+  display: block;
+  height: var(--fig-h);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.fig-stem .fig-svg {
+  width: var(--fig-h);
+  height: var(--fig-h);
+}
+
+.fig-svg {
+  display: block;
+  color: var(--text);
+}
+
+/* Picture options stay 2 × 2 even on phones: the key sits above the picture. */
+.options.options-fig {
+  grid-template-columns: 1fr 1fr;
+}
+
+.options-fig .option {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 8px;
+  position: relative;
+  --fig-h: 72px;
+}
+
+.options-lg.options-fig .option {
+  --fig-h: clamp(90px, 14vw, 160px);
+}
+
+.options-fig .option-key {
+  width: 26px;
+  height: 26px;
+}
+
+.options-fig .option-value {
+  display: grid;
+  place-items: center;
+}
+
+.options-fig .option-value .fig-svg {
+  width: var(--fig-h);
+  height: var(--fig-h);
+}
+
+.options-fig .option-mark {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}

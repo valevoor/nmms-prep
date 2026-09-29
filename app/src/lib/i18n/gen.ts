@@ -210,6 +210,21 @@ const genEn = {
   gridFlip: (lr: boolean) =>
     `In the table, the second group is the first one flipped ${lr ? 'left to right' : 'top to bottom'}, like a mirror image. Flip the first pair's other group the same way.`,
 
+  // Figures (Chapter 1)
+  figRule: (id: string) =>
+    ({
+      rot90: 'The whole figure turns a quarter turn (90°) clockwise',
+      rotm90: 'The whole figure turns a quarter turn (90°) anticlockwise',
+      rot180: 'The whole figure turns half a turn (180°)',
+      mirror: 'The figure is flipped left to right, like a mirror image',
+      sides: 'Every straight-sided shape gets one more side',
+      fill: 'Filled shapes become empty and empty shapes become filled',
+      swap: 'The inside shape and the outside shape change places',
+      count: 'One more dot is added',
+    })[id]!,
+  figWork: (rule: string) => `Compare figure 1 with figure 2: ${rule[0].toLowerCase() + rule.slice(1)}. Make the same change to figure 3 to get the answer.`,
+  figSpot: (rule: string) => `Figure 1 → figure 2: ${rule[0].toLowerCase() + rule.slice(1)}.`,
+
   // Clock
   angleAsk: (t: string, reflex: boolean) => `What is the ${reflex ? 'reflex angle (the larger angle)' : 'smaller angle'} between the hour hand and the minute hand at ${t}?`,
   angleRule: 'The minute hand moves 6° a minute. The hour hand moves 30° an hour and ½° a minute. Measure both from 12.',
@@ -294,6 +309,13 @@ const genEn = {
     'ln-other': 'Letters and numbers swapped by a rule',
     'grid-shift': 'The same shape, moved across the table',
     'grid-flip': 'The same shape, flipped like a mirror image',
+    'fig-rotate': 'The figure turns',
+    'fig-mirror': 'The figure is flipped like a mirror image',
+    'fig-sides': 'Shapes gain or lose sides',
+    'fig-fill': 'Filled and empty parts swap',
+    'fig-swap': 'Shapes change places or change into each other',
+    'fig-count': 'Parts are added or taken away',
+    'fig-other': 'Several changes at once',
   } as Record<PatternId, string>,
 }
 
@@ -483,6 +505,20 @@ const genKn: GenText = {
   gridFlip: (lr) =>
     `ಕೋಷ್ಟಕದಲ್ಲಿ ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ ಕನ್ನಡಿ ಬಿಂಬ, ${lr ? 'ಎಡದಿಂದ ಬಲಕ್ಕೆ' : 'ಮೇಲಿನಿಂದ ಕೆಳಕ್ಕೆ'} ತಿರುಗಿಸಲಾಗಿದೆ. ಮೊದಲ ಜೋಡಿಯ ಇನ್ನೊಂದು ಗುಂಪನ್ನೂ ಅದೇ ರೀತಿ ತಿರುಗಿಸಿ.`,
 
+  figRule: (id) =>
+    ({
+      rot90: 'ಇಡೀ ಚಿತ್ರವು ಗಡಿಯಾರದ ದಿಕ್ಕಿನಲ್ಲಿ ಕಾಲು ಸುತ್ತು (90°) ತಿರುಗುತ್ತದೆ',
+      rotm90: 'ಇಡೀ ಚಿತ್ರವು ಗಡಿಯಾರದ ವಿರುದ್ಧ ದಿಕ್ಕಿನಲ್ಲಿ ಕಾಲು ಸುತ್ತು (90°) ತಿರುಗುತ್ತದೆ',
+      rot180: 'ಇಡೀ ಚಿತ್ರವು ಅರ್ಧ ಸುತ್ತು (180°) ತಿರುಗುತ್ತದೆ',
+      mirror: 'ಚಿತ್ರವು ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ಎಡ-ಬಲ ಅದಲು ಬದಲಾಗುತ್ತದೆ',
+      sides: 'ನೇರ ಬಾಹುಗಳ ಪ್ರತಿ ಆಕೃತಿಗೂ ಒಂದು ಬಾಹು ಹೆಚ್ಚುತ್ತದೆ',
+      fill: 'ತುಂಬಿದ ಆಕೃತಿಗಳು ಖಾಲಿಯಾಗುತ್ತವೆ, ಖಾಲಿ ಆಕೃತಿಗಳು ತುಂಬುತ್ತವೆ',
+      swap: 'ಒಳಗಿನ ಆಕೃತಿ ಮತ್ತು ಹೊರಗಿನ ಆಕೃತಿ ಸ್ಥಾನ ಬದಲಿಸುತ್ತವೆ',
+      count: 'ಒಂದು ಚುಕ್ಕಿ ಹೆಚ್ಚಾಗುತ್ತದೆ',
+    })[id]!,
+  figWork: (rule) => `ಚಿತ್ರ 1 ಅನ್ನು ಚಿತ್ರ 2 ರೊಂದಿಗೆ ಹೋಲಿಸಿ: ${rule}. ಚಿತ್ರ 3 ಕ್ಕೂ ಇದೇ ಬದಲಾವಣೆ ಮಾಡಿದರೆ ಉತ್ತರ ಸಿಗುತ್ತದೆ.`,
+  figSpot: (rule) => `ಚಿತ್ರ 1 → ಚಿತ್ರ 2: ${rule}.`,
+
   angleAsk: (t, reflex) => `${t} ಕ್ಕೆ ಗಂಟೆಯ ಮುಳ್ಳು ಮತ್ತು ನಿಮಿಷದ ಮುಳ್ಳಿನ ನಡುವಿನ ${reflex ? 'ಪ್ರತಿಫಲಿತ ಕೋನ (ದೊಡ್ಡ ಕೋನ)' : 'ಚಿಕ್ಕ ಕೋನ'} ಎಷ್ಟು?`,
   angleRule: 'ನಿಮಿಷದ ಮುಳ್ಳು ನಿಮಿಷಕ್ಕೆ 6° ಚಲಿಸುತ್ತದೆ. ಗಂಟೆಯ ಮುಳ್ಳು ಗಂಟೆಗೆ 30° ಮತ್ತು ನಿಮಿಷಕ್ಕೆ ½° ಚಲಿಸುತ್ತದೆ. ಎರಡನ್ನೂ 12 ರಿಂದ ಅಳೆಯಿರಿ.',
   angleWork: (h, m, hd, md, diff, ans) => `ಗಂಟೆಯ ಮುಳ್ಳು: 30 × ${h} + ½ × ${m} = ${hd}°. ನಿಮಿಷದ ಮುಳ್ಳು: 6 × ${m} = ${md}°. ವ್ಯತ್ಯಾಸ: ${diff}, ಆದ್ದರಿಂದ ಉತ್ತರ ${ans}`,
@@ -563,6 +599,13 @@ const genKn: GenText = {
     'ln-other': 'ನಿಯಮದಂತೆ ಅಕ್ಷರ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಬದಲಾವಣೆ',
     'grid-shift': 'ಅದೇ ಆಕಾರ, ಕೋಷ್ಟಕದಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ',
     'grid-flip': 'ಅದೇ ಆಕಾರ, ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ತಿರುಗಿಸಲಾಗಿದೆ',
+    'fig-rotate': 'ಚಿತ್ರವು ತಿರುಗುತ್ತದೆ',
+    'fig-mirror': 'ಚಿತ್ರವು ಕನ್ನಡಿ ಬಿಂಬದಂತೆ ಅದಲು ಬದಲಾಗುತ್ತದೆ',
+    'fig-sides': 'ಆಕೃತಿಗಳ ಬಾಹುಗಳು ಹೆಚ್ಚುತ್ತವೆ ಅಥವಾ ಕಡಿಮೆಯಾಗುತ್ತವೆ',
+    'fig-fill': 'ತುಂಬಿದ ಮತ್ತು ಖಾಲಿ ಭಾಗಗಳು ಅದಲು ಬದಲಾಗುತ್ತವೆ',
+    'fig-swap': 'ಆಕೃತಿಗಳು ಸ್ಥಾನ ಅಥವಾ ರೂಪ ಬದಲಿಸುತ್ತವೆ',
+    'fig-count': 'ಭಾಗಗಳು ಹೆಚ್ಚುತ್ತವೆ ಅಥವಾ ಕಡಿಮೆಯಾಗುತ್ತವೆ',
+    'fig-other': 'ಒಂದೇ ಸಲ ಹಲವು ಬದಲಾವಣೆಗಳು',
   },
 }
 

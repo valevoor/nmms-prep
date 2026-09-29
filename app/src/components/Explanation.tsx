@@ -3,6 +3,7 @@ import { useT } from '../lib/i18n'
 import { useQuestionText } from '../lib/i18n/content'
 import { ClockFace } from './ClockFace'
 import { FamilyTreeView } from './FamilyTreeView'
+import { FigureStem } from './FigureView'
 import { MapDiagram } from './MapDiagram'
 import { NumberGrid } from './NumberGrid'
 import { SeriesView } from './SeriesView'
@@ -15,7 +16,9 @@ export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg
       <p className="rule">
         <strong>{t.common.rule}</strong> {text.rule}
       </p>
-      {q.kind === 'wrong' ? (
+      {q.figures ? (
+        <FigureStem q={q} reveal={q.kind !== 'rule'} size={size === 'lg' ? 'md' : 'sm'} />
+      ) : q.kind === 'wrong' ? (
         // Show the repaired series: the fake number replaced by the right one (when there is one right value).
         q.fix && <SeriesView terms={q.terms.map((t, i) => (i === q.wrongIndex ? '?' : t))} ops={q.ops} reveal={q.fix} size={size} layout={q.layout} />
       ) : (

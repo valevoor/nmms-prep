@@ -2,6 +2,7 @@ import { OPTION_KEYS } from '../types'
 import type { OptionKey, Question } from '../types'
 import { useT } from '../lib/i18n'
 import { useQuestionText } from '../lib/i18n/content'
+import { FigureView } from './FigureView'
 import { Term } from './SeriesView'
 
 interface Props {
@@ -16,8 +17,9 @@ interface Props {
 export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
   const t = useT()
   const { options } = useQuestionText(q)
+  const figs = q.figures?.options
   return (
-    <div className={`options options-${size}${q.kind === 'rule' ? ' options-text' : ''}`} role="radiogroup" aria-label={t.common.answerOptions}>
+    <div className={`options options-${size}${q.kind === 'rule' ? ' options-text' : ''}${figs ? ' options-fig' : ''}`} role="radiogroup" aria-label={t.common.answerOptions}>
       {OPTION_KEYS.map((k) => {
         let state = ''
         if (reveal && k === q.answer) state = 'correct'
@@ -35,7 +37,7 @@ export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
           >
             <span className="option-key">{k}</span>
             <span className="option-value">
-              <Term value={options[k]} />
+              {figs ? <FigureView f={figs[k]} label={t.common.figureOption(k)} /> : <Term value={options[k]} />}
             </span>
             {state === 'correct' && <span className="option-mark" aria-label={t.common.correctAnswer}>✓</span>}
             {state === 'wrong' && <span className="option-mark" aria-label={t.common.yourWrongAnswer}>✗</span>}

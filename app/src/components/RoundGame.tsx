@@ -13,7 +13,8 @@ interface Props {
   onFinish: (score: number) => void
 }
 
-const sameSeries = (a?: Question, b?: Question) => !!a && !!b && a.terms.join() === b.terms.join()
+const shown = (q: Question) => JSON.stringify(q.figures?.terms ?? q.terms)
+const sameSeries = (a?: Question, b?: Question) => !!a && !!b && shown(a) === shown(b)
 
 /** A fixed number of generated questions with feedback after each (used by "Guess the rule"). */
 export function RoundGame({ make, rounds, prompt, onFinish }: Props) {

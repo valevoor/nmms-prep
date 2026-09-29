@@ -4,6 +4,7 @@ import { generateBloodRelation } from '../generators/bloodRelations'
 import { generateCalendar } from '../generators/calendar'
 import { generateClock } from '../generators/clock'
 import { generateCoding } from '../generators/coding'
+import { generateFigureAnalogy, generateFigureRuleQuestion } from '../generators/figures'
 import { generateLetterNumber } from '../generators/letterNumber'
 import { generateNumberPatterns } from '../generators/numberPatterns'
 import { generateDirections } from '../generators/directions'
@@ -63,6 +64,11 @@ describe('generated questions carry Kannada', () => {
     for (let n = 0; n < 1000; n++) expectKannada(generateLetterNumber(rng))
   })
 
+  it('analogy of figures', () => {
+    const rng = mulberry32(1)
+    for (let n = 0; n < 1000; n++) expectKannada(generateFigureAnalogy(rng))
+  })
+
   it('number patterns', () => {
     const rng = mulberry32(15)
     for (let n = 0; n < 1000; n++) expectKannada(generateNumberPatterns(rng))
@@ -111,6 +117,7 @@ describe('generated questions carry Kannada', () => {
   it.each([
     ['series', generateRuleQuestion],
     ['analogy', generateAnalogyRuleQuestion],
+    ['figures', generateFigureRuleQuestion],
   ])('guess the rule (%s): 4 distinct Kannada options', (_, make) => {
     const rng = mulberry32(3)
     for (let n = 0; n < 1000; n++) {

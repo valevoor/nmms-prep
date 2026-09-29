@@ -8,6 +8,8 @@ import numberAnalogy from './mat/number-analogy.json'
 import numberAnalogyMeta from './mat/number-analogy.meta.json'
 import letterSeries from './mat/letter-series.json'
 import letterSeriesMeta from './mat/letter-series.meta.json'
+import figAnalogy from './mat/analogy-of-figures.json'
+import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
@@ -31,6 +33,7 @@ import wrongNumberMeta from './mat/wrong-number.meta.json'
 import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
+import { generateFigureAnalogy, generateFigureRuleQuestion } from '../lib/generators/figures'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateNumberPatterns } from '../lib/generators/numberPatterns'
@@ -50,7 +53,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -184,6 +187,18 @@ export const READY_TOPICS: ReadyTopic[] = [
     generate: generateLetterNumber,
   },
   {
+    id: 'analogy-of-figures',
+    chapter: 1,
+    name: 'Analogy of Figures',
+    questions: visible(figAnalogy.questions as Question[]),
+    meta: figAnalogyMeta as TopicMeta,
+    missing: 'figure',
+    generate: generateFigureAnalogy,
+    guessRule: {
+      make: () => generateFigureRuleQuestion(),
+    },
+  },
+  {
     id: 'number-patterns',
     chapter: 15,
     name: 'Number Patterns',
@@ -211,6 +226,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     relation: t.common.findRelation,
     answer: t.common.findAnswer,
     grid: t.common.findGrid,
+    figure: t.common.findFigure,
   }
   return labels[topic.missing ?? 'number']
 }

@@ -4,6 +4,31 @@ export interface FamilyTree {
   lines: [string, string, 'child' | 'married' | 'sibling'][]
 }
 
+/** One shape in a generated figure. Coordinates are in a 100 × 100 box, y down; angles in degrees, clockwise. */
+export interface FigItem {
+  shape: 'poly' | 'circle' | 'dot' | 'arrow' | 'flag' | 'ell' | 'plus' | 'dots'
+  x: number
+  y: number
+  size: number
+  /** Number of sides ('poly') or of dots in the row ('dots'). */
+  n?: number
+  rot?: number
+  /** Mirrored left–right before turning (only changes the look of 'flag' and 'ell'). */
+  flip?: boolean
+  fill?: 'none' | 'solid' | 'hatch'
+}
+
+/** A figure drawn by the app: an optional frame (a box, or a circle cut into 4 or 8 parts) and shapes. */
+export interface Drawing {
+  frame?: 'square' | 'circle' | 'quad' | 'oct'
+  /** Filled parts of a 'quad' or 'oct' frame, numbered clockwise from the top. */
+  shaded?: number[]
+  items: FigItem[]
+}
+
+/** A picture: a PNG cropped from the book (path under public/), '?' for the blank, or a drawing. */
+export type Figure = string | Drawing
+
 export type Compass4 = 'N' | 'E' | 'S' | 'W'
 export type OptionKey = 'A' | 'B' | 'C' | 'D'
 export const OPTION_KEYS: OptionKey[] = ['A', 'B', 'C', 'D']
@@ -81,6 +106,14 @@ export type PatternId =
   | 'ln-other'
   // Number patterns (Chapter 15)
   | 'grid-shift'
+  // Analogy of figures (Chapter 1)
+  | 'fig-rotate'
+  | 'fig-mirror'
+  | 'fig-sides'
+  | 'fig-fill'
+  | 'fig-swap'
+  | 'fig-count'
+  | 'fig-other'
   | 'grid-flip'
 
 export interface Question {
@@ -105,6 +138,8 @@ export interface Question {
   clock?: [number, number]
   /** A number table the question's groups are taken from (Number Patterns); rows of numbers. */
   grid?: number[][]
+  /** Picture questions: the pictures in the question ('?' marks the blank) and, unless the options are words, in the options. */
+  figures?: { terms: Figure[]; options?: Record<OptionKey, Figure> }
   options: Record<OptionKey, string>
   answer: OptionKey
   /** One-line rule shown in the explanation. */

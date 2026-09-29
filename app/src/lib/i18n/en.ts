@@ -24,6 +24,10 @@ export const en = {
     findRelation: 'Work out the relation',
     findAnswer: 'Work it out',
     findGrid: 'Use the number table',
+    findFigure: 'Find the missing figure',
+    figure: (n: number) => `Figure ${n}`,
+    figureOption: (k: string) => `Answer figure ${k}`,
+    pictureQuestion: 'Picture question',
     numberTable: 'Number table',
     gridFirst: 'First pair',
     gridSecond: 'Second pair',
@@ -57,6 +61,8 @@ export const en = {
   },
   /** Chapter names, by the study material's chapter number. */
   chapters: {
+    1: 'Analogy of Figures',
+    2: 'Figure Series',
     8: 'Mirror Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
@@ -231,6 +237,14 @@ export const en = {
       buttons: ['Colour the places', 'Split it'],
       label: '2, 10, 4, 20, 6, 30 zig-zags. Odd places: 2, 4, 6 (+2). Even places: 10, 20, 30 (+10).',
     },
+    figTurn: {
+      buttons: ['Turn 90°', 'Turn again', 'Turn again', 'Turn again'],
+      label: 'A figure with an arrow, a black dot and a triangle turns a quarter turn clockwise with each tap. Follow the black dot: top-left, top-right, bottom-right, bottom-left.',
+    },
+    figShade: {
+      buttons: ['Move 2 parts', 'Move 2 more', 'Move 2 more', 'Move 2 more'],
+      label: 'A circle cut into 8 parts with 2 shaded parts. With each tap both shaded parts move 2 parts clockwise.',
+    },
     check: {
       buttons: ['Try 7', 'Try 8'],
       label: '1, 2, 4, ?, 16, 32. Trying 7 fits the first gaps but breaks the next one. 8 fits every gap: ×2.',
@@ -263,6 +277,11 @@ export const en = {
         prompt: 'Which rule does this series follow?',
         blurb: 'Spot the secret pattern in each series',
         intro: 'Every series follows a secret rule. Look at the numbers and pick the rule. No calculating the answer, just spot the pattern!',
+      },
+      'analogy-of-figures': {
+        prompt: 'Which change turns the first figure into the second?',
+        blurb: 'Spot how each figure changes',
+        intro: 'Each puzzle shows a figure and what it turns into. Pick the one change that was made: a turn, a mirror image, one more side, a dot added… No answer figure to find, just spot the change!',
       },
       'number-analogy': {
         prompt: 'Which rule links both pairs?',

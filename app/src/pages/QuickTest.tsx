@@ -128,12 +128,13 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
                 <button className="review-head" onClick={() => setOpen(open === q.id ? null : q.id)} aria-expanded={open === q.id}>
                   <span className="review-mark">{ok ? '✓' : a ? '✗' : '–'}</span>
                   <span className="review-q">
-                    {i + 1}. {q.layout === 'text' ? questionText(q, locale).prompt : termsText(q.terms, q.layout)}
+                    {i + 1}. {q.figures ? t.common.pictureQuestion : q.layout === 'text' ? questionText(q, locale).prompt : termsText(q.terms, q.layout)}
                   </span>
                   <span className="muted">{ok ? q.answer : `${a ?? t.test.skipped} → ${q.answer}`}</span>
                 </button>
                 {open === q.id && (
                   <div className="review-body">
+                    {q.figures && <QuestionStem q={q} />}
                     <Options q={q} chosen={a} reveal />
                     <Explanation q={q} />
                   </div>

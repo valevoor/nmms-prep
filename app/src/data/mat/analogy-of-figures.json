@@ -1,0 +1,564 @@
+{
+  "topic": "analogy-of-figures",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 1 (questions: PDF pages 10–13, answers: PDF page 110)",
+  "questions": [
+    {
+      "id": "aof-b01",
+      "bookNo": 1,
+      "sourcePage": 10,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q01-t1.png",
+          "figures/ch01/q01-t2.png",
+          "figures/ch01/q01-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q01-oA.png",
+          "B": "figures/ch01/q01-oB.png",
+          "C": "figures/ch01/q01-oC.png",
+          "D": "figures/ch01/q01-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "The outer shape turns upside down, and the shape inside gets one more side.",
+      "working": "Trapezium → upside-down trapezium, and the triangle inside → a square. So the triangle turns upside down, and the square inside becomes a pentagon: option D."
+    },
+    {
+      "id": "aof-b02",
+      "bookNo": 2,
+      "sourcePage": 10,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q02-t1.png",
+          "figures/ch01/q02-t2.png",
+          "figures/ch01/q02-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q02-oA.png",
+          "B": "figures/ch01/q02-oB.png",
+          "C": "figures/ch01/q02-oC.png",
+          "D": "figures/ch01/q02-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "The outline goes, and a dot is put in each of the 4 gaps between the lines inside.",
+      "working": "The circle goes and its × gets a dot in each of its 4 gaps. In the same way the square goes and its + gets a black dot in each of its 4 gaps: option B."
+    },
+    {
+      "id": "aof-b03",
+      "bookNo": 3,
+      "sourcePage": 10,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q03-t1.png",
+          "figures/ch01/q03-t2.png",
+          "figures/ch01/q03-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q03-oA.png",
+          "B": "figures/ch01/q03-oB.png",
+          "C": "figures/ch01/q03-oC.png",
+          "D": "figures/ch01/q03-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "Both lines turn to point the opposite way; + becomes − and × becomes ÷, and the ring moves to the other sign.",
+      "working": "In figure 3 both lines point up, so in the answer both point down. As in figure 2, the ringed × becomes a plain ÷ and the plain + becomes a ringed −: option C."
+    },
+    {
+      "id": "aof-b04",
+      "bookNo": 4,
+      "sourcePage": 10,
+      "keyFrom": "book",
+      "pattern": "fig-sides",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q04-t1.png",
+          "figures/ch01/q04-t2.png",
+          "figures/ch01/q04-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q04-oA.png",
+          "B": "figures/ch01/q04-oB.png",
+          "C": "figures/ch01/q04-oC.png",
+          "D": "figures/ch01/q04-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "The oval becomes a rectangle, every shape gets one more side and every group of dots gets one more dot.",
+      "working": "Figure 1 → 2: triangle → square, square → pentagon, 1 dot → 2 dots, 2 dots → 3 dots, each in the same place. Figure 3 has a square at the top, a triangle at the bottom, 2 dots on the left and 1 on the right, so the answer has a pentagon at the top, a square at the bottom, 3 dots on the left and 2 on the right: option D."
+    },
+    {
+      "id": "aof-b05",
+      "bookNo": 5,
+      "sourcePage": 11,
+      "keyFrom": "book",
+      "pattern": "fig-rotate",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q05-t1.png",
+          "figures/ch01/q05-t2.png",
+          "figures/ch01/q05-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q05-oA.png",
+          "B": "figures/ch01/q05-oB.png",
+          "C": "figures/ch01/q05-oC.png",
+          "D": "figures/ch01/q05-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "The dot moves one corner clockwise, the long arrow moves to the opposite side, and the short arrow moves half a side along and turns.",
+      "working": "Figure 1 → 2: the dot goes from top-left to top-right; the long arrow jumps from the right side to the left side and points the other way; the short arrow moves along the bottom. In figure 3 the dot is top-right, so it goes to bottom-right; the long arrow at the top goes to the bottom, pointing right; the short arrow moves up to the top-right corner: option A."
+    },
+    {
+      "id": "aof-b06",
+      "bookNo": 6,
+      "sourcePage": 11,
+      "keyFrom": "book",
+      "pattern": "fig-rotate",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q06-t1.png",
+          "figures/ch01/q06-t2.png",
+          "figures/ch01/q06-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q06-oA.png",
+          "B": "figures/ch01/q06-oB.png",
+          "C": "figures/ch01/q06-oC.png",
+          "D": "figures/ch01/q06-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "The stick figure turns half a turn, and the shape in its head gets one more side.",
+      "working": "Figure 1 → 2: the upright figure turns upside down, and the triangle in the head becomes a rectangle. Figure 3 lies with its head on the left, so the answer lies with its head on the right, and the rectangle becomes a pentagon: option B."
+    },
+    {
+      "id": "aof-b07",
+      "bookNo": 7,
+      "sourcePage": 11,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q07-t1.png",
+          "figures/ch01/q07-t2.png",
+          "figures/ch01/q07-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q07-oA.png",
+          "B": "figures/ch01/q07-oB.png",
+          "C": "figures/ch01/q07-oC.png",
+          "D": "figures/ch01/q07-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "A copy of the figure, turned upside down, is joined to it, and the two small shapes move to the copy.",
+      "working": "In figure 2 the triangle and an upside-down copy make a star; the black tip is copied to the bottom, and the circle and square now sit at the top, swapped round. Do the same to figure 3: the open Λ and an upside-down V cross each other, the striped tip is copied to the bottom, and the square and oval move to the top ends: option C.",
+      "note": "Every option prints the small oval filled in, although it is empty in figure 3, so only the lines and stripes tell the options apart."
+    },
+    {
+      "id": "aof-b08",
+      "bookNo": 8,
+      "sourcePage": 11,
+      "keyFrom": "book",
+      "pattern": "fig-rotate",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q08-t1.png",
+          "figures/ch01/q08-t2.png",
+          "figures/ch01/q08-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q08-oA.png",
+          "B": "figures/ch01/q08-oB.png",
+          "C": "figures/ch01/q08-oC.png",
+          "D": "figures/ch01/q08-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "Each shape moves round the parts by its own rule: the square 1 part anticlockwise, the upright triangle 2 parts clockwise, the upside-down triangle 1 part clockwise, and the dot to the opposite part.",
+      "working": "In figure 3: the dot (top-left) goes to the opposite part, bottom-right; the square (top-right) goes 1 part anticlockwise, to top-left; the upright triangle (bottom-left) goes 2 parts clockwise, to top-right; the upside-down triangle (bottom-right) goes 1 part clockwise, to bottom-left: option D."
+    },
+    {
+      "id": "aof-b09",
+      "bookNo": 9,
+      "sourcePage": 11,
+      "keyFrom": "book",
+      "pattern": "fig-count",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q09-t1.png",
+          "figures/ch01/q09-t2.png",
+          "figures/ch01/q09-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q09-oA.png",
+          "B": "figures/ch01/q09-oB.png",
+          "C": "figures/ch01/q09-oC.png",
+          "D": "figures/ch01/q09-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "The figure's two halves are turned outwards so they meet at their points, lying sideways, and each half gets one more dot, in a column.",
+      "working": "The diamond's two triangles (1 dot and 2 dots) become a bow tie with 2 and 3 dots. The hexagon's two halves (2 dots and 3 dots) become two pointed halves meeting at their points, with 3 and 4 dots standing in columns: option A."
+    },
+    {
+      "id": "aof-b10",
+      "bookNo": 10,
+      "sourcePage": 12,
+      "keyFrom": "book",
+      "pattern": "fig-rotate",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q10-t1.png",
+          "figures/ch01/q10-t2.png",
+          "figures/ch01/q10-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q10-oA.png",
+          "B": "figures/ch01/q10-oB.png",
+          "C": "figures/ch01/q10-oC.png",
+          "D": "figures/ch01/q10-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "The circle becomes a square; + moves 3 parts anticlockwise, − 3 parts clockwise, × 3 parts clockwise and the dot 3 parts anticlockwise.",
+      "working": "Number the 8 parts clockwise. In figure 3, + (top, left of centre) moves 3 parts anticlockwise to the bottom-left; − (top, right) moves 3 parts clockwise to the bottom-right; × (left, lower) moves 3 parts clockwise to the top-right; the dot (right, lower) moves 3 parts anticlockwise to the top-left. In a square: option A."
+    },
+    {
+      "id": "aof-b11",
+      "bookNo": 11,
+      "sourcePage": 12,
+      "keyFrom": "book",
+      "pattern": "fig-swap",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q11-t1.png",
+          "figures/ch01/q11-t2.png",
+          "figures/ch01/q11-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q11-oA.png",
+          "B": "figures/ch01/q11-oB.png",
+          "C": "figures/ch01/q11-oC.png",
+          "D": "figures/ch01/q11-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "The part-shapes in the corners become whole shapes; the stripes and dots stay as they are.",
+      "working": "In figure 1 the quarter circles in two corners become whole circles in figure 2. In figure 3 the small corner squares (top-left and bottom-right) become whole small squares, and the stripes and dots stay: option B."
+    },
+    {
+      "id": "aof-b12",
+      "bookNo": 12,
+      "sourcePage": 12,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q12-t1.png",
+          "figures/ch01/q12-t2.png",
+          "figures/ch01/q12-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q12-oA.png",
+          "B": "figures/ch01/q12-oB.png",
+          "C": "figures/ch01/q12-oC.png",
+          "D": "figures/ch01/q12-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "The box becomes a circle cut into 4; everything moves one-eighth of a turn clockwise, the arrows turn round, and filled and empty shapes swap.",
+      "working": "Figure 1 → 2: top → top-right, bottom → bottom-left, left → top-left, right → bottom-right; the empty rectangle becomes filled and the black oval becomes empty. In figure 3 the black oval (top) becomes an empty oval at top-right, the up arrow (left) becomes a down-left arrow at top-left, and the down arrow (right) becomes an up-right arrow at bottom-right: option D.",
+      "note": "Strictly, the empty rectangle at the bottom of figure 3 should become a filled rectangle at the bottom-left. Option D shows a filled oval there, but it is the only option with everything else right."
+    },
+    {
+      "id": "aof-b13",
+      "bookNo": 13,
+      "sourcePage": 12,
+      "keyFrom": "book",
+      "pattern": "fig-rotate",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q13-t1.png",
+          "figures/ch01/q13-t2.png",
+          "figures/ch01/q13-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q13-oA.png",
+          "B": "figures/ch01/q13-oB.png",
+          "C": "figures/ch01/q13-oC.png",
+          "D": "figures/ch01/q13-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "Both shaded parts move 2 parts clockwise.",
+      "working": "Number the 8 parts clockwise. From figure 1 to figure 2 each shaded part moves 2 parts clockwise. Move both shaded parts of the square in figure 3 2 parts clockwise: option C."
+    },
+    {
+      "id": "aof-b14",
+      "bookNo": 14,
+      "sourcePage": 12,
+      "keyFrom": "book",
+      "pattern": "fig-count",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q14-t1.png",
+          "figures/ch01/q14-t2.png",
+          "figures/ch01/q14-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q14-oA.png",
+          "B": "figures/ch01/q14-oB.png",
+          "C": "figures/ch01/q14-oC.png",
+          "D": "figures/ch01/q14-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "Lines are drawn from every corner to every corner that is not next to it (all the diagonals).",
+      "working": "A rectangle has 2 diagonals, so figure 2 shows the rectangle with a cross. A hexagon has 9 diagonals (3 from each corner), so the answer is the hexagon with all 9 drawn: option B."
+    },
+    {
+      "id": "aof-b15",
+      "bookNo": 15,
+      "sourcePage": 13,
+      "keyFrom": "book",
+      "pattern": "fig-other",
+      "layout": "analogy",
+      "terms": [
+        "1",
+        "2",
+        "3",
+        "?"
+      ],
+      "figures": {
+        "terms": [
+          "figures/ch01/q15-t1.png",
+          "figures/ch01/q15-t2.png",
+          "figures/ch01/q15-t3.png",
+          "?"
+        ],
+        "options": {
+          "A": "figures/ch01/q15-oA.png",
+          "B": "figures/ch01/q15-oB.png",
+          "C": "figures/ch01/q15-oC.png",
+          "D": "figures/ch01/q15-oD.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "The open lines close up into a shape with a dot in the middle, and the corner line moves one corner clockwise.",
+      "working": "In figure 1 the two crossing lines become a closed diamond with a dot, and the corner line moves from top-left to top-right. In figure 3 the two curves close into a circle with a dot, and the corner line moves from bottom-right to bottom-left: option D.",
+      "note": "Options C and D differ only in the slant of the corner line. In D it keeps the same shallow slant as in figure 3, as the corner line does from figure 1 to figure 2."
+    }
+  ]
+}
