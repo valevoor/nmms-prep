@@ -22,6 +22,14 @@ const ART: Record<number, ReactNode> = {
       <path d="M14 14h14l-9 9 9 9" className="art-accent" style={{ fill: 'none' }} strokeWidth={3.5} />
     </>
   ),
+  // Similar Figures in Different Position: a flag and the same flag turned a quarter turn
+  4: (
+    <>
+      <path d="M8 40V8l14 6-14 6" />
+      <rect x={24} y={20} width={20} height={20} rx={3.5} className="art-tile-accent" />
+      <path d="M26 24h16l-6 8-6-8" className="art-accent" style={{ fill: 'none' }} />
+    </>
+  ),
   // Figure Series: a shape gains a side each time
   2: (
     <>

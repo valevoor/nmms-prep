@@ -15,6 +15,10 @@ import hiddenKn from './mat/hidden-figures.kn.json'
 import hidden from './mat/hidden-figures.json'
 import hiddenMetaKn from './mat/hidden-figures.meta.kn.json'
 import hiddenMeta from './mat/hidden-figures.meta.json'
+import similarKn from './mat/similar-figures.kn.json'
+import similar from './mat/similar-figures.json'
+import similarMetaKn from './mat/similar-figures.meta.kn.json'
+import similarMeta from './mat/similar-figures.meta.json'
 import arithmeticKn from './mat/arithmetical-operations.kn.json'
 import arithmetic from './mat/arithmetical-operations.json'
 import arithmeticMetaKn from './mat/arithmetical-operations.meta.kn.json'
@@ -123,4 +127,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('arithmetical-operations', 'Arithmetical Operations', arithmetic, arithmeticMeta, arithmeticKn, arithmeticMetaKn),
   c('signs-symbols', 'Signs and Symbols', signs, signsMeta, signsKn, signsMetaKn),
   c('hidden-figures', 'Hidden Figures', hidden, hiddenMeta, hiddenKn, hiddenMetaKn),
+  c('similar-figures', 'Similar Figures in Different Position', similar, similarMeta, similarKn, similarMetaKn),
 ]

@@ -1,0 +1,353 @@
+{
+ "topic": "similar-figures",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 4 (questions: PDF page 21, answers: PDF page 115)",
+ "questions": [
+  {
+   "id": "sim-b01",
+   "bookNo": 1,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q01-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q01-oA.png",
+     "B": "figures/ch04/q01-oB.png",
+     "C": "figures/ch04/q01-oC.png",
+     "D": "figures/ch04/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D is the same figure turned; the others have a foot or the stripes changed.",
+   "working": "Turn the figure until its body lies flat. Follow the four feet round the body: the plain foot, the foot with one line along it, the crossed foot and the foot with two lines along it. They come in the same order, with the stripes on the body sloping the same way, only in D."
+  },
+  {
+   "id": "sim-b02",
+   "bookNo": 2,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q02-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q02-oA.png",
+     "B": "figures/ch04/q02-oB.png",
+     "C": "figures/ch04/q02-oC.png",
+     "D": "figures/ch04/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C is the figure turned a quarter turn clockwise.",
+   "working": "Turn the figure a quarter turn clockwise. The short line joining the two rectangles on the right moves to the bottom, the short half line inside moves to the top, and the two long slanting lines move to the left and right sides. That is C. B and D are turned mirror images: their slanting lines lean the other way."
+  },
+  {
+   "id": "sim-b03",
+   "bookNo": 3,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q03-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q03-oA.png",
+     "B": "figures/ch04/q03-oB.png",
+     "C": "figures/ch04/q03-oC.png",
+     "D": "figures/ch04/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C is the flower turned; the others have the centre or the small loops changed.",
+   "working": "Turn the flower until its three leaves line up. In the given flower the black half of the centre faces away from one leaf, and each gap between leaves has one small loop. Only C keeps both. In B and D the black half faces a leaf; in A the loops sit in different petals."
+  },
+  {
+   "id": "sim-b04",
+   "bookNo": 4,
+   "sourcePage": 21,
+   "keyFrom": "solved",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q04-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q04-oA.png",
+     "B": "figures/ch04/q04-oB.png",
+     "C": "figures/ch04/q04-oC.png",
+     "D": "figures/ch04/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B is the star turned a quarter turn anticlockwise.",
+   "working": "In the given star the two shaded gaps sit on either side of a white point, and the points just past them are black. Turn the star a quarter turn anticlockwise and it matches B, centre circle too: its black quarters move to the other diagonal. A and D are mirror images, and in C the shaded gaps sit on either side of a black point.",
+   "note": "The book's key says C, but in C the two shaded gaps are on either side of a black point, while in the given star they are on either side of a white point. B matches once turned."
+  },
+  {
+   "id": "sim-b05",
+   "bookNo": 5,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q05-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q05-oA.png",
+     "B": "figures/ch04/q05-oB.png",
+     "C": "figures/ch04/q05-oC.png",
+     "D": "figures/ch04/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The figure turned: follow the arrows in each quarter.",
+   "working": "A and C are not turns of the figure: the arrows in some quarters go round the other way. The answer is B or D, the two tilted options.",
+   "note": "Hidden: the small arrowheads in the scan are too blurred to tell B from D with confidence (the book's key says D). Both have the cross turned inside an ellipse that is not turned.",
+   "status": "needs-review"
+  },
+  {
+   "id": "sim-b06",
+   "bookNo": 6,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q06-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q06-oA.png",
+     "B": "figures/ch04/q06-oB.png",
+     "C": "figures/ch04/q06-oC.png",
+     "D": "figures/ch04/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A is the figure turned half a turn.",
+   "working": "Turn the figure half a turn. The long slanting line on the right moves to the left side, the two parallel slanting lines in the middle move to the right of the centre, and the small box with a line across moves to the left of them. That is A."
+  },
+  {
+   "id": "sim-b07",
+   "bookNo": 7,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q07-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q07-oA.png",
+     "B": "figures/ch04/q07-oB.png",
+     "C": "figures/ch04/q07-oC.png",
+     "D": "figures/ch04/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The bat turned.",
+   "working": "Each option is the bat turned, with one wing folded up and the other spread.",
+   "note": "Hidden: B and D look like the same drawing turned by slightly different amounts, and A is its mirror image. The given bat is almost the same on both sides, so the scan can't settle which option is meant (the book's key says D).",
+   "status": "needs-review"
+  },
+  {
+   "id": "sim-b08",
+   "bookNo": 8,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q08-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q08-oA.png",
+     "B": "figures/ch04/q08-oB.png",
+     "C": "figures/ch04/q08-oC.png",
+     "D": "figures/ch04/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A is the figure turned a quarter turn clockwise.",
+   "working": "Turn the figure a quarter turn clockwise: the lines now lie across, from the top: square–diamond, circle–arc, the zigzag, and the hook–fork. The hook and the zigzag bend the right way only in A. B has the fork at the wrong end, C is a mirror image, and in D (turned half a turn) the zigzag bends the other way."
+  },
+  {
+   "id": "sim-b09",
+   "bookNo": 9,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q09-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q09-oA.png",
+     "B": "figures/ch04/q09-oB.png",
+     "C": "figures/ch04/q09-oC.png",
+     "D": "figures/ch04/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B is the figure turned a quarter turn clockwise.",
+   "working": "Turn the figure a quarter turn clockwise. The two arrows now point down, with the black-headed one on the right; the small triangles, the double circle and the half-shaded triangle move round with them, and each corner mark moves one corner clockwise. That is B."
+  },
+  {
+   "id": "sim-b10",
+   "bookNo": 10,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q10-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q10-oA.png",
+     "B": "figures/ch04/q10-oB.png",
+     "C": "figures/ch04/q10-oC.png",
+     "D": "figures/ch04/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A is the figure turned so it stands on a corner.",
+   "working": "Go round the inner square clockwise: the small box, the open arrow, the cross, an empty side, the corner mark, the triangle, the circle, an empty side. A has the same order, turned to stand on a corner. In D the circle and the cross change places (a mirror image); B and C have a different mark at one end of the long line."
+  },
+  {
+   "id": "sim-b11",
+   "bookNo": 11,
+   "sourcePage": 21,
+   "keyFrom": "book",
+   "pattern": "fig-rotate",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch04/q11-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch04/q11-oA.png",
+     "B": "figures/ch04/q11-oB.png",
+     "C": "figures/ch04/q11-oC.png",
+     "D": "figures/ch04/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D matches the figure part for part.",
+   "working": "D has the plus with its two dots at the top, the black triangle and the V lines on the left, and the arcs with their black part at the right. B is turned but the dots of its plus are on the wrong side; A and C are mirror images.",
+   "note": "D is drawn in the same position as the given figure, not turned. B is the only turned option, and its plus has its dots on the wrong side."
+  }
+ ]
+}

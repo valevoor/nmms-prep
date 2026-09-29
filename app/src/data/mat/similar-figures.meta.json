@@ -1,0 +1,26 @@
+{
+  "topic": "similar-figures",
+  "intro": "You are given one figure and four options. One option is the same figure, only turned to a different position. The others are mirror images or have a small part changed. Find the one that is only turned.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Pick one part and follow it",
+      "body": "Choose a part that is easy to spot, such as a black corner or an arrow. Turn the figure in your mind and see where that part goes. Then check a second part.",
+      "visual": "figTurn",
+      "caption": "Watch the black dot: a quarter turn clockwise moves it one corner on."
+    },
+    {
+      "title": "Go round the figure in order",
+      "body": "Name the parts in order as you go clockwise round the figure: box, arrow, cross, circle… Turning the figure keeps this order. A mirror image reverses it."
+    },
+    {
+      "title": "Mirror images are the usual trap",
+      "body": "A mirror image looks right at first, but everything that should be on the left is on the right. If the order round the figure runs the other way, it is a mirror image, not a turn."
+    },
+    {
+      "title": "Check the small marks last",
+      "body": "When two options pass the big check, look at the small things: which way a zigzag bends, which side of a line the dots are on, which way a hook points."
+    }
+  ],
+  "workedExamples": ["sim-b02", "sim-b08", "sim-b10"]
+}
