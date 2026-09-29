@@ -219,6 +219,11 @@ const genEn = {
   ssRuleFill: 'Try each set of signs in turn. Work out each side of =, < or > on its own: × and ÷ first, then + and −. Then compare the two sides.',
   ssRuleSwap: 'Swap the two signs or numbers, then work out each side: × and ÷ first, then + and −. Then compare the two sides.',
 
+  // Number matrix
+  mxPrompt: 'Find the missing number in the matrix.',
+  mxRow: (eq: string) => `In every row, call the numbers a, b and c from the left: ${eq}.`,
+  mxCol: (eq: string) => `In every column, call the numbers a, b and c from the top: ${eq}.`,
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -381,6 +386,9 @@ const genEn = {
     'fignum-rule': 'One rule makes a number from the others in every figure',
     'fignum-path': 'Read the numbers in order round the figure',
     'fignum-opposite': 'Each number goes with the one opposite it',
+    'mx-row': 'One rule works across every row',
+    'mx-col': 'One rule works down every column',
+    'mx-other': 'Digits, letters or the same result in every row',
   } as Record<PatternId, string>,
 }
 
@@ -581,6 +589,9 @@ const genKn: GenText = {
   ssSwapAsk: 'ಹೇಳಿಕೆ ಸರಿಯಾಗಲು ಯಾವ ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅಥವಾ ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಬೇಕು?',
   ssRuleFill: 'ಪ್ರತಿ ಚಿಹ್ನೆಗಳ ಗುಂಪನ್ನು ಒಂದೊಂದಾಗಿ ಪ್ರಯತ್ನಿಸಿ. =, < ಅಥವಾ > ನ ಪ್ರತಿ ಬದಿಯನ್ನು ಬೇರೆಯಾಗಿ ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −. ನಂತರ ಎರಡು ಬದಿಗಳನ್ನು ಹೋಲಿಸಿ.',
   ssRuleSwap: 'ಎರಡು ಚಿಹ್ನೆಗಳನ್ನು ಅಥವಾ ಸಂಖ್ಯೆಗಳನ್ನು ಅದಲು ಬದಲು ಮಾಡಿ, ನಂತರ ಪ್ರತಿ ಬದಿಯನ್ನು ಲೆಕ್ಕ ಮಾಡಿ: ಮೊದಲು × ಮತ್ತು ÷, ನಂತರ + ಮತ್ತು −. ನಂತರ ಎರಡು ಬದಿಗಳನ್ನು ಹೋಲಿಸಿ.',
+  mxPrompt: 'ಕೊಟ್ಟಿರುವ ಮಾತೃಕೆಯಲ್ಲಿ ಬಿಟ್ಟು ಹೋಗಿರುವ ಸಂಖ್ಯೆಯನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.',
+  mxRow: (eq) => `ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಎಡದಿಂದ ಸಂಖ್ಯೆಗಳನ್ನು a, b ಮತ್ತು c ಎನ್ನಿ: ${eq}.`,
+  mxCol: (eq) => `ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲಿ ಮೇಲಿನಿಂದ ಸಂಖ್ಯೆಗಳನ್ನು a, b ಮತ್ತು c ಎನ್ನಿ: ${eq}.`,
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -733,6 +744,9 @@ const genKn: GenText = {
     'fignum-rule': 'ಪ್ರತಿ ಆಕೃತಿಯಲ್ಲೂ ಒಂದೇ ನಿಯಮ ಉಳಿದ ಸಂಖ್ಯೆಗಳಿಂದ ಒಂದು ಸಂಖ್ಯೆಯನ್ನು ಮಾಡುತ್ತದೆ',
     'fignum-path': 'ಆಕೃತಿಯ ಸುತ್ತ ಸಂಖ್ಯೆಗಳನ್ನು ಕ್ರಮವಾಗಿ ಓದಿ',
     'fignum-opposite': 'ಪ್ರತಿ ಸಂಖ್ಯೆಯೂ ಅದರ ಎದುರಿನ ಸಂಖ್ಯೆಯೊಂದಿಗೆ ಜೋಡಿ',
+    'mx-row': 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲೂ ಒಂದೇ ನಿಯಮ',
+    'mx-col': 'ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲೂ ಒಂದೇ ನಿಯಮ',
+    'mx-other': 'ಅಂಕಿಗಳು, ಅಕ್ಷರಗಳು ಅಥವಾ ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲೂ ಒಂದೇ ಫಲಿತಾಂಶ',
   },
 }
 

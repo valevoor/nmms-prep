@@ -64,6 +64,10 @@ import colouringKn from './mat/cubes-colouring.kn.json'
 import colouring from './mat/cubes-colouring.json'
 import colouringMetaKn from './mat/cubes-colouring.meta.kn.json'
 import colouringMeta from './mat/cubes-colouring.meta.json'
+import matrixKn from './mat/number-matrix.kn.json'
+import matrix from './mat/number-matrix.json'
+import matrixMetaKn from './mat/number-matrix.meta.kn.json'
+import matrixMeta from './mat/number-matrix.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -178,4 +182,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('counting-figures', 'Counting of Figures', counting, countingMeta, countingKn, countingMetaKn),
   c('cubes-colouring', 'Cubes Colouring', colouring, colouringMeta, colouringKn, colouringMetaKn),
   c('figure-numbers', 'Figures and Number Relationship', figNum, figNumMeta, figNumKn, figNumMetaKn),
+  c('number-matrix', 'Number Matrix', matrix, matrixMeta, matrixKn, matrixMetaKn),
 ]

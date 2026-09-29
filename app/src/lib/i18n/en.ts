@@ -289,6 +289,11 @@ export const en = {
       label:
         'A triangle with three lines from its top to the base, which cut it into 4 thin parts. First tap: the 4 triangles made of one part each. Second tap: the 3 triangles made of two parts next to each other. Third tap: the 2 made of three parts. Last tap: the whole triangle. 4 + 3 + 2 + 1 = 10 triangles.',
     },
+    matrix: {
+      buttons: ['First column', 'Second column', 'Use the rule'],
+      label:
+        'A 3 by 3 matrix. Its columns are 5, 11, 21; then 8, 17, 33; then 7, 15 and a missing number. First tap: in the first column, 5 × 2 + 11 = 21. Second tap: the same rule works in the second column, 8 × 2 + 17 = 33. Last tap: using it in the third column, 7 × 2 + 15 = 29.',
+    },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],
       label:

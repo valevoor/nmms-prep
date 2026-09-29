@@ -10,6 +10,7 @@ import { CubePaint } from './CubePaint'
 import { DiceNet } from './DiceNet'
 import { CountFan } from './CountFan'
 import { FigNumbers } from './FigNumbers'
+import { MatrixColumns } from './MatrixColumns'
 import { CubeColours } from './CubeColours'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
@@ -50,4 +51,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   countFan: CountFan,
   cubeColours: CubeColours,
   figNumbers: FigNumbers,
+  matrix: MatrixColumns,
 }

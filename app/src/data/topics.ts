@@ -20,6 +20,8 @@ import arithmetic from './mat/arithmetical-operations.json'
 import arithmeticMeta from './mat/arithmetical-operations.meta.json'
 import blood from './mat/blood-relations.json'
 import signs from './mat/signs-symbols.json'
+import matrix from './mat/number-matrix.json'
+import matrixMeta from './mat/number-matrix.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -78,6 +80,7 @@ import { generateAnalogyRuleQuestion, generateNumberAnalogy } from '../lib/gener
 import { generateNumberSeries } from '../lib/generators/numberSeries'
 import { generateSequence } from '../lib/generators/sequence'
 import { generateSigns } from '../lib/generators/signs'
+import { generateNumberMatrix } from '../lib/generators/numberMatrix'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -385,6 +388,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: figNumMeta as TopicMeta,
     missing: 'number',
     generate: generateFigureNumbers,
+  },
+  {
+    id: 'number-matrix',
+    chapter: 27,
+    name: 'Number Matrix',
+    questions: visible(matrix.questions as Question[]),
+    meta: matrixMeta as TopicMeta,
+    missing: 'number',
+    generate: generateNumberMatrix,
   },
 ]
 

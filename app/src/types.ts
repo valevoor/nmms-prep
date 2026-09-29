@@ -171,6 +171,10 @@ export type PatternId =
   | 'fignum-rule'
   | 'fignum-path'
   | 'fignum-opposite'
+  // Number matrix (Chapter 27)
+  | 'mx-row'
+  | 'mx-col'
+  | 'mx-other'
 
 export interface Question {
   id: string

@@ -22,17 +22,26 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
         <SeriesView terms={q.terms} reveal={reveal} size={size} layout={q.layout} />
       </>
     )
+  // A number matrix is drawn as a boxed grid, and the answer is written into its blank(s).
+  const matrix = q.pattern.startsWith('mx-')
+  const fills = matrix && reveal ? reveal.split(', ') : []
+  let blank = 0
   return (
     <div className={`stem stem-${size}`}>
       {q.figures && <FigureStem q={q} size={size} />}
       {q.table && (
-        <table className="code-table">
+        <table className={matrix ? 'matrix-table' : 'code-table'}>
           <tbody>
-            {q.table.map((row) => (
-              <tr key={row.join()}>
-                {row.map((cell, i) => (
-                  <td key={i}>{cell}</td>
-                ))}
+            {q.table.map((row, r) => (
+              <tr key={r}>
+                {row.map((cell, i) => {
+                  const shown = cell === '?' && blank < fills.length ? fills[blank++] : undefined
+                  return (
+                    <td key={i} className={shown ? 'mx-revealed' : cell === '?' ? 'mx-blank' : undefined}>
+                      {shown ?? cell}
+                    </td>
+                  )
+                })}
               </tr>
             ))}
           </tbody>

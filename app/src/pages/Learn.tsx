@@ -41,7 +41,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       ) : (
         <SeriesView terms={q.terms} ops={q.ops} opsShown={Math.min(step, steps)} reveal={done ? q.options[q.answer] : undefined} layout={q.layout} />
       )}
-      {q.layout === 'text' && <QuestionStem q={q} />}
+      {q.layout === 'text' && <QuestionStem q={q} reveal={done ? q.options[q.answer] : undefined} />}
       {(q.layout === 'odd' || q.layout === 'text' || q.figures) && <Options q={q} reveal={done} />}
       {step > 0 && <p className="rule">{text.rule}</p>}
       {done && <MapDiagram q={q} />}

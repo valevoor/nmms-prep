@@ -611,6 +611,35 @@ a {
   font-size: 1.4rem;
 }
 
+/* Number Matrix: a boxed grid of numbers, one cell blank. */
+.matrix-table {
+  border-collapse: collapse;
+  margin: 0 0 12px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.matrix-table td {
+  min-width: 2.6em;
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.matrix-table .mx-blank {
+  color: var(--primary);
+}
+
+.matrix-table .mx-revealed {
+  color: var(--good);
+  background: var(--good-soft);
+}
+
+.stem-lg .matrix-table {
+  font-size: 1.6rem;
+}
+
 .relations-table {
   width: 100%;
   border-collapse: collapse;

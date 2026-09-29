@@ -1,0 +1,33 @@
+{
+  "topic": "number-matrix",
+  "intro": "A number matrix is a table of numbers in rows and columns with one number missing. The same rule works across every row, or down every column. Find the rule from the complete rows (or columns), check it, then use it on the one with the ?.",
+  "tips": [
+    {
+      "title": "Find the rule in one line, check it in the next",
+      "visual": "matrix",
+      "body": "Never start with the row or column that has the ?. Guess a rule from a complete row, and check it on the other complete row. If it doesn't work across, try down the columns. Only a rule that works in every complete line is the right one; then use it on the line with the ?.",
+      "caption": "5 × 2 + 11 = 21 and 8 × 2 + 17 = 33, so 7 × 2 + 15 = 29."
+    },
+    {
+      "title": "Which number is made from the others?",
+      "body": "Most often it is the last number of each row or column, but it can be the first or the middle one. A big number (125, 174) is often a cube or a square plus something: 5³ + 7² = 125 + 49 = 174. A middle number that lies between the other two may be their average: (26 + 38) ÷ 2 = 32."
+    },
+    {
+      "title": "Rules that come up often",
+      "body": "Double one number and add the other: 5 × 2 + 11 = 21. Add two and take away one: 22 + 2 − 1 = 23. Multiply: 9 × 5 × 3 = 135. Squares, cubes and square roots: (9 − 6)³ = 27, 2³ + 3² = 17, √9 + √36 = 9. Know the squares up to 20² and the cubes up to 10³ by heart."
+    },
+    {
+      "title": "When the ? is not the answer number",
+      "body": "Sometimes the blank is a number the rule starts from. Write the rule with the ? in it and work backwards: 6 × ? × 5 = 150 gives 30 × ? = 150, so ? = 5. Or put each option in turn into the rule and keep the one that fits."
+    },
+    {
+      "title": "The same result in every row",
+      "body": "Sometimes each row gives the same number: 14 × 8 × 7 = 784 and 7 × 16 × 7 = 784, so ? × 4 × 7 = 784 and ? = 28."
+    },
+    {
+      "title": "Digits and letters",
+      "body": "If nothing works with the whole numbers, add up their digits: in the row 11, 12, 25, 1 + 1 + 1 + 2 = 5 and 5² = 25. Letters in a matrix stand for their places in the alphabet: T − O = 20 − 15 = 5, which is E."
+    }
+  ],
+  "workedExamples": ["nm-b03", "nm-b10", "nm-b08", "nm-b12"]
+}

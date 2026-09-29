@@ -1,0 +1,294 @@
+{
+  "topic": "number-matrix",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 27 \"Matrix Numbers\" (questions: PDF pages 78–79, solutions: PDF pages 160–161). tools/check_number_matrix.ts puts each option into the matrix and checks the rule in every row or column. The key for Q1 prints the answer 6 with no letter; 6 is option B.",
+  "questions": [
+    {
+      "id": "nm-b01",
+      "bookNo": 1,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["27", "6", "9"],
+        ["125", "3", "8"],
+        ["8", "4", "?"]
+      ],
+      "options": { "A": "9", "B": "6", "C": "3", "D": "2" },
+      "answer": "B",
+      "rule": "In each row, (3rd number − 2nd number)³ = 1st number.",
+      "working": "(9 − 6)³ = 3³ = 27; (8 − 3)³ = 5³ = 125; (? − 4)³ = 8 = 2³ → ? − 4 = 2 → ? = 6"
+    },
+    {
+      "id": "nm-b02",
+      "bookNo": 2,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["4", "?", "25"],
+        ["9", "9", "36"],
+        ["49", "18", "121"]
+      ],
+      "options": { "A": "8", "B": "27", "C": "7", "D": "9" },
+      "answer": "C",
+      "rule": "In each row, √(1st number) + √(3rd number) = middle number.",
+      "working": "√9 + √36 = 3 + 6 = 9; √49 + √121 = 7 + 11 = 18; √4 + √25 = 2 + 5 = 7"
+    },
+    {
+      "id": "nm-b03",
+      "bookNo": 3,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["5", "8", "7"],
+        ["11", "17", "15"],
+        ["21", "33", "?"]
+      ],
+      "options": { "A": "29", "B": "28", "C": "21", "D": "33" },
+      "answer": "A",
+      "rule": "In each column, top number × 2 + middle number = bottom number.",
+      "working": "5 × 2 + 11 = 21; 8 × 2 + 17 = 33; 7 × 2 + 15 = 29"
+    },
+    {
+      "id": "nm-b04",
+      "bookNo": 4,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["11", "12", "25"],
+        ["21", "30", "36"],
+        ["32", "?", "64"]
+      ],
+      "options": { "A": "21", "B": "22", "C": "23", "D": "24" },
+      "answer": "A",
+      "rule": "In each row, add all the digits of the 1st and 2nd numbers; the square of that sum is the 3rd number.",
+      "working": "1 + 1 + 1 + 2 = 5, 5² = 25; 2 + 1 + 3 + 0 = 6, 6² = 36; 64 = 8² and 3 + 2 = 5, so the digits of ? add up to 3 → ? = 21 (2 + 1 = 3)"
+    },
+    {
+      "id": "nm-b05",
+      "bookNo": 5,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["2", "3", "?"],
+        ["3", "2", "3"],
+        ["17", "31", "36"]
+      ],
+      "options": { "A": "1", "B": "3", "C": "4", "D": "6" },
+      "answer": "B",
+      "rule": "In each column, (top number)³ + (middle number)² = bottom number.",
+      "working": "2³ + 3² = 8 + 9 = 17; 3³ + 2² = 27 + 4 = 31; ?³ + 3² = 36 → ?³ = 27 → ? = 3"
+    },
+    {
+      "id": "nm-b06",
+      "bookNo": 6,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing letter in the matrix.",
+      "table": [
+        ["T", "Z", "V"],
+        ["O", "P", "G"],
+        ["E", "J", "?"]
+      ],
+      "options": { "A": "N", "B": "O", "C": "P", "D": "Q" },
+      "answer": "B",
+      "rule": "Use each letter's place in the alphabet (A = 1 … Z = 26). In each column, top letter − middle letter = bottom letter.",
+      "working": "T − O = 20 − 15 = 5 = E; Z − P = 26 − 16 = 10 = J; V − G = 22 − 7 = 15 = O"
+    },
+    {
+      "id": "nm-b07",
+      "bookNo": 7,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["?", "1", "2"],
+        ["21", "22", "40"],
+        ["1", "2", "5"],
+        ["20", "23", "43"]
+      ],
+      "options": { "A": "5", "B": "4", "C": "2", "D": "3" },
+      "answer": "C",
+      "rule": "In each column, counting from the top, 2nd number + 3rd number − 1st number = 4th number.",
+      "working": "22 + 2 − 1 = 23; 40 + 5 − 2 = 43; 21 + 1 − ? = 20 → ? = 2"
+    },
+    {
+      "id": "nm-b08",
+      "bookNo": 8,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["9", "5", "6"],
+        ["5", "7", "?"],
+        ["3", "4", "5"],
+        ["135", "140", "150"]
+      ],
+      "options": { "A": "4", "B": "5", "C": "8", "D": "10" },
+      "answer": "B",
+      "rule": "In each column, the top three numbers multiplied together give the bottom number.",
+      "working": "9 × 5 × 3 = 135; 5 × 7 × 4 = 140; 6 × ? × 5 = 150 → 30 × ? = 150 → ? = 5"
+    },
+    {
+      "id": "nm-b09",
+      "bookNo": 9,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["26", "32", "38"],
+        ["13", "19", "25"],
+        ["24", "?", "36"]
+      ],
+      "options": { "A": "30", "B": "38", "C": "35", "D": "45" },
+      "answer": "A",
+      "rule": "In each row, the middle number is half the sum of the other two: (1st + 3rd) ÷ 2.",
+      "working": "(26 + 38) ÷ 2 = 64 ÷ 2 = 32; (13 + 25) ÷ 2 = 38 ÷ 2 = 19; (24 + 36) ÷ 2 = 60 ÷ 2 = 30"
+    },
+    {
+      "id": "nm-b10",
+      "bookNo": 10,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["2", "4", "24"],
+        ["5", "7", "174"],
+        ["6", "3", "?"]
+      ],
+      "options": { "A": "252", "B": "63", "C": "225", "D": "36" },
+      "answer": "C",
+      "rule": "In each row, (1st number)³ + (2nd number)² = 3rd number.",
+      "working": "2³ + 4² = 8 + 16 = 24; 5³ + 7² = 125 + 49 = 174; 6³ + 3² = 216 + 9 = 225"
+    },
+    {
+      "id": "nm-b11",
+      "bookNo": 11,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the two missing numbers in the matrix, in order.",
+      "table": [
+        ["6", "23", "69", "9"],
+        ["10", "29", "87", "13"],
+        ["5", "37", "?", "?"]
+      ],
+      "options": { "A": "111, 18", "B": "111, 8", "C": "222, 8", "D": "222, 18" },
+      "answer": "B",
+      "rule": "In each row, 3rd number = 2nd number × 3, and 4th number = 1st number + 3.",
+      "working": "23 × 3 = 69, 6 + 3 = 9; 29 × 3 = 87, 10 + 3 = 13; 37 × 3 = 111, 5 + 3 = 8"
+    },
+    {
+      "id": "nm-b12",
+      "bookNo": 12,
+      "sourcePage": 78,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["2", "4", "5"],
+        ["6", "8", "2"],
+        ["9", "15", "24"],
+        ["50", "?", "23"]
+      ],
+      "options": { "A": "100", "B": "116", "C": "104", "D": "108" },
+      "answer": "C",
+      "rule": "In each column, counting from the top, 2nd number × 3rd number − (1st number)² = 4th number.",
+      "working": "6 × 9 − 2² = 54 − 4 = 50; 2 × 24 − 5² = 48 − 25 = 23; 8 × 15 − 4² = 120 − 16 = 104"
+    },
+    {
+      "id": "nm-b13",
+      "bookNo": 13,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-row",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["16", "11", "30"],
+        ["?", "13", "36"],
+        ["32", "15", "46"]
+      ],
+      "options": { "A": "20", "B": "23", "C": "18", "D": "24" },
+      "answer": "A",
+      "rule": "In each row, 1st number ÷ 2 + 2nd number × 2 = 3rd number.",
+      "working": "16 ÷ 2 + 11 × 2 = 8 + 22 = 30; 32 ÷ 2 + 15 × 2 = 16 + 30 = 46; ? ÷ 2 + 13 × 2 = 36 → ? ÷ 2 = 10 → ? = 20"
+    },
+    {
+      "id": "nm-b14",
+      "bookNo": 14,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-other",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["14", "8", "7"],
+        ["7", "16", "7"],
+        ["?", "4", "7"]
+      ],
+      "options": { "A": "8", "B": "24", "C": "21", "D": "28" },
+      "answer": "D",
+      "rule": "The three numbers in every row multiply to the same number, 784.",
+      "working": "14 × 8 × 7 = 784; 7 × 16 × 7 = 784; ? × 4 × 7 = 784 → ? × 28 = 784 → ? = 28"
+    },
+    {
+      "id": "nm-b15",
+      "bookNo": 15,
+      "sourcePage": 79,
+      "keyFrom": "book",
+      "pattern": "mx-col",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Find the missing number in the matrix.",
+      "table": [
+        ["5", "3", "3"],
+        ["8", "10", "8"],
+        ["35", "27", "?"]
+      ],
+      "options": { "A": "18", "B": "40", "C": "21", "D": "24" },
+      "answer": "C",
+      "rule": "In each column, top number × middle number − top number = bottom number.",
+      "working": "5 × 8 − 5 = 35; 3 × 10 − 3 = 27; 3 × 8 − 3 = 24 − 3 = 21"
+    }
+  ]
+}
