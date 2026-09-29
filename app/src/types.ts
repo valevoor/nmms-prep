@@ -24,6 +24,8 @@ export interface Drawing {
   /** Filled parts of a 'quad' or 'oct' frame, numbered clockwise from the top. */
   shaded?: number[]
   items: FigItem[]
+  /** Straight lines [x1, y1, x2, y2] in the 100 × 100 box (Hidden Figures). */
+  lines?: [number, number, number, number][]
 }
 
 /** A picture: a PNG cropped from the book (path under public/), '?' for the blank, or a drawing. */
@@ -125,6 +127,8 @@ export type PatternId =
   | 'fig-move'
   | 'fig-other'
   | 'grid-flip'
+  // Hidden figures (Chapter 3)
+  | 'fig-hidden'
 
 export interface Question {
   id: string

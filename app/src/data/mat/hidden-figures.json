@@ -1,0 +1,475 @@
+{
+ "topic": "hidden-figures",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 3 (questions: PDF pages 18–20, answers: PDF pages 113–114)",
+ "questions": [
+  {
+   "id": "hid-b01",
+   "bookNo": 1,
+   "sourcePage": 18,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q01-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q01-oA.png",
+     "B": "figures/ch03/q01-oB.png",
+     "C": "figures/ch03/q01-oC.png",
+     "D": "figures/ch03/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "The figure is hidden in option B, the same size and the same way up.",
+   "working": "In B, the small step stands on the long line across the circle, and the slanting line runs down to the right from that line's left end."
+  },
+  {
+   "id": "hid-b02",
+   "bookNo": 2,
+   "sourcePage": 18,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q02-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q02-oA.png",
+     "B": "figures/ch03/q02-oB.png",
+     "C": "figures/ch03/q02-oC.png",
+     "D": "figures/ch03/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "The figure is hidden in option B, the same size and the same way up.",
+   "working": "In B, the two slanting lines and the short line joining them are in the middle of the Z-shaped outline."
+  },
+  {
+   "id": "hid-b03",
+   "bookNo": 3,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q03-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q03-oA.png",
+     "B": "figures/ch03/q03-oB.png",
+     "C": "figures/ch03/q03-oC.png",
+     "D": "figures/ch03/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The figure is hidden in option D, the same size and the same way up.",
+   "working": "In D, the short slanting line comes down from the small triangle in the middle, then the upright line drops to a horizontal line near the bottom, which makes the foot."
+  },
+  {
+   "id": "hid-b04",
+   "bookNo": 4,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q04-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q04-oA.png",
+     "B": "figures/ch03/q04-oB.png",
+     "C": "figures/ch03/q04-oC.png",
+     "D": "figures/ch03/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The figure is hidden in option A, the same size and the same way up.",
+   "working": "In A, the right side of the big triangle runs down from the top, turns right along the bar across the triangle, then drops down at the bar's right end."
+  },
+  {
+   "id": "hid-b05",
+   "bookNo": 5,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q05-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q05-oA.png",
+     "B": "figures/ch03/q05-oB.png",
+     "C": "figures/ch03/q05-oC.png",
+     "D": "figures/ch03/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The figure is hidden in option C, the same size and the same way up.",
+   "working": "In C, the zigzag runs down the left half of the two stacked diamonds, along their slanting sides and the middle line."
+  },
+  {
+   "id": "hid-b06",
+   "bookNo": 6,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q06-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q06-oA.png",
+     "B": "figures/ch03/q06-oB.png",
+     "C": "figures/ch03/q06-oC.png",
+     "D": "figures/ch03/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The figure is hidden in option D, the same size and the same way up.",
+   "working": "In D, the curved hook is part of the tangled loop inside the oval, towards its upper left."
+  },
+  {
+   "id": "hid-b07",
+   "bookNo": 7,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q07-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q07-oA.png",
+     "B": "figures/ch03/q07-oB.png",
+     "C": "figures/ch03/q07-oC.png",
+     "D": "figures/ch03/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "The figure is hidden in option B, the same size and the same way up.",
+   "working": "In B, the V and the arc are near the top of the star, where the arc crosses the star's upper points."
+  },
+  {
+   "id": "hid-b08",
+   "bookNo": 8,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q08-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q08-oA.png",
+     "B": "figures/ch03/q08-oB.png",
+     "C": "figures/ch03/q08-oC.png",
+     "D": "figures/ch03/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The figure is hidden in option A, the same size and the same way up.",
+   "working": "In A, the step is in the small square at the centre: a short flat line, then a slanting line of the crossed lines inside it."
+  },
+  {
+   "id": "hid-b09",
+   "bookNo": 9,
+   "sourcePage": 19,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q09-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q09-oA.png",
+     "B": "figures/ch03/q09-oB.png",
+     "C": "figures/ch03/q09-oC.png",
+     "D": "figures/ch03/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The figure is hidden in option C, the same size and the same way up.",
+   "working": "In C, the bent line is the left side of the tall shape in the middle, ending on the line at its foot."
+  },
+  {
+   "id": "hid-b10",
+   "bookNo": 10,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q10-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q10-oA.png",
+     "B": "figures/ch03/q10-oB.png",
+     "C": "figures/ch03/q10-oC.png",
+     "D": "figures/ch03/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "The figure is hidden in option B, the same size and the same way up.",
+   "working": "In B, the figure is in the top-right corner: the small triangle between the corner lines, and the long slanting line of the big triangle below it."
+  },
+  {
+   "id": "hid-b11",
+   "bookNo": 11,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q11-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q11-oA.png",
+     "B": "figures/ch03/q11-oB.png",
+     "C": "figures/ch03/q11-oC.png",
+     "D": "figures/ch03/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The figure is hidden in option C, the same size and the same way up.",
+   "working": "In C, the arc is the curve inside the star, and the V below it is made by the sides of the lower triangle.",
+   "note": "Hidden: the book's C has an arc over a V but at a different size and without the short joining line, while B has a closer '5'-shaped arc and bar. The scan is too rough to say which copy is exact.",
+   "status": "needs-review"
+  },
+  {
+   "id": "hid-b12",
+   "bookNo": 12,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q12-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q12-oA.png",
+     "B": "figures/ch03/q12-oB.png",
+     "C": "figures/ch03/q12-oC.png",
+     "D": "figures/ch03/q12-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The figure is hidden in option C, the same size and the same way up.",
+   "working": "In C, the bent line is in the middle of the shape inside the circle: an upright line, then a slant down to the right, then a short line."
+  },
+  {
+   "id": "hid-b13",
+   "bookNo": 13,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q13-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q13-oA.png",
+     "B": "figures/ch03/q13-oB.png",
+     "C": "figures/ch03/q13-oC.png",
+     "D": "figures/ch03/q13-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The figure is hidden in option C, the same size and the same way up.",
+   "working": "In C, the straight line runs up the left part of the diamond to the arc, and the arc curves down on the right.",
+   "note": "Hidden: besides the book's C, option B also has a slanting line running into an arc that ends in a short tail. The scan is too rough to say which copy is the same size.",
+   "status": "needs-review"
+  },
+  {
+   "id": "hid-b14",
+   "bookNo": 14,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q14-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q14-oA.png",
+     "B": "figures/ch03/q14-oB.png",
+     "C": "figures/ch03/q14-oC.png",
+     "D": "figures/ch03/q14-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "The figure is hidden in option D, the same size and the same way up.",
+   "working": "In D, the figure is on the right of the tangle, round the lower right points of the star shape."
+  },
+  {
+   "id": "hid-b15",
+   "bookNo": 15,
+   "sourcePage": 20,
+   "keyFrom": "book",
+   "pattern": "fig-hidden",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch03/q15-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch03/q15-oA.png",
+     "B": "figures/ch03/q15-oB.png",
+     "C": "figures/ch03/q15-oC.png",
+     "D": "figures/ch03/q15-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "The figure is hidden in option A, the same size and the same way up.",
+   "working": "In A, the long upright line is the left side of the rectangle, and a short slant finishes it at the bottom."
+  }
+ ]
+}

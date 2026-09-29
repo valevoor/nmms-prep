@@ -14,6 +14,14 @@ function Tile({ x, y, w = 14, label, accent }: { x: number; y: number; w?: numbe
 
 /** Drawings keyed by the study material's chapter number. */
 const ART: Record<number, ReactNode> = {
+  // Hidden Figures: a bent line found inside a tangle of lines
+  3: (
+    <>
+      <rect x={5} y={5} width={38} height={38} rx={2} />
+      <path d="M5 43L43 5M24 5v38M5 24h38" />
+      <path d="M14 14h14l-9 9 9 9" className="art-accent" style={{ fill: 'none' }} strokeWidth={3.5} />
+    </>
+  ),
   // Figure Series: a shape gains a side each time
   2: (
     <>

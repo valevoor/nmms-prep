@@ -12,6 +12,8 @@ import figAnalogy from './mat/analogy-of-figures.json'
 import figAnalogyMeta from './mat/analogy-of-figures.meta.json'
 import figSeries from './mat/figure-series.json'
 import figSeriesMeta from './mat/figure-series.meta.json'
+import hidden from './mat/hidden-figures.json'
+import hiddenMeta from './mat/hidden-figures.meta.json'
 import arithmetic from './mat/arithmetical-operations.json'
 import arithmeticMeta from './mat/arithmetical-operations.meta.json'
 import blood from './mat/blood-relations.json'
@@ -41,6 +43,7 @@ import { generateBloodRelation } from '../lib/generators/bloodRelations'
 import { generateCalendar } from '../lib/generators/calendar'
 import { generateClock } from '../lib/generators/clock'
 import { generateFigureAnalogy, generateFigureRuleQuestion, generateFigureSeries } from '../lib/generators/figures'
+import { generateHiddenFigure } from '../lib/generators/hiddenFigures'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
 import { generateNumberPatterns } from '../lib/generators/numberPatterns'
@@ -61,7 +64,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -242,6 +245,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateSigns,
   },
+  {
+    id: 'hidden-figures',
+    chapter: 3,
+    name: 'Hidden Figures',
+    questions: visible(hidden.questions as Question[]),
+    meta: hiddenMeta as TopicMeta,
+    missing: 'hidden',
+    generate: generateHiddenFigure,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -262,6 +274,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     answer: t.common.findAnswer,
     grid: t.common.findGrid,
     figure: t.common.findFigure,
+    hidden: t.common.findHidden,
   }
   return labels[topic.missing ?? 'number']
 }

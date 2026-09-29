@@ -25,6 +25,7 @@ export const en = {
     findAnswer: 'Work it out',
     findGrid: 'Use the number table',
     findFigure: 'Find the missing figure',
+    findHidden: 'Which figure hides it?',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -63,6 +64,7 @@ export const en = {
   chapters: {
     1: 'Analogy of Figures',
     2: 'Figure Series',
+    3: 'Hidden Figures',
     8: 'Mirror Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
@@ -252,6 +254,10 @@ export const en = {
     figGrow: {
       buttons: ['Show the next shape'],
       label: 'A triangle, a square and a pentagon, then a blank. The next shape has one more side: a hexagon.',
+    },
+    figHidden: {
+      buttons: ['Show where it hides'],
+      label: 'A small bent line, and a bigger figure of crossing lines. The tap draws the bent line thick inside the bigger figure, the same size and the same way up.',
     },
     check: {
       buttons: ['Try 7', 'Try 8'],

@@ -1,0 +1,34 @@
+{
+  "topic": "hidden-figures",
+  "intro": "You are given a problem figure and four answer figures. The problem figure is hidden in one of the four answer figures. Find the answer figure in which it is hidden.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Study the problem figure first",
+      "body": "Before you look at the options, note how many lines the figure has, which way each one runs (flat, upright or slanting), how long each is, and where it bends.",
+      "visual": "figHidden",
+      "caption": "The same bent line, the same size and the same way up, inside the bigger figure."
+    },
+    {
+      "title": "Same size, same way up",
+      "body": "The hidden figure is never turned, flipped, made bigger or made smaller. A copy lying on its side or facing the other way does not count: a '>' is not hidden in a figure that only has '<'."
+    },
+    {
+      "title": "Start from a corner",
+      "body": "Look for the most unusual part first: a sharp bend, a curve or a short line. Find it in an option, then follow the other lines from there."
+    },
+    {
+      "title": "Don't be put off by busy options",
+      "body": "The answer figures may look crowded, but that does not make the hidden figure hard to find. Its lines can be parts of longer lines or of other shapes."
+    },
+    {
+      "title": "Check every line",
+      "body": "When you think you have found it, trace each line of the problem figure in the option. If even one line is missing or runs the wrong way, try the next option."
+    }
+  ],
+  "workedExamples": [
+    "hid-b01",
+    "hid-b05",
+    "hid-b12"
+  ]
+}

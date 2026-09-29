@@ -76,6 +76,7 @@ export function DrawingBody({ d }: { d: Drawing }) {
         </>
       )}
       {d.frame === 'circle' && <circle cx="50" cy="50" r="42" fill="none" />}
+      {d.lines?.map(([x1, y1, x2, y2], i) => <line key={`l${i}`} x1={x1} y1={y1} x2={x2} y2={y2} />)}
       {d.items.map((it, i) => (
         <g key={i} transform={`translate(${it.x} ${it.y}) rotate(${it.rot ?? 0})${it.flip ? ' scale(-1 1)' : ''}`}>
           <Shape it={it} fill={it.fill === 'solid' ? 'currentColor' : it.fill === 'hatch' ? `url(#${hatch})` : 'none'} />
