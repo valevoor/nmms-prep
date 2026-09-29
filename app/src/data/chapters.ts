@@ -52,6 +52,10 @@ import cubesKn from './mat/cubes-cutting.kn.json'
 import cubes from './mat/cubes-cutting.json'
 import cubesMetaKn from './mat/cubes-cutting.meta.kn.json'
 import cubesMeta from './mat/cubes-cutting.meta.json'
+import diceKn from './mat/dice.kn.json'
+import dice from './mat/dice.json'
+import diceMetaKn from './mat/dice.meta.kn.json'
+import diceMeta from './mat/dice.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -158,4 +162,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('mirror-image', 'Mirror Image', mirror, mirrorMeta, mirrorKn, mirrorMetaKn),
   c('water-image', 'Water Image', water, waterMeta, waterKn, waterMetaKn),
   c('cubes-cutting', 'Cubes Cutting', cubes, cubesMeta, cubesKn, cubesMetaKn),
+  c('dice', 'Numbers in Opposite Faces', dice, diceMeta, diceKn, diceMetaKn),
 ]

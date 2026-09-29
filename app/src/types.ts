@@ -153,6 +153,10 @@ export type PatternId =
   | 'cube-area'
   | 'cube-cut'
   | 'cube-paint'
+  // Numbers in opposite faces: dice (Chapter 11)
+  | 'dice-views'
+  | 'dice-net'
+  | 'dice-standard'
 
 export interface Question {
   id: string

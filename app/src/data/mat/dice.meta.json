@@ -1,0 +1,34 @@
+{
+  "topic": "dice",
+  "intro": "A dice has 6 faces, and each face has one opposite face and four faces next to it. A drawing of a dice shows only 3 faces. Here you are shown the same dice in two or more positions, or opened out flat, and you work out which face is opposite a given one.",
+  "tips": [
+    {
+      "title": "Faces seen together are never opposite",
+      "body": "Two opposite faces can never be seen in the same drawing. List every face seen next to the face you are asked about. If you find four different ones, the sixth face is its opposite. In Q2, 5 is seen with 3, 6, 2 and 4, so 1 is opposite 5."
+    },
+    {
+      "title": "A face in two views: read round it",
+      "body": "When one face is in two views, read each view clockwise starting from that face (top → right → left). The two faces after it in the first view and the two in the second view are the four faces round it, in order; faces two apart are opposite. In Q1, 3 is in both: 3 → 6 → 1 and 3 → 5 → 2, so round 3 it goes 6, 1, 5, 2: 6 is opposite 5, and 1 is opposite 2."
+    },
+    {
+      "title": "The same face in the same place",
+      "body": "If a face sits in the same place in both views (both on top, or both on the right), the dice was only turned about that face. Then the faces in matching places of the other two spots are opposite. In Q3, C is on the right in both: B (top) is opposite A (top), and F (left) is opposite E (left)."
+    },
+    {
+      "title": "Open dice: 1st and 3rd in a line",
+      "visual": "diceNet",
+      "body": "When a dice is opened out flat, look for straight lines of squares. In a line of three, the 1st and 3rd squares are opposite, because the middle one folds between them. In a line of four, the 1st and 3rd, and the 2nd and 4th, are opposite. When two pairs are found, the two squares left over are the third pair.",
+      "caption": "Squares next to each other in the net are never opposite."
+    },
+    {
+      "title": "Standard dice: opposite faces add up to 7",
+      "body": "On a standard dice, 1 is opposite 6, 2 is opposite 5 and 3 is opposite 4: each pair adds up to 7. Use this only when the question says the dice is standard. The book calls a dice where two faces next to each other add up to 7 a general dice (Q13)."
+    },
+    {
+      "title": "Check the options for opposite pairs",
+      "body": "To choose the dice that an open dice folds into, first find the three opposite pairs. Any drawing that shows two opposite faces together is wrong. To choose the right pairs, drop any option that pairs two faces seen together."
+    }
+  ],
+  "workedExamples": ["dice-b01", "dice-b02", "dice-b09", "dice-b10"],
+  "cheatSheet": "none"
+}

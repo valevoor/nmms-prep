@@ -77,6 +77,7 @@ export const en = {
     8: 'Mirror Image',
     9: 'Water Image',
     10: 'Cubes Cutting',
+    11: 'Numbers in Opposite Faces',
     14: 'Number Analogy',
     15: 'Number Patterns',
     16: 'Odd One Out: Letters',
@@ -274,6 +275,11 @@ export const en = {
       buttons: ['3 faces painted', '2 faces painted', '1 face painted', 'No face painted'],
       label:
         'A 4 × 4 × 4 cube painted on every face, with its front, top and right faces drawn in small squares. First tap: the corner cubes light up; all 8 corners have 3 painted faces. Second tap: the edge cubes between the corners, 2 on each of the 12 edges, have 2 painted faces: 24. Third tap: the middle 2 × 2 squares of each of the 6 faces have 1 painted face: 24. Last tap: the 2 × 2 × 2 = 8 cubes hidden inside have no paint.',
+    },
+    diceNet: {
+      buttons: ['1st and 3rd', '2nd and 4th', 'The two sides'],
+      label:
+        'An open dice shaped like a cross: a column of four squares, 2, 1, 5 and 6 from the top, with 3 on the left of 1 and 4 on its right. First tap: 2 and 5, the 1st and 3rd squares of the column, light up; they are opposite. Second tap: 1 and 6, the 2nd and 4th, are opposite. Last tap: the side squares 3 and 4 are opposite.',
     },
     figWater: {
       buttons: ['Show the water image'],

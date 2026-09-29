@@ -367,6 +367,9 @@ const genEn = {
     'cube-area': 'Count the uncovered faces',
     'cube-cut': 'Cubes along one edge, cubed',
     'cube-paint': 'Corners, edges, faces and inside',
+    'dice-views': 'Faces seen together are never opposite',
+    'dice-net': 'In a line of squares, the 1st and 3rd are opposite',
+    'dice-standard': 'A standard dice: opposite faces add up to 7',
   } as Record<PatternId, string>,
 }
 
@@ -705,6 +708,9 @@ const genKn: GenText = {
     'cube-area': 'ಹೊರಗೆ ಕಾಣುವ ಮುಖಗಳನ್ನು ಎಣಿಸಿ',
     'cube-cut': 'ಒಂದು ಅಂಚಿನ ಘನಗಳ ಸಂಖ್ಯೆಯ ಘನ',
     'cube-paint': 'ಮೂಲೆಗಳು, ಅಂಚುಗಳು, ಮುಖಗಳು ಮತ್ತು ಒಳಭಾಗ',
+    'dice-views': 'ಒಟ್ಟಿಗೆ ಕಾಣುವ ಮುಖಗಳು ಎಂದಿಗೂ ಅಭಿಮುಖವಲ್ಲ',
+    'dice-net': 'ಒಂದೇ ಸಾಲಿನ ಚೌಕಗಳಲ್ಲಿ 1ನೇ ಮತ್ತು 3ನೇ ಅಭಿಮುಖ',
+    'dice-standard': 'ನಿರ್ದಿಷ್ಟ ದಾಳ: ಅಭಿಮುಖ ಮುಖಗಳ ಮೊತ್ತ 7',
   },
 }
 

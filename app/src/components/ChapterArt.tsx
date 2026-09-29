@@ -224,6 +224,18 @@ const ART: Record<number, ReactNode> = {
       <rect x={6} y={16} width={8} height={8} className="art-tile-accent" />
     </>
   ),
+  // Numbers in Opposite Faces: a dice showing 1, 2 and 3 dots
+  11: (
+    <>
+      <path d="M24 5l17 9-17 9-17-9zM7 14v19l17 9V23M41 14v19l-17 9" />
+      <circle cx={24} cy={14} r={2.2} className="art-accent" />
+      <circle cx={12} cy={24} r={2} className="art-accent" />
+      <circle cx={19} cy={32} r={2} className="art-accent" />
+      <circle cx={28.5} cy={34.5} r={2} className="art-accent" />
+      <circle cx={32.5} cy={28.5} r={2} className="art-accent" />
+      <circle cx={36.5} cy={22.5} r={2} className="art-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

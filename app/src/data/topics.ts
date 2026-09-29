@@ -33,6 +33,8 @@ import water from './mat/water-image.json'
 import waterMeta from './mat/water-image.meta.json'
 import cubes from './mat/cubes-cutting.json'
 import cubesMeta from './mat/cubes-cutting.meta.json'
+import dice from './mat/dice.json'
+import diceMeta from './mat/dice.meta.json'
 import bloodMeta from './mat/blood-relations.meta.json'
 import letterNumber from './mat/letter-number-analogy.json'
 import letterNumberMeta from './mat/letter-number-analogy.meta.json'
@@ -76,6 +78,7 @@ import { generatePaperPunch } from '../lib/generators/paperPunch'
 import { generateMirrorImage } from '../lib/generators/mirrorImage'
 import { generateWaterImage } from '../lib/generators/waterImage'
 import { generateCubesCutting } from '../lib/generators/cubesCutting'
+import { generateDice } from '../lib/generators/dice'
 import { generateRuleQuestion, generateWrongNumber } from '../lib/generators/games'
 
 export interface ReadyTopic {
@@ -337,6 +340,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: cubesMeta as TopicMeta,
     missing: 'answer',
     generate: generateCubesCutting,
+  },
+  {
+    id: 'dice',
+    chapter: 11,
+    name: 'Numbers in Opposite Faces',
+    questions: visible(dice.questions as Question[]),
+    meta: diceMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateDice,
   },
 ]
 
