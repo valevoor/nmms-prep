@@ -208,6 +208,14 @@ const ART: Record<number, ReactNode> = {
       <circle cx={33} cy={31} r={2.2} className="art-accent" style={{ fill: 'none' }} />
     </>
   ),
+  // Water Image: a flag above the water line and, below it, its image hanging upside down
+  9: (
+    <>
+      <path d="M17 21V5l11 4-11 4" />
+      <path d="M6 24h36" strokeLinecap="butt" />
+      <path d="M17 27v16l11-4-11-4" className="art-accent" style={{ fill: 'none' }} />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

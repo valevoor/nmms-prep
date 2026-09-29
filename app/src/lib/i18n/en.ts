@@ -30,6 +30,7 @@ export const en = {
     findFolded: 'Which one is the sheet folded along the dotted line?',
     findPunched: 'How does the paper look when opened out?',
     findMirror: 'Which one is its mirror image (mirror on the right)?',
+    findWater: 'Which one is its water image (water below)?',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -74,6 +75,7 @@ export const en = {
     6: 'Figure Fold Transparent Sheet',
     7: 'Paper Fold and Punch',
     8: 'Mirror Image',
+    9: 'Water Image',
     14: 'Number Analogy',
     15: 'Number Patterns',
     16: 'Odd One Out: Letters',
@@ -266,6 +268,10 @@ export const en = {
     figFold: {
       buttons: ['Fold it'],
       label: 'A square sheet with a dotted line down the middle, a triangle on the left half and a flag on the right half. The tap folds the right half over: the flag lands on the left half, as far from the fold as before, facing the other way.',
+    },
+    figWater: {
+      buttons: ['Show the water image'],
+      label: 'A square with a flag at the top left and an arrow pointing up at the bottom right, standing on water. The tap shows the water image below it: the flag moves to the bottom and hangs upside down, and the arrow moves to the top and points down, each still on the same side.',
     },
     figMirror: {
       buttons: ['Show the mirror image'],

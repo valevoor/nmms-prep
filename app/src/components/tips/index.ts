@@ -5,6 +5,7 @@ import { FigureHidden } from './FigureHidden'
 import { FoldSheet } from './FoldSheet'
 import { PaperPunch } from './PaperPunch'
 import { MirrorFlip } from './MirrorFlip'
+import { WaterFlip } from './WaterFlip'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
 import { GrowthShapes } from './GrowthShapes'
@@ -38,4 +39,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   figFold: FoldSheet,
   figPunch: PaperPunch,
   figMirror: MirrorFlip,
+  figWater: WaterFlip,
 }

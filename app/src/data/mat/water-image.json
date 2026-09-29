@@ -1,0 +1,478 @@
+{
+ "topic": "water-image",
+ "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 9 (questions: PDF pages 33-34, answers: PDF page 119)",
+ "questions": [
+  {
+   "id": "wat-b01",
+   "bookNo": 1,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q01-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q01-oA.png",
+     "B": "figures/ch09/q01-oB.png",
+     "C": "figures/ch09/q01-oC.png",
+     "D": "figures/ch09/q01-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: every letter turned upside down, in the same order.",
+   "working": "Water swaps top and bottom but not left and right, so the letters keep their order and each one is turned upside down: N, A, T and L change, while I and O look the same. Only C has all of them. A reverses the order, B leaves the first N as it was, and D turns the L half a turn instead of upside down."
+  },
+  {
+   "id": "wat-b02",
+   "bookNo": 2,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q02-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q02-oA.png",
+     "B": "figures/ch09/q02-oB.png",
+     "C": "figures/ch09/q02-oC.png",
+     "D": "figures/ch09/q02-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: every character turned upside down, in the same order.",
+   "working": "B and 8 look the same upside down. The m, J, d, 9 and R are each turned upside down where they stand (d looks like q, and 9 like ∂), and the small ring above the J moves below it. Only C has every one. A leaves the m as it was, and B and D turn some characters half a turn instead (B's 9 reads 6)."
+  },
+  {
+   "id": "wat-b03",
+   "bookNo": 3,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q03-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q03-oA.png",
+     "B": "figures/ch09/q03-oB.png",
+     "C": "figures/ch09/q03-oC.png",
+     "D": "figures/ch09/q03-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: every character turned upside down, in the same order.",
+   "working": "8 looks the same upside down. The 9, 7, 2, b, Q and M are each turned upside down where they stand: b looks like p, M like W, and the tail of Q moves to the top. Only B has all of them. A reverses the order, C leaves the 9 upright, and D turns the b half a turn (it reads q)."
+  },
+  {
+   "id": "wat-b04",
+   "bookNo": 4,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q04-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q04-oA.png",
+     "B": "figures/ch09/q04-oB.png",
+     "C": "figures/ch09/q04-oC.png",
+     "D": "figures/ch09/q04-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "Every character turned upside down, in the same order.",
+   "working": "The P, A, R, N, 6, 4 and Q are each turned upside down where they stand: the loop of P and R moves to the bottom, A and N turn over, the 6 has its loop at the top, and the tail of Q moves to the top. A leaves the 6 as it was, and B reverses the order.",
+   "note": "Hidden: options C and D are printed with the same characters (only the spacing differs), and both are the water image, so the question has two right answers (the book's key is D).",
+   "status": "needs-review"
+  },
+  {
+   "id": "wat-b05",
+   "bookNo": 5,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q05-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q05-oA.png",
+     "B": "figures/ch09/q05-oB.png",
+     "C": "figures/ch09/q05-oC.png",
+     "D": "figures/ch09/q05-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the diagonal now runs from bottom-left to top-right, and the dotted triangle moves to the bottom-left.",
+   "working": "In water the top and bottom swap. The diagonal from top-left to bottom-right now runs from bottom-left to top-right. The triangle with the dot moves from the top-left to the bottom-left, with the dot near its lowest corner, and the other triangle now points up at the top-right. That is A. B puts the dot near the wrong corner, C keeps the diagonal as it was, and D puts the dot in the other triangle."
+  },
+  {
+   "id": "wat-b06",
+   "bookNo": 6,
+   "sourcePage": 33,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q06-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q06-oA.png",
+     "B": "figures/ch09/q06-oB.png",
+     "C": "figures/ch09/q06-oC.png",
+     "D": "figures/ch09/q06-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the triangle now points down.",
+   "working": "The box and the hexagon look the same upside down, so only the triangle changes: it pointed up, so in the water it points down. That is A. B and C tilt the triangle, and D is the figure unchanged."
+  },
+  {
+   "id": "wat-b07",
+   "bookNo": 7,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q07-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q07-oA.png",
+     "B": "figures/ch09/q07-oB.png",
+     "C": "figures/ch09/q07-oC.png",
+     "D": "figures/ch09/q07-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C and D: the top and bottom rows swap, and each triangle is turned upside down.",
+   "working": "In water the half-black circle (black on the right) moves to the top-left and the plain circle to the bottom-left. The triangle pointing down moves to the top-right and points up, and the one pointing up moves to the bottom-right and points down. A moves the parts the wrong way, and B keeps both triangles pointing up.",
+   "note": "Hidden: options C and D are printed the same, and both are the water image, so the question has two right answers (the book's key is C).",
+   "status": "needs-review"
+  },
+  {
+   "id": "wat-b08",
+   "bookNo": 8,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q08-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q08-oA.png",
+     "B": "figures/ch09/q08-oB.png",
+     "C": "figures/ch09/q08-oC.png",
+     "D": "figures/ch09/q08-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the black piece moves below the centre, and the striped piece moves above the middle line, still on the right.",
+   "working": "The black piece sits just above the centre, so in the water it sits just below it. The striped piece is on the right, below the middle line, so in the water it is on the right, above the line. That is C. A and D put the stripes on the left, and B is the figure unchanged."
+  },
+  {
+   "id": "wat-b09",
+   "bookNo": 9,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q09-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q09-oA.png",
+     "B": "figures/ch09/q09-oB.png",
+     "C": "figures/ch09/q09-oC.png",
+     "D": "figures/ch09/q09-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "B",
+   "rule": "B: the roof goes to the bottom, and the letters and the triangle are turned upside down.",
+   "working": "In the water the roof comes to the bottom and its p turns into b. The diagonal now runs from bottom-left to top-right; the b in the right part moves down and turns into p, and the triangle moves to the top-left and points down. That is B. A keeps the roof on top, C slopes the diagonal the wrong way, and D keeps the b and p as they were.",
+   "note": "B prints a capital P where the upside-down b (a p with a tall stem) should be. It is still the only option with every part in the right place."
+  },
+  {
+   "id": "wat-b10",
+   "bookNo": 10,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q10-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q10-oA.png",
+     "B": "figures/ch09/q10-oB.png",
+     "C": "figures/ch09/q10-oC.png",
+     "D": "figures/ch09/q10-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the ellipse goes to the top and its curve now bows downward; the triangle points down.",
+   "working": "In the water the ellipse moves to the top, and the curved line inside it, which bowed upward, now bows downward. The triangle, the = sign and the rectangle move to the bottom in the same left-to-right order, and the triangle points down. That is D. A swaps the triangle and the rectangle, B's curve still bows upward, and C's curve runs up and down."
+  },
+  {
+   "id": "wat-b11",
+   "bookNo": 11,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q11-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q11-oA.png",
+     "B": "figures/ch09/q11-oB.png",
+     "C": "figures/ch09/q11-oC.png",
+     "D": "figures/ch09/q11-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "A",
+   "rule": "A: the shape with the dot goes to the bottom-left, and the arrow shape goes to the top-right with the arrow pointing down.",
+   "working": "The shape with the dot is closed at the top and sits at the top-left; in the water it sits at the bottom-left, closed at the bottom. The shape with the arrow is open at the top and sits at the bottom-right; in the water it sits at the top-right, open at the bottom, and its arrow points down. That is A. B swaps left and right, and C and D keep the arrow pointing up."
+  },
+  {
+   "id": "wat-b12",
+   "bookNo": 12,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q12-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q12-oA.png",
+     "B": "figures/ch09/q12-oB.png",
+     "C": "figures/ch09/q12-oC.png",
+     "D": "figures/ch09/q12-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "The 5 and the 6 swap places and each is turned upside down; the u becomes n.",
+   "working": "In water the top and bottom swap: the 6 goes to the top and the 5 to the bottom, each turned upside down. The 1 on the right is turned upside down, the 3 on the left looks the same, and the u in the middle turns into n.",
+   "note": "Hidden: no option is the water image. A, B and C (printed alike) turn the 5 and the 6 upside down but leave them where they were, and keep the u unchanged; D also leaves out the 3 and the 1. The book's key is C.",
+   "status": "needs-review"
+  },
+  {
+   "id": "wat-b13",
+   "bookNo": 13,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q13-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q13-oA.png",
+     "B": "figures/ch09/q13-oB.png",
+     "C": "figures/ch09/q13-oC.png",
+     "D": "figures/ch09/q13-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: R goes to the bottom-left and 4 to the top-right, both upside down; the black square goes to the bottom-right.",
+   "working": "In the water the diagonal runs from top-left to bottom-right. The R moves from the top-left to the bottom-left and is upside down; the 4 moves from the bottom-right to the top-right and is upside down; the black square moves from the top-right to the bottom-right, above the diagonal. That is D. A keeps the 4 upright, B turns it on its side, and C puts the R and the 4 on the wrong sides."
+  },
+  {
+   "id": "wat-b14",
+   "bookNo": 14,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q14-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q14-oA.png",
+     "B": "figures/ch09/q14-oB.png",
+     "C": "figures/ch09/q14-oC.png",
+     "D": "figures/ch09/q14-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "C",
+   "rule": "C: the triangle points down with the black part at its top; the lines run along the bottom and up the right.",
+   "working": "In the water the triangle points down, and its black part, which was at the bottom, is now at the top. The line along the top of the circle now runs along the bottom with its arrow still pointing right, and the arrow on the right now points up. That is C. A keeps the triangle pointing up, and B and D shade a side part instead."
+  },
+  {
+   "id": "wat-b15",
+   "bookNo": 15,
+   "sourcePage": 34,
+   "keyFrom": "book",
+   "pattern": "water-image",
+   "layout": "series",
+   "terms": [
+    "1"
+   ],
+   "figures": {
+    "terms": [
+     "figures/ch09/q15-t1.png"
+    ],
+    "options": {
+     "A": "figures/ch09/q15-oA.png",
+     "B": "figures/ch09/q15-oB.png",
+     "C": "figures/ch09/q15-oC.png",
+     "D": "figures/ch09/q15-oD.png"
+    }
+   },
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D"
+   },
+   "answer": "D",
+   "rule": "D: the circle goes to the top; the two dots one above the other stay near the left corner.",
+   "working": "In the water the circle moves to the top and the point of the figure to the bottom. The two dots side by side move into the bottom part, and the two dots one above the other stay near the left corner of the inner triangle, which now points down. That is D. A and B put those two dots near the right corner, and C has too many dots."
+  }
+ ]
+}

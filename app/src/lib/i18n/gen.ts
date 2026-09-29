@@ -362,6 +362,7 @@ const genEn = {
     'fold-sheet': 'Fold the sheet along the dotted line',
     'paper-punch': 'Open out the folded, punched paper',
     'mirror-image': 'Flip it left to right, as in a mirror',
+    'water-image': 'Turn it upside down, as in water',
   } as Record<PatternId, string>,
 }
 
@@ -695,6 +696,7 @@ const genKn: GenText = {
     'fold-sheet': 'ಚುಕ್ಕೆ ರೇಖೆಯ ಉದ್ದಕ್ಕೂ ಹಾಳೆಯನ್ನು ಮಡಿಸಿ',
     'paper-punch': 'ಮಡಿಸಿ ರಂಧ್ರ ಮಾಡಿದ ಕಾಗದವನ್ನು ಬಿಡಿಸಿ',
     'mirror-image': 'ಕನ್ನಡಿಯಂತೆ ಎಡ-ಬಲ ಅದಲು ಬದಲು ಮಾಡಿ',
+    'water-image': 'ನೀರಿನಂತೆ ಮೇಲು-ಕೆಳಗು ತಲೆಕೆಳಗಾಗಿಸಿ',
   },
 }
 

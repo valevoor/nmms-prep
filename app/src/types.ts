@@ -146,6 +146,8 @@ export type PatternId =
   | 'paper-punch'
   // Mirror image (Chapter 8)
   | 'mirror-image'
+  // Water image (Chapter 9)
+  | 'water-image'
 
 export interface Question {
   id: string

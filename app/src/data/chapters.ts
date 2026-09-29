@@ -44,6 +44,10 @@ import mirrorKn from './mat/mirror-image.kn.json'
 import mirror from './mat/mirror-image.json'
 import mirrorMetaKn from './mat/mirror-image.meta.kn.json'
 import mirrorMeta from './mat/mirror-image.meta.json'
+import waterKn from './mat/water-image.kn.json'
+import water from './mat/water-image.json'
+import waterMetaKn from './mat/water-image.meta.kn.json'
+import waterMeta from './mat/water-image.meta.json'
 import blood from './mat/blood-relations.json'
 import bloodMetaKn from './mat/blood-relations.meta.kn.json'
 import bloodMeta from './mat/blood-relations.meta.json'
@@ -148,4 +152,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('fold-sheet', 'Figure Fold Transparent Sheet', foldSheet, foldSheetMeta, foldSheetKn, foldSheetMetaKn),
   c('paper-punch', 'Paper Fold and Punch', paperPunch, paperPunchMeta, paperPunchKn, paperPunchMetaKn),
   c('mirror-image', 'Mirror Image', mirror, mirrorMeta, mirrorKn, mirrorMetaKn),
+  c('water-image', 'Water Image', water, waterMeta, waterKn, waterMetaKn),
 ]

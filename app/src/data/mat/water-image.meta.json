@@ -1,0 +1,30 @@
+{
+  "topic": "water-image",
+  "intro": "A figure, a word or a number stands just above water. Four answer figures follow; find the one that is its water image. The water image is the object turned upside down: the top and bottom parts swap, while left and right stay where they are and the size does not change.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Top and bottom swap, left and right stay",
+      "body": "Every part moves to the other side of the middle line, the same distance from it: a part at the top comes to the bottom. A part on the left stays on the left, and a part on the right stays on the right.",
+      "visual": "figWater",
+      "caption": "The flag moves down and hangs upside down; the arrow moves up and now points down. Nothing moves left or right."
+    },
+    {
+      "title": "Water image or mirror image?",
+      "body": "A mirror on the right swaps left and right; water below swaps top and bottom. So in a water image a word keeps its letter order and each letter is turned upside down, while in a mirror image the order is reversed. An arrow pointing up points down in water, but still points up in a mirror."
+    },
+    {
+      "title": "Every part is turned upside down as well",
+      "body": "Moving the parts is not enough: each one is turned over too. A triangle pointing up points down, a dot near the top of a shape moves near its bottom, and a line sloping like / slopes like \\."
+    },
+    {
+      "title": "Upside down is not a half turn",
+      "body": "A half turn also swaps left and right; a water image does not. Turned half a turn, 6 reads 9 and b reads q, but in water b looks like p. A common wrong option is the figure turned half a turn, so check that left and right have stayed."
+    },
+    {
+      "title": "Some letters look the same",
+      "body": "B, C, D, E, H, I, K, O, X and the digits 0, 3 and 8 look the same in water, because their top and bottom halves match. Don't spend time on them; look at the characters that do change, such as A, M, N, R, T, U, 2, 4, 5, 6, 7 and 9."
+    }
+  ],
+  "workedExamples": ["wat-b08", "wat-b11", "wat-b03"]
+}
