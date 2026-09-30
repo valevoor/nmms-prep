@@ -24,6 +24,8 @@ import matrix from './mat/number-matrix.json'
 import matrixMeta from './mat/number-matrix.meta.json'
 import letterMatrix from './mat/letter-matrix.json'
 import letterMatrixMeta from './mat/letter-matrix.meta.json'
+import letterValues from './mat/letter-values.json'
+import letterValuesMeta from './mat/letter-values.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -84,6 +86,7 @@ import { generateSequence } from '../lib/generators/sequence'
 import { generateSigns } from '../lib/generators/signs'
 import { generateNumberMatrix } from '../lib/generators/numberMatrix'
 import { generateLetterMatrix } from '../lib/generators/letterMatrix'
+import { generateLetterValues } from '../lib/generators/letterValues'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -409,6 +412,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: letterMatrixMeta as TopicMeta,
     missing: 'answer',
     generate: generateLetterMatrix,
+  },
+  {
+    id: 'letter-values',
+    chapter: 29,
+    name: 'Numbers and Letters by a Rule',
+    questions: visible(letterValues.questions as Question[]),
+    meta: letterValuesMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateLetterValues,
   },
 ]
 

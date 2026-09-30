@@ -1,0 +1,38 @@
+{
+  "topic": "letter-values",
+  "intro": "A table of letters has numbers along its top and down its left side. Each letter stands for a number made from the number at the start of its row and the number at the top of its column: their sum, difference, product or quotient. Work out the letters you need, then answer the question: a code, a total, a product, or which group of letters fits.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Row first, then column",
+      "visual": "letterValues",
+      "body": "Put your finger on the letter. Read the number at the start of its row, then the number at the top of its column, and use the rule on them in that order.",
+      "caption": "E is in row 2 and column 3, so E = 2 × 3 = 6."
+    },
+    {
+      "title": "For − and ÷, the order matters",
+      "body": "For + and × it doesn't matter which number comes first, but for − and ÷ it does: row number first. N = 8 − 6 = 2 and S = 16 ÷ 2 = 8."
+    },
+    {
+      "title": "Write the value under each letter",
+      "body": "Before adding or multiplying, write each letter's value under it: B L U E → 3 4 2 6. Then 3 + 4 + 2 + 6 = 15. A letter's value comes from the table, not from its place in the alphabet."
+    },
+    {
+      "title": "Which group has the highest total?",
+      "body": "Work out the total (or product) of every option and write it next to the option. Only then compare. Remember that any letter with 0 makes a product 0."
+    },
+    {
+      "title": "Which group has this code?",
+      "body": "Check the options one letter at a time. As soon as one letter's value doesn't match, cross that option out. The options often differ in just one letter, so check every letter."
+    },
+    {
+      "title": "Number pairs in two matrices",
+      "body": "A pair like 34 means row 3, column 4. Each letter is in the table many times, so it has many right pairs. Check every pair in an option: one wrong pair makes the whole option wrong. Pairs made of 5–9 are in Matrix 2."
+    },
+    {
+      "title": "The square of the sum",
+      "body": "Add first, then square the total: (2 + 3 + 5)² = 10² = 100. Don't square each letter."
+    }
+  ],
+  "workedExamples": ["lv-b03", "lv-b02", "lv-b09", "lv-b14"]
+}

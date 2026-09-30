@@ -233,6 +233,23 @@ const genEn = {
   lmSkip: 'In every row, the number is how many letters are skipped going from the first letter to the last.',
   lmBetween: "In every row, look at the letter between the first and the last letter. The number is that letter's place counted back from Z (Z = 1 … A = 26), which is 27 − its place.",
 
+  // Numbers with letters by a rule (Chapter 29). op is one of + − × ÷.
+  lvDir: (op: string, eg: string) => `The value of each letter is its row number ${op} its column number (${eg}).`,
+  lvRule: (op: string) => `Each letter = its row number ${op} its column number.`,
+  lvCode: (w: string) => `What is the code for the letters “${w}”?`,
+  lvSum: (w: string) => `What is the sum of the letters in “${w}”?`,
+  lvProduct: (w: string) => `What is the product of the letters in “${w}”?`,
+  lvSquare: (w: string) => `What is the square of the sum of the letters in “${w}”?`,
+  lvBest: (max: boolean, sum: boolean) => `Which group of letters has the ${max ? 'highest' : 'lowest'} ${sum ? 'total' : 'product'}?`,
+  lvHasSum: (n: number) => `Which group of letters has a total of ${n}?`,
+  lvHasProduct: (n: number) => `Which group of letters has the product ${n}?`,
+  lvHasCode: (code: string) => `Which group of letters has the code “${code}”?`,
+  lvPairDir: (a: string, aAt: string, b: string, bAt: string) =>
+    `A letter is written as its row number followed by its column number. In Matrix 1, ${a} = ${aAt}; in Matrix 2, ${b} = ${bAt}.`,
+  lvPairAsk: (w: string) => `Which set of number pairs stands for “${w}”?`,
+  lvPairRule: 'Write each letter as its row number, then its column number, and check every pair in the matrix.',
+  lvOr: ' or ',
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -401,6 +418,11 @@ const genEn = {
     'mx-lstep': 'Letters step on by the same gaps in every row or column',
     'mx-lcalc': "Add, take away or multiply the letters' places",
     'mx-lnum': 'The number is a place, an opposite place or a gap',
+    'lv-sum': 'Row number + column number',
+    'lv-diff': 'Row number − column number',
+    'lv-prod': 'Row number × column number',
+    'lv-quot': 'Row number ÷ column number',
+    'lv-pair': 'A letter is its row and column numbers',
   } as Record<PatternId, string>,
 }
 
@@ -610,6 +632,21 @@ const genKn: GenText = {
   lmOpp: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಸಂಖ್ಯೆಯು ಮೊದಲ ಅಕ್ಷರದ ಸ್ಥಾನ (A = 1 … Z = 26), ಮತ್ತು ಕೊನೆಯ ಅಕ್ಷರವು ಮೊದಲ ಅಕ್ಷರದ ವಿರುದ್ಧ ಅಕ್ಷರ: A ↔ Z, B ↔ Y, C ↔ X … (ಎರಡು ಸ್ಥಾನಗಳ ಮೊತ್ತ 27).',
   lmSkip: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಸಂಖ್ಯೆಯು ಮೊದಲ ಅಕ್ಷರದಿಂದ ಕೊನೆಯ ಅಕ್ಷರಕ್ಕೆ ಹೋಗುವಾಗ ಬಿಟ್ಟ ಅಕ್ಷರಗಳ ಸಂಖ್ಯೆ.',
   lmBetween: 'ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ಮೊದಲ ಮತ್ತು ಕೊನೆಯ ಅಕ್ಷರಗಳ ನಡುವಿನ ಅಕ್ಷರವನ್ನು ನೋಡಿ. ಸಂಖ್ಯೆಯು Z ನಿಂದ ಹಿಂದಕ್ಕೆ ಎಣಿಸಿದಾಗ ಆ ಅಕ್ಷರದ ಸ್ಥಾನ (Z = 1 … A = 26), ಅಂದರೆ 27 − ಅದರ ಸ್ಥಾನ.',
+  lvDir: (op, eg) => `ಪ್ರತಿ ಅಕ್ಷರದ ಬೆಲೆಯು ಅದರ ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ ${op} ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ (${eg}).`,
+  lvRule: (op) => `ಪ್ರತಿ ಅಕ್ಷರ = ಅದರ ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ ${op} ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ.`,
+  lvCode: (w) => `“${w}” ಅಕ್ಷರಗಳ ಸಂಕೇತ ಸಂಖ್ಯೆ ಯಾವುದು?`,
+  lvSum: (w) => `“${w}” ಅಕ್ಷರಗಳ ಮೊತ್ತ ಎಷ್ಟು?`,
+  lvProduct: (w) => `“${w}” ಅಕ್ಷರಗಳ ಬೆಲೆಗಳ ಗುಣಲಬ್ಧ ಎಷ್ಟು?`,
+  lvSquare: (w) => `“${w}” ಅಕ್ಷರಗಳ ಮೊತ್ತದ ವರ್ಗ ಎಷ್ಟು?`,
+  lvBest: (max, sum) => `${max ? 'ಗರಿಷ್ಠ' : 'ಕನಿಷ್ಠ'} ${sum ? 'ಮೊತ್ತದ' : 'ಗುಣಲಬ್ಧದ'} ಅಕ್ಷರಗಳ ಗುಂಪು ಯಾವುದು?`,
+  lvHasSum: (n) => `ಮೊತ್ತ ${n} ಆಗಿರುವ ಅಕ್ಷರಗಳ ಗುಂಪು ಯಾವುದು?`,
+  lvHasProduct: (n) => `ಗುಣಲಬ್ಧ ${n} ಆಗಿರುವ ಅಕ್ಷರಗಳ ಗುಂಪು ಯಾವುದು?`,
+  lvHasCode: (code) => `‘${code}’ನ್ನು ಸಂಕೇತವಾಗಿ ಹೊಂದಿರುವ ಅಕ್ಷರಗಳ ಗುಂಪು ಯಾವುದು?`,
+  lvPairDir: (a, aAt, b, bAt) =>
+    `ಮಾತೃಕೆಗಳ ಅಕ್ಷರಗಳನ್ನು ಮೊದಲು ಅಡ್ಡಸಾಲು ನಂತರ ಕಂಬಸಾಲು ರೀತಿಯಲ್ಲಿ ಪ್ರತಿನಿಧಿಸಲಾಗುತ್ತದೆ. 1ನೇ ಮಾತೃಕೆಯಲ್ಲಿ ${a} = ${aAt}; 2ನೇ ಮಾತೃಕೆಯಲ್ಲಿ ${b} = ${bAt}.`,
+  lvPairAsk: (w) => `“${w}” ಅನ್ನು ಪ್ರತಿನಿಧಿಸುವ ಸಂಖ್ಯಾ ಜೋಡಿಗಳ ಗುಂಪು ಯಾವುದು?`,
+  lvPairRule: 'ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ಮೊದಲು ಅದರ ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ, ನಂತರ ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆಯಾಗಿ ಬರೆಯಿರಿ; ಪ್ರತಿ ಜೋಡಿಯನ್ನೂ ಮಾತೃಕೆಯಲ್ಲಿ ಪರೀಕ್ಷಿಸಿ.',
+  lvOr: ' ಅಥವಾ ',
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -768,6 +805,11 @@ const genKn: GenText = {
     'mx-lstep': 'ಪ್ರತಿ ಸಾಲಿನಲ್ಲೂ ಅಕ್ಷರಗಳು ಒಂದೇ ಅಂತರದಲ್ಲಿ ಮುಂದೆ ಹೋಗುತ್ತವೆ',
     'mx-lcalc': 'ಅಕ್ಷರಗಳ ಸ್ಥಾನಗಳನ್ನು ಕೂಡಿಸಿ, ಕಳೆಯಿರಿ ಅಥವಾ ಗುಣಿಸಿ',
     'mx-lnum': 'ಸಂಖ್ಯೆಯು ಸ್ಥಾನ, ವಿರುದ್ಧ ಸ್ಥಾನ ಅಥವಾ ಅಂತರ',
+    'lv-sum': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ + ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
+    'lv-diff': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ − ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
+    'lv-prod': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ × ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
+    'lv-quot': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ ÷ ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
+    'lv-pair': 'ಅಕ್ಷರವು ಅದರ ಅಡ್ಡಸಾಲು ಮತ್ತು ಕಂಬಸಾಲು ಸಂಖ್ಯೆಗಳು',
   },
 }
 

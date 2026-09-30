@@ -295,6 +295,23 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Numbers with Letters by a Rule: numbers along the top and side, one letter lit where they cross
+  29: (
+    <>
+      <rect x={4} y={4} width={40} height={40} rx={3} />
+      <path d="M17.5 4v40M30.5 4v40M4 17.5h40M4 30.5h40" />
+      <text x={24} y={15} textAnchor="middle" className="art-text art-small">
+        3
+      </text>
+      <text x={10.75} y={28} textAnchor="middle" className="art-text art-small">
+        2
+      </text>
+      <rect x={18.5} y={18.5} width={11} height={11} rx={2} className="art-tile-accent" />
+      <text x={24} y={27.5} textAnchor="middle" className="art-text art-small art-fill-accent">
+        E
+      </text>
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

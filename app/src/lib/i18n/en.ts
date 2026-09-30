@@ -35,6 +35,7 @@ export const en = {
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
     numberTable: 'Number table',
+    matrixNo: (n: number) => `Matrix ${n}`,
     gridFirst: 'First pair',
     gridSecond: 'Second pair',
     start: 'Start',
@@ -298,6 +299,11 @@ export const en = {
       buttons: ['First column', 'Check the rule', 'Use the rule'],
       label:
         'A 3 by 3 letter matrix. Its columns are F, E, K; then I, a missing letter and Q; then N, D, R. First tap: each letter gets its place in the alphabet, and in the first column F + E = 6 + 5 = 11, which is K. Second tap: the same rule works in the third column, N + D = 14 + 4 = 18, which is R. Last tap: in the middle column, 9 + ? = 17, so ? = 8, which is H.',
+    },
+    letterValues: {
+      buttons: ['Find the row', 'Find the column', 'Use the rule'],
+      label:
+        'A table of letters with 1, 2, 3 along the top and 1, 2, 3 down the side. Row 1 is G, U, B; row 2 is H, L, E; row 3 is O, R, P. First tap: E is in row 2. Second tap: E is in column 3. Last tap: each letter is its row number times its column number, so E = 2 × 3 = 6.',
     },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],

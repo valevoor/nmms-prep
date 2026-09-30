@@ -72,6 +72,10 @@ import letterMatrixKn from './mat/letter-matrix.kn.json'
 import letterMatrix from './mat/letter-matrix.json'
 import letterMatrixMetaKn from './mat/letter-matrix.meta.kn.json'
 import letterMatrixMeta from './mat/letter-matrix.meta.json'
+import letterValuesKn from './mat/letter-values.kn.json'
+import letterValues from './mat/letter-values.json'
+import letterValuesMetaKn from './mat/letter-values.meta.kn.json'
+import letterValuesMeta from './mat/letter-values.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -188,4 +192,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('figure-numbers', 'Figures and Number Relationship', figNum, figNumMeta, figNumKn, figNumMetaKn),
   c('number-matrix', 'Number Matrix', matrix, matrixMeta, matrixKn, matrixMetaKn),
   c('letter-matrix', 'Letter Matrix', letterMatrix, letterMatrixMeta, letterMatrixKn, letterMatrixMetaKn),
+  c('letter-values', 'Numbers and Letters by a Rule', letterValues, letterValuesMeta, letterValuesKn, letterValuesMetaKn),
 ]

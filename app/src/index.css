@@ -640,6 +640,33 @@ a {
   font-size: 1.6rem;
 }
 
+/* Numbers with letters: the first row and column hold the numbers; two tables wrap on phones. */
+.key-tables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+.key-table td,
+.key-table th {
+  min-width: 2.1em;
+  padding: 5px 6px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.key-table th {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.key-table caption {
+  padding-bottom: 4px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: left;
+}
+
 .relations-table {
   width: 100%;
   border-collapse: collapse;

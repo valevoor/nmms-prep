@@ -179,6 +179,12 @@ export type PatternId =
   | 'mx-lstep'
   | 'mx-lcalc'
   | 'mx-lnum'
+  // Numbers with letters by a rule (Chapter 29)
+  | 'lv-sum'
+  | 'lv-diff'
+  | 'lv-prod'
+  | 'lv-quot'
+  | 'lv-pair'
 
 export interface Question {
   id: string
@@ -190,6 +196,8 @@ export interface Question {
   prompt?: string
   /** 'text' layout: an optional table shown above the prompt, e.g. words and their codes. */
   table?: string[][]
+  /** 'text' layout: a second table shown beside the first (Chapter 29's two matrices). */
+  table2?: string[][]
   /** A walk to draw in the explanation: moves of [N/E/S/W, distance], from the start. */
   path?: [Compass4, number][]
   /** Places to draw in the explanation: [label, x (east), y (north)]. */
