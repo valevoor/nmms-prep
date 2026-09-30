@@ -318,6 +318,11 @@ export const en = {
       label:
         'Three pairs of circles. First tap: a small circle inside a big one, for a group inside another, like dogs inside animals. Second tap: two overlapping circles, for groups with some things in both, like doctors and women. Last tap: two circles apart, for groups with nothing in both, like pens and trees.',
     },
+    rowCount: {
+      buttons: ['From the left', 'From the right', 'Add, take away 1'],
+      label:
+        'A row of 9 boxes; the 4th box is marked. First tap: counting from the left, it is 4th. Second tap: counting from the right, it is 6th, and it is counted again. Last tap: 4 + 6 − 1 = 9 boxes in the row.',
+    },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],
       label:

@@ -334,6 +334,16 @@ const ART: Record<number, ReactNode> = {
       <circle cx={24} cy={24} r={4.5} className="art-tile-accent" />
     </>
   ),
+  // Arrangement Test: a row of seats with one marked
+  36: (
+    <>
+      <rect x={3} y={18} width={9} height={12} rx={2} />
+      <rect x={14} y={18} width={9} height={12} rx={2} />
+      <rect x={25} y={18} width={9} height={12} rx={2} className="art-tile-accent" />
+      <rect x={36} y={18} width={9} height={12} rx={2} />
+      <path d="M29.5 8v6M26.5 11l3 3 3-3" style={{ fill: 'none' }} />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

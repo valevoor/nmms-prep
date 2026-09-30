@@ -6,6 +6,9 @@ import type { Locale } from './locale'
  * both languages at once (see `both`), so a saved question can be shown in either.
  * The Kannada is a DRAFT; see the glossary at the top of kn.ts.
  */
+/** 1st, 2nd, 3rd, 4th … 11th, 12th, 13th, 21st … */
+const ord = (n: number) => `${n}${n % 100 >= 11 && n % 100 <= 13 ? 'th' : (['th', 'st', 'nd', 'rd'][n % 10] ?? 'th')}`
+
 const genEn = {
   // Number series
   addEach: (d: number) => `Add ${d} each time.`,
@@ -295,6 +298,44 @@ const genEn = {
       neither: 'Neither: the number outside both circles.',
     })[ask]!,
 
+  // Arrangement test (Chapter 36)
+  arOtherEnd: (p: string, r: number, n: number) => `${p} is ${ord(r)} from the top in a class of ${n} students. What is ${p}’s rank from the bottom?`,
+  arOtherEndRule: 'Rank from the other end = total − rank + 1.',
+  arBothEnds: (p: string, a: number, b: number) => `${p} is ${ord(a)} from the top and ${ord(b)} from the bottom in a class. How many students are in the class?`,
+  arSameBoth: (p: string, k: number) => `In a row, ${p} is ${ord(k)} from both ends. How many people are in the row?`,
+  arBothEndsRule: 'Total = place from one end + place from the other end − 1 (the person is counted twice).',
+  arSwitch: (p: string, a: number, q: string, b: number, c: number) =>
+    `In a row, ${p} is ${ord(a)} from the left and ${q} is ${ord(b)} from the right. If they switch places, ${p} will be ${ord(c)} from the left. How many people are in the row?`,
+  arSwitchRule: (p: string, q: string) => `After the switch ${p} stands where ${q} stood, so that place is known from both ends: total = from the left + from the right − 1.`,
+  arBelow: (p: string, k: number, below: boolean, q: string, r: number, n: number) =>
+    `${p} is ${k} ranks ${below ? 'below' : 'above'} ${q}, and ${q} is ${ord(r)} in a class of ${n} students. What is ${p}’s rank from the last?`,
+  arBelowRule: 'Find the rank from the top first (below adds, above takes away), then count from the last: total − rank + 1.',
+  arMoved: (n: number, k: number, m: number) =>
+    `In a rack of ${n} books, a maths book is moved ${k} places to the right and becomes ${ord(m)} from the left. What was its place from the right before it moved?`,
+  arMovedRule: 'Undo the move to find its first place from the left, then count from the right: total − place + 1.',
+  arSorted: (s: string, digits: boolean) =>
+    digits
+      ? `${s}: when these digits are written in ascending order, how many digits stay in their place?`
+      : `${s}: when the letters of this word are written in alphabetical order, how many letters stay in their place?`,
+  arSortedRule: 'Write the sorted order under the original and count the places where they match.',
+  arSortedWork: (s: string, sorted: string, places: number[]) =>
+    `${s} → ${sorted}: ${places.length ? `place${places.length > 1 ? 's' : ''} ${places.join(', ')} stay${places.length > 1 ? '' : 's'}` : 'no place stays'}`,
+  arRowIntro: 'P, Q, R, S and T sit in a row, facing north.',
+  arEnd: (x: string, left: boolean) => `${x} sits at the ${left ? 'left' : 'right'} end.`,
+  arAnEnd: (x: string) => `${x} sits at one end of the row.`,
+  arMiddle: (x: string) => `${x} sits in the middle.`,
+  arJustLeft: (x: string, y: string) => `${x} sits immediately to the left of ${y}.`,
+  arBetween: (x: string, y: string, n: number) => `Exactly ${n} ${n === 1 ? 'person sits' : 'people sit'} between ${x} and ${y}.`,
+  arNext: (x: string, y: string) => `${x} sits next to ${y}.`,
+  arNotNext: (x: string, y: string) => `${x} does not sit next to ${y}.`,
+  arRightOf: (x: string, y: string) => `${x} sits somewhere to the right of ${y}.`,
+  arWhoMiddle: 'Who sits in the middle?',
+  arWhoEnd: (left: boolean) => `Who sits at the ${left ? 'left' : 'right'} end?`,
+  arWhoRightOf: (x: string) => `Who sits immediately to the right of ${x}?`,
+  arHowMany: (x: string, y: string) => `How many people sit between ${x} and ${y}?`,
+  arSeatRule: 'Facing north, their left is your left. Start with the clues that fix a place (an end, the middle), then use the others, and check every clue at the end.',
+  arSeatWork: (row: string) => `From left to right: ${row}`,
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -473,6 +514,10 @@ const genEn = {
     'vd-pick': 'Pick the diagram for three groups',
     'vd-name': 'Name the groups a diagram shows',
     'vd-count': 'Count the people in parts of a diagram',
+    'ar-rank': 'Ranks and places from both ends',
+    'ar-order': 'Letters or digits that stay in place',
+    'ar-seat': 'Seating from clues',
+    'ar-clue': 'Numbers and places from clues',
   } as Record<PatternId, string>,
 }
 
@@ -737,6 +782,40 @@ const genKn: GenText = {
       one: 'ಒಂದೇ ಒಂದು: ಛೇದನದ ಹೊರಗಿನ ಎರಡು ಭಾಗಗಳನ್ನು ಕೂಡಿಸಿ.',
       neither: 'ಯಾವುದೂ ಇಲ್ಲ: ಎರಡೂ ವೃತ್ತಗಳ ಹೊರಗಿನ ಸಂಖ್ಯೆ.',
     })[ask]!,
+  arOtherEnd: (p, r, n) => `${n} ವಿದ್ಯಾರ್ಥಿಗಳ ತರಗತಿಯಲ್ಲಿ ${p} ಮೇಲಿನಿಂದ ${r}ನೇ ರ್ಯಾಂಕ್ ಪಡೆದಿದ್ದಾರೆ. ಕೆಳಗಿನಿಂದ ${p} ಅವರ ರ್ಯಾಂಕ್ ಎಷ್ಟು?`,
+  arOtherEndRule: 'ಇನ್ನೊಂದು ಕಡೆಯಿಂದ ರ್ಯಾಂಕ್ = ಒಟ್ಟು − ರ್ಯಾಂಕ್ + 1.',
+  arBothEnds: (p, a, b) => `ಒಂದು ತರಗತಿಯಲ್ಲಿ ${p} ಮೇಲಿನಿಂದ ${a}ನೇ ಮತ್ತು ಕೆಳಗಿನಿಂದ ${b}ನೇ ರ್ಯಾಂಕ್ ಪಡೆದಿದ್ದಾರೆ. ತರಗತಿಯಲ್ಲಿ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?`,
+  arSameBoth: (p, k) => `ಒಂದು ಸಾಲಿನಲ್ಲಿ ${p} ಎರಡೂ ಕಡೆಯಿಂದ ${k}ನೇ ಸ್ಥಾನದಲ್ಲಿದ್ದಾರೆ. ಸಾಲಿನಲ್ಲಿ ಎಷ್ಟು ಜನರಿದ್ದಾರೆ?`,
+  arBothEndsRule: 'ಒಟ್ಟು = ಒಂದು ಕಡೆಯಿಂದ ಸ್ಥಾನ + ಇನ್ನೊಂದು ಕಡೆಯಿಂದ ಸ್ಥಾನ − 1 (ಆ ವ್ಯಕ್ತಿಯನ್ನು ಎರಡು ಬಾರಿ ಎಣಿಸಲಾಗಿದೆ).',
+  arSwitch: (p, a, q, b, c) =>
+    `ಒಂದು ಸಾಲಿನಲ್ಲಿ ${p} ಎಡದಿಂದ ${a}ನೇ ಮತ್ತು ${q} ಬಲದಿಂದ ${b}ನೇ ಸ್ಥಾನದಲ್ಲಿದ್ದಾರೆ. ಅವರಿಬ್ಬರು ಸ್ಥಾನಗಳನ್ನು ಬದಲಾಯಿಸಿದರೆ ${p} ಎಡದಿಂದ ${c}ನೇ ಸ್ಥಾನಕ್ಕೆ ಬರುತ್ತಾರೆ. ಸಾಲಿನಲ್ಲಿ ಎಷ್ಟು ಜನರಿದ್ದಾರೆ?`,
+  arSwitchRule: (p, q) => `ಬದಲಾವಣೆಯ ನಂತರ ${p} ${q} ಇದ್ದ ಸ್ಥಾನದಲ್ಲಿರುತ್ತಾರೆ, ಆದ್ದರಿಂದ ಆ ಸ್ಥಾನ ಎರಡೂ ಕಡೆಯಿಂದ ತಿಳಿದಿದೆ: ಒಟ್ಟು = ಎಡದಿಂದ + ಬಲದಿಂದ − 1.`,
+  arBelow: (p, k, below, q, r, n) =>
+    `${p} ${q} ಅವರಿಗಿಂತ ${k} ರ್ಯಾಂಕ್ ${below ? 'ಕೆಳಗಿದ್ದಾರೆ' : 'ಮೇಲಿದ್ದಾರೆ'}, ಮತ್ತು ${n} ವಿದ್ಯಾರ್ಥಿಗಳ ತರಗತಿಯಲ್ಲಿ ${q} ${r}ನೇ ರ್ಯಾಂಕ್ ಪಡೆದಿದ್ದಾರೆ. ಕೆಳಗಿನಿಂದ ${p} ಅವರ ರ್ಯಾಂಕ್ ಎಷ್ಟು?`,
+  arBelowRule: 'ಮೊದಲು ಮೇಲಿನಿಂದ ರ್ಯಾಂಕ್ ಕಂಡುಹಿಡಿಯಿರಿ (ಕೆಳಗೆ ಎಂದರೆ ಕೂಡಿಸಿ, ಮೇಲೆ ಎಂದರೆ ಕಳೆಯಿರಿ), ನಂತರ ಕೆಳಗಿನಿಂದ ಎಣಿಸಿ: ಒಟ್ಟು − ರ್ಯಾಂಕ್ + 1.',
+  arMoved: (n, k, m) => `${n} ಪುಸ್ತಕಗಳಿರುವ ರ್ಯಾಕ್‌ನಲ್ಲಿ ಗಣಿತ ಪುಸ್ತಕವನ್ನು ಬಲಕ್ಕೆ ${k} ಸ್ಥಾನ ಸರಿಸಿದಾಗ ಅದು ಎಡದಿಂದ ${m}ನೇಯದಾಗುತ್ತದೆ. ಸರಿಸುವ ಮೊದಲು ಬಲದಿಂದ ಅದರ ಸ್ಥಾನ ಯಾವುದು?`,
+  arMovedRule: 'ಚಲನೆಯನ್ನು ಹಿಂದಕ್ಕೆ ಮಾಡಿ ಎಡದಿಂದ ಅದರ ಮೊದಲಿನ ಸ್ಥಾನ ಕಂಡುಹಿಡಿಯಿರಿ, ನಂತರ ಬಲದಿಂದ ಎಣಿಸಿ: ಒಟ್ಟು − ಸ್ಥಾನ + 1.',
+  arSorted: (s, digits) =>
+    digits
+      ? `${s} ಈ ಅಂಕಿಗಳನ್ನು ಏರಿಕೆ ಕ್ರಮದಲ್ಲಿ ಬರೆದಾಗ ಮೊದಲು ಇದ್ದ ಸ್ಥಾನದಲ್ಲೇ ಉಳಿಯುವ ಅಂಕಿಗಳ ಸಂಖ್ಯೆ ಎಷ್ಟು?`
+      : `${s} ಈ ಪದದ ಅಕ್ಷರಗಳನ್ನು ವರ್ಣಮಾಲೆಯ ಕ್ರಮದಲ್ಲಿ ಬರೆದಾಗ ಮೊದಲು ಇದ್ದ ಸ್ಥಾನದಲ್ಲಿ ಉಳಿಯುವ ಅಕ್ಷರಗಳ ಸಂಖ್ಯೆ ಎಷ್ಟು?`,
+  arSortedRule: 'ಕ್ರಮದಲ್ಲಿ ಬರೆದುದನ್ನು ಮೂಲದ ಕೆಳಗೆ ಬರೆದು, ಹೊಂದುವ ಸ್ಥಾನಗಳನ್ನು ಎಣಿಸಿ.',
+  arSortedWork: (s, sorted, places) => `${s} → ${sorted}: ${places.length ? `${places.join(', ')}ನೇ ಸ್ಥಾನ ಉಳಿಯುತ್ತದೆ` : 'ಯಾವ ಸ್ಥಾನವೂ ಉಳಿಯುವುದಿಲ್ಲ'}`,
+  arRowIntro: 'P, Q, R, S ಮತ್ತು T ಉತ್ತರಕ್ಕೆ ಮುಖಮಾಡಿ ಒಂದು ಸಾಲಿನಲ್ಲಿ ಕುಳಿತಿದ್ದಾರೆ.',
+  arEnd: (x, left) => `${x} ${left ? 'ಎಡ' : 'ಬಲ'} ತುದಿಯಲ್ಲಿ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arAnEnd: (x) => `${x} ಸಾಲಿನ ಒಂದು ತುದಿಯಲ್ಲಿ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arMiddle: (x) => `${x} ಮಧ್ಯದಲ್ಲಿ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arJustLeft: (x, y) => `${x} ${y} ಯ ತಕ್ಷಣ ಎಡಕ್ಕೆ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arBetween: (x, y, n) => `${x} ಮತ್ತು ${y} ನಡುವೆ ನಿಖರವಾಗಿ ${n} ಜನ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arNext: (x, y) => `${x} ${y} ಯ ಪಕ್ಕದಲ್ಲಿ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arNotNext: (x, y) => `${x} ${y} ಯ ಪಕ್ಕದಲ್ಲಿ ಕುಳಿತಿಲ್ಲ.`,
+  arRightOf: (x, y) => `${x} ${y} ಯ ಬಲಭಾಗದಲ್ಲಿ ಎಲ್ಲೋ ಕುಳಿತಿದ್ದಾರೆ.`,
+  arWhoMiddle: 'ಮಧ್ಯದಲ್ಲಿ ಯಾರು ಕುಳಿತಿದ್ದಾರೆ?',
+  arWhoEnd: (left) => `${left ? 'ಎಡ' : 'ಬಲ'} ತುದಿಯಲ್ಲಿ ಯಾರು ಕುಳಿತಿದ್ದಾರೆ?`,
+  arWhoRightOf: (x) => `${x} ಯ ತಕ್ಷಣ ಬಲಕ್ಕೆ ಯಾರು ಕುಳಿತಿದ್ದಾರೆ?`,
+  arHowMany: (x, y) => `${x} ಮತ್ತು ${y} ನಡುವೆ ಎಷ್ಟು ಜನ ಕುಳಿತಿದ್ದಾರೆ?`,
+  arSeatRule: 'ಉತ್ತರಕ್ಕೆ ಮುಖಮಾಡಿದಾಗ ಅವರ ಎಡ ನಿಮ್ಮ ಎಡವೇ. ಸ್ಥಾನವನ್ನು ನಿರ್ಧರಿಸುವ ಸುಳಿವುಗಳಿಂದ (ತುದಿ, ಮಧ್ಯ) ಪ್ರಾರಂಭಿಸಿ, ನಂತರ ಉಳಿದವನ್ನು ಬಳಸಿ, ಕೊನೆಯಲ್ಲಿ ಪ್ರತಿ ಸುಳಿವನ್ನೂ ಪರೀಕ್ಷಿಸಿ.',
+  arSeatWork: (row) => `ಎಡದಿಂದ ಬಲಕ್ಕೆ: ${row}`,
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -905,6 +984,10 @@ const genKn: GenText = {
     'vd-pick': 'ಮೂರು ಗುಂಪುಗಳಿಗೆ ಸೂಕ್ತ ಚಿತ್ರ',
     'vd-name': 'ಚಿತ್ರವು ತೋರಿಸುವ ಗುಂಪುಗಳು',
     'vd-count': 'ಚಿತ್ರದ ಭಾಗಗಳಲ್ಲಿರುವವರನ್ನು ಎಣಿಸಿ',
+    'ar-rank': 'ಎರಡೂ ಕಡೆಯಿಂದ ರ್ಯಾಂಕ್ ಮತ್ತು ಸ್ಥಾನ',
+    'ar-order': 'ಸ್ಥಾನದಲ್ಲೇ ಉಳಿಯುವ ಅಕ್ಷರ ಅಥವಾ ಅಂಕಿಗಳು',
+    'ar-seat': 'ಸುಳಿವುಗಳಿಂದ ಆಸನ ವ್ಯವಸ್ಥೆ',
+    'ar-clue': 'ಸುಳಿವುಗಳಿಂದ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಾನ',
   },
 }
 

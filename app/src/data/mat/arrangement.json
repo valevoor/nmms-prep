@@ -1,0 +1,302 @@
+{
+  "topic": "arrangement",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 36 \"Arrangement Test\" (questions: PDF pages 100–103, solutions: PDF pages 173–177). tools/check_arrangement.ts works out each answer by its own rule, and the seating questions by trying every seating. Q9, Q10 and Q11 are hidden: Q9 has no right option as printed, and in Q10 and Q11 the circle can go either way round, so two options are right. Q8, Q12 and Q13 follow the book’s Kannada where its English differs (below, composite).",
+  "questions": [
+    {
+      "id": "ar-b01",
+      "bookNo": 1,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Akash has secured 20th rank in a class of 50 students. What is his rank from the last?",
+      "options": {
+        "A": "19",
+        "B": "20",
+        "C": "30",
+        "D": "31"
+      },
+      "answer": "D",
+      "rule": "Rank from the other end = total − rank + 1.",
+      "working": "50 − 20 + 1 = 31"
+    },
+    {
+      "id": "ar-b02",
+      "bookNo": 2,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Vishal is 10th from the top and 25th from the bottom in a class. How many students are there in the class?",
+      "options": {
+        "A": "35",
+        "B": "36",
+        "C": "34",
+        "D": "37"
+      },
+      "answer": "C",
+      "rule": "Total = rank from the top + rank from the bottom − 1 (he is counted twice).",
+      "working": "10 + 25 − 1 = 34"
+    },
+    {
+      "id": "ar-b03",
+      "bookNo": 3,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a school, the Atal Tinkering Lab is the seventh room from both ends. How many rooms are there in the school?",
+      "options": {
+        "A": "15",
+        "B": "13",
+        "C": "14",
+        "D": "16"
+      },
+      "answer": "B",
+      "rule": "Total = place from one end + place from the other end − 1.",
+      "working": "7 + 7 − 1 = 13"
+    },
+    {
+      "id": "ar-b04",
+      "bookNo": 4,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a rack of 18 books, a maths book is moved five places to the right and becomes the tenth from the left. What was its place from the right before it moved?",
+      "options": {
+        "A": "13",
+        "B": "14",
+        "C": "12",
+        "D": "11"
+      },
+      "answer": "B",
+      "rule": "Undo the move to find its first place from the left, then count from the right: total − place + 1.",
+      "working": "10 − 5 = 5 from the left; 18 − 5 + 1 = 14 from the right",
+      "note": "The book says “becomes the tenth”; counted from the right instead, the answer would be 15, which is not an option."
+    },
+    {
+      "id": "ar-b05",
+      "bookNo": 5,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-order",
+      "layout": "text",
+      "terms": [],
+      "prompt": "97424105869591845207: when these digits are written in ascending order, how many digits stay in their original place?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "A",
+      "rule": "Write the sorted digits under the original ones and count the places where they match.",
+      "working": "97424105869591845207 → 00112244455567788999: only the 12th digit (5) stays"
+    },
+    {
+      "id": "ar-b06",
+      "bookNo": 6,
+      "sourcePage": 100,
+      "keyFrom": "book",
+      "pattern": "ar-order",
+      "layout": "text",
+      "terms": [],
+      "prompt": "MATHEMATICS: when the letters of this word are written in alphabetical order, how many letters stay in their original place?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "A",
+      "rule": "Write the sorted letters under the word and count the places where they match.",
+      "working": "MATHEMATICS → AACEHIMMSTT: only the 2nd letter (A) stays"
+    },
+    {
+      "id": "ar-b07",
+      "bookNo": 7,
+      "sourcePage": 101,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Hema is 10th from the right in a row. Trupti is sixth from the left. If the two of them switch places, Trupti will be sixteenth from the left. How many girls are in the row?",
+      "options": {
+        "A": "26",
+        "B": "25",
+        "C": "24",
+        "D": "27"
+      },
+      "answer": "B",
+      "rule": "After the switch Trupti is in Hema’s place, so Hema’s place is 16th from the left and 10th from the right. Total = 16 + 10 − 1.",
+      "working": "16 + 10 − 1 = 25",
+      "note": "The book prints the options in the order A, B, D, C."
+    },
+    {
+      "id": "ar-b08",
+      "bookNo": 8,
+      "sourcePage": 101,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Savita is six ranks below Savitri, and Savitri has the 25th rank. If there are 45 students in the class, what is Savita’s rank from the last?",
+      "options": {
+        "A": "16",
+        "B": "14",
+        "C": "15",
+        "D": "17"
+      },
+      "answer": "C",
+      "rule": "Find Savita’s rank from the top first, then count from the last: total − rank + 1.",
+      "working": "25 + 6 = 31; 45 − 31 + 1 = 15",
+      "note": "The book’s English says “six ranks ahead of”; its Kannada (ಕೆಳಗಿದ್ದಾಳೆ) and its answer read “below”. Ahead (19th) would give 27, which is not an option."
+    },
+    {
+      "id": "ar-b09",
+      "bookNo": 9,
+      "sourcePage": 101,
+      "keyFrom": "book",
+      "pattern": "ar-rank",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a class of 90 students, there are twice as many girls as boys. Vimala is ranked 25th. There are eight boys behind her. How many students are in front of her?",
+      "options": {
+        "A": "41",
+        "B": "43",
+        "C": "42",
+        "D": "44"
+      },
+      "answer": "B",
+      "rule": "Not checked.",
+      "working": "The key gives 43.",
+      "note": "Hidden: a student ranked 25th has 24 students in front, which is not an option. The key’s 43 counts only the girls in front, and takes 25 as her rank from the bottom.",
+      "status": "needs-review"
+    },
+    {
+      "id": "ar-b10",
+      "bookNo": 10,
+      "sourcePage": 101,
+      "keyFrom": "book",
+      "pattern": "ar-seat",
+      "layout": "text",
+      "terms": [],
+      "prompt": "M, N, O, P, Q and R are seated in a circle facing the centre. M and R sit next to P and O. M and Q sit between P and N. Who sits next to O, clockwise?",
+      "options": {
+        "A": "R",
+        "B": "P",
+        "C": "N",
+        "D": "Q"
+      },
+      "answer": "A",
+      "rule": "Not checked.",
+      "working": "The key gives R.",
+      "note": "Hidden: the clues only say who sits next to whom, so more than one circle fits (P M Q N R O either way round, and also P M Q N O R). Clockwise after O can then be R, P or N, and all three are options.",
+      "status": "needs-review"
+    },
+    {
+      "id": "ar-b11",
+      "bookNo": 11,
+      "sourcePage": 101,
+      "keyFrom": "book",
+      "pattern": "ar-seat",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Five mobiles are placed at the corners of a pentagon: Vivo, Oppo, Nokia, Samsung and Redmi. Samsung is between Vivo and Nokia. Oppo is between Nokia and Redmi. When they are arranged alphabetically, starting from the last one and going clockwise, which mobile is in the middle?",
+      "options": {
+        "A": "Nokia",
+        "B": "Samsung",
+        "C": "Oppo",
+        "D": "Redmi"
+      },
+      "answer": "C",
+      "rule": "Not checked.",
+      "working": "The key gives Oppo.",
+      "note": "Hidden: the clues fix the order round the pentagon (Vivo, Samsung, Nokia, Oppo, Redmi) but not which way is clockwise. Starting from Vivo, the middle one is Nokia one way and Oppo the other, and both are options.",
+      "status": "needs-review"
+    },
+    {
+      "id": "ar-b12",
+      "bookNo": 12,
+      "sourcePage": 102,
+      "keyFrom": "book",
+      "pattern": "ar-clue",
+      "layout": "text",
+      "terms": [],
+      "prompt": "A farmer has dug 10 lines in his field for planting seeds. He sows chickpeas in the lines with prime numbers, wheat in the lines with even numbers, and corn in the lines with composite numbers. Which seeds did he sow in line 4?",
+      "options": {
+        "A": "Wheat, Chickpeas",
+        "B": "Chickpeas, Corn",
+        "C": "Corn, Wheat",
+        "D": "Only Wheat"
+      },
+      "answer": "C",
+      "rule": "Check the line number against each rule: is it prime, even, composite?",
+      "working": "4 is even (wheat) and composite, 4 = 2 × 2 (corn), and not prime",
+      "note": "The book’s English says “fractional numbers”; its Kannada says ಭಾಜ್ಯ ಸಂಖ್ಯೆಗಳು (composite numbers), which its answer uses."
+    },
+    {
+      "id": "ar-b13",
+      "bookNo": 13,
+      "sourcePage": 102,
+      "keyFrom": "book",
+      "pattern": "ar-clue",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a 10-digit mobile number, the first composite number stands in the place of the first composite number (counting from the left), and the first perfect number stands in the place of the first perfect number. The first two digits are each three times the last digit. The digits on both sides of the composite number are half of it, and the last two digits are half of the perfect number. The sum and the difference of the 5th and 6th digits are the 7th and 8th digits. What is the mobile number?",
+      "options": {
+        "A": "9924268433",
+        "B": "9926248433",
+        "C": "9632624843",
+        "D": "8436243269"
+      },
+      "answer": "A",
+      "rule": "The first composite number is 4 and the first perfect number is 6 (1 + 2 + 3 = 6). Fill the places one clue at a time.",
+      "working": "4th = 4, 6th = 6; 3rd = 5th = 2; 9th = 10th = 3; 1st = 2nd = 9; 7th = 2 + 6 = 8, 8th = 6 − 2 = 4 → 9924268433",
+      "note": "The book’s English is hard to follow and says “fractional” and “whole number”; this follows its Kannada (ಭಾಜ್ಯ = composite, ಪರಿಪೂರ್ಣ = perfect), which its answer uses."
+    },
+    {
+      "id": "ar-b14",
+      "bookNo": 14,
+      "sourcePage": 103,
+      "keyFrom": "book",
+      "pattern": "ar-seat",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Twelve students sit in two rows on the school ground, facing each other. In row 1, A, B, C, D, E and F face south; in row 2, U, V, W, X, Y and Z face north (not necessarily in this order). E sits opposite the one who sits third to the left of X. Either E or X sits at an end of the row. Only one person sits between E and F. The number of persons to the left of F is the same as to the right of Z. Only two persons sit between Z and the one who sits opposite A. The number of persons between A and F is the same as between Y and U. Y and Z are not immediate neighbours. W sits to the right of V and does not face A. C sits to the left of D and to the right of B. How many persons sit between Y and the one who faces F?",
+      "options": {
+        "A": "Three",
+        "B": "Four",
+        "C": "Two",
+        "D": "One"
+      },
+      "answer": "A",
+      "rule": "Row 1 faces south, so its left is on your right as you look at the page; row 2 faces north. Place E and X first, then F, Z, A and the rest, checking each clue. Row 1 (as drawn): D A E C F B; row 2: Y V W U Z X.",
+      "working": "F faces Z. Row 2: Y V W U Z X, so V, W and U sit between Y and Z: three."
+    },
+    {
+      "id": "ar-b15",
+      "bookNo": 15,
+      "sourcePage": 103,
+      "keyFrom": "book",
+      "pattern": "ar-seat",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Twelve students sit in two rows on the school ground, facing each other. In row 1, A, B, C, D, E and F face south; in row 2, U, V, W, X, Y and Z face north (not necessarily in this order). E sits opposite the one who sits third to the left of X. Either E or X sits at an end of the row. Only one person sits between E and F. The number of persons to the left of F is the same as to the right of Z. Only two persons sit between Z and the one who sits opposite A. The number of persons between A and F is the same as between Y and U. Y and Z are not immediate neighbours. W sits to the right of V and does not face A. C sits to the left of D and to the right of B. Three of the following four are alike in some way and form a group. Which one does not belong to the group?",
+      "options": {
+        "A": "YW",
+        "B": "AF",
+        "C": "DE",
+        "D": "CB"
+      },
+      "answer": "B",
+      "rule": "Row 1 faces south, so its left is on your right as you look at the page; row 2 faces north. Place E and X first, then F, Z, A and the rest, checking each clue. Row 1 (as drawn): D A E C F B; row 2: Y V W U Z X.",
+      "working": "Y _ W, D _ E and C _ B each have one person between them; A and F have two (E and C)."
+    }
+  ]
+}

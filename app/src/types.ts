@@ -192,6 +192,11 @@ export type PatternId =
   | 'vd-pick'
   | 'vd-name'
   | 'vd-count'
+  // Arrangement test (Chapter 36)
+  | 'ar-rank'
+  | 'ar-order'
+  | 'ar-seat'
+  | 'ar-clue'
 
 export interface Question {
   id: string

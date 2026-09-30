@@ -15,6 +15,7 @@ import { LetterColumns } from './LetterColumns'
 import { RowColumn } from './RowColumn'
 import { PyramidMirror } from './PyramidMirror'
 import { VennPairs } from './VennPairs'
+import { RowCount } from './RowCount'
 import { CubeColours } from './CubeColours'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
@@ -60,4 +61,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   letterValues: RowColumn,
   pyramid: PyramidMirror,
   vennPairs: VennPairs,
+  rowCount: RowCount,
 }

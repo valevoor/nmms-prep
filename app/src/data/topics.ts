@@ -30,6 +30,8 @@ import pyramid from './mat/pyramid.json'
 import pyramidMeta from './mat/pyramid.meta.json'
 import vennDiagrams from './mat/venn-diagrams.json'
 import vennDiagramsMeta from './mat/venn-diagrams.meta.json'
+import arrangement from './mat/arrangement.json'
+import arrangementMeta from './mat/arrangement.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -93,6 +95,7 @@ import { generateLetterMatrix } from '../lib/generators/letterMatrix'
 import { generateLetterValues } from '../lib/generators/letterValues'
 import { generatePyramid } from '../lib/generators/pyramid'
 import { generateVennDiagram } from '../lib/generators/vennDiagrams'
+import { generateArrangement } from '../lib/generators/arrangement'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -445,6 +448,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: vennDiagramsMeta as TopicMeta,
     missing: 'answer',
     generate: generateVennDiagram,
+  },
+  {
+    id: 'arrangement',
+    chapter: 36,
+    name: 'Arrangement',
+    questions: visible(arrangement.questions as Question[]),
+    meta: arrangementMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateArrangement,
   },
 ]
 

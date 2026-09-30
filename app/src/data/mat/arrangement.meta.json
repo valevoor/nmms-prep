@@ -1,0 +1,34 @@
+{
+  "topic": "arrangement",
+  "intro": "Arrangement questions are about places in a line, a class ranking or a seating. Most ranking questions use one idea: a person counted from both ends is counted twice. Seating questions give clues about who sits where; draw the row or circle and place people one clue at a time.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Counted twice",
+      "visual": "rowCount",
+      "body": "If someone is 4th from the left and 6th from the right, adding 4 + 6 counts that person twice. Take 1 away to get the number in the row.",
+      "caption": "4 + 6 − 1 = 9 people."
+    },
+    {
+      "title": "From the other end",
+      "body": "In a line of 50, the 1st from one end is the 50th from the other. So the place from the other end = total − place + 1: 20th of 50 is 50 − 20 + 1 = 31st from the last."
+    },
+    {
+      "title": "Below and above",
+      "body": "A rank below is a bigger number: six ranks below the 25th is the 31st. A rank above is smaller. Work out the rank from the top first, then count from the last if the question asks for that."
+    },
+    {
+      "title": "Switching places",
+      "body": "When two people switch, each takes the other’s place. The new place of one (16th from the left) is the old place of the other, whose place from the right you know (10th): 16 + 10 − 1 = 25 in the row."
+    },
+    {
+      "title": "Which ones stay in place after sorting?",
+      "body": "Write the sorted letters (or digits) under the original ones, one under each, and count only the places where both are the same. MATHEMATICS over AACEHIMMSTT: only the A in 2nd place matches."
+    },
+    {
+      "title": "Left and right in a seating",
+      "body": "People facing north have the same left and right as you. People facing south, towards you, have them the other way round. Draw the row, place the people the clues fix first (an end, the middle), and check every clue at the end."
+    }
+  ],
+  "workedExamples": ["ar-b02", "ar-b07", "ar-b06", "ar-b14"]
+}
