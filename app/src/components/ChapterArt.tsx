@@ -326,6 +326,14 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Venn Diagrams: two overlapping circles with a small one where they overlap
+  33: (
+    <>
+      <circle cx={17} cy={24} r={13} />
+      <circle cx={31} cy={24} r={13} />
+      <circle cx={24} cy={24} r={4.5} className="art-tile-accent" />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

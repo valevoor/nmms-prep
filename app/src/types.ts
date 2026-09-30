@@ -188,6 +188,10 @@ export type PatternId =
   // Number / letter pyramid (Chapter 30)
   | 'py-shift'
   | 'py-mirror'
+  // Venn diagrams (Chapter 33)
+  | 'vd-pick'
+  | 'vd-name'
+  | 'vd-count'
 
 export interface Question {
   id: string

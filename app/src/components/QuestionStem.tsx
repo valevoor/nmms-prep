@@ -32,7 +32,7 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
   let blank = 0
   return (
     <div className={`stem stem-${size}`}>
-      {q.figures && <FigureStem q={q} size={size} />}
+      {q.figures && q.figures.terms.length > 0 && <FigureStem q={q} size={size} />}
       {q.table && q.pattern.startsWith('lv-') && (
         <div className="key-tables">
           {[q.table, q.table2].filter(Boolean).map((table, n) => (

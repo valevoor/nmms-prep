@@ -1,0 +1,30 @@
+{
+  "topic": "venn-diagrams",
+  "intro": "A Venn diagram shows groups as circles. A circle inside another means everything in the small group is also in the big one; overlapping circles mean some things are in both; circles apart mean nothing is in both. Work out how every pair of groups is related, then find the diagram where every pair of circles sits the same way.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Three ways two groups can sit",
+      "visual": "vennPairs",
+      "body": "Every pair of groups is one of three: one inside the other (every dog is an animal), overlapping (some doctors are women), or apart (no pen is a tree).",
+      "caption": "Inside: all of one group is in the other. Overlap: some are in both. Apart: none are in both."
+    },
+    {
+      "title": "Check every pair",
+      "body": "Three groups make three pairs; four groups make six. A diagram is right only if every pair of circles sits the way its groups do. Cross a diagram out as soon as one pair is wrong."
+    },
+    {
+      "title": "One thing in two groups",
+      "body": "If one thing belongs to two groups (C.V. Raman is a scientist and a Nobel prize winner), its circle goes inside both, where the two circles overlap."
+    },
+    {
+      "title": "Counting in a Venn diagram",
+      "body": "“Coffee” means the whole coffee circle, including the part it shares with tea: 30 + 20 = 50. “Only tea” is the part of the tea circle outside coffee. “Both” is the overlap."
+    },
+    {
+      "title": "Size doesn't matter",
+      "body": "A small circle does not mean a small group. Only how the circles sit matters: inside, overlapping or apart."
+    }
+  ],
+  "workedExamples": ["vd-b03", "vd-b07", "vd-b10", "vd-b13"]
+}

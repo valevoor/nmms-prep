@@ -262,6 +262,39 @@ const genEn = {
   pyMirror:
     'The 2nd group is the mirror image of the 1st, and the 4th of the 3rd: each letter or number swaps to the same place on the other side of the pyramid’s middle line.',
 
+  // Venn diagrams (Chapter 33)
+  vdPick: (groups: string) => `Which diagram shows the relation between: ${groups}?`,
+  vdPickWork: (k: string) => `Only diagram ${k} has every pair of circles sitting this way.`,
+  vdName: 'Which of these does the Venn diagram show?',
+  vdNameWork: 'Only these three groups sit the way the circles do.',
+  vdInside: (a: string, b: string) => `${a}: inside ${b}.`,
+  vdOverlap: (a: string, b: string) => `${a} and ${b}: overlap.`,
+  vdApart: (a: string, b: string) => `${a} and ${b}: apart.`,
+  vdSurvey: (total: number, a: string, b: string) =>
+    `In a class${total ? ` of ${total} students` : ''}, circle A shows the students who ${a} and circle B those who ${b}.${total ? ' The number outside both circles is the students who do neither.' : ''}`,
+  vdAsk: (ask: string) =>
+    ({
+      a: 'How many students are in circle A altogether?',
+      b: 'How many students are in circle B altogether?',
+      onlyA: 'How many students are only in circle A?',
+      onlyB: 'How many students are only in circle B?',
+      both: 'How many students are in both circles?',
+      either: 'How many students are in at least one circle?',
+      one: 'How many students are in exactly one circle?',
+      neither: 'How many students are in neither circle?',
+    })[ask]!,
+  vdCountRule: (ask: string) =>
+    ({
+      a: 'Add every number inside circle A, including the part it shares with B.',
+      b: 'Add every number inside circle B, including the part it shares with A.',
+      onlyA: 'Only A: the part of circle A outside circle B.',
+      onlyB: 'Only B: the part of circle B outside circle A.',
+      both: 'Both: the part where the two circles overlap.',
+      either: 'At least one: add every number inside the circles.',
+      one: 'Exactly one: add the two parts outside the overlap.',
+      neither: 'Neither: the number outside both circles.',
+    })[ask]!,
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -437,6 +470,9 @@ const genEn = {
     'lv-pair': 'A letter is its row and column numbers',
     'py-shift': 'Every box moves by the same step',
     'py-mirror': 'Mirror image across the middle',
+    'vd-pick': 'Pick the diagram for three groups',
+    'vd-name': 'Name the groups a diagram shows',
+    'vd-count': 'Count the people in parts of a diagram',
   } as Record<PatternId, string>,
 }
 
@@ -670,6 +706,37 @@ const genKn: GenText = {
   },
   pyMirror:
     'ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ, ಮತ್ತು ನಾಲ್ಕನೇ ಗುಂಪು ಮೂರನೆಯದರ ಕನ್ನಡಿ ಪ್ರತಿಬಿಂಬ: ಪ್ರತಿ ಅಕ್ಷರ ಅಥವಾ ಸಂಖ್ಯೆಯು ಗೋಪುರದ ಮಧ್ಯರೇಖೆಯ ಇನ್ನೊಂದು ಬದಿಯಲ್ಲಿ ಅದೇ ಸ್ಥಾನಕ್ಕೆ ಹೋಗುತ್ತದೆ.',
+  vdPick: (groups) => `ಕೆಳಗಿನವುಗಳ ನಡುವಿನ ಸಂಬಂಧವನ್ನು ತೋರಿಸುವ ಸೂಕ್ತ ಚಿತ್ರ ಯಾವುದು: ${groups}?`,
+  vdPickWork: (k) => `ಪ್ರತಿ ಜೋಡಿ ವೃತ್ತಗಳು ಹೀಗೆ ಇರುವುದು ಚಿತ್ರ ${k} ಯಲ್ಲಿ ಮಾತ್ರ.`,
+  vdName: 'ಕೊಟ್ಟಿರುವ ವೆನ್ ನಕ್ಷೆಯು ಕೆಳಗಿನ ಯಾವುದನ್ನು ಪ್ರತಿನಿಧಿಸುತ್ತದೆ?',
+  vdNameWork: 'ವೃತ್ತಗಳು ಇರುವಂತೆಯೇ ಇರುವ ಗುಂಪುಗಳು ಇವು ಮಾತ್ರ.',
+  vdInside: (a, b) => `${a}: ${b} ಒಳಗೆ.`,
+  vdOverlap: (a, b) => `${a} ಮತ್ತು ${b}: ಛೇದಿಸುತ್ತವೆ.`,
+  vdApart: (a, b) => `${a} ಮತ್ತು ${b}: ಬೇರೆ ಬೇರೆ.`,
+  vdSurvey: (total, a, b) =>
+    `ಒಂದು ತರಗತಿಯ${total ? ` ${total} ವಿದ್ಯಾರ್ಥಿಗಳಲ್ಲಿ` : 'ಲ್ಲಿ'}, ವೃತ್ತ A ${a} ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಮತ್ತು ವೃತ್ತ B ${b} ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.${total ? ' ಎರಡೂ ವೃತ್ತಗಳ ಹೊರಗಿನ ಸಂಖ್ಯೆಯು ಎರಡನ್ನೂ ಮಾಡದ ವಿದ್ಯಾರ್ಥಿಗಳು.' : ''}`,
+  vdAsk: (ask) =>
+    ({
+      a: 'ವೃತ್ತ A ಯಲ್ಲಿ ಒಟ್ಟು ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      b: 'ವೃತ್ತ B ಯಲ್ಲಿ ಒಟ್ಟು ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      onlyA: 'ವೃತ್ತ A ಯಲ್ಲಿ ಮಾತ್ರ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      onlyB: 'ವೃತ್ತ B ಯಲ್ಲಿ ಮಾತ್ರ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      both: 'ಎರಡೂ ವೃತ್ತಗಳಲ್ಲಿ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      either: 'ಕನಿಷ್ಠ ಒಂದು ವೃತ್ತದಲ್ಲಿ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      one: 'ಒಂದೇ ಒಂದು ವೃತ್ತದಲ್ಲಿ ಎಷ್ಟು ವಿದ್ಯಾರ್ಥಿಗಳಿದ್ದಾರೆ?',
+      neither: 'ಯಾವ ವೃತ್ತದಲ್ಲೂ ಇಲ್ಲದ ವಿದ್ಯಾರ್ಥಿಗಳು ಎಷ್ಟು?',
+    })[ask]!,
+  vdCountRule: (ask) =>
+    ({
+      a: 'B ಜೊತೆ ಹಂಚಿಕೊಂಡ ಭಾಗವೂ ಸೇರಿ, ವೃತ್ತ A ಯ ಒಳಗಿನ ಎಲ್ಲಾ ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ.',
+      b: 'A ಜೊತೆ ಹಂಚಿಕೊಂಡ ಭಾಗವೂ ಸೇರಿ, ವೃತ್ತ B ಯ ಒಳಗಿನ ಎಲ್ಲಾ ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ.',
+      onlyA: 'A ಮಾತ್ರ: ವೃತ್ತ B ಯ ಹೊರಗಿರುವ ವೃತ್ತ A ಯ ಭಾಗ.',
+      onlyB: 'B ಮಾತ್ರ: ವೃತ್ತ A ಯ ಹೊರಗಿರುವ ವೃತ್ತ B ಯ ಭಾಗ.',
+      both: 'ಎರಡೂ: ಎರಡು ವೃತ್ತಗಳು ಛೇದಿಸುವ ಭಾಗ.',
+      either: 'ಕನಿಷ್ಠ ಒಂದು: ವೃತ್ತಗಳ ಒಳಗಿನ ಎಲ್ಲಾ ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ.',
+      one: 'ಒಂದೇ ಒಂದು: ಛೇದನದ ಹೊರಗಿನ ಎರಡು ಭಾಗಗಳನ್ನು ಕೂಡಿಸಿ.',
+      neither: 'ಯಾವುದೂ ಇಲ್ಲ: ಎರಡೂ ವೃತ್ತಗಳ ಹೊರಗಿನ ಸಂಖ್ಯೆ.',
+    })[ask]!,
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -835,6 +902,9 @@ const genKn: GenText = {
     'lv-pair': 'ಅಕ್ಷರವು ಅದರ ಅಡ್ಡಸಾಲು ಮತ್ತು ಕಂಬಸಾಲು ಸಂಖ್ಯೆಗಳು',
     'py-shift': 'ಪ್ರತಿ ಚೌಕವೂ ಒಂದೇ ಹೆಜ್ಜೆ ಚಲಿಸುತ್ತದೆ',
     'py-mirror': 'ಮಧ್ಯರೇಖೆಯಲ್ಲಿ ಕನ್ನಡಿ ಪ್ರತಿಬಿಂಬ',
+    'vd-pick': 'ಮೂರು ಗುಂಪುಗಳಿಗೆ ಸೂಕ್ತ ಚಿತ್ರ',
+    'vd-name': 'ಚಿತ್ರವು ತೋರಿಸುವ ಗುಂಪುಗಳು',
+    'vd-count': 'ಚಿತ್ರದ ಭಾಗಗಳಲ್ಲಿರುವವರನ್ನು ಎಣಿಸಿ',
   },
 }
 

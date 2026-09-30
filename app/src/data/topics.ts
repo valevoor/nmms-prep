@@ -28,6 +28,8 @@ import letterValues from './mat/letter-values.json'
 import letterValuesMeta from './mat/letter-values.meta.json'
 import pyramid from './mat/pyramid.json'
 import pyramidMeta from './mat/pyramid.meta.json'
+import vennDiagrams from './mat/venn-diagrams.json'
+import vennDiagramsMeta from './mat/venn-diagrams.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -90,6 +92,7 @@ import { generateNumberMatrix } from '../lib/generators/numberMatrix'
 import { generateLetterMatrix } from '../lib/generators/letterMatrix'
 import { generateLetterValues } from '../lib/generators/letterValues'
 import { generatePyramid } from '../lib/generators/pyramid'
+import { generateVennDiagram } from '../lib/generators/vennDiagrams'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -433,6 +436,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: pyramidMeta as TopicMeta,
     missing: 'group',
     generate: generatePyramid,
+  },
+  {
+    id: 'venn-diagrams',
+    chapter: 33,
+    name: 'Venn Diagrams',
+    questions: visible(vennDiagrams.questions as Question[]),
+    meta: vennDiagramsMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateVennDiagram,
   },
 ]
 

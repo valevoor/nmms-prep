@@ -95,6 +95,7 @@ export const en = {
     28: 'Letter Matrix',
     29: 'Numbers and Letters by a Rule',
     30: 'Number and Letter Pyramid',
+    33: 'Venn Diagrams',
     36: 'Arrangement',
     37: 'Age Problems',
     38: 'Statements and Decisions',
@@ -311,6 +312,11 @@ export const en = {
       buttons: ['First group', 'Second group', 'Do the same'],
       label:
         'A pyramid of the letters a to y: a on top, then b c d, e to i, j to p, and q to y at the bottom, with a dashed line down the middle. First tap: the letters r, k and t are marked. Second tap: x, o and v are marked; they are the mirror images of r, k and t across the middle line. Last tap: s, l and u are marked, and their mirror images are w, n and u, so the answer is wnu.',
+    },
+    vennPairs: {
+      buttons: ['Inside', 'Overlap', 'Apart'],
+      label:
+        'Three pairs of circles. First tap: a small circle inside a big one, for a group inside another, like dogs inside animals. Second tap: two overlapping circles, for groups with some things in both, like doctors and women. Last tap: two circles apart, for groups with nothing in both, like pens and trees.',
     },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],

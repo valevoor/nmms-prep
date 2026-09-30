@@ -1,0 +1,394 @@
+{
+  "topic": "venn-diagrams",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 33 \"Venn Diagrams\" (questions: PDF pages 93–95, solutions: PDF page 169). Pictures cropped with tools/figures/ch33.json. tools/check_venn_diagrams.ts types in how the circles of every picture sit (inside, overlapping or apart) and how the groups in each question are related, and checks that exactly one option matches; all 15 agree with the key. Q2’s English says “Oviparous” and its Kannada ಜರಾಯುಜ (viviparous); either way the answer is B.",
+  "questions": [
+    {
+      "id": "vd-b01",
+      "bookNo": 1,
+      "sourcePage": 93,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Herbivorous, Carnivorous, Dog?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q01-a.png",
+          "B": "figures/ch33/q01-b.png",
+          "C": "figures/ch33/q01-c.png",
+          "D": "figures/ch33/q01-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "Some animals eat both plants and meat, so the two circles overlap. A dog eats both, so it goes where they overlap.",
+      "working": "Herbivorous and Carnivorous overlap; Dog is inside both.",
+      "note": "Strictly, a herbivore eats only plants and a carnivore only meat; the book counts a dog, which eats both, as in both groups."
+    },
+    {
+      "id": "vd-b02",
+      "bookNo": 2,
+      "sourcePage": 93,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Oviparous animals, Bat, Lizard?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q02-a.png",
+          "B": "figures/ch33/q02-b.png",
+          "C": "figures/ch33/q02-c.png",
+          "D": "figures/ch33/q02-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "Oviparous animals lay eggs. A lizard lays eggs, so it is inside that circle; a bat gives birth to live young, so it is outside. Bats and lizards have nothing in common.",
+      "working": "One circle inside the big circle, and one circle outside it.",
+      "note": "The book’s Kannada says ಜರಾಯುಜ (animals that give birth to live young), and its key puts Bat inside that circle. Read either way, the answer is B: one group inside the big circle and one outside."
+    },
+    {
+      "id": "vd-b03",
+      "bookNo": 3,
+      "sourcePage": 93,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Graduate, Professor, Singer?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q03-a.png",
+          "B": "figures/ch33/q03-b.png",
+          "C": "figures/ch33/q03-c.png",
+          "D": "figures/ch33/q03-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "Every professor is a graduate, so Professor is inside Graduate. Some graduates and some professors are singers, so Singer overlaps both.",
+      "working": "Professor inside Graduate; Singer overlaps both."
+    },
+    {
+      "id": "vd-b04",
+      "bookNo": 4,
+      "sourcePage": 93,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Solar System, Comet, Galaxy?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q04-a.png",
+          "B": "figures/ch33/q04-b.png",
+          "C": "figures/ch33/q04-c.png",
+          "D": "figures/ch33/q04-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "A comet is part of the solar system, and the solar system is part of a galaxy: three circles, one inside the next.",
+      "working": "Comet inside Solar System inside Galaxy."
+    },
+    {
+      "id": "vd-b05",
+      "bookNo": 5,
+      "sourcePage": 93,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Living Organisms, Mammals, Dog, Pigeon?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q05-a.png",
+          "B": "figures/ch33/q05-b.png",
+          "C": "figures/ch33/q05-c.png",
+          "D": "figures/ch33/q05-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "A",
+      "rule": "Mammals are living organisms, and a dog is a mammal. A pigeon is a living organism but not a mammal, so it is inside the big circle but outside Mammals.",
+      "working": "Dog inside Mammals inside Living Organisms; Pigeon inside Living Organisms only."
+    },
+    {
+      "id": "vd-b06",
+      "bookNo": 6,
+      "sourcePage": 94,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Zero, Integers, Natural Numbers, Irrational Numbers?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q06-a.png",
+          "B": "figures/ch33/q06-b.png",
+          "C": "figures/ch33/q06-c.png",
+          "D": "figures/ch33/q06-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "C",
+      "rule": "Zero and the natural numbers are integers, and zero is not a natural number: two circles apart, inside Integers. No integer is irrational, so Irrational Numbers is a circle outside.",
+      "working": "Zero and Natural Numbers apart, both inside Integers; Irrational Numbers outside."
+    },
+    {
+      "id": "vd-b07",
+      "bookNo": 7,
+      "sourcePage": 94,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Rhombus, Rectangle, Square, Parallelogram?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q07-a.png",
+          "B": "figures/ch33/q07-b.png",
+          "C": "figures/ch33/q07-c.png",
+          "D": "figures/ch33/q07-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "Rhombuses and rectangles are parallelograms, and a square is both a rhombus and a rectangle: Rhombus and Rectangle overlap inside Parallelogram, with Square where they overlap.",
+      "working": "Square inside Rhombus and Rectangle, which overlap inside Parallelogram."
+    },
+    {
+      "id": "vd-b08",
+      "bookNo": 8,
+      "sourcePage": 94,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Nobel prize winners, Scientists, C.V. Raman?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q08-a.png",
+          "B": "figures/ch33/q08-b.png",
+          "C": "figures/ch33/q08-c.png",
+          "D": "figures/ch33/q08-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "D",
+      "rule": "Some scientists have won the Nobel prize, so the two circles overlap. C.V. Raman is a scientist who won it, so he is where they overlap.",
+      "working": "Nobel prize winners and Scientists overlap; C.V. Raman is inside both."
+    },
+    {
+      "id": "vd-b09",
+      "bookNo": 9,
+      "sourcePage": 94,
+      "keyFrom": "book",
+      "pattern": "vd-pick",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which diagram shows the relation between: Even Numbers, Prime Numbers, Natural Numbers?",
+      "figures": {
+        "terms": [],
+        "options": {
+          "A": "figures/ch33/q09-a.png",
+          "B": "figures/ch33/q09-b.png",
+          "C": "figures/ch33/q09-c.png",
+          "D": "figures/ch33/q09-d.png"
+        }
+      },
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "rule": "Even numbers and prime numbers are natural numbers, and 2 is both even and prime: Even and Prime overlap inside Natural Numbers.",
+      "working": "Even and Prime overlap (at 2), both inside Natural Numbers."
+    },
+    {
+      "id": "vd-b10",
+      "bookNo": 10,
+      "sourcePage": 94,
+      "keyFrom": "book",
+      "pattern": "vd-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a survey of 100 students, the students who drink coffee and tea are shown in the Venn diagram. How many students drink coffee?",
+      "figures": {
+        "terms": ["figures/ch33/q10.png"]
+      },
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "50",
+        "D": "60"
+      },
+      "answer": "C",
+      "rule": "Add every number inside the Coffee circle, including the part it shares with Tea.",
+      "working": "30 + 20 = 50"
+    },
+    {
+      "id": "vd-b11",
+      "bookNo": 11,
+      "sourcePage": 95,
+      "keyFrom": "book",
+      "pattern": "vd-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a survey of 100 students, the students who drink coffee and tea are shown in the Venn diagram. How many students drink only tea?",
+      "figures": {
+        "terms": ["figures/ch33/q10.png"]
+      },
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "answer": "C",
+      "rule": "Only tea: the part of the Tea circle outside the Coffee circle.",
+      "working": "40"
+    },
+    {
+      "id": "vd-b12",
+      "bookNo": 12,
+      "sourcePage": 95,
+      "keyFrom": "book",
+      "pattern": "vd-count",
+      "layout": "text",
+      "terms": [],
+      "prompt": "In a survey of 100 students, the students who drink coffee and tea are shown in the Venn diagram. How many students drink both coffee and tea?",
+      "figures": {
+        "terms": ["figures/ch33/q10.png"]
+      },
+      "options": {
+        "A": "50",
+        "B": "40",
+        "C": "30",
+        "D": "20"
+      },
+      "answer": "D",
+      "rule": "Both: the part where the two circles overlap.",
+      "working": "20"
+    },
+    {
+      "id": "vd-b13",
+      "bookNo": 13,
+      "sourcePage": 95,
+      "keyFrom": "book",
+      "pattern": "vd-name",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which of these does the Venn diagram show?",
+      "figures": {
+        "terms": ["figures/ch33/q13.png"]
+      },
+      "options": {
+        "A": "Wild Animals, Herbivorous, Tiger",
+        "B": "Wild Animals, Herbivorous, Elephant",
+        "C": "Herbivorous, Elephant, Carnivorous",
+        "D": "Wild Animals, Herbivorous, Carnivorous"
+      },
+      "answer": "B",
+      "rule": "Two groups overlap, and something is inside both. Some wild animals eat only plants, and an elephant is a wild animal that eats plants.",
+      "working": "Wild Animals and Herbivorous overlap; Elephant is inside both. A tiger is not herbivorous."
+    },
+    {
+      "id": "vd-b14",
+      "bookNo": 14,
+      "sourcePage": 95,
+      "keyFrom": "book",
+      "pattern": "vd-name",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which of these does the Venn diagram show?",
+      "figures": {
+        "terms": ["figures/ch33/q14.png"]
+      },
+      "options": {
+        "A": "Players, Hockey, Kabaddi",
+        "B": "Players, Hockey, Singers",
+        "C": "Hockey, Stick, Ball",
+        "D": "Players, Singers, Dancers"
+      },
+      "answer": "C",
+      "rule": "Two circles apart, both inside a big circle: two things with nothing in common, both part of one thing. The stick and the ball are both part of hockey.",
+      "working": "Stick and Ball apart, both inside Hockey.",
+      "note": "Players, Hockey, Kabaddi looks close, but some people play both hockey and kabaddi, so those two circles would overlap."
+    },
+    {
+      "id": "vd-b15",
+      "bookNo": 15,
+      "sourcePage": 95,
+      "keyFrom": "book",
+      "pattern": "vd-name",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Which of these does the Venn diagram show?",
+      "figures": {
+        "terms": ["figures/ch33/q15.png"]
+      },
+      "options": {
+        "A": "Teachers, Farmers, Human beings",
+        "B": "Teachers, Blackboard, Actors",
+        "C": "Teachers, Farmers, Actors",
+        "D": "Human beings, Farmers, Animals"
+      },
+      "answer": "C",
+      "rule": "Three circles, each overlapping the other two, and all three meet: three groups where a person can be in any one, any two or all three. A teacher can also be a farmer and an actor.",
+      "working": "Teachers, Farmers and Actors all overlap. (Farmers and Teachers are inside Human beings, and a blackboard is not a person.)",
+      "note": "The book prints “Formers”; it means Farmers."
+    }
+  ]
+}

@@ -33,7 +33,8 @@ export function checkFigureChapter(name: string, questions: FigQ[], key: Record<
     if (q.keyFrom === 'solved' && key[q.bookNo] === q.answer) fail(q, 'marked "solved" but agrees with the key')
     const files = [...q.figures.terms.filter((f) => f !== '?'), ...Object.values(q.figures.options ?? {})]
     for (const f of files) if (!existsSync(join(PUBLIC, f))) fail(q, `missing picture ${f}`)
-    if (!steps && !q.figures.terms.includes('?') && q.figures.terms.length !== 1) fail(q, 'no blank in the question')
+    // A question with no pictures of its own (terms []) is asked in words (Venn Diagrams).
+    if (!steps && !q.figures.terms.includes('?') && q.figures.terms.length > 1) fail(q, 'no blank in the question')
     const opts = Object.values(q.figures.options ?? {})
     if (opts.length !== 4) fail(q, 'needs 4 option pictures')
     else if (opts.every((f) => existsSync(join(PUBLIC, f))) && new Set(opts.map(hash)).size !== 4) fail(q, 'two option pictures are the same')

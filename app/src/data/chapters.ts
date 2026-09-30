@@ -80,6 +80,10 @@ import pyramidKn from './mat/pyramid.kn.json'
 import pyramid from './mat/pyramid.json'
 import pyramidMetaKn from './mat/pyramid.meta.kn.json'
 import pyramidMeta from './mat/pyramid.meta.json'
+import vennKn from './mat/venn-diagrams.kn.json'
+import venn from './mat/venn-diagrams.json'
+import vennMetaKn from './mat/venn-diagrams.meta.kn.json'
+import vennMeta from './mat/venn-diagrams.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -198,4 +202,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('letter-matrix', 'Letter Matrix', letterMatrix, letterMatrixMeta, letterMatrixKn, letterMatrixMetaKn),
   c('letter-values', 'Numbers and Letters by a Rule', letterValues, letterValuesMeta, letterValuesKn, letterValuesMetaKn),
   c('pyramid', 'Number and Letter Pyramid', pyramid, pyramidMeta, pyramidKn, pyramidMetaKn),
+  c('venn-diagrams', 'Venn Diagrams', venn, vennMeta, vennKn, vennMetaKn),
 ]

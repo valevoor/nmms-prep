@@ -19,6 +19,7 @@ import { generateNumberMatrix } from '../generators/numberMatrix'
 import { generateLetterMatrix } from '../generators/letterMatrix'
 import { generateLetterValues } from '../generators/letterValues'
 import { generatePyramid } from '../generators/pyramid'
+import { generateVennDiagram } from '../generators/vennDiagrams'
 import { generateOddOne } from '../generators/oddOne'
 import { GENERATOR_PATTERNS, generateNumberSeries, mulberry32 } from '../generators/numberSeries'
 import { GEN } from './gen'
@@ -114,6 +115,11 @@ describe('generated questions carry Kannada', () => {
     const rng = mulberry32(30)
     for (let n = 0; n < 300; n++) expectKannada(generatePyramid(rng))
   }, 60000)
+
+  it('venn diagrams', () => {
+    const rng = mulberry32(33)
+    for (let n = 0; n < 1000; n++) expectKannada(generateVennDiagram(rng))
+  })
 
   it('clock', () => {
     const rng = mulberry32(35)
