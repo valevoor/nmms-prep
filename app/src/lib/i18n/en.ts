@@ -328,6 +328,11 @@ export const en = {
       label:
         'A time line with three points: five years ago, now, and 15 years from now. First tap: Ram’s age now is called x. Second tap: five years ago it was x − 5 and in 15 years it will be x + 15, so x + 15 = 5(x − 5). Last tap: 4x = 40, so x = 10.',
     },
+    syllogism: {
+      buttons: ['All pencils are pens', 'All pens are books', 'Read the decisions'],
+      label:
+        'Circles for book question 1. Circle 1 is pencils. First tap: it goes inside circle 2, pens. Second tap: circle 2 goes inside circle 3, books. Last tap: both decisions follow: some pencils are books (I), and some books are pens (II).',
+    },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],
       label:

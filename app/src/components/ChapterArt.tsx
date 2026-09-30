@@ -356,6 +356,14 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Statements and Decisions: one circle inside another, with a tick
+  38: (
+    <>
+      <circle cx={20} cy={26} r={16} />
+      <circle cx={20} cy={30} r={8} className="art-tile-accent" />
+      <path d="M33 12l4 4 8-9" className="art-accent" style={{ fill: 'none' }} strokeWidth={3} />
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

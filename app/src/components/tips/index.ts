@@ -17,6 +17,7 @@ import { PyramidMirror } from './PyramidMirror'
 import { VennPairs } from './VennPairs'
 import { RowCount } from './RowCount'
 import { AgeLine } from './AgeLine'
+import { Syllogism } from './Syllogism'
 import { CubeColours } from './CubeColours'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
@@ -64,4 +65,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   vennPairs: VennPairs,
   rowCount: RowCount,
   ageLine: AgeLine,
+  syllogism: Syllogism,
 }

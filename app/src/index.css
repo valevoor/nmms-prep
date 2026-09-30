@@ -571,6 +571,8 @@ a {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.5;
+  /* Statements and decisions are one per line. */
+  white-space: pre-line;
 }
 
 .stem-lg .stem-prompt {

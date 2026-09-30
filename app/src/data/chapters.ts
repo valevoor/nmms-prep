@@ -92,6 +92,10 @@ import ageKn from './mat/age-problems.kn.json'
 import age from './mat/age-problems.json'
 import ageMetaKn from './mat/age-problems.meta.kn.json'
 import ageMeta from './mat/age-problems.meta.json'
+import statementsKn from './mat/statements-decisions.kn.json'
+import statements from './mat/statements-decisions.json'
+import statementsMetaKn from './mat/statements-decisions.meta.kn.json'
+import statementsMeta from './mat/statements-decisions.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -213,4 +217,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('venn-diagrams', 'Venn Diagrams', venn, vennMeta, vennKn, vennMetaKn),
   c('arrangement', 'Arrangement', arrangement, arrangementMeta, arrangementKn, arrangementMetaKn),
   c('age-problems', 'Age Problems', age, ageMeta, ageKn, ageMetaKn),
+  c('statements-decisions', 'Statements and Decisions', statements, statementsMeta, statementsKn, statementsMetaKn),
 ]

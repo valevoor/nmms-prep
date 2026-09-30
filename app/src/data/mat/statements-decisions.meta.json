@@ -1,0 +1,30 @@
+{
+  "topic": "statements-decisions",
+  "intro": "Each question gives two or three statements about groups (“All pens are books”) and two or three decisions. Take the statements as true, even if they sound silly. A decision follows only if it must be true: draw the groups as circles in every way the statements allow, and check the decision in each drawing.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Draw the statements as circles",
+      "visual": "syllogism",
+      "body": "“All X are Y”: the X circle goes inside the Y circle. “Some X are Y”: the circles overlap. “No X is Y”: the circles are apart. Then read each decision off the drawing.",
+      "caption": "All pencils are pens and all pens are books: pencils inside pens inside books. So some pencils are books, and some books are pens."
+    },
+    {
+      "title": "Try to break the decision",
+      "body": "A decision follows only if every drawing that fits the statements makes it true. Try to draw the circles so that the statements stay true but the decision is false. If you can, it does not follow."
+    },
+    {
+      "title": "Some can be turned round; all cannot",
+      "body": "“Some X are Y” means “Some Y are X” too. But “All X are Y” does not mean “All Y are X”: all saints are bachelors, but not every bachelor is a saint. It does mean “Some Y are X”."
+    },
+    {
+      "title": "Two “some”s give nothing",
+      "body": "From “Some boys are players” and “Some players are healthy”, nothing follows about boys and healthy people: the healthy players may not be boys."
+    },
+    {
+      "title": "“No” passes down",
+      "body": "If all girls are brave and no teacher is brave, then no girl is a teacher: the girls are inside the brave circle, and the teachers are outside it."
+    }
+  ],
+  "workedExamples": ["sd-b01", "sd-b03", "sd-b05", "sd-b09"]
+}

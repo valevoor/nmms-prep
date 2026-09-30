@@ -355,6 +355,25 @@ const genEn = {
     `${t} years ago, the ratio of the ages of A and B was ${m} : ${n}, and ${t} years from now it will be ${p} : ${q}. What are the present ages of A and B?`,
   agTwoRatiosRule: (m: number, n: number) => `Write the ages of the first ratio as ${m}k and ${n}k. The second ratio comes twice the years later: find k, then add the years back for the present ages.`,
 
+  // Statements and decisions (Chapter 38). `follows`: the decisions that follow, of `n` (2 or 3).
+  sdOption: (follows: string[], n: number) => {
+    const all = n === 2 ? ['I', 'II'] : ['I', 'II', 'III']
+    const rest = all.filter((x) => !follows.includes(x))
+    if (!follows.length) return n === 2 ? 'Neither decision I nor II follows' : 'None of decisions I, II and III follows'
+    if (follows.length === n) return n === 2 ? 'Both decisions I and II follow' : 'Decisions I, II and III all follow'
+    if (follows.length === 1) return n === 2 ? `Only decision ${follows[0]} follows` : `Only decision ${follows[0]} follows (${rest.join(' and ')} do not)`
+    return `Decisions ${follows.join(' and ')} follow${n === 3 ? ` (${rest[0]} does not)` : ''}`
+  },
+  sdPrompt: (statements: string[], decisions: string[]) =>
+    `Statements:\n${statements.map((x, i) => `(${i + 1}) ${x}`).join('\n')}\nDecisions:\n${decisions.map((x, i) => `(${['I', 'II', 'III'][i]}) ${x}`).join('\n')}\nTake the statements as true. Which decisions follow?`,
+  sdAll: (x: string, y: string) => `All ${x} are ${y}.`,
+  sdSome: (x: string, y: string) => `Some ${x} are ${y}.`,
+  sdNo: (x: string, y: string) => `No ${x} are ${y}.`,
+  sdSomeNot: (x: string, y: string) => `Some ${x} are not ${y}.`,
+  sdRule: 'Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.',
+  sdFollows: (d: string) => `(${d}) follows: it is true in every drawing the statements allow.`,
+  sdNot: (d: string) => `(${d}) does not follow: some drawing that fits the statements makes it false.`,
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -540,6 +559,8 @@ const genEn = {
     'ag-times': 'An age later is some times an age before',
     'ag-sum': 'Ages that add up, or one some times the other',
     'ag-ratio': 'Ratios of ages now, before or later',
+    'sd-two': 'Two decisions from the statements',
+    'sd-three': 'Three decisions from the statements',
   } as Record<PatternId, string>,
 }
 
@@ -854,6 +875,21 @@ const genKn: GenText = {
   agTwoRatios: (t, m, n, p, q) =>
     `${t} ವರ್ಷಗಳ ಹಿಂದೆ A ಮತ್ತು B ಗಳ ವಯಸ್ಸುಗಳ ಅನುಪಾತ ${m} : ${n} ಮತ್ತು ${t} ವರ್ಷಗಳ ನಂತರ ಅದು ${p} : ${q} ಆಗುತ್ತದೆ. A ಮತ್ತು B ಗಳ ಈಗಿನ ವಯಸ್ಸುಗಳೆಷ್ಟು?`,
   agTwoRatiosRule: (m, n) => `ಮೊದಲ ಅನುಪಾತದ ವಯಸ್ಸುಗಳನ್ನು ${m}k ಮತ್ತು ${n}k ಎಂದು ಬರೆಯಿರಿ. ಎರಡನೇ ಅನುಪಾತ ಎರಡರಷ್ಟು ವರ್ಷಗಳ ನಂತರ ಬರುತ್ತದೆ: k ಕಂಡುಹಿಡಿದು, ಈಗಿನ ವಯಸ್ಸಿಗೆ ವರ್ಷಗಳನ್ನು ಮತ್ತೆ ಕೂಡಿಸಿ.`,
+  sdOption: (follows, n) => {
+    if (!follows.length) return n === 2 ? 'ನಿರ್ಣಯ I ಮತ್ತು II ಎರಡೂ ತಪ್ಪು' : 'ನಿರ್ಣಯ I, II ಮತ್ತು III ಮೂರೂ ಸರಿಹೊಂದುವುದಿಲ್ಲ'
+    if (follows.length === n) return n === 2 ? 'ನಿರ್ಣಯ I ಮತ್ತು II ಎರಡೂ ಸರಿ' : 'ನಿರ್ಣಯ I, II ಮತ್ತು III ಮೂರೂ ಸರಿ'
+    if (follows.length === 1) return `ನಿರ್ಣಯ ${follows[0]} ಮಾತ್ರ ಸರಿ`
+    return `ನಿರ್ಣಯ ${follows.join(' ಮತ್ತು ')} ಮಾತ್ರ ಸರಿ`
+  },
+  sdPrompt: (statements, decisions) =>
+    `ಹೇಳಿಕೆಗಳು:\n${statements.map((x, i) => `(${i + 1}) ${x}`).join('\n')}\nನಿರ್ಣಯಗಳು:\n${decisions.map((x, i) => `(${['I', 'II', 'III'][i]}) ${x}`).join('\n')}\nಹೇಳಿಕೆಗಳನ್ನು ಸತ್ಯ ಎಂದು ತಿಳಿದುಕೊಂಡು, ಯಾವ ನಿರ್ಣಯಗಳು ತಾರ್ಕಿಕವಾಗಿ ಸರಿ ಹೊಂದುತ್ತವೆ?`,
+  sdAll: (x, y) => `ಎಲ್ಲಾ ${x} ${y}.`,
+  sdSome: (x, y) => `ಕೆಲವು ${x} ${y}.`,
+  sdNo: (x, y) => `ಯಾವುದೇ ${x} ${y} ಅಲ್ಲ.`,
+  sdSomeNot: (x, y) => `ಕೆಲವು ${x} ${y} ಅಲ್ಲ.`,
+  sdRule: 'ಹೇಳಿಕೆಗಳು ಅನುಮತಿಸುವ ಎಲ್ಲಾ ರೀತಿಗಳಲ್ಲಿ ಗುಂಪುಗಳನ್ನು ವೃತ್ತಗಳಾಗಿ ಬರೆಯಿರಿ. ಪ್ರತಿ ಚಿತ್ರದಲ್ಲೂ ಸತ್ಯವಾಗಿದ್ದರೆ ಮಾತ್ರ ನಿರ್ಣಯ ಸರಿ.',
+  sdFollows: (d) => `(${d}) ಸರಿ: ಹೇಳಿಕೆಗಳು ಅನುಮತಿಸುವ ಪ್ರತಿ ಚಿತ್ರದಲ್ಲೂ ಅದು ಸತ್ಯ.`,
+  sdNot: (d) => `(${d}) ಸರಿಯಲ್ಲ: ಹೇಳಿಕೆಗಳಿಗೆ ಹೊಂದುವ ಒಂದು ಚಿತ್ರದಲ್ಲಿ ಅದು ಸುಳ್ಳು.`,
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -1029,6 +1065,8 @@ const genKn: GenText = {
     'ag-times': 'ಮುಂದಿನ ವಯಸ್ಸು ಹಿಂದಿನ ವಯಸ್ಸಿನ ಕೆಲವು ರಷ್ಟು',
     'ag-sum': 'ಮೊತ್ತ ಅಥವಾ ಇನ್ನೊಬ್ಬರ ವಯಸ್ಸಿನ ಕೆಲವು ರಷ್ಟು',
     'ag-ratio': 'ಈಗಿನ, ಹಿಂದಿನ ಅಥವಾ ಮುಂದಿನ ವಯಸ್ಸುಗಳ ಅನುಪಾತ',
+    'sd-two': 'ಹೇಳಿಕೆಗಳಿಂದ ಎರಡು ನಿರ್ಣಯಗಳು',
+    'sd-three': 'ಹೇಳಿಕೆಗಳಿಂದ ಮೂರು ನಿರ್ಣಯಗಳು',
   },
 }
 

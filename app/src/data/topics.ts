@@ -34,6 +34,8 @@ import arrangement from './mat/arrangement.json'
 import arrangementMeta from './mat/arrangement.meta.json'
 import ageProblems from './mat/age-problems.json'
 import ageProblemsMeta from './mat/age-problems.meta.json'
+import statements from './mat/statements-decisions.json'
+import statementsMeta from './mat/statements-decisions.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -99,6 +101,7 @@ import { generatePyramid } from '../lib/generators/pyramid'
 import { generateVennDiagram } from '../lib/generators/vennDiagrams'
 import { generateArrangement } from '../lib/generators/arrangement'
 import { generateAgeProblem } from '../lib/generators/ageProblems'
+import { generateStatements } from '../lib/generators/statements'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -469,6 +472,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: ageProblemsMeta as TopicMeta,
     missing: 'answer',
     generate: generateAgeProblem,
+  },
+  {
+    id: 'statements-decisions',
+    chapter: 38,
+    name: 'Statements and Decisions',
+    questions: visible(statements.questions as Question[]),
+    meta: statementsMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateStatements,
   },
 ]
 

@@ -201,6 +201,9 @@ export type PatternId =
   | 'ag-times'
   | 'ag-sum'
   | 'ag-ratio'
+  // Statements and decisions (Chapter 38)
+  | 'sd-two'
+  | 'sd-three'
 
 export interface Question {
   id: string

@@ -1,0 +1,296 @@
+{
+  "topic": "statements-decisions",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 38 \"Statement and Decision\" (questions: PDF pages 105–109, solutions: PDF page 179). tools/check_statements_decisions.ts tries every way the groups can overlap (each group has at least one member) and keeps a decision only if it is true in all of them. Q1 is corrected from B to C and Q6 from A to B. Q2, Q6 and Q7 follow the book’s Kannada where its English statements differ.",
+  "questions": [
+    {
+      "id": "sd-b01",
+      "bookNo": 1,
+      "sourcePage": 105,
+      "keyFrom": "solved",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All pencils are pens.\n(2) All pens are books.\nDecisions:\n(I) Some pencils are books.\n(II) Some books are pens.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "C",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Pencils are inside pens and pens inside books, so every pencil is a book (I) and every pen is a book (II).",
+      "note": "The book’s key gives B (only II). But if all pencils are books, then some pencils are books too, the same reading the key uses in Q15, so both follow."
+    },
+    {
+      "id": "sd-b02",
+      "bookNo": 2,
+      "sourcePage": 105,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All donkeys are horses.\n(2) Some horses are elephants.\nDecisions:\n(I) Some horses are donkeys.\n(II) Some elephants are donkeys.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Both decisions I and II follow",
+        "C": "Only decision II follows",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "A",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Every donkey is a horse, so some horses are donkeys (I). The horses that are elephants need not be donkeys (II does not follow).",
+      "note": "This follows the book’s Kannada. Its English reads “All horses are elephants” and “Some elephants are horses”, and then both decisions would follow."
+    },
+    {
+      "id": "sd-b03",
+      "bookNo": 3,
+      "sourcePage": 106,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All saints are bachelors.\n(2) No bachelor is God.\nDecisions:\n(I) All bachelors are saints.\n(II) No saint is God.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "B",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Saints are inside bachelors, and God is outside bachelors, so no saint is God (II). Bachelors can be more than the saints (I does not follow)."
+    },
+    {
+      "id": "sd-b04",
+      "bookNo": 4,
+      "sourcePage": 106,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All stones are diamonds.\n(2) Some diamonds are marbles.\nDecisions:\n(I) Some stones are marbles.\n(II) Some marbles are diamonds.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "B",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "“Some diamonds are marbles” also means some marbles are diamonds (II). The marbles may be diamonds that are not stones (I does not follow)."
+    },
+    {
+      "id": "sd-b05",
+      "bookNo": 5,
+      "sourcePage": 106,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some boys are players.\n(2) Some players are healthy.\nDecisions:\n(I) Some boys are healthy.\n(II) Some healthy people are players.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "B",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "“Some players are healthy” also means some healthy people are players (II). The healthy players may not be the boys (I does not follow)."
+    },
+    {
+      "id": "sd-b06",
+      "bookNo": 6,
+      "sourcePage": 107,
+      "keyFrom": "solved",
+      "pattern": "sd-three",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some mangoes are grapes.\n(2) All grapes are oranges.\nDecisions:\n(I) Some oranges are mangoes.\n(II) All grapes are mangoes.\n(III) Some oranges are grapes.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Decisions I and II follow (III does not)",
+        "B": "Decisions I and III follow (II does not)",
+        "C": "Decisions II and III follow (I does not)",
+        "D": "Decisions I, II and III all follow"
+      },
+      "answer": "B",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "The mangoes that are grapes are oranges too (I). Every grape is an orange, so some oranges are grapes (III). Only some grapes are known to be mangoes (II does not follow).",
+      "note": "The book’s key gives A (I and II), but II does not follow; its own diagram shows I and III. This follows the book’s Kannada (“All grapes are oranges”); its English reads “Some grapes are oranges”, and then only III would follow, which is not an option."
+    },
+    {
+      "id": "sd-b07",
+      "bookNo": 7,
+      "sourcePage": 107,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some cars are jeeps.\n(2) All jeeps are buses.\nDecisions:\n(I) Some jeeps are cars.\n(II) All cars are buses.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "A",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "“Some cars are jeeps” also means some jeeps are cars (I). Only the cars that are jeeps are known to be buses (II does not follow).",
+      "note": "This follows the book’s Kannada. Its English has “Some jeeps are buses” and, as decision II, “All grapes are buses” (a misprint); the answer is A either way."
+    },
+    {
+      "id": "sd-b08",
+      "bookNo": 8,
+      "sourcePage": 107,
+      "keyFrom": "book",
+      "pattern": "sd-three",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some students are talented.\n(2) Some talented people are not leaders.\n(3) Some leaders are patriots.\nDecisions:\n(I) All leaders are talented.\n(II) Some patriots are students.\n(III) All talented people are patriots.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Decisions I and II follow (III does not)",
+        "B": "Decisions II and III follow (I does not)",
+        "C": "Decisions I, II and III all follow",
+        "D": "None of decisions I, II and III follows"
+      },
+      "answer": "D",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Each statement links only some of two groups, so the groups can be drawn as a chain that touches only its neighbours: none of the three decisions has to be true."
+    },
+    {
+      "id": "sd-b09",
+      "bookNo": 9,
+      "sourcePage": 108,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All girls are brave.\n(2) No teacher is brave.\nDecisions:\n(I) All teachers are girls.\n(II) No girl is a teacher.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Both decisions I and II follow",
+        "C": "Neither decision I nor II follows",
+        "D": "Only decision II follows"
+      },
+      "answer": "D",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Girls are inside the brave, and teachers are outside the brave, so no girl is a teacher (II), and teachers cannot be girls (I does not follow)."
+    },
+    {
+      "id": "sd-b10",
+      "bookNo": 10,
+      "sourcePage": 108,
+      "keyFrom": "book",
+      "pattern": "sd-three",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some poets are writers.\n(2) Some writers are directors.\n(3) All directors are producers.\nDecisions:\n(I) Some directors are poets.\n(II) All producers are writers.\n(III) Some producers are directors.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Decisions I and III follow (II does not)",
+        "B": "Only decision I follows (II and III do not)",
+        "C": "None of decisions I, II and III follows",
+        "D": "Only decision III follows (I and II do not)"
+      },
+      "answer": "D",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Every director is a producer, so some producers are directors (III). The poets and the directors may be different writers (I does not follow), and producers can be more than writers (II does not follow)."
+    },
+    {
+      "id": "sd-b11",
+      "bookNo": 11,
+      "sourcePage": 108,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some triangles are quadrilaterals.\n(2) Some quadrilaterals are circles.\nDecisions:\n(I) All triangles are circles.\n(II) Some circles are quadrilaterals.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Neither decision I nor II follows",
+        "D": "Both decisions I and II follow"
+      },
+      "answer": "B",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "“Some quadrilaterals are circles” also means some circles are quadrilaterals (II). Nothing ties all triangles to circles (I does not follow).",
+      "note": "The statements are a puzzle and need not be true of real shapes: take them as given."
+    },
+    {
+      "id": "sd-b12",
+      "bookNo": 12,
+      "sourcePage": 109,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All flowers are seeds.\n(2) Some seeds are fruits.\nDecisions:\n(I) All flowers are fruits.\n(II) All seeds are flowers.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Both decisions I and II follow",
+        "C": "Neither decision I nor II follows",
+        "D": "Only decision II follows"
+      },
+      "answer": "C",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "The fruits may be seeds that are not flowers (I does not follow), and seeds can be more than flowers (II does not follow)."
+    },
+    {
+      "id": "sd-b13",
+      "bookNo": 13,
+      "sourcePage": 109,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) Some crows are cuckoos.\n(2) All cuckoos are peacocks.\nDecisions:\n(I) Some peacocks are crows.\n(II) All peacocks are cuckoos.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "A",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "The crows that are cuckoos are peacocks too, so some peacocks are crows (I). Peacocks can be more than cuckoos (II does not follow)."
+    },
+    {
+      "id": "sd-b14",
+      "bookNo": 14,
+      "sourcePage": 109,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All cheetahs are tigers.\n(2) Some tigers are lions.\nDecisions:\n(I) Some lions are tigers.\n(II) All tigers are cheetahs.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Both decisions I and II follow",
+        "C": "Neither decision I nor II follows",
+        "D": "Only decision II follows"
+      },
+      "answer": "A",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "“Some tigers are lions” also means some lions are tigers (I). Tigers can be more than cheetahs (II does not follow)."
+    },
+    {
+      "id": "sd-b15",
+      "bookNo": 15,
+      "sourcePage": 109,
+      "keyFrom": "book",
+      "pattern": "sd-two",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Statements:\n(1) All freedom fighters are patriots.\n(2) No politician is a patriot.\nDecisions:\n(I) Some patriots are freedom fighters.\n(II) Some politicians are freedom fighters.\nTake the statements as true. Which decisions follow?",
+      "options": {
+        "A": "Only decision I follows",
+        "B": "Only decision II follows",
+        "C": "Both decisions I and II follow",
+        "D": "Neither decision I nor II follows"
+      },
+      "answer": "A",
+      "rule": "Draw the groups as circles in every way the statements allow. A decision follows only if it is true in every drawing.",
+      "working": "Every freedom fighter is a patriot, so some patriots are freedom fighters (I). Politicians are outside the patriots, so none of them is a freedom fighter (II does not follow)."
+    }
+  ]
+}
