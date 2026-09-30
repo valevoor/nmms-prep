@@ -21,6 +21,7 @@ import { generateLetterValues } from '../generators/letterValues'
 import { generatePyramid } from '../generators/pyramid'
 import { generateVennDiagram } from '../generators/vennDiagrams'
 import { generateArrangement } from '../generators/arrangement'
+import { generateAgeProblem } from '../generators/ageProblems'
 import { generateOddOne } from '../generators/oddOne'
 import { GENERATOR_PATTERNS, generateNumberSeries, mulberry32 } from '../generators/numberSeries'
 import { GEN } from './gen'
@@ -125,6 +126,11 @@ describe('generated questions carry Kannada', () => {
   it('arrangement', () => {
     const rng = mulberry32(36)
     for (let n = 0; n < 1000; n++) expectKannada(generateArrangement(rng))
+  })
+
+  it('age problems', () => {
+    const rng = mulberry32(37)
+    for (let n = 0; n < 1000; n++) expectKannada(generateAgeProblem(rng))
   })
 
   it('clock', () => {

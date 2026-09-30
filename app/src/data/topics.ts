@@ -32,6 +32,8 @@ import vennDiagrams from './mat/venn-diagrams.json'
 import vennDiagramsMeta from './mat/venn-diagrams.meta.json'
 import arrangement from './mat/arrangement.json'
 import arrangementMeta from './mat/arrangement.meta.json'
+import ageProblems from './mat/age-problems.json'
+import ageProblemsMeta from './mat/age-problems.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -96,6 +98,7 @@ import { generateLetterValues } from '../lib/generators/letterValues'
 import { generatePyramid } from '../lib/generators/pyramid'
 import { generateVennDiagram } from '../lib/generators/vennDiagrams'
 import { generateArrangement } from '../lib/generators/arrangement'
+import { generateAgeProblem } from '../lib/generators/ageProblems'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -457,6 +460,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: arrangementMeta as TopicMeta,
     missing: 'answer',
     generate: generateArrangement,
+  },
+  {
+    id: 'age-problems',
+    chapter: 37,
+    name: 'Age Problems',
+    questions: visible(ageProblems.questions as Question[]),
+    meta: ageProblemsMeta as TopicMeta,
+    missing: 'answer',
+    generate: generateAgeProblem,
   },
 ]
 

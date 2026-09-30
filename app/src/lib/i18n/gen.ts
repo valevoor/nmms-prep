@@ -336,6 +336,25 @@ const genEn = {
   arSeatRule: 'Facing north, their left is your left. Start with the clues that fix a place (an end, the middle), then use the others, and check every clue at the end.',
   arSeatWork: (row: string) => `From left to right: ${row}`,
 
+  // Age problems (Chapter 37)
+  agTimes: (p: string, a: number, k: number, b: number) => `${p}’s age after ${a} years will be ${k} times ${p}’s age ${b} years ago. What is ${p}’s present age?`,
+  agXRule: 'Call the present age x. Write both ages from x and make the equation.',
+  agFatherSum: (sum: number, t: number, k: number, father: boolean) =>
+    `The sum of the ages of a father and his son is ${sum} years. After ${t} years, the father’s age will be ${k} times the son’s. What is the ${father ? 'father’s' : 'son’s'} present age?`,
+  agFatherSumRule: 'Call the father’s age x; the son is then the total − x. Add the years to both ages.',
+  agRatioAgo: (a: string, p: number, b: string, q: number, m: number, n: number) =>
+    `${a} is ${p} years old and ${b} is ${q} years old. How many years ago was the ratio of their ages ${m} : ${n}?`,
+  agRatioAgoRule: 'x years ago both were x years younger. Set the ratio of those ages equal to the given ratio.',
+  agTwoTimes: (k1: number, t: number, k2: number, ask: 'sum' | 'father' | 'son') =>
+    `A father is ${k1} times as old as his son. After ${t} years, he will be ${k2} times as old as his son. ${ask === 'sum' ? 'What is the sum of their present ages?' : ask === 'father' ? 'What is the father’s present age?' : 'What is the son’s present age?'}`,
+  agTwoTimesRule: 'Call the son’s age x and write the father’s age from it. Add the years to both ages.',
+  agRatioLater: (p: string, q: string, a: number, b: number, t: number, c: number, d: number, diff: boolean) =>
+    `The ratio of the present ages of ${p} and ${q} is ${a} : ${b}. After ${t} years, the ratio will be ${c} : ${d}. ${diff ? 'What is the difference between their ages?' : `What is ${q}’s present age?`}`,
+  agRatioLaterRule: 'Write the present ages from the first ratio (for 5 : 6, as 5k and 6k), add the years to both and use the second ratio to find k.',
+  agTwoRatios: (t: number, m: number, n: number, p: number, q: number) =>
+    `${t} years ago, the ratio of the ages of A and B was ${m} : ${n}, and ${t} years from now it will be ${p} : ${q}. What are the present ages of A and B?`,
+  agTwoRatiosRule: (m: number, n: number) => `Write the ages of the first ratio as ${m}k and ${n}k. The second ratio comes twice the years later: find k, then add the years back for the present ages.`,
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -518,6 +537,9 @@ const genEn = {
     'ar-order': 'Letters or digits that stay in place',
     'ar-seat': 'Seating from clues',
     'ar-clue': 'Numbers and places from clues',
+    'ag-times': 'An age later is some times an age before',
+    'ag-sum': 'Ages that add up, or one some times the other',
+    'ag-ratio': 'Ratios of ages now, before or later',
   } as Record<PatternId, string>,
 }
 
@@ -816,6 +838,22 @@ const genKn: GenText = {
   arHowMany: (x, y) => `${x} ಮತ್ತು ${y} ನಡುವೆ ಎಷ್ಟು ಜನ ಕುಳಿತಿದ್ದಾರೆ?`,
   arSeatRule: 'ಉತ್ತರಕ್ಕೆ ಮುಖಮಾಡಿದಾಗ ಅವರ ಎಡ ನಿಮ್ಮ ಎಡವೇ. ಸ್ಥಾನವನ್ನು ನಿರ್ಧರಿಸುವ ಸುಳಿವುಗಳಿಂದ (ತುದಿ, ಮಧ್ಯ) ಪ್ರಾರಂಭಿಸಿ, ನಂತರ ಉಳಿದವನ್ನು ಬಳಸಿ, ಕೊನೆಯಲ್ಲಿ ಪ್ರತಿ ಸುಳಿವನ್ನೂ ಪರೀಕ್ಷಿಸಿ.',
   arSeatWork: (row) => `ಎಡದಿಂದ ಬಲಕ್ಕೆ: ${row}`,
+  agTimes: (p, a, k, b) => `${a} ವರ್ಷಗಳ ನಂತರ ${p} ಅವರ ವಯಸ್ಸು, ${b} ವರ್ಷಗಳ ಹಿಂದಿನ ಅವರ ವಯಸ್ಸಿನ ${k} ರಷ್ಟು ಆಗುತ್ತದೆ. ${p} ಅವರ ಈಗಿನ ವಯಸ್ಸು ಎಷ್ಟು?`,
+  agXRule: 'ಈಗಿನ ವಯಸ್ಸನ್ನು x ಎನ್ನಿ. ಎರಡೂ ವಯಸ್ಸುಗಳನ್ನು x ನಿಂದ ಬರೆದು ಸಮೀಕರಣ ರಚಿಸಿ.',
+  agFatherSum: (sum, t, k, father) =>
+    `ತಂದೆ ಮತ್ತು ಮಗನ ವಯಸ್ಸುಗಳ ಮೊತ್ತ ${sum} ವರ್ಷಗಳು. ${t} ವರ್ಷಗಳ ನಂತರ ತಂದೆಯ ವಯಸ್ಸು ಮಗನ ವಯಸ್ಸಿನ ${k} ರಷ್ಟಾದರೆ, ${father ? 'ತಂದೆಯ' : 'ಮಗನ'} ಈಗಿನ ವಯಸ್ಸು ಎಷ್ಟು?`,
+  agFatherSumRule: 'ತಂದೆಯ ವಯಸ್ಸನ್ನು x ಎನ್ನಿ; ಆಗ ಮಗನ ವಯಸ್ಸು ಮೊತ್ತ − x. ಎರಡೂ ವಯಸ್ಸುಗಳಿಗೆ ವರ್ಷಗಳನ್ನು ಕೂಡಿಸಿ.',
+  agRatioAgo: (a, p, b, q, m, n) => `${a} ಅವರ ವಯಸ್ಸು ${p} ವರ್ಷ ಮತ್ತು ${b} ಅವರ ವಯಸ್ಸು ${q} ವರ್ಷ. ಎಷ್ಟು ವರ್ಷಗಳ ಹಿಂದೆ ಅವರ ವಯಸ್ಸುಗಳ ಅನುಪಾತ ${m} : ${n} ಆಗಿತ್ತು?`,
+  agRatioAgoRule: 'x ವರ್ಷಗಳ ಹಿಂದೆ ಇಬ್ಬರೂ x ವರ್ಷ ಚಿಕ್ಕವರಾಗಿದ್ದರು. ಆ ವಯಸ್ಸುಗಳ ಅನುಪಾತವನ್ನು ಕೊಟ್ಟಿರುವ ಅನುಪಾತಕ್ಕೆ ಸಮ ಮಾಡಿ.',
+  agTwoTimes: (k1, t, k2, ask) =>
+    `ತಂದೆಯು ಮಗನ ವಯಸ್ಸಿನ ${k1} ರಷ್ಟಿದ್ದಾರೆ. ${t} ವರ್ಷಗಳ ನಂತರ ಅವರು ಮಗನ ವಯಸ್ಸಿನ ${k2} ರಷ್ಟಾಗುತ್ತಾರೆ. ${ask === 'sum' ? 'ಅವರ ಈಗಿನ ವಯಸ್ಸುಗಳ ಮೊತ್ತ ಎಷ್ಟು?' : ask === 'father' ? 'ತಂದೆಯ ಈಗಿನ ವಯಸ್ಸು ಎಷ್ಟು?' : 'ಮಗನ ಈಗಿನ ವಯಸ್ಸು ಎಷ್ಟು?'}`,
+  agTwoTimesRule: 'ಮಗನ ವಯಸ್ಸನ್ನು x ಎನ್ನಿ, ಅದರಿಂದ ತಂದೆಯ ವಯಸ್ಸನ್ನು ಬರೆಯಿರಿ. ಎರಡೂ ವಯಸ್ಸುಗಳಿಗೆ ವರ್ಷಗಳನ್ನು ಕೂಡಿಸಿ.',
+  agRatioLater: (p, q, a, b, t, c, d, diff) =>
+    `${p} ಮತ್ತು ${q} ಅವರ ಈಗಿನ ವಯಸ್ಸುಗಳ ಅನುಪಾತ ${a} : ${b}. ${t} ವರ್ಷಗಳ ನಂತರ ಅನುಪಾತ ${c} : ${d} ಆಗುತ್ತದೆ. ${diff ? 'ಅವರ ವಯಸ್ಸುಗಳ ನಡುವಿನ ವ್ಯತ್ಯಾಸ ಎಷ್ಟು?' : `${q} ಅವರ ಈಗಿನ ವಯಸ್ಸು ಎಷ್ಟು?`}`,
+  agRatioLaterRule: 'ಮೊದಲ ಅನುಪಾತದಿಂದ ಈಗಿನ ವಯಸ್ಸುಗಳನ್ನು ಬರೆಯಿರಿ (5 : 6 ಕ್ಕೆ 5k ಮತ್ತು 6k), ಎರಡಕ್ಕೂ ವರ್ಷಗಳನ್ನು ಕೂಡಿಸಿ, ಎರಡನೇ ಅನುಪಾತದಿಂದ k ಕಂಡುಹಿಡಿಯಿರಿ.',
+  agTwoRatios: (t, m, n, p, q) =>
+    `${t} ವರ್ಷಗಳ ಹಿಂದೆ A ಮತ್ತು B ಗಳ ವಯಸ್ಸುಗಳ ಅನುಪಾತ ${m} : ${n} ಮತ್ತು ${t} ವರ್ಷಗಳ ನಂತರ ಅದು ${p} : ${q} ಆಗುತ್ತದೆ. A ಮತ್ತು B ಗಳ ಈಗಿನ ವಯಸ್ಸುಗಳೆಷ್ಟು?`,
+  agTwoRatiosRule: (m, n) => `ಮೊದಲ ಅನುಪಾತದ ವಯಸ್ಸುಗಳನ್ನು ${m}k ಮತ್ತು ${n}k ಎಂದು ಬರೆಯಿರಿ. ಎರಡನೇ ಅನುಪಾತ ಎರಡರಷ್ಟು ವರ್ಷಗಳ ನಂತರ ಬರುತ್ತದೆ: k ಕಂಡುಹಿಡಿದು, ಈಗಿನ ವಯಸ್ಸಿಗೆ ವರ್ಷಗಳನ್ನು ಮತ್ತೆ ಕೂಡಿಸಿ.`,
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -988,6 +1026,9 @@ const genKn: GenText = {
     'ar-order': 'ಸ್ಥಾನದಲ್ಲೇ ಉಳಿಯುವ ಅಕ್ಷರ ಅಥವಾ ಅಂಕಿಗಳು',
     'ar-seat': 'ಸುಳಿವುಗಳಿಂದ ಆಸನ ವ್ಯವಸ್ಥೆ',
     'ar-clue': 'ಸುಳಿವುಗಳಿಂದ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಾನ',
+    'ag-times': 'ಮುಂದಿನ ವಯಸ್ಸು ಹಿಂದಿನ ವಯಸ್ಸಿನ ಕೆಲವು ರಷ್ಟು',
+    'ag-sum': 'ಮೊತ್ತ ಅಥವಾ ಇನ್ನೊಬ್ಬರ ವಯಸ್ಸಿನ ಕೆಲವು ರಷ್ಟು',
+    'ag-ratio': 'ಈಗಿನ, ಹಿಂದಿನ ಅಥವಾ ಮುಂದಿನ ವಯಸ್ಸುಗಳ ಅನುಪಾತ',
   },
 }
 

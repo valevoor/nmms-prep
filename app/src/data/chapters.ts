@@ -88,6 +88,10 @@ import arrangementKn from './mat/arrangement.kn.json'
 import arrangement from './mat/arrangement.json'
 import arrangementMetaKn from './mat/arrangement.meta.kn.json'
 import arrangementMeta from './mat/arrangement.meta.json'
+import ageKn from './mat/age-problems.kn.json'
+import age from './mat/age-problems.json'
+import ageMetaKn from './mat/age-problems.meta.kn.json'
+import ageMeta from './mat/age-problems.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -208,4 +212,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('pyramid', 'Number and Letter Pyramid', pyramid, pyramidMeta, pyramidKn, pyramidMetaKn),
   c('venn-diagrams', 'Venn Diagrams', venn, vennMeta, vennKn, vennMetaKn),
   c('arrangement', 'Arrangement', arrangement, arrangementMeta, arrangementKn, arrangementMetaKn),
+  c('age-problems', 'Age Problems', age, ageMeta, ageKn, ageMetaKn),
 ]

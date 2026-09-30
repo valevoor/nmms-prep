@@ -1,0 +1,158 @@
+{
+  "topic": "age-problems",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 37 \"Age Problems\" (questions: PDF pages 104–105, solutions: PDF page 178). tools/check_age_problems.ts tries every whole-number age from 1 to 120 against each question’s conditions; all 8 agree with the key.",
+  "questions": [
+    {
+      "id": "ag-b01",
+      "bookNo": 1,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-times",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Ram’s age after 15 years will be five times his age five years back. What is Ram’s present age?",
+      "options": {
+        "A": "10 years",
+        "B": "15 years",
+        "C": "18 years",
+        "D": "20 years"
+      },
+      "answer": "A",
+      "rule": "Call the present age x. Write both ages from x and make the equation.",
+      "working": "x + 15 = 5(x − 5) → x + 15 = 5x − 25 → 4x = 40 → x = 10"
+    },
+    {
+      "id": "ag-b02",
+      "bookNo": 2,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-sum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The sum of the ages of a son and his father is 90 years. After five years, the father’s age will be three times the son’s. What is the father’s present age?",
+      "options": {
+        "A": "75 years",
+        "B": "70 years",
+        "C": "60 years",
+        "D": "20 years"
+      },
+      "answer": "B",
+      "rule": "Call the father’s age x; the son is then 90 − x. Add 5 to both ages.",
+      "working": "x + 5 = 3(90 − x + 5) → x + 5 = 285 − 3x → 4x = 280 → x = 70"
+    },
+    {
+      "id": "ag-b03",
+      "bookNo": 3,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-ratio",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Hari is 20 years old and Gaurav is 30 years old. How many years ago was the ratio of their ages 3 : 5?",
+      "options": {
+        "A": "3 years",
+        "B": "4 years",
+        "C": "5 years",
+        "D": "6 years"
+      },
+      "answer": "C",
+      "rule": "x years ago both were x years younger. Set the ratio of those ages equal to 3 : 5.",
+      "working": "(20 − x) : (30 − x) = 3 : 5 → 100 − 5x = 90 − 3x → 2x = 10 → x = 5"
+    },
+    {
+      "id": "ag-b04",
+      "bookNo": 4,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-times",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Thavan’s age after 15 years will be 3 times his age 5 years ago. What is Thavan’s present age?",
+      "options": {
+        "A": "15 years",
+        "B": "20 years",
+        "C": "10 years",
+        "D": "25 years"
+      },
+      "answer": "A",
+      "rule": "Call the present age x. Write both ages from x and make the equation.",
+      "working": "x + 15 = 3(x − 5) → x + 15 = 3x − 15 → 2x = 30 → x = 15"
+    },
+    {
+      "id": "ag-b05",
+      "bookNo": 5,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-sum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "I am four times as old as my son. Five years from now, I will be three times as old as my son. What is the sum of our ages?",
+      "options": {
+        "A": "40 years",
+        "B": "50 years",
+        "C": "60 years",
+        "D": "55 years"
+      },
+      "answer": "B",
+      "rule": "Call the son’s age x; the father is 4x. Add 5 to both ages.",
+      "working": "4x + 5 = 3(x + 5) → 4x + 5 = 3x + 15 → x = 10; 10 + 40 = 50"
+    },
+    {
+      "id": "ag-b06",
+      "bookNo": 6,
+      "sourcePage": 104,
+      "keyFrom": "book",
+      "pattern": "ag-ratio",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The ratio of the present ages of Ram and Hari is 5 : 6. Six years from now, the ratio of their ages will be 7 : 8. What is the difference between their ages?",
+      "options": {
+        "A": "3 years",
+        "B": "5 years",
+        "C": "6 years",
+        "D": "1 years"
+      },
+      "answer": "A",
+      "rule": "Write the ages as 5k and 6k, add 6 to both and use the new ratio.",
+      "working": "(5k + 6) : (6k + 6) = 7 : 8 → 40k + 48 = 42k + 42 → k = 3; ages 15 and 18, difference 3"
+    },
+    {
+      "id": "ag-b07",
+      "bookNo": 7,
+      "sourcePage": 105,
+      "keyFrom": "book",
+      "pattern": "ag-ratio",
+      "layout": "text",
+      "terms": [],
+      "prompt": "Four years ago, the ratio of the ages of A and B was 2 : 3, and after 4 years it will be 5 : 7. What are the present ages of A and B?",
+      "options": {
+        "A": "36, 52",
+        "B": "52, 36",
+        "C": "42, 36",
+        "D": "52, 34"
+      },
+      "answer": "A",
+      "rule": "Four years ago they were 2k and 3k. Eight years later (4 years from now) they are 2k + 8 and 3k + 8; use the second ratio.",
+      "working": "(2k + 8) : (3k + 8) = 5 : 7 → 14k + 56 = 15k + 40 → k = 16; four years ago 32 and 48, now 36 and 52"
+    },
+    {
+      "id": "ag-b08",
+      "bookNo": 8,
+      "sourcePage": 105,
+      "keyFrom": "book",
+      "pattern": "ag-sum",
+      "layout": "text",
+      "terms": [],
+      "prompt": "The sum of the present ages of A and B is 11 times the difference of their ages. Five years from now, their total age will be 13 times the difference of their ages. What is the present age of the elder one?",
+      "options": {
+        "A": "30 years",
+        "B": "25 years",
+        "C": "35 years",
+        "D": "20 years"
+      },
+      "answer": "A",
+      "rule": "The difference of two ages never changes. In five years the sum grows by 10.",
+      "working": "Call the difference d: sum = 11d, and 11d + 10 = 13d → d = 5; sum 55, difference 5 → ages 30 and 25"
+    }
+  ]
+}

@@ -323,6 +323,11 @@ export const en = {
       label:
         'A row of 9 boxes; the 4th box is marked. First tap: counting from the left, it is 4th. Second tap: counting from the right, it is 6th, and it is counted again. Last tap: 4 + 6 − 1 = 9 boxes in the row.',
     },
+    ageLine: {
+      buttons: ['Now', 'Before and after', 'Solve'],
+      label:
+        'A time line with three points: five years ago, now, and 15 years from now. First tap: Ram’s age now is called x. Second tap: five years ago it was x − 5 and in 15 years it will be x + 15, so x + 15 = 5(x − 5). Last tap: 4x = 40, so x = 10.',
+    },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],
       label:

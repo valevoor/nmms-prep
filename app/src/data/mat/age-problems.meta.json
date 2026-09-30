@@ -1,0 +1,26 @@
+{
+  "topic": "age-problems",
+  "intro": "Age problems describe people’s ages now, some years ago and some years from now. Call the age you don’t know x, write every other age from it (x − 5 five years ago, x + 15 in fifteen years), turn the sentence into an equation and solve it.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Call the unknown age x",
+      "visual": "ageLine",
+      "body": "Pick the age you don’t know and call it x. Every other age, past or future, is x plus or minus some years. Then write the sentence as an equation.",
+      "caption": "Ram now: x. Five years ago: x − 5. In 15 years: x + 15. So x + 15 = 5(x − 5), and x = 10."
+    },
+    {
+      "title": "Everyone ages the same",
+      "body": "In t years, every person is t years older. So the difference between two ages never changes, while the sum of two ages grows by 2t."
+    },
+    {
+      "title": "Ratios of ages",
+      "body": "For a ratio of 5 : 6, write the ages as 5k and 6k. Add (or take away) the years from both, set the new ratio and cross-multiply: (5k + 6) × 8 = (6k + 6) × 7, so k = 3 and the ages are 15 and 18."
+    },
+    {
+      "title": "Check with the options",
+      "body": "Put your answer back into every sentence of the question. Ages must be whole numbers that make sense: a father is older than his son, and nobody’s age goes below 0."
+    }
+  ],
+  "workedExamples": ["ag-b01", "ag-b02", "ag-b06", "ag-b08"]
+}

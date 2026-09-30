@@ -197,6 +197,10 @@ export type PatternId =
   | 'ar-order'
   | 'ar-seat'
   | 'ar-clue'
+  // Age problems (Chapter 37)
+  | 'ag-times'
+  | 'ag-sum'
+  | 'ag-ratio'
 
 export interface Question {
   id: string

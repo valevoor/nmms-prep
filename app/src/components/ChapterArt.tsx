@@ -344,6 +344,18 @@ const ART: Record<number, ReactNode> = {
       <path d="M29.5 8v6M26.5 11l3 3 3-3" style={{ fill: 'none' }} />
     </>
   ),
+  // Age Problems: a time line with the present marked
+  37: (
+    <>
+      <path d="M4 30h40" />
+      <circle cx={12} cy={30} r={3} />
+      <circle cx={24} cy={30} r={4.5} className="art-tile-accent" />
+      <circle cx={38} cy={30} r={3} />
+      <text x={24} y={20} textAnchor="middle" className="art-text art-small art-fill-accent">
+        x
+      </text>
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */
