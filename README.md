@@ -53,6 +53,8 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 
 | Screen | For | What it does |
 |---|---|---|
+| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device |
+| Chapter | Everyone | Opened from a Home row: the chapter's intro, progress (book questions, accuracy, best test) and its buttons. Learn is highlighted; Practice, Quick test, Classroom and, where there is one, the game follow |
 | Learn | Students | Tip cards (many with a tap-through picture), step-by-step worked examples, and a cheat sheet where it helps: squares, cubes and primes for the number chapters, the alphabet with each letter's place for the letter chapters, and a relations table for Blood Relations |
 | Practice | Students | Book questions, generated "More practice", and a "Mistakes" list to retry. Explanations appear right after each answer |
 | Quick test | Students | 15 questions in 15 minutes, with a score, the 40% pass line and a review of every answer |
@@ -60,7 +62,7 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 
 ### Guess the rule
 
-Three chapters have a "🔎 Guess the rule" link on their card. Each game is 10 puzzles, each followed by an explanation, and the app keeps a best score per chapter.
+Three chapters have a "🔎 Guess the rule" link on their chapter page. Each game is 10 puzzles, each followed by an explanation, and the app keeps a best score per chapter.
 
 - **Number Series:** see a series and pick which rule it follows.
 - **Number Analogy:** see a complete analogy (e.g. 25 : 100 :: 20 : 80) and pick the rule that links both pairs. One wrong option is usually a near miss, such as "Multiply by 5" when the answer is "Multiply by 4".

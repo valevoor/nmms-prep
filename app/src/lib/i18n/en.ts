@@ -120,6 +120,8 @@ export const en = {
     ] as Rich[],
     ready: 'Ready to practise',
     soon: 'Coming soon',
+    continue: 'Continue where you left off',
+    wrongCount: (n: number) => `${n} question${n === 1 ? '' : 's'} to retry`,
     footnote: 'Questions come from the KSQAAC "Spardha Yashassu" NMMS study material (2022). Works offline once it has loaded.',
     bookCorrect: (a: number, b: number) => `${a} of ${b} book questions correct`,
     bookQuestions: 'Book questions',

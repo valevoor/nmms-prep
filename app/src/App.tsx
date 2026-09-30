@@ -1,7 +1,10 @@
+import { useLayoutEffect, useRef } from 'react'
 import { Page } from './components/Page'
 import { useT } from './lib/i18n'
 import { getTopic } from './data/topics'
+import { setLastTopic } from './lib/lastTopic'
 import { href, useRoute } from './lib/router'
+import { Chapter } from './pages/Chapter'
 import { Classroom } from './pages/Classroom'
 import { Home } from './pages/Home'
 import { Learn } from './pages/Learn'
@@ -11,6 +14,27 @@ import { QuickTest } from './pages/QuickTest'
 import { GuessRule } from './pages/GuessRule'
 
 const MODES: PracticeMode[] = ['book', 'more', 'mistakes']
+
+/** Home's scroll position, so going back to it lands on the same chapter row. */
+let homeScroll = 0
+
+/** Links don't reset the scroll, so each new page starts at the top, except Home, which goes back to where it was. */
+function useScrollOnRouteChange(path: string) {
+  const prev = useRef(path)
+  useLayoutEffect(() => {
+    if (prev.current === path) return
+    window.scrollTo(0, path === '' ? homeScroll : 0)
+    prev.current = path
+  }, [path])
+  useLayoutEffect(() => {
+    if (path !== '') return
+    const save = () => {
+      homeScroll = window.scrollY
+    }
+    window.addEventListener('scroll', save, { passive: true })
+    return () => window.removeEventListener('scroll', save)
+  }, [path])
+}
 
 function NotFound() {
   const t = useT()
@@ -26,13 +50,19 @@ function NotFound() {
 
 export default function App() {
   const { parts, query } = useRoute()
-  if (parts.length === 0) return <Home />
-
   const [kind, topicId, view] = parts
   const topic = kind === 't' ? getTopic(topicId) : undefined
+  useScrollOnRouteChange(parts.join('/'))
+  useLayoutEffect(() => {
+    if (topic) setLastTopic(topic.id)
+  }, [topic])
+
+  if (parts.length === 0) return <Home />
   if (!topic) return <NotFound />
 
   switch (view) {
+    case undefined:
+      return <Chapter topic={topic} />
     case 'learn':
       return <Learn topic={topic} />
     case 'practice': {
