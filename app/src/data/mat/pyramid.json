@@ -1,0 +1,423 @@
+{
+  "topic": "pyramid",
+  "source": "KSQAAC Spardha Yashassu NMMS Study Material 2022, MAT Chapter 30 \"Number / Letter Pyramid\" (questions: PDF pages 84–86, solutions: PDF page 164). Q1–5 use the letter pyramid, Q6–8 and Q13 the pyramid of numbers and letters, Q9–10 the diamond. tools/check_pyramid.ts reads each group off its pyramid and tries every shift and mirror image. Q9 is corrected from D to A (mirror image). Q11, Q12, Q14 and Q15 fit no move on any of the three pyramids and are hidden.",
+  "questions": [
+    {
+      "id": "py-b01",
+      "bookNo": 1,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["abcd", "cfgh", "glmn", "?"],
+      "pyramid": [
+        ["a"],
+        ["b", "c", "d"],
+        ["e", "f", "g", "h", "i"],
+        ["j", "k", "l", "m", "n", "o", "p"],
+        ["q", "r", "s", "t", "u", "v", "w", "x", "y"]
+      ],
+      "options": {
+        "A": "mstu",
+        "B": "mtuv",
+        "C": "nuvx",
+        "D": "lstr"
+      },
+      "answer": "B",
+      "rule": "Each letter moves one row straight down the pyramid.",
+      "working": "a → c, b → f, c → g, d → h; so g → m, l → t, m → u, n → v"
+    },
+    {
+      "id": "py-b02",
+      "bookNo": 2,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["abje", "?", "beqj", "diyp"],
+      "pyramid": [
+        ["a"],
+        ["b", "c", "d"],
+        ["e", "f", "g", "h", "i"],
+        ["j", "k", "l", "m", "n", "o", "p"],
+        ["q", "r", "s", "t", "u", "v", "w", "x", "y"]
+      ],
+      "options": {
+        "A": "adpi",
+        "B": "adip",
+        "C": "dipy",
+        "D": "adyp"
+      },
+      "answer": "A",
+      "rule": "The second group is the mirror image of the first: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "b ↔ d, e ↔ i, q ↔ y, j ↔ p; so a ↔ a, b ↔ d, j ↔ p, e ↔ i"
+    },
+    {
+      "id": "py-b03",
+      "bookNo": 3,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["bdfh", "gimo", "egkm", "?"],
+      "pyramid": [
+        ["a"],
+        ["b", "c", "d"],
+        ["e", "f", "g", "h", "i"],
+        ["j", "k", "l", "m", "n", "o", "p"],
+        ["q", "r", "s", "t", "u", "v", "w", "x", "y"]
+      ],
+      "options": {
+        "A": "lntv",
+        "B": "fhin",
+        "C": "intv",
+        "D": "intu"
+      },
+      "answer": "A",
+      "rule": "Each letter moves one row down and one box to the right.",
+      "working": "b → g, d → i, f → m, h → o; so e → l, g → n, k → t, m → v"
+    },
+    {
+      "id": "py-b04",
+      "bookNo": 4,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["bgfc", "gnmh", "elkf", "?"],
+      "pyramid": [
+        ["a"],
+        ["b", "c", "d"],
+        ["e", "f", "g", "h", "i"],
+        ["j", "k", "l", "m", "n", "o", "p"],
+        ["q", "r", "s", "t", "u", "v", "w", "x", "y"]
+      ],
+      "options": {
+        "A": "lutm",
+        "B": "ktlu",
+        "C": "lskt",
+        "D": "tmlu"
+      },
+      "answer": "A",
+      "rule": "Each letter moves one row down and one box to the right.",
+      "working": "b → g, g → n, f → m, c → h; so e → l, l → u, k → t, f → m"
+    },
+    {
+      "id": "py-b05",
+      "bookNo": 5,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["abad", "cfch", "hmho", "?"],
+      "pyramid": [
+        ["a"],
+        ["b", "c", "d"],
+        ["e", "f", "g", "h", "i"],
+        ["j", "k", "l", "m", "n", "o", "p"],
+        ["q", "r", "s", "t", "u", "v", "w", "x", "y"]
+      ],
+      "options": {
+        "A": "nuvw",
+        "B": "mtmw",
+        "C": "niip",
+        "D": "nunw"
+      },
+      "answer": "D",
+      "rule": "Each letter moves one row straight down the pyramid.",
+      "working": "a → c, b → f, d → h; so h → n, m → u, o → w"
+    },
+    {
+      "id": "py-b06",
+      "bookNo": 6,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["B1C2", "G4H5", "F3E2", "?"],
+      "pyramid": [
+        ["A"],
+        ["1", "2", "3"],
+        ["B", "C", "D", "E", "F"],
+        ["4", "5", "6", "7", "8", "9", "10"],
+        ["G", "H", "I", "J", "K", "L", "M", "N", "O"],
+        ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+        ["P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B"]
+      ],
+      "options": {
+        "A": "O10N9",
+        "B": "ON10M",
+        "C": "LGM10",
+        "D": "N10M9"
+      },
+      "answer": "A",
+      "rule": "The 3rd group is the mirror image of the 1st, so the 4th is the mirror image of the 2nd: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "F3E2 is the mirror image of B1C2 (B ↔ F, 1 ↔ 3, C ↔ E, 2 ↔ 2); so G ↔ O, 4 ↔ 10, H ↔ N, 5 ↔ 9"
+    },
+    {
+      "id": "py-b07",
+      "bookNo": 7,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["1CU15", "4HS13", "3EW17", "?"],
+      "pyramid": [
+        ["A"],
+        ["1", "2", "3"],
+        ["B", "C", "D", "E", "F"],
+        ["4", "5", "6", "7", "8", "9", "10"],
+        ["G", "H", "I", "J", "K", "L", "M", "N", "O"],
+        ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+        ["P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B"]
+      ],
+      "options": {
+        "A": "F9M18",
+        "B": "10N19Y",
+        "C": "F9X18",
+        "D": "10NY19"
+      },
+      "answer": "D",
+      "rule": "The 3rd group is the mirror image of the 1st, so the 4th is the mirror image of the 2nd: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "3EW17 is the mirror image of 1CU15 (1 ↔ 3, C ↔ E, U ↔ W, 15 ↔ 17); so 4 ↔ 10, H ↔ N, S ↔ Y, 13 ↔ 19"
+    },
+    {
+      "id": "py-b08",
+      "bookNo": 8,
+      "sourcePage": 85,
+      "keyFrom": "book",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["A21", "A23", "D78", "?"],
+      "pyramid": [
+        ["A"],
+        ["1", "2", "3"],
+        ["B", "C", "D", "E", "F"],
+        ["4", "5", "6", "7", "8", "9", "10"],
+        ["G", "H", "I", "J", "K", "L", "M", "N", "O"],
+        ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+        ["P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B"]
+      ],
+      "options": {
+        "A": "D21",
+        "B": "D76",
+        "C": "D67",
+        "D": "D87"
+      },
+      "answer": "B",
+      "rule": "The second group is the mirror image of the first: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "A ↔ A, 2 ↔ 2, 1 ↔ 3; so D ↔ D, 7 ↔ 7, 8 ↔ 6"
+    },
+    {
+      "id": "py-b09",
+      "bookNo": 9,
+      "sourcePage": 86,
+      "keyFrom": "solved",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["A2B1", "E10J5", "A4D1", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "I16P9",
+        "B": "P9I16",
+        "C": "D9I4",
+        "D": "I4D9"
+      },
+      "answer": "A",
+      "rule": "The 3rd group is the mirror image of the 1st, so the 4th is the mirror image of the 2nd: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "A4D1 is the mirror image of A2B1 (A ↔ A, 2 ↔ 4, B ↔ D, 1 ↔ 1); so E ↔ I, 10 ↔ 16, J ↔ P, 5 ↔ 9",
+      "note": "The book’s key gives D (I4D9), which no move on the pyramid explains. A4D1 is the mirror image of A2B1, so the answer is the mirror image of E10J5: I16P9, option A."
+    },
+    {
+      "id": "py-b10",
+      "bookNo": 10,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-mirror",
+      "layout": "analogy",
+      "terms": ["JRS5", "PXW9", "EST2", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "IWV8",
+        "B": "IWV4",
+        "C": "IWX16",
+        "D": "IWU1"
+      },
+      "answer": "B",
+      "rule": "The second group is the mirror image of the first: each letter or number swaps to the same place on the other side of the pyramid’s middle line.",
+      "working": "J ↔ P, R ↔ X, S ↔ W, 5 ↔ 9; so E ↔ I, S ↔ W, T ↔ V, 2 ↔ 4"
+    },
+    {
+      "id": "py-b11",
+      "bookNo": 11,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["A2B", "1C3", "A2E4", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "1C5F6",
+        "B": "1C5F",
+        "C": "I5F6",
+        "D": "1C5I"
+      },
+      "answer": "B",
+      "rule": "Not checked.",
+      "working": "The key gives 1C5F.",
+      "note": "Hidden: no move on the pyramid (a shift or a mirror image) turns A2B into 1C3 and also gives one of the options, and no simple rule on the letters’ places does either, so the book’s key can’t be checked.",
+      "status": "needs-review"
+    },
+    {
+      "id": "py-b12",
+      "bookNo": 12,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["AB4H", "13F9", "47L17", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "F914T",
+        "B": "36J14",
+        "C": "FJ14T",
+        "D": "3FJ14"
+      },
+      "answer": "B",
+      "rule": "Not checked.",
+      "working": "The key gives 36J14.",
+      "note": "Hidden: no move on the pyramid (a shift or a mirror image) turns AB4H into 13F9 and also gives one of the options, and no simple rule on the letters’ places does either, so the book’s key can’t be checked.",
+      "status": "needs-review"
+    },
+    {
+      "id": "py-b13",
+      "bookNo": 13,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["B24E", "C35F", "12MR18", "?"],
+      "pyramid": [
+        ["A"],
+        ["1", "2", "3"],
+        ["B", "C", "D", "E", "F"],
+        ["4", "5", "6", "7", "8", "9", "10"],
+        ["G", "H", "I", "J", "K", "L", "M", "N", "O"],
+        ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+        ["P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B"]
+      ],
+      "options": {
+        "A": "13NS19",
+        "B": "13SN19",
+        "C": "I9N13",
+        "D": "I9519"
+      },
+      "answer": "A",
+      "rule": "Each letter or number moves one box to the right in its row.",
+      "working": "B → C, 2 → 3, 4 → 5, E → F; so 12 → 13, M → N, R → S, 18 → 19",
+      "note": "This question uses the second pyramid (numbers 1–21 and letters A–Z, then A B again)."
+    },
+    {
+      "id": "py-b14",
+      "bookNo": 14,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["21U15O", "P16K11", "6F3C", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "D4H8",
+        "B": "8H4D",
+        "C": "DFB2",
+        "D": "D4B2"
+      },
+      "answer": "D",
+      "rule": "Not checked.",
+      "working": "The key gives D4B2.",
+      "note": "Hidden: no move on the pyramid (a shift or a mirror image) turns 21U15O into P16K11 and also gives one of the options, and no simple rule on the letters’ places does either, so the book’s key can’t be checked.",
+      "status": "needs-review"
+    },
+    {
+      "id": "py-b15",
+      "bookNo": 15,
+      "sourcePage": 86,
+      "keyFrom": "book",
+      "pattern": "py-shift",
+      "layout": "analogy",
+      "terms": ["2C8I", "B3G10", "E5M13", "?"],
+      "pyramid": [
+        ["A"],
+        ["B", "C", "D"],
+        ["E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+        ["10", "11", "12", "13", "14", "15", "16"],
+        ["5", "6", "7", "8", "9"],
+        ["2", "3", "4"],
+        ["1"]
+      ],
+      "options": {
+        "A": "B3K15",
+        "B": "D6G10",
+        "C": "D6K15",
+        "D": "K15D6"
+      },
+      "answer": "B",
+      "rule": "Not checked.",
+      "working": "The key gives D6G10.",
+      "note": "Hidden: no move on the pyramid (a shift or a mirror image) turns 2C8I into B3G10 and also gives one of the options, and no simple rule on the letters’ places does either, so the book’s key can’t be checked.",
+      "status": "needs-review"
+    }
+  ]
+}

@@ -76,6 +76,10 @@ import letterValuesKn from './mat/letter-values.kn.json'
 import letterValues from './mat/letter-values.json'
 import letterValuesMetaKn from './mat/letter-values.meta.kn.json'
 import letterValuesMeta from './mat/letter-values.meta.json'
+import pyramidKn from './mat/pyramid.kn.json'
+import pyramid from './mat/pyramid.json'
+import pyramidMetaKn from './mat/pyramid.meta.kn.json'
+import pyramidMeta from './mat/pyramid.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -193,4 +197,5 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('number-matrix', 'Number Matrix', matrix, matrixMeta, matrixKn, matrixMetaKn),
   c('letter-matrix', 'Letter Matrix', letterMatrix, letterMatrixMeta, letterMatrixKn, letterMatrixMetaKn),
   c('letter-values', 'Numbers and Letters by a Rule', letterValues, letterValuesMeta, letterValuesKn, letterValuesMetaKn),
+  c('pyramid', 'Number and Letter Pyramid', pyramid, pyramidMeta, pyramidKn, pyramidMetaKn),
 ]

@@ -18,6 +18,7 @@ import { generateSigns } from '../generators/signs'
 import { generateNumberMatrix } from '../generators/numberMatrix'
 import { generateLetterMatrix } from '../generators/letterMatrix'
 import { generateLetterValues } from '../generators/letterValues'
+import { generatePyramid } from '../generators/pyramid'
 import { generateOddOne } from '../generators/oddOne'
 import { GENERATOR_PATTERNS, generateNumberSeries, mulberry32 } from '../generators/numberSeries'
 import { GEN } from './gen'
@@ -108,6 +109,11 @@ describe('generated questions carry Kannada', () => {
     const rng = mulberry32(29)
     for (let n = 0; n < 1000; n++) expectKannada(generateLetterValues(rng))
   })
+
+  it('number and letter pyramid', () => {
+    const rng = mulberry32(30)
+    for (let n = 0; n < 300; n++) expectKannada(generatePyramid(rng))
+  }, 60000)
 
   it('clock', () => {
     const rng = mulberry32(35)

@@ -640,6 +640,31 @@ a {
   font-size: 1.6rem;
 }
 
+/* Number / Letter Pyramid: boxes in centred rows, scaled to the card's width. */
+.pyramid {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 14px;
+}
+
+.pyramid rect {
+  fill: var(--surface);
+  stroke: var(--text);
+  stroke-width: 0.8;
+}
+
+.pyramid text {
+  fill: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pyramid .pyramid-small {
+  font-size: 11px;
+}
+
 /* Numbers with letters: the first row and column hold the numbers; two tables wrap on phones. */
 .key-tables {
   display: flex;
@@ -2169,6 +2194,12 @@ kbd {
   fill: var(--surface);
   stroke: var(--text);
   stroke-width: 1.2;
+}
+
+.tv .tv-mid {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
 }
 
 .tv .tv-cube-lit {

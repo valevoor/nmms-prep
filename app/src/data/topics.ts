@@ -26,6 +26,8 @@ import letterMatrix from './mat/letter-matrix.json'
 import letterMatrixMeta from './mat/letter-matrix.meta.json'
 import letterValues from './mat/letter-values.json'
 import letterValuesMeta from './mat/letter-values.meta.json'
+import pyramid from './mat/pyramid.json'
+import pyramidMeta from './mat/pyramid.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -87,6 +89,7 @@ import { generateSigns } from '../lib/generators/signs'
 import { generateNumberMatrix } from '../lib/generators/numberMatrix'
 import { generateLetterMatrix } from '../lib/generators/letterMatrix'
 import { generateLetterValues } from '../lib/generators/letterValues'
+import { generatePyramid } from '../lib/generators/pyramid'
 import { generateIntersecting } from '../lib/generators/venn'
 import { generateFoldSheet } from '../lib/generators/foldSheet'
 import { generatePaperPunch } from '../lib/generators/paperPunch'
@@ -106,7 +109,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched' | 'mirror' | 'water'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched' | 'mirror' | 'water' | 'group'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -422,6 +425,15 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateLetterValues,
   },
+  {
+    id: 'pyramid',
+    chapter: 30,
+    name: 'Number and Letter Pyramid',
+    questions: visible(pyramid.questions as Question[]),
+    meta: pyramidMeta as TopicMeta,
+    missing: 'group',
+    generate: generatePyramid,
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -447,6 +459,7 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     punched: t.common.findPunched,
     mirror: t.common.findMirror,
     water: t.common.findWater,
+    group: t.common.findGroup,
   }
   return labels[topic.missing ?? 'number']
 }

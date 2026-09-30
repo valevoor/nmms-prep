@@ -5,6 +5,7 @@ import { FamilyTreeView } from '../components/FamilyTreeView'
 import { MapDiagram } from '../components/MapDiagram'
 import { Options } from '../components/Options'
 import { NumberGrid } from '../components/NumberGrid'
+import { PyramidView } from '../components/PyramidView'
 import { FigureStem } from '../components/FigureView'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
@@ -27,6 +28,7 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
     <section className="card example">
       <h3>{t.learn.example(n)}</h3>
       <NumberGrid q={q} reveal={done} />
+      {q.pyramid && <PyramidView rows={q.pyramid} />}
       {q.figures ? (
         q.layout !== 'text' && <FigureStem q={q} reveal={done} />
       ) : q.kind === 'wrong' ? (

@@ -13,6 +13,7 @@ import { FigNumbers } from './FigNumbers'
 import { MatrixColumns } from './MatrixColumns'
 import { LetterColumns } from './LetterColumns'
 import { RowColumn } from './RowColumn'
+import { PyramidMirror } from './PyramidMirror'
 import { CubeColours } from './CubeColours'
 import { FigureShade } from './FigureShade'
 import { FigureTurn } from './FigureTurn'
@@ -56,4 +57,5 @@ export const TIP_VISUALS: Record<string, ComponentType<VisualProps>> = {
   matrix: MatrixColumns,
   letterMatrix: LetterColumns,
   letterValues: RowColumn,
+  pyramid: PyramidMirror,
 }

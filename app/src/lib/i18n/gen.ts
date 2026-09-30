@@ -250,6 +250,18 @@ const genEn = {
   lvPairRule: 'Write each letter as its row number, then its column number, and check every pair in the matrix.',
   lvOr: ' or ',
 
+  // Number / letter pyramid (Chapter 30). dr: rows down (− up), dc: boxes right (− left).
+  pyShift: (dr: number, dc: number, letters: boolean) => {
+    const s = (n: number, one: string, many: string) => `${Math.abs(n)} ${Math.abs(n) === 1 ? one : many}`
+    const parts = [
+      dr && `${s(dr, 'row', 'rows')} ${dc ? (dr > 0 ? 'down' : 'up') : dr > 0 ? 'straight down' : 'straight up'}`,
+      dc && `${s(dc, 'box', 'boxes')} to the ${dc > 0 ? 'right' : 'left'}${dr ? '' : ' in its row'}`,
+    ].filter(Boolean)
+    return `Each ${letters ? 'letter' : 'letter or number'} moves ${parts.join(' and ')}.`
+  },
+  pyMirror:
+    'The 2nd group is the mirror image of the 1st, and the 4th of the 3rd: each letter or number swaps to the same place on the other side of the pyramid’s middle line.',
+
   // Number patterns (a table of numbers)
   gridMove: (rows: number, cols: number) =>
     [
@@ -423,6 +435,8 @@ const genEn = {
     'lv-prod': 'Row number × column number',
     'lv-quot': 'Row number ÷ column number',
     'lv-pair': 'A letter is its row and column numbers',
+    'py-shift': 'Every box moves by the same step',
+    'py-mirror': 'Mirror image across the middle',
   } as Record<PatternId, string>,
 }
 
@@ -647,6 +661,15 @@ const genKn: GenText = {
   lvPairAsk: (w) => `“${w}” ಅನ್ನು ಪ್ರತಿನಿಧಿಸುವ ಸಂಖ್ಯಾ ಜೋಡಿಗಳ ಗುಂಪು ಯಾವುದು?`,
   lvPairRule: 'ಪ್ರತಿ ಅಕ್ಷರವನ್ನು ಮೊದಲು ಅದರ ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ, ನಂತರ ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆಯಾಗಿ ಬರೆಯಿರಿ; ಪ್ರತಿ ಜೋಡಿಯನ್ನೂ ಮಾತೃಕೆಯಲ್ಲಿ ಪರೀಕ್ಷಿಸಿ.',
   lvOr: ' ಅಥವಾ ',
+  pyShift: (dr, dc, letters) => {
+    const parts = [
+      dr && `${Math.abs(dr)} ಸಾಲು ${dc ? '' : 'ನೇರವಾಗಿ '}${dr > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`,
+      dc && `${dr ? '' : 'ತನ್ನ ಸಾಲಿನಲ್ಲಿ '}${Math.abs(dc)} ಚೌಕ ${dc > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`,
+    ].filter(Boolean)
+    return `ಪ್ರತಿ ${letters ? 'ಅಕ್ಷರವು' : 'ಅಕ್ಷರ ಅಥವಾ ಸಂಖ್ಯೆಯು'} ${parts.join(' ಮತ್ತು ')} ಹೋಗುತ್ತದೆ.`
+  },
+  pyMirror:
+    'ಎರಡನೇ ಗುಂಪು ಮೊದಲನೆಯದರ, ಮತ್ತು ನಾಲ್ಕನೇ ಗುಂಪು ಮೂರನೆಯದರ ಕನ್ನಡಿ ಪ್ರತಿಬಿಂಬ: ಪ್ರತಿ ಅಕ್ಷರ ಅಥವಾ ಸಂಖ್ಯೆಯು ಗೋಪುರದ ಮಧ್ಯರೇಖೆಯ ಇನ್ನೊಂದು ಬದಿಯಲ್ಲಿ ಅದೇ ಸ್ಥಾನಕ್ಕೆ ಹೋಗುತ್ತದೆ.',
 
   gridMove: (rows, cols) =>
     [rows && `${Math.abs(rows)} ಅಡ್ಡಸಾಲು ${rows > 0 ? 'ಕೆಳಗೆ' : 'ಮೇಲೆ'}`, cols && `${Math.abs(cols)} ಕಂಬಸಾಲು ${cols > 0 ? 'ಬಲಕ್ಕೆ' : 'ಎಡಕ್ಕೆ'}`].filter(Boolean).join(' ಮತ್ತು '),
@@ -810,6 +833,8 @@ const genKn: GenText = {
     'lv-prod': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ × ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
     'lv-quot': 'ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆ ÷ ಕಂಬಸಾಲಿನ ಸಂಖ್ಯೆ',
     'lv-pair': 'ಅಕ್ಷರವು ಅದರ ಅಡ್ಡಸಾಲು ಮತ್ತು ಕಂಬಸಾಲು ಸಂಖ್ಯೆಗಳು',
+    'py-shift': 'ಪ್ರತಿ ಚೌಕವೂ ಒಂದೇ ಹೆಜ್ಜೆ ಚಲಿಸುತ್ತದೆ',
+    'py-mirror': 'ಮಧ್ಯರೇಖೆಯಲ್ಲಿ ಕನ್ನಡಿ ಪ್ರತಿಬಿಂಬ',
   },
 }
 

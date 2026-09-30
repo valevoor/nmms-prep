@@ -185,6 +185,9 @@ export type PatternId =
   | 'lv-prod'
   | 'lv-quot'
   | 'lv-pair'
+  // Number / letter pyramid (Chapter 30)
+  | 'py-shift'
+  | 'py-mirror'
 
 export interface Question {
   id: string
@@ -210,6 +213,8 @@ export interface Question {
   clock?: [number, number]
   /** A number table the question's groups are taken from (Number Patterns); rows of numbers. */
   grid?: number[][]
+  /** A pyramid of letters and numbers the question's groups are read from (Chapter 30); rows from the top. */
+  pyramid?: string[][]
   /** Picture questions: the pictures in the question ('?' marks the blank) and, unless the options are words, in the options. */
   figures?: { terms: Figure[]; options?: Record<OptionKey, Figure> }
   options: Record<OptionKey, string>

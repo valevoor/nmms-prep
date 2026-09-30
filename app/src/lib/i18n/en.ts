@@ -31,6 +31,8 @@ export const en = {
     findPunched: 'How does the paper look when opened out?',
     findMirror: 'Which one is its mirror image (mirror on the right)?',
     findWater: 'Which one is its water image (water below)?',
+    findGroup: 'Find the missing group',
+    pyramid: 'Pyramid',
     figure: (n: number) => `Figure ${n}`,
     figureOption: (k: string) => `Answer figure ${k}`,
     pictureQuestion: 'Picture question',
@@ -304,6 +306,11 @@ export const en = {
       buttons: ['Find the row', 'Find the column', 'Use the rule'],
       label:
         'A table of letters with 1, 2, 3 along the top and 1, 2, 3 down the side. Row 1 is G, U, B; row 2 is H, L, E; row 3 is O, R, P. First tap: E is in row 2. Second tap: E is in column 3. Last tap: each letter is its row number times its column number, so E = 2 × 3 = 6.',
+    },
+    pyramid: {
+      buttons: ['First group', 'Second group', 'Do the same'],
+      label:
+        'A pyramid of the letters a to y: a on top, then b c d, e to i, j to p, and q to y at the bottom, with a dashed line down the middle. First tap: the letters r, k and t are marked. Second tap: x, o and v are marked; they are the mirror images of r, k and t across the middle line. Last tap: s, l and u are marked, and their mirror images are w, n and u, so the answer is wnu.',
     },
     figNumbers: {
       buttons: ['First figure', 'Second figure', 'Use the rule'],

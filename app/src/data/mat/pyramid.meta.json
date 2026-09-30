@@ -1,0 +1,34 @@
+{
+  "topic": "pyramid",
+  "intro": "Letters (and sometimes numbers) are written in a pyramid of boxes. Each question has two pairs of groups: the 2nd group is the 1st moved on the pyramid, and the 4th is the 3rd moved the same way. Find the groups on the pyramid, see how the shape moved (down, sideways, or flipped to the other side of the middle), then move the 3rd group the same way.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Find the groups on the pyramid",
+      "visual": "pyramid",
+      "body": "Mark the boxes of the first group, then of the second. Look at how the whole shape moved: straight down, down and to one side, along the row, or flipped to the other side of the middle line (a mirror image). Then move the third group the same way.",
+      "caption": "r k t and x o v are mirror images: r ↔ x, k ↔ o, t ↔ v. So s l u ↔ w n u."
+    },
+    {
+      "title": "Straight down is the box under the middle",
+      "body": "Each box sits over two boxes of the row below, and straight under its middle is one more box. In the letter pyramid, straight down goes a → c → g → m → u."
+    },
+    {
+      "title": "Mirror images",
+      "body": "Fold the pyramid along its middle line: b ↔ d, e ↔ i, j ↔ p, q ↔ y. A letter on the middle line (a, c, g, m, u) stays where it is."
+    },
+    {
+      "title": "Keep the order",
+      "body": "Move the 1st letter of the group first, then the 2nd, and so on, and write them in the same order. Options often have the right letters in the wrong order."
+    },
+    {
+      "title": "Which pairs match?",
+      "body": "Sometimes the 1st and 3rd groups are mirror images (B1C2 and F3E2) instead of the 1st and 2nd. Then the answer is the mirror image of the 2nd group: G4H5 ↔ O10N9."
+    },
+    {
+      "title": "Numbers are boxes too",
+      "body": "In the pyramid of numbers and letters, 1CU15 is four boxes: 1, C, U and 15. Read a two-digit number as one box."
+    }
+  ],
+  "workedExamples": ["py-b01", "py-b02", "py-b06", "py-b13"]
+}

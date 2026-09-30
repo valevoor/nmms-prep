@@ -3,6 +3,7 @@ import { useQuestionText } from '../lib/i18n/content'
 import type { Question } from '../types'
 import { FigureStem } from './FigureView'
 import { NumberGrid } from './NumberGrid'
+import { PyramidView } from './PyramidView'
 import { SeriesView } from './SeriesView'
 
 interface Props {
@@ -21,6 +22,7 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
     return (
       <>
         <NumberGrid q={q} />
+        {q.pyramid && <PyramidView rows={q.pyramid} />}
         <SeriesView terms={q.terms} reveal={reveal} size={size} layout={q.layout} />
       </>
     )

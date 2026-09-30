@@ -312,6 +312,20 @@ const ART: Record<number, ReactNode> = {
       </text>
     </>
   ),
+  // Number / Letter Pyramid: a small pyramid of boxes with the top one lit
+  30: (
+    <>
+      <rect x={18} y={5} width={12} height={12} rx={2} className="art-tile-accent" />
+      <rect x={12} y={18} width={12} height={12} rx={2} />
+      <rect x={24} y={18} width={12} height={12} rx={2} />
+      <rect x={6} y={31} width={12} height={12} rx={2} />
+      <rect x={18} y={31} width={12} height={12} rx={2} />
+      <rect x={30} y={31} width={12} height={12} rx={2} />
+      <text x={24} y={14.5} textAnchor="middle" className="art-text art-small art-fill-accent">
+        a
+      </text>
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */
