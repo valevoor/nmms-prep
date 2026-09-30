@@ -34,6 +34,9 @@ jobs:
       - run: npm test
       - run: npm run check:content
       - run: npm run build
+      # The talk deck (slides/, a Marp file) is published at /slides/ next to the app.
+      - run: npx --yes @marp-team/marp-cli@4 ../slides/nmms-exam-overview.md --html -o dist/slides/index.html
+      - run: cp -r ../slides/assets dist/slides/assets
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app/dist

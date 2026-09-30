@@ -29,6 +29,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,json}'],
+        // The talk deck at /slides/ is added after the build; don't answer it with the app's index.html.
+        navigateFallbackDenylist: [/\/slides\//],
       },
     }),
   ],

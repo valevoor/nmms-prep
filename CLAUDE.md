@@ -27,6 +27,7 @@ Before finishing a change, run `npm test`, `npm run check:content`, `npm run lin
 
 - **Live at https://valevoor.github.io/nmms-prep/** (public repo `valevoor/nmms-prep`).
 - **Pushing to `main` deploys.** `.github/workflows/deploy.yml` runs lint, tests, `check:content` and build, then publishes `app/dist` to GitHub Pages.
+- **Talk slides:** `slides/nmms-exam-overview.md` is a Marp deck. The workflow renders it to `dist/slides/` (live at `/nmms-prep/slides/`), and `navigateFallbackDenylist` in `vite.config.ts` keeps the app's service worker away from it.
 - **Before you push:** a push goes live for students within minutes, so run the checks locally first. Only commit or push when the user asks.
 - **Asset paths:** `vite.config.ts` uses `base: './'` so the app works under the `/nmms-prep/` path. Keep all asset paths relative.
 
@@ -34,6 +35,7 @@ Before finishing a change, run `npm test`, `npm run check:content`, `npm run lin
 
 ```
 NMMS.pdf                        source material
+slides/                         talk deck (Marp) + its images, published at /slides/
 tools/                          extract_pages.swift, render_pages.swift, check_<topic>.ts
 app/src/
   data/topics.ts                READY_TOPICS (one entry per chapter) + UPCOMING_MAT ("coming soon")
