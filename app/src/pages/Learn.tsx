@@ -11,14 +11,15 @@ import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
 import type { ReadyTopic } from '../data/topics'
-import { useT } from '../lib/i18n'
-import { useQuestionText, useTopicMeta } from '../lib/i18n/content'
+import { useLocale, useT } from '../lib/i18n'
+import { useQuestionTexts, useTopicMetas } from '../lib/i18n/content'
+import { BiBlock } from '../components/Bi'
 import { href } from '../lib/router'
 import type { Question } from '../types'
 
 function WorkedExample({ q, n }: { q: Question; n: number }) {
   const t = useT()
-  const text = useQuestionText(q)
+  const { first: text, second, lang, otherLang } = useQuestionTexts(q)
   // At least one step, so examples without ops (e.g. analogies) show the rule before the answer.
   const steps = Math.max(q.ops?.length ?? 0, 1)
   // 0 = question only, 1..steps = rule and ops shown, steps+1 = answer shown
@@ -45,11 +46,11 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
       )}
       {q.layout === 'text' && <QuestionStem q={q} reveal={done ? q.options[q.answer] : undefined} />}
       {(q.layout === 'odd' || q.layout === 'text' || q.figures) && <Options q={q} reveal={done} />}
-      {step > 0 && <p className="rule">{text.rule}</p>}
+      {step > 0 && <BiBlock className="rule" text={text.rule} other={second?.rule} lang={lang} otherLang={otherLang} />}
       {done && <MapDiagram q={q} />}
       {done && <FamilyTreeView q={q} />}
       {done && <ClockFace q={q} />}
-      {done && <p className="working">{text.working}</p>}
+      {done && <BiBlock className="working" text={text.working} other={second?.working} lang={lang} otherLang={otherLang} />}
       <div className="actions">
         {!done ? (
           <button className="btn btn-primary" onClick={() => setStep(step + 1)}>
@@ -72,16 +73,17 @@ const PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 
 
 export function Learn({ topic }: { topic: ReadyTopic }) {
   const t = useT()
-  const meta = useTopicMeta(topic.id, topic.meta)
+  const lang = useLocale()
+  const { first: meta, second, otherLang } = useTopicMetas(topic.id, topic.meta)
   const examples = meta.workedExamples.map((id) => topic.questions.find((q) => q.id === id)).filter((q): q is Question => !!q)
   return (
     <Page title={t.learn.title(t.chapters[topic.chapter] ?? topic.name)} back="">
-      <p className="lead">{meta.intro}</p>
+      <BiBlock className="lead" text={meta.intro} other={second?.intro} lang={lang} otherLang={otherLang} />
 
       <h2 className="section-title">{t.learn.tips}</h2>
       <div className="tips">
         {meta.tips.map((tip, i) => (
-          <TipCard key={i} tip={tip} n={i + 1} />
+          <TipCard key={i} tip={tip} other={second?.tips[i]} n={i + 1} />
         ))}
       </div>
 

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { BiLabel } from '../components/Bi'
 import { Explanation } from '../components/Explanation'
 import { LangSwitch } from '../components/LangSwitch'
 import { Options } from '../components/Options'
@@ -116,7 +117,9 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
             {source === 'book' ? t.common.bookQ(q.bookNo) : t.classroom.newQuestion} · {index + 1}
             {source === 'book' && t.classroom.of(list.length)}
           </span>
-          <span className="muted">{askLabel(t, topic)}</span>
+          <span className="muted">
+            <BiLabel get={(d) => askLabel(d, topic)} />
+          </span>
         </div>
         <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} />
         <Options q={q} size="lg" reveal={revealed} />

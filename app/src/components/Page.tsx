@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useT } from '../lib/i18n'
 import { href } from '../lib/router'
+import { BothToggle } from './Bi'
 
 interface Props {
   title: string
@@ -25,6 +26,7 @@ export function Page({ title, back, right, wide, children }: Props) {
           </span>
         )}
         <h1>{title}</h1>
+        <BothToggle />
         <div className="topbar-right">{right}</div>
       </header>
       <main>{children}</main>

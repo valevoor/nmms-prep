@@ -1,5 +1,6 @@
 import { CHAPTER_FILES } from '../../data/chapters'
 import type { OptionKey, Question, QuestionText, TopicMeta } from '../../types'
+import { useShowBoth } from './both'
 import { useLocale } from './locale'
 import type { Locale } from './locale'
 
@@ -33,10 +34,6 @@ export function questionText(q: Question, locale: Locale): ShownText {
   }
 }
 
-export function useQuestionText(q: Question): ShownText {
-  return questionText(q, useLocale())
-}
-
 /** A topic's intro and tips in one language. Tip `visual`s always come from the English meta. */
 export function topicMeta(topicId: string, meta: TopicMeta, locale: Locale): TopicMeta {
   const kn = locale === 'kn' ? META_KN[topicId] : undefined
@@ -48,7 +45,25 @@ export function topicMeta(topicId: string, meta: TopicMeta, locale: Locale): Top
   }
 }
 
-export function useTopicMeta(topicId: string, meta: TopicMeta): TopicMeta {
-  return topicMeta(topicId, meta, useLocale())
+
+/** The other language: the one shown second when both are on. */
+export const otherLocale = (l: Locale): Locale => (l === 'en' ? 'kn' : 'en')
+
+/**
+ * A question's words in the chosen language (`first`) and, when both languages are on for this chapter,
+ * in the other one (`second`). A field with no translation comes out the same in both; callers show it once.
+ */
+export function useQuestionTexts(q: Question): { first: ShownText; second?: ShownText; lang: Locale; otherLang: Locale } {
+  const lang = useLocale()
+  const otherLang = otherLocale(lang)
+  const both = useShowBoth()
+  return { first: questionText(q, lang), second: both ? questionText(q, otherLang) : undefined, lang, otherLang }
 }
 
+/** A topic's intro and tips in the chosen language and, when both are on, in the other one. */
+export function useTopicMetas(topicId: string, meta: TopicMeta): { first: TopicMeta; second?: TopicMeta; otherLang: Locale } {
+  const lang = useLocale()
+  const otherLang = otherLocale(lang)
+  const both = useShowBoth()
+  return { first: topicMeta(topicId, meta, lang), second: both ? topicMeta(topicId, meta, otherLang) : undefined, otherLang }
+}

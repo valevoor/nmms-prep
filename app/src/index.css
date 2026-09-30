@@ -1672,6 +1672,13 @@ a {
   margin: 6px 0;
 }
 
+/* The instruction ("Find the missing number") under the question counter. */
+.q-ask {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
 .timer {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
@@ -2101,6 +2108,118 @@ kbd {
 :lang(kn) .section-title {
   text-transform: none;
   letter-spacing: 0;
+}
+
+/* ---------- both languages at once (components/Bi.tsx) ---------- */
+
+.both-toggle {
+  flex: none;
+  min-height: 40px;
+  min-width: 52px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.both-toggle.on {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-ink);
+}
+
+/* The two versions of one paragraph, one under the other, the same size. */
+.bi {
+  display: grid;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.stem .bi {
+  margin: 0;
+}
+
+.bi > p {
+  margin: 0;
+}
+
+.bi > * + * {
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+}
+
+/* Kannada letters need the extra line height even on an English page. */
+.bi > :lang(kn),
+.bi-inline:lang(kn),
+.bi-sub:lang(kn) {
+  line-height: 1.7;
+}
+
+.bi-tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  vertical-align: 0.15em;
+}
+
+.explanation .bi-tag {
+  background: var(--surface);
+}
+
+.bi-stacked {
+  display: block;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+/* A review line in Quick test results keeps each language to one line. */
+.review-q .bi-stacked {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: inherit;
+}
+
+/* The instruction beside "Book Q1" stays right-aligned when its second language wraps under it. */
+.q-head > :last-child {
+  text-align: right;
+}
+
+/* A tip heading's second language. */
+.bi-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Classroom on a wide screen: English and Kannada as two columns, like a bilingual textbook. */
+@media (min-width: 900px) {
+  .stem-lg .bi,
+  .class-card .explanation .bi {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .stem-lg .bi > * + *,
+  .class-card .explanation .bi > * + * {
+    border-top: none;
+    padding-top: 0;
+    border-left: 1px dashed var(--border);
+    padding-left: 24px;
+  }
 }
 
 /* ---------- number table (Number Patterns) ---------- */

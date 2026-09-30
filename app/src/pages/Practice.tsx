@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { BiLabel } from '../components/Bi'
 import { Explanation } from '../components/Explanation'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
@@ -111,7 +112,9 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
         <section className="card question" key={q.id}>
           <div className="q-head">
             <span className="muted">{q.generated ? t.common.practiceQuestion : t.common.bookQ(q.bookNo)}</span>
-            <span className="muted">{askLabel(t, topic)}</span>
+            <span className="muted">
+              <BiLabel get={(d) => askLabel(d, topic)} />
+            </span>
           </div>
           <QuestionStem q={q} reveal={chosen ? q.options[q.answer] : undefined} />
           <Options q={q} chosen={chosen} reveal={!!chosen} onPick={pick} />

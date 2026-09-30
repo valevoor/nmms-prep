@@ -72,6 +72,8 @@ The questions are generated, and every option is checked so that exactly one rul
 
 **Language:** an EN / ಕನ್ನಡ switch at the top of the Home and Classroom screens changes the whole app, including questions, explanations, tips and the games. English is the default, and the choice is saved on the device. See [Kannada](#kannada) below.
 
+**Both languages at once:** for classes with English-medium and Kannada-medium students together, an **EN+ಕ** button at the top of every chapter screen shows the question, the options, the explanation and the Learn tips in English and Kannada together. The language picked on the EN / ಕನ್ನಡ switch comes first and is used for the buttons. Short options share a line ("North · ಉತ್ತರ"); long ones put the second language underneath. On a wide screen, Classroom shows the two languages as side-by-side columns. Text with no translation, and working that reads the same in both ("3 × 2 = 6"), is shown once. The "Guess the rule" game doesn't use it. The choice is saved on the device.
+
 **Theme:** a ☀️ / 🌙 / 🌓 (Light / Dark / Auto) switch at the top of the Home screen. It starts on Light, even on phones set to dark mode. Auto follows the phone's setting. The choice is saved on the device.
 
 Progress is saved on the device (IndexedDB). After the first visit the app works fully offline, and it can be installed with "Add to Home Screen".

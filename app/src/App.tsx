@@ -1,7 +1,8 @@
 import { useLayoutEffect, useRef } from 'react'
 import { Page } from './components/Page'
-import { useT } from './lib/i18n'
+import { TopicIdContext, useT } from './lib/i18n'
 import { getTopic } from './data/topics'
+import type { ReadyTopic } from './data/topics'
 import { setLastTopic } from './lib/lastTopic'
 import { href, useRoute } from './lib/router'
 import { Chapter } from './pages/Chapter'
@@ -59,7 +60,11 @@ export default function App() {
 
   if (parts.length === 0) return <Home />
   if (!topic) return <NotFound />
+  // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.
+  return <TopicIdContext.Provider value={view === 'rule' ? undefined : topic.id}>{topicPage(topic, view, query)}</TopicIdContext.Provider>
+}
 
+function topicPage(topic: ReadyTopic, view: string | undefined, query: URLSearchParams) {
   switch (view) {
     case undefined:
       return <Chapter topic={topic} />

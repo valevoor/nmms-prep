@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
+import { BiLabel } from '../components/Bi'
 import { Explanation } from '../components/Explanation'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
@@ -6,9 +7,11 @@ import { Rich } from '../components/Rich'
 import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { mmss, useCountdown } from '../lib/countdown'
+import { askLabel } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
-import { useLocale, useT } from '../lib/i18n'
-import { questionText } from '../lib/i18n/content'
+import { DICTS, useLocale, useShowBoth, useT } from '../lib/i18n'
+import type { Locale } from '../lib/i18n'
+import { otherLocale, questionText } from '../lib/i18n/content'
 import { recordAnswer, recordTest } from '../lib/progress'
 import { href } from '../lib/router'
 import { termsText } from '../lib/series'
@@ -30,7 +33,11 @@ type Phase = 'intro' | 'running' | 'done'
 export function QuickTest({ topic }: { topic: ReadyTopic }) {
   const t = useT()
   const locale = useLocale()
+  const both = useShowBoth()
   const name = t.chapters[topic.chapter] ?? topic.name
+  // The other language's interface text, for the start page when both languages are on.
+  const otherLang = otherLocale(locale)
+  const o = both ? DICTS[otherLang] : undefined
   const [phase, setPhase] = useState<Phase>('intro')
   const [qs, setQs] = useState<Question[]>([])
   const [answers, setAnswers] = useState<Record<string, OptionKey>>({})
@@ -75,11 +82,23 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
     return (
       <Page title={t.test.title} back="">
         <section className="card intro">
-          <h2>{t.test.heading(name)}</h2>
+          <h2>
+            {t.test.heading(name)}
+            {o && (
+              <span className="bi-sub" lang={otherLang}>
+                {o.test.heading(o.chapters[topic.chapter] ?? topic.name)}
+              </span>
+            )}
+          </h2>
           <ul className="rules">
-            {t.test.rules(TOTAL, SECONDS / 60).map((r) => (
+            {t.test.rules(TOTAL, SECONDS / 60).map((r, i) => (
               <li key={r.join()}>
                 <Rich parts={r} />
+                {o && (
+                  <span className="bi-sub" lang={otherLang}>
+                    <Rich parts={o.test.rules(TOTAL, SECONDS / 60)[i]} />
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -129,6 +148,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
                   <span className="review-mark">{ok ? '✓' : a ? '✗' : '–'}</span>
                   <span className="review-q">
                     {i + 1}. {q.figures ? t.common.pictureQuestion : q.layout === 'text' ? questionText(q, locale).prompt : termsText(q.terms, q.layout)}
+                    {both && q.layout === 'text' && !q.figures && <OtherPrompt q={q} locale={locale} />}
                   </span>
                   <span className="muted">{ok ? q.answer : `${a ?? t.test.skipped} → ${q.answer}`}</span>
                 </button>
@@ -156,6 +176,9 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
           <span>{t.test.questionOf(index + 1, qs.length)}</span>
           <span className="muted">{t.test.answered(answered)}</span>
         </div>
+        <p className="q-ask muted">
+          <BiLabel get={(d) => askLabel(d, topic)} />
+        </p>
         <QuestionStem q={q} />
         <Options q={q} chosen={answers[q.id]} onPick={(k) => setAnswers((s) => ({ ...s, [q.id]: k }))} />
         <div className="nav-row">
@@ -187,5 +210,17 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
         </button>
       </div>
     </Page>
+  )
+}
+
+/** A text question's prompt in the other language, on its own line, when it has one. */
+function OtherPrompt({ q, locale }: { q: Question; locale: Locale }) {
+  const other = otherLocale(locale)
+  const prompt = questionText(q, other).prompt
+  if (!prompt || prompt === questionText(q, locale).prompt) return null
+  return (
+    <span className="bi-stacked" lang={other}>
+      {prompt}
+    </span>
   )
 }

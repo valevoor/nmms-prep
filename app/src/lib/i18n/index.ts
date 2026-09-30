@@ -14,3 +14,4 @@ export const DICTS: Record<Locale, Dict> = { en, kn }
 export function useT(): Dict {
   return DICTS[useLocale()]
 }
+export { setBoth, TopicIdContext, useBothAvailable, useBothSetting, useShowBoth } from './both'

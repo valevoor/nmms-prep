@@ -1,15 +1,17 @@
 import { ChapterArt } from '../components/ChapterArt'
 import { Page } from '../components/Page'
 import type { ReadyTopic } from '../data/topics'
-import { useT } from '../lib/i18n'
-import { useTopicMeta } from '../lib/i18n/content'
+import { useLocale, useT } from '../lib/i18n'
+import { useTopicMetas } from '../lib/i18n/content'
+import { BiBlock } from '../components/Bi'
 import { summarize, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
 
 /** One chapter's progress and the ways into it (Learn, Practice, Quick test, Classroom, game). */
 export function Chapter({ topic: t }: { topic: ReadyTopic }) {
   const tr = useT()
-  const meta = useTopicMeta(t.id, t.meta)
+  const lang = useLocale()
+  const { first: meta, second, otherLang } = useTopicMetas(t.id, t.meta)
   const p = useProgress(t.id)
   const s = summarize(p, t.questions.length)
   const base = `t/${t.id}`
@@ -20,7 +22,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           <ChapterArt chapter={t.chapter} size={72} />
           <div>
             <span className="chip">{tr.common.chapter(t.chapter)}</span>
-            <p className="muted topic-intro">{meta.intro}</p>
+            <BiBlock className="muted topic-intro" text={meta.intro} other={second?.intro} lang={lang} otherLang={otherLang} />
           </div>
         </div>
 

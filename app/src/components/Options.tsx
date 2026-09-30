@@ -1,7 +1,8 @@
 import { OPTION_KEYS } from '../types'
 import type { OptionKey, Question } from '../types'
 import { useT } from '../lib/i18n'
-import { useQuestionText } from '../lib/i18n/content'
+import { useQuestionTexts } from '../lib/i18n/content'
+import { BiInline } from './Bi'
 import { FigureView } from './FigureView'
 import { Term } from './SeriesView'
 
@@ -16,7 +17,11 @@ interface Props {
 
 export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
   const t = useT()
-  const { options } = useQuestionText(q)
+  const { first, second, otherLang } = useQuestionTexts(q)
+  const options = first.options
+  const others = OPTION_KEYS.map((k) => (second && second.options[k] !== options[k] ? second.options[k] : undefined))
+  // Long options (e.g. "Only decision I follows") put the second language on its own line, all four alike.
+  const stacked = others.some((o, i) => o && options[OPTION_KEYS[i]].length + o.length > 24)
   const figs = q.figures?.options
   // Options that are whole equations (Arithmetical Operations) need the full width.
   const wide = !figs && Object.values(options).some((v) => v.includes('='))
@@ -39,7 +44,7 @@ export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
           >
             <span className="option-key">{k}</span>
             <span className="option-value">
-              {figs ? <FigureView f={figs[k]} label={t.common.figureOption(k)} /> : <Term value={options[k]} />}
+              {figs ? <FigureView f={figs[k]} label={t.common.figureOption(k)} /> : <BiInline first={<Term value={options[k]} />} other={others[OPTION_KEYS.indexOf(k)]} otherLang={otherLang} stacked={stacked} />}
             </span>
             {state === 'correct' && <span className="option-mark" aria-label={t.common.correctAnswer}>✓</span>}
             {state === 'wrong' && <span className="option-mark" aria-label={t.common.yourWrongAnswer}>✗</span>}

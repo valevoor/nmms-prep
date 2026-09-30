@@ -1,5 +1,6 @@
 import { useT } from '../lib/i18n'
-import { useQuestionText } from '../lib/i18n/content'
+import { useQuestionTexts } from '../lib/i18n/content'
+import { BiBlock } from './Bi'
 import type { Question } from '../types'
 import { FigureStem } from './FigureView'
 import { NumberGrid } from './NumberGrid'
@@ -15,7 +16,7 @@ interface Props {
 
 /** The question itself: a series or analogy, or (layout 'text') a sentence with an optional table and sequence. */
 export function QuestionStem({ q, reveal, size = 'md' }: Props) {
-  const { prompt } = useQuestionText(q)
+  const { first, second, lang, otherLang } = useQuestionTexts(q)
   const t = useT()
   if (q.figures && q.layout !== 'text') return <FigureStem q={q} reveal={!!reveal} size={size} />
   if (q.layout !== 'text')
@@ -58,7 +59,7 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
           </tbody>
         </table>
       )}
-      <p className="stem-prompt">{prompt}</p>
+      {first.prompt && <BiBlock className="stem-prompt" text={first.prompt} other={second?.prompt} lang={lang} otherLang={otherLang} />}
       {/* "= 11" stays on one line when an equation wraps. */}
       {q.terms.length > 0 && <p className="stem-seq">{q.terms.join('\u2002').replace(/ = /g, ' =\u00a0')}</p>}
     </div>

@@ -67,6 +67,7 @@ export const en = {
     dark: 'Dark',
     auto: 'Auto',
     language: 'Language',
+    both: 'Show questions in English and Kannada',
   },
   /** Chapter names, by the study material's chapter number. */
   chapters: {
