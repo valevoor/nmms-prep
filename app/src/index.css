@@ -10,6 +10,9 @@
   --primary-soft: #e6ecff;
   --accent: #f59e0b;
   --accent-soft: #fff4dc;
+  /* Text on --accent-soft (the amber of --accent itself is too light to read on it). */
+  --accent-ink: #8a4b00;
+  --accent-line: #f5c76a;
   --good: #15803d;
   --good-soft: #e3f6e9;
   --bad: #c62828;
@@ -32,6 +35,8 @@
   --primary-soft: #232c4d;
   --accent: #fbbf24;
   --accent-soft: #3a2f16;
+  --accent-ink: #fcd34d;
+  --accent-line: #6b5420;
   --good: #4ade80;
   --good-soft: #15291d;
   --bad: #f87171;
@@ -2475,4 +2480,426 @@ kbd {
 
 .tv .tv-paint-right {
   fill: var(--good-soft);
+}
+
+/* ---------- Facts to remember (#/facts) ---------- */
+
+.facts-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.facts-card:hover {
+  border-color: var(--accent);
+}
+
+.facts-card-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 1.5rem;
+}
+
+.facts-card-sub {
+  font-size: 0.85rem;
+}
+
+.facts-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.facts-tabs a {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 0 4px;
+  border-radius: 9px;
+  color: var(--text);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.facts-tabs a[aria-current='page'] {
+  background: var(--primary);
+  color: var(--primary-ink);
+}
+
+.facts-title {
+  font-size: 1.3rem;
+  margin: 20px 0 4px;
+}
+
+.facts-intro {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+
+.facts-intro strong {
+  color: var(--text);
+}
+
+/* The 1–100 grid: primes in blue, look-alikes outlined in amber. */
+.hundred {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.hundred li {
+  display: grid;
+  place-items: center;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.hundred .prime {
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-weight: 700;
+}
+
+.hundred .trap {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 2px var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.facts-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+}
+
+.facts-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.swatch.prime {
+  background: var(--primary);
+}
+
+.swatch.trap {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.by-tens {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-variant-numeric: tabular-nums;
+}
+
+.by-tens li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 6px 14px;
+}
+
+.by-tens li + li {
+  border-top: 1px solid var(--border);
+}
+
+.by-tens .muted {
+  width: 56px;
+  flex: none;
+  font-size: 0.8rem;
+}
+
+.by-tens b {
+  flex: 1;
+  white-space: pre-wrap;
+  letter-spacing: 0.02em;
+}
+
+.by-tens .count {
+  min-width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Squares and cubes: "12²  144" tiles. */
+.power-grid {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.power-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.power-grid li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 48px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.power-grid li > span {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.power-grid li > b {
+  font-size: 1.1rem;
+}
+
+.power-grid .hl {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.power-grid .hl > span {
+  color: var(--accent-ink);
+}
+
+.trick-card h3 {
+  font-size: 1rem;
+  margin: 0 0 6px;
+}
+
+.trick-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.trick-card p + p,
+.trick-card div + p,
+.trick-card ul + p {
+  margin-top: 8px;
+}
+
+.trick-card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+.trick-card.warn {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.trap-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.trap-list span {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.trick-card:not(.warn) .trap-list span {
+  background: var(--surface-2);
+}
+
+.gaps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gaps > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gaps b {
+  padding: 2px 10px;
+  border-radius: 8px;
+  background: var(--primary-soft);
+}
+
+.gaps .gap {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.last-digits {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+
+.trick-card .last-digits {
+  padding-left: 0;
+}
+
+.last-digits li {
+  padding: 6px 0;
+  border-radius: 8px;
+  background: var(--surface);
+  white-space: nowrap;
+}
+
+.last-digits .hl {
+  box-shadow: inset 0 0 0 2px var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.facts-shortcut {
+  margin-top: 4px;
+}
+
+.facts-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.facts-chips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-line);
+  background: var(--surface);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.facts-chips a:hover {
+  border-color: var(--accent);
+}
+
+.facts-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ---------- Settings ("Aa" in the top bar of every page but Home) ---------- */
+
+.settings {
+  flex: none;
+}
+
+.settings-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-btn.on,
+.settings-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Drops down from the sticky top bar, against the right edge of the page. */
+.settings-panel {
+  position: absolute;
+  top: calc(100% - 4px);
+  right: 0;
+  z-index: 10;
+  width: min(320px, 100%);
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 28px rgb(20 30 60 / 0.18);
+}
+
+.settings-row {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* There is room in the panel to name each theme. */
+.settings-panel .theme-name {
+  display: inline;
 }

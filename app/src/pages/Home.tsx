@@ -87,6 +87,17 @@ export function Home() {
 
       <ContinueCard />
 
+      <a className="card facts-card" href={href('facts')}>
+        <span className="facts-card-icon" aria-hidden>
+          📘
+        </span>
+        <span className="continue-main">
+          <span className="continue-name">{t.facts.title}</span>
+          <span className="muted facts-card-sub">{t.facts.homeSub}</span>
+        </span>
+        <span aria-hidden>→</span>
+      </a>
+
       <h2 className="section-title">{t.home.ready}</h2>
       <ul className="chapter-list">
         {BY_CHAPTER.map((x) => (

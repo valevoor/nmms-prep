@@ -10,6 +10,7 @@ import { FigureStem } from '../components/FigureView'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
+import { PRIMES } from '../data/facts'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
 import { useQuestionTexts, useTopicMetas } from '../lib/i18n/content'
@@ -69,7 +70,6 @@ function WorkedExample({ q, n }: { q: Question; n: number }) {
 const SQUARES = Array.from({ length: 20 }, (_, i) => i + 1)
 const CUBES = Array.from({ length: 10 }, (_, i) => i + 1)
 const LETTERS = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i))
-const PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 export function Learn({ topic }: { topic: ReadyTopic }) {
   const t = useT()
@@ -143,6 +143,9 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
           </div>
           <h3>{t.learn.primes}</h3>
           <p className="primes">{PRIMES.join(', ')}</p>
+          <a className="facts-more" href={href('facts')}>
+            {t.facts.learnLink}
+          </a>
         </section>
       )}
 

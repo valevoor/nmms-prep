@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useT } from '../lib/i18n'
 import { href } from '../lib/router'
 import { BothToggle } from './Bi'
+import { SettingsMenu } from './SettingsMenu'
 
 interface Props {
   title: string
@@ -28,6 +29,7 @@ export function Page({ title, back, right, wide, children }: Props) {
         <h1>{title}</h1>
         <BothToggle />
         <div className="topbar-right">{right}</div>
+        {back !== undefined && <SettingsMenu />}
       </header>
       <main>{children}</main>
     </div>

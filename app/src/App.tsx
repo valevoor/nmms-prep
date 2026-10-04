@@ -7,6 +7,8 @@ import { setLastTopic } from './lib/lastTopic'
 import { href, useRoute } from './lib/router'
 import { Chapter } from './pages/Chapter'
 import { Classroom } from './pages/Classroom'
+import { FACT_TABS } from './data/facts'
+import { Facts } from './pages/Facts'
 import { Home } from './pages/Home'
 import { Learn } from './pages/Learn'
 import { Practice } from './pages/Practice'
@@ -59,6 +61,10 @@ export default function App() {
   }, [topic])
 
   if (parts.length === 0) return <Home />
+  if (kind === 'facts' && parts.length <= 2) {
+    const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
+    return tab ? <Facts tab={tab} /> : <NotFound />
+  }
   if (!topic) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.
   return <TopicIdContext.Provider value={view === 'rule' ? undefined : topic.id}>{topicPage(topic, view, query)}</TopicIdContext.Provider>

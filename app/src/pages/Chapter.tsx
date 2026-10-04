@@ -4,6 +4,7 @@ import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
 import { useTopicMetas } from '../lib/i18n/content'
 import { BiBlock } from '../components/Bi'
+import { FACT_CHAPTERS, FACT_TABS } from '../data/facts'
 import { summarize, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
 
@@ -15,6 +16,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
   const p = useProgress(t.id)
   const s = summarize(p, t.questions.length)
   const base = `t/${t.id}`
+  const factTab = FACT_CHAPTERS[t.id]
   return (
     <Page title={tr.chapters[t.chapter] ?? t.name} back="">
       <section className="card topic-card">
@@ -76,6 +78,21 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           </a>
         )}
       </section>
+
+      {factTab && (
+        <section className="card trick-card warn facts-shortcut">
+          <h3>{tr.facts.chapterTitle}</h3>
+          <p>{tr.facts.chapterBody}</p>
+          <div className="facts-chips">
+            {/* The chapter's main table first, then the other two. */}
+            {[factTab, ...FACT_TABS.filter((k) => k !== factTab)].map((k) => (
+              <a key={k} href={href(`facts/${k}`)}>
+                {tr.facts.tabs[k]} →
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
     </Page>
   )
 }

@@ -56,7 +56,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLElement && e.target.closest('select')) return
+      if (e.target instanceof HTMLElement && e.target.closest('select, .topbar')) return
       if (e.key === 'ArrowRight') go(1)
       else if (e.key === 'ArrowLeft') go(-1)
       else if (e.key === ' ' || e.key === 'Enter') {

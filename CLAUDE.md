@@ -6,7 +6,7 @@ An offline practice app (PWA) for the NMMS **Mental Ability Test**, for Class 8 
 
 - **English and Kannada.** An EN / ಕನ್ನಡ switch covers the whole app, and **EN+ಕ** on chapter screens shows questions, explanations and tips in both at once (`components/Bi.tsx`, `lib/i18n/both.ts`). All the Kannada is an unreviewed draft (see README, "Kannada"). Every new chapter needs `<topic>.kn.json` and `<topic>.meta.kn.json`, and generators build every sentence in both languages (`both()` in `lib/i18n/gen.ts`).
 - **MAT is complete:** all 38 chapters are built, each in full (book questions, checker, generator, tips, Kannada) and in its own commit. Don't start on SAT, a backend or logins without asking.
-- **The theme starts on Light**, even on phones set to dark mode, and has a Light / Dark / Auto switch on Home. Classroom projectors need light.
+- **The theme starts on Light**, even on phones set to dark mode, and has a Light / Dark / Auto switch on Home. Every other page has an **Aa** settings button (`components/SettingsMenu.tsx`) with the language and theme switches. Classroom projectors need light.
 - **Home is a compact list** (one row per chapter); each row opens the chapter page, where **Learn is the highlighted (blue) button**. The ← back arrow on Learn/Practice/Test/Classroom/Rule goes to Home.
 - **The pass mark is shown simply as 40%**.
 
@@ -39,14 +39,15 @@ slides/                         talk deck (Marp) + its images, published at /sli
 tools/                          extract_pages.swift, render_pages.swift, check_<topic>.ts
 app/src/
   data/topics.ts                READY_TOPICS (one entry per chapter) + UPCOMING_MAT ("coming soon")
+  data/facts.ts                 numbers for the Facts page (primes, squares, cubes) + FACT_CHAPTERS (chapters that link to it)
   data/mat/<topic>.json         book questions;  <topic>.meta.json: intro, tips, worked examples
   lib/generators/               question generators + their tests (1,000+ questions each)
   lib/progress.ts               per-topic progress in IndexedDB (attempts, mistakes, tests, best scores)
   lib/theme.ts                  Light/Dark/Auto; also applied early by an inline script in index.html
-  lib/router.ts                 hash routes: #/t/<topic> (chapter page), #/t/<topic>/{learn,practice,test,classroom,rule}
+  lib/router.ts                 hash routes: #/t/<topic> (chapter page), #/t/<topic>/{learn,practice,test,classroom,rule}, #/facts/{primes,squares,cubes}
   components/SeriesView.tsx     shows terms as a series ("1, 4, ?") or analogy ("28 : 4 :: 504 : ?")
   components/tips/              illustrated Learn tips, keyed by `visual` in the meta JSON
-  pages/                        Home (compact chapter list), Chapter, Learn, Practice, QuickTest, Classroom, GuessRule
+  pages/                        Home (compact chapter list), Facts, Chapter, Learn, Practice, QuickTest, Classroom, GuessRule
 ```
 
 ## Adding a chapter

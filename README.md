@@ -53,8 +53,9 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 
 | Screen | For | What it does |
 |---|---|---|
-| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device |
+| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page |
 | Chapter | Everyone | Opened from a Home row: the chapter's intro, progress (book questions, accuracy, best test) and its buttons. Learn is highlighted; Practice, Quick test, Classroom and, where there is one, the game follow |
+| Facts to remember | Students | Things to learn by heart, in three tabs: the primes up to 100 (a 1–100 grid, the look-alikes 51, 57, 87, 91, and the primes in each ten), squares 1–30 and cubes 1–20, each with tricks. The number chapters' pages and their Learn cheat sheets link to it |
 | Learn | Students | Tip cards (many with a tap-through picture), step-by-step worked examples, and a cheat sheet where it helps: squares, cubes and primes for the number chapters, the alphabet with each letter's place for the letter chapters, and a relations table for Blood Relations |
 | Practice | Students | Book questions, generated "More practice", and a "Mistakes" list to retry. Explanations appear right after each answer |
 | Quick test | Students | 15 questions in 15 minutes, with a score, the 40% pass line and a review of every answer |
@@ -70,11 +71,13 @@ Three chapters have a "🔎 Guess the rule" link on their chapter page. Each gam
 
 The questions are generated, and every option is checked so that exactly one rule fits.
 
-**Language:** an EN / ಕನ್ನಡ switch at the top of the Home and Classroom screens changes the whole app, including questions, explanations, tips and the games. English is the default, and the choice is saved on the device. See [Kannada](#kannada) below.
+**Settings on every screen:** Home shows the language and theme switches at the top. Every other screen has an **Aa** button at the top right that opens them, together with EN+ಕ on chapter screens.
+
+**Language:** an EN / ಕನ್ನಡ switch (on Home, in the Aa menu, and at the top of Classroom) changes the whole app, including questions, explanations, tips and the games. English is the default, and the choice is saved on the device. See [Kannada](#kannada) below.
 
 **Both languages at once:** for classes with English-medium and Kannada-medium students together, an **EN+ಕ** button at the top of every chapter screen shows the question, the options, the explanation and the Learn tips in English and Kannada together. The language picked on the EN / ಕನ್ನಡ switch comes first and is used for the buttons. Short options share a line ("North · ಉತ್ತರ"); long ones put the second language underneath. On a wide screen, Classroom shows the two languages as side-by-side columns. Text with no translation, and working that reads the same in both ("3 × 2 = 6"), is shown once. The "Guess the rule" game doesn't use it. The choice is saved on the device.
 
-**Theme:** a ☀️ / 🌙 / 🌓 (Light / Dark / Auto) switch at the top of the Home screen. It starts on Light, even on phones set to dark mode. Auto follows the phone's setting. The choice is saved on the device.
+**Theme:** a ☀️ / 🌙 / 🌓 (Light / Dark / Auto) switch on Home and in the Aa menu. It starts on Light, even on phones set to dark mode. Auto follows the phone's setting. The choice is saved on the device.
 
 Progress is saved on the device (IndexedDB). After the first visit the app works fully offline, and it can be installed with "Add to Home Screen".
 
