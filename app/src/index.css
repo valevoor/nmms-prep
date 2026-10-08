@@ -19,6 +19,14 @@
   --bad-soft: #fde8e8;
   --shadow: 0 1px 2px rgb(20 30 60 / 0.06), 0 4px 16px rgb(20 30 60 / 0.06);
   --radius: 14px;
+  /* Shapes page: the three face colours (fill, then outline) and the unit grid. */
+  --shape-blue: #2f5bea;
+  --shape-blue-line: #2f5bea;
+  --shape-amber: #f59e0b;
+  --shape-amber-line: #b45309;
+  --shape-pink: #be185d;
+  --shape-pink-line: #be185d;
+  --shape-grid: #e3e7f1;
   color-scheme: light;
 }
 
@@ -42,6 +50,13 @@
   --bad: #f87171;
   --bad-soft: #341a1c;
   --shadow: none;
+  --shape-blue: #7b9bff;
+  --shape-blue-line: #9db5ff;
+  --shape-amber: #fbbf24;
+  --shape-amber-line: #fcd34d;
+  --shape-pink: #f472b6;
+  --shape-pink-line: #f9a8d4;
+  --shape-grid: #2e3342;
   color-scheme: dark;
 }
 
@@ -2902,4 +2917,166 @@ kbd {
 /* There is room in the panel to name each theme. */
 .settings-panel .theme-name {
   display: inline;
+}
+
+/* ---------- Shapes and sizes (#/shapes) ---------- */
+
+.shapes-card {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.shapes-card:hover {
+  border-color: var(--primary);
+}
+
+.shapes-card .facts-card-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.shape-chips {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.shape-chips a {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 4px 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.shape-chips a[aria-current='page'] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-ink);
+}
+
+.facts-tabs.shape-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+
+.facts-tabs.shape-steps a {
+  font-size: 0.9rem;
+}
+
+.shape-card {
+  padding: 12px;
+}
+
+.shape-stage {
+  position: relative;
+}
+
+.shape-stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.shape-stage-3d svg {
+  touch-action: none;
+  cursor: grab;
+}
+
+.shape-stage-3d svg:active {
+  cursor: grabbing;
+}
+
+.shape-hint {
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+  margin: 0;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.shape-label {
+  fill: var(--text);
+  stroke: var(--surface);
+  stroke-width: 3px;
+  paint-order: stroke;
+  font-size: 13px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Four turn arrows in a row, then Spin and Reset sharing the row below. */
+.shape-turn {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.shape-turn .btn {
+  padding: 0 8px;
+}
+
+.shape-turn .icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.shape-turn .btn[aria-pressed='true'] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-ink);
+}
+
+.shape-turn .wide {
+  grid-column: span 2;
+}
+
+.shape-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.shape-slider input {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.shape-text p {
+  margin: 0 0 8px;
+}
+
+.shape-formula p {
+  margin: 0;
+}
+
+.shape-formula {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.shape-rule {
+  margin-top: 8px;
+  font-size: 0.9rem;
 }

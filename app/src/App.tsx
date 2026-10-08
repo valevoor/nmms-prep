@@ -10,6 +10,8 @@ import { Classroom } from './pages/Classroom'
 import { FACT_TABS } from './data/facts'
 import { Facts } from './pages/Facts'
 import { Home } from './pages/Home'
+import { SHAPE_IDS, SHAPE_STEPS } from './data/shapes'
+import { Shapes } from './pages/Shapes'
 import { Learn } from './pages/Learn'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
@@ -64,6 +66,17 @@ export default function App() {
   if (kind === 'facts' && parts.length <= 2) {
     const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
     return tab ? <Facts tab={tab} /> : <NotFound />
+  }
+  if (kind === 'shapes' && parts.length <= 3) {
+    const shape = SHAPE_IDS.find((k) => k === (topicId ?? 'square'))
+    const step = SHAPE_STEPS.find((k) => k === (view ?? 'perimeter'))
+    return shape && step ? (
+      <TopicIdContext.Provider value="shapes">
+        <Shapes shape={shape} step={step} />
+      </TopicIdContext.Provider>
+    ) : (
+      <NotFound />
+    )
   }
   if (!topic) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.

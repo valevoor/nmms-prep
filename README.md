@@ -53,9 +53,10 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 
 | Screen | For | What it does |
 |---|---|---|
-| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page |
+| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page; a "Shapes and sizes" card opens the Shapes page |
 | Chapter | Everyone | Opened from a Home row: the chapter's intro, progress (book questions, accuracy, best test) and its buttons. Learn is highlighted; Practice, Quick test, Classroom and, where there is one, the game follow |
 | Facts to remember | Students | Things to learn by heart, in three tabs: the primes up to 100 (a 1–100 grid, the look-alikes 51, 57, 87, 91, and the primes in each ten), squares 1–30 and cubes 1–20, each with tricks. The number chapters' pages and their Learn cheat sheets link to it |
+| Shapes and sizes | Students and teachers | Opened from a card on Home. Pick a square, rectangle, triangle or circle, then step through Perimeter (a dot walks round the edge), Area (rows fill up, two triangles make a rectangle, a circle's slices line up into a near-rectangle), Volume (layers stack into a cube, cuboid, triangular prism or cylinder) and Open flat (the solid unfolds into its net). The solids turn in 3D: drag them, use the turn buttons or Spin. Each step shows the formula with the numbers worked in (π = 22/7) |
 | Learn | Students | Tip cards (many with a tap-through picture), step-by-step worked examples, and a cheat sheet where it helps: squares, cubes and primes for the number chapters, the alphabet with each letter's place for the letter chapters, and a relations table for Blood Relations |
 | Practice | Students | Book questions, generated "More practice", and a "Mistakes" list to retry. Explanations appear right after each answer |
 | Quick test | Students | 15 questions in 15 minutes, with a score, the 40% pass line and a review of every answer |

@@ -98,6 +98,20 @@ export function Home() {
         <span aria-hidden>→</span>
       </a>
 
+      <a className="card facts-card shapes-card" href={href('shapes')}>
+        <span className="facts-card-icon" aria-hidden>
+          <svg viewBox="0 0 40 40">
+            <path d="M8 14 L20 8 L32 14 L32 28 L20 34 L8 28 Z" style={{ fill: 'var(--shape-blue)', fillOpacity: 0.2, stroke: 'var(--shape-blue-line)', strokeWidth: 2.2, strokeLinejoin: 'round' }} />
+            <path d="M8 14 L20 20 L32 14 M20 20 V34" style={{ fill: 'none', stroke: 'var(--shape-blue-line)', strokeWidth: 2.2, strokeLinejoin: 'round' }} />
+          </svg>
+        </span>
+        <span className="continue-main">
+          <span className="continue-name">{t.shapes.title}</span>
+          <span className="muted facts-card-sub">{t.shapes.homeSub}</span>
+        </span>
+        <span aria-hidden>→</span>
+      </a>
+
       <h2 className="section-title">{t.home.ready}</h2>
       <ul className="chapter-list">
         {BY_CHAPTER.map((x) => (

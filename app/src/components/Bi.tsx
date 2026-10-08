@@ -78,7 +78,7 @@ export function BiLabel({ get }: { get: (t: Dict) => string }) {
   return <BiInline first={text} other={other !== text ? other : undefined} otherLang={otherLang} stacked />
 }
 
-/** "EN+ಕ": show questions in both languages. Only on chapter pages (see TopicIdContext). */
+/** "EN+ಕ": show questions in both languages. Only on chapter pages and the Shapes page (see TopicIdContext). */
 export function BothToggle() {
   const t = useT()
   const available = useBothAvailable()
