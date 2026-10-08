@@ -2371,6 +2371,11 @@ kbd {
   color: var(--text);
 }
 
+/* A drawing with real paint colours sits on white like a book picture, in dark ink in both themes. */
+.fig-painted .fig-svg {
+  color: #1a1a1a;
+}
+
 .tv .tv-venn-lit {
   fill: var(--primary-soft);
   stroke: var(--primary);

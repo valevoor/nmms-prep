@@ -20,6 +20,20 @@ export interface FigItem {
   h?: number
   /** 'text': what is written (`size` is the font size). */
   label?: string
+  /** 'text': what is written when the app is in Kannada. */
+  labelKn?: string
+}
+
+/** A face of a solid painted a real colour, with thin grid lines across it (Cubes Colouring). */
+export interface PaintedFace {
+  /** Corners [x1, y1, x2, y2, …] in the 100 × 100 box. */
+  pts: number[]
+  /** CSS colour of the paint. */
+  fill: string
+  /** Grid lines [x1, y1, x2, y2]. */
+  grid: [number, number, number, number][]
+  /** Colour of the grid lines when the paint is too dark for black ones. */
+  ink?: string
 }
 
 /** A figure drawn by the app: an optional frame (a box, or a circle cut into 4 or 8 parts) and shapes. */
@@ -34,6 +48,8 @@ export interface Drawing {
   lines?: [number, number, number, number][]
   /** Dotted lines [x1, y1, x2, y2], e.g. the fold line (Figure Fold Transparent Sheet). */
   dashed?: [number, number, number, number][]
+  /** Painted faces, drawn first. A drawing with paint sits on a white tile, like a book picture. */
+  faces?: PaintedFace[]
 }
 
 /** A picture: a PNG cropped from the book (path under public/), '?' for the blank, or a drawing. */

@@ -1,8 +1,10 @@
 import { useId } from 'react'
+import { useLocale } from '../lib/i18n'
 import type { Drawing, FigItem } from '../types'
 
 /** The outline of one shape, drawn around (0, 0) pointing up, before it is moved and turned. */
 function Shape({ it, fill }: { it: FigItem; fill: string }) {
+  const lang = useLocale()
   const r = it.size / 2
   switch (it.shape) {
     case 'poly': {
@@ -44,7 +46,7 @@ function Shape({ it, fill }: { it: FigItem; fill: string }) {
     case 'text':
       return (
         <text textAnchor="middle" dominantBaseline="central" fontSize={it.size} fill="currentColor" stroke="none" fontWeight={600}>
-          {it.label}
+          {lang === 'kn' && it.labelKn ? it.labelKn : it.label}
         </text>
       )
     case 'plus':
@@ -71,6 +73,14 @@ export function DrawingBody({ d }: { d: Drawing }) {
           <line x1="0" y1="0" x2="0" y2="5" strokeWidth={1.4} />
         </pattern>
       </defs>
+      {d.faces?.map((f, i) => (
+        <g key={`f${i}`}>
+          <polygon points={f.pts.join(' ')} fill={f.fill} />
+          {f.grid.map(([x1, y1, x2, y2], j) => (
+            <line key={j} x1={x1} y1={y1} x2={x2} y2={y2} strokeWidth={0.9} stroke={f.ink} />
+          ))}
+        </g>
+      ))}
       {d.frame === 'square' && <rect x="8" y="8" width="84" height="84" fill="none" />}
       {parts > 0 && (
         <>

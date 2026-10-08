@@ -1,5 +1,5 @@
 import { OPTION_KEYS } from '../../types'
-import type { OptionKey, PatternId, Question } from '../../types'
+import type { Drawing, FigItem, OptionKey, PaintedFace, PatternId, Question } from '../../types'
 import type { Text } from '../i18n/gen'
 import { int, pick, shuffle } from './numberSeries'
 import type { Rng } from './numberSeries'
@@ -37,6 +37,20 @@ const COLOURS: Text[] = [
   { en: 'brown', kn: 'ಕಂದು' },
   { en: 'purple', kn: 'ನೇರಳೆ' },
 ]
+/** The paint for each colour in the picture, and grid lines that show up on it. */
+export const PAINT: Record<string, { fill: string; ink?: string }> = {
+  red: { fill: '#e8524a' },
+  blue: { fill: '#4a8fe0' },
+  green: { fill: '#4fb860' },
+  yellow: { fill: '#f6d743' },
+  black: { fill: '#2b2b2b', ink: '#d0d0d0' },
+  white: { fill: '#ffffff' },
+  pink: { fill: '#f5a7c9' },
+  orange: { fill: '#f59a3c' },
+  brown: { fill: '#9a6236', ink: '#f0e0d0' },
+  purple: { fill: '#9d63c4' },
+}
+
 /** Faces in the order the question lists them, with how each is named. */
 const ORDER: Face[] = ['top', 'bottom', 'front', 'back', 'left', 'right']
 const ON_FACE: Record<Face, Text> = {
@@ -206,6 +220,47 @@ function make(rng: Rng, n: number, col: Record<Face, Text>): Made {
   }
 }
 
+type Pt = [number, number]
+
+/** A parallelogram face from corner p along edges u and v, cut into n × n squares. */
+function face(p: Pt, u: Pt, v: Pt, n: number, colour: Text): PaintedFace {
+  const at = (a: number, b: number): Pt => [+(p[0] + a * u[0] + b * v[0]).toFixed(2), +(p[1] + a * u[1] + b * v[1]).toFixed(2)]
+  const grid: [number, number, number, number][] = []
+  for (let i = 1; i < n; i++) grid.push([...at(i / n, 0), ...at(i / n, 1)], [...at(0, i / n), ...at(1, i / n)])
+  return { pts: [...at(0, 0), ...at(1, 0), ...at(1, 1), ...at(0, 1)], ...PAINT[colour.en], grid }
+}
+
+const label = (x: number, y: number, c: Text): FigItem => ({ shape: 'text', x, y, size: 10, label: c.en, labelKn: c.kn })
+
+/**
+ * The cube as the book draws it: a front-top view (front, top and right faces) and, beside it, a
+ * back-bottom view (back, bottom and left faces), each face in its colour and named beside it.
+ */
+export function colourCubeDrawing(n: number, col: Record<Face, Text>): Drawing {
+  const s = 40
+  const o = 125 // where the second view starts
+  return {
+    w: 226,
+    faces: [
+      face([10, 40], [s, 0], [0, s], n, col.front),
+      face([10, 40], [s, 0], [18, -13], n, col.top),
+      face([10 + s, 40], [18, -13], [0, s], n, col.right),
+      face([o, 22], [s, 0], [0, s], n, col.back),
+      face([o, 22 + s], [s, 0], [18, 13], n, col.bottom),
+      face([o + s, 22], [18, 13], [0, s], n, col.left),
+    ],
+    dashed: [[111, 6, 111, 94]],
+    items: [
+      label(39, 18, col.top),
+      label(30, 91, col.front),
+      label(91, 54, col.right),
+      label(o + 20, 13, col.back),
+      label(o + 29, 86, col.bottom),
+      label(o + 79, 48, col.left),
+    ],
+  }
+}
+
 let counter = 0
 
 /** A generated question, with what it is about (for the tests). */
@@ -234,6 +289,7 @@ export function buildColouring(rng: Rng): { q: Question; spec: ColourSpec } {
     terms: [],
     layout: 'text',
     prompt: prompt.en,
+    figures: { terms: [colourCubeDrawing(n, col)] },
     options,
     answer: OPTION_KEYS[opts.indexOf(m.answer)],
     rule: m.rule.en,

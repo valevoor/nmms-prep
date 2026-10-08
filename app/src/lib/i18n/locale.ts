@@ -18,7 +18,8 @@ function read(): Locale {
 let current = read()
 
 function apply() {
-  document.documentElement.lang = current
+  // No document in the unit tests, which import drawings that read the language.
+  if (typeof document !== 'undefined') document.documentElement.lang = current
 }
 apply()
 
@@ -41,6 +42,8 @@ export function useLocale(): Locale {
       listeners.add(l)
       return () => listeners.delete(l)
     },
+    () => current,
+    // The tests render drawings to a string, which needs a server snapshot too.
     () => current,
   )
 }

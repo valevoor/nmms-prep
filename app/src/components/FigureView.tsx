@@ -10,6 +10,12 @@ export function FigureView({ f, label }: { f: Figure; label: string }) {
         <img className="fig-img" src={f} alt={label} decoding="async" />
       </span>
     )
+  if (f.faces)
+    return (
+      <span className="fig-paper fig-painted">
+        <DrawingView d={f} label={label} />
+      </span>
+    )
   return <DrawingView d={f} label={label} />
 }
 
