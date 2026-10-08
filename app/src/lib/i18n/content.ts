@@ -7,7 +7,7 @@ import type { Locale } from './locale'
 /** Kannada text for book questions, by question id. */
 const BOOK_KN: Record<string, QuestionText> = Object.assign({}, ...CHAPTER_FILES.map((c) => c.kn))
 
-/** Kannada intro and tips, by topic id. */
+/** Kannada intro, tips and video titles, by topic id. */
 const META_KN = Object.fromEntries(CHAPTER_FILES.map((c) => [c.id, c.metaKn]))
 
 export interface ShownText {
@@ -42,6 +42,7 @@ export function topicMeta(topicId: string, meta: TopicMeta, locale: Locale): Top
     ...meta,
     intro: kn.intro,
     tips: meta.tips.map((t, i) => ({ ...t, ...kn.tips[i] })),
+    videos: meta.videos?.map((v, i) => ({ ...v, ...kn.videos?.[i] })),
   }
 }
 

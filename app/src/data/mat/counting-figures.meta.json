@@ -1,5 +1,13 @@
 {
   "topic": "counting-figures",
+  "videos": [
+    { "youtube": "ntMWGoYiO28", "title": "Counting triangles" },
+    { "youtube": "UPHtcwix8r4", "title": "How many triangles? A puzzle", "tall": true },
+    { "youtube": "pfblHJm3Mw0", "title": "Counting squares", "tall": true },
+    { "youtube": "wR0Juc5PUnc", "title": "Counting rectangles", "tall": true },
+    { "youtube": "Q3gzucAenIw", "title": "Counting parallelograms" },
+    { "youtube": "J1G8wS1mchs", "title": "Counting quadrilaterals", "tall": true }
+  ],
   "intro": "Here a figure is made of straight lines, and you count how many triangles, squares, rectangles or parallelograms are hidden in it. Small shapes join up into bigger ones, so the trick is to count in an order that misses none and counts none twice.",
   "tips": [
     {

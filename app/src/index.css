@@ -3086,6 +3086,80 @@ kbd {
   font-size: 0.9rem;
 }
 
+/* ---------- learn video ---------- */
+
+.learn-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.video-dialog {
+  width: min(96vw, 1280px);
+  max-width: none;
+  max-height: 96dvh;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.video-dialog::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.video-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.video-title {
+  font-weight: 700;
+  min-width: 0;
+}
+
+/* 16:9, but never taller than the screen minus the header row. */
+.video-frame {
+  width: min(100%, calc((96dvh - 96px) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  display: grid;
+  place-items: center;
+}
+
+/* Shorts are portrait: a 9:16 frame, and a dialog only as wide as it needs. */
+.video-dialog.tall {
+  width: fit-content;
+  max-width: 96vw;
+}
+
+.video-dialog.tall .video-frame {
+  width: min(calc(96vw - 26px), calc((96dvh - 96px) * 9 / 16));
+  aspect-ratio: 9 / 16;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-offline {
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+}
+
 /* Cubes colouring 3D explorer (#/t/cubes-colouring/explore). The paints are the colours of a real
    painted cube, so they stay the same in both themes; three.js reads them from here. */
 :root {

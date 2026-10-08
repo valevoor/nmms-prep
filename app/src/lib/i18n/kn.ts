@@ -337,6 +337,9 @@ export const kn: Dict = {
   },
   learn: {
     title: (name) => `ಕಲಿಯಿರಿ: ${name}`,
+    videos: 'ವೀಡಿಯೊಗಳು',
+    closeVideo: '✕ ಮುಚ್ಚಿ',
+    videoOffline: 'ಈ ವೀಡಿಯೊಗೆ ಇಂಟರ್ನೆಟ್ ಬೇಕು. ಸಂಪರ್ಕಿಸಿ, ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.',
     tips: 'ಸಲಹೆಗಳು',
     worked: 'ಬಿಡಿಸಿದ ಉದಾಹರಣೆಗಳು',
     example: (n) => `ಉದಾಹರಣೆ ${n}`,

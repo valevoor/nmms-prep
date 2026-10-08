@@ -335,6 +335,9 @@ export const en = {
   },
   learn: {
     title: (name: string) => `Learn: ${name}`,
+    videos: 'Videos',
+    closeVideo: '✕ Close',
+    videoOffline: 'This video needs the internet. Connect, then try again.',
     tips: 'Tips',
     worked: 'Worked examples',
     example: (n: number) => `Example ${n}`,

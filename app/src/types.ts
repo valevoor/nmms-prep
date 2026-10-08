@@ -293,4 +293,6 @@ export interface TopicMeta {
   workedExamples: string[]
   /** What the Learn page's cheat sheet shows: squares, cubes and primes (default), or letter positions. */
   cheatSheet?: 'numbers' | 'alphabet' | 'relations' | 'none'
+  /** YouTube videos for the Learn page. `tall` is for Shorts, which are portrait. */
+  videos?: { youtube: string; title: string; tall?: boolean }[]
 }

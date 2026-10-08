@@ -10,6 +10,7 @@ import { FigureStem } from '../components/FigureView'
 import { QuestionStem } from '../components/QuestionStem'
 import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
+import { VideoButton } from '../components/VideoButton'
 import { PRIMES } from '../data/facts'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
@@ -79,6 +80,16 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
   return (
     <Page title={t.learn.title(t.chapters[topic.chapter] ?? topic.name)} back="">
       <BiBlock className="lead" text={meta.intro} other={second?.intro} lang={lang} otherLang={otherLang} />
+      {meta.videos && (
+        <>
+          <h2 className="section-title">{t.learn.videos}</h2>
+          <div className="learn-videos">
+            {meta.videos.map((v) => (
+              <VideoButton key={v.youtube} youtube={v.youtube} title={v.title} tall={v.tall} />
+            ))}
+          </div>
+        </>
+      )}
 
       <h2 className="section-title">{t.learn.tips}</h2>
       <div className="tips">

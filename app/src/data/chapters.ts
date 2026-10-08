@@ -157,7 +157,7 @@ import wrongNumberMetaKn from './mat/wrong-number.meta.kn.json'
 import wrongNumberMeta from './mat/wrong-number.meta.json'
 import type { Question, QuestionText, TopicMeta } from '../types'
 
-type MetaText = { intro: string; tips: { title: string; body: string; caption?: string }[] }
+type MetaText = { intro: string; tips: { title: string; body: string; caption?: string }[]; videos?: { title: string }[] }
 
 export interface ChapterFiles {
   id: string
@@ -166,7 +166,7 @@ export interface ChapterFiles {
   meta: TopicMeta
   /** Kannada for each book question, by id. */
   kn: Record<string, QuestionText>
-  /** Kannada intro and tips, in the same order as the English tips. */
+  /** Kannada intro, tips and video titles, in the same order as the English. */
   metaKn: MetaText
 }
 

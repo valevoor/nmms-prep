@@ -18,7 +18,7 @@ const KANNADA = /[ಀ-೿]/
 const WORDS = /\b(?!(?:km|cm|am|pm|ad|abc|abcd)\b)[a-z]{2,}/
 
 type Text = { prompt?: string; rule?: string; working?: string; note?: string }
-type Meta = { intro: string; tips: { title: string; body: string; caption?: string }[] }
+type Meta = { intro: string; tips: { title: string; body: string; caption?: string }[]; videos?: { title: string }[] }
 
 const problems: string[] = []
 
@@ -46,6 +46,9 @@ function checkChapter(name: string, questions: (Text & { id: string })[], kn: Re
     for (const f of ['title', 'body', 'caption'] as const) {
       if (t[f] && !(k?.[f] && KANNADA.test(k[f]!))) problems.push(`${name}: tip ${i + 1} ${f} needs Kannada`)
     }
+  })
+  meta.videos?.forEach((v, i) => {
+    if (!KANNADA.test(metaKn.videos?.[i]?.title ?? '')) problems.push(`${name}: video ${i + 1} title needs Kannada`)
   })
   const done = Object.keys(kn).length
   console.log(`${name}: ${done}/${questions.length} questions, ${metaKn.tips.length}/${meta.tips.length} tips`)
