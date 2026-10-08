@@ -128,6 +128,8 @@ export interface ReadyTopic {
   guessRule?: {
     make: () => Question
   }
+  /** Has a 3D explorer at #/t/<id>/explore (pages/CubeExplorer.tsx). */
+  explore?: boolean
 }
 
 const visible = (qs: Question[]) => qs.filter((q) => q.status !== 'needs-review')
@@ -400,6 +402,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: colouringMeta as TopicMeta,
     missing: 'answer',
     generate: generateCubesColouring,
+    explore: true,
   },
   {
     id: 'figure-numbers',
