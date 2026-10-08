@@ -82,6 +82,16 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
             <span aria-hidden>→</span>
           </a>
         )}
+        {t.fold && (
+          <a className="game-link" href={href(`${base}/fold`)}>
+            <span aria-hidden>🎲</span>
+            <span>
+              <strong>{tr.fold.link}</strong>
+              <span className="muted">{tr.fold.linkSub}</span>
+            </span>
+            <span aria-hidden>→</span>
+          </a>
+        )}
         {p.mistakes.length > 0 && (
           <a className="mistakes-link" href={href(`${base}/practice?mode=mistakes`)}>
             {tr.home.retryWrong(p.mistakes.length)}

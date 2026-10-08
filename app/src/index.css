@@ -3411,3 +3411,126 @@ kbd {
   flex: none;
   accent-color: var(--primary);
 }
+
+/* Dice fold (#/t/dice/fold). The dice is a paper object, so its colours stay the same in both themes;
+   the three pair colours match the Shapes page's blue, amber and pink. */
+:root {
+  --fold-face: #ffffff;
+  --fold-ink: #1a1d29;
+  --fold-line: #2b3040;
+  --fold-inside: #b9c0d0;
+  --fold-pair-0: #a9bdff;
+  --fold-pair-1: #fcd27a;
+  --fold-pair-2: #f4a3c8;
+}
+
+.fold-nets button {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.fold-wrap {
+  position: relative;
+}
+
+.fold-stage {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 100%;
+  max-height: 60vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: var(--surface-2);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.fold-stage:active {
+  cursor: grabbing;
+}
+
+.fold-stage:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.fold-pivot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.fold-node {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.fold-skin {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--fold-line);
+  background: var(--fold-face);
+  color: var(--fold-ink);
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+}
+
+.fold-skin.inside {
+  background: var(--fold-inside);
+}
+
+.fold-skin.inside span {
+  visibility: hidden;
+}
+
+.fold-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.fold-slider {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.fold-slider input {
+  width: 100%;
+  min-height: 48px;
+  accent-color: var(--primary);
+}
+
+.fold-pairs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.fold-pairs i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 1px solid var(--fold-line);
+  vertical-align: -2px;
+}

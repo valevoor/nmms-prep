@@ -130,6 +130,8 @@ export interface ReadyTopic {
   }
   /** Has a 3D explorer at #/t/<id>/explore (pages/CubeExplorer.tsx). */
   explore?: boolean
+  /** Has an open dice that folds in 3D at #/t/<id>/fold (pages/DiceFold.tsx). */
+  fold?: boolean
 }
 
 const visible = (qs: Question[]) => qs.filter((q) => q.status !== 'needs-review')
@@ -384,6 +386,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: diceMeta as TopicMeta,
     missing: 'answer',
     generate: generateDice,
+    fold: true,
   },
   {
     id: 'counting-figures',

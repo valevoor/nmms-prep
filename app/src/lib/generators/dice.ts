@@ -159,6 +159,11 @@ const NETS: Cell[][] = (() => {
   return [...shapes.values()].filter((cs) => rollOver(cs) !== null)
 })()
 export const NET_COUNT = NETS.length
+/** Every net, each square labelled with the side of the dice that rolls onto it (U, D, F, B, L, R). */
+export const SIDE_NETS: NetCell[][] = NETS.map((cells) => {
+  const sides = rollOver(cells)!
+  return cells.map(([r, c]): NetCell => [r, c, sides.get(key([r, c]))!])
+})
 
 // --- Questions --------------------------------------------------------------------------------
 const LETTERS = 'ABCDEFGHIJKLMNPQRSTUVWXYZ'
@@ -166,6 +171,12 @@ function labelSet(rng: Rng): { labels: string[]; word: Text } {
   if (rng() < 0.5) return { labels: shuffle(rng, ['1', '2', '3', '4', '5', '6']), word: { en: 'number', kn: 'ಸಂಖ್ಯೆ' } }
   const s = int(rng, 0, LETTERS.length - 6)
   return { labels: shuffle(rng, LETTERS.slice(s, s + 6).split('')), word: { en: 'letter', kn: 'ಅಕ್ಷರ' } }
+}
+
+/** A random open dice with numbers or letters on it, for the dice fold page. */
+export function randomNet(rng: Rng = Math.random): NetCell[] {
+  const { labels } = labelSet(rng)
+  return pick(rng, NETS).map(([r, c], i): NetCell => [r, c, labels[i]])
 }
 
 interface Made {
