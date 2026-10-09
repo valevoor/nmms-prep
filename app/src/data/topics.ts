@@ -130,6 +130,8 @@ export interface ReadyTopic {
   }
   /** Has a 3D explorer at #/t/<id>/explore (pages/CubeExplorer.tsx). */
   explore?: boolean
+  /** Has a cube to cut in two and pull apart in 3D at #/t/<id>/cut (pages/CubeCut.tsx). */
+  cut?: boolean
   /** Has an open dice that folds in 3D at #/t/<id>/fold (pages/DiceFold.tsx). */
   fold?: boolean
   /** Has a see-through sheet to draw on and fold in 3D at #/t/<id>/draw (pages/SheetFold.tsx). */
@@ -387,6 +389,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: cubesMeta as TopicMeta,
     missing: 'answer',
     generate: generateCubesCutting,
+    cut: true,
   },
   {
     id: 'dice',

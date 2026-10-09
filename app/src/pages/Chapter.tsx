@@ -82,6 +82,16 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
             <span aria-hidden>→</span>
           </a>
         )}
+        {t.cut && (
+          <a className="game-link" href={href(`${base}/cut`)}>
+            <span aria-hidden>✂️</span>
+            <span>
+              <strong>{tr.cut.link}</strong>
+              <span className="muted">{tr.cut.linkSub}</span>
+            </span>
+            <span aria-hidden>→</span>
+          </a>
+        )}
         {t.fold && (
           <a className="game-link" href={href(`${base}/fold`)}>
             <span aria-hidden>🎲</span>

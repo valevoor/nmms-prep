@@ -4079,3 +4079,207 @@ kbd {
   font-weight: 600;
   text-align: center;
 }
+
+/* Cut the cube (#/t/cubes-cutting/cut). The cube is an object, so its colours stay the same in both
+   themes: blue paint outside, grey when unpainted, amber for the faces the knife makes. */
+:root {
+  --cut-paint-top: #c4d2ff;
+  --cut-paint-front: #b1c3fd;
+  --cut-paint-side: #9fb4f6;
+  --cut-paint-bottom: #8fa3e0;
+  --cut-paint-line: #2f5bea;
+  --cut-plain-top: #f6f7fa;
+  --cut-plain-front: #e8ebf2;
+  --cut-plain-side: #dadfe9;
+  --cut-plain-bottom: #cdd2dc;
+  --cut-plain-line: #6b7385;
+  --cut-new-top: #ffe1a0;
+  --cut-new-front: #ffd98a;
+  --cut-new-side: #f3c870;
+  --cut-new-bottom: #e5b85f;
+  --cut-new-line: #b45309;
+}
+
+.cut-stage {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-height: 60vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: var(--surface-2);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.cut-stage:active {
+  cursor: grabbing;
+}
+
+.cut-stage:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cut-stage svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cut-sq {
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.cut-sq.paint {
+  stroke: var(--cut-paint-line);
+}
+
+.cut-sq.paint.top {
+  fill: var(--cut-paint-top);
+}
+
+.cut-sq.paint.front {
+  fill: var(--cut-paint-front);
+}
+
+.cut-sq.paint.side {
+  fill: var(--cut-paint-side);
+}
+
+.cut-sq.paint.bottom {
+  fill: var(--cut-paint-bottom);
+}
+
+.cut-sq.plain {
+  stroke: var(--cut-plain-line);
+}
+
+.cut-sq.plain.top {
+  fill: var(--cut-plain-top);
+}
+
+.cut-sq.plain.front {
+  fill: var(--cut-plain-front);
+}
+
+.cut-sq.plain.side {
+  fill: var(--cut-plain-side);
+}
+
+.cut-sq.plain.bottom {
+  fill: var(--cut-plain-bottom);
+}
+
+.cut-sq.new {
+  stroke: var(--cut-new-line);
+}
+
+.cut-sq.new.top {
+  fill: var(--cut-new-top);
+}
+
+.cut-sq.new.front {
+  fill: var(--cut-new-front);
+}
+
+.cut-sq.new.side {
+  fill: var(--cut-new-side);
+}
+
+.cut-sq.new.bottom {
+  fill: var(--cut-new-bottom);
+}
+
+
+.cut-knife {
+  fill: rgb(245 158 11 / 0.22);
+  stroke: var(--cut-new-line);
+  stroke-width: 2;
+  stroke-dasharray: 7 5;
+  stroke-linejoin: round;
+}
+
+.cut-label circle {
+  fill: var(--surface);
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.cut-label text {
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.cut-controls {
+  display: grid;
+  gap: 4px;
+}
+
+.cut-go {
+  width: 100%;
+}
+
+.cut-counts {
+  display: grid;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cut-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cut-line p {
+  margin: 0;
+}
+
+.cut-total {
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.cut-badge {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--text);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cut-ways button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 76px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cut-icon-box {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.cut-icon-knife {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 4 3;
+}

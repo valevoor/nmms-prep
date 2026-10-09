@@ -7,6 +7,7 @@ import { setLastTopic } from './lib/lastTopic'
 import { href, useRoute } from './lib/router'
 import { Chapter } from './pages/Chapter'
 import { Classroom } from './pages/Classroom'
+import { CubeCut } from './pages/CubeCut'
 import { CubeExplorer } from './pages/CubeExplorer'
 import { DiceFold } from './pages/DiceFold'
 import { SheetFold } from './pages/SheetFold'
@@ -107,6 +108,8 @@ function topicPage(topic: ReadyTopic, view: string | undefined, query: URLSearch
       return topic.guessRule ? <GuessRule topic={topic} /> : <NotFound />
     case 'explore':
       return topic.explore ? <CubeExplorer /> : <NotFound />
+    case 'cut':
+      return topic.cut ? <CubeCut /> : <NotFound />
     case 'fold':
       return topic.fold ? <DiceFold /> : <NotFound />
     case 'draw':
