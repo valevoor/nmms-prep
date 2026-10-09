@@ -106,6 +106,8 @@ npm run preview          # serve the build (to test offline mode)
 
 Every push to `main` publishes automatically via GitHub Actions (`.github/workflows/deploy.yml`). The workflow runs lint, the tests and the answer checks, then builds and deploys. If any check fails, nothing is published and the live site stays as it was. Progress is shown under the repository's **Actions** tab.
 
+**Visit counts.** The live site counts visits anonymously with [GoatCounter](https://www.goatcounter.com): no cookies, nothing stored on the phone, no names or logins. Each page sends its path (e.g. `/t/number-series/practice`), screen size and referrer, and GoatCounter shows daily and monthly visitors. Visits made offline aren't counted. To turn it on or off, set `GOATCOUNTER_CODE` in `app/src/lib/analytics.ts` (empty means off).
+
 To share the app, send the link, or print a QR code of it for the classroom. Students open it once and tap "Add to Home Screen"; after that it works offline, and updates arrive the next time they open it.
 
 ## Content notes (Number Series)

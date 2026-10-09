@@ -81,3 +81,4 @@ app/src/
 - **Styles:** all colours are CSS variables in `index.css`. The dark theme is `:root[data-theme='dark']`, so new styles must use the variables and look right in both themes.
 - **Phones first:** tap targets of at least 44–48px, text sized for Class 8 readers, and screen-reader labels on icon-only controls.
 - **Offline:** everything must work offline after the first visit, so don't load anything from the network at runtime (no CDN fonts or remote APIs).
+- **Visit counts:** the one exception is `lib/analytics.ts`, a fire-and-forget GoatCounter ping per page (no cookies, no personal data, live site only). Nothing may wait on it, and it must fail silently offline. Don't add other trackers.
