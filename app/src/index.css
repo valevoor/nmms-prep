@@ -3800,3 +3800,282 @@ kbd {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+/* Try a mirror / Try water (#/t/mirror-image/try, #/t/water-image/try). */
+:root {
+  --rf-water: #e3effd;
+}
+
+:root[data-theme='dark'] {
+  --rf-water: #17243a;
+}
+
+.rf-label {
+  color: var(--muted);
+}
+
+.rf-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.rf-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.rf-input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: 56px;
+  padding: 0 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.rf-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.rf-input-row .btn.icon {
+  width: 56px;
+  height: 56px;
+  flex: none;
+}
+
+.rf-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rf-chip {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.rf-chip:hover {
+  border-color: var(--primary);
+}
+
+.rf-stage {
+  display: grid;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.rf-mirror {
+  grid-template-columns: minmax(0, 1fr) 14px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 8px;
+  padding: 12px 8px;
+}
+
+.rf-water {
+  grid-template-rows: auto 14px auto;
+}
+
+.rf-side {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 6px;
+  min-height: 96px;
+  min-width: 0;
+}
+
+.rf-water .rf-side {
+  padding: 12px 8px 6px;
+}
+
+.rf-water .rf-image {
+  padding: 6px 8px 12px;
+  background: var(--rf-water);
+}
+
+.rf-image {
+  color: var(--good);
+}
+
+.rf-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.rf-image .rf-caption {
+  color: var(--good);
+  font-weight: 600;
+}
+
+.rf-line {
+  width: 100%;
+  height: 100%;
+  color: var(--text);
+  stroke: currentColor;
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+}
+
+.rf-line line {
+  vector-effect: non-scaling-stroke;
+}
+
+.rf-line .rf-line-main {
+  stroke-width: 2.6;
+}
+
+.rf-text {
+  display: inline-flex;
+  max-width: 100%;
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: pre;
+}
+
+.rf-glyph {
+  display: inline-block;
+}
+
+.rf-x {
+  transform: scaleX(-1);
+}
+
+.rf-y {
+  transform: scaleY(-1);
+}
+
+.rf-tools button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 4px 2px;
+}
+
+.rf-tool-icon {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.rf-pen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  width: min(168px, 100%);
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.rf-grid > button,
+.rf-grid > span {
+  display: block;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  background: var(--surface);
+  color: inherit;
+}
+
+.rf-grid > button {
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rf-grid > button:hover {
+  background: var(--primary-soft);
+}
+
+.rf-grid > button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+.rf-grid svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linejoin: round;
+}
+
+.rf-water .rf-image .rf-grid > span {
+  background: var(--surface);
+}
+
+.rf-changes {
+  display: grid;
+  gap: 10px;
+}
+
+.rf-changes h3 {
+  margin: 0;
+}
+
+.rf-changes ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rf-changes li {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 72px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.rf-changes li.same {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.rf-pair {
+  font-size: 1.35rem;
+  font-weight: 700;
+  white-space: pre;
+}
+
+.rf-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+}

@@ -136,6 +136,8 @@ export interface ReadyTopic {
   draw?: boolean
   /** Has a sheet to fold in 3D and cut holes through at #/t/<id>/punch (pages/PunchFold.tsx). */
   punch?: boolean
+  /** Has a page to type characters or place shapes and see their mirror or water image, at #/t/<id>/try (pages/Reflect.tsx). */
+  reflect?: 'mirror' | 'water'
 }
 
 const visible = (qs: Question[]) => qs.filter((q) => q.status !== 'needs-review')
@@ -365,6 +367,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: mirrorMeta as TopicMeta,
     missing: 'mirror',
     generate: generateMirrorImage,
+    reflect: 'mirror',
   },
   {
     id: 'water-image',
@@ -374,6 +377,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: waterMeta as TopicMeta,
     missing: 'water',
     generate: generateWaterImage,
+    reflect: 'water',
   },
   {
     id: 'cubes-cutting',
