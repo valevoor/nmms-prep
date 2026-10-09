@@ -10,6 +10,7 @@ import { Classroom } from './pages/Classroom'
 import { CubeExplorer } from './pages/CubeExplorer'
 import { DiceFold } from './pages/DiceFold'
 import { SheetFold } from './pages/SheetFold'
+import { PunchFold } from './pages/PunchFold'
 import { FACT_TABS } from './data/facts'
 import { Facts } from './pages/Facts'
 import { Home } from './pages/Home'
@@ -109,6 +110,8 @@ function topicPage(topic: ReadyTopic, view: string | undefined, query: URLSearch
       return topic.fold ? <DiceFold /> : <NotFound />
     case 'draw':
       return topic.draw ? <SheetFold /> : <NotFound />
+    case 'punch':
+      return topic.punch ? <PunchFold /> : <NotFound />
     default:
       return <NotFound />
   }

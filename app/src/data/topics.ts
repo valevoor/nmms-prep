@@ -134,6 +134,8 @@ export interface ReadyTopic {
   fold?: boolean
   /** Has a see-through sheet to draw on and fold in 3D at #/t/<id>/draw (pages/SheetFold.tsx). */
   draw?: boolean
+  /** Has a sheet to fold in 3D and cut holes through at #/t/<id>/punch (pages/PunchFold.tsx). */
+  punch?: boolean
 }
 
 const visible = (qs: Question[]) => qs.filter((q) => q.status !== 'needs-review')
@@ -353,6 +355,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: paperPunchMeta as TopicMeta,
     missing: 'punched',
     generate: generatePaperPunch,
+    punch: true,
   },
   {
     id: 'mirror-image',

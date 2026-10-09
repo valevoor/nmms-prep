@@ -3681,3 +3681,122 @@ kbd {
   line-height: 1.25;
   text-align: center;
 }
+
+/* Fold and punch (#/t/paper-punch/punch). Paper on a desk, so like the Draw and fold sheet its colours
+   stay the same in both themes. The paper is opaque and two-toned (cream front, tan back), so a layer
+   that has turned over shows; the holes are cut out of it with a mask, so the desk shows through. */
+:root {
+  --punch-front: #fff6dc;
+  --punch-back: #efd29a;
+  --punch-edge: #9a7330;
+  --punch-grid: rgba(154, 115, 48, 0.16);
+  --punch-crease: rgba(26, 29, 41, 0.55);
+  --punch-cut: #5c4316;
+  --punch-plan: #2563eb;
+  --punch-plan-fill: rgba(37, 99, 235, 0.14);
+}
+
+.punch-piece {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.punch-front {
+  fill: var(--punch-front);
+}
+
+.punch-back {
+  fill: var(--punch-back);
+}
+
+.punch-desk {
+  fill: var(--sheet-desk);
+}
+
+.punch-edge {
+  fill: none;
+  stroke: var(--punch-edge);
+  stroke-width: 0.6;
+}
+
+.punch-grid line {
+  stroke: var(--punch-grid);
+  stroke-width: 0.4;
+}
+
+.punch-crease {
+  stroke: var(--punch-crease);
+  stroke-width: 0.5;
+  stroke-dasharray: 2 1.6;
+}
+
+.punch-cut {
+  fill: none;
+  stroke: var(--punch-cut);
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+}
+
+.punch-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.punch-plan-half {
+  fill: var(--punch-plan-fill);
+}
+
+.punch-plan-line {
+  stroke: var(--punch-plan);
+  stroke-width: 0.8;
+  stroke-dasharray: 3 2.2;
+}
+
+.punch-plan-arrow {
+  fill: none;
+  stroke: var(--punch-plan);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.punch-arrow-head {
+  fill: var(--punch-plan);
+}
+
+.punch-preview {
+  fill: rgba(26, 29, 41, 0.25);
+  stroke: var(--punch-cut);
+  stroke-width: 0.6;
+  stroke-dasharray: 1.5 1.2;
+}
+
+.punch-how {
+  font-size: 0.95rem;
+}
+
+.punch-how p {
+  margin: 0;
+}
+
+.punch-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.punch-opened {
+  display: block;
+  width: min(100%, 220px);
+  margin: 0 auto;
+}
+
+.sheet-lines button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
