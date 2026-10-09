@@ -3534,3 +3534,150 @@ kbd {
   border: 1px solid var(--fold-line);
   vertical-align: -2px;
 }
+
+/* Draw and fold (#/t/fold-sheet/draw). The sheet is a paper object on a light desk, so its colours
+   stay the same in both themes, as the dice's do. The paper is half see-through: where the folded
+   half lies on the other, both halves' shapes show. */
+:root {
+  --sheet-desk: #dfe5f0;
+  --sheet-paper: rgba(255, 255, 255, 0.32);
+  --sheet-edge: #4a6bb0;
+  --sheet-grid: rgba(74, 107, 176, 0.18);
+  --sheet-fold: #1a1d29;
+  --ink-0: #1a1d29;
+  --ink-1: #d6336c;
+  --ink-2: #2563eb;
+  --ink-3: #15803d;
+}
+
+.sheet-tools button,
+.sheet-lines button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.sheet-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.sheet-pen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.sheet-inks {
+  display: flex;
+  gap: 8px;
+}
+
+.sheet-ink {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  /* The desk colour rings every swatch, so black still shows on the dark theme's card. */
+  box-shadow: 0 0 0 2px var(--sheet-desk);
+  cursor: pointer;
+}
+
+.sheet-ink[aria-pressed='true'] {
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.sheet-fill input:disabled + span {
+  opacity: 0.5;
+}
+
+.sheet-stage {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 100%;
+  max-height: 60vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: var(--sheet-desk);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.sheet-stage.drawing {
+  cursor: crosshair;
+}
+
+.sheet-stage:not(.drawing):active {
+  cursor: grabbing;
+}
+
+.sheet-stage:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.sheet-pivot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+}
+
+.sheet-half {
+  position: absolute;
+  inset: 0;
+}
+
+.sheet-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.sheet-paper {
+  fill: var(--sheet-paper);
+}
+
+.sheet-edge {
+  fill: none;
+  stroke: var(--sheet-edge);
+  stroke-width: 0.8;
+}
+
+.sheet-grid line {
+  stroke: var(--sheet-grid);
+  stroke-width: 0.4;
+}
+
+.sheet-fold {
+  stroke: var(--sheet-fold);
+  stroke-width: 0.9;
+  stroke-dasharray: 3 2.2;
+}
+
+.sheet-pick {
+  fill: var(--primary);
+}
+
+.sheet-edit {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* With both languages on, the second one goes under the first inside the button. */
+.sheet-btn {
+  flex-direction: column;
+  gap: 0;
+  padding: 6px 8px;
+  line-height: 1.25;
+  text-align: center;
+}

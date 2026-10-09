@@ -132,6 +132,8 @@ export interface ReadyTopic {
   explore?: boolean
   /** Has an open dice that folds in 3D at #/t/<id>/fold (pages/DiceFold.tsx). */
   fold?: boolean
+  /** Has a see-through sheet to draw on and fold in 3D at #/t/<id>/draw (pages/SheetFold.tsx). */
+  draw?: boolean
 }
 
 const visible = (qs: Question[]) => qs.filter((q) => q.status !== 'needs-review')
@@ -341,6 +343,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: foldSheetMeta as TopicMeta,
     missing: 'folded',
     generate: generateFoldSheet,
+    draw: true,
   },
   {
     id: 'paper-punch',
