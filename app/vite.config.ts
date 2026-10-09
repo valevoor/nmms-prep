@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -34,4 +35,9 @@ export default defineConfig({
       },
     }),
   ],
+  test: {
+    // The generator tests make 1,000+ questions each: about 1.5s on a laptop, but four times that on
+    // GitHub's runners, which tripped the 5s default and failed a deploy.
+    testTimeout: 20_000,
+  },
 })
