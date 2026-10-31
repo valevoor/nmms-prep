@@ -6,130 +6,18 @@
  * answer, the cropped pictures and that the four option pictures differ.
  * Run from app/:  npx tsx ../tools/check_pyq_ka_2020_21_mat.ts
  */
-import { createHash } from 'node:crypto'
-import { existsSync, readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import paper from '../app/src/data/pyq/ka-2020-21-mat.json' with { type: 'json' }
 import { countShapes } from '../app/src/lib/shapeCount'
 import type { Seg, ShapeKind } from '../app/src/lib/shapeCount'
+import { analogy, codeOf, cube, fill, holds, is, isPrime, lines, matrix, odd, oppositeOf, place, range, runPaper, series, shift, SIGN, wrong, weekday, DAYS } from './pyq_check_lib.ts'
+import type { Fits, Key, Q } from './pyq_check_lib.ts'
 
-type Key = 'A' | 'B' | 'C' | 'D'
-type Q = {
-  id: string
-  paperNo: number
-  topic: string | null
-  answer: string
-  options: Record<string, string>
-  terms: string[]
-  table?: string[][]
-  status?: string
-  note?: string
-  figures?: { terms: string[]; options?: Record<string, string> }
-}
 const questions = paper.questions as Q[]
-
-const range = (a: number, n: number) => Array.from({ length: n }, (_, i) => a + i)
-const isPrime = (n: number) => n > 1 && range(2, Math.max(0, Math.floor(Math.sqrt(n)) - 1)).every((d) => n % d)
-const place = (c: string) => c.toUpperCase().charCodeAt(0) - 64
-const letter = (n: number) => String.fromCharCode(65 + ((((n - 1) % 26) + 26) % 26))
-const shift = (w: string, steps: (i: number) => number) => [...w].map((c, i) => letter(place(c) + steps(i))).join('')
-/** Fills the '?' terms with an option ("4, 8" fills two). */
-const fill = (terms: string[], v: string) => {
-  const parts = v.split(',').map((s) => s.trim())
-  let k = 0
-  return terms.map((t) => (t === '?' ? (parts[k++] ?? '?') : t))
-}
-/** Works out a sum with × ÷ before + −, from left to right. */
-function calc(expr: string): number {
-  const toks = expr.replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-').match(/\d+(?:\.\d+)?|[-+*/]/g)!
-  const terms: number[] = []
-  const signs: string[] = []
-  let cur = Number(toks[0])
-  for (let i = 1; i < toks.length; i += 2) {
-    const op = toks[i]
-    const n = Number(toks[i + 1])
-    if (op === '*') cur *= n
-    else if (op === '/') cur /= n
-    else terms.push(cur), signs.push(op), (cur = n)
-  }
-  terms.push(cur)
-  return terms.reduce((s, t, i) => (i === 0 ? t : signs[i - 1] === '+' ? s + t : s - t))
-}
-/** True when "a = b" (or < >) holds. */
-function holds(stmt: string): boolean {
-  const m = stmt.match(/^(.*?)([=<>])(.*)$/)
-  if (!m || /[=<>]/.test(m[3])) return false
-  const [l, r] = [calc(m[1]), calc(m[3])]
-  return m[2] === '=' ? Math.abs(l - r) < 1e-9 : m[2] === '<' ? l < r : l > r
-}
-const SIGN = (s: string) => s.replace(/-/g, '−')
-
-/** A rule for a word or number question: does this option fit? Exactly one option must. */
-type Fits = (q: Q, option: string) => boolean
-const series = (full: (string | number)[]): Fits => (q, v) => fill(q.terms, v).join(',') === full.map(String).join(',')
-const analogy = (f: (x: number) => number): Fits => (q, v) => {
-  const t = q.terms.map((x) => (x === '?' ? v : x)).map(Number)
-  return Math.abs(f(t[0]) - t[1]) < 1e-9 && Math.abs(f(t[2]) - t[3]) < 1e-9
-}
-/** Wrong number: the option is exactly the term(s) of the series that differ from the rule's. */
-const wrong = (right: number[]): Fits => (q, v) => {
-  const bad = q.terms.map((t, i) => (Number(t) === right[i] ? null : t)).filter((t) => t !== null)
-  return bad.join(', ') === v
-}
-const odd = (alike: (o: string) => boolean): Fits => (q, v) => !alike(v) && Object.values(q.options).filter((o) => o !== v).every(alike)
-const matrix = (ok: (m: number[][]) => boolean, num: (c: string) => number = Number): Fits => (q, v) =>
-  ok(q.table!.map((row) => row.map((c) => num(c === '?' ? v : c))))
-const is = (want: string): Fits => (_, v) => v === want
-
-const lines = (c: string) => ({ L: 2, T: 2, X: 2, Z: 3, H: 3, K: 3, A: 3, N: 3, I: 3, E: 4, M: 4, W: 4 })[c] ?? -1
-const cube = (n: number) => n ** 3
-
-/** Code table (Q53-56): every letter-to-code-letter matching that fits all the words. */
-function solveTable(table: string[][]): Record<string, string>[] {
-  const letters = [...new Set(table.flatMap(([w]) => [...w]))]
-  const out: Record<string, string>[] = []
-  const fits = (a: Record<string, string>) =>
-    table.every(([w, c]) => {
-      const known = [...w].filter((x) => a[x])
-      const pool = [...c]
-      for (const x of known) {
-        const i = pool.indexOf(a[x])
-        if (i < 0) return false
-        pool.splice(i, 1)
-      }
-      return true
-    })
-  const go = (i: number, a: Record<string, string>) => {
-    if (i === letters.length) return void out.push({ ...a })
-    const x = letters[i]
-    const codes = new Set(table.filter(([w]) => w.includes(x)).flatMap(([, c]) => [...c]))
-    for (const c of codes) {
-      if (Object.values(a).includes(c)) continue
-      a[x] = c
-      if (fits(a)) go(i + 1, a)
-      delete a[x]
-    }
-  }
-  go(0, {})
-  return out
-}
-const codeOf = (word: string): Fits => (q, v) => solveTable(q.table!).some((a) => [...word].map((c) => a[c]).join('') === v)
 
 /** Q44-47: the numbers in each part of the picture and which shapes it is inside (C circle, R rectangle, T triangle). */
 const PARTS: [number, string][] = [[7, 'C'], [4, 'CT'], [8, 'CRT'], [3, 'CR'], [5, 'R'], [10, 'RT'], [6, 'R'], [2, 'T']]
 const sum = (keep: (s: string) => boolean) => PARTS.filter(([, s]) => keep(s)).reduce((t, [n]) => t + n, 0)
 
-/** Day of the week (0 = Sunday) by counting days, without Date's own calendar: days since 1 Jan 2000 (a Saturday). */
-function weekday(y: number, m: number, d: number): number {
-  const leap = (yr: number) => (yr % 4 === 0 && yr % 100 !== 0) || yr % 400 === 0
-  const MONTHS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  let days = 0
-  for (let yr = 2000; yr < y; yr++) days += leap(yr) ? 366 : 365
-  for (let mm = 1; mm < m; mm++) days += MONTHS[mm - 1] + (mm === 2 && leap(y) ? 1 : 0)
-  days += d - 1
-  return (6 + days) % 7
-}
-const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 // Counting figures: the pictures typed in as straight lines (y down), read from the rendered page.
 const quarterQ63: Seg[] = [
@@ -277,16 +165,6 @@ const RULES: Record<number, Fits> = {
 RULES[36] = RULES[35]
 RULES[38] = RULES[37]
 
-/** The number opposite `n`, from views of three faces at a corner: the only number never seen with it, if there is one. */
-function oppositeOf(views: number[][], n: number): number | undefined {
-  const nextTo = (a: number) => new Set(views.filter((v) => v.includes(a)).flat())
-  const left = range(1, 6).filter((m) => m !== n && !nextTo(n).has(m))
-  if (left.length === 1) return left[0]
-  // Otherwise find the face whose own neighbours rule out everything but n.
-  const sure = range(1, 6).filter((m) => m !== n && range(1, 6).filter((k) => k !== m && !nextTo(m).has(k)).join() === String(n))
-  return sure.length === 1 ? sure[0] : undefined
-}
-
 /** Picture questions, solved by eye from the rendered pages (see each question's rule and working). */
 const BY_EYE: Record<number, Key> = {
   25: 'C', 26: 'D', 27: 'B', 28: 'A',
@@ -298,31 +176,5 @@ const BY_EYE: Record<number, Key> = {
 /** Questions hidden from students, and why the answer above isn't certain. */
 const UNSURE = new Set([11, 23, 67])
 
-const PUBLIC = new URL('../app/public/', import.meta.url).pathname
-const hash = (f: string) => createHash('sha1').update(readFileSync(join(PUBLIC, f))).digest('hex')
 
-let bad = 0
-const fail = (q: Q, msg: string) => (bad++, console.log(`✗ Q${q.paperNo} (${q.id}): ${msg}`))
-for (const q of questions) {
-  if (new Set(Object.values(q.options)).size !== 4 && !q.figures?.options) fail(q, 'options are not 4 different values')
-  if (UNSURE.has(q.paperNo) !== (q.status === 'needs-review')) fail(q, UNSURE.has(q.paperNo) ? 'should be hidden (needs-review)' : 'hidden, but its answer is sure')
-  if (q.status === 'needs-review' && !q.note) fail(q, 'hidden without a note')
-  if (q.figures) {
-    const files = [...q.figures.terms.filter((f) => f !== '?'), ...Object.values(q.figures.options ?? {})]
-    for (const f of files) if (!existsSync(join(PUBLIC, f))) fail(q, `missing picture ${f}`)
-    const opts = Object.values(q.figures.options ?? {})
-    if (opts.length && new Set(opts.map((f) => (existsSync(join(PUBLIC, f)) ? hash(f) : f))).size !== 4) fail(q, 'two option pictures are the same')
-  }
-  const rule = RULES[q.paperNo]
-  if (rule) {
-    const fits = (Object.keys(q.options) as Key[]).filter((k) => rule(q, q.options[k]))
-    if (fits.length === 1 && fits[0] === q.answer) console.log(`✓ Q${q.paperNo}: ${q.answer} (${q.options[q.answer]})${q.status ? ' (hidden)' : ''}`)
-    else fail(q, `options that fit the rule: ${fits.join(', ') || 'none'}; marked ${q.answer}`)
-  } else if (BY_EYE[q.paperNo]) {
-    if (BY_EYE[q.paperNo] !== q.answer) fail(q, `marked ${q.answer}, solved by eye as ${BY_EYE[q.paperNo]}`)
-    else console.log(`✓ Q${q.paperNo}: ${q.answer} (picture, solved by eye)${q.status ? ' (hidden)' : ''}`)
-  } else fail(q, 'no rule to check it against')
-}
-
-console.log(bad ? `\n${bad} problem(s) found.` : `\nAll ${questions.length} answers in the Karnataka MAT 2020-21 paper check out.`)
-process.exit(bad ? 1 : 0)
+process.exit(runPaper('Karnataka MAT 2020-21', questions, RULES, BY_EYE, UNSURE) ? 1 : 0)
