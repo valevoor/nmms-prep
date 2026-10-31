@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { BiLabel } from '../components/Bi'
 import { Explanation } from '../components/Explanation'
 import { LangSwitch } from '../components/LangSwitch'
@@ -7,19 +7,23 @@ import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { useCountdown } from '../lib/countdown'
+import { paperQuestions } from '../data/papers'
 import { askLabel } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useT } from '../lib/i18n'
+import { questionLabel } from '../lib/source'
 import type { Question } from '../types'
 
-type Source = 'book' | 'fresh'
+type Source = 'book' | 'exam' | 'fresh'
 const TIME_CHOICES = [30, 60, 90, 120]
 
 export function Classroom({ topic }: { topic: ReadyTopic }) {
   const t = useT()
   const [source, setSource] = useState<Source>('book')
   const [fresh, setFresh] = useState<Question[]>(() => (topic.generate ? [topic.generate()] : []))
-  const list = source === 'book' ? topic.questions : fresh
+  // Past-paper questions filed under this chapter; the button only shows when there are some.
+  const exam = useMemo(() => paperQuestions(topic.id), [topic.id])
+  const list = source === 'book' ? topic.questions : source === 'exam' ? exam : fresh
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [explained, setExplained] = useState(false)
@@ -92,6 +96,11 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
           <button className={source === 'book' ? 'on' : ''} onClick={() => switchSource('book')}>
             {t.classroom.book}
           </button>
+          {exam.length > 0 && (
+            <button className={source === 'exam' ? 'on' : ''} onClick={() => switchSource('exam')}>
+              {t.practice.exam}
+            </button>
+          )}
           <button className={source === 'fresh' ? 'on' : ''} onClick={() => switchSource('fresh')} disabled={!topic.generate}>
             {t.classroom.fresh}
           </button>
@@ -114,8 +123,8 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
       <section className="card question class-card">
         <div className="q-head">
           <span>
-            {source === 'book' ? t.common.bookQ(q.bookNo) : t.classroom.newQuestion} · {index + 1}
-            {source === 'book' && t.classroom.of(list.length)}
+            {q.paper && <span className="chip chip-exam">{t.common.realExam}</span>} {source === 'fresh' ? t.classroom.newQuestion : questionLabel(q, t)} · {index + 1}
+            {source !== 'fresh' && t.classroom.of(list.length)}
           </span>
           <span className="muted">
             <BiLabel get={(d) => askLabel(d, topic)} />
@@ -139,7 +148,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
             {explained ? t.classroom.hideExplanation : t.classroom.showExplanation}
           </button>
         )}
-        <button className="btn btn-lg" onClick={() => go(1)} disabled={source === 'book' && index === list.length - 1}>
+        <button className="btn btn-lg" onClick={() => go(1)} disabled={source !== 'fresh' && index === list.length - 1}>
           {t.common.next}
         </button>
       </div>

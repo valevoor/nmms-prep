@@ -19,12 +19,13 @@ import { Home } from './pages/Home'
 import { SHAPE_IDS, SHAPE_STEPS } from './data/shapes'
 import { Shapes } from './pages/Shapes'
 import { Learn } from './pages/Learn'
+import { paperQuestions } from './data/papers'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
 import { QuickTest } from './pages/QuickTest'
 import { GuessRule } from './pages/GuessRule'
 
-const MODES: PracticeMode[] = ['book', 'more', 'mistakes']
+const MODES: PracticeMode[] = ['book', 'exam', 'more', 'mistakes']
 
 /** Home's scroll position, so going back to it lands on the same chapter row. */
 let homeScroll = 0
@@ -97,7 +98,8 @@ function topicPage(topic: ReadyTopic, view: string | undefined, query: URLSearch
       return <Learn topic={topic} />
     case 'practice': {
       const m = query.get('mode') as PracticeMode
-      const mode = MODES.includes(m) ? m : 'book'
+      // The exam tab exists only for chapters with past-paper questions.
+      const mode = MODES.includes(m) && (m !== 'exam' || paperQuestions(topic.id).length > 0) ? m : 'book'
       return <Practice key={mode} topic={topic} mode={mode} />
     }
     case 'test':

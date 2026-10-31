@@ -259,6 +259,9 @@ export interface Question {
   working: string
   pattern: PatternId
   note?: string
+  /** Past-paper questions: the paper's id (data/papers.ts) and the question's number in it. */
+  paper?: string
+  paperNo?: number
   /** Book questions only. */
   bookNo?: number
   sourcePage?: number

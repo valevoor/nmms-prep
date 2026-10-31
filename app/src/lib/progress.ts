@@ -18,6 +18,8 @@ export interface TestResult {
 export interface TopicProgress {
   /** Book questions, by id. */
   attempts: Record<string, Attempt>
+  /** Past-paper questions, by id. Kept apart so they don't count towards the book total. */
+  exam: Record<string, Attempt>
   /** Generated questions answered (they aren't stored one by one). */
   generated: { correct: number; wrong: number }
   /** Questions answered wrong and not yet answered right again. Newest first. */
@@ -28,7 +30,7 @@ export interface TopicProgress {
 }
 
 const MAX_MISTAKES = 50
-const empty = (): TopicProgress => ({ attempts: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {} })
+const empty = (): TopicProgress => ({ attempts: {}, exam: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {} })
 
 const cache = new Map<string, TopicProgress>()
 const listeners = new Set<() => void>()
@@ -63,9 +65,10 @@ export function recordAnswer(topic: string, q: Question, correct: boolean) {
     if (q.generated) {
       next.generated = { ...p.generated, [correct ? 'correct' : 'wrong']: p.generated[correct ? 'correct' : 'wrong'] + 1 }
     } else {
-      const a = p.attempts[q.id] ?? { correct: 0, wrong: 0, lastCorrect: false }
-      next.attempts = {
-        ...p.attempts,
+      const field = q.paper ? 'exam' : 'attempts'
+      const a = p[field][q.id] ?? { correct: 0, wrong: 0, lastCorrect: false }
+      next[field] = {
+        ...p[field],
         [q.id]: { correct: a.correct + (correct ? 1 : 0), wrong: a.wrong + (correct ? 0 : 1), lastCorrect: correct },
       }
     }
@@ -110,8 +113,10 @@ export function useProgress(topic: string): TopicProgress {
 
 export function summarize(p: TopicProgress, bookTotal: number) {
   const book = Object.values(p.attempts)
-  const correct = book.reduce((s, a) => s + a.correct, 0) + p.generated.correct
-  const answered = correct + book.reduce((s, a) => s + a.wrong, 0) + p.generated.wrong
+  // Accuracy counts every answer: book, past-paper and generated questions.
+  const all = [...book, ...Object.values(p.exam)]
+  const correct = all.reduce((s, a) => s + a.correct, 0) + p.generated.correct
+  const answered = correct + all.reduce((s, a) => s + a.wrong, 0) + p.generated.wrong
   return {
     bookDone: book.length,
     bookMastered: book.filter((a) => a.lastCorrect).length,

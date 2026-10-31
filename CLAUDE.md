@@ -43,6 +43,7 @@ app/src/
   data/facts.ts                 numbers for the Facts page (primes, squares, cubes) + FACT_CHAPTERS (chapters that link to it)
   data/shapes.ts                Shapes page: sizes and worked formulas (perimeter, area, volume, surface area)
   data/mat/<topic>.json         book questions;  <topic>.meta.json: intro, tips, worked examples
+  data/pyq/<paper>.json         past NMMS papers (+ <paper>.kn.json); listed in data/papers.ts, shown in each chapter's Practice → "Past exams" tab
   lib/generators/               question generators + their tests (1,000+ questions each)
   lib/solids.ts                 3D solids and nets for the Shapes page, turned and drawn as SVG; lib/flatShapes.ts draws its 2D steps
   lib/progress.ts               per-topic progress in IndexedDB (attempts, mistakes, tests, best scores)
@@ -65,6 +66,16 @@ app/src/
 8. **Book Kannada:** some chapters (e.g. Directions) print proper Kannada in the rendered pages. Use that wording for questions and options instead of drafting; only the text extraction is garbled.
 9. **Question layouts:** `series` (default), `analogy`, `odd` (the four options are the question) and `text` (a `prompt` sentence plus an optional `table`, shown by `components/QuestionStem.tsx`). Each generator needs an independent test proving exactly one option is right.
 10. **Picture chapters:** crop the figures with `swift tools/crop_figures.swift tools/figures/chNN.json <contact-sheet.png>` (bands or rects in PDF points; `boxed`, `labelsBelow` and `labelsLeft` trim the printed (A)–(D) labels; check the contact sheet by eye), then set `figures` on each question: `terms` (image paths, `'?'` for the blank) and `options`. Pictures can't be solved by code, so solve each by eye and let `tools/figure_check.ts` check the key and the files. Generators draw `Drawing` objects (`components/Drawing.tsx`); their tests compare where the ink goes, not the fields.
+
+## Adding a past paper
+
+The source papers are in `pyq/` (git-ignored). Karnataka MAT 2020-21 (`data/pyq/ka-2020-21-mat.json`) is the worked example.
+
+1. **One file per paper**, every question in it, numbered as printed (`paperNo`), each in its chapter's own format with `topic` set to that chapter's id (`null` if no chapter fits; it is kept but not shown yet). Copy the paper's `sections` (directions) too.
+2. **Read the rendered pages, not the text:** `swift tools/render_pages.swift` reads only `NMMS.pdf`, so render the paper the same way with its path. Crop figures with a `tools/figures/pyq-<paper>.json` config that sets `"pdf"`, into `app/public/figures/pyq/<paper>/`.
+3. **Answers:** the papers have no key, so every answer is `keyFrom: "solved"` until an official key is found. Write `tools/check_pyq_<paper>.ts` with an independent rule for every question (exactly one option must fit; pictures solved by eye are listed there), and add it to `check:content`. `tools/check_pyq.ts` checks the papers' numbering and chapters.
+4. **Kannada:** `<paper>.kn.json`, using the paper's printed Kannada for questions and options; list the paper in `data/papers.ts`.
+5. Doubtful questions get `"status": "needs-review"` with a `note`, as for the book.
 
 ## Content rules
 

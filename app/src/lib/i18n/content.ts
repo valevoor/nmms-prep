@@ -1,11 +1,12 @@
 import { CHAPTER_FILES } from '../../data/chapters'
+import { PAPER_FILES } from '../../data/papers'
 import type { OptionKey, Question, QuestionText, TopicMeta } from '../../types'
 import { useShowBoth } from './both'
 import { useLocale } from './locale'
 import type { Locale } from './locale'
 
-/** Kannada text for book questions, by question id. */
-const BOOK_KN: Record<string, QuestionText> = Object.assign({}, ...CHAPTER_FILES.map((c) => c.kn))
+/** Kannada text for book and past-paper questions, by question id. */
+const BOOK_KN: Record<string, QuestionText> = Object.assign({}, ...CHAPTER_FILES.map((c) => c.kn), ...PAPER_FILES.map((p) => p.kn))
 
 /** Kannada intro, tips and video titles, by topic id. */
 const META_KN = Object.fromEntries(CHAPTER_FILES.map((c) => [c.id, c.metaKn]))

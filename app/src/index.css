@@ -4283,3 +4283,11 @@ kbd {
   stroke-width: 2.5;
   stroke-dasharray: 4 3;
 }
+
+/* "Real exam" tag on past-paper questions in Practice. */
+.chip-exam {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border: 1px solid var(--accent-line);
+  margin-right: 4px;
+}
