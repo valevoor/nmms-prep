@@ -66,6 +66,7 @@ function ContinueCard() {
 
 /** "Class 7 · Ch 13, 14" or, across classes, "Class 7 · Ch 11 + Class 8 · Ch 10". */
 function chapterRefs(t: Dict, topic: SatTopic): string {
+  if (topic.uncategorized) return t.sat.uncategorizedRefs
   const classes = [...new Set(topic.chapters.map((c) => c.cls))]
   return classes
     .map((cls) =>
@@ -102,6 +103,14 @@ function SatRow({ topic }: { topic: SatTopic }) {
   )
 }
 
+/** Scrolls a subject's section to just below the sticky top bar (its height changes with the screen width). */
+function scrollToSubject(subject: string) {
+  const el = document.getElementById(`sat-${subject}`)
+  if (!el) return
+  const bar = document.querySelector<HTMLElement>('.topbar')?.offsetHeight ?? 0
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - bar - 8, behavior: 'smooth' })
+}
+
 /** Home's SAT tab: the topics (chapters, some combined) that past papers asked about, by subject. */
 function SatHome() {
   const t = useT()
@@ -117,11 +126,22 @@ function SatHome() {
             </li>
           ))}
         </ul>
+        <nav className="sat-jump" aria-label={t.sat.jumpLabel}>
+          {SAT_SUBJECTS.map((s) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => scrollToSubject(s)}
+            >
+              {t.sat.subjects[s]}
+            </button>
+          ))}
+        </nav>
       </section>
       {SAT_SUBJECTS.map((s) => {
         const list = SAT_TOPICS.filter((x) => x.subject === s)
         return (
-          <section key={s}>
+          <section key={s} id={`sat-${s}`}>
             <h2 className="section-title">
               {t.sat.subjects[s]} <span className="muted section-count">· {t.sat.topicCount(list.length)}</span>
             </h2>
