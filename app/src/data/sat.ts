@@ -4,18 +4,25 @@
  * Each question is filed under the syllabus chapter it belongs to (`topic`), or under none (`null`) when
  * the 2026-27 textbooks no longer cover it. For revision, related chapters are combined into one topic
  * (data/sat/groups.json); every other chapter is a topic on its own. The questions don't have answers
- * yet; tools/check_sat.ts checks the papers, the chapter list and the groups.
+ * yet; tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
+ * printed in it, is in data/pyq/*-sat.kn.json (checked by tools/check_i18n.ts).
  */
 import type { OptionKey } from '../types'
 import chaptersJson from './sat/chapters.json'
 import chaptersKn from './sat/chapters.kn.json'
 import groupsJson from './sat/groups.json'
 import ka1920 from './pyq/ka-2019-20-sat.json'
+import ka1920Kn from './pyq/ka-2019-20-sat.kn.json'
 import ka2021 from './pyq/ka-2020-21-sat.json'
+import ka2021Kn from './pyq/ka-2020-21-sat.kn.json'
 import ka2223 from './pyq/ka-2022-23-sat.json'
+import ka2223Kn from './pyq/ka-2022-23-sat.kn.json'
 import ka2324 from './pyq/ka-2023-24-sat.json'
+import ka2324Kn from './pyq/ka-2023-24-sat.kn.json'
 import ka2425 from './pyq/ka-2024-25-sat.json'
+import ka2425Kn from './pyq/ka-2024-25-sat.kn.json'
 import ka2526 from './pyq/ka-2025-26-sat.json'
+import ka2526Kn from './pyq/ka-2025-26-sat.kn.json'
 
 export type SatSubject = 'maths' | 'science' | 'social'
 export const SAT_SUBJECTS: SatSubject[] = ['maths', 'science', 'social']
@@ -60,11 +67,16 @@ export interface SatQuestion {
   answer?: OptionKey
 }
 
+/** The words of a question in one language; maths, labels and picture options are the same in both. */
+export type SatQuestionText = Pick<SatQuestion, 'prompt' | 'table' | 'note' | 'options'>
+
 export interface SatPaper {
   id: string
   state: 'karnataka'
   year: string
   questions: SatQuestion[]
+  /** The paper's printed Kannada, by question id (draft, not yet reviewed). Missing fields fall back to English. */
+  kn: Record<string, Partial<SatQuestionText>>
 }
 
 interface PaperJson {
@@ -73,15 +85,34 @@ interface PaperJson {
   questions: unknown[]
 }
 
-const paper = (data: PaperJson): SatPaper => ({
+const paper = (data: PaperJson, kn: { questions: Record<string, unknown> }): SatPaper => ({
   id: data.paper,
   state: 'karnataka',
   year: data.year,
   questions: data.questions as SatQuestion[],
+  kn: kn.questions as SatPaper['kn'],
 })
 
 /** Oldest first. */
-export const SAT_PAPERS: SatPaper[] = [ka1920, ka2021, ka2223, ka2324, ka2425, ka2526].map(paper)
+export const SAT_PAPERS: SatPaper[] = [
+  paper(ka1920, ka1920Kn),
+  paper(ka2021, ka2021Kn),
+  paper(ka2223, ka2223Kn),
+  paper(ka2324, ka2324Kn),
+  paper(ka2425, ka2425Kn),
+  paper(ka2526, ka2526Kn),
+]
+
+/** A question's words in the given language. */
+export function satQuestionText(p: SatPaper, q: SatQuestion, lang: string): SatQuestionText {
+  const kn = lang === 'kn' ? p.kn[q.id] : undefined
+  return {
+    prompt: kn?.prompt ?? q.prompt,
+    table: kn?.table ?? q.table,
+    note: kn?.note ?? q.note,
+    options: kn?.options ?? q.options,
+  }
+}
 
 export const SAT_CHAPTERS = chaptersJson as SatChapter[]
 

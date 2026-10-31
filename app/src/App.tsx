@@ -91,7 +91,12 @@ export default function App() {
   if (kind === 'sat') {
     const satTopic = getSatTopic(topicId)
     if (!satTopic || parts.length > 3 || (view !== undefined && view !== 'questions')) return <NotFound />
-    return view ? <SatQuestions topic={satTopic} /> : <SatTopic topic={satTopic} />
+    if (!view) return <SatTopic topic={satTopic} />
+    return (
+      <TopicIdContext.Provider value="sat">
+        <SatQuestions topic={satTopic} />
+      </TopicIdContext.Provider>
+    )
   }
   if (!topic) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.

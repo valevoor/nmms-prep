@@ -10,6 +10,7 @@
  */
 
 const VIRAMA = '್'
+const ZWNJ = '\u200c'
 
 /** Base consonant shapes (the vowel sign that follows decides the syllable). */
 const BASES: Record<string, string> = {
@@ -71,14 +72,21 @@ export function nudiToUnicode(s: string): string {
     else if (key in OTTUS) {
       const tail: string[] = []
       while (out.length && isTrailing(out[out.length - 1])) tail.unshift(out.pop()!)
-      if (out[out.length - 1] !== VIRAMA) out.push(VIRAMA)
-      out.push(OTTUS[key], ...tail)
+      // A conjunct under a dead consonant (ಟ್ + ಸ) is dead too: ಟ್ಸ್.
+      const dead = out[out.length - 1] === VIRAMA
+      if (dead) out.pop()
+      out.push(VIRAMA, OTTUS[key], ...(dead ? [VIRAMA] : []), ...tail)
     } else if (key in SIGNS) {
       const last = out[out.length - 1]
       // Long marks: Æ/Ç after e makes o.
       if ((key === 'Æ' || key === 'Ç') && last === 'ೆ') out[out.length - 1] = 'ೊ'
       else if (SIGNS[key]) out.push(SIGNS[key])
-    } else out.push(...(BASES[key] ?? SYLLABLES[key]))
+    } else {
+      const text = BASES[key] ?? SYLLABLES[key]
+      // A virama typed before a full letter (not a conjunct) stays visible, as in ಬಾಲ್‌ಬೇರಿಂಗ್.
+      if (out[out.length - 1] === VIRAMA && text[0] >= 'ಕ' && text[0] <= 'ೞ') out.push(ZWNJ)
+      out.push(...text)
+    }
   }
   let text = out.join('').replace(/ð([ÃÊ]+)/g, '$1ð')
   // Ã lengthens i, e and o; Ê after e makes ai.

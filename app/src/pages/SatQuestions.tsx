@@ -1,10 +1,15 @@
+import { BiBlock, BiInline } from '../components/Bi'
 import { Page } from '../components/Page'
 import type { SatChapter, SatPaper, SatQuestion, SatTopic } from '../data/sat'
-import { satQuestions, satTopicName } from '../data/sat'
-import { useLocale, useT } from '../lib/i18n'
+import { satQuestions, satQuestionText, satTopicName } from '../data/sat'
+import { useLocale, useShowBoth, useT } from '../lib/i18n'
+import { otherLocale } from '../lib/i18n/content'
 import { OPTION_KEYS } from '../types'
 
-/** A SAT topic's past exam questions (#/sat/<id>/questions), as printed; they have no answers yet. */
+/**
+ * A SAT topic's past exam questions (#/sat/<id>/questions), as printed in English and Kannada; they have
+ * no answers yet. With "EN+ಕ" on, each question shows both languages.
+ */
 export function SatQuestions({ topic }: { topic: SatTopic }) {
   const t = useT()
   const lang = useLocale()
@@ -28,22 +33,31 @@ export function SatQuestions({ topic }: { topic: SatTopic }) {
 /** One question as printed; `chapter` is named when the topic combines several chapters. */
 function QuestionCard({ paper, q, chapter }: { paper: SatPaper; q: SatQuestion; chapter?: SatChapter }) {
   const t = useT()
+  const lang = useLocale()
+  const otherLang = otherLocale(lang)
+  const text = satQuestionText(paper, q, lang)
+  const other = useShowBoth() ? satQuestionText(paper, q, otherLang) : undefined
   return (
     <article className="card sat-q">
       <p className="sat-q-src">
         {t.common.paperQ(t.common.states[paper.state], paper.year, q.paperNo)}
         {chapter && ` · ${t.sat.fromChapter(chapter.cls, t.sat.subjects[chapter.subject], chapter.no)}`}
       </p>
-      <p className="sat-prompt">{q.prompt}</p>
-      {q.table && (
+      <BiBlock className="sat-prompt" text={text.prompt} other={other?.prompt} lang={lang} otherLang={otherLang} />
+      {text.table && (
         <div className="sat-table-wrap">
           <table className="code-table sat-table">
             <tbody>
-              {q.table.map((row, r) => (
+              {text.table.map((row, r) => (
                 <tr key={r}>
-                  {row.map((cell, i) => (
-                    <td key={i}>{cell}</td>
-                  ))}
+                  {row.map((cell, i) => {
+                    const second = other?.table?.[r]?.[i]
+                    return (
+                      <td key={i}>
+                        <BiInline first={cell} other={second !== cell ? second : undefined} otherLang={otherLang} stacked />
+                      </td>
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>
@@ -70,17 +84,22 @@ function QuestionCard({ paper, q, chapter }: { paper: SatPaper; q: SatQuestion; 
         </ul>
       ) : (
         <ul className="sat-opts" aria-label={t.common.answerOptions}>
-          {OPTION_KEYS.map((k) => (
-            <li key={k}>
-              <span className="sat-key">{k}</span>
-              <span>{q.options[k]}</span>
-            </li>
-          ))}
+          {OPTION_KEYS.map((k) => {
+            const second = other?.options[k]
+            return (
+              <li key={k}>
+                <span className="sat-key">{k}</span>
+                <span>
+                  <BiInline first={text.options[k]} other={second !== text.options[k] ? second : undefined} otherLang={otherLang} stacked />
+                </span>
+              </li>
+            )
+          })}
         </ul>
       )}
-      {q.note && (
+      {text.note && (
         <p className="muted sat-note">
-          <strong>{t.sat.noteLabel}</strong> {q.note}
+          <strong>{t.sat.noteLabel}</strong> {text.note}
         </p>
       )}
     </article>

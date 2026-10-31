@@ -1,5 +1,6 @@
 /**
- * Checks the Kannada book-content overlays (data/mat/*.kn.json and the past papers' data/pyq/*.kn.json):
+ * Checks the Kannada book-content overlays (data/mat/*.kn.json and the past papers' data/pyq/*.kn.json,
+ * MAT and SAT):
  * - every book question has an entry, and there are no entries for questions that don't exist;
  * - every rule/working/note with English words has a Kannada version, written in Kannada script;
  * - every tip has a Kannada title, body and (if the English has one) caption.
@@ -8,6 +9,7 @@
  */
 import { CHAPTER_FILES } from '../app/src/data/chapters'
 import { PAPER_FILES } from '../app/src/data/papers'
+import { SAT_PAPERS } from '../app/src/data/sat'
 
 const KANNADA = /[ಀ-೿]/
 /**
@@ -63,6 +65,35 @@ for (const c of CHAPTER_FILES) checkChapter(c.name, c.questions, c.kn, c.meta, c
 for (const p of PAPER_FILES) {
   checkQuestions(p.id, p.questions, p.kn)
   console.log(`${p.id}: ${Object.keys(p.kn).length}/${p.questions.length} questions`)
+}
+
+/** English words in a SAT option or table cell (not units like “km”, algebra like “at” or “abc”, or roman numerals). */
+const SAT_WORDS = /\b(?!(?:ppm|abc|bca|cab|[ivx]+)\b)[a-z]{3,}/
+
+// The SAT papers: every question has the paper's Kannada, and every option and table cell with English
+// words in it has a Kannada version (tables keep their shape).
+for (const p of SAT_PAPERS) {
+  const name = `${p.id} (SAT)`
+  const ids = new Set(p.questions.map((q) => q.id))
+  for (const id of Object.keys(p.kn)) if (!ids.has(id)) problems.push(`${name}: ${id} is in the Kannada file but not in the paper`)
+  for (const q of p.questions) {
+    const k = p.kn[q.id]
+    if (!k?.prompt || !KANNADA.test(k.prompt)) {
+      problems.push(`${name}: ${q.id} needs a Kannada prompt`)
+      continue
+    }
+    if (q.note && !(k.note && KANNADA.test(k.note))) problems.push(`${name}: ${q.id}.note needs Kannada`)
+    for (const key of ['A', 'B', 'C', 'D'] as const) {
+      const kn = k.options?.[key] ?? q.options[key]
+      if (SAT_WORDS.test(q.options[key]) && !KANNADA.test(kn)) problems.push(`${name}: ${q.id} option ${key} needs Kannada: "${q.options[key]}"`)
+    }
+    if (q.table) {
+      const shape = (t: string[][]) => t.map((r) => r.length).join()
+      if (k.table && shape(k.table) !== shape(q.table)) problems.push(`${name}: ${q.id} Kannada table has a different shape`)
+      if (!k.table && q.table.some((r) => r.some((c) => SAT_WORDS.test(c)))) problems.push(`${name}: ${q.id} table needs Kannada`)
+    }
+  }
+  console.log(`${name}: ${Object.keys(p.kn).length}/${p.questions.length} questions`)
 }
 
 if (problems.length) {

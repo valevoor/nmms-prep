@@ -36,7 +36,8 @@ export function useBothSetting(): boolean {
 
 /**
  * The chapter of the current page, set in App on the pages that can show English and Kannada together
- * ("EN+ಕ" in the top bar): every chapter page except the "Guess the rule" game, and the Shapes page ("shapes").
+ * ("EN+ಕ" in the top bar): every chapter page except the "Guess the rule" game, the Shapes page ("shapes")
+ * and the SAT past-paper questions ("sat").
  */
 export const TopicIdContext = createContext<string | undefined>(undefined)
 
