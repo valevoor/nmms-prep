@@ -72,8 +72,8 @@ app/src/
 The source papers are in `pyq/` (git-ignored). Karnataka MAT 2020-21 (`data/pyq/ka-2020-21-mat.json`) is the worked example.
 
 1. **One file per paper**, every question in it, numbered as printed (`paperNo`), each in its chapter's own format with `topic` set to that chapter's id (`null` if no chapter fits; it is kept but not shown yet). Copy the paper's `sections` (directions) too.
-2. **Read the rendered pages, not the text:** `swift tools/render_pages.swift` reads only `NMMS.pdf`, so render the paper the same way with its path. Crop figures with a `tools/figures/pyq-<paper>.json` config that sets `"pdf"`, into `app/public/figures/pyq/<paper>/`.
-3. **Answers:** the papers have no key, so every answer is `keyFrom: "solved"` until an official key is found. Write `tools/check_pyq_<paper>.ts` with an independent rule for every question (exactly one option must fit; pictures solved by eye are listed there), and add it to `check:content`. `tools/check_pyq.ts` checks the papers' numbering and chapters.
+2. **Read the rendered pages, not the text:** `swift tools/render_pages.swift` reads only `NMMS.pdf`, so render the paper the same way with its path. Crop figures with a `tools/figures/pyq-<paper>.json` config that sets `"pdf"`, into `app/public/figures/pyq/<paper>/`. Papers are less regular than the book, so give each figure a rect with `"trim": true` (the rect only has to hold the figure; it is trimmed to the ink) and `"erase"` any QR code printed against a figure.
+3. **Answers:** the papers have no key, so every answer is `keyFrom: "solved"` until an official key is found. Write `tools/check_pyq_<paper>.ts` (helpers in `tools/pyq_check_lib.ts`) with an independent rule for every question (exactly one option must fit; pictures solved by eye are listed there), and add it to `check:content`. `tools/check_pyq.ts` checks the papers' numbering and chapters.
 4. **Kannada:** `<paper>.kn.json`, using the paper's printed Kannada for questions and options; list the paper in `data/papers.ts`.
 5. Doubtful questions get `"status": "needs-review"` with a `note`, as for the book.
 

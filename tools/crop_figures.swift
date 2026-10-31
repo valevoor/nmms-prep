@@ -27,6 +27,10 @@ struct Band: Decodable {
   let labelsLeft: Bool?
   /// Given rects: shave this many points off each side (to drop borders shared with the next box).
   let inset: Double?
+  /// Given rects: trim each to the ink inside it (the rect only has to hold the figure and nothing else).
+  let trim: Bool?
+  /// Rects [x0, y0, x1, y1] painted white before cropping, e.g. a QR code printed against a figure.
+  let erase: [[Double]]?
 }
 struct Spec: Decodable {
   let dir: String
@@ -45,6 +49,8 @@ let scale: CGFloat = 3
 let pad: CGFloat = 3
 
 /// Renders a rect (points, top-left origin) of a page to an 8-bit grey bitmap.
+var erase: [[Double]] = []
+
 func render(_ page: Int, _ r: CGRect) -> CGImage {
   let p = pdf.page(at: page)!
   let box = p.getBoxRect(.mediaBox)
@@ -58,6 +64,8 @@ func render(_ page: Int, _ r: CGRect) -> CGImage {
   // PDF space has its origin at the bottom-left.
   ctx.translateBy(x: -r.minX, y: -(box.height - r.maxY))
   ctx.drawPDFPage(p)
+  ctx.setFillColor(gray: 1, alpha: 1)
+  for e in erase { ctx.fill(CGRect(x: e[0], y: box.height - e[3], width: e[2] - e[0], height: e[3] - e[1])) }
   return ctx.makeImage()!
 }
 
@@ -89,10 +97,20 @@ func save(_ img: CGImage, _ path: String) {
 
 var crops: [[CGImage]] = []
 for b in spec.bands {
+  erase = b.erase ?? []
   var rects: [CGRect] = []
   if let given = b.rects {
     let i = b.inset ?? 0
     rects = given.map { CGRect(x: $0[0] + i, y: $0[1] + i, width: $0[2] - $0[0] - 2 * i, height: $0[3] - $0[1] - 2 * i) }
+    if b.trim == true {
+      rects = rects.map { r in
+        let img = render(b.page, r)
+        guard let (x0, y0, x1, y1) = inkBox(pixels(img), img.width, img.height, 0, img.width) else { return r }
+        return CGRect(
+          x: r.minX + CGFloat(x0) / scale - pad, y: r.minY + CGFloat(y0) / scale - pad,
+          width: CGFloat(x1 - x0 + 1) / scale + 2 * pad, height: CGFloat(y1 - y0 + 1) / scale + 2 * pad)
+      }
+    }
   } else {
     let bb = b.band!
     let band = CGRect(x: bb[0], y: bb[1], width: bb[2] - bb[0], height: bb[3] - bb[1])
