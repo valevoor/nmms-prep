@@ -6,6 +6,8 @@
  * paper's answers are checked by its own tools/check_pyq_<paper>.ts.
  */
 import type { Question, QuestionText } from '../types'
+import ka1920Mat from './pyq/ka-2019-20-mat.json'
+import ka1920MatKn from './pyq/ka-2019-20-mat.kn.json'
 import ka2021Mat from './pyq/ka-2020-21-mat.json'
 import ka2021MatKn from './pyq/ka-2020-21-mat.kn.json'
 import ka2223Mat from './pyq/ka-2022-23-mat.json'
@@ -39,7 +41,7 @@ const p = (data: PaperJson, kn: { questions: Record<string, QuestionText> }): Pa
   kn: kn.questions,
 })
 
-export const PAPER_FILES: PaperFiles[] = [p(ka2021Mat, ka2021MatKn), p(ka2223Mat, ka2223MatKn)]
+export const PAPER_FILES: PaperFiles[] = [p(ka1920Mat, ka1920MatKn), p(ka2021Mat, ka2021MatKn), p(ka2223Mat, ka2223MatKn)]
 
 const BY_ID = Object.fromEntries(PAPER_FILES.map((f) => [f.id, f]))
 
