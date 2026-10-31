@@ -12,6 +12,8 @@ import ka2021Mat from './pyq/ka-2020-21-mat.json'
 import ka2021MatKn from './pyq/ka-2020-21-mat.kn.json'
 import ka2223Mat from './pyq/ka-2022-23-mat.json'
 import ka2223MatKn from './pyq/ka-2022-23-mat.kn.json'
+import ka2324Mat from './pyq/ka-2023-24-mat.json'
+import ka2324MatKn from './pyq/ka-2023-24-mat.kn.json'
 
 export type PaperQuestion = Question & { topic: string | null }
 
@@ -41,7 +43,7 @@ const p = (data: PaperJson, kn: { questions: Record<string, QuestionText> }): Pa
   kn: kn.questions,
 })
 
-export const PAPER_FILES: PaperFiles[] = [p(ka1920Mat, ka1920MatKn), p(ka2021Mat, ka2021MatKn), p(ka2223Mat, ka2223MatKn)]
+export const PAPER_FILES: PaperFiles[] = [p(ka1920Mat, ka1920MatKn), p(ka2021Mat, ka2021MatKn), p(ka2223Mat, ka2223MatKn), p(ka2324Mat, ka2324MatKn)]
 
 const BY_ID = Object.fromEntries(PAPER_FILES.map((f) => [f.id, f]))
 
