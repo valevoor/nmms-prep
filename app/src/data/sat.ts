@@ -3,14 +3,17 @@
  * sat-syllabus/ by tools/build_sat_chapters.ts) and the Karnataka SAT past papers (data/pyq/*-sat.json).
  * Each question is filed under the syllabus chapter it belongs to (`topic`), or under none (`null`) when
  * the 2026-27 textbooks no longer cover it. For revision, related chapters are combined into one topic
- * (data/sat/groups.json); every other chapter is a topic on its own. The questions don't have answers
- * yet; tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
+ * (data/sat/groups.json); every other chapter is a topic on its own. A question under no chapter
+ * names the older syllabus's chapter it was asked from (`oldChapter`, data/sat/old-chapters.json); those
+ * "Old syllabus" topics follow each subject's textbook topics, and an "Uncategorized" topic holds any
+ * question with neither (shown only if there is one). The questions don't have answers yet; tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
  * printed in it, is in data/pyq/*-sat.kn.json (checked by tools/check_i18n.ts).
  */
 import type { OptionKey } from '../types'
 import chaptersJson from './sat/chapters.json'
 import chaptersKn from './sat/chapters.kn.json'
 import groupsJson from './sat/groups.json'
+import oldChaptersJson from './sat/old-chapters.json'
 import ka1920 from './pyq/ka-2019-20-sat.json'
 import ka1920Kn from './pyq/ka-2019-20-sat.kn.json'
 import ka2021 from './pyq/ka-2020-21-sat.json'
@@ -29,6 +32,17 @@ export const SAT_SUBJECTS: SatSubject[] = ['maths', 'science', 'social']
 
 /** The section of the paper a question is printed in. */
 export type SatSection = 'physics' | 'chemistry' | 'biology' | 'history' | 'geography' | 'social' | 'maths'
+
+/** The subject each section of the paper belongs to. */
+export const SECTION_SUBJECT: Record<SatSection, SatSubject> = {
+  physics: 'science',
+  chemistry: 'science',
+  biology: 'science',
+  history: 'social',
+  geography: 'social',
+  social: 'social',
+  maths: 'maths',
+}
 
 export interface SatChapter {
   /** The syllabus chapter ID, e.g. 'sci-8-02-invisible-living-world'. */
@@ -52,6 +66,8 @@ export interface SatQuestion {
   paperNo: number
   subject: SatSection
   topic: string | null
+  /** For a question under no 2026-27 chapter: the older syllabus's chapter (data/sat/old-chapters.json). */
+  oldChapter?: string
   sourcePage: number
   /** The question; lines are separated by "\n". */
   prompt: string
@@ -137,7 +153,21 @@ export interface SatTopic {
   kn?: string
   /** In textbook order: Class 7 first, then by chapter number. */
   chapters: SatChapter[]
+  /** An "Old syllabus" topic: its id in data/sat/old-chapters.json; `chapters` is then empty. */
+  oldChapter?: string
+  /** The subject's questions under no chapter, old or new; `chapters` is then empty. */
+  uncategorized?: true
 }
+
+/** A chapter of the older syllabus that the 2026-27 textbooks dropped. */
+export interface OldChapter {
+  id: string
+  subject: SatSubject
+  name: string
+  kn: string
+}
+
+export const OLD_CHAPTERS = oldChaptersJson as OldChapter[]
 
 interface GroupJson {
   id: string
@@ -151,7 +181,21 @@ const byBook = (a: SatChapter, b: SatChapter) => a.cls - b.cls || a.no - b.no
 const GROUPS = groupsJson as GroupJson[]
 const grouped = new Map(GROUPS.flatMap((g) => g.chapters.map((id) => [id, g] as const)))
 
-/** Every topic, by subject and then in textbook order of its first chapter. */
+/** A subject's topics after its textbook ones: its old-syllabus chapters, then Uncategorized if anything is. */
+function notInTextbooks(subject: SatSubject): SatTopic[] {
+  const old = OLD_CHAPTERS.filter((c) => c.subject === subject).map((c): SatTopic => ({
+    id: `old-${c.id}`,
+    subject,
+    name: `Old syllabus – ${c.name}`,
+    kn: `ಹಳೆಯ ಪಠ್ಯಕ್ರಮ – ${c.kn}`,
+    chapters: [],
+    oldChapter: c.id,
+  }))
+  const rest: SatTopic = { id: `uncategorized-${subject}`, subject, name: 'Uncategorized', kn: 'ವರ್ಗೀಕರಿಸದ ಪ್ರಶ್ನೆಗಳು', chapters: [], uncategorized: true }
+  return satQuestions(rest).length ? [...old, rest] : old
+}
+
+/** Every topic, by subject: textbook topics in the textbook order of their first chapter, then the rest. */
 export const SAT_TOPICS: SatTopic[] = [
   ...GROUPS.map((g) => ({
     id: g.id,
@@ -164,7 +208,9 @@ export const SAT_TOPICS: SatTopic[] = [
       .sort(byBook),
   })),
   ...SAT_CHAPTERS.filter((c) => !grouped.has(c.id)).map((c) => ({ id: c.id, subject: c.subject, name: c.name, kn: KN[c.id]?.name, chapters: [c] })),
-].sort((a, b) => SAT_SUBJECTS.indexOf(a.subject) - SAT_SUBJECTS.indexOf(b.subject) || byBook(a.chapters[0], b.chapters[0]))
+]
+  .sort((a, b) => SAT_SUBJECTS.indexOf(a.subject) - SAT_SUBJECTS.indexOf(b.subject) || byBook(a.chapters[0], b.chapters[0]))
+  .flatMap((t, i, all) => (all[i + 1]?.subject === t.subject ? [t] : [t, ...notInTextbooks(t.subject)]))
 
 /** A topic by its id; a chapter ID finds the topic the chapter is combined into. */
 export function getSatTopic(id: string | undefined): SatTopic | undefined {
@@ -179,11 +225,17 @@ export function satTopicName(t: SatTopic, lang: string): string {
 export interface PaperQuestionRef {
   paper: SatPaper
   q: SatQuestion
-  chapter: SatChapter
+  /** Missing for a question under no 2026-27 chapter. */
+  chapter?: SatChapter
 }
 
 /** A topic's past-paper questions, oldest paper first and in paper order. */
 export function satQuestions(t: SatTopic): PaperQuestionRef[] {
+  if (t.oldChapter) return SAT_PAPERS.flatMap((p) => p.questions.filter((q) => q.oldChapter === t.oldChapter).map((q) => ({ paper: p, q })))
+  if (t.uncategorized)
+    return SAT_PAPERS.flatMap((p) =>
+      p.questions.filter((q) => q.topic === null && !q.oldChapter && SECTION_SUBJECT[q.subject] === t.subject).map((q) => ({ paper: p, q })),
+    )
   const chapters = new Map(t.chapters.map((c) => [c.id, c]))
   return SAT_PAPERS.flatMap((p) => p.questions.filter((q) => q.topic && chapters.has(q.topic)).map((q) => ({ paper: p, q, chapter: chapters.get(q.topic!)! })))
 }
@@ -191,4 +243,5 @@ export function satQuestions(t: SatTopic): PaperQuestionRef[] {
 const COUNTS = new Map<string, number>()
 for (const p of SAT_PAPERS) for (const q of p.questions) if (q.topic) COUNTS.set(q.topic, (COUNTS.get(q.topic) ?? 0) + 1)
 
-export const satQuestionCount = (t: SatTopic) => t.chapters.reduce((n, c) => n + (COUNTS.get(c.id) ?? 0), 0)
+export const satQuestionCount = (t: SatTopic) =>
+  t.chapters.length === 0 ? satQuestions(t).length : t.chapters.reduce((n, c) => n + (COUNTS.get(c.id) ?? 0), 0)

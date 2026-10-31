@@ -161,6 +161,8 @@ export const en = {
     groupChip: (subject: string, n: number) => `${subject} · ${n} textbook chapters`,
     uncategorizedRefs: 'Not in a 2026-27 textbook chapter',
     uncategorizedChip: (subject: string) => `${subject} · not in a textbook chapter`,
+    oldTitle: 'Not in the new textbooks',
+    oldNote: 'Past exam papers asked about this when it was in the syllabus, but the 2026-27 Class 7 and 8 textbooks don’t cover it. Study it from older textbooks or your teacher’s notes.',
     uncategorizedTitle: 'Why these questions are here',
     uncategorizedNote: 'These past exam questions don’t match a chapter of the 2026-27 Class 7 and 8 textbooks. Most are on topics the new textbooks dropped, so study them from older textbooks or your teacher’s notes.',
     chapterTitle: (cls: number, no: number) => `Class ${cls} · Chapter ${no}`,
@@ -179,7 +181,7 @@ export const en = {
     noteLabel: 'Note:',
     picture: (n: number) => `Picture for question ${n}`,
     optionPicture: (k: string) => `Option ${k}`,
-    footnote: 'SAT topics follow the 2026-27 Karnataka Class 7 and 8 textbooks, with related chapters combined for revision. Only chapters that the Karnataka SAT papers of 2019-20 to 2025-26 asked about are listed; questions on topics the new textbooks dropped are under Uncategorized.',
+    footnote: 'SAT topics follow the 2026-27 Karnataka Class 7 and 8 textbooks, with related chapters combined for revision. Only chapters that the Karnataka SAT papers of 2019-20 to 2025-26 asked about are listed; questions on topics the new textbooks dropped are under “Old syllabus” chapters.',
   },
   /** The "Facts to remember" page (#/facts) and the links to it. */
   facts: {

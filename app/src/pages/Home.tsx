@@ -66,7 +66,7 @@ function ContinueCard() {
 
 /** "Class 7 · Ch 13, 14" or, across classes, "Class 7 · Ch 11 + Class 8 · Ch 10". */
 function chapterRefs(t: Dict, topic: SatTopic): string {
-  if (topic.uncategorized) return t.sat.uncategorizedRefs
+  if (topic.chapters.length === 0) return t.sat.uncategorizedRefs
   const classes = [...new Set(topic.chapters.map((c) => c.cls))]
   return classes
     .map((cls) =>
