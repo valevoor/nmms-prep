@@ -3,6 +3,7 @@ import { DICTS, useT } from '../lib/i18n'
 import type { Locale } from '../lib/i18n'
 import { useQuestionTexts } from '../lib/i18n/content'
 import type { ShownText } from '../lib/i18n/content'
+import { sourceLine } from '../lib/source'
 import { BiTag } from './Bi'
 import { ClockFace } from './ClockFace'
 import { FamilyTreeView } from './FamilyTreeView'
@@ -47,9 +48,7 @@ export function Explanation({ q, size = 'md' }: { q: Question; size?: 'md' | 'lg
       <FamilyTreeView q={q} />
       <ClockFace q={q} />
       {!grouped && <Words text={text} lang={lang} part="after" untagged />}
-      <p className="source">
-        {q.generated ? t.common.madeByApp : `${t.common.bookQ(q.bookNo)} · ${q.keyFrom === 'book' ? t.common.keyFromBook : t.common.keyWorkedOut}`}
-      </p>
+      <p className="source">{sourceLine(q, t)}</p>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 /**
- * Checks the Kannada book-content overlays (data/mat/*.kn.json):
+ * Checks the Kannada book-content overlays (data/mat/*.kn.json and the past papers' data/pyq/*.kn.json):
  * - every book question has an entry, and there are no entries for questions that don't exist;
  * - every rule/working/note with English words has a Kannada version, written in Kannada script;
  * - every tip has a Kannada title, body and (if the English has one) caption.
@@ -7,6 +7,7 @@
  * Run from app/:  npx tsx ../tools/check_i18n.ts
  */
 import { CHAPTER_FILES } from '../app/src/data/chapters'
+import { PAPER_FILES } from '../app/src/data/papers'
 
 const KANNADA = /[ಀ-೿]/
 /**
@@ -22,7 +23,7 @@ type Meta = { intro: string; tips: { title: string; body: string; caption?: stri
 
 const problems: string[] = []
 
-function checkChapter(name: string, questions: (Text & { id: string })[], kn: Record<string, Text>, meta: Meta, metaKn: Meta) {
+function checkQuestions(name: string, questions: (Text & { id: string })[], kn: Record<string, Text>) {
   const ids = new Set(questions.map((q) => q.id))
   for (const id of Object.keys(kn)) if (!ids.has(id)) problems.push(`${name}: ${id} is in the Kannada file but not in the book`)
   for (const q of questions) {
@@ -39,6 +40,10 @@ function checkChapter(name: string, questions: (Text & { id: string })[], kn: Re
       if (k[f] && WORDS.test(en) && !KANNADA.test(k[f]!)) problems.push(`${name}: ${q.id}.${f} Kannada has no Kannada script`)
     }
   }
+}
+
+function checkChapter(name: string, questions: (Text & { id: string })[], kn: Record<string, Text>, meta: Meta, metaKn: Meta) {
+  checkQuestions(name, questions, kn)
   if (!KANNADA.test(metaKn.intro)) problems.push(`${name}: intro is not in Kannada`)
   if (metaKn.tips.length !== meta.tips.length) problems.push(`${name}: ${meta.tips.length} tips in English but ${metaKn.tips.length} in Kannada`)
   meta.tips.forEach((t, i) => {
@@ -55,6 +60,10 @@ function checkChapter(name: string, questions: (Text & { id: string })[], kn: Re
 }
 
 for (const c of CHAPTER_FILES) checkChapter(c.name, c.questions, c.kn, c.meta, c.metaKn)
+for (const p of PAPER_FILES) {
+  checkQuestions(p.id, p.questions, p.kn)
+  console.log(`${p.id}: ${Object.keys(p.kn).length}/${p.questions.length} questions`)
+}
 
 if (problems.length) {
   console.log(`\n✗ ${problems.length} problem(s):`)

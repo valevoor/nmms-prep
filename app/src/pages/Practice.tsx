@@ -4,14 +4,16 @@ import { Explanation } from '../components/Explanation'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
+import { paperQuestions } from '../data/papers'
 import { askLabel } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useT } from '../lib/i18n'
 import { recordAnswer, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
+import { questionLabel } from '../lib/source'
 import type { OptionKey, Question } from '../types'
 
-export type PracticeMode = 'book' | 'more' | 'mistakes'
+export type PracticeMode = 'book' | 'exam' | 'more' | 'mistakes'
 
 export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMode }) {
   const t = useT()
@@ -19,7 +21,9 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
   const [extra, setExtra] = useState<Question[]>(() => (mode === 'more' && topic.generate ? [topic.generate()] : []))
   // The mistakes list is frozen at the first answer, so it doesn't shrink under the student mid-session.
   const [frozen, setFrozen] = useState<Question[] | null>(null)
-  const live = mode === 'book' ? topic.questions : mode === 'mistakes' ? progress.mistakes : extra
+  // Past-paper questions filed under this chapter; the tab only shows when there are some.
+  const exam = useMemo(() => paperQuestions(topic.id), [topic.id])
+  const live = mode === 'book' ? topic.questions : mode === 'exam' ? exam : mode === 'mistakes' ? progress.mistakes : extra
   const queue = mode === 'more' ? extra : (frozen ?? live)
 
   const [index, setIndex] = useState(0)
@@ -56,12 +60,14 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
   const counter = mode === 'more' ? t.practice.rightCount(score.right, score.done) : `${Math.min(index + 1, queue.length)} / ${queue.length}`
   const tabs = useMemo(
     () =>
-      (['book', 'more', 'mistakes'] as PracticeMode[]).map((m) => (
+      (['book', 'exam', 'more', 'mistakes'] as PracticeMode[])
+        .filter((m) => m !== 'exam' || exam.length > 0)
+        .map((m) => (
         <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`t/${topic.id}/practice?mode=${m}`)} aria-current={m === mode ? 'page' : undefined}>
           {t.practice[m]}
         </a>
       )),
-    [mode, topic.id, t],
+    [mode, topic.id, t, exam.length],
   )
 
   return (
@@ -95,9 +101,9 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
                   {t.practice.retryMistakes(progress.mistakes.length)}
                 </a>
               ))}
-            {mode === 'book' && (
+            {(mode === 'book' || mode === 'exam') && (
               <button className="btn" onClick={restart}>
-                {t.practice.bookAgain}
+                {mode === 'exam' ? t.practice.examAgain : t.practice.bookAgain}
               </button>
             )}
             <a className="btn" href={href(`t/${topic.id}/practice?mode=more`)}>
@@ -111,7 +117,9 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
       ) : (
         <section className="card question" key={q.id}>
           <div className="q-head">
-            <span className="muted">{q.generated ? t.common.practiceQuestion : t.common.bookQ(q.bookNo)}</span>
+            <span className="muted">
+              {q.paper && <span className="chip chip-exam">{t.common.realExam}</span>} {questionLabel(q, t)}
+            </span>
             <span className="muted">
               <BiLabel get={(d) => askLabel(d, topic)} />
             </span>

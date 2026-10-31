@@ -1,4 +1,4 @@
-// Crops the figures of a picture chapter out of NMMS.pdf into PNGs for the app.
+// Crops the figures of a picture chapter out of NMMS.pdf (or the PDF named by "pdf") into PNGs for the app.
 // Run from the project root:  swift tools/crop_figures.swift tools/figures/ch01.json [contact-sheet.png]
 //
 // The JSON lists bands: {"page": 10, "band": [x0, y0, x1, y1], "names": ["q01-t1", "q01-t2", "q01-t3"]}.
@@ -30,12 +30,14 @@ struct Band: Decodable {
 }
 struct Spec: Decodable {
   let dir: String
+  /// The PDF to crop from, relative to the project root (default NMMS.pdf); e.g. a past paper in pyq/.
+  let pdf: String?
   let bands: [Band]
 }
 
 let args = CommandLine.arguments
 let spec = try! JSONDecoder().decode(Spec.self, from: Data(contentsOf: URL(fileURLWithPath: args[1])))
-let pdf = CGPDFDocument(URL(fileURLWithPath: "NMMS.pdf") as CFURL)!
+let pdf = CGPDFDocument(URL(fileURLWithPath: spec.pdf ?? "NMMS.pdf") as CFURL)!
 let outDir = "app/public/figures/\(spec.dir)"
 try! FileManager.default.createDirectory(atPath: outDir, withIntermediateDirectories: true)
 
