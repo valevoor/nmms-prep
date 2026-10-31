@@ -5,7 +5,8 @@ An offline practice app (PWA) for the NMMS **Mental Ability Test**, for Class 8 
 ## Scope and product decisions
 
 - **English and Kannada.** An EN / ಕನ್ನಡ switch covers the whole app, and **EN+ಕ** on chapter screens and the Shapes page shows questions, explanations and tips in both at once (`components/Bi.tsx`, `lib/i18n/both.ts`). All the Kannada is an unreviewed draft (see README, "Kannada"). Every new chapter needs `<topic>.kn.json` and `<topic>.meta.kn.json`, and generators build every sentence in both languages (`both()` in `lib/i18n/gen.ts`).
-- **MAT is complete:** all 38 chapters are built, each in full (book questions, checker, generator, tips, Kannada) and in its own commit. Don't start on SAT, a backend or logins without asking.
+- **MAT is complete:** all 38 chapters are built, each in full (book questions, checker, generator, tips, Kannada) and in its own commit. Don't start on a backend or logins without asking.
+- **SAT** (`#/sat/<topic-id>`, Home's SAT tab at `#/?test=sat`): the 2026-27 Class 7–8 textbook chapters from `sat-syllabus/*.md` that past papers asked about (81 of 111). For revision, related chapters are combined into topics (`data/sat/groups.json`, 59 topics); each topic page keeps the textbook reference (class, chapter, part, pages) for every chapter in it. All six Karnataka SAT papers (2019-20 to 2025-26) are transcribed in `data/pyq/ka-<year>-sat.json`, each question filed under a syllabus chapter ID (`topic`, or `null` if the new textbooks dropped it). **They are not solved yet:** don't add answers unless asked, and when you do, set `keyFrom`. Re-run `tools/build_sat_chapters.ts` after changing papers or topics; `tools/check_sat.ts` is part of `check:content`. Don't read the textbook PDFs in `sat-syllabus/textbooks/` (they are huge); use the syllabus markdown.
 - **Shapes and sizes** (`#/shapes/<shape>/<step>`) is a maths visual beside the MAT chapters, not a chapter: perimeter, area, volume and nets of a square, rectangle, triangle and circle, with the solids drawn in 3D as plain SVG (`lib/solids.ts`, no 3D library). Its formulas and numbers live in `data/shapes.ts`, and `lib/solids.test.ts` checks them and each net's area.
 - **The theme starts on Light**, even on phones set to dark mode, and has a Light / Dark / Auto switch on Home. Every other page has an **Aa** settings button (`components/SettingsMenu.tsx`) with the language and theme switches. Classroom projectors need light.
 - **Home is a compact list** (one row per chapter); each row opens the chapter page, where **Learn is the highlighted (blue) button**. The ← back arrow on Learn/Practice/Test/Classroom/Rule goes to Home.
@@ -42,16 +43,17 @@ app/src/
   data/topics.ts                READY_TOPICS (one entry per chapter) + UPCOMING_MAT ("coming soon")
   data/facts.ts                 numbers for the Facts page (primes, squares, cubes) + FACT_CHAPTERS (chapters that link to it)
   data/shapes.ts                Shapes page: sizes and worked formulas (perimeter, area, volume, surface area)
+  data/sat.ts                   SAT chapters (data/sat/chapters.json, built from sat-syllabus/), topics (data/sat/groups.json) and past papers (data/pyq/*-sat.json)
   data/mat/<topic>.json         book questions;  <topic>.meta.json: intro, tips, worked examples
   data/pyq/<paper>.json         past NMMS papers (+ <paper>.kn.json); listed in data/papers.ts, shown in each chapter's Practice → "Past exams" tab
   lib/generators/               question generators + their tests (1,000+ questions each)
   lib/solids.ts                 3D solids and nets for the Shapes page, turned and drawn as SVG; lib/flatShapes.ts draws its 2D steps
   lib/progress.ts               per-topic progress in IndexedDB (attempts, mistakes, tests, best scores)
   lib/theme.ts                  Light/Dark/Auto; also applied early by an inline script in index.html
-  lib/router.ts                 hash routes: #/t/<topic> (chapter page), #/t/<topic>/{learn,practice,test,classroom,rule}, #/facts/{primes,squares,cubes}, #/shapes/<shape>/<step>
+  lib/router.ts                 hash routes: #/t/<topic> (chapter page), #/t/<topic>/{learn,practice,test,classroom,rule}, #/facts/{primes,squares,cubes}, #/shapes/<shape>/<step>, #/sat/<id>[/questions]
   components/SeriesView.tsx     shows terms as a series ("1, 4, ?") or analogy ("28 : 4 :: 504 : ?")
   components/tips/              illustrated Learn tips, keyed by `visual` in the meta JSON
-  pages/                        Home (compact chapter list), Facts, Shapes, Chapter, Learn, Practice, QuickTest, Classroom, GuessRule
+  pages/                        Home (MAT / SAT switch, compact chapter lists), Facts, Shapes, Chapter, Learn, Practice, QuickTest, Classroom, GuessRule, SatTopic, SatQuestions
 ```
 
 ## Adding a chapter

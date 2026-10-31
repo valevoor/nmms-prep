@@ -1,0 +1,18 @@
+[
+ {"id": "fractions-integers", "subject": "maths", "name": "Fractions, Integers and Order of Operations", "kn": "ಭಿನ್ನರಾಶಿಗಳು, ಪೂರ್ಣಾಂಕಗಳು ಮತ್ತು ಕ್ರಿಯೆಗಳ ಕ್ರಮ", "chapters": ["math-7-02-arithmetic-expressions", "math-7-08-working-with-fractions", "math-7-10-operations-integers"]},
+ {"id": "algebra", "subject": "maths", "name": "Algebraic Expressions", "kn": "ಬೀಜಗಣಿತದ ಅಭಿವ್ಯಕ್ತಿಗಳು", "chapters": ["math-7-04-expressions-letter-numbers", "math-8-13-algebra-play"]},
+ {"id": "lines-angles-triangles", "subject": "maths", "name": "Lines, Angles and Triangles", "kn": "ರೇಖೆಗಳು, ಕೋನಗಳು ಮತ್ತು ತ್ರಿಭುಜಗಳು", "chapters": ["math-7-05-parallel-intersecting-lines", "math-7-07-three-intersecting-lines", "math-7-09-geometric-twins"]},
+ {"id": "numbers-divisibility", "subject": "maths", "name": "Numbers, Factors and Divisibility", "kn": "ಸಂಖ್ಯೆಗಳು, ಅಪವರ್ತನಗಳು ಮತ್ತು ಭಾಜ್ಯತೆ", "chapters": ["math-7-06-number-play", "math-7-11-finding-common-ground", "math-8-05-number-play"]},
+ {"id": "ratio-proportion", "subject": "maths", "name": "Ratio and Proportion", "kn": "ಅನುಪಾತ ಮತ್ತು ಸಮಾನುಪಾತ", "chapters": ["math-8-07-proportional-reasoning-1", "math-8-10-proportional-reasoning-2"]},
+ {"id": "electricity", "subject": "science", "name": "Electricity", "kn": "ವಿದ್ಯುತ್", "chapters": ["sci-7-03-electricity-circuits", "sci-8-04-electricity-effects"]},
+ {"id": "matter", "subject": "science", "name": "Metals, Elements, Compounds and Mixtures", "kn": "ಲೋಹಗಳು, ಧಾತುಗಳು, ಸಂಯುಕ್ತಗಳು ಮತ್ತು ಮಿಶ್ರಣಗಳು", "chapters": ["sci-7-04-metals-non-metals", "sci-8-08-elements-compounds-mixtures"]},
+ {"id": "life-processes", "subject": "science", "name": "Life Processes in Animals and Plants", "kn": "ಪ್ರಾಣಿಗಳು ಮತ್ತು ಸಸ್ಯಗಳಲ್ಲಿ ಜೀವ ಕ್ರಿಯೆಗಳು", "chapters": ["sci-7-09-life-processes-animals", "sci-7-10-life-processes-plants"]},
+ {"id": "light", "subject": "science", "name": "Light", "kn": "ಬೆಳಕು", "chapters": ["sci-7-11-light-shadows-reflections", "sci-8-10-light-mirrors-lenses"]},
+ {"id": "karnataka", "subject": "social", "name": "Mysore and Modern Karnataka", "kn": "ಮೈಸೂರು ಮತ್ತು ಆಧುನಿಕ ಕರ್ನಾಟಕ", "chapters": ["ss-7-07-mysore-princely-states", "ss-7-20-karnataka-economic-social-transformation"]},
+ {"id": "continents", "subject": "social", "name": "Continents: the Americas, Australia and Antarctica", "kn": "ಖಂಡಗಳು: ಅಮೆರಿಕಗಳು, ಆಸ್ಟ್ರೇಲಿಯಾ ಮತ್ತು ಅಂಟಾರ್ಕ್ಟಿಕಾ", "chapters": ["ss-7-13-north-america", "ss-7-14-south-america", "ss-7-26-australia", "ss-7-27-antarctica"]},
+ {"id": "reform-freedom", "subject": "social", "name": "Social Reform and the Freedom Movement", "kn": "ಸಾಮಾಜಿಕ ಸುಧಾರಣೆ ಮತ್ತು ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ", "chapters": ["ss-7-15-social-religious-reforms", "ss-7-17-freedom-movement"]},
+ {"id": "government", "subject": "social", "name": "Democracy, Local Government and Courts", "kn": "ಪ್ರಜಾಪ್ರಭುತ್ವ, ಸ್ಥಳೀಯ ಸರ್ಕಾರ ಮತ್ತು ನ್ಯಾಯಾಲಯಗಳು", "chapters": ["ss-7-22-judiciary", "ss-8-22-democracy", "ss-8-23-local-self-government"]},
+ {"id": "society", "subject": "social", "name": "Man, Society and Daily Life", "kn": "ಮಾನವ, ಸಮಾಜ ಮತ್ತು ದೈನಂದಿನ ಜೀವನ", "chapters": ["ss-8-09-man-and-society", "ss-8-24-sociology-daily-life"]},
+ {"id": "south-indian-dynasties", "subject": "social", "name": "South Indian Dynasties", "kn": "ದಕ್ಷಿಣ ಭಾರತದ ರಾಜವಂಶಗಳು", "chapters": ["ss-8-18-shathavahanas-kadambas-gangas", "ss-8-20-rashtrakutas-chalukyas-kalyana"]},
+ {"id": "business-organisations", "subject": "social", "name": "Business Organisations", "kn": "ವ್ಯವಹಾರ ಸಂಘಟನೆಗಳು", "chapters": ["ss-8-29-emergence-business-organisations", "ss-8-30-large-scale-business-organisations"]}
+]

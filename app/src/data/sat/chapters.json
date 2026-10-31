@@ -1,0 +1,1646 @@
+[
+ {
+  "id": "math-7-02-arithmetic-expressions",
+  "subject": "maths",
+  "cls": 7,
+  "no": 2,
+  "name": "Arithmetic Expressions",
+  "part": 1,
+  "pages": [
+   24,
+   45
+  ],
+  "area": "Arithmetic & Pre-Algebra",
+  "topics": [
+   "Order of Operations (BODMAS / Terms and Brackets)",
+   "Simplification of Numerical Expressions",
+   "Commutative Associative and Distributive Properties",
+   "Bracket Removal Rules"
+  ]
+ },
+ {
+  "id": "math-7-04-expressions-letter-numbers",
+  "subject": "maths",
+  "cls": 7,
+  "no": 4,
+  "name": "Expressions using Letter-Numbers",
+  "part": 1,
+  "pages": [
+   81,
+   105
+  ],
+  "area": "Algebra",
+  "topics": [
+   "Introduction to Algebra",
+   "Algebraic Expressions",
+   "Variables and Constants",
+   "Like and Unlike Terms",
+   "Addition and Subtraction of Linear Algebraic Expressions",
+   "Matchstick & Calendar Algebraic Patterns"
+  ]
+ },
+ {
+  "id": "math-7-05-parallel-intersecting-lines",
+  "subject": "maths",
+  "cls": 7,
+  "no": 5,
+  "name": "Parallel and Intersecting Lines",
+  "part": 1,
+  "pages": [
+   106,
+   126
+  ],
+  "area": "Geometry (Lines & Angles)",
+  "topics": [
+   "Lines and Angles",
+   "Intersecting and Perpendicular Lines",
+   "Linear Pair and Vertically Opposite Angles",
+   "Parallel Lines and Transversal Properties (Corresponding, Alternate, and Co-Interior Angles)"
+  ]
+ },
+ {
+  "id": "math-7-06-number-play",
+  "subject": "maths",
+  "cls": 7,
+  "no": 6,
+  "name": "Number Play",
+  "part": 1,
+  "pages": [
+   127,
+   145
+  ],
+  "area": "Number Theory & Combinatorics",
+  "topics": [
+   "Playing with Numbers",
+   "Parity (Odd and Even Numbers)",
+   "3 × 3 and 4 × 4 Magic Squares",
+   "Virahanka–Fibonacci Sequence",
+   "Cryptarithms (Alphametics)"
+  ]
+ },
+ {
+  "id": "math-7-07-three-intersecting-lines",
+  "subject": "maths",
+  "cls": 7,
+  "no": 7,
+  "name": "A Tale of Three Intersecting Lines",
+  "part": 1,
+  "pages": [
+   146,
+   172
+  ],
+  "area": "Geometry (Triangles & Constructions)",
+  "topics": [
+   "The Triangle and Its Properties",
+   "Classification of Triangles (Equilateral, Isosceles, Scalene; Acute, Right, Obtuse)",
+   "Triangle Inequality Theorem",
+   "Angle Sum Property of a Triangle",
+   "Exterior Angle Property",
+   "Altitudes of a Triangle",
+   "Construction of Triangles (SSS, SAS, ASA)"
+  ]
+ },
+ {
+  "id": "math-7-08-working-with-fractions",
+  "subject": "maths",
+  "cls": 7,
+  "no": 8,
+  "name": "Working with Fractions",
+  "part": 1,
+  "pages": [
+   173,
+   199
+  ],
+  "area": "Arithmetic (Fractions & Mensuration)",
+  "topics": [
+   "Fractions (Multiplication and Division)",
+   "Reciprocal of a Fraction",
+   "Area of a Rectangle with Fractional Sides",
+   "Reducing Fractions to Lowest Terms (Apavartana)",
+   "Word Problems on Fractions"
+  ]
+ },
+ {
+  "id": "math-7-09-geometric-twins",
+  "subject": "maths",
+  "cls": 7,
+  "no": 9,
+  "name": "Geometric Twins",
+  "part": 2,
+  "pages": [
+   1,
+   23
+  ],
+  "area": "Geometry (Congruence of Triangles)",
+  "topics": [
+   "Congruence of Triangles",
+   "Criteria for Congruence of Triangles (SSS, SAS, ASA, AAS, RHS)",
+   "Corresponding Parts of Congruent Triangles (CPCT)",
+   "Properties of Isosceles and Equilateral Triangles"
+  ]
+ },
+ {
+  "id": "math-7-10-operations-integers",
+  "subject": "maths",
+  "cls": 7,
+  "no": 10,
+  "name": "Operations with Integers",
+  "part": 2,
+  "pages": [
+   24,
+   46
+  ],
+  "area": "Arithmetic & Number Systems (Integers)",
+  "topics": [
+   "Integers",
+   "Addition Subtraction Multiplication and Division of Integers",
+   "Properties of Integers (Commutative, Associative, Distributive)",
+   "Brahmagupta's Rules for Fortunes and Debts"
+  ]
+ },
+ {
+  "id": "math-7-11-finding-common-ground",
+  "subject": "maths",
+  "cls": 7,
+  "no": 11,
+  "name": "Finding Common Ground",
+  "part": 2,
+  "pages": [
+   47,
+   66
+  ],
+  "area": "Number Theory (Primes, HCF & LCM)",
+  "topics": [
+   "Playing with Numbers (Factors and Multiples)",
+   "Prime Factorisation",
+   "Highest Common Factor (HCF / GCD)",
+   "Lowest Common Multiple (LCM)",
+   "Relationship Between HCF and LCM (HCF × LCM = a × b)"
+  ]
+ },
+ {
+  "id": "math-7-13-connecting-the-dots",
+  "subject": "maths",
+  "cls": 7,
+  "no": 13,
+  "name": "Connecting the Dots...",
+  "part": 2,
+  "pages": [
+   97,
+   135
+  ],
+  "area": "Data Handling & Statistics",
+  "topics": [
+   "Data Handling",
+   "Measures of Central Tendency (Arithmetic Mean / Average and Median)",
+   "Minimum Maximum and Range",
+   "Outliers",
+   "Dot Plots",
+   "Double Bar Graphs (Clustered Column Graphs)"
+  ]
+ },
+ {
+  "id": "math-7-15-finding-the-unknown",
+  "subject": "maths",
+  "cls": 7,
+  "no": 15,
+  "name": "Finding the Unknown",
+  "part": 2,
+  "pages": [
+   164,
+   190
+  ],
+  "area": "Algebra (Simple Linear Equations)",
+  "topics": [
+   "Simple Equations",
+   "Linear Equations in One Variable",
+   "Balancing and Transposition Methods",
+   "Brahmagupta's Bijaganita Formula (Ax + B = Cx + D)",
+   "Word Problems on Numbers Ages Money and Geometry"
+  ]
+ },
+ {
+  "id": "math-8-01-square-and-cube",
+  "subject": "maths",
+  "cls": 8,
+  "no": 1,
+  "name": "A Square and A Cube",
+  "part": 1,
+  "pages": [
+   1,
+   18
+  ],
+  "area": "Number Theory / Arithmetic",
+  "topics": [
+   "Squares and Square Roots",
+   "Cubes and Cube Roots",
+   "Number Patterns & Divisor Counting"
+  ]
+ },
+ {
+  "id": "math-8-02-power-play",
+  "subject": "maths",
+  "cls": 8,
+  "no": 2,
+  "name": "Power Play",
+  "part": 1,
+  "pages": [
+   19,
+   47
+  ],
+  "area": "Algebra / Number Theory / Combinatorics",
+  "topics": [
+   "Exponents and Powers",
+   "Standard Form / Scientific Notation",
+   "Fundamental Principle of Counting / Combinatorics",
+   "Linear vs. Exponential Growth & Order-of-Magnitude Estimation"
+  ]
+ },
+ {
+  "id": "math-8-04-quadrilaterals",
+  "subject": "maths",
+  "cls": 8,
+  "no": 4,
+  "name": "Quadrilaterals",
+  "part": 1,
+  "pages": [
+   82,
+   111
+  ],
+  "area": "Geometry",
+  "topics": [
+   "Understanding Quadrilaterals",
+   "Types of Quadrilaterals & Venn Hierarchy",
+   "Deductive Geometric Proofs"
+  ]
+ },
+ {
+  "id": "math-8-05-number-play",
+  "subject": "maths",
+  "cls": 8,
+  "no": 5,
+  "name": "Number Play",
+  "part": 1,
+  "pages": [
+   112,
+   135
+  ],
+  "area": "Number Theory / Combinatorics",
+  "topics": [
+   "Playing with Numbers & Divisibility Tests",
+   "Modular Arithmetic, Parity & Remainders",
+   "Cryptarithms (Alphametics)"
+  ]
+ },
+ {
+  "id": "math-8-06-distribute-multiply",
+  "subject": "maths",
+  "cls": 8,
+  "no": 6,
+  "name": "We Distribute, Yet Things Multiply",
+  "part": 1,
+  "pages": [
+   136,
+   158
+  ],
+  "area": "Algebra (Polynomials & Identities)",
+  "topics": [
+   "Algebraic Expressions and Identities",
+   "Standard Algebraic Identities",
+   "Fast Mental Arithmetic & Visual Algebraic Modelling"
+  ]
+ },
+ {
+  "id": "math-8-07-proportional-reasoning-1",
+  "subject": "maths",
+  "cls": 8,
+  "no": 7,
+  "name": "Proportional Reasoning-1",
+  "part": 1,
+  "pages": [
+   159,
+   182
+  ],
+  "area": "Commercial Arithmetic (Ratios & Direct Proportion)",
+  "topics": [
+   "Ratio and Proportion (Part 1 — Two-Term Ratios & Direct Proportion)",
+   "Dividing a Quantity in a Given Two-Term Ratio"
+  ]
+ },
+ {
+  "id": "math-8-08-fractions-in-disguise",
+  "subject": "maths",
+  "cls": 8,
+  "no": 8,
+  "name": "Fractions in Disguise",
+  "part": 2,
+  "pages": [
+   1,
+   32
+  ],
+  "area": "Commercial Arithmetic (Percentages, Profit/Loss, SI & CI)",
+  "topics": [
+   "Comparing Quantities / Commercial Arithmetic",
+   "Profit, Loss, Overhead Expenses, Discount & Taxes (GST / VAT)",
+   "Simple Interest (SI) and Compound Interest (CI)"
+  ]
+ },
+ {
+  "id": "math-8-09-baudhayana-pythagoras",
+  "subject": "maths",
+  "cls": 8,
+  "no": 9,
+  "name": "The Baudhayana-Pythagoras Theorem",
+  "part": 2,
+  "pages": [
+   33,
+   54
+  ],
+  "area": "Geometry / Number Theory",
+  "topics": [
+   "The Pythagoras Theorem (Baudhayana-Pythagoras Theorem)",
+   "Pythagorean Triples (Baudhayana Triples)",
+   "Fermat's Last Theorem & Classical Applications"
+  ]
+ },
+ {
+  "id": "math-8-10-proportional-reasoning-2",
+  "subject": "maths",
+  "cls": 8,
+  "no": 10,
+  "name": "Proportional Reasoning-2",
+  "part": 2,
+  "pages": [
+   55,
+   69
+  ],
+  "area": "Commercial Arithmetic / Statistics (Pie Charts & Inverse Proportion)",
+  "topics": [
+   "Direct and Inverse Proportions",
+   "Time and Work",
+   "Multi-Term Ratios & Map Scales",
+   "Pie Charts (Circle Graphs)"
+  ]
+ },
+ {
+  "id": "math-8-13-algebra-play",
+  "subject": "maths",
+  "cls": 8,
+  "no": 13,
+  "name": "Algebra Play",
+  "part": 2,
+  "pages": [
+   135,
+   147
+  ],
+  "area": "Algebra / Number Theory (Linear Equations & Grid Proofs)",
+  "topics": [
+   "Linear Equations in One Variable",
+   "Algebraic Number Tricks & Place-Value Proofs",
+   "Number Pyramids, Calendar Grids & Virahanka-Fibonacci Numbers"
+  ]
+ },
+ {
+  "id": "math-8-14-area",
+  "subject": "maths",
+  "cls": 8,
+  "no": 14,
+  "name": "Area",
+  "part": 2,
+  "pages": [
+   148,
+   174
+  ],
+  "area": "Mensuration / Geometry",
+  "topics": [
+   "Mensuration — Area of Plane Figures (2D Polygons)",
+   "Geometric Area Theorems & Dissections",
+   "Real-Life Area Units & Conversions"
+  ]
+ },
+ {
+  "id": "sci-7-02-acids-bases-neutral",
+  "subject": "science",
+  "cls": 7,
+  "no": 2,
+  "name": "Exploring Substances: Acidic, Basic, and Neutral",
+  "part": 1,
+  "pages": [
+   7,
+   22
+  ],
+  "area": "Chemistry",
+  "topics": [
+   "Acids",
+   "Bases and Salts",
+   "Natural Acid-Base Indicators (Litmus, Turmeric, Red Rose, Hibiscus)",
+   "Olfactory Indicators",
+   "Neutralisation in Everyday Life"
+  ]
+ },
+ {
+  "id": "sci-7-03-electricity-circuits",
+  "subject": "science",
+  "cls": 7,
+  "no": 3,
+  "name": "Electricity: Circuits and their Components",
+  "part": 1,
+  "pages": [
+   23,
+   40
+  ],
+  "area": "Physics",
+  "topics": [
+   "Electric Current and Circuit Components",
+   "Cell vs. Battery",
+   "Incandescent Bulb vs. LED Polarity",
+   "Switch (Open and Closed Circuit)",
+   "Circuit Diagrams and Symbols",
+   "Electrical Conductors and Insulators"
+  ]
+ },
+ {
+  "id": "sci-7-04-metals-non-metals",
+  "subject": "science",
+  "cls": 7,
+  "no": 4,
+  "name": "The World of Metals and Non-metals",
+  "part": 1,
+  "pages": [
+   41,
+   56
+  ],
+  "area": "Chemistry",
+  "topics": [
+   "Metals and Non-Metals",
+   "Physical Properties (Lustre, Malleability, Ductility, Sonority, Conductivity)",
+   "Chemical Properties (Oxides of Metals vs. Non-Metals)",
+   "Rusting of Iron and Corrosion",
+   "Uses of Metals and Non-Metals"
+  ]
+ },
+ {
+  "id": "sci-7-05-changes-physical-chemical",
+  "subject": "science",
+  "cls": 7,
+  "no": 5,
+  "name": "Changes Around Us: Physical and Chemical",
+  "part": 1,
+  "pages": [
+   57,
+   72
+  ],
+  "area": "Chemistry",
+  "topics": [
+   "Physical and Chemical Changes",
+   "Reversible and Irreversible Changes",
+   "Lime Water Test for Carbon Dioxide",
+   "Vinegar and Baking Soda Reaction",
+   "Combustion and Ignition Temperature (Fire Triangle)",
+   "Burning of a Candle",
+   "Weathering and Erosion of Rocks"
+  ]
+ },
+ {
+  "id": "sci-7-07-heat-transfer-water-cycle",
+  "subject": "science",
+  "cls": 7,
+  "no": 7,
+  "name": "Heat Transfer in Nature",
+  "part": 2,
+  "pages": [
+   1,
+   16
+  ],
+  "area": "Physics / Earth Science",
+  "topics": [
+   "Heat and Modes of Heat Transfer (Conduction, Convection, Radiation)",
+   "Good and Poor Conductors of Heat (Insulators)",
+   "Sea Breeze and Land Breeze",
+   "Water Cycle",
+   "Infiltration",
+   "Groundwater and Aquifers"
+  ]
+ },
+ {
+  "id": "sci-7-08-time-and-motion",
+  "subject": "science",
+  "cls": 7,
+  "no": 8,
+  "name": "Measurement of Time and Motion",
+  "part": 2,
+  "pages": [
+   17,
+   32
+  ],
+  "area": "Physics",
+  "topics": [
+   "Motion and Time",
+   "Ancient Clocks (Sundial, Samrat Yantra, Ghatika-yantra)",
+   "Simple Pendulum and Time Period",
+   "SI Unit of Time",
+   "Speed and Average Speed Calculations",
+   "Speedometer and Odometer",
+   "Uniform and Non-Uniform Linear Motion"
+  ]
+ },
+ {
+  "id": "sci-7-09-life-processes-animals",
+  "subject": "science",
+  "cls": 7,
+  "no": 9,
+  "name": "Life Processes in Animals",
+  "part": 2,
+  "pages": [
+   33,
+   48
+  ],
+  "area": "Biology",
+  "topics": [
+   "Nutrition in Animals",
+   "Human Digestive System (Alimentary Canal & Digestive Glands)",
+   "Action of Saliva on Starch",
+   "Digestion in Ruminants (Cows) and Birds (Gizzard)",
+   "Respiration in Organisms",
+   "Human Respiratory System and Breathing Mechanism",
+   "Breathing in Fish",
+   "Frogs",
+   "and Earthworms"
+  ]
+ },
+ {
+  "id": "sci-7-10-life-processes-plants",
+  "subject": "science",
+  "cls": 7,
+  "no": 10,
+  "name": "Life Processes in Plants",
+  "part": 2,
+  "pages": [
+   49,
+   64
+  ],
+  "area": "Biology",
+  "topics": [
+   "Nutrition in Plants",
+   "Photosynthesis (Raw Materials, Products, and Word Equation)",
+   "Starch Test in Leaves (Alcohol Decolourisation & Iodine Test)",
+   "Moll's Half-Leaf Experiment (Caustic Soda)",
+   "Stomata",
+   "Transport in Plants (Xylem and Phloem)",
+   "Respiration in Plants"
+  ]
+ },
+ {
+  "id": "sci-7-11-light-shadows-reflections",
+  "subject": "science",
+  "cls": 7,
+  "no": 11,
+  "name": "Light: Shadows and Reflections",
+  "part": 2,
+  "pages": [
+   65,
+   80
+  ],
+  "area": "Physics",
+  "topics": [
+   "Light Shadows and Reflections",
+   "Luminous and Non-Luminous Objects",
+   "Rectilinear Propagation of Light",
+   "Transparent Translucent and Opaque Materials",
+   "Shadow Characteristics",
+   "Reflection by a Plane Mirror and Lateral Inversion",
+   "Pinhole Camera",
+   "Periscope and Kaleidoscope"
+  ]
+ },
+ {
+  "id": "sci-8-02-invisible-living-world",
+  "subject": "science",
+  "cls": 8,
+  "no": 2,
+  "name": "The Invisible Living World: Beyond Our Naked Eye",
+  "part": 1,
+  "pages": [
+   8,
+   27
+  ],
+  "area": "Biology",
+  "topics": [
+   "Cell Structure and Functions",
+   "Microorganisms: Friend and Foe",
+   "Plant Cell vs. Animal Cell",
+   "Useful Microbes",
+   "Nitrogen Fixation",
+   "Fermentation"
+  ]
+ },
+ {
+  "id": "sci-8-03-health-diseases",
+  "subject": "science",
+  "cls": 8,
+  "no": 3,
+  "name": "Health: The Ultimate Treasure",
+  "part": 1,
+  "pages": [
+   28,
+   45
+  ],
+  "area": "Biology",
+  "topics": [
+   "Human Health and Diseases",
+   "Communicable and Non-Communicable Diseases",
+   "Pathogens and Vectors",
+   "Vaccination and Immunity",
+   "Antibiotics and Antibiotic Resistance"
+  ]
+ },
+ {
+  "id": "sci-8-04-electricity-effects",
+  "subject": "science",
+  "cls": 8,
+  "no": 4,
+  "name": "Electricity: Magnetic and Heating Effects",
+  "part": 1,
+  "pages": [
+   46,
+   61
+  ],
+  "area": "Physics",
+  "topics": [
+   "Chemical Effects and Magnetic/Heating Effects of Electric Current",
+   "Electromagnets",
+   "Heating Element",
+   "Voltaic Cell",
+   "Dry Cell",
+   "Rechargeable Batteries"
+  ]
+ },
+ {
+  "id": "sci-8-05-exploring-forces",
+  "subject": "science",
+  "cls": 8,
+  "no": 5,
+  "name": "Exploring Forces",
+  "part": 1,
+  "pages": [
+   62,
+   79
+  ],
+  "area": "Physics",
+  "topics": [
+   "Force and Laws of Motion Basics",
+   "Friction",
+   "Contact and Non-Contact Forces",
+   "Mass vs. Weight",
+   "Buoyancy and Archimedes' Principle"
+  ]
+ },
+ {
+  "id": "sci-8-06-pressure-winds-cyclones",
+  "subject": "science",
+  "cls": 8,
+  "no": 6,
+  "name": "Pressure, Winds, Storms, and Cyclones",
+  "part": 1,
+  "pages": [
+   80,
+   97
+  ],
+  "area": "Physics / Earth Science",
+  "topics": [
+   "Force and Pressure",
+   "Atmospheric Pressure",
+   "Liquid Pressure",
+   "Winds Storms and Cyclones",
+   "Thunderstorms and Lightning"
+  ]
+ },
+ {
+  "id": "sci-8-08-elements-compounds-mixtures",
+  "subject": "science",
+  "cls": 8,
+  "no": 8,
+  "name": "Nature of Matter: Elements, Compounds, and Mixtures",
+  "part": 2,
+  "pages": [
+   1,
+   18
+  ],
+  "area": "Chemistry",
+  "topics": [
+   "Elements",
+   "Compounds and Mixtures",
+   "Pure Substances vs. Mixtures",
+   "Homogeneous and Heterogeneous Mixtures",
+   "Alloys",
+   "Electrolysis of Water",
+   "Iron vs. Iron Sulfide",
+   "Minerals"
+  ]
+ },
+ {
+  "id": "sci-8-10-light-mirrors-lenses",
+  "subject": "science",
+  "cls": 8,
+  "no": 10,
+  "name": "Light: Mirrors and Lenses",
+  "part": 2,
+  "pages": [
+   37,
+   54
+  ],
+  "area": "Physics",
+  "topics": [
+   "Light — Reflection and Refraction Basics",
+   "Spherical Mirrors (Concave and Convex)",
+   "Lenses (Convex and Concave)",
+   "Laws of Reflection"
+  ]
+ },
+ {
+  "id": "sci-8-12-nature-in-harmony",
+  "subject": "science",
+  "cls": 8,
+  "no": 12,
+  "name": "How Nature Works in Harmony",
+  "part": 2,
+  "pages": [
+   75,
+   94
+  ],
+  "area": "Biology / Ecology",
+  "topics": [
+   "Ecosystem and Biodiversity",
+   "Biotic and Abiotic Components",
+   "Food Chains and Food Webs",
+   "Ecological Interactions (Mutualism, Commensalism, Parasitism)",
+   "Conservation of Plants and Animals"
+  ]
+ },
+ {
+  "id": "sci-8-13-earth-life-sustaining-planet",
+  "subject": "science",
+  "cls": 8,
+  "no": 13,
+  "name": "Our Home: Earth, a Unique Life Sustaining Planet",
+  "part": 2,
+  "pages": [
+   95,
+   112
+  ],
+  "area": "Earth Science / Biology",
+  "topics": [
+   "Solar System and Earth's Habitability",
+   "Greenhouse Effect and Ozone Layer",
+   "Earth's Four Spheres",
+   "Reproduction in Plants and Animals (Asexual and Sexual)",
+   "Triple Planetary Crisis & Environmental Treaties"
+  ]
+ },
+ {
+  "id": "ss-7-07-mysore-princely-states",
+  "subject": "social",
+  "cls": 7,
+  "no": 7,
+  "name": "Mysore and Other Provinces (Mysore and Other Princely States)",
+  "part": 1,
+  "pages": [
+   71,
+   114
+  ],
+  "area": "History",
+  "topics": [
+   "Wodeyars of Mysore",
+   "Hyder Ali and Tippu Sultan",
+   "Four Anglo-Mysore Wars",
+   "Commissioners' Rule (Cubbon & Bowring)",
+   "Naalvadi Krishnaraja Wodeyar",
+   "Sir M. Visvesvaraya",
+   "Sir Mirza Ismail",
+   "Nayakas of Keladi and Chitradurga",
+   "Yelahanka Nadaprabhus (Kempegowda)",
+   "Kodagu (Haleri & Amarasullia Revolt)",
+   "Kittur Rani Chennamma & Sangolli Rayanna",
+   "Tulunadu",
+   "Hyderabad-Karnataka (Halagali Bedanayakas, Sindhura Lakshmana, Surapura Nayakas, Liberation of Hyderabad-Karnataka)"
+  ]
+ },
+ {
+  "id": "ss-7-08-bhakthi-cult-sufi-heritage",
+  "subject": "social",
+  "cls": 7,
+  "no": 8,
+  "name": "Bhakthi Cult and Sufi Heritage",
+  "part": 1,
+  "pages": [
+   115,
+   127
+  ],
+  "area": "History",
+  "topics": [
+   "Bhakti Movement in South and North India",
+   "Alwars and Dasas",
+   "Vachana and Keerthana Literature",
+   "Sufi Saints and Chishti Order"
+  ]
+ },
+ {
+  "id": "ss-7-12-physical-divisions-india",
+  "subject": "social",
+  "cls": 7,
+  "no": 12,
+  "name": "Physical Divisions of India",
+  "part": 1,
+  "pages": [
+   161,
+   170
+  ],
+  "area": "Geography",
+  "topics": [
+   "Geographical Location of India and Karnataka",
+   "Four Physical Divisions of India",
+   "Islands and Thar Desert",
+   "Three Physical Divisions of Karnataka (Coastal Plain, Malnad, Maidan)"
+  ]
+ },
+ {
+  "id": "ss-7-13-north-america",
+  "subject": "social",
+  "cls": 7,
+  "no": 13,
+  "name": "North America",
+  "part": 1,
+  "pages": [
+   171,
+   193
+  ],
+  "area": "Geography",
+  "topics": [
+   "Continent of North America",
+   "Physical Divisions of North America (Rockies, Great Plains, Canadian Shield, Appalachians)",
+   "Rivers and Great Lakes (HOMES)",
+   "Climate",
+   "Taiga and Prairies",
+   "Agriculture and Minerals of North America"
+  ]
+ },
+ {
+  "id": "ss-7-14-south-america",
+  "subject": "social",
+  "cls": 7,
+  "no": 14,
+  "name": "South America",
+  "part": 1,
+  "pages": [
+   194,
+   209
+  ],
+  "area": "Geography",
+  "topics": [
+   "Continent of South America",
+   "Andes Mountains and Amazon Basin",
+   "Grasslands (Llanos, Campos, Pampas)",
+   "Selvas",
+   "Atacama Desert",
+   "Wildlife and Coffee Pot of the World"
+  ]
+ },
+ {
+  "id": "ss-7-15-social-religious-reforms",
+  "subject": "social",
+  "cls": 7,
+  "no": 15,
+  "name": "Social and Religious Reforms",
+  "part": 2,
+  "pages": [
+   1,
+   13
+  ],
+  "area": "History",
+  "topics": [
+   "Socio-Religious Reform Movements of the 19th Century",
+   "Indian Renaissance",
+   "Brahmo Samaj",
+   "Prarthana Samaj",
+   "Satyashodhak Samaj",
+   "Arya Samaj",
+   "Ramakrishna Mission",
+   "Theosophical Society",
+   "Aligarh Movement",
+   "Sri Narayana Guru",
+   "Women Social Reformers"
+  ]
+ },
+ {
+  "id": "ss-7-17-freedom-movement",
+  "subject": "social",
+  "cls": 7,
+  "no": 17,
+  "name": "Freedom Movement (1885 C.E.–1919 C.E. & Gandhian Age 1919–1947 C.E.)",
+  "part": 2,
+  "pages": [
+   23,
+   65
+  ],
+  "area": "History",
+  "topics": [
+   "Rise of Indian Nationalism",
+   "Indian National Congress (1885)",
+   "Moderates",
+   "Extremists (Lal-Bal-Pal)",
+   "Partition of Bengal (1905)",
+   "Muslim League (1906)",
+   "Surat Split (1907)",
+   "Rowlatt Act & Jallianwala Bagh (1919)",
+   "Revolutionary Nationalists",
+   "Gandhian Era (Non-Cooperation, Civil Disobedience/Dandi March, Quit India)",
+   "Congress Socialists (J.P.)",
+   "Tribal & Peasant Revolts (Champaran, Kheda, Mapillai)",
+   "Women Freedom Fighters of Karnataka",
+   "Subhash Chandra Bose & INA",
+   "Dr. B.R. Ambedkar",
+   "Partition & Independence (1947)"
+  ]
+ },
+ {
+  "id": "ss-7-20-karnataka-economic-social-transformation",
+  "subject": "social",
+  "cls": 7,
+  "no": 20,
+  "name": "Karnataka - Economic and Social Transformation",
+  "part": 2,
+  "pages": [
+   90,
+   96
+  ],
+  "area": "History",
+  "topics": [
+   "Land Reforms in Karnataka (1955 B.D. Jatti Committee, 1974 Land Reforms Act)",
+   "Backward Classes Commissions (Miller 1918, Havanur 1975, Venkataswamy 1983, Chinnappa Reddy)",
+   "Panchayat Raj System in Karnataka (Balwantrai Mehta, Abdul Nazeer Sab)"
+  ]
+ },
+ {
+  "id": "ss-7-22-judiciary",
+  "subject": "social",
+  "cls": 7,
+  "no": 22,
+  "name": "Judiciary",
+  "part": 2,
+  "pages": [
+   108,
+   114
+  ],
+  "area": "Civics",
+  "topics": [
+   "Supreme Court of India",
+   "High Courts",
+   "Subordinate Civil and Criminal Courts",
+   "Lok Adalat (People's Court)",
+   "Public Interest Litigation (PIL)"
+  ]
+ },
+ {
+  "id": "ss-7-23-defence-forces",
+  "subject": "social",
+  "cls": 7,
+  "no": 23,
+  "name": "Defence Forces",
+  "part": 2,
+  "pages": [
+   115,
+   123
+  ],
+  "area": "Civics",
+  "topics": [
+   "Indian Armed Forces (Army, Navy, Air Force)",
+   "Defence Training Centres",
+   "Paramilitary Forces (BSF, BRO, Coast Guard, CISF)",
+   "Auxiliary Forces (NCC, Red Cross)",
+   "Civil Defence"
+  ]
+ },
+ {
+  "id": "ss-7-24-india-neighbouring-countries",
+  "subject": "social",
+  "cls": 7,
+  "no": 24,
+  "name": "India and Neighbouring Countries",
+  "part": 2,
+  "pages": [
+   124,
+   134
+  ],
+  "area": "Civics",
+  "topics": [
+   "India's Relations with Pakistan",
+   "China",
+   "Nepal",
+   "Bhutan",
+   "Sri Lanka",
+   "and Bangladesh",
+   "Shimla Agreement",
+   "Panchsheel and McMahon Line",
+   "SAARC"
+  ]
+ },
+ {
+  "id": "ss-7-25-united-nations-organization",
+  "subject": "social",
+  "cls": 7,
+  "no": 25,
+  "name": "United Nations Organization (U.N.O.)",
+  "part": 2,
+  "pages": [
+   135,
+   144
+  ],
+  "area": "Civics",
+  "topics": [
+   "Birth and Aims of UNO",
+   "Six Principal Organs of UN",
+   "Veto Power and Permanent Five",
+   "Specialized Agencies (UNESCO, FAO, WHO, UNICEF)",
+   "India's Role in the UN"
+  ]
+ },
+ {
+  "id": "ss-7-26-australia",
+  "subject": "social",
+  "cls": 7,
+  "no": 26,
+  "name": "Australia",
+  "part": 2,
+  "pages": [
+   145,
+   164
+  ],
+  "area": "Geography",
+  "topics": [
+   "Continent of Australia",
+   "Oceania",
+   "Physical Divisions of Australia (Great Dividing Range, Central Lowlands/Artesian Basin, Western Plateau)",
+   "Murray-Darling Basin & Lake Eyre",
+   "Willy-Willies",
+   "Downs & Savanna",
+   "Marsupials & Monotremes",
+   "Merino Sheep & Minerals (Kalgoorlie/Coolgardie)"
+  ]
+ },
+ {
+  "id": "ss-7-27-antarctica",
+  "subject": "social",
+  "cls": 7,
+  "no": 27,
+  "name": "Antarctica",
+  "part": 2,
+  "pages": [
+   165,
+   174
+  ],
+  "area": "Geography",
+  "topics": [
+   "Continent of Antarctica",
+   "White Continent / Continent of Science",
+   "Trans-Antarctic Mountains",
+   "Vinson Massif and Mt. Erebus",
+   "Polar Wildlife (Penguins, Krill, Seals, Whales)",
+   "Polar Explorers (Amundsen, Scott)",
+   "Antarctic Treaty (1959)",
+   "Indian Research Stations (Dakshina Gangotri, Maitri, Bharati)"
+  ]
+ },
+ {
+  "id": "ss-8-01-sources",
+  "subject": "social",
+  "cls": 8,
+  "no": 1,
+  "name": "Sources",
+  "part": 1,
+  "pages": [
+   1,
+   7
+  ],
+  "area": "History",
+  "topics": [
+   "Historical Sources",
+   "Literary and Archaeological Sources",
+   "Numismatics and Epigraphy",
+   "Oral Sources and Legends",
+   "Carbon-14 Dating"
+  ]
+ },
+ {
+  "id": "ss-8-02-bharathavarsha-prehistoric",
+  "subject": "social",
+  "cls": 8,
+  "no": 2,
+  "name": "Bharathavarsha: Geographical Features and Prehistoric Period",
+  "part": 1,
+  "pages": [
+   8,
+   14
+  ],
+  "area": "History",
+  "topics": [
+   "Geographical Features of India and History",
+   "Prehistoric India",
+   "Stone Age (Palaeolithic, Mesolithic, Neolithic)",
+   "Prehistoric Sites in India"
+  ]
+ },
+ {
+  "id": "ss-8-03-sindhu-saraswati-vedic",
+  "subject": "social",
+  "cls": 8,
+  "no": 3,
+  "name": "Ancient Indian Civilizations: Sindhu-Saraswati Civilization and Vedic Civilization",
+  "part": 1,
+  "pages": [
+   15,
+   22
+  ],
+  "area": "History",
+  "topics": [
+   "Indus Valley Civilization",
+   "Harappan Civilization",
+   "Sindhu-Saraswati Civilization",
+   "Bronze Age in India",
+   "Early and Later Vedic Period"
+  ]
+ },
+ {
+  "id": "ss-8-04-prominent-world-civilizations",
+  "subject": "social",
+  "cls": 8,
+  "no": 4,
+  "name": "Prominent Civilizations of the World",
+  "part": 1,
+  "pages": [
+   23,
+   39
+  ],
+  "area": "History",
+  "topics": [
+   "Ancient World Civilizations",
+   "Egyptian Civilization",
+   "Mesopotamian Civilization",
+   "Chinese Civilization",
+   "Greek and Roman Civilizations",
+   "Maya Aztec and Inca Civilizations"
+  ]
+ },
+ {
+  "id": "ss-8-05-sanatana-dharma",
+  "subject": "social",
+  "cls": 8,
+  "no": 5,
+  "name": "Sanatana Dharma",
+  "part": 1,
+  "pages": [
+   40,
+   44
+  ],
+  "area": "History",
+  "topics": [
+   "Sanatana Dharma",
+   "Vedic Literature Structure (Shrutis and Smritis)",
+   "Six Vedangas and Six Darshanas",
+   "Agama Traditions"
+  ]
+ },
+ {
+  "id": "ss-8-06-jainism-buddhism",
+  "subject": "social",
+  "cls": 8,
+  "no": 6,
+  "name": "Jainism and Buddhism",
+  "part": 1,
+  "pages": [
+   45,
+   51
+  ],
+  "area": "History",
+  "topics": [
+   "Rise of New Religions (6th Century BCE)",
+   "Shramanic Tradition",
+   "Jainism and Vardhamana Mahaveera",
+   "Buddhism and Gautama Buddha",
+   "Foreign Invasions (Darius and Alexander vs. Porus)"
+  ]
+ },
+ {
+  "id": "ss-8-07-meaning-importance-political-science",
+  "subject": "social",
+  "cls": 8,
+  "no": 7,
+  "name": "Meaning and Importance of Political Science",
+  "part": 1,
+  "pages": [
+   52,
+   55
+  ],
+  "area": "Political Science",
+  "topics": [
+   "Introduction to Political Science",
+   "Origin of Political Science",
+   "Greek Political Thinkers (Socrates, Plato, Aristotle)"
+  ]
+ },
+ {
+  "id": "ss-8-08-citizen-citizenship",
+  "subject": "social",
+  "cls": 8,
+  "no": 8,
+  "name": "Citizen and Citizenship",
+  "part": 1,
+  "pages": [
+   56,
+   63
+  ],
+  "area": "Political Science",
+  "topics": [
+   "Citizenship in India",
+   "Citizen vs. Alien",
+   "Citizenship Act 1955",
+   "Acquisition and Loss of Citizenship",
+   "Single vs. Dual Citizenship",
+   "Fundamental Duties (Article 51A)"
+  ]
+ },
+ {
+  "id": "ss-8-09-man-and-society",
+  "subject": "social",
+  "cls": 8,
+  "no": 9,
+  "name": "Man and Society",
+  "part": 1,
+  "pages": [
+   64,
+   68
+  ],
+  "area": "Sociology",
+  "topics": [
+   "Introduction to Sociology",
+   "Socialization",
+   "Early Western and Indian Sociologists"
+  ]
+ },
+ {
+  "id": "ss-8-10-man-and-culture",
+  "subject": "social",
+  "cls": 8,
+  "no": 10,
+  "name": "Man and Culture",
+  "part": 1,
+  "pages": [
+   69,
+   71
+  ],
+  "area": "Sociology",
+  "topics": [
+   "Concept of Culture",
+   "Cultural Diversity and Pluralistic Culture",
+   "Customs Traditions Values and Conventions"
+  ]
+ },
+ {
+  "id": "ss-8-11-earth-our-living-planet",
+  "subject": "social",
+  "cls": 8,
+  "no": 11,
+  "name": "The Earth – Our Living Planet",
+  "part": 1,
+  "pages": [
+   72,
+   78
+  ],
+  "area": "Geography",
+  "topics": [
+   "Globe Latitudes and Longitudes",
+   "Size and Shape of the Earth (Geoid)",
+   "Continents and Oceans",
+   "Local Time and Indian Standard Time (IST)",
+   "Time Zones and International Date Line (IDL)"
+  ]
+ },
+ {
+  "id": "ss-8-12-lithosphere",
+  "subject": "social",
+  "cls": 8,
+  "no": 12,
+  "name": "Lithosphere",
+  "part": 1,
+  "pages": [
+   79,
+   95
+  ],
+  "area": "Geography",
+  "topics": [
+   "Interior of the Earth",
+   "Rocks and Rock Cycle",
+   "Endogenic Forces (Volcanoes and Earthquakes)",
+   "Exogenic Forces (Weathering and Denudation)",
+   "Landforms by Rivers Glaciers Underground Water Wind and Sea Waves"
+  ]
+ },
+ {
+  "id": "ss-8-13-atmosphere",
+  "subject": "social",
+  "cls": 8,
+  "no": 13,
+  "name": "Atmosphere",
+  "part": 1,
+  "pages": [
+   96,
+   108
+  ],
+  "area": "Geography",
+  "topics": [
+   "Composition and Layers of the Atmosphere",
+   "Temperature Zones and Inversion",
+   "Atmospheric Pressure Belts and Planetary/Local Winds",
+   "Humidity Clouds and Types of Rainfall",
+   "Weather vs. Climate"
+  ]
+ },
+ {
+  "id": "ss-8-14-meaning-importance-economics",
+  "subject": "social",
+  "cls": 8,
+  "no": 14,
+  "name": "Meaning and Importance of Economics",
+  "part": 1,
+  "pages": [
+   109,
+   113
+  ],
+  "area": "Economics",
+  "topics": [
+   "Introduction to Economics",
+   "Etymology of Economics (Oikos and Nomos)",
+   "Father of Economics (Adam Smith)",
+   "Four Kinds of Economic Activities"
+  ]
+ },
+ {
+  "id": "ss-8-15-meaning-importance-business-studies",
+  "subject": "social",
+  "cls": 8,
+  "no": 15,
+  "name": "Meaning and Importance of Business Studies",
+  "part": 1,
+  "pages": [
+   114,
+   122
+  ],
+  "area": "Business Studies",
+  "topics": [
+   "Introduction to Business Studies",
+   "Home Trade (Retail and Wholesale) and Foreign Trade (Import Export Entrepot)",
+   "Primary and Secondary Industries",
+   "Cottage and Small Scale Industries",
+   "Aids to Trade (Auxiliaries)",
+   "Business Ethics and Quality Marks (ISI, AGMARK)"
+  ]
+ },
+ {
+  "id": "ss-8-16-mauryas-kushans",
+  "subject": "social",
+  "cls": 8,
+  "no": 16,
+  "name": "Mauryas and Kushans",
+  "part": 2,
+  "pages": [
+   1,
+   5
+  ],
+  "area": "History",
+  "topics": [
+   "The Mauryan Empire",
+   "Chandragupta Maurya and Kautilya's Arthashastra",
+   "Emperor Ashoka and Kalinga War",
+   "The Kushans and Kanishka",
+   "Four Buddhist Councils",
+   "Gandhara Art"
+  ]
+ },
+ {
+  "id": "ss-8-17-guptas-vardhanas",
+  "subject": "social",
+  "cls": 8,
+  "no": 17,
+  "name": "The Guptas and Vardhanas",
+  "part": 2,
+  "pages": [
+   6,
+   13
+  ],
+  "area": "History",
+  "topics": [
+   "The Gupta Empire (Golden Age of Sanskrit Literature and Science)",
+   "Samudragupta and Chandragupta II Vikramaditya",
+   "Gupta Scientists (Aryabhata, Varahamihira, Dhanwantari, Charaka, Sushruta)",
+   "The Vardhana Dynasty (Harshavardhana) and Nalanda University"
+  ]
+ },
+ {
+  "id": "ss-8-18-shathavahanas-kadambas-gangas",
+  "subject": "social",
+  "cls": 8,
+  "no": 18,
+  "name": "South Indian Dynasties: Shathavahanas, Kadambas, Gangas",
+  "part": 2,
+  "pages": [
+   14,
+   21
+  ],
+  "area": "History",
+  "topics": [
+   "The Satavahanas (Shathavahanas)",
+   "The Kadambas of Banavasi",
+   "The Gangas of Talakadu (Gangawadi)",
+   "Gommateshwara of Shravanabelagola"
+  ]
+ },
+ {
+  "id": "ss-8-20-rashtrakutas-chalukyas-kalyana",
+  "subject": "social",
+  "cls": 8,
+  "no": 20,
+  "name": "The Rashtrakutas of Manyakheta and the Chalukyas of Kalyana",
+  "part": 2,
+  "pages": [
+   29,
+   36
+  ],
+  "area": "History",
+  "topics": [
+   "The Rashtrakutas of Manyakheta (Malkhed)",
+   "Amoghavarsha Nripatunga and Kavirajamarga",
+   "Kailasanatha Temple at Ellora",
+   "The Chalukyas of Kalyana",
+   "Vikramaditya VI",
+   "Basaveshwara and Vachana Literature"
+  ]
+ },
+ {
+  "id": "ss-8-22-democracy",
+  "subject": "social",
+  "cls": 8,
+  "no": 22,
+  "name": "Democracy",
+  "part": 2,
+  "pages": [
+   43,
+   49
+  ],
+  "area": "Political Science",
+  "topics": [
+   "Meaning and Types of Democracy (Direct vs. Indirect)",
+   "Universal Adult Franchise (61st Amendment)",
+   "Election Commission of India",
+   "General Elections vs. By-Elections"
+  ]
+ },
+ {
+  "id": "ss-8-23-local-self-government",
+  "subject": "social",
+  "cls": 8,
+  "no": 23,
+  "name": "Local Self Government",
+  "part": 2,
+  "pages": [
+   50,
+   62
+  ],
+  "area": "Political Science",
+  "topics": [
+   "Panchayat Raj System in Karnataka (73rd Amendment)",
+   "Grama Sabha Grama Panchayat Taluk Panchayat and Zilla Panchayat",
+   "Urban Local Bodies (74th Amendment: Town/City Municipalities and Mahanagara Palike / BBMP)"
+  ]
+ },
+ {
+  "id": "ss-8-24-sociology-daily-life",
+  "subject": "social",
+  "cls": 8,
+  "no": 24,
+  "name": "Sociology in Daily Life",
+  "part": 2,
+  "pages": [
+   63,
+   64
+  ],
+  "area": "Sociology",
+  "topics": [
+   "Sociology of Everyday Life",
+   "Social Interaction",
+   "Body Language and Conversation",
+   "Role Consciousness"
+  ]
+ },
+ {
+  "id": "ss-8-25-kinds-of-societies",
+  "subject": "social",
+  "cls": 8,
+  "no": 25,
+  "name": "Kinds of Societies",
+  "part": 2,
+  "pages": [
+   65,
+   68
+  ],
+  "area": "Sociology",
+  "topics": [
+   "Types of Human Societies",
+   "Hunting and Food-Gathering Society",
+   "Cattle-Rearing (Pastoral) Society",
+   "Farming (Agricultural) Society",
+   "Industrial Society"
+  ]
+ },
+ {
+  "id": "ss-8-26-hydrosphere",
+  "subject": "social",
+  "cls": 8,
+  "no": 26,
+  "name": "Hydrosphere",
+  "part": 2,
+  "pages": [
+   69,
+   76
+  ],
+  "area": "Geography",
+  "topics": [
+   "Water Bodies (Ocean, Sea, Gulf, Bay, Strait, Isthmus)",
+   "Relief of the Ocean Floor",
+   "Temperature and Salinity of Ocean Water",
+   "Warm and Cold Ocean Currents",
+   "Tides (Spring and Neap Tides) and Conservation of Oceans"
+  ]
+ },
+ {
+  "id": "ss-8-28-basic-concepts-economics",
+  "subject": "social",
+  "cls": 8,
+  "no": 28,
+  "name": "Basic Concepts of Economics",
+  "part": 2,
+  "pages": [
+   83,
+   89
+  ],
+  "area": "Economics",
+  "topics": [
+   "Basic Concepts of Economics (Demand, Supply, Production, Distribution, Consumption)",
+   "Four Types of Utility (Principle, Form, Time, Place)",
+   "Factors of Production and Rewards",
+   "Co-operation",
+   "National Income and Per Capita Income (including Legacy GDP, GNP, NNP, CSO)",
+   "Physical vs. Mental Labour"
+  ]
+ },
+ {
+  "id": "ss-8-29-emergence-business-organisations",
+  "subject": "social",
+  "cls": 8,
+  "no": 29,
+  "name": "Emergence of Different Business Organisations",
+  "part": 2,
+  "pages": [
+   90,
+   95
+  ],
+  "area": "Business Studies",
+  "topics": [
+   "Forms of Business Organisations",
+   "Small Scale Private Business Organisations",
+   "Sole Trading Concerns (Sole Proprietorship)",
+   "Partnership Firms (Indian Partnership Act 1932)",
+   "Types of Partners",
+   "Hindu Undivided Family (HUF) Business and Karta"
+  ]
+ },
+ {
+  "id": "ss-8-30-large-scale-business-organisations",
+  "subject": "social",
+  "cls": 8,
+  "no": 30,
+  "name": "Large Scale Business Organisations",
+  "part": 2,
+  "pages": [
+   96,
+   102
+  ],
+  "area": "Business Studies",
+  "topics": [
+   "Co-operative Societies (1904/1912 Acts, Robert Owen, Kanaginahala)",
+   "Joint Stock Companies (1956 Act)",
+   "Multinational Corporations (MNCs)",
+   "Public Sector and Joint Sector Undertakings",
+   "Public Utilities",
+   "Stock Exchanges (BSE 1875) and SEBI"
+  ]
+ }
+]

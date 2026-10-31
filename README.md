@@ -53,7 +53,8 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 
 | Screen | For | What it does |
 |---|---|---|
-| Home | Everyone | A short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page; a "Shapes and sizes" card opens the Shapes page |
+| Home | Everyone | A MAT / SAT switch at the top (`#/` and `#/?test=sat`). MAT: a short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page; a "Shapes and sizes" card opens the Shapes page. SAT: the SAT topics by subject (Maths, Science, Social Science), each row showing its textbook chapters ("Class 7 · Ch 11 + Class 8 · Ch 10") and how many past exam questions it has |
+| SAT topic | Everyone | `#/sat/<topic-id>`: how many past questions and papers the topic has, a button to its past exam questions (`#/sat/<topic-id>/questions`, shown as printed with their pictures and, in a combined topic, the chapter each comes from), and "Study from the textbook": each chapter's class, number, textbook part and pages, and what it covers. The questions have no answers yet, so SAT chapters have no Practice, Quick test or Classroom yet |
 | Chapter | Everyone | Opened from a Home row: the chapter's intro, progress (book questions, accuracy, best test) and its buttons. Learn is highlighted; Practice, Quick test, Classroom and, where there is one, the game follow |
 | Facts to remember | Students | Things to learn by heart, in three tabs: the primes up to 100 (a 1–100 grid, the look-alikes 51, 57, 87, 91, and the primes in each ten), squares 1–30 and cubes 1–20, each with tricks. The number chapters' pages and their Learn cheat sheets link to it |
 | Shapes and sizes | Students and teachers | Opened from a card on Home. Pick a square, rectangle, triangle or circle, then step through Perimeter (a dot walks round the edge), Area (rows fill up, two triangles make a rectangle, a circle's slices line up into a near-rectangle), Volume (layers stack into a cube, cuboid, triangular prism or cylinder) and Open flat (the solid unfolds into its net). The solids turn in 3D: drag them, use the turn buttons or Spin. Each step shows the formula with the numbers worked in (π = 22/7) |
@@ -118,6 +119,18 @@ To share the app, send the link, or print a QR code of it for the classroom. Stu
 - **Q22 is hidden** (`status: "needs-review"`). No rule fits the series as printed (4, 4, 9, 29, 111, ?). If 111 is a typo for 119, the answer is C (599). Check it against the original paper, then remove the status.
 - **Q29:** the book prints "17, 15, 1.\`2, 8". This is taken to be 12.
 
+## SAT (Scholastic Aptitude Test)
+
+SAT chapters are the 2026-27 Karnataka Class 7 and 8 textbook chapters (Maths, Science, Social Science), as listed in `sat-syllabus/*.md`. A chapter is in the app only if a past SAT paper asked about it: 81 of the 111 chapters.
+
+- **Topics:** the app is mostly for revision and practice, so related chapters are combined into one topic in `app/src/data/sat/groups.json` (for example Light = Class 7 Science Ch 11 + Class 8 Science Ch 10). Every other chapter is a topic on its own, for 59 topics in all. Questions stay filed under their own textbook chapter, so regrouping only means editing that list. A topic page lists each of its chapters with the textbook part and pages, and a chapter ID in the URL opens the topic it belongs to.
+
+- **Questions:** all 540 questions of the six Karnataka SAT papers from 2019-20 to 2025-26 are in `app/src/data/pyq/ka-<year>-sat.json`, transcribed in English from `pyq/`. The 2019-20, 2020-21 and 2022-23 papers have a text layer; the 2023-24 to 2025-26 papers are scans and were read from the page images. Their pictures are cropped into `app/public/figures/pyq/ka-<year>-sat/` with `tools/crop_figures.swift tools/figures/pyq-ka-<year>-sat.json`.
+- **Chapters:** each question's `topic` is the syllabus chapter ID it belongs to, using the "map here" rules in the syllabus files. 115 questions are on topics the new textbooks dropped (sound, synthetic fibres, coal and petroleum, crop production, Public Administration, polygons and others). They have `topic: null` and are not shown.
+- **Not solved yet:** the papers have no answer key, and no answers have been worked out. Questions have no `answer`, so SAT chapters only show the questions for now. When a question is solved, add `answer` and `keyFrom` (`"book"` for an official key, `"solved"` otherwise). `tools/check_sat.ts` already requires both together.
+- **Chapter list:** `app/src/data/sat/chapters.json` is built by `npx tsx ../tools/build_sat_chapters.ts` (run in `app/`) from the syllabus files and the papers. Re-run it after adding a paper or changing a question's chapter. `npm run check:content` runs `tools/check_sat.ts`, which checks the numbering, options, pictures, chapter IDs, groups and Kannada names.
+- **Kannada:** chapter names are drafted in `app/src/data/sat/chapters.kn.json` and group names in `groups.json` (`kn`), and the interface text is in `kn.ts`. The questions are English only for now. The Karnataka papers print every question in Kannada too, so use that wording rather than a draft when adding it (the 2019-20 to 2022-23 text layers use the legacy Nudi font, so read the rendered pages).
+
 ## Kannada
 
 > **The Kannada text is a first draft and has not been reviewed.** Have a Kannada-speaking teacher check it before students rely on it.
@@ -144,7 +157,7 @@ Numbers stay in Western digits, as in the NMMS papers.
 
 ## Adding a chapter
 
-Every MAT chapter is built. For new material (e.g. SAT), follow the full checklist in `CLAUDE.md` ("Adding a chapter"): book questions, an independent checker, a generator with a test, tips and Kannada. In short:
+Every MAT chapter is built. For SAT, see "SAT (Scholastic Aptitude Test)" above. For new MAT-style material, follow the full checklist in `CLAUDE.md` ("Adding a chapter"): book questions, an independent checker, a generator with a test, tips and Kannada. In short:
 
 1. Run `swift tools/extract_pages.swift > nmms.txt` to get the text. Use `swift tools/render_pages.swift <dir> <pages…>` to see figures, fractions and superscripts, which don't survive text extraction.
 2. Write `app/src/data/mat/<topic>.json` and `<topic>.meta.json` in the same format as `number-series`.

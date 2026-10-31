@@ -20,6 +20,9 @@ import { SHAPE_IDS, SHAPE_STEPS } from './data/shapes'
 import { Shapes } from './pages/Shapes'
 import { Learn } from './pages/Learn'
 import { paperQuestions } from './data/papers'
+import { getSatTopic } from './data/sat'
+import { SatTopic } from './pages/SatTopic'
+import { SatQuestions } from './pages/SatQuestions'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
 import { QuickTest } from './pages/QuickTest'
@@ -84,6 +87,11 @@ export default function App() {
     ) : (
       <NotFound />
     )
+  }
+  if (kind === 'sat') {
+    const satTopic = getSatTopic(topicId)
+    if (!satTopic || parts.length > 3 || (view !== undefined && view !== 'questions')) return <NotFound />
+    return view ? <SatQuestions topic={satTopic} /> : <SatTopic topic={satTopic} />
   }
   if (!topic) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.
