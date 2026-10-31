@@ -1,5 +1,8 @@
 {
   "topic": "calendar",
+  "videos": [
+    { "youtube": "I8yzzPEG3Q0", "title": "Find the day of any date" }
+  ],
   "intro": "Calendar questions ask which day of the week a date falls on, or how many days lie between dates. The key idea is odd days: the days left over after whole weeks.",
   "tips": [
     {
