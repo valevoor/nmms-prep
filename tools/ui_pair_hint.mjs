@@ -5,10 +5,10 @@
 const PAIRS = {
   'app/src/pages/Chapter.tsx': 'app/src/pages/SatTopic.tsx (the SAT topic page)',
   'app/src/pages/SatTopic.tsx': 'app/src/pages/Chapter.tsx (the MAT chapter page)',
-  'app/src/pages/Practice.tsx': 'app/src/pages/SatQuestions.tsx (the SAT question card)',
-  'app/src/components/Options.tsx': 'app/src/pages/SatQuestions.tsx (the SAT question card)',
-  'app/src/components/QuestionStem.tsx': 'app/src/pages/SatQuestions.tsx (the SAT question card)',
-  'app/src/pages/SatQuestions.tsx': 'app/src/pages/Practice.tsx, components/QuestionStem.tsx and components/Options.tsx (the MAT question card)',
+  'app/src/pages/Practice.tsx': 'app/src/pages/SatPractice.tsx and components/SatQuestion.tsx (the SAT question card)',
+  'app/src/components/Options.tsx': 'app/src/pages/SatPractice.tsx and components/SatQuestion.tsx (the SAT question card)',
+  'app/src/components/QuestionStem.tsx': 'app/src/pages/SatPractice.tsx and components/SatQuestion.tsx (the SAT question card)',
+  'app/src/components/SatQuestion.tsx': 'app/src/pages/Practice.tsx, components/QuestionStem.tsx and components/Options.tsx (the MAT question card)',
   'app/src/pages/Home.tsx': 'the other tab in the same file: ChapterRow ↔ SatRow, the MAT hero ↔ SatHome',
 }
 

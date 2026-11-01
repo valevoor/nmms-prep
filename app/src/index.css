@@ -4433,27 +4433,8 @@ kbd {
   gap: 4px;
 }
 
-.sat-summary {
-  margin: 4px 0 12px;
-}
-
-.sat-qs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 14px;
-}
-
 .sat-q {
   min-width: 0;
-}
-
-.sat-q-src {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 600;
 }
 
 .sat-prompt {
@@ -4462,6 +4443,62 @@ kbd {
   line-height: 1.45;
   white-space: pre-line;
   overflow-wrap: anywhere;
+}
+
+/* Maths drawn as printed (components/MathText.tsx): stacked fractions and roots with a bar. */
+.math-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  vertical-align: middle;
+  margin: 0.15em 0.12em;
+  font-size: 0.92em;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+.math-num {
+  padding: 0 0.2em 0.05em;
+  border-bottom: 0.09em solid currentColor;
+}
+.math-den {
+  padding: 0.05em 0.2em 0;
+}
+.math-frac .math-frac {
+  font-size: 0.95em;
+}
+.math-root {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.math-root-sign {
+  flex: none;
+  width: 0.6em;
+  height: auto;
+  min-height: 1.2em;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.09em;
+  stroke-linejoin: round;
+}
+.math-root-sign path {
+  vector-effect: non-scaling-stroke;
+}
+.math-radicand {
+  display: block;
+  padding: 0.3em 0.15em 0 0.1em;
+  border-top: 0.09em solid currentColor;
+}
+.math-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .sat-table-wrap {
@@ -4532,6 +4569,13 @@ kbd {
   align-items: center;
 }
 
-.sat-opts-fig .fig-img {
+.sat-opts-fig .fig-img,
+.sat-q .options-fig .fig-img {
   max-height: 110px;
+}
+
+/* A solved SAT question's options can be long sentences: let them wrap. */
+.sat-q .option-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }

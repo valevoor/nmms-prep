@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from 'react'
 import { get, set } from 'idb-keyval'
 import { paperQuestions } from '../data/papers'
+import type { PaperQuestionRef } from '../data/sat'
 import { pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import type { Question } from '../types'
@@ -79,6 +80,30 @@ export function recordAnswer(topic: string, q: Question, correct: boolean) {
     next.mistakes = correct ? others : [q, ...others].slice(0, MAX_MISTAKES)
     return next
   })
+}
+
+/** A SAT topic's progress is kept apart from the MAT chapters', under this key. */
+export const satKey = (topicId: string) => `sat:${topicId}`
+
+/**
+ * A SAT answer. SAT questions aren't the MAT `Question` type, so they are only counted by id, in `exam`;
+ * a SAT mistake is a question whose last answer was wrong (see satMistakes).
+ */
+export function recordSatAnswer(topicId: string, id: string, correct: boolean) {
+  update(satKey(topicId), (p) => {
+    const a = p.exam[id] ?? { correct: 0, wrong: 0, lastCorrect: false }
+    return { ...p, exam: { ...p.exam, [id]: { correct: a.correct + (correct ? 1 : 0), wrong: a.wrong + (correct ? 0 : 1), lastCorrect: correct } } }
+  })
+}
+
+/** The solved questions answered wrong last time, in paper order. */
+export function satMistakes(p: TopicProgress, solved: PaperQuestionRef[]): PaperQuestionRef[] {
+  return solved.filter((x) => p.exam[x.q.id]?.lastCorrect === false)
+}
+
+/** A SAT topic's progress bar: solved questions right the last time they were answered. */
+export function satMastery(p: TopicProgress, solved: PaperQuestionRef[]): { right: number; total: number } {
+  return { right: solved.filter((x) => p.exam[x.q.id]?.lastCorrect).length, total: solved.length }
 }
 
 export function recordTest(topic: string, result: TestResult) {

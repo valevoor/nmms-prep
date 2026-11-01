@@ -8,10 +8,10 @@ import { READY_TOPICS, UPCOMING_MAT, getTopic } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
 import { getLastTopic } from '../lib/lastTopic'
-import { mastery, useProgress } from '../lib/progress'
+import { mastery, satKey, satMastery, satMistakes, useProgress } from '../lib/progress'
 import { href, useRoute } from '../lib/router'
 import { pastStats } from '../data/papers'
-import { SAT_SUBJECTS, SAT_TOPICS, satPastStats, satTopicName } from '../data/sat'
+import { SAT_SUBJECTS, SAT_TOPICS, satPastStats, satSolved, satTopicName } from '../data/sat'
 import type { SatTopic } from '../data/sat'
 import type { Dict } from '../lib/i18n'
 
@@ -137,16 +137,30 @@ function SatRow({ topic }: { topic: SatTopic }) {
   const t = useT()
   const lang = useLocale()
   const past = SAT_PAST[topic.id]
+  const solved = SAT_SOLVED[topic.id]
+  const p = useProgress(satKey(topic.id))
+  const m = satMastery(p, solved)
+  const wrong = satMistakes(p, solved).length
   return (
     <li>
       <a className="chapter-row sat-row" href={href(`sat/${topic.id}`)}>
         <span className="chapter-row-main">
           <span className="chapter-row-name">{satTopicName(topic, lang)}</span>
           <span className="muted sat-row-refs">{chapterRefs(t, topic)}</span>
+          {solved.length > 0 && (
+            <span className="meter meter-thin" role="img" aria-label={t.home.examCorrect(m.right, m.total)}>
+              <span className="meter-fill" style={{ width: `${(100 * m.right) / m.total}%` }} />
+            </span>
+          )}
           <span className="muted past-line">
             <Rich parts={t.home.pastLine(past.questions, past.years, past.papers)} />
           </span>
         </span>
+        {wrong > 0 && (
+          <span className="row-badge" aria-label={t.home.wrongCount(wrong)}>
+            {wrong}
+          </span>
+        )}
         <span className="chapter-row-go" aria-hidden>
           →
         </span>
@@ -155,6 +169,7 @@ function SatRow({ topic }: { topic: SatTopic }) {
   )
 }
 
+const SAT_SOLVED = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satSolved(x)]))
 const SAT_PAST = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satPastStats(x)]))
 
 /**

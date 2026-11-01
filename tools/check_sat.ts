@@ -6,7 +6,7 @@
  * chapter has at least one question and a Kannada name; and each group of combined chapters
  * (data/sat/groups.json) lists two or more listed chapters of its own subject, none of them in another
  * group; a question under no chapter names a listed old-syllabus chapter of its own subject
- * (`oldChapter`, data/sat/old-chapters.json), each of which has questions; and every question is in exactly one topic. The questions aren't solved yet, so this checks the transcription's shape, not the answers. Run from app/:  npx tsx ../tools/check_sat.ts
+ * (`oldChapter`, data/sat/old-chapters.json), each of which has questions; and every question is in exactly one topic. This checks the transcription's shape; tools/check_sat_maths.ts checks the maths answers. Run from app/:  npx tsx ../tools/check_sat.ts
  */
 import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'

@@ -7,7 +7,7 @@ import { SAT_TOPICS } from './data/sat'
 import { Chapter } from './pages/Chapter'
 import { Home } from './pages/Home'
 import { Practice } from './pages/Practice'
-import { SatQuestions } from './pages/SatQuestions'
+import { SatPractice } from './pages/SatPractice'
 import { SatTopic } from './pages/SatTopic'
 
 /*
@@ -40,6 +40,9 @@ vi.mock('./lib/progress', async (orig) => {
 
 const MAT = READY_TOPICS.find((t) => t.id === 'number-series')!
 const SAT = SAT_TOPICS.find((t) => t.chapters.length === 1)!
+/** A topic whose past questions are solved (the maths so far), so its cards have answer buttons, and one not solved yet. */
+const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1)!
+const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.subject !== 'maths' && t.chapters.length === 1)!
 
 function render(el: ReactElement, query = ''): string {
   route.query = query
@@ -65,10 +68,11 @@ function region(html: string, sel: string): string {
 }
 
 /**
- * Classes inside the content rather than the screen: the chapter picture's parts (art-*) and a number series
- * (series*, term*, comma) change from chapter to chapter, not between MAT and SAT.
+ * Classes inside the content rather than the screen: the chapter picture's parts (art-*), a number series
+ * (series*, term*, comma) and drawn maths (math*: fractions and roots) change from question to question,
+ * not between MAT and SAT.
  */
-const CONTENT = /^(art-|series|term|comma$)/
+const CONTENT = /^(art-|series|term|comma$|math)/
 
 function classes(html: string): Set<string> {
   return new Set([...html.matchAll(/\bclass="([^"]*)"/g)].flatMap((m) => m[1].split(/\s+/)).filter((c) => c && !CONTENT.test(c)))
@@ -84,8 +88,6 @@ interface Pair {
   satOnly: Record<string, string>
 }
 
-const NO_PROGRESS = 'SAT questions have no answers yet, so there is no progress to show'
-
 const PAIRS: Pair[] = [
   {
     name: 'Home: list row',
@@ -93,9 +95,6 @@ const PAIRS: Pair[] = [
     sat: () => region(render(createElement(Home), 'test=sat'), 'chapter-row'),
     matOnly: {
       'chapter-art': 'SAT topics have no chapter picture',
-      meter: NO_PROGRESS,
-      'meter-fill': NO_PROGRESS,
-      'meter-thin': NO_PROGRESS,
     },
     satOnly: {
       'sat-row': 'Row grid without the picture column',
@@ -124,38 +123,58 @@ const PAIRS: Pair[] = [
       'chapter-art': 'SAT topics have no chapter picture',
       'topic-head': 'Holds the picture and the intro, which SAT topics lack',
       'topic-intro': 'SAT topics have no intro text',
-      meter: NO_PROGRESS,
-      'meter-fill': NO_PROGRESS,
       'game-link': 'The games (Guess the rule, cube explorer…) are MAT-only',
     },
     satOnly: {
-      'sat-actions': 'One button (Past questions) instead of Learn / Practice / Quick test / Classroom',
-      'sat-note': 'Says the questions have no answers yet',
+      'sat-actions': 'Practice only: SAT has no Learn, Quick test or Classroom yet',
+      'sat-note': 'Says the answers are worked out by us (or not added yet)',
     },
   },
   {
-    name: 'Question card',
+    name: 'Practice: question card (not solved yet)',
     mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'exam' })), 'card question'),
-    sat: () => region(render(createElement(SatQuestions, { topic: SAT })), 'sat-q'),
+    sat: () => region(render(createElement(SatPractice, { topic: SAT_UNSOLVED, mode: 'exam' })), 'card question'),
     matOnly: {
-      question: 'Drift: SatQuestions draws its own card; use the Practice card (QuestionStem + Options) when SAT gets answers',
-      'q-head': 'Drift: SAT puts the paper and question number in sat-q-src instead',
-      chip: 'Drift: MAT marks past-paper questions with a "Real exam" chip; SAT does not',
-      'chip-exam': 'Drift: as chip',
-      muted: 'Drift: part of q-head',
-      options: 'Drift: SAT lists options in sat-opts, not the shared Options component',
+      options: 'Drift: SAT lists unanswered options in sat-opts, as there is nothing to pick',
       'options-md': 'Drift: as options',
       option: 'Drift: as options',
       'option-key': 'Drift: SAT uses sat-key',
       'option-value': 'Drift: as options',
     },
     satOnly: {
-      'sat-q': 'Drift: see question',
-      'sat-q-src': 'Drift: see q-head',
+      'sat-q': 'Scopes the rules for paper pictures and long option sentences',
       'sat-prompt': 'Drift: MAT draws the prompt with QuestionStem',
       'sat-opts': 'Drift: see options',
       'sat-key': 'Drift: see option-key',
+      actions: 'A question without an answer has only a Next button, below it',
+      btn: 'As actions',
+      'btn-primary': 'As actions',
+      'btn-lg': 'As actions',
     },
+  },
+  {
+    name: 'Practice: tabs',
+    mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'exam' })), 'tabs'),
+    sat: () => region(render(createElement(SatPractice, { topic: SAT_SOLVED, mode: 'exam' })), 'tabs'),
+    matOnly: {},
+    satOnly: {},
+  },
+  {
+    name: 'Practice: question card',
+    mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'exam' })), 'card question'),
+    sat: () => region(render(createElement(SatPractice, { topic: SAT_SOLVED, mode: 'exam' })), 'card question'),
+    matOnly: {},
+    satOnly: {
+      'sat-q': 'Scopes the rules for paper pictures and long option sentences',
+      'sat-prompt': 'Drift: MAT draws the prompt with QuestionStem',
+    },
+  },
+  {
+    name: 'Practice: no mistakes',
+    mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'mistakes' })), 'card empty'),
+    sat: () => region(render(createElement(SatPractice, { topic: SAT_SOLVED, mode: 'mistakes' })), 'card empty'),
+    matOnly: {},
+    satOnly: {},
   },
 ]
 

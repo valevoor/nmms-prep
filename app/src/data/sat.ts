@@ -81,10 +81,19 @@ export interface SatQuestion {
   note?: string
   /** Set once the question is solved. */
   answer?: OptionKey
+  /** Where the answer comes from: the official key, or worked out by us (the papers have no key). */
+  keyFrom?: 'book' | 'solved'
+  /** How to get the answer: the syllabus idea it uses (with its section number), then the steps. */
+  solution?: SatSolution
+}
+
+export interface SatSolution {
+  concept: string
+  steps: string[]
 }
 
 /** The words of a question in one language; maths, labels and picture options are the same in both. */
-export type SatQuestionText = Pick<SatQuestion, 'prompt' | 'table' | 'note' | 'options'>
+export type SatQuestionText = Pick<SatQuestion, 'prompt' | 'table' | 'note' | 'options' | 'solution'>
 
 export interface SatPaper {
   id: string
@@ -127,6 +136,7 @@ export function satQuestionText(p: SatPaper, q: SatQuestion, lang: string): SatQ
     table: kn?.table ?? q.table,
     note: kn?.note ?? q.note,
     options: kn?.options ?? q.options,
+    solution: kn?.solution ?? q.solution,
   }
 }
 
@@ -244,4 +254,9 @@ export function satQuestions(t: SatTopic): PaperQuestionRef[] {
 export function satPastStats(t: SatTopic): { questions: number; years: number; papers: number } {
   const qs = satQuestions(t)
   return { questions: qs.length, years: new Set(qs.map((r) => r.paper.id)).size, papers: SAT_PAPERS.length }
+}
+
+/** A topic's solved questions (the maths so far), which Practice asks one at a time. */
+export function satSolved(t: SatTopic): PaperQuestionRef[] {
+  return satQuestions(t).filter((x) => x.q.answer)
 }

@@ -22,7 +22,8 @@ import { Learn } from './pages/Learn'
 import { paperQuestions } from './data/papers'
 import { getSatTopic } from './data/sat'
 import { SatTopic } from './pages/SatTopic'
-import { SatQuestions } from './pages/SatQuestions'
+import { SatPractice } from './pages/SatPractice'
+import type { SatPracticeMode } from './pages/SatPractice'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
 import { QuickTest } from './pages/QuickTest'
@@ -90,13 +91,18 @@ export default function App() {
   }
   if (kind === 'sat') {
     const satTopic = getSatTopic(topicId)
-    if (!satTopic || parts.length > 3 || (view !== undefined && view !== 'questions')) return <NotFound />
+    if (!satTopic || parts.length > 3) return <NotFound />
     if (!view) return <SatTopic topic={satTopic} />
-    return (
-      <TopicIdContext.Provider value="sat">
-        <SatQuestions topic={satTopic} />
-      </TopicIdContext.Provider>
-    )
+    // "questions" was the old list of past questions, which Practice now asks.
+    if (view === 'practice' || view === 'questions') {
+      const mode: SatPracticeMode = query.get('mode') === 'mistakes' ? 'mistakes' : 'exam'
+      return (
+        <TopicIdContext.Provider value="sat">
+          <SatPractice key={mode} topic={satTopic} mode={mode} />
+        </TopicIdContext.Provider>
+      )
+    }
+    return <NotFound />
   }
   if (!topic) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.

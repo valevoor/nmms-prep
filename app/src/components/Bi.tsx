@@ -3,6 +3,8 @@ import { DICTS, setBoth, useBothAvailable, useBothSetting, useLocale, useShowBot
 import type { Dict, Locale } from '../lib/i18n'
 import { otherLocale } from '../lib/i18n/content'
 
+const plain = (text: string): ReactNode => text
+
 /** Short language tags shown before each version when both are on. */
 const TAGS: Record<Locale, string> = { en: 'EN', kn: 'ಕ' }
 
@@ -21,23 +23,25 @@ interface BlockProps {
   lang: Locale
   otherLang: Locale
   className?: string
+  /** Draws each version's text (e.g. `mathText`); plain text by default. */
+  render?: (text: string) => ReactNode
 }
 
 /** A paragraph in the chosen language, followed by the other language when both are shown. */
-export function BiBlock({ text, other, lang, otherLang, className }: BlockProps) {
+export function BiBlock({ text, other, lang, otherLang, className, render = plain }: BlockProps) {
   if (!other || other === text)
     return (
-      <p className={className}>{text}</p>
+      <p className={className}>{render(text)}</p>
     )
   return (
     <div className="bi">
       <p className={className} lang={lang}>
         <BiTag lang={lang} />
-        {text}
+        {render(text)}
       </p>
       <p className={className} lang={otherLang}>
         <BiTag lang={otherLang} />
-        {other}
+        {render(other)}
       </p>
     </div>
   )
@@ -47,14 +51,14 @@ export function BiBlock({ text, other, lang, otherLang, className }: BlockProps)
  * An answer option's second language: after a dot on the same line for short options ("North · ಉತ್ತರ"),
  * or on its own line under long ones (`stacked`), so a sentence isn't broken in the middle.
  */
-export function BiInline({ first, other, otherLang, stacked }: { first: ReactNode; other?: string; otherLang: Locale; stacked?: boolean }) {
+export function BiInline({ first, other, otherLang, stacked, render = plain }: { first: ReactNode; other?: string; otherLang: Locale; stacked?: boolean; render?: (text: string) => ReactNode }) {
   if (!other) return <>{first}</>
   if (stacked)
     return (
       <>
         {first}
         <span className="bi-inline bi-stacked" lang={otherLang}>
-          {other}
+          {render(other)}
         </span>
       </>
     )
@@ -63,7 +67,7 @@ export function BiInline({ first, other, otherLang, stacked }: { first: ReactNod
       {first}
       {' · '}
       <span className="bi-inline" lang={otherLang}>
-        {other}
+        {render(other)}
       </span>
     </>
   )
