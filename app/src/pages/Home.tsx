@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ChapterArt } from '../components/ChapterArt'
 import { LangSwitch } from '../components/LangSwitch'
 import { Page } from '../components/Page'
@@ -9,6 +10,7 @@ import { useLocale, useT } from '../lib/i18n'
 import { getLastTopic } from '../lib/lastTopic'
 import { summarize, useProgress } from '../lib/progress'
 import { href, useRoute } from '../lib/router'
+import { pastStats } from '../data/papers'
 import { SAT_SUBJECTS, SAT_TOPICS, satQuestionCount, satTopicName } from '../data/sat'
 import type { SatTopic } from '../data/sat'
 import type { Dict } from '../lib/i18n'
@@ -16,10 +18,38 @@ import type { Dict } from '../lib/i18n'
 /** Chapters in book order, not the order they were added. */
 const BY_CHAPTER = [...READY_TOPICS].sort((a, b) => a.chapter - b.chapter)
 
+const PAST = Object.fromEntries(READY_TOPICS.map((t) => [t.id, pastStats(t.id)]))
+
+/** Most past-paper questions first; ties go to the chapter asked in more years, then book order. */
+const BY_ASKED = [...BY_CHAPTER].sort(
+  (a, b) => PAST[b.id].questions - PAST[a.id].questions || PAST[b.id].years - PAST[a.id].years || a.chapter - b.chapter,
+)
+
+type Sort = 'book' | 'asked'
+const SORT_KEY = 'nmms-home-sort'
+
+function getSort(): Sort {
+  try {
+    return localStorage.getItem(SORT_KEY) === 'asked' ? 'asked' : 'book'
+  } catch {
+    // Storage blocked (private mode): book order.
+    return 'book'
+  }
+}
+
+function saveSort(s: Sort) {
+  try {
+    localStorage.setItem(SORT_KEY, s)
+  } catch {
+    // Not saved; Home opens in book order next time.
+  }
+}
+
 function ChapterRow({ t }: { t: ReadyTopic }) {
   const tr = useT()
   const p = useProgress(t.id)
   const s = summarize(p, t.questions.length)
+  const past = PAST[t.id]
   return (
     <li>
       <a className="chapter-row" href={href(`t/${t.id}`)}>
@@ -31,6 +61,11 @@ function ChapterRow({ t }: { t: ReadyTopic }) {
           <span className="meter meter-thin" role="img" aria-label={tr.home.bookCorrect(s.bookMastered, s.bookTotal)}>
             <span className="meter-fill" style={{ width: `${(100 * s.bookMastered) / s.bookTotal}%` }} />
           </span>
+          {past.questions > 0 && (
+            <span className="muted past-line">
+              <Rich parts={tr.home.pastLine(past.questions, past.years, past.papers)} />
+            </span>
+          )}
         </span>
         {p.mistakes.length > 0 && (
           <span className="row-badge" aria-label={tr.home.wrongCount(p.mistakes.length)}>
@@ -42,6 +77,23 @@ function ChapterRow({ t }: { t: ReadyTopic }) {
         </span>
       </a>
     </li>
+  )
+}
+
+function SortSwitch({ sort, onChange }: { sort: Sort; onChange: (s: Sort) => void }) {
+  const t = useT()
+  const options: [Sort, string][] = [
+    ['book', t.home.sortBook],
+    ['asked', t.home.sortMost],
+  ]
+  return (
+    <div className="seg sort-switch" role="group" aria-label={t.home.sortLabel}>
+      {options.map(([id, label]) => (
+        <button key={id} type="button" className={sort === id ? 'on' : undefined} aria-pressed={sort === id} onClick={() => onChange(id)}>
+          {label}
+        </button>
+      ))}
+    </div>
   )
 }
 
@@ -175,6 +227,11 @@ function TestSwitch({ sat }: { sat: boolean }) {
 export function Home() {
   const t = useT()
   const sat = useRoute().query.get('test') === 'sat'
+  const [sort, setSort] = useState(getSort)
+  const changeSort = (s: Sort) => {
+    setSort(s)
+    saveSort(s)
+  }
   return (
     <Page
       title={t.home.title}
@@ -236,8 +293,9 @@ export function Home() {
           </a>
 
           <h2 className="section-title">{t.home.ready}</h2>
+          <SortSwitch sort={sort} onChange={changeSort} />
           <ul className="chapter-list">
-            {BY_CHAPTER.map((x) => (
+            {(sort === 'asked' ? BY_ASKED : BY_CHAPTER).map((x) => (
               <ChapterRow key={x.id} t={x} />
             ))}
           </ul>

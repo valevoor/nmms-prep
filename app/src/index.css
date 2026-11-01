@@ -500,6 +500,32 @@ a {
   display: block;
 }
 
+.past-line {
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.past-line strong {
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.seg.sort-switch {
+  display: flex;
+  margin: 0 0 10px;
+}
+
+.sort-switch button {
+  flex: 1;
+}
+
+.sort-switch button + button {
+  border-left: 1px solid var(--border);
+}
+
 .row-badge {
   min-width: 24px;
   height: 24px;

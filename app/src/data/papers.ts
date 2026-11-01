@@ -57,3 +57,9 @@ export const getPaper = (id: string): PaperFiles | undefined => BY_ID[id]
 export function paperQuestions(topic: string): PaperQuestion[] {
   return PAPER_FILES.flatMap((f) => f.questions.filter((q) => q.topic === topic && q.status !== 'needs-review'))
 }
+
+/** How many of a chapter's questions came in past papers, and in how many of the papers (as `paperQuestions` counts them). */
+export function pastStats(topic: string): { questions: number; years: number; papers: number } {
+  const qs = paperQuestions(topic)
+  return { questions: qs.length, years: new Set(qs.map((q) => q.paper)).size, papers: PAPER_FILES.length }
+}

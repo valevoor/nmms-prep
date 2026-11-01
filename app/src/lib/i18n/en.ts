@@ -140,6 +140,11 @@ export const en = {
     quickTest: '⏱ Quick test',
     classroom: '🧑‍🏫 Classroom',
     retryWrong: (n: number) => `Retry ${n} question${n === 1 ? '' : 's'} you got wrong →`,
+    /** Under a chapter's progress bar; the count (part 1) is highlighted. No-break spaces keep "6 of 6 years" on one line. */
+    pastLine: (n: number, years: number, papers: number): Rich => ['', String(n), ` past question${n === 1 ? '' : 's'} · ${years}\u00a0of\u00a0${papers}\u00a0years`],
+    sortLabel: 'Order of chapters',
+    sortBook: 'Book order',
+    sortMost: 'Most asked',
   },
   /** The SAT (Scholastic Aptitude Test) chapters: Home's SAT tab, #/sat/<chapter> and its past questions. */
   sat: {

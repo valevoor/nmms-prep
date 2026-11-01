@@ -144,6 +144,10 @@ export const kn: Dict = {
     quickTest: '⏱ ತ್ವರಿತ ಪರೀಕ್ಷೆ',
     classroom: '🧑‍🏫 ತರಗತಿ',
     retryWrong: (n) => `ತಪ್ಪಾದ ${n} ಪ್ರಶ್ನೆಗಳನ್ನು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ →`,
+    pastLine: (n, years, papers) => ['ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಳ ', String(n), ` ಪ್ರಶ್ನೆಗಳು · ${papers}\u00a0ರಲ್ಲಿ\u00a0${years}\u00a0ವರ್ಷ`],
+    sortLabel: 'ಅಧ್ಯಾಯಗಳ ಕ್ರಮ',
+    sortBook: 'ಪುಸ್ತಕದ ಕ್ರಮ',
+    sortMost: 'ಹೆಚ್ಚು ಕೇಳಿದವು',
   },
   sat: {
     tabsLabel: 'ಯಾವ ಪರೀಕ್ಷೆ',
