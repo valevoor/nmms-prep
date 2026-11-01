@@ -7,8 +7,8 @@ import { href } from '../lib/router'
 
 /**
  * One SAT topic (#/sat/<id>): a textbook chapter, or a few related ones combined for revision. It shows
- * where to study each chapter in the textbook, what it covers, and Practice, which asks its past exam questions; a topic with solved questions (the maths
- * so far) also shows its progress, as a MAT chapter does.
+ * where to study each chapter in the textbook, what it covers, and Practice, which asks its past exam questions; a topic with solved questions (maths
+ * and science so far) also shows its progress, as a MAT chapter does.
  * An "Old syllabus" or Uncategorized topic has no textbook chapter, so it says why instead.
  */
 export function SatTopic({ topic: t }: { topic: Topic }) {

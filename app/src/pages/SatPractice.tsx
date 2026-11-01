@@ -12,7 +12,7 @@ export type SatPracticeMode = 'exam' | 'mistakes'
 
 /**
  * A SAT topic's past exam questions one at a time (#/sat/<id>/practice), like MAT's Practice: pick an answer to
- * a solved question (the maths so far), see if it's right and how to solve it, then go on. A question without an
+ * a solved question (maths and science so far), see if it's right and how to solve it, then go on. A question without an
  * answer yet is shown as printed, to read and discuss. The Mistakes tab asks again the ones last answered wrong.
  */
 export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPracticeMode }) {

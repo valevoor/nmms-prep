@@ -3,7 +3,7 @@ import type { ReactElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it, vi } from 'vitest'
 import { READY_TOPICS } from './data/topics'
-import { SAT_TOPICS } from './data/sat'
+import { SAT_TOPICS, satSolved } from './data/sat'
 import { Chapter } from './pages/Chapter'
 import { Home } from './pages/Home'
 import { Practice } from './pages/Practice'
@@ -40,9 +40,9 @@ vi.mock('./lib/progress', async (orig) => {
 
 const MAT = READY_TOPICS.find((t) => t.id === 'number-series')!
 const SAT = SAT_TOPICS.find((t) => t.chapters.length === 1)!
-/** A topic whose past questions are solved (the maths so far), so its cards have answer buttons, and one not solved yet. */
+/** A topic whose past questions are solved (maths and science so far), so its cards have answer buttons, and one not solved yet. */
 const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1)!
-const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.subject !== 'maths' && t.chapters.length === 1)!
+const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.chapters.length === 1 && satSolved(t).length === 0)!
 
 function render(el: ReactElement, query = ''): string {
   route.query = query

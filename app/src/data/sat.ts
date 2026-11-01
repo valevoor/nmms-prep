@@ -6,7 +6,7 @@
  * (data/sat/groups.json); every other chapter is a topic on its own. A question under no chapter
  * names the older syllabus's chapter it was asked from (`oldChapter`, data/sat/old-chapters.json); those
  * "Old syllabus" topics follow each subject's textbook topics, and an "Uncategorized" topic holds any
- * question with neither (shown only if there is one). The questions don't have answers yet; tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
+ * question with neither (shown only if there is one). The maths and science questions are solved (checked by tools/check_sat_maths.ts and tools/check_sat_science.ts); tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
  * printed in it, is in data/pyq/*-sat.kn.json (checked by tools/check_i18n.ts).
  */
 import type { OptionKey } from '../types'
@@ -256,7 +256,7 @@ export function satPastStats(t: SatTopic): { questions: number; years: number; p
   return { questions: qs.length, years: new Set(qs.map((r) => r.paper.id)).size, papers: SAT_PAPERS.length }
 }
 
-/** A topic's solved questions (the maths so far), which Practice asks one at a time. */
+/** A topic's solved questions (maths and science so far), which Practice asks one at a time. */
 export function satSolved(t: SatTopic): PaperQuestionRef[] {
   return satQuestions(t).filter((x) => x.q.answer)
 }
