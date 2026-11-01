@@ -96,6 +96,18 @@ import statementsKn from './mat/statements-decisions.kn.json'
 import statements from './mat/statements-decisions.json'
 import statementsMetaKn from './mat/statements-decisions.meta.kn.json'
 import statementsMeta from './mat/statements-decisions.meta.json'
+import superimposeKn from './mat/superimpose-figures.kn.json'
+import superimpose from './mat/superimpose-figures.json'
+import superimposeMetaKn from './mat/superimpose-figures.meta.kn.json'
+import superimposeMeta from './mat/superimpose-figures.meta.json'
+import missingKn from './mat/missing-figures.kn.json'
+import missing from './mat/missing-figures.json'
+import missingMetaKn from './mat/missing-figures.meta.kn.json'
+import missingMeta from './mat/missing-figures.meta.json'
+import miscKn from './mat/miscellaneous.kn.json'
+import misc from './mat/miscellaneous.json'
+import miscMetaKn from './mat/miscellaneous.meta.kn.json'
+import miscMeta from './mat/miscellaneous.meta.json'
 import figNumKn from './mat/figure-numbers.kn.json'
 import figNum from './mat/figure-numbers.json'
 import figNumMetaKn from './mat/figure-numbers.meta.kn.json'
@@ -218,4 +230,7 @@ export const CHAPTER_FILES: ChapterFiles[] = [
   c('arrangement', 'Arrangement', arrangement, arrangementMeta, arrangementKn, arrangementMetaKn),
   c('age-problems', 'Age Problems', age, ageMeta, ageKn, ageMetaKn),
   c('statements-decisions', 'Statements and Decisions', statements, statementsMeta, statementsKn, statementsMetaKn),
+  c('superimpose-figures', 'Superimpose Figures', superimpose, superimposeMeta, superimposeKn, superimposeMetaKn),
+  c('missing-figures', 'Missing Figures', missing, missingMeta, missingKn, missingMetaKn),
+  c('miscellaneous', 'Miscellaneous', misc, miscMeta, miscKn, miscMetaKn),
 ]

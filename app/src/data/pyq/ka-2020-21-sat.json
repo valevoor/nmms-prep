@@ -3,7 +3,7 @@
   "state": "karnataka",
   "year": "2020-21",
   "test": "SAT",
-  "source": "Karnataka NMMS SAT 2020-21 question paper, NMMS-SAT-P2 (K-8) (pyq/NMMSSATQP202021.pdf), English version. The paper has no answer key.",
+  "source": "Karnataka NMMS SAT 2020-21 question paper, NMMS-SAT-P2 (K-8) (pyq/ka-2020-21-sat.pdf), English version. The paper has no answer key.",
   "questions": [
     {"id": "ka21s-01", "paperNo": 1, "subject": "physics", "topic": "sci-7-08-time-and-motion", "sourcePage": 3, "prompt": "The distance-time graph for a uniform motion is :", "options": {"A": "Straight line parallel to x-axis.", "B": "Straight line parallel to y-axis.", "C": "Curved line.", "D": "Straight line making 45° with the x-axis."}},
     {"id": "ka21s-02", "paperNo": 2, "subject": "physics", "topic": "sci-8-04-electricity-effects", "sourcePage": 3, "prompt": "The device which works on the principle of magnetic effect of electric current is :", "options": {"A": "Electric bell", "B": "Electric fuse", "C": "Electric bulb", "D": "Electric coil"}},

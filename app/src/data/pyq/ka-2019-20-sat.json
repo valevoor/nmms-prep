@@ -3,7 +3,7 @@
   "state": "karnataka",
   "year": "2019-20",
   "test": "SAT",
-  "source": "Karnataka NMMS SAT 2019 question paper, NMMS-SAT-P2 (K-8) (pyq/NMMS SAT P-2 K-E QP_3.pdf), English version. The paper numbers its options 1) to 4); here they are A) to D). The paper has no answer key.",
+  "source": "Karnataka NMMS SAT 2019 question paper, NMMS-SAT-P2 (K-8) (pyq/ka-2019-20-sat.pdf), English version. The paper numbers its options 1) to 4); here they are A) to D). The paper has no answer key.",
   "questions": [
     {"id": "ka1920s-01", "paperNo": 1, "subject": "physics", "topic": "sci-7-08-time-and-motion", "sourcePage": 3, "prompt": "The velocity of a car is 18 m s⁻¹. Its velocity in km h⁻¹ is :", "options": {"A": "5 km h⁻¹", "B": "50 km h⁻¹", "C": "64.8 km h⁻¹", "D": "70 km h⁻¹"}},
     {"id": "ka1920s-02", "paperNo": 2, "subject": "physics", "topic": null, "oldChapter": "sound", "sourcePage": 3, "prompt": "The amplitude of a sound wave determines its :", "options": {"A": "Period", "B": "Wavelength", "C": "Frequency", "D": "Volume"}},

@@ -8,7 +8,7 @@ import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { useCountdown } from '../lib/countdown'
 import { paperQuestions } from '../data/papers'
-import { askLabel } from '../data/topics'
+import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useT } from '../lib/i18n'
 import { questionLabel } from '../lib/source'
@@ -19,7 +19,7 @@ const TIME_CHOICES = [30, 60, 90, 120]
 
 export function Classroom({ topic }: { topic: ReadyTopic }) {
   const t = useT()
-  const [source, setSource] = useState<Source>('book')
+  const [source, setSource] = useState<Source>(pastOnly(topic) ? 'exam' : 'book')
   const [fresh, setFresh] = useState<Question[]>(() => (topic.generate ? [topic.generate()] : []))
   // Past-paper questions filed under this chapter; the button only shows when there are some.
   const exam = useMemo(() => paperQuestions(topic.id), [topic.id])
@@ -93,17 +93,21 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
     >
       <div className="class-controls">
         <div className="seg" role="group" aria-label={t.classroom.source}>
-          <button className={source === 'book' ? 'on' : ''} onClick={() => switchSource('book')}>
-            {t.classroom.book}
-          </button>
+          {!pastOnly(topic) && (
+            <button className={source === 'book' ? 'on' : ''} onClick={() => switchSource('book')}>
+              {t.classroom.book}
+            </button>
+          )}
           {exam.length > 0 && (
             <button className={source === 'exam' ? 'on' : ''} onClick={() => switchSource('exam')}>
               {t.practice.exam}
             </button>
           )}
-          <button className={source === 'fresh' ? 'on' : ''} onClick={() => switchSource('fresh')} disabled={!topic.generate}>
-            {t.classroom.fresh}
-          </button>
+          {topic.generate && (
+            <button className={source === 'fresh' ? 'on' : ''} onClick={() => switchSource('fresh')}>
+              {t.classroom.fresh}
+            </button>
+          )}
         </div>
         <label className="time-pick">
           {t.classroom.timePer}

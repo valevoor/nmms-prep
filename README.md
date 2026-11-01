@@ -2,7 +2,7 @@
 
 An offline practice app for the NMMS **Mental Ability Test** (Class 8). The questions come from the KSQAAC "Spardha Yashassu" 2022 study material (`NMMS.pdf`).
 
-**All 38 MAT chapters are covered** (537 book questions). 🖼 marks picture chapters, whose figures are cropped from the PDF.
+**All 38 MAT chapters are covered** (537 book questions). 🖼 marks picture chapters, whose figures are cropped from the PDF. Three chapters are not in the book. Chapter 39, **Superimpose Figures**, holds the past-paper questions that put figures one on top of the other, plus a generator for new ones. Chapter 40, **Missing Figures**, holds the past-paper questions with a part of a figure missing, plus a generator. Chapter 41, **Miscellaneous**, holds the past-paper questions that fit no chapter (work / interest / speed sums, odd word out), so it has no book questions and no generator.
 
 | Ch | Topic | Book questions shown | Answer not from the key | Hidden |
 |---|---|---|---|---|
@@ -44,16 +44,19 @@ An offline practice app for the NMMS **Mental Ability Test** (Class 8). The ques
 | 36 | Arrangement | 12 of 15 | – | 3 |
 | 37 | Age Problems | 8 of 8 | – | – |
 | 38 | Statements and Decisions | 15 of 15 | 2 | – |
+| 39 | Superimpose Figures 🖼 (not in the book) | – (8 past exam questions) | – | – |
+| 40 | Missing Figures 🖼 (not in the book) | – (15 past exam questions) | – | 1 |
+| 41 | Miscellaneous (not in the book) | – (5 past exam questions) | – | – |
 
 - **Every book answer is checked** by an independent rule in `tools/check_<topic>.ts` (`npm run check:content`). The book's keys are incomplete and sometimes wrong. Answers we worked out or corrected are labelled "worked out by us" in the app, with a note saying why.
 - **Hidden** questions (`"status": "needs-review"`) have no right option, or more than one, as printed; each has a note. How each chapter was checked, and what was corrected, is in the `source` field of its `app/src/data/mat/<topic>.json` and in its commit message.
-- **Every chapter has a generator** that makes unlimited new practice questions. Its test checks, by its own independent method, that exactly one option is right, over 1,000+ questions.
+- **Every book chapter has a generator** that makes unlimited new practice questions. Its test checks, by its own independent method, that exactly one option is right, over 1,000+ questions.
 
 ## What's in the app
 
 | Screen | For | What it does |
 |---|---|---|
-| Home | Everyone | A MAT / SAT switch at the top (`#/` and `#/?test=sat`). MAT: a short list of all 38 chapters, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page; a "Shapes and sizes" card opens the Shapes page. SAT: the SAT topics by subject (Maths, Science, Social Science), each row showing its textbook chapters ("Class 7 · Ch 11 + Class 8 · Ch 10") and how many past exam questions it has |
+| Home | Everyone | A MAT / SAT switch at the top (`#/` and `#/?test=sat`). MAT: a short list of all 38 chapters, Superimpose Figures, Missing Figures and Miscellaneous, one row each, with a progress bar and a red badge for questions to retry. A "Continue" card at the top opens the last chapter used on this device, and a "Facts to remember" card below it opens the Facts page; a "Shapes and sizes" card opens the Shapes page. SAT: the SAT topics by subject (Maths, Science, Social Science), each row showing its textbook chapters ("Class 7 · Ch 11 + Class 8 · Ch 10") and how many past exam questions it has |
 | SAT topic | Everyone | `#/sat/<topic-id>`: how many past questions and papers the topic has, a button to its past exam questions (`#/sat/<topic-id>/questions`, shown as printed with their pictures and, in a combined topic, the chapter each comes from), and "Study from the textbook": each chapter's class, number, textbook part and pages, and what it covers. The questions have no answers yet, so SAT chapters have no Practice, Quick test or Classroom yet |
 | Chapter | Everyone | Opened from a Home row: the chapter's intro, progress (book questions, accuracy, best test) and its buttons. Learn is highlighted; Practice, Quick test, Classroom and, where there is one, the game follow |
 | Facts to remember | Students | Things to learn by heart, in three tabs: the primes up to 100 (a 1–100 grid, the look-alikes 51, 57, 87, 91, and the primes in each ten), squares 1–30 and cubes 1–20, each with tricks. The number chapters' pages and their Learn cheat sheets link to it |

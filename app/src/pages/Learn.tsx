@@ -12,6 +12,8 @@ import { SeriesView } from '../components/SeriesView'
 import { TipCard } from '../components/tips/TipCard'
 import { VideoButton } from '../components/VideoButton'
 import { PRIMES } from '../data/facts'
+import { paperQuestions } from '../data/papers'
+import { pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
 import { useQuestionTexts, useTopicMetas } from '../lib/i18n/content'
@@ -76,7 +78,9 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
   const t = useT()
   const lang = useLocale()
   const { first: meta, second, otherLang } = useTopicMetas(topic.id, topic.meta)
-  const examples = meta.workedExamples.map((id) => topic.questions.find((q) => q.id === id)).filter((q): q is Question => !!q)
+  // Worked examples are book questions, or past-paper ones for a chapter without book questions.
+  const pool = pastOnly(topic) ? paperQuestions(topic.id) : topic.questions
+  const examples = meta.workedExamples.map((id) => pool.find((q) => q.id === id)).filter((q): q is Question => !!q)
   return (
     <Page title={t.learn.title(t.chapters[topic.chapter] ?? topic.name)} back="">
       <BiBlock className="lead" text={meta.intro} other={second?.intro} lang={lang} otherLang={otherLang} />

@@ -8,7 +8,7 @@ import { READY_TOPICS, UPCOMING_MAT, getTopic } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
 import { getLastTopic } from '../lib/lastTopic'
-import { summarize, useProgress } from '../lib/progress'
+import { mastery, useProgress } from '../lib/progress'
 import { href, useRoute } from '../lib/router'
 import { pastStats } from '../data/papers'
 import { SAT_SUBJECTS, SAT_TOPICS, satPastStats, satTopicName } from '../data/sat'
@@ -48,7 +48,7 @@ function saveSort(s: Sort) {
 function ChapterRow({ t }: { t: ReadyTopic }) {
   const tr = useT()
   const p = useProgress(t.id)
-  const s = summarize(p, t.questions.length)
+  const m = mastery(p, t)
   const past = PAST[t.id]
   return (
     <li>
@@ -58,8 +58,8 @@ function ChapterRow({ t }: { t: ReadyTopic }) {
           <span className="chapter-row-name">
             <span className="muted">{tr.common.chapterShort(t.chapter)}</span> {tr.chapters[t.chapter] ?? t.name}
           </span>
-          <span className="meter meter-thin" role="img" aria-label={tr.home.bookCorrect(s.bookMastered, s.bookTotal)}>
-            <span className="meter-fill" style={{ width: `${(100 * s.bookMastered) / s.bookTotal}%` }} />
+          <span className="meter meter-thin" role="img" aria-label={m.exam ? tr.home.examCorrect(m.right, m.total) : tr.home.bookCorrect(m.right, m.total)}>
+            <span className="meter-fill" style={{ width: `${m.total ? (100 * m.right) / m.total : 0}%` }} />
           </span>
           {past.questions > 0 && (
             <span className="muted past-line">

@@ -5,7 +5,7 @@ import { useLocale, useT } from '../lib/i18n'
 import { useTopicMetas } from '../lib/i18n/content'
 import { BiBlock } from '../components/Bi'
 import { FACT_CHAPTERS, FACT_TABS } from '../data/facts'
-import { summarize, useProgress } from '../lib/progress'
+import { mastery, summarize, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
 
 /** One chapter's progress and the ways into it (Learn, Practice, Quick test, Classroom, game). */
@@ -15,6 +15,8 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
   const { first: meta, second, otherLang } = useTopicMetas(t.id, t.meta)
   const p = useProgress(t.id)
   const s = summarize(p, t.questions.length)
+  const m = mastery(p, t)
+  const meterLabel = m.exam ? tr.home.examCorrect(m.right, m.total) : tr.home.bookCorrect(m.right, m.total)
   const base = `t/${t.id}`
   const factTab = FACT_CHAPTERS[t.id]
   return (
@@ -28,14 +30,14 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           </div>
         </div>
 
-        <div className="meter" aria-label={tr.home.bookCorrect(s.bookMastered, s.bookTotal)}>
-          <div className="meter-fill" style={{ width: `${(100 * s.bookMastered) / s.bookTotal}%` }} />
+        <div className="meter" aria-label={meterLabel}>
+          <div className="meter-fill" style={{ width: `${m.total ? (100 * m.right) / m.total : 0}%` }} />
         </div>
         <dl className="stats">
           <div>
-            <dt>{tr.home.bookQuestions}</dt>
+            <dt>{m.exam ? tr.home.examQuestions : tr.home.bookQuestions}</dt>
             <dd>
-              {s.bookMastered}/{s.bookTotal}
+              {m.right}/{m.total}
             </dd>
           </div>
           <div>
@@ -52,7 +54,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           <a className="btn btn-primary" href={href(`${base}/learn`)}>
             {tr.home.learn}
           </a>
-          <a className="btn" href={href(`${base}/practice?mode=book`)}>
+          <a className="btn" href={href(`${base}/practice?mode=${m.exam ? 'exam' : 'book'}`)}>
             {tr.home.practice}
           </a>
           <a className="btn" href={href(`${base}/test`)}>

@@ -1,7 +1,7 @@
 /**
  * Past NMMS question papers (data/pyq/<paper>.json). Each question is filed under the chapter it
  * belongs to (`topic`) and shows up in that chapter's Practice, in the "Past exams" tab; a question
- * that fits no chapter (`topic: null`) is kept with its paper but not shown yet. The app's Kannada
+ * that fits no book chapter goes under "miscellaneous" (`topic: null` is kept but not shown). The app's Kannada
  * lookup (lib/i18n/content.ts), tools/check_i18n.ts and tools/check_pyq.ts read this list, and each
  * paper's answers are checked by its own tools/check_pyq_<paper>.ts.
  */

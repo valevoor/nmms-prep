@@ -1,0 +1,28 @@
+{
+  "topic": "superimpose-figures",
+  "intro": "Two or three figures are given. Imagine putting them one on top of the other, like pictures drawn on clear plastic sheets laid on each other. Find the option that shows the figure they make together. Some questions ask you to turn one figure first. These questions are not in the study material, but they come in real exams.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Every line, nothing extra",
+      "body": "The answer has every line of each figure, in the same place, and nothing else. Most wrong options miss one line or add one line."
+    },
+    {
+      "title": "Check one figure at a time",
+      "body": "First check that every line of the first figure is in the option. Then do the same for the second figure. Strike out an option as soon as one line is missing."
+    },
+    {
+      "title": "Look for lines in the wrong place",
+      "body": "A wrong option may have the right number of lines, but one of them slants the other way, starts at a different corner, or the whole second figure is flipped. Compare where each line starts and ends."
+    },
+    {
+      "title": "Count the parts",
+      "body": "Count the lines and circles in each figure and add them. An option with more or fewer parts is wrong. (Two lines that meet in a straight line can look like one long line.)"
+    },
+    {
+      "title": "Turn first, then put together",
+      "body": "If the question says to turn a figure, turn it before you put it on the other. A quarter turn clockwise moves the top to the right, the right to the bottom, and so on. One option is usually the two figures put together without turning: a trap."
+    }
+  ],
+  "workedExamples": ["ka2324m-36", "ka23m-87", "ka2526m-03"]
+}

@@ -5,7 +5,7 @@ import { Options } from '../components/Options'
 import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
 import { paperQuestions } from '../data/papers'
-import { askLabel } from '../data/topics'
+import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useT } from '../lib/i18n'
 import { recordAnswer, useProgress } from '../lib/progress'
@@ -15,8 +15,11 @@ import type { OptionKey, Question } from '../types'
 
 export type PracticeMode = 'book' | 'exam' | 'more' | 'mistakes'
 
-export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMode }) {
+export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: PracticeMode }) {
   const t = useT()
+  // A chapter without book questions opens on its past-exam questions.
+  const mode: PracticeMode = asked === 'book' && pastOnly(topic) ? 'exam' : asked
+  const start = pastOnly(topic) ? 'exam' : 'book'
   const progress = useProgress(topic.id)
   const [extra, setExtra] = useState<Question[]>(() => (mode === 'more' && topic.generate ? [topic.generate()] : []))
   // The mistakes list is frozen at the first answer, so it doesn't shrink under the student mid-session.
@@ -61,13 +64,13 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
   const tabs = useMemo(
     () =>
       (['book', 'exam', 'more', 'mistakes'] as PracticeMode[])
-        .filter((m) => m !== 'exam' || exam.length > 0)
+        .filter((m) => (m === 'exam' ? exam.length > 0 : m === 'book' ? !pastOnly(topic) : m === 'more' ? !!topic.generate : true))
         .map((m) => (
         <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`t/${topic.id}/practice?mode=${m}`)} aria-current={m === mode ? 'page' : undefined}>
           {t.practice[m]}
         </a>
       )),
-    [mode, topic.id, t, exam.length],
+    [mode, topic, t, exam.length],
   )
 
   return (
@@ -80,8 +83,8 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
         <section className="card empty">
           <h3>{t.practice.noMistakes}</h3>
           <p className="muted">{t.practice.noMistakesBody}</p>
-          <a className="btn btn-primary" href={href(`t/${topic.id}/practice?mode=book`)}>
-            {t.practice.practiseBook}
+          <a className="btn btn-primary" href={href(`t/${topic.id}/practice?mode=${start}`)}>
+            {start === 'exam' ? t.practice.exam : t.practice.practiseBook}
           </a>
         </section>
       ) : finished ? (
@@ -106,9 +109,11 @@ export function Practice({ topic, mode }: { topic: ReadyTopic; mode: PracticeMod
                 {mode === 'exam' ? t.practice.examAgain : t.practice.bookAgain}
               </button>
             )}
-            <a className="btn" href={href(`t/${topic.id}/practice?mode=more`)}>
-              {t.practice.moreQuestions}
-            </a>
+            {topic.generate && (
+              <a className="btn" href={href(`t/${topic.id}/practice?mode=more`)}>
+                {t.practice.moreQuestions}
+              </a>
+            )}
             <a className="btn" href={href(`t/${topic.id}/test`)}>
               {t.practice.takeTest}
             </a>

@@ -1,6 +1,6 @@
 {
  "dir": "pyq/ka-2020-21-sat",
- "pdf": "pyq/NMMSSATQP202021.pdf",
+ "pdf": "pyq/ka-2020-21-sat.pdf",
  "bands": [
   {"page": 12, "rects": [[40, 148, 290, 294]], "names": ["q35"], "trim": true},
   {"page": 19, "rects": [[60, 256, 290, 478]], "names": ["q56"], "trim": true},

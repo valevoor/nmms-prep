@@ -1,0 +1,5 @@
+{
+  "topic": "missing-figures",
+  "source": "Not in the study material. This chapter has no book questions: it shows the past-paper questions with a part of a figure missing, filed under \"missing-figures\" in data/pyq/*-mat.json, and new ones from lib/generators/missingPart.ts.",
+  "questions": []
+}

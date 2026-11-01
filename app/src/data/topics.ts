@@ -36,6 +36,12 @@ import ageProblems from './mat/age-problems.json'
 import ageProblemsMeta from './mat/age-problems.meta.json'
 import statements from './mat/statements-decisions.json'
 import statementsMeta from './mat/statements-decisions.meta.json'
+import superimpose from './mat/superimpose-figures.json'
+import superimposeMeta from './mat/superimpose-figures.meta.json'
+import missingFigures from './mat/missing-figures.json'
+import missingFiguresMeta from './mat/missing-figures.meta.json'
+import misc from './mat/miscellaneous.json'
+import miscMeta from './mat/miscellaneous.meta.json'
 import signsMeta from './mat/signs-symbols.meta.json'
 import intersecting from './mat/intersecting-figures.json'
 import intersectingMeta from './mat/intersecting-figures.meta.json'
@@ -85,6 +91,8 @@ import { generateHiddenFigure } from '../lib/generators/hiddenFigures'
 import { generateSimilarFigure } from '../lib/generators/similarFigures'
 import { generateCoding } from '../lib/generators/coding'
 import { generateDirections } from '../lib/generators/directions'
+import { generateSuperimpose } from '../lib/generators/superimpose'
+import { generateMissingPart } from '../lib/generators/missingPart'
 import { generateNumberPatterns } from '../lib/generators/numberPatterns'
 import { generateLetterNumber } from '../lib/generators/letterNumber'
 import { generateLetterSeries } from '../lib/generators/letterSeries'
@@ -121,7 +129,7 @@ export interface ReadyTopic {
   questions: Question[]
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
-  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched' | 'mirror' | 'water' | 'group'
+  missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched' | 'mirror' | 'water' | 'group' | 'superimposed' | 'part'
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -501,6 +509,38 @@ export const READY_TOPICS: ReadyTopic[] = [
     missing: 'answer',
     generate: generateStatements,
   },
+  {
+    // Not in the book, but past papers ask it. It has no book questions, so its pages use the
+    // past-paper questions (see `pastOnly`) and its generator.
+    id: 'superimpose-figures',
+    chapter: 39,
+    name: 'Superimpose Figures',
+    questions: superimpose.questions as Question[],
+    meta: superimposeMeta as TopicMeta,
+    missing: 'superimposed',
+    generate: generateSuperimpose,
+  },
+  {
+    // Not in the book, but past papers ask it: a figure with one part missing. It has no book
+    // questions, so its pages use the past-paper questions (see `pastOnly`) and its generator.
+    id: 'missing-figures',
+    chapter: 40,
+    name: 'Missing Figures',
+    questions: missingFigures.questions as Question[],
+    meta: missingFiguresMeta as TopicMeta,
+    missing: 'part',
+    generate: generateMissingPart,
+  },
+  {
+    // Not in the book: past-paper questions that fit no book chapter. It has no book questions and
+    // no generator, so its pages use the past-paper questions instead (see `pastOnly`).
+    id: 'miscellaneous',
+    chapter: 41,
+    name: 'Miscellaneous',
+    questions: misc.questions as Question[],
+    meta: miscMeta as TopicMeta,
+    missing: 'answer',
+  },
 ]
 
 /** MAT chapters from the study material that are not built yet (shown as "coming soon"). */
@@ -527,9 +567,14 @@ export function askLabel(t: Dict, topic: ReadyTopic): string {
     mirror: t.common.findMirror,
     water: t.common.findWater,
     group: t.common.findGroup,
+    superimposed: t.common.findSuperimposed,
+    part: t.common.findPart,
   }
   return labels[topic.missing ?? 'number']
 }
+
+/** A chapter with no book questions (Superimpose Figures, Missing Figures, Miscellaneous): Practice, Quick test and Classroom use its past-paper questions. */
+export const pastOnly = (topic: ReadyTopic): boolean => topic.questions.length === 0
 
 export function getTopic(id: string): ReadyTopic | undefined {
   return READY_TOPICS.find((t) => t.id === id)

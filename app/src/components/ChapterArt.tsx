@@ -364,6 +364,36 @@ const ART: Record<number, ReactNode> = {
       <path d="M33 12l4 4 8-9" className="art-accent" style={{ fill: 'none' }} strokeWidth={3} />
     </>
   ),
+  // Superimpose Figures: two framed figures, the second laid over the first
+  39: (
+    <>
+      <rect x={4} y={4} width={26} height={26} rx={2} />
+      <path d="M4 30L30 4" />
+      <rect x={18} y={18} width={26} height={26} rx={2} className="art-accent" style={{ fill: 'none' }} />
+      <path d="M18 31h26M31 18v26" className="art-accent" />
+    </>
+  ),
+  // Missing Figures: a square in quarters, three drawn alike and the fourth left blank
+  40: (
+    <>
+      <rect x={5} y={5} width={38} height={38} rx={2} />
+      <path d="M24 5v38M5 24h38M5 5l19 19M43 5L24 24M5 43l19-19" />
+      <text x={33.5} y={40} textAnchor="middle" className="art-text art-fill-accent">
+        ?
+      </text>
+    </>
+  ),
+  // Miscellaneous: a mix of shapes and a question mark
+  41: (
+    <>
+      <rect x={5} y={5} width={16} height={16} rx={2} />
+      <circle cx={35} cy={13} r={8} />
+      <path d="M13 27l9 16H4z" />
+      <text x={35} y={44} textAnchor="middle" className="art-text art-fill-accent">
+        ?
+      </text>
+    </>
+  ),
 }
 
 /** Shown for chapters without a drawing yet: a puzzle piece. */

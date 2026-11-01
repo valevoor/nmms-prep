@@ -3,7 +3,7 @@
   "state": "karnataka",
   "year": "2025-26",
   "test": "SAT",
-  "source": "Karnataka NMMS SAT 2025-26 question paper, NMMS-SAT (K-8) P-2 (pyq/SAT_PAPER-2_2025-26-compressed_1791787977.pdf), English version, read from the scanned pages. The paper has no answer key.",
+  "source": "Karnataka NMMS SAT 2025-26 question paper, NMMS-SAT (K-8) P-2 (pyq/ka-2025-26-sat.pdf), English version, read from the scanned pages. The paper has no answer key.",
   "questions": [
     {"id": "ka2526s-01", "paperNo": 1, "subject": "physics", "topic": "sci-8-05-exploring-forces", "sourcePage": 3, "prompt": "A ball which is on the ground, when pushed, moves some distance and then comes to rest. The force responsible for this is :", "options": {"A": "Muscular force", "B": "Frictional force", "C": "Equilibrium force", "D": "Magnetic force"}},
     {"id": "ka2526s-02", "paperNo": 2, "subject": "physics", "topic": "sci-8-05-exploring-forces", "sourcePage": 3, "prompt": "The shape of an aeroplane helps it to :", "options": {"A": "Fly up to greater heights", "B": "Adjust the acceleration accordingly", "C": "Move by overcoming the friction of the air", "D": "Avoid any kind of accident"}},

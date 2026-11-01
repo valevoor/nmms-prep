@@ -3,7 +3,7 @@
   "state": "karnataka",
   "year": "2024-25",
   "test": "SAT",
-  "source": "Karnataka NMMS SAT 2024-25 question paper, NMMS-SAT (K-8) P-2 (pyq/SAT_PAPER-2_2024-25-compressed_1791787977.pdf), English version, read from the scanned pages. The paper has no answer key.",
+  "source": "Karnataka NMMS SAT 2024-25 question paper, NMMS-SAT (K-8) P-2 (pyq/ka-2024-25-sat.pdf), English version, read from the scanned pages. The paper has no answer key.",
   "questions": [
     {"id": "ka2425s-01", "paperNo": 1, "subject": "physics", "topic": "sci-8-06-pressure-winds-cyclones", "sourcePage": 3, "prompt": "Force applied per unit area is termed :", "options": {"A": "Acceleration", "B": "Pressure", "C": "Gravitation", "D": "Friction"}},
     {"id": "ka2425s-02", "paperNo": 2, "subject": "physics", "topic": "sci-7-08-time-and-motion", "sourcePage": 3, "prompt": "Observe the given distance-time graph. The distance covered by the train at 9:30 AM is :", "figure": "figures/pyq/ka-2024-25-sat/q02.png", "options": {"A": "150 km", "B": "185 km", "C": "200 km", "D": "175 km"}},

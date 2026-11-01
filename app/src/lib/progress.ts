@@ -1,5 +1,8 @@
 import { useSyncExternalStore } from 'react'
 import { get, set } from 'idb-keyval'
+import { paperQuestions } from '../data/papers'
+import { pastOnly } from '../data/topics'
+import type { ReadyTopic } from '../data/topics'
 import type { Question } from '../types'
 
 export interface Attempt {
@@ -109,6 +112,19 @@ export function useProgress(topic: string): TopicProgress {
     },
     () => cache.get(topic) ?? EMPTY,
   )
+}
+
+/**
+ * The chapter's progress bar: book questions right the last time they were answered, or past-paper
+ * ones for a chapter without book questions (`exam`).
+ */
+export function mastery(p: TopicProgress, topic: ReadyTopic): { right: number; total: number; exam: boolean } {
+  if (!pastOnly(topic)) {
+    const right = Object.values(p.attempts).filter((a) => a.lastCorrect).length
+    return { right, total: topic.questions.length, exam: false }
+  }
+  const qs = paperQuestions(topic.id)
+  return { right: qs.filter((q) => p.exam[q.id]?.lastCorrect).length, total: qs.length, exam: true }
 }
 
 export function summarize(p: TopicProgress, bookTotal: number) {

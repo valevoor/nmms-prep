@@ -153,6 +153,10 @@ export type PatternId =
   | 'grid-flip'
   // Hidden figures (Chapter 3)
   | 'fig-hidden'
+  // Superimpose figures (not in the book)
+  | 'fig-superimpose'
+  // Missing figures (not in the book)
+  | 'fig-missing-part'
   // Intersecting figures (Chapter 5)
   | 'venn-count'
   | 'venn-part'

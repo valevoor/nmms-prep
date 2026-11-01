@@ -3,7 +3,7 @@
   "state": "karnataka",
   "year": "2022-23",
   "test": "SAT",
-  "source": "Karnataka NMMS SAT 2022-23 question paper, NMMS-SAT (K-8) P-2 (pyq/NMMS-SAT(K-8)P-2.pdf), English version, read from the printed pages. The paper has no answer key.",
+  "source": "Karnataka NMMS SAT 2022-23 question paper, NMMS-SAT (K-8) P-2 (pyq/ka-2022-23-sat.pdf), English version, read from the printed pages. The paper has no answer key.",
   "questions": [
     {"id": "ka2223s-01", "paperNo": 1, "subject": "physics", "topic": "sci-7-07-heat-transfer-water-cycle", "sourcePage": 3, "prompt": "Mahesh holds one end of an iron wire in his hand and the other end in a flame. After a few seconds he feels the heat and lets go of the iron wire. The phenomenon responsible for this is :", "options": {"A": "Convection", "B": "Conduction", "C": "Radiation", "D": "Insulation"}},
     {"id": "ka2223s-02", "paperNo": 2, "subject": "physics", "topic": "sci-7-03-electricity-circuits", "sourcePage": 3, "prompt": "In the given circuit, the order in which the bulbs A, B, C, D will glow when the switch is moved to “ON” is :", "figure": "figures/pyq/ka-2022-23-sat/q02.png", "options": {"A": "in the order ABDC", "B": "in the order ACDB", "C": "in the order CABD", "D": "all of A, B, C, D at the same time"}},

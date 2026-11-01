@@ -1,0 +1,28 @@
+{
+  "topic": "missing-figures",
+  "intro": "A figure is given with one part left blank, marked ?. Find the option that completes it. The parts of the figure repeat: each one is the one next to it turned round, or its mirror image. These questions are not in the study material, but they come in real exams.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Find how the parts repeat",
+      "body": "Compare the parts you can see. Usually each part is the one before it turned a quarter turn, or the part across from it turned half round, or the mirror image of the part beside it. Once you know which, you know what the missing part must look like."
+    },
+    {
+      "title": "Turned or flipped?",
+      "body": "If the figure looks the same when you turn the page round, the missing part is the part opposite it, turned half round. If the left and right halves are mirror images, the missing part is the part beside it, flipped. Check with two parts you can see before you trust it."
+    },
+    {
+      "title": "Carry the lines on",
+      "body": "Lines that run up to the edge of the gap must carry on inside the missing part. An option whose lines do not meet them at the edge is wrong."
+    },
+    {
+      "title": "Watch for the turned-wrong trap",
+      "body": "Most wrong options have the right lines but turned the wrong way or flipped. Pick one line that touches a corner and check that it touches the same corner in the option."
+    },
+    {
+      "title": "Count, then compare",
+      "body": "Count the lines, curves and dots in a part you can see. An option with one more or one fewer is wrong. Then compare the rest, one line at a time."
+    }
+  ],
+  "workedExamples": ["ka1920m-76", "ka23m-66", "ka2324m-67"]
+}

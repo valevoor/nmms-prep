@@ -1,0 +1,20 @@
+{
+  "topic": "miscellaneous",
+  "intro": "Past exam questions that the study material has no chapter for: short sums on work, interest and speed, and picking the odd word out. There are no book questions here, only real exam questions.",
+  "cheatSheet": "none",
+  "tips": [
+    {
+      "title": "Work, interest and speed",
+      "body": "Work together: add the part of the work each one does in a day (1/6 + 1/12 = 1/4, so 4 days). Simple interest: an amount doubles when the interest reaches 100%. Speed: change every speed to the same unit before comparing (1 m/second = 3.6 km/hr)."
+    },
+    {
+      "title": "Odd word out: ask what each one is for",
+      "body": "Think of where each thing is used or what it does. A bus, a car and a van go on roads; a boat goes on water."
+    }
+  ],
+  "workedExamples": [
+    "ka23m-53",
+    "ka23m-55",
+    "ka1920m-19"
+  ]
+}

@@ -7,7 +7,8 @@ import { Rich } from '../components/Rich'
 import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { mmss, useCountdown } from '../lib/countdown'
-import { askLabel } from '../data/topics'
+import { paperQuestions } from '../data/papers'
+import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { DICTS, useLocale, useShowBoth, useT } from '../lib/i18n'
 import type { Locale } from '../lib/i18n'
@@ -23,7 +24,8 @@ const SECONDS = 15 * 60
 
 function buildTest(topic: ReadyTopic): Question[] {
   const shuffle = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, q) => p[0] - q[0]).map(([, x]) => x)
-  const book = shuffle(topic.questions).slice(0, topic.generate ? BOOK_SHARE : TOTAL)
+  // A chapter without book questions is tested on its past-exam questions.
+  const book = shuffle(pastOnly(topic) ? paperQuestions(topic.id) : topic.questions).slice(0, topic.generate ? BOOK_SHARE : TOTAL)
   const fresh = topic.generate ? Array.from({ length: TOTAL - book.length }, () => topic.generate!()) : []
   return shuffle([...book, ...fresh])
 }
