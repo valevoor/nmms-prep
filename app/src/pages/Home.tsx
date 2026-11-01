@@ -11,7 +11,7 @@ import { getLastTopic } from '../lib/lastTopic'
 import { summarize, useProgress } from '../lib/progress'
 import { href, useRoute } from '../lib/router'
 import { pastStats } from '../data/papers'
-import { SAT_SUBJECTS, SAT_TOPICS, satQuestionCount, satTopicName } from '../data/sat'
+import { SAT_SUBJECTS, SAT_TOPICS, satPastStats, satTopicName } from '../data/sat'
 import type { SatTopic } from '../data/sat'
 import type { Dict } from '../lib/i18n'
 
@@ -136,16 +136,16 @@ function chapterRefs(t: Dict, topic: SatTopic): string {
 function SatRow({ topic }: { topic: SatTopic }) {
   const t = useT()
   const lang = useLocale()
-  const n = satQuestionCount(topic)
+  const past = SAT_PAST[topic.id]
   return (
     <li>
       <a className="chapter-row sat-row" href={href(`sat/${topic.id}`)}>
         <span className="chapter-row-main">
           <span className="chapter-row-name">{satTopicName(topic, lang)}</span>
           <span className="muted sat-row-refs">{chapterRefs(t, topic)}</span>
-        </span>
-        <span className="q-badge" aria-label={t.sat.qCountLabel(n)}>
-          {t.sat.qCount(n)}
+          <span className="muted past-line">
+            <Rich parts={t.home.pastLine(past.questions, past.years, past.papers)} />
+          </span>
         </span>
         <span className="chapter-row-go" aria-hidden>
           →
@@ -153,6 +153,20 @@ function SatRow({ topic }: { topic: SatTopic }) {
       </a>
     </li>
   )
+}
+
+const SAT_PAST = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satPastStats(x)]))
+
+/**
+ * A subject's topics in the chosen order. Most asked sorts the textbook topics by past-paper questions (ties: more
+ * years, then textbook order); the old-syllabus and Uncategorized topics stay at the end, as they aren't in the textbooks.
+ */
+function subjectTopics(subject: string, sort: Sort): SatTopic[] {
+  const list = SAT_TOPICS.filter((x) => x.subject === subject)
+  if (sort === 'book') return list
+  const textbook = list.filter((x) => x.chapters.length > 0)
+  const asked = [...textbook].sort((a, b) => SAT_PAST[b.id].questions - SAT_PAST[a.id].questions || SAT_PAST[b.id].years - SAT_PAST[a.id].years)
+  return [...asked, ...list.filter((x) => x.chapters.length === 0)]
 }
 
 /** Scrolls a subject's section to just below the sticky top bar (its height changes with the screen width). */
@@ -164,7 +178,7 @@ function scrollToSubject(subject: string) {
 }
 
 /** Home's SAT tab: the topics (chapters, some combined) that past papers asked about, by subject. */
-function SatHome() {
+function SatHome({ sort, onSort }: { sort: Sort; onSort: (s: Sort) => void }) {
   const t = useT()
   return (
     <>
@@ -190,8 +204,9 @@ function SatHome() {
           ))}
         </nav>
       </section>
+      <SortSwitch sort={sort} onChange={onSort} />
       {SAT_SUBJECTS.map((s) => {
-        const list = SAT_TOPICS.filter((x) => x.subject === s)
+        const list = subjectTopics(s, sort)
         return (
           <section key={s} id={`sat-${s}`}>
             <h2 className="section-title">
@@ -244,7 +259,7 @@ export function Home() {
     >
       <TestSwitch sat={sat} />
       {sat ? (
-        <SatHome />
+        <SatHome sort={sort} onSort={changeSort} />
       ) : (
         <>
           <section className="hero">

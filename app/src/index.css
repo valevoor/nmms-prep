@@ -4378,22 +4378,11 @@ kbd {
 }
 
 .sat-row {
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
 }
 
 .sat-row .chapter-row-go {
   grid-column: auto;
-}
-
-.q-badge {
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--surface-2);
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
 }
 
 .topic-card .sat-actions {

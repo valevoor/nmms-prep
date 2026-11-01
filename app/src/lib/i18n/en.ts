@@ -173,8 +173,6 @@ export const en = {
     chapterTitle: (cls: number, no: number) => `Class ${cls} · Chapter ${no}`,
     fromChapter: (cls: number, subject: string, no: number) => `Class ${cls} ${subject} · Ch ${no}`,
     chip: (cls: number, subject: string, no: number) => `Class ${cls} · ${subject} · Chapter ${no}`,
-    qCount: (n: number) => `${n} Q`,
-    qCountLabel: (n: number) => `${n} past exam question${n === 1 ? '' : 's'}`,
     book: (cls: number, subject: string, part: number, a: number, b: number) => `Class ${cls} ${subject} textbook, Part ${part}, pages ${a}–${b}`,
     pastQuestions: '📝 Past exam questions',
     pastSummary: (n: number, papers: number) => `${n} question${n === 1 ? '' : 's'} from ${papers} Karnataka SAT paper${papers === 1 ? '' : 's'}`,

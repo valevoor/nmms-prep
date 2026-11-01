@@ -174,8 +174,6 @@ export const kn: Dict = {
     chapterTitle: (cls, no) => `${cls}ನೇ ತರಗತಿ · ಅಧ್ಯಾಯ ${no}`,
     fromChapter: (cls, subject, no) => `${cls}ನೇ ತರಗತಿ ${subject} · ಅ. ${no}`,
     chip: (cls, subject, no) => `${cls}ನೇ ತರಗತಿ · ${subject} · ಅಧ್ಯಾಯ ${no}`,
-    qCount: (n) => `${n} ಪ್ರ.`,
-    qCountLabel: (n) => `ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಳ ${n} ಪ್ರಶ್ನೆಗಳು`,
     book: (cls, subject, part, a, b) => `${cls}ನೇ ತರಗತಿ ${subject} ಪಠ್ಯಪುಸ್ತಕ, ಭಾಗ ${part}, ಪುಟ ${a}–${b}`,
     pastQuestions: '📝 ಹಿಂದಿನ ಪರೀಕ್ಷೆಗಳ ಪ್ರಶ್ನೆಗಳು',
     pastSummary: (n, papers) => `ಕರ್ನಾಟಕದ ${papers} SAT ಪತ್ರಿಕೆಗಳಿಂದ ${n} ಪ್ರಶ್ನೆಗಳು`,

@@ -240,8 +240,8 @@ export function satQuestions(t: SatTopic): PaperQuestionRef[] {
   return SAT_PAPERS.flatMap((p) => p.questions.filter((q) => q.topic && chapters.has(q.topic)).map((q) => ({ paper: p, q, chapter: chapters.get(q.topic!)! })))
 }
 
-const COUNTS = new Map<string, number>()
-for (const p of SAT_PAPERS) for (const q of p.questions) if (q.topic) COUNTS.set(q.topic, (COUNTS.get(q.topic) ?? 0) + 1)
-
-export const satQuestionCount = (t: SatTopic) =>
-  t.chapters.length === 0 ? satQuestions(t).length : t.chapters.reduce((n, c) => n + (COUNTS.get(c.id) ?? 0), 0)
+/** How many of a topic's questions came in past papers, and in how many of the papers. */
+export function satPastStats(t: SatTopic): { questions: number; years: number; papers: number } {
+  const qs = satQuestions(t)
+  return { questions: qs.length, years: new Set(qs.map((r) => r.paper.id)).size, papers: SAT_PAPERS.length }
+}
