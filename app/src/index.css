@@ -4580,3 +4580,16 @@ kbd {
   min-width: 0;
   overflow-wrap: anywhere;
 }
+
+/* Home: the link to the About page, under both tabs. */
+.about-link {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.about-link a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+}

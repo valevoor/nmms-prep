@@ -1,13 +1,29 @@
 /// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import type { Plugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+
+/**
+ * GitHub Pages and the build's preview answer /about/ with public/about/index.html, but the dev server
+ * answers any folder path with the app. Without this the landing page can't open on the dev server.
+ */
+const aboutInDev: Plugin = {
+  name: 'about-in-dev',
+  configureServer(server) {
+    server.middlewares.use((req, _res, next) => {
+      if (req.url?.split('?')[0] === '/about/') req.url = '/about/index.html'
+      next()
+    })
+  },
+}
 
 // https://vite.dev/config/
 export default defineConfig({
   // Relative base so the build works from any folder (GitHub Pages, a school server, a USB stick).
   base: './',
   plugins: [
+    aboutInDev,
     react(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -15,7 +31,7 @@ export default defineConfig({
       manifest: {
         name: 'NMMS Prep: Mental Ability',
         short_name: 'NMMS Prep',
-        description: 'Offline practice for the NMMS Mental Ability Test (Class 8).',
+        description: 'Free offline practice for the NMMS MAT and SAT papers (Class 8).',
         start_url: './',
         scope: './',
         display: 'standalone',

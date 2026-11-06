@@ -348,6 +348,10 @@ export function Home() {
           <p className="footnote muted">{t.home.footnote}</p>
         </>
       )}
+      {/* A real page, not a hash route, so that Google can index it (public/about/index.html). */}
+      <p className="about-link">
+        <a href="./about/">{t.home.about}</a>
+      </p>
     </Page>
   )
 }
