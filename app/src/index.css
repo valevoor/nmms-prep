@@ -1353,6 +1353,7 @@ a {
 .tip p {
   margin: 6px 0 0;
   color: var(--muted);
+  white-space: pre-line;
 }
 
 /* ---------- tip visuals (components/tips) ---------- */

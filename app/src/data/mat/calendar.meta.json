@@ -14,16 +14,20 @@
       "body": "Count 0 = Sunday, 1 = Monday, 2 = Tuesday … 6 = Saturday. Then \"5 odd days from the start\" means Friday."
     },
     {
+      "title": "What is a leap year?",
+      "body": "An ordinary year has 365 days. A leap year has 366, because February gets one extra day: 29 February. So 2023 had 365 days and 2024 had 366."
+    },
+    {
+      "title": "Is it a leap year?",
+      "body": "Check in this order:\n1. If the year divides by 4, it may be a leap year.\n2. But if it also divides by 100, it is not a leap year.\n3. But if it also divides by 400, it is a leap year.\n\nExamples:\n2024: leap year (divides by 4, not by 100)\n2023: not a leap year (doesn't divide by 4)\n1900: not a leap year (divides by 100, not by 400)\n2000: leap year (divides by 400)"
+    },
+    {
       "title": "Month odd days",
       "body": "A 31-day month has 3 odd days, a 30-day month 2, and February 0 (or 1 in a leap year)."
     },
     {
       "title": "Year odd days",
       "body": "An ordinary year has 1 odd day and a leap year 2. 100 years have 5, 200 years 3, 300 years 1 and 400 years 0."
-    },
-    {
-      "title": "Leap years",
-      "body": "A year is a leap year if it divides by 4, but a century year (like 1900) only if it divides by 400. So 2000 was a leap year and 1900 wasn't."
     },
     {
       "title": "Counting days between dates",
