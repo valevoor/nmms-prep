@@ -1,8 +1,8 @@
 /**
  * Builds app/src/data/sat/chapters.json, the SAT chapters the app shows, from the syllabus files in
- * sat-syllabus/ (chapter ID, number, part, title, pages, sub-discipline and topic aliases). Every maths chapter
- * is kept, because each has a revision sheet (data/satRevise.ts); of the other subjects, only chapters that
- * past-paper questions are filed under (data/pyq/*-sat.json, `topic`) are kept.
+ * sat-syllabus/ (chapter ID, number, part, title, pages, sub-discipline and topic aliases). Every maths and
+ * science chapter is kept, because each has a revision sheet (data/satRevise.ts); of social science, only
+ * chapters that past-paper questions are filed under (data/pyq/*-sat.json, `topic`) are kept.
  * Run from app/ after adding a SAT paper or changing a question's chapter:  npx tsx ../tools/build_sat_chapters.ts
  */
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -110,6 +110,6 @@ if (unknown.length) {
 }
 
 const order: Subject[] = ['maths', 'science', 'social']
-const kept = chapters.filter((c) => used.has(c.id) || c.subject === 'maths').sort((a, b) => order.indexOf(a.subject) - order.indexOf(b.subject) || a.cls - b.cls || a.no - b.no)
+const kept = chapters.filter((c) => used.has(c.id) || c.subject !== 'social').sort((a, b) => order.indexOf(a.subject) - order.indexOf(b.subject) || a.cls - b.cls || a.no - b.no)
 writeFileSync(OUT, `${JSON.stringify(kept, null, 1)}\n`)
 console.log(`${kept.length} of ${chapters.length} chapters kept → ${OUT}`)

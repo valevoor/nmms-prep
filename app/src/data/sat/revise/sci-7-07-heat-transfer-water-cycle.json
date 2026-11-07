@@ -1,0 +1,236 @@
+{
+ "chapter": "sci-7-07-heat-transfer-water-cycle",
+ "terms": [
+  {
+   "id": "conduction",
+   "term": "Conduction",
+   "meaning": "Heat passes from a hotter part of an object to a colder part, while the particles stay in their places.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "convection",
+   "term": "Convection",
+   "meaning": "Heat moves in liquids and gases because the heated particles themselves move.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "radiation",
+   "term": "Radiation",
+   "meaning": "Heat travels from a hot body without needing any material in between.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "insulator",
+   "term": "Poor conductor (insulator) of heat",
+   "meaning": "A material that does not let heat pass through it easily.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "infiltration",
+   "term": "Infiltration",
+   "meaning": "Rainwater seeping down through soil and rocks into the ground.",
+   "pages": [
+    12
+   ]
+  },
+  {
+   "id": "groundwater",
+   "term": "Groundwater",
+   "meaning": "Water stored in the spaces between underground sediments and rocks.",
+   "pages": [
+    12
+   ]
+  },
+  {
+   "id": "aquifer",
+   "term": "Aquifer",
+   "meaning": "An underground layer of sediments and rocks that holds water.",
+   "pages": [
+    12
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "solids",
+   "title": "Conduction in daily life",
+   "items": [
+    {
+     "id": "pins",
+     "name": "Pins on a heated strip",
+     "formula": "Pins stuck with wax fall one by one, starting nearest the flame.",
+     "example": "Heat reaches the nearest pin first and the farthest pin last.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "utensil",
+     "name": "Pots and handles",
+     "formula": "Good conductors for the pot, poor conductors for the handle.",
+     "example": "A steel pan with a wooden handle.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "air",
+     "name": "Air as an insulator",
+     "formula": "Trapped air slows down heat.",
+     "example": "Two thin blankets together are warmer than one thick blanket, because of the air layer between them.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "walls",
+     "name": "Walls that keep heat",
+     "formula": "Hollow bricks, or double walls filled with mud and cow dung, keep houses comfortable.",
+     "example": "Some Himalayan homes use double wooden walls filled this way.",
+     "pages": [
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fluids",
+   "title": "Convection and breezes",
+   "items": [
+    {
+     "id": "hotair",
+     "name": "Heated air",
+     "formula": "Air expands, gets lighter and rises.",
+     "example": "Smoke detectors go on the ceiling because smoke rises with hot air.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "hotwater",
+     "name": "Heated water",
+     "formula": "Warm water rises and cooler water sinks to take its place.",
+     "example": "A grain of potassium permanganate shows a rising coloured streak.",
+     "pages": [
+      5
+     ]
+    },
+    {
+     "id": "landwater",
+     "name": "Land and water",
+     "formula": "Land heats up faster than water, and also cools down faster.",
+     "example": "A bowl of soil warms up quicker in the Sun than a bowl of water.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "seabreeze",
+     "name": "Sea breeze (day)",
+     "formula": "Warm air over land rises, and cooler air moves from sea to land.",
+     "example": "Coastal houses have windows facing the sea.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "landbreeze",
+     "name": "Land breeze (night)",
+     "formula": "Warm air over the sea rises, and cooler air moves from land to sea.",
+     "example": "At night the land has cooled but the sea is still warm.",
+     "pages": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rad",
+   "title": "Radiation",
+   "items": [
+    {
+     "id": "clothes",
+     "name": "Colour of clothes",
+     "formula": "Light colours reflect most of the heat. Dark colours absorb more.",
+     "example": "White in summer, dark in winter.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "allthree",
+     "name": "All three together",
+     "formula": "Conduction through the pan, convection in the water, radiation around the flame.",
+     "example": "A pan of water on a fire uses all three. So does a Himalayan bukhari stove.",
+     "pages": [
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "title": "The water cycle",
+   "items": [
+    {
+     "id": "cycle",
+     "name": "Stages of the water cycle",
+     "formula": "Evaporation and transpiration → Condensation → Precipitation",
+     "example": "Water rises as vapour, forms clouds, and falls as rain, snow or hail.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "seepage",
+     "name": "Which soil lets water through fastest?",
+     "formula": "Gravel > Sand > Clay",
+     "example": "Gravel has wide open spaces, and clay has only tiny ones.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "deplete",
+     "name": "Why groundwater runs low",
+     "formula": "Too much pumping, fewer plants, and concrete surfaces that stop water soaking in.",
+     "example": "A paved city yard lets less rain into the ground.",
+     "pages": [
+      12
+     ]
+    },
+    {
+     "id": "recharge",
+     "name": "Refilling groundwater",
+     "formula": "Rainwater harvesting and recharge pits.",
+     "example": "Ice stupas in Ladakh store winter water as ice, which melts slowly for irrigation.",
+     "pages": [
+      13
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "breeze",
+   "text": "A breeze is named after where it comes from. A sea breeze blows from the sea towards the land."
+  },
+  {
+   "id": "move",
+   "text": "In conduction the particles stay in place. In convection they move."
+  },
+  {
+   "id": "medium",
+   "text": "Radiation does not need air or any other material. The Sun’s heat reaches us through empty space."
+  }
+ ]
+}

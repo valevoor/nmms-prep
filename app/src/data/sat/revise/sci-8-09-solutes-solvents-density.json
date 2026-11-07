@@ -1,0 +1,227 @@
+{
+ "chapter": "sci-8-09-solutes-solvents-density",
+ "terms": [
+  {
+   "id": "solution",
+   "term": "Solution",
+   "meaning": "A uniform mixture of two or more substances.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "solute",
+   "term": "Solute",
+   "meaning": "The solid that dissolves, or the liquid in smaller amount.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "solvent",
+   "term": "Solvent",
+   "meaning": "The liquid that a solid dissolves in, or the liquid in larger amount.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "saturated",
+   "term": "Saturated solution",
+   "meaning": "No more solute can dissolve at that temperature.",
+   "pages": [
+    22
+   ]
+  },
+  {
+   "id": "unsaturated",
+   "term": "Unsaturated solution",
+   "meaning": "More solute can still dissolve at that temperature.",
+   "pages": [
+    22
+   ]
+  },
+  {
+   "id": "solubility",
+   "term": "Solubility",
+   "meaning": "The most solute that can dissolve in a fixed amount, 100 mL, at a given temperature.",
+   "pages": [
+    22
+   ]
+  },
+  {
+   "id": "density",
+   "term": "Density",
+   "meaning": "The mass in a unit volume of a substance.",
+   "pages": [
+    25
+   ]
+  },
+  {
+   "id": "meniscus",
+   "term": "Meniscus",
+   "meaning": "The curved surface of a liquid in a measuring cylinder.",
+   "pages": [
+    29
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "solutions",
+   "title": "Solutions",
+   "items": [
+    {
+     "id": "syrup",
+     "name": "Which part is the solvent?",
+     "formula": "In a solid dissolved in a liquid, the liquid is always the solvent.",
+     "example": "In thick sugar syrup, water is still the solvent, though there is more sugar.",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "airsolv",
+     "name": "Air as a solution",
+     "formula": "Nitrogen is the solvent. Oxygen, argon and carbon dioxide are solutes.",
+     "example": "Nitrogen is present in the largest amount.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "soltemp",
+     "name": "Temperature and solids",
+     "formula": "Solids generally dissolve more as temperature rises.",
+     "example": "A saturated sugar solution becomes unsaturated when heated.",
+     "pages": [
+      23
+     ]
+    },
+    {
+     "id": "gastemp",
+     "name": "Temperature and gases",
+     "formula": "Gases dissolve less as temperature rises.",
+     "example": "Warm water holds less oxygen, which is hard on fish.",
+     "pages": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "id": "densityg",
+   "title": "Density",
+   "items": [
+    {
+     "id": "formula",
+     "name": "Formula for density",
+     "formula": "Density = Mass ÷ Volume",
+     "example": "54 g of aluminium with volume 20 cm³: 54 ÷ 20 = 2.7 g/cm³",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "unit",
+     "name": "Units of density",
+     "formula": "SI unit: kg/m³. In the lab: g/cm³. Water is about 1 g/cm³.",
+     "example": "1 g/cm³ = 1000 kg/m³",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "relative",
+     "name": "Relative density",
+     "formula": "Density of the substance ÷ Density of water. It has no unit.",
+     "example": "Aluminium: 2.7 ÷ 1 = 2.7",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "floatsink",
+     "name": "Floating and sinking",
+     "formula": "Less dense than water: floats. More dense: sinks.",
+     "example": "Oil and wood float. Iron and stone sink.",
+     "pages": [
+      24
+     ]
+    },
+    {
+     "id": "layers",
+     "name": "Layers of the Earth",
+     "formula": "Arranged by density, with the lightest crust on top and the densest core at the centre.",
+     "example": "Crust → Mantle → Core",
+     "pages": [
+      32
+     ]
+    },
+    {
+     "id": "displacement",
+     "name": "Volume of a stone",
+     "formula": "Volume = Final level − Initial level in a measuring cylinder.",
+     "example": "65 mL − 50 mL = 15 mL, so the stone’s volume is 15 cm³.",
+     "pages": [
+      31
+     ]
+    },
+    {
+     "id": "readmen",
+     "name": "Reading a measuring cylinder",
+     "formula": "Water and clear liquids: read the bottom of the curve. Coloured liquids: read the top.",
+     "example": "Keep your eye level with the mark.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "heatden",
+     "name": "Heating and density",
+     "formula": "Heating generally makes a substance expand, so its density falls.",
+     "example": "This is why hot air rises in a hot air balloon.",
+     "pages": [
+      32
+     ]
+    },
+    {
+     "id": "water4",
+     "name": "Water at 4 °C",
+     "formula": "Water is densest at 4 °C. Ice is less dense, so it floats.",
+     "example": "The ice on a frozen lake keeps the water below it liquid for the fish.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "pressden",
+     "name": "Pressure and density",
+     "formula": "Pressure raises the density of a gas greatly, but it has little effect on liquids and solids.",
+     "example": "Air can be squeezed into a small tyre.",
+     "pages": [
+      25
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "gassol",
+   "text": "Heat helps solids to dissolve but makes gases dissolve less. Do not use one rule for both."
+  },
+  {
+   "id": "rdunit",
+   "text": "Relative density has no unit, because it is a ratio."
+  },
+  {
+   "id": "heavy",
+   "text": "A big object is not always denser. A heavy log floats while a small iron nail sinks."
+  },
+  {
+   "id": "cold",
+   "text": "Water does not get steadily denser all the way down to freezing. Below 4 °C its density falls."
+  }
+ ]
+}

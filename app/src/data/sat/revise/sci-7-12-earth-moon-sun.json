@@ -1,0 +1,235 @@
+{
+ "chapter": "sci-7-12-earth-moon-sun",
+ "terms": [
+  {
+   "id": "rotation",
+   "term": "Rotation",
+   "meaning": "The Earth spinning on its own axis, once in about 24 hours.",
+   "pages": [
+    83
+   ]
+  },
+  {
+   "id": "revolution",
+   "term": "Revolution",
+   "meaning": "The Earth going around the Sun, once in nearly 1 year.",
+   "pages": [
+    88
+   ]
+  },
+  {
+   "id": "axis",
+   "term": "Axis of rotation",
+   "meaning": "The imaginary line through the North and South Poles on which the Earth spins.",
+   "pages": [
+    83
+   ]
+  },
+  {
+   "id": "solar",
+   "term": "Solar eclipse",
+   "meaning": "The Moon comes between the Sun and the Earth, and its shadow falls on the Earth.",
+   "pages": [
+    92
+   ]
+  },
+  {
+   "id": "lunar",
+   "term": "Lunar eclipse",
+   "meaning": "The Earth comes between the Sun and the Moon, and its shadow falls on the Moon.",
+   "pages": [
+    94
+   ]
+  },
+  {
+   "id": "polestar",
+   "term": "Pole Star",
+   "meaning": "The star that seems to stay still, because the Earth’s axis points almost at it.",
+   "pages": [
+    86
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "rot",
+   "title": "Effects of rotation",
+   "items": [
+    {
+     "id": "direction",
+     "name": "Direction of rotation",
+     "formula": "West to East, so anti-clockwise as seen from above the North Pole.",
+     "example": "Assam sees sunrise before Gujarat.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "daynight",
+     "name": "Day and night",
+     "formula": "The half facing the Sun has day and the other half has night.",
+     "example": "When it is day in India, it is night in the USA.",
+     "pages": [
+      84
+     ]
+    },
+    {
+     "id": "apparent",
+     "name": "Motion of the Sun and stars",
+     "formula": "They only seem to move from East to West, because the Earth turns.",
+     "example": "It is like trees seeming to move past a merry-go-round.",
+     "pages": [
+      82
+     ]
+    },
+    {
+     "id": "foucault",
+     "name": "Foucault pendulum",
+     "formula": "A long heavy pendulum that first showed the Earth’s rotation directly.",
+     "example": "One hangs in the new Parliament building in New Delhi.",
+     "pages": [
+      85
+     ]
+    },
+    {
+     "id": "aryabhata",
+     "name": "Aryabhata’s boat",
+     "formula": "A person in a moving boat sees the shore move back. In the same way, the stars seem to move west.",
+     "example": "He wrote this in the Aryabhatiya.",
+     "pages": [
+      87
+     ]
+    }
+   ]
+  },
+  {
+   "id": "seasons",
+   "title": "Revolution and seasons",
+   "items": [
+    {
+     "id": "year",
+     "name": "Time for one revolution",
+     "formula": "About 365 days and 6 hours.",
+     "example": "Four such years make about one extra day: 4 × 6 = 24 hours.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "cause",
+     "name": "Why seasons happen",
+     "formula": "The tilt of the Earth’s axis, and the Earth’s round shape.",
+     "example": "The tilt stays in the same direction all through the orbit.",
+     "pages": [
+      89
+     ]
+    },
+    {
+     "id": "june",
+     "name": "June in India",
+     "formula": "Tilted towards the Sun: rays are more direct, days are longer, and it is summer.",
+     "example": "The longest day in the north is around 21 June.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "december",
+     "name": "December in India",
+     "formula": "Tilted away from the Sun: rays spread out, days are shorter, and it is winter.",
+     "example": "The shortest day in the north is around 22 December.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "opposite",
+     "name": "Seasons in the two halves",
+     "formula": "They are opposite in the Northern and Southern Hemispheres.",
+     "example": "December is winter in India and summer in Australia.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "equinox",
+     "name": "Equal day and night",
+     "formula": "Around 21 March and 23 September, day and night are about 12 hours each everywhere.",
+     "example": "Neither pole is tilted towards the Sun.",
+     "pages": [
+      91
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eclipse",
+   "title": "Eclipses",
+   "items": [
+    {
+     "id": "apparent2",
+     "name": "Why the Moon can cover the Sun",
+     "formula": "The Moon is much smaller but much closer, so they look about the same size.",
+     "example": "Your thumb can hide a far-off tree.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "orders",
+     "name": "Order in a line",
+     "formula": "Solar: Sun, Moon, Earth. Lunar: Sun, Earth, Moon.",
+     "example": "The body in the middle casts the shadow.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "safety",
+     "name": "Watching a solar eclipse",
+     "formula": "Never look with bare eyes, sunglasses or binoculars. Use eclipse goggles or project the image.",
+     "example": "A lunar eclipse is safe to watch with bare eyes.",
+     "pages": [
+      95
+     ]
+    },
+    {
+     "id": "redmoon",
+     "name": "Total lunar eclipse",
+     "formula": "The whole Moon enters the Earth’s shadow and looks dark red.",
+     "example": "It can be seen from a large part of the Earth.",
+     "pages": [
+      95
+     ]
+    },
+    {
+     "id": "transit",
+     "name": "Transit of Venus",
+     "formula": "Venus crosses the Sun as a tiny black dot.",
+     "example": "It is much bigger than the Moon but so far away that it can never block the Sun.",
+     "pages": [
+      92
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "closer",
+   "text": "Seasons do not happen because the Earth gets closer to the Sun. The Earth is in fact closest in January, which is winter in India."
+  },
+  {
+   "id": "sunmove",
+   "text": "The Sun does not really rise and set. The Earth’s rotation makes it look that way."
+  },
+  {
+   "id": "rr",
+   "text": "Rotation gives day and night. Revolution with the tilt gives the seasons."
+  },
+  {
+   "id": "eclipses",
+   "text": "In a solar eclipse the Moon’s shadow falls on Earth. In a lunar eclipse the Earth’s shadow falls on the Moon."
+  }
+ ]
+}

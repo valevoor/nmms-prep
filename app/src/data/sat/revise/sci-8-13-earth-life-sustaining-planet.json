@@ -1,0 +1,225 @@
+{
+ "chapter": "sci-8-13-earth-life-sustaining-planet",
+ "terms": [
+  {
+   "id": "habitable",
+   "term": "Habitable zone",
+   "meaning": "The distance from the Sun at which water can stay liquid. It is also called the Goldilocks zone.",
+   "pages": [
+    100
+   ]
+  },
+  {
+   "id": "greenhouse",
+   "term": "Greenhouse effect",
+   "meaning": "Gases such as carbon dioxide trap heat from the Earth’s surface and keep the planet warm.",
+   "pages": [
+    99
+   ]
+  },
+  {
+   "id": "ozone",
+   "term": "Ozone layer",
+   "meaning": "A layer in the atmosphere that stops harmful ultraviolet rays.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "biosphere",
+   "term": "Biosphere",
+   "meaning": "All living things, interacting with the air, water and land.",
+   "pages": [
+    104
+   ]
+  },
+  {
+   "id": "asexual",
+   "term": "Asexual reproduction",
+   "meaning": "Reproduction from a single parent, giving copies of it.",
+   "pages": [
+    105
+   ]
+  },
+  {
+   "id": "gamete",
+   "term": "Gamete",
+   "meaning": "A reproductive cell that carries half of the parent’s genetic material.",
+   "pages": [
+    106
+   ]
+  },
+  {
+   "id": "zygote",
+   "term": "Zygote",
+   "meaning": "The cell formed when male and female gametes join at fertilisation.",
+   "pages": [
+    107
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "why",
+   "title": "Why the Earth supports life",
+   "items": [
+    {
+     "id": "venus",
+     "name": "Hottest planet",
+     "formula": "Venus, at about 450 °C, because its thick carbon dioxide atmosphere traps heat.",
+     "example": "Earth’s average is about 15 °C.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "gravity",
+     "name": "Size and gravity",
+     "formula": "Earth’s gravity holds the atmosphere without crushing living things.",
+     "example": "Mercury and Mars are too small to hold much atmosphere.",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "shield",
+     "name": "Magnetic field",
+     "formula": "It shields the Earth from high-energy particles.",
+     "example": "These particles would otherwise harm life.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "spheres",
+     "name": "Four spheres",
+     "formula": "Atmosphere, hydrosphere, geosphere and biosphere work together.",
+     "example": "Water covers about 70% of the surface, so about 30% is land.",
+     "pages": [
+      103
+     ]
+    }
+   ]
+  },
+  {
+   "id": "repro",
+   "title": "Reproduction",
+   "items": [
+    {
+     "id": "vegetative",
+     "name": "Vegetative propagation",
+     "formula": "New plants grow from roots, stems or leaves.",
+     "example": "Potato eyes, ginger buds and Bryophyllum leaves.",
+     "pages": [
+      105
+     ]
+    },
+    {
+     "id": "fission",
+     "name": "Simple animals and microbes",
+     "formula": "Amoeba and bacteria divide in two. Hydra forms buds. Planaria regrows from a piece.",
+     "example": "All of these need just one parent.",
+     "pages": [
+      106
+     ]
+    },
+    {
+     "id": "halfgenes",
+     "name": "Why gametes carry half",
+     "formula": "So the zygote has a complete set of genes, half from each parent.",
+     "example": "This is why siblings differ a little.",
+     "pages": [
+      106
+     ]
+    },
+    {
+     "id": "flower",
+     "name": "Parts of a flower",
+     "formula": "Male: anther with pollen, on a filament. Female: stigma, style and ovary.",
+     "example": "The ovary holds the ovules.",
+     "pages": [
+      107
+     ]
+    },
+    {
+     "id": "pollination",
+     "name": "Pollination and fertilisation",
+     "formula": "Pollen moves from anther to stigma. Then gametes join in the ovule.",
+     "example": "The ovule becomes a seed and the ovary becomes a fruit.",
+     "pages": [
+      107
+     ]
+    },
+    {
+     "id": "animals",
+     "name": "Young in different animals",
+     "formula": "Fish and frogs: outside the body, in water. Birds and reptiles: lay shelled eggs. Mammals: develop inside the mother.",
+     "example": "A hen lays eggs, while a cow gives birth to a calf.",
+     "pages": [
+      107
+     ]
+    }
+   ]
+  },
+  {
+   "id": "threats",
+   "title": "Threats to life",
+   "items": [
+    {
+     "id": "climate",
+     "name": "Climate change",
+     "formula": "Burning fossil fuels adds greenhouse gases and warms the planet.",
+     "example": "Ice caps melt and sea levels rise.",
+     "pages": [
+      108
+     ]
+    },
+    {
+     "id": "biodiv",
+     "name": "Biodiversity loss and pollution",
+     "formula": "Habitat loss and polluted air, water and soil harm life.",
+     "example": "Plastic waste and factory waste harm rivers.",
+     "pages": [
+      108
+     ]
+    },
+    {
+     "id": "montreal",
+     "name": "Montreal Protocol",
+     "formula": "A 1987 agreement to phase out the chemicals that damage the ozone layer.",
+     "example": "It targeted chlorofluorocarbons (CFCs).",
+     "pages": [
+      109
+     ]
+    },
+    {
+     "id": "paris",
+     "name": "Paris Agreement",
+     "formula": "A 2015 agreement that countries would cut greenhouse gases to limit warming.",
+     "example": "Its goal is to keep warming below 1.5 °C.",
+     "pages": [
+      109
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "glass",
+   "text": "A greenhouse gas does not work like a glasshouse, which traps warm air. The gas absorbs heat radiated by the Earth."
+  },
+  {
+   "id": "allgh",
+   "text": "The greenhouse effect is not all bad. Without it the Earth would be frozen."
+  },
+  {
+   "id": "mercury",
+   "text": "The planet nearest the Sun is not the hottest. Venus is hotter than Mercury."
+  },
+  {
+   "id": "seedfruit",
+   "text": "The ovule becomes the seed and the ovary becomes the fruit. Do not swap them."
+  }
+ ]
+}

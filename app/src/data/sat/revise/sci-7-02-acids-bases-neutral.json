@@ -1,0 +1,270 @@
+{
+ "chapter": "sci-7-02-acids-bases-neutral",
+ "terms": [
+  {
+   "id": "indicator",
+   "term": "Acid-base indicator",
+   "meaning": "A substance that shows different colours in acidic and basic solutions.",
+   "pages": [
+    10
+   ]
+  },
+  {
+   "id": "acidic",
+   "term": "Acidic substance",
+   "meaning": "Turns blue litmus red. Usually tastes sour.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "basic",
+   "term": "Basic substance",
+   "meaning": "Turns red litmus blue. Usually tastes bitter and feels soapy.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "neutral",
+   "term": "Neutral substance",
+   "meaning": "Neither acidic nor basic. It changes neither red nor blue litmus.",
+   "pages": [
+    7
+   ]
+  },
+  {
+   "id": "lichen",
+   "term": "Lichen",
+   "meaning": "A fungus and an alga living together on rocks and trees. Litmus is extracted from it.",
+   "pages": [
+    10
+   ]
+  },
+  {
+   "id": "olfactory",
+   "term": "Olfactory indicator",
+   "meaning": "A substance whose smell changes in an acidic or basic medium.",
+   "pages": [
+    16
+   ]
+  },
+  {
+   "id": "neutralisation",
+   "term": "Neutralisation",
+   "meaning": "The reaction in which an acid and a base cancel each other out.",
+   "pages": [
+    18
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "indicators",
+   "title": "Colours of indicators",
+   "items": [
+    {
+     "id": "litmus",
+     "name": "Litmus test",
+     "formula": "Acid: blue → red. Base: red → blue. Neutral: no change in either.",
+     "example": "Lemon juice turns blue litmus red. Soap solution turns red litmus blue. Sugar solution changes neither.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "rose",
+     "name": "Red rose extract",
+     "formula": "Acid: a shade of red. Base: a shade of green.",
+     "example": "Vinegar makes the extract red. Baking soda solution makes it green.",
+     "pages": [
+      13
+     ]
+    },
+    {
+     "id": "turmeric",
+     "name": "Turmeric",
+     "formula": "Base: yellow → red. Acid and neutral: stays yellow.",
+     "example": "A yellow curry stain turns red when washed with soap.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "otherplants",
+     "name": "Other plant indicators",
+     "formula": "Extracts of many coloured plant parts also act as indicators.",
+     "example": "Beetroot, purple cabbage, jamun and red hibiscus.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "onion",
+     "name": "Onion as a smell test",
+     "formula": "A cloth kept with onion keeps its smell in acid and loses it in base.",
+     "example": "Useful for a person who cannot see the colour change.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "hydrangea",
+     "name": "Hydrangea flowers",
+     "formula": "Flower colour shows the soil: blue in acidic soil, pink or red in basic soil.",
+     "example": "The same plant can change colour when moved to different soil.",
+     "pages": [
+      14
+     ]
+    }
+   ]
+  },
+  {
+   "id": "foodacids",
+   "title": "Acids in food and stings",
+   "items": [
+    {
+     "id": "citric",
+     "name": "Lemon and orange",
+     "formula": "Citric acid",
+     "example": "Both taste sour because of this acid.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "tartaric",
+     "name": "Tamarind",
+     "formula": "Tartaric acid",
+     "example": "Tamarind water turns blue litmus red.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "lactic",
+     "name": "Curd",
+     "formula": "Lactic acid",
+     "example": "Curd tastes sour while milk does not. Page 11 asks you to find this one out.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "acetic",
+     "name": "Vinegar",
+     "formula": "Acetic acid",
+     "example": "Vinegar turns blue litmus red. Page 11 asks you to find this one out.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "ascorbic",
+     "name": "Amla",
+     "formula": "Ascorbic acid (vitamin C) and citric acid",
+     "example": "A sour fruit that is also rich in vitamin C.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "oxalic",
+     "name": "Tomato",
+     "formula": "Citric acid and oxalic acid",
+     "example": "A tomato tastes sour because of these acids.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "formic",
+     "name": "Red ant bite",
+     "formula": "Formic acid",
+     "example": "The acid in the bite causes the stinging pain.",
+     "pages": [
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neutral",
+   "title": "Neutralisation in daily life",
+   "items": [
+    {
+     "id": "equation",
+     "name": "The neutralisation reaction",
+     "formula": "Acid + Base → Salt + Water + Heat",
+     "example": "Mix lemon juice and lime water in the right amount: the mixture is neither acidic nor basic, and it warms up.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "limewater",
+     "name": "Lime water",
+     "formula": "A solution of calcium hydroxide, made by mixing lime (chuna) in water and filtering.",
+     "example": "It is basic. It has nothing to do with the lime fruit.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "antbite",
+     "name": "Treating an ant bite",
+     "formula": "Rub on a mild base to neutralise the acid.",
+     "example": "Moist baking soda on a red ant bite.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "soil",
+     "name": "Treating soil",
+     "formula": "Too acidic: add lime. Too basic: add organic matter such as manure.",
+     "example": "A farmer uses lime on soil made acidic by too much chemical fertiliser.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "factory",
+     "name": "Treating factory waste",
+     "formula": "Add basic substances to acidic waste before it reaches a lake or river.",
+     "example": "This protects the fish in the lake.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "pcray",
+     "name": "Father of modern Indian chemistry",
+     "formula": "Acharya Prafulla Chandra Ray, who founded Bengal Chemicals and Pharmaceuticals.",
+     "example": "He also wrote on the history of chemistry in India.",
+     "pages": [
+      17
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "turmeric",
+   "text": "Turmeric staying yellow does not prove a solution is acidic. It stays yellow in neutral solutions too."
+  },
+  {
+   "id": "bitter",
+   "text": "Not everything bitter is a base. Bitter gourd tastes bitter but is not basic."
+  },
+  {
+   "id": "limes",
+   "text": "Lime water comes from chuna, not from lime fruit. Lime water is basic, while lime fruit is acidic."
+  },
+  {
+   "id": "taste",
+   "text": "Never taste an unknown substance to test it. Use an indicator."
+  }
+ ]
+}

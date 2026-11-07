@@ -1,0 +1,243 @@
+{
+ "chapter": "sci-7-05-changes-physical-chemical",
+ "terms": [
+  {
+   "id": "physical",
+   "term": "Physical change",
+   "meaning": "Only properties such as shape, size or state change, and no new substance forms.",
+   "pages": [
+    59
+   ]
+  },
+  {
+   "id": "chemical",
+   "term": "Chemical change",
+   "meaning": "One or more new substances form through a chemical reaction.",
+   "pages": [
+    59
+   ]
+  },
+  {
+   "id": "combustion",
+   "term": "Combustion",
+   "meaning": "A substance reacts with oxygen and gives out heat, light or both.",
+   "pages": [
+    62
+   ]
+  },
+  {
+   "id": "ignition",
+   "term": "Ignition temperature",
+   "meaning": "The lowest temperature at which a substance catches fire.",
+   "pages": [
+    64
+   ]
+  },
+  {
+   "id": "weathering",
+   "term": "Weathering",
+   "meaning": "Physical and chemical changes that slowly break rocks down, leading to soil.",
+   "pages": [
+    67
+   ]
+  },
+  {
+   "id": "erosion",
+   "term": "Erosion",
+   "meaning": "Flowing water and wind carry soil and rock pieces away. It is a physical change.",
+   "pages": [
+    68
+   ]
+  },
+  {
+   "id": "biolum",
+   "term": "Bioluminescence",
+   "meaning": "Light made by a chemical change in a living thing, with no heat.",
+   "pages": [
+    63
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "reactions",
+   "title": "Reactions to know",
+   "items": [
+    {
+     "id": "limewater",
+     "name": "Lime water test",
+     "formula": "Lime water + Carbon dioxide → Calcium carbonate + Water",
+     "example": "Blow your breath into lime water through a straw and it turns milky.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "fizz",
+     "name": "Vinegar and baking soda",
+     "formula": "Vinegar + Baking soda → Carbon dioxide + Other substances",
+     "example": "The mixture fizzes, and the gas turns lime water milky.",
+     "pages": [
+      61
+     ]
+    },
+    {
+     "id": "burnmg",
+     "name": "Burning magnesium",
+     "formula": "Magnesium + Oxygen → Magnesium oxide + Heat + Light",
+     "example": "A white powder is left behind.",
+     "pages": [
+      62
+     ]
+    },
+    {
+     "id": "rustchem",
+     "name": "Rusting as a chemical change",
+     "formula": "Iron + moist air → rust, a new brown substance.",
+     "example": "Rust is not iron any more, so a new substance has formed.",
+     "pages": [
+      62
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fire",
+   "title": "Fire",
+   "items": [
+    {
+     "id": "triangle",
+     "name": "Fire triangle",
+     "formula": "Fuel + Oxygen + Heat. Remove any one and the fire stops.",
+     "example": "Water cools a fire below the ignition temperature of the fuel.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "tumbler",
+     "name": "Candle under a tumbler",
+     "formula": "The flame goes out when the oxygen inside is used up.",
+     "example": "This shows that burning needs oxygen.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "blanket",
+     "name": "Clothes on fire",
+     "formula": "Wrap the person in a thick woollen or cotton blanket to cut off the air.",
+     "example": "Do not use synthetic cloth, because it melts and sticks to the skin.",
+     "pages": [
+      63
+     ]
+    },
+    {
+     "id": "lens",
+     "name": "Burning paper with a lens",
+     "formula": "Focused sunlight heats paper up to its ignition temperature.",
+     "example": "No flame touches the paper, yet it catches fire.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "candle",
+     "name": "Burning candle",
+     "formula": "Physical: wax melts and turns to vapour. Chemical: the wax vapour burns.",
+     "example": "One process can have both kinds of change.",
+     "pages": [
+      63
+     ]
+    },
+    {
+     "id": "firefly",
+     "name": "Fireflies",
+     "formula": "A chemical change gives them light without heat.",
+     "example": "This is why a firefly’s glow does not burn it.",
+     "pages": [
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "title": "Kinds of change",
+   "items": [
+    {
+     "id": "reversible",
+     "name": "Reversible changes",
+     "formula": "The original can be brought back.",
+     "example": "Melting ice, dissolving sugar, folding a handkerchief.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "irreversible",
+     "name": "Irreversible changes",
+     "formula": "The original cannot be brought back. This includes chemical changes and some physical ones.",
+     "example": "Curdling milk and burning wood. Tearing paper too.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "desirable",
+     "name": "Desirable changes",
+     "formula": "Changes that we want.",
+     "example": "Milk into curd, ripening fruit, waste into compost.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "undesirable",
+     "name": "Undesirable changes",
+     "formula": "Changes that we do not want.",
+     "example": "Rusting, stored food going bad, and pollution from burning fuels.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "basalt",
+     "name": "Chemical weathering of rock",
+     "formula": "Black basalt contains iron and slowly forms a red layer of iron oxide.",
+     "example": "Water and air do this over a long time.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "physweather",
+     "name": "Physical weathering of rock",
+     "formula": "Temperature changes, tree roots and freezing water crack rocks into smaller pieces.",
+     "example": "Water that freezes in a crack pushes the rock apart.",
+     "pages": [
+      67
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "physrev",
+   "text": "Not every physical change can be reversed. Torn paper is a physical change that cannot be undone."
+  },
+  {
+   "id": "dissolve",
+   "text": "Dissolving sugar in water is a physical change, because no new substance forms."
+  },
+  {
+   "id": "weather",
+   "text": "Weathering is both physical and chemical, but erosion is physical only."
+  },
+  {
+   "id": "limefruit",
+   "text": "Vinegar with common salt gives no carbon dioxide. Lime water stays clear, so do not expect fizzing with every mixture."
+  }
+ ]
+}

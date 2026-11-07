@@ -1,0 +1,208 @@
+{
+ "chapter": "sci-8-04-electricity-effects",
+ "terms": [
+  {
+   "id": "magnetic",
+   "term": "Magnetic effect of current",
+   "meaning": "A current in a wire produces a magnetic field around it.",
+   "pages": [
+    48
+   ]
+  },
+  {
+   "id": "electromagnet",
+   "term": "Electromagnet",
+   "meaning": "A current-carrying coil that behaves as a magnet.",
+   "pages": [
+    50
+   ]
+  },
+  {
+   "id": "heating",
+   "term": "Heating effect of current",
+   "meaning": "A conductor produces heat when current flows through it.",
+   "pages": [
+    54
+   ]
+  },
+  {
+   "id": "electrode",
+   "term": "Electrodes",
+   "meaning": "The two plates of different metals in a cell.",
+   "pages": [
+    55
+   ]
+  },
+  {
+   "id": "electrolyte",
+   "term": "Electrolyte",
+   "meaning": "The liquid or paste in a cell that reacts with the electrodes.",
+   "pages": [
+    55
+   ]
+  },
+  {
+   "id": "nichrome",
+   "term": "Nichrome",
+   "meaning": "An alloy used as heating wire, because it gets very hot when current flows.",
+   "pages": [
+    52
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "magnets",
+   "title": "Magnetic effect",
+   "items": [
+    {
+     "id": "oersted",
+     "name": "Oersted’s discovery",
+     "formula": "A compass needle moves when current flows in a wire nearby, and goes back when it stops.",
+     "example": "The needle turns as soon as the switch is ON.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "stronger",
+     "name": "Making an electromagnet stronger",
+     "formula": "More current, more turns of wire, and an iron core.",
+     "example": "A coil with an iron nail attracts many more paper clips.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "poles",
+     "name": "Poles of an electromagnet",
+     "formula": "Reversing the current swaps the north and south poles.",
+     "example": "Swap the battery connections and a compass needle swings the other way.",
+     "pages": [
+      51
+     ]
+    },
+    {
+     "id": "uses",
+     "name": "Uses of electromagnets",
+     "formula": "They can be switched on and off.",
+     "example": "Cranes lift scrap iron with the current ON and drop it when OFF. Electric bells use them too.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "earthfield",
+     "name": "Earth’s magnetic field",
+     "formula": "Comes from moving liquid iron in the outer core.",
+     "example": "It shields us from harmful particles from space and guides some migrating birds.",
+     "pages": [
+      51
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heat",
+   "title": "Heating effect",
+   "items": [
+    {
+     "id": "factors",
+     "name": "What changes the heat",
+     "formula": "Material, thickness and length of the wire, the current, and how long it flows.",
+     "example": "Two cells warm a wire more than one cell.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "appliances",
+     "name": "Appliances that use heating",
+     "formula": "Electric iron, room heater, kettle, geyser and hair dryer.",
+     "example": "An incandescent bulb glows because its filament gets very hot.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "overheat",
+     "name": "Danger of overheating",
+     "formula": "It can melt plastic parts and start fires. Safety devices in house circuits reduce this.",
+     "example": "Use wires of the right rating.",
+     "pages": [
+      54
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cells",
+   "title": "Cells and batteries",
+   "items": [
+    {
+     "id": "voltaic",
+     "name": "Voltaic cell",
+     "formula": "Two different metals in an electrolyte: a chemical reaction gives current.",
+     "example": "Zinc and copper in lemon juice can light an LED.",
+     "pages": [
+      55
+     ]
+    },
+    {
+     "id": "galvani",
+     "name": "Galvani and Volta",
+     "formula": "Galvani saw a dead frog’s leg kick. Volta showed that the current came from the metals and the liquid.",
+     "example": "The cell is named after them.",
+     "pages": [
+      55
+     ]
+    },
+    {
+     "id": "dry",
+     "name": "Dry cell",
+     "formula": "The electrolyte is a moist paste. Zinc case: negative. Carbon rod: positive.",
+     "example": "It does not spill, so it is easy to carry.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "recharge",
+     "name": "Rechargeable batteries",
+     "formula": "A current from outside reverses the chemical reactions, so they can be used again.",
+     "example": "Lithium-ion batteries in phones and lead-acid batteries in cars.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "ewaste",
+     "name": "Throwing away batteries",
+     "formula": "Used batteries harm the environment, so they should be recycled as e-waste.",
+     "example": "Do not put them in ordinary rubbish.",
+     "pages": [
+      61
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "coiloff",
+   "text": "A coil is a magnet only while current flows. Switch it off and the magnetism stops."
+  },
+  {
+   "id": "samemetal",
+   "text": "A voltaic cell needs two different metals. Two pieces of the same metal will not work."
+  },
+  {
+   "id": "frog",
+   "text": "Galvani’s frog was not the source of the electricity. It came from the metals and the liquid."
+  },
+  {
+   "id": "dryportable",
+   "text": "Dry cells are easier to carry than voltaic cells, not harder."
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "chapter": "sci-8-11-keeping-time-skies",
+ "terms": [
+  {
+   "id": "phases",
+   "term": "Phases of the Moon",
+   "meaning": "The changing shapes of the bright part of the Moon as seen from the Earth.",
+   "pages": [
+    57
+   ]
+  },
+  {
+   "id": "waxing",
+   "term": "Waxing",
+   "meaning": "The time when the bright part grows, from new Moon to full Moon (Shukla Paksha).",
+   "pages": [
+    57
+   ]
+  },
+  {
+   "id": "waning",
+   "term": "Waning",
+   "meaning": "The time when the bright part shrinks, from full Moon to new Moon (Krishna Paksha).",
+   "pages": [
+    57
+   ]
+  },
+  {
+   "id": "adhika",
+   "term": "Adhika Maasa",
+   "meaning": "An extra month added in a luni-solar calendar to keep it in step with the seasons.",
+   "pages": [
+    67
+   ]
+  },
+  {
+   "id": "satellite",
+   "term": "Artificial satellite",
+   "meaning": "A human-made object launched from the Earth to orbit it.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "debris",
+   "term": "Space debris",
+   "meaning": "Old satellites and rocket pieces left in orbit, which can hit working spacecraft.",
+   "pages": [
+    71
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "moon",
+   "title": "The Moon",
+   "items": [
+    {
+     "id": "cycle",
+     "name": "Cycle of phases",
+     "formula": "About 29.5 days from one full Moon to the next.",
+     "example": "Two such cycles take about 59 days.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "whyphases",
+     "name": "Why phases happen",
+     "formula": "We see different amounts of the Moon’s sunlit half as it goes around the Earth.",
+     "example": "At new Moon the sunlit half faces away from us.",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "later",
+     "name": "Moonrise each day",
+     "formula": "The Moon rises about 50 minutes later each day.",
+     "example": "Tides also come about 50 minutes later each day.",
+     "pages": [
+      58
+     ]
+    },
+    {
+     "id": "noeclipse",
+     "name": "Why eclipses are not monthly",
+     "formula": "The Moon’s orbit is slightly tilted.",
+     "example": "Usually the Moon’s shadow misses the Earth at new Moon.",
+     "pages": [
+      62
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calendars",
+   "title": "Calendars",
+   "items": [
+    {
+     "id": "lunar",
+     "name": "Lunar calendar",
+     "formula": "12 lunar months = 354 days, so about 11 days shorter than a solar year.",
+     "example": "12 × 29.5 = 354, and 365 − 354 = 11. Seasons drift through its months.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "solar",
+     "name": "Solar calendar",
+     "formula": "Follows the seasons, with a year of 365 days. February gets an extra day every 4 years.",
+     "example": "This makes up for the extra quarter of a day each year: 4 × 1/4 = 1.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "century",
+     "name": "Century leap years",
+     "formula": "A century year is a leap year only if it divides exactly by 400.",
+     "example": "2000 was a leap year, but 1900 was not.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "lunisolar",
+     "name": "Luni-solar calendar",
+     "formula": "Counts months by the Moon, and adds an extra month every 2 to 3 years.",
+     "example": "Indian panchangs work this way.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "saka",
+     "name": "Indian National Calendar",
+     "formula": "A solar calendar adopted in 1956, starting with Chaitra on 22 March (21 March in a leap year).",
+     "example": "Meghnad Saha chaired the committee behind it.",
+     "pages": [
+      67,
+      68
+     ]
+    },
+    {
+     "id": "tropical",
+     "name": "Tropical and sidereal year",
+     "formula": "Tropical: spring equinox to spring equinox. Sidereal: back to the same place among the stars, about 20 minutes longer.",
+     "example": "The Gregorian calendar follows the tropical year.",
+     "pages": [
+      65
+     ]
+    }
+   ]
+  },
+  {
+   "id": "festivals",
+   "title": "Festivals and satellites",
+   "items": [
+    {
+     "id": "moonfest",
+     "name": "Festivals set by the Moon",
+     "formula": "Their dates shift in the Gregorian calendar.",
+     "example": "Diwali is on the Amavasya of Kartika, and Holi on the Purnima of Phalguna.",
+     "pages": [
+      68
+     ]
+    },
+    {
+     "id": "sunfest",
+     "name": "Festivals set by the Sun",
+     "formula": "Their dates stay nearly fixed.",
+     "example": "Makar Sankranti and Pongal come on almost the same date every year.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "isro",
+     "name": "India’s space missions",
+     "formula": "Chandrayaan: the Moon. Aditya-L1: the Sun. Mangalyaan: Mars. AstroSat: stars and galaxies.",
+     "example": "These are ISRO missions.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "satuses",
+     "name": "Uses of satellites",
+     "formula": "Communication, navigation, weather and watching the Earth.",
+     "example": "Weather satellites help us to track cyclones.",
+     "pages": [
+      70
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "shadow",
+   "text": "The Moon’s phases are not caused by the Earth’s shadow. The Earth’s shadow on the Moon is a lunar eclipse."
+  },
+  {
+   "id": "half",
+   "text": "The Sun always lights half of the Moon. Only the part of it that we can see changes."
+  },
+  {
+   "id": "leap",
+   "text": "Not every year divisible by 4 is a leap year: 1900 divides by 4 but was not one."
+  }
+ ]
+}

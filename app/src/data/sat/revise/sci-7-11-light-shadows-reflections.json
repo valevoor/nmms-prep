@@ -1,0 +1,236 @@
+{
+ "chapter": "sci-7-11-light-shadows-reflections",
+ "terms": [
+  {
+   "id": "luminous",
+   "term": "Luminous object",
+   "meaning": "An object that gives out its own light.",
+   "pages": [
+    66
+   ]
+  },
+  {
+   "id": "nonlum",
+   "term": "Non-luminous object",
+   "meaning": "An object seen only because it reflects light from elsewhere.",
+   "pages": [
+    66
+   ]
+  },
+  {
+   "id": "transparent",
+   "term": "Transparent material",
+   "meaning": "Lets light pass almost completely.",
+   "pages": [
+    68
+   ]
+  },
+  {
+   "id": "translucent",
+   "term": "Translucent material",
+   "meaning": "Lets light pass only partly.",
+   "pages": [
+    68
+   ]
+  },
+  {
+   "id": "opaque",
+   "term": "Opaque material",
+   "meaning": "Does not let light pass through.",
+   "pages": [
+    68
+   ]
+  },
+  {
+   "id": "reflection",
+   "term": "Reflection of light",
+   "meaning": "The change in the direction of light by a mirror or shiny surface.",
+   "pages": [
+    71
+   ]
+  },
+  {
+   "id": "lateral",
+   "term": "Lateral inversion",
+   "meaning": "In a mirror image, left and right are swapped.",
+   "pages": [
+    77
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "straight",
+   "title": "Light travels straight",
+   "items": [
+    {
+     "id": "proof",
+     "name": "Proof with holes and pipes",
+     "formula": "Light passes through holes only when they are in a line, and through a straight pipe but not a bent one.",
+     "example": "A candle cannot be seen through a bent pipe.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "suntime",
+     "name": "Sunlight reaching the Earth",
+     "formula": "It takes about 8 minutes and 20 seconds.",
+     "example": "That is 8 × 60 + 20 = 500 seconds.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "moonlum",
+     "name": "Examples of non-luminous bodies",
+     "formula": "The Moon, planets, trees and mirrors.",
+     "example": "The Moon shines by reflecting sunlight.",
+     "pages": [
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shadow",
+   "title": "Shadows",
+   "items": [
+    {
+     "id": "needs",
+     "name": "What a shadow needs",
+     "formula": "A source of light, an object that blocks light, and a screen.",
+     "example": "A wall can be the screen for a hand held in torchlight.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "dark",
+     "name": "How dark is a shadow?",
+     "formula": "Opaque: dark. Translucent: lighter. Some transparent objects: faint.",
+     "example": "Cardboard gives a darker shadow than tracing paper.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "size",
+     "name": "Size of a shadow",
+     "formula": "Object nearer the light: bigger shadow. Object nearer the screen: smaller shadow.",
+     "example": "Move your hand towards the torch and its shadow grows.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "colour",
+     "name": "Colour of a shadow",
+     "formula": "The colour of an opaque object does not change its shadow.",
+     "example": "A red ball and a green ball cast the same dark shadow.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "puppet",
+     "name": "Shadow puppets of Karnataka",
+     "formula": "Togalu Gombeyaata",
+     "example": "Andhra Pradesh has a similar form, Tholu Bommalata.",
+     "pages": [
+      71
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mirror",
+   "title": "Mirrors",
+   "items": [
+    {
+     "id": "image",
+     "name": "Image in a plane mirror",
+     "formula": "Erect, the same size, cannot be caught on a screen, and laterally inverted.",
+     "example": "Raise your right hand and your image raises its left.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "distance",
+     "name": "Distance of the image",
+     "formula": "As far behind the mirror as the object is in front.",
+     "example": "An object 30 cm in front has its image 30 cm behind, so they are 60 cm apart.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "ambulance",
+     "name": "Writing on an ambulance",
+     "formula": "The word is printed reversed, so a driver in front reads it correctly in a mirror.",
+     "example": "Letters such as A, H and M look the same in a mirror.",
+     "pages": [
+      74
+     ]
+    },
+    {
+     "id": "aranmula",
+     "name": "Aranmula Kannadi",
+     "formula": "A handmade mirror of polished metal alloy from Kerala.",
+     "example": "It has no glass in it.",
+     "pages": [
+      74
+     ]
+    }
+   ]
+  },
+  {
+   "id": "devices",
+   "title": "Devices",
+   "items": [
+    {
+     "id": "pinhole",
+     "name": "Pinhole camera",
+     "formula": "Gives an inverted image on a screen, with the object’s colours.",
+     "example": "A building appears upside down on the tracing paper.",
+     "pages": [
+      74
+     ]
+    },
+    {
+     "id": "periscope",
+     "name": "Periscope",
+     "formula": "Two parallel plane mirrors in a Z-shaped tube, for seeing over obstacles.",
+     "example": "Used in submarines.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "kaleido",
+     "name": "Kaleidoscope",
+     "formula": "Three mirror strips joined as a triangle. Many reflections make patterns.",
+     "example": "Coloured bangle pieces make new designs when it is turned.",
+     "pages": [
+      76
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "moon",
+   "text": "The Moon is not luminous. It only reflects sunlight."
+  },
+  {
+   "id": "invert",
+   "text": "A plane mirror image is laterally inverted but upright. A pinhole camera image is upside down."
+  },
+  {
+   "id": "shadowcol",
+   "text": "A shadow does not show the object’s colour. An image in a pinhole camera does."
+  }
+ ]
+}

@@ -1,0 +1,297 @@
+{
+ "chapter": "sci-8-03-health-diseases",
+ "terms": [
+  {
+   "id": "health",
+   "term": "Health",
+   "meaning": "Complete physical, mental and social well-being, not just the absence of disease.",
+   "pages": [
+    29
+   ]
+  },
+  {
+   "id": "symptom",
+   "term": "Symptom",
+   "meaning": "What the patient feels, such as pain or tiredness.",
+   "pages": [
+    31
+   ]
+  },
+  {
+   "id": "sign",
+   "term": "Sign of disease",
+   "meaning": "What others can see or measure, such as fever or a rash.",
+   "pages": [
+    31
+   ]
+  },
+  {
+   "id": "pathogen",
+   "term": "Pathogen",
+   "meaning": "A germ that causes disease: a bacterium, virus, fungus, protozoan or worm.",
+   "pages": [
+    32
+   ]
+  },
+  {
+   "id": "communicable",
+   "term": "Communicable disease",
+   "meaning": "A disease caused by pathogens, which can spread to other people.",
+   "pages": [
+    32
+   ]
+  },
+  {
+   "id": "ncd",
+   "term": "Non-communicable disease",
+   "meaning": "A disease that does not spread from person to person, such as diabetes.",
+   "pages": [
+    32
+   ]
+  },
+  {
+   "id": "immunity",
+   "term": "Immunity",
+   "meaning": "The body’s natural ability to fight disease.",
+   "pages": [
+    37
+   ]
+  },
+  {
+   "id": "vector",
+   "term": "Vector",
+   "meaning": "An insect that spreads pathogens, such as a mosquito or housefly.",
+   "pages": [
+    33
+   ]
+  },
+  {
+   "id": "chronic",
+   "term": "Chronic disease",
+   "meaning": "A disease that lasts for a long time, more than 3 months.",
+   "pages": [
+    36
+   ]
+  },
+  {
+   "id": "antibiotic",
+   "term": "Antibiotic",
+   "meaning": "A medicine that kills or stops the growth of bacteria.",
+   "pages": [
+    39
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "air",
+   "title": "Spread through air",
+   "items": [
+    {
+     "id": "tb",
+     "name": "Tuberculosis",
+     "formula": "Caused by bacteria. It affects the lungs.",
+     "example": "Cough, fever, tiredness and night sweats.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "cold",
+     "name": "Common cold and flu",
+     "formula": "Caused by viruses.",
+     "example": "Coughs and sneezes spread them, so cover your mouth.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "pox",
+     "name": "Chickenpox and measles",
+     "formula": "Caused by viruses. Both give a skin rash and fever.",
+     "example": "Vaccines prevent them.",
+     "pages": [
+      33
+     ]
+    }
+   ]
+  },
+  {
+   "id": "waterfood",
+   "title": "Spread through water and food",
+   "items": [
+    {
+     "id": "cholera",
+     "name": "Cholera",
+     "formula": "Caused by bacteria. It causes diarrhoea and dehydration.",
+     "example": "Boiled water and properly cooked food help to prevent it.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "typhoid",
+     "name": "Typhoid",
+     "formula": "Caused by bacteria. It gives fever and affects the intestine.",
+     "example": "Boiled water helps to prevent it.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "hepa",
+     "name": "Hepatitis A",
+     "formula": "Caused by a virus. It affects the liver and can give jaundice.",
+     "example": "Skin and eyes turn yellow.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "worms",
+     "name": "Roundworm (ascariasis)",
+     "formula": "Worms live in the small intestine and feed on nutrients.",
+     "example": "It can cause anaemia and poor growth.",
+     "pages": [
+      34
+     ]
+    }
+   ]
+  },
+  {
+   "id": "insects",
+   "title": "Spread by insects",
+   "items": [
+    {
+     "id": "malaria",
+     "name": "Malaria",
+     "formula": "Caused by protozoa, spread by mosquitoes.",
+     "example": "High fever with sweating and chills.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "dengue",
+     "name": "Dengue",
+     "formula": "Caused by a virus, spread by mosquitoes.",
+     "example": "Pain in the muscles and joints.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "stagnant",
+     "name": "Stopping mosquitoes",
+     "formula": "Do not let water stand in pots or tyres.",
+     "example": "Mosquitoes breed in still water.",
+     "pages": [
+      35
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deficiency",
+   "title": "Other diseases",
+   "items": [
+    {
+     "id": "vitc",
+     "name": "Scurvy",
+     "formula": "Lack of vitamin C.",
+     "example": "Citrus fruits help to prevent it.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "iodine",
+     "name": "Goitre",
+     "formula": "Lack of iodine.",
+     "example": "Iodised salt helps to prevent it.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "anaemia",
+     "name": "Anaemia",
+     "formula": "Lack of iron or vitamin B12.",
+     "example": "Worms in the intestine can also cause anaemia.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "diabetes",
+     "name": "Diabetes",
+     "formula": "A lifestyle-linked disease with frequent urination, great thirst and slow healing.",
+     "example": "Diet and exercise help to manage it.",
+     "pages": [
+      36
+     ]
+    }
+   ]
+  },
+  {
+   "id": "treat",
+   "title": "Vaccines and medicine",
+   "items": [
+    {
+     "id": "vaccine",
+     "name": "How vaccines work",
+     "formula": "They train the immune system with dead, weakened or harmless parts of a germ.",
+     "example": "The body learns to fight the germ without getting the disease.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "jenner",
+     "name": "Edward Jenner",
+     "formula": "Made the first vaccine, against smallpox.",
+     "example": "He saw that milkmaids who had mild cowpox did not get smallpox.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "fleming",
+     "name": "Alexander Fleming",
+     "formula": "Found penicillin, the first antibiotic, in 1928, from the mould Penicillium.",
+     "example": "The mould stopped bacteria growing on his dish.",
+     "pages": [
+      40
+     ]
+    },
+    {
+     "id": "resist",
+     "name": "Antibiotic resistance",
+     "formula": "Careless use lets surviving bacteria multiply, and then the medicine stops working.",
+     "example": "Finish the course that the doctor gives.",
+     "pages": [
+      38
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "antivirus",
+   "text": "Antibiotics do not work on viruses, so they will not cure a cold or dengue."
+  },
+  {
+   "id": "sympsign",
+   "text": "A fever can be measured, so it is a sign. A headache is only felt, so it is a symptom."
+  },
+  {
+   "id": "malariacause",
+   "text": "Mosquitoes carry malaria but do not cause it. The cause is a protozoan."
+  },
+  {
+   "id": "ncdspread",
+   "text": "Diabetes is not caught from another person. It is not caused by a germ."
+  }
+ ]
+}

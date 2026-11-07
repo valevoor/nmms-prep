@@ -1,0 +1,239 @@
+{
+ "chapter": "sci-7-06-adolescence-growth",
+ "terms": [
+  {
+   "id": "adolescence",
+   "term": "Adolescence",
+   "meaning": "The period of change from childhood to adulthood, generally from about 10 to 19 years of age.",
+   "pages": [
+    75
+   ]
+  },
+  {
+   "id": "puberty",
+   "term": "Puberty",
+   "meaning": "The stage when the body of a child changes into an adult body capable of reproduction.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "secondary",
+   "term": "Secondary sexual characteristics",
+   "meaning": "Features that help to tell males from females but are not directly involved in reproduction.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "hormones",
+   "term": "Hormones",
+   "meaning": "Chemicals made in the body that control the changes of adolescence.",
+   "pages": [
+    84
+   ]
+  },
+  {
+   "id": "menstruation",
+   "term": "Menstruation",
+   "meaning": "The discharge of blood in the menstrual cycle, a natural sign of health in adolescent girls and women.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "acne",
+   "term": "Acne",
+   "meaning": "Pimples on the skin, when oily secretions block the pores and bacteria grow.",
+   "pages": [
+    76
+   ]
+  },
+  {
+   "id": "cyberbully",
+   "term": "Cyberbullying",
+   "meaning": "Harassing someone online, such as by spreading false rumours or sharing their photos without consent.",
+   "pages": [
+    82
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "body",
+   "title": "Changes in the body",
+   "items": [
+    {
+     "id": "growth",
+     "name": "Growth spurt",
+     "formula": "Height and weight increase quickly in both boys and girls.",
+     "example": "A student may grow out of a uniform in a single year.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "voice",
+     "name": "Voice and Adam’s apple",
+     "formula": "In boys the voice box grows and may show as a bump, and the voice deepens. In girls it grows less.",
+     "example": "A boy’s voice may crack for a while.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "hair",
+     "name": "Body hair",
+     "formula": "Hair appears in the armpits and pubic region in both. Boys also get facial hair.",
+     "example": "A moustache is a secondary sexual characteristic.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "cycle",
+     "name": "Menstrual cycle",
+     "formula": "Generally repeats every 28 to 30 days. Bleeding lasts about 3 to 7 days.",
+     "example": "It begins at puberty and generally ends by the age of 45 to 55 years.",
+     "pages": [
+      77
+     ]
+    },
+    {
+     "id": "mood",
+     "name": "Emotional changes",
+     "formula": "Mood swings, strong feelings and curiosity are normal.",
+     "example": "Music, sport and helping others are good outlets.",
+     "pages": [
+      78
+     ]
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "title": "Staying healthy",
+   "items": [
+    {
+     "id": "calcium",
+     "name": "Food for strong bones",
+     "formula": "Calcium and protein from milk, curd, paneer and millets.",
+     "example": "A glass of milk helps bones to grow.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "iron",
+     "name": "Food for healthy blood",
+     "formula": "Iron from spinach, beans and dried fruits such as raisins.",
+     "example": "Too little iron can cause anaemia.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "hodgkin",
+     "name": "Dorothy Hodgkin",
+     "formula": "Won the 1964 Nobel Prize in Chemistry for finding the structure of vitamin B12.",
+     "example": "We must get this vitamin from food.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "hygiene",
+     "name": "Personal hygiene",
+     "formula": "Wash daily, use clean pads, and wrap used pads in paper before putting them in a dustbin.",
+     "example": "Biodegradable pads are kinder to the environment.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "sayno",
+     "name": "Addictive substances",
+     "formula": "Say NO to tobacco, gutka, alcohol and drugs, which harm body and mind.",
+     "example": "Friends pressing you to try is not a good enough reason.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "yoga",
+     "name": "Exercise and yoga",
+     "formula": "Regular activity keeps adolescents healthy. International Yoga Day is 21 June.",
+     "example": "Sport, walking or yoga every day.",
+     "pages": [
+      88
+     ]
+    }
+   ]
+  },
+  {
+   "id": "schemes",
+   "title": "Government programmes",
+   "items": [
+    {
+     "id": "rksk",
+     "name": "Rashtriya Kishor Swasthya Karyakram",
+     "formula": "A national programme for adolescent health, using peer education.",
+     "example": "Young people learn health facts from each other.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "mhs",
+     "name": "Menstrual Hygiene Scheme",
+     "formula": "Gives pads free or at low prices to adolescent girls in rural areas, with awareness programmes.",
+     "example": "It is a Government of India scheme.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "suvidha",
+     "name": "Suvidha",
+     "formula": "Low-cost biodegradable pads sold through Jan Aushadhi Kendras.",
+     "example": "A girl can buy them at a Jan Aushadhi shop.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "shuchi",
+     "name": "Shuchi scheme",
+     "formula": "Karnataka gives free pads to girls in government schools.",
+     "example": "It is a state-level scheme.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "nasha",
+     "name": "Nasha Mukt Bharat Abhiyaan",
+     "formula": "A campaign against substance abuse. De-addiction helpline: 14446.",
+     "example": "Anyone who needs help can call the number.",
+     "pages": [
+      84
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "secondary",
+   "text": "Secondary sexual characteristics are not directly involved in reproduction, even though they appear at puberty."
+  },
+  {
+   "id": "myth",
+   "text": "Menstruation is natural. Keeping girls apart during it has no scientific basis."
+  },
+  {
+   "id": "adolpub",
+   "text": "Adolescence and puberty are not the same word: adolescence is the whole 10 to 19 period, and puberty is the change towards being able to reproduce."
+  }
+ ]
+}

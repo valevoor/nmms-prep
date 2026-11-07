@@ -559,6 +559,24 @@
   ]
  },
  {
+  "id": "sci-7-01-ever-evolving-science",
+  "subject": "science",
+  "cls": 7,
+  "no": 1,
+  "name": "The Ever-Evolving World of Science",
+  "part": 1,
+  "pages": [
+   1,
+   6
+  ],
+  "area": "Scientific Inquiry",
+  "topics": [
+   "Nature of Scientific Inquiry",
+   "Questioning and Observation",
+   "Interconnectedness of Science Disciplines"
+  ]
+ },
+ {
   "id": "sci-7-02-acids-bases-neutral",
   "subject": "science",
   "cls": 7,
@@ -639,6 +657,27 @@
    "Combustion and Ignition Temperature (Fire Triangle)",
    "Burning of a Candle",
    "Weathering and Erosion of Rocks"
+  ]
+ },
+ {
+  "id": "sci-7-06-adolescence-growth",
+  "subject": "science",
+  "cls": 7,
+  "no": 6,
+  "name": "Adolescence: A Stage of Growth and Change",
+  "part": 1,
+  "pages": [
+   73,
+   88
+  ],
+  "area": "Biology",
+  "topics": [
+   "Reaching the Age of Adolescence",
+   "Puberty and Secondary Sexual Characteristics",
+   "Adam's Apple",
+   "Menstrual Cycle and Hygiene",
+   "Role of Hormones",
+   "Adolescent Nutrition and Substance Abuse Prevention"
   ]
  },
  {
@@ -754,6 +793,47 @@
   ]
  },
  {
+  "id": "sci-7-12-earth-moon-sun",
+  "subject": "science",
+  "cls": 7,
+  "no": 12,
+  "name": "Earth, Moon, and the Sun",
+  "part": 2,
+  "pages": [
+   81,
+   98
+  ],
+  "area": "Astronomy / Earth Science",
+  "topics": [
+   "Rotation and Revolution of the Earth",
+   "Day and Night",
+   "Apparent Motion of Stars and Pole Star (Dhruva Tara)",
+   "Foucault Pendulum and Aryabhatiya",
+   "Causes of Seasons (Axial Tilt)",
+   "Solstices and Equinoxes",
+   "Solar Eclipse and Lunar Eclipse (Grahan)"
+  ]
+ },
+ {
+  "id": "sci-8-01-investigative-world",
+  "subject": "science",
+  "cls": 8,
+  "no": 1,
+  "name": "Exploring the Investigative World of Science",
+  "part": 1,
+  "pages": [
+   1,
+   7
+  ],
+  "area": "Scientific Inquiry",
+  "topics": [
+   "Scientific Method",
+   "Experimental Variables",
+   "Controlled Investigation",
+   "Observation and Hypothesis"
+  ]
+ },
+ {
   "id": "sci-8-02-invisible-living-world",
   "subject": "science",
   "cls": 8,
@@ -856,6 +936,25 @@
   ]
  },
  {
+  "id": "sci-8-07-particulate-matter",
+  "subject": "science",
+  "cls": 8,
+  "no": 7,
+  "name": "Particulate Nature of Matter",
+  "part": 1,
+  "pages": [
+   98,
+   115
+  ],
+  "area": "Chemistry",
+  "topics": [
+   "Matter in Our Surroundings",
+   "States of Matter (Solid, Liquid, Gas)",
+   "Interparticle Forces and Spaces",
+   "Diffusion"
+  ]
+ },
+ {
   "id": "sci-8-08-elements-compounds-mixtures",
   "subject": "science",
   "cls": 8,
@@ -879,6 +978,26 @@
   ]
  },
  {
+  "id": "sci-8-09-solutes-solvents-density",
+  "subject": "science",
+  "cls": 8,
+  "no": 9,
+  "name": "The Amazing World of Solutes, Solvents, and Solutions",
+  "part": 2,
+  "pages": [
+   19,
+   36
+  ],
+  "area": "Chemistry / Physics",
+  "topics": [
+   "Solutions and Solubility",
+   "Saturated and Unsaturated Solutions",
+   "Effect of Temperature on Solubility",
+   "Mass Volume and Density",
+   "Anomalous Expansion of Water"
+  ]
+ },
+ {
   "id": "sci-8-10-light-mirrors-lenses",
   "subject": "science",
   "cls": 8,
@@ -895,6 +1014,26 @@
    "Spherical Mirrors (Concave and Convex)",
    "Lenses (Convex and Concave)",
    "Laws of Reflection"
+  ]
+ },
+ {
+  "id": "sci-8-11-keeping-time-skies",
+  "subject": "science",
+  "cls": 8,
+  "no": 11,
+  "name": "Keeping Time with the Skies",
+  "part": 2,
+  "pages": [
+   55,
+   74
+  ],
+  "area": "Astronomy / Physics",
+  "topics": [
+   "Stars and the Solar System",
+   "Phases of the Moon",
+   "Lunar Solar and Luni-Solar Calendars",
+   "Indian National Calendar (Saka)",
+   "Artificial Satellites and ISRO Missions"
   ]
  },
  {

@@ -1,0 +1,195 @@
+{
+ "chapter": "sci-8-10-light-mirrors-lenses",
+ "terms": [
+  {
+   "id": "concavem",
+   "term": "Concave mirror",
+   "meaning": "A curved mirror whose shiny surface curves inward, like the inside of a spoon.",
+   "pages": [
+    39
+   ]
+  },
+  {
+   "id": "convexm",
+   "term": "Convex mirror",
+   "meaning": "A curved mirror whose shiny surface curves outward, like the back of a spoon.",
+   "pages": [
+    39
+   ]
+  },
+  {
+   "id": "normal",
+   "term": "Normal",
+   "meaning": "A line at right angles to the mirror at the point where the ray hits it.",
+   "pages": [
+    43
+   ]
+  },
+  {
+   "id": "lens",
+   "term": "Lens",
+   "meaning": "Transparent material with two surfaces, at least one of them curved.",
+   "pages": [
+    47
+   ]
+  },
+  {
+   "id": "convexl",
+   "term": "Convex lens",
+   "meaning": "A lens that is thicker in the middle than at the edges.",
+   "pages": [
+    47
+   ]
+  },
+  {
+   "id": "concavel",
+   "term": "Concave lens",
+   "meaning": "A lens that is thinner in the middle than at the edges.",
+   "pages": [
+    48
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "mirrors",
+   "title": "Images in mirrors",
+   "items": [
+    {
+     "id": "concaveimg",
+     "name": "Image in a concave mirror",
+     "formula": "Close up: erect and enlarged. Farther away: inverted.",
+     "example": "Your face looks big and upright when close to it.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "convimg",
+     "name": "Image in a convex mirror",
+     "formula": "Always erect and smaller.",
+     "example": "A car behind you looks small but upright.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "concaveuse",
+     "name": "Uses of concave mirrors",
+     "formula": "Torches, vehicle headlights, dentists’ mirrors and solar concentrators.",
+     "example": "A dentist sees an enlarged image of a tooth.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "convexuse",
+     "name": "Uses of convex mirrors",
+     "formula": "Vehicle side mirrors and mirrors at sharp bends, because they show a wide area.",
+     "example": "A mirror at a blind turn shows oncoming traffic.",
+     "pages": [
+      41
+     ]
+    }
+   ]
+  },
+  {
+   "id": "laws",
+   "title": "Laws of reflection",
+   "items": [
+    {
+     "id": "first",
+     "name": "First law of reflection",
+     "formula": "Angle of incidence = Angle of reflection",
+     "example": "A ray hits at 35° to the normal, so it leaves at 35° to the normal.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "second",
+     "name": "Second law of reflection",
+     "formula": "The incident ray, the normal and the reflected ray all lie in the same plane.",
+     "example": "They can all be drawn on one sheet of paper.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "allmirrors",
+     "name": "Where the laws apply",
+     "formula": "The laws hold for all mirrors: plane, concave and convex.",
+     "example": "Curved mirrors still obey them at each point.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "converge",
+     "name": "Beam of light on mirrors",
+     "formula": "A concave mirror converges parallel rays. A convex mirror spreads them out.",
+     "example": "A concave mirror can focus sunlight on paper to burn it.",
+     "pages": [
+      46
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lenses",
+   "title": "Lenses",
+   "items": [
+    {
+     "id": "convlimg",
+     "name": "Image in a convex lens",
+     "formula": "Close to the object: erect and enlarged. Far away: inverted.",
+     "example": "This is how a magnifying glass works.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "conclimg",
+     "name": "Image in a concave lens",
+     "formula": "Always erect and smaller.",
+     "example": "Objects look small through it wherever they are.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "lensbeam",
+     "name": "Beam of light through lenses",
+     "formula": "A convex lens converges rays. A concave lens spreads them out.",
+     "example": "A convex lens makes a bright spot of sunlight.",
+     "pages": [
+      49
+     ]
+    },
+    {
+     "id": "lensuses",
+     "name": "Uses of lenses",
+     "formula": "Spectacles, cameras, microscopes and telescopes.",
+     "example": "The eye has a natural convex lens.",
+     "pages": [
+      50
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "fromnormal",
+   "text": "Measure the angles from the normal, not from the mirror’s surface."
+  },
+  {
+   "id": "mirrorlens",
+   "text": "A concave mirror converges light, but so does a convex lens. Do not match them by name."
+  },
+  {
+   "id": "convexsize",
+   "text": "A convex mirror’s image is never enlarged, wherever the object is."
+  }
+ ]
+}

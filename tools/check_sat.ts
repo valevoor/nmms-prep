@@ -3,7 +3,7 @@
  * every paper has questions 1 to 90 once each with unique ids, four non-empty options and a known
  * section; each question is filed under a listed chapter or none (`topic: null`); every picture exists;
  * an answer, once added, is one of the options and says where it came from (`keyFrom`); every listed
- * chapter has at least one question and a Kannada name; and each group of combined chapters
+ * social science chapter has at least one question, every chapter has a Kannada name; and each group of combined chapters
  * (data/sat/groups.json) lists two or more listed chapters of its own subject, none of them in another
  * group; a question under no chapter names a listed old-syllabus chapter of its own subject
  * (`oldChapter`, data/sat/old-chapters.json), each of which has questions; and every question is in exactly one topic. This checks the transcription's shape; tools/check_sat_maths.ts and tools/check_sat_science.ts check the maths and science answers. Run from app/:  npx tsx ../tools/check_sat.ts
@@ -64,8 +64,8 @@ for (const p of SAT_PAPERS) {
 }
 
 for (const c of SAT_CHAPTERS) {
-  // Maths chapters are listed for their revision sheets, even if no paper has asked about them yet.
-  if (!used.has(c.id) && c.subject !== 'maths') problems.push(`${c.id}: no past-paper question is filed under this chapter (run tools/build_sat_chapters.ts)`)
+  // Maths and science chapters are listed for their revision sheets, even if no paper has asked about them yet.
+  if (!used.has(c.id) && c.subject === 'social') problems.push(`${c.id}: no past-paper question is filed under this chapter (run tools/build_sat_chapters.ts)`)
   if (!kn[c.id]?.name) problems.push(`${c.id}: no Kannada name in data/sat/chapters.kn.json`)
 }
 

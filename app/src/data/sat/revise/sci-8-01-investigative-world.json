@@ -1,0 +1,92 @@
+{
+ "chapter": "sci-8-01-investigative-world",
+ "terms": [
+  {
+   "id": "investigation",
+   "term": "Systematic investigation",
+   "meaning": "Asking a focused question, doing an experiment carefully, watching closely and explaining what happened.",
+   "pages": [
+    7
+   ]
+  },
+  {
+   "id": "fair",
+   "term": "Fair test",
+   "meaning": "An experiment in which only one thing is changed at a time and everything else stays the same.",
+   "pages": [
+    7
+   ]
+  },
+  {
+   "id": "observation",
+   "term": "Observation",
+   "meaning": "Noting carefully what you see and sense, and keeping a record of it.",
+   "pages": [
+    2
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "method",
+   "title": "Doing an investigation",
+   "items": [
+    {
+     "id": "wonder",
+     "name": "Start from a simple wonder",
+     "formula": "Turn something you notice into a clear question.",
+     "example": "\"Why does a puri puff up in hot oil?\"",
+     "pages": [
+      1
+     ]
+    },
+    {
+     "id": "change",
+     "name": "Things you could change",
+     "formula": "List them first, such as thickness, flour, oil temperature and the way of dropping it in.",
+     "example": "Try thick and thin dough with the same oil.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "onething",
+     "name": "Change one thing at a time",
+     "formula": "Keep all other conditions the same, or you cannot tell what caused the result.",
+     "example": "To test thickness, use the same flour, oil and way of dropping.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "record",
+     "name": "Keep notes",
+     "formula": "Write down everything you see, hear and smell.",
+     "example": "Did the oil splatter? Did it smoke?",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "newq",
+     "name": "One round leads to more questions",
+     "formula": "Results raise new questions to test.",
+     "example": "Do puris puff better from fresh dough or stored dough?",
+     "pages": [
+      7
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "many",
+   "text": "Changing two things at once does not tell you which one made the difference."
+  },
+  {
+   "id": "known",
+   "text": "Science has not explained everything. Even why a puri swells is not fully understood."
+  }
+ ]
+}

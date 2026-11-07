@@ -1,0 +1,243 @@
+{
+ "chapter": "sci-8-02-invisible-living-world",
+ "terms": [
+  {
+   "id": "cell",
+   "term": "Cell",
+   "meaning": "The basic unit of life. All living things are made of cells.",
+   "pages": [
+    10
+   ]
+  },
+  {
+   "id": "membrane",
+   "term": "Cell membrane",
+   "meaning": "The thin outer boundary of the cell, which controls what goes in and out.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "cytoplasm",
+   "term": "Cytoplasm",
+   "meaning": "The jelly-like material that fills the cell around the nucleus.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "nucleus",
+   "term": "Nucleus",
+   "meaning": "The part that controls the cell’s activities and holds the genetic material.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "wall",
+   "term": "Cell wall",
+   "meaning": "A rigid extra covering around the membrane in plants, fungi and bacteria.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "nucleoid",
+   "term": "Nucleoid",
+   "meaning": "The region in a bacterium that holds its genetic material, with no nuclear membrane around it.",
+   "pages": [
+    23
+   ]
+  },
+  {
+   "id": "virus",
+   "term": "Virus",
+   "meaning": "A tiny agent that reproduces only inside the cells of a host.",
+   "pages": [
+    17
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "cells",
+   "title": "Inside cells",
+   "items": [
+    {
+     "id": "hooke",
+     "name": "Who named the cell?",
+     "formula": "Robert Hooke, looking at thin slices of cork in 1665.",
+     "example": "He saw small compartments like a honeycomb.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "leeuwen",
+     "name": "Father of microbiology",
+     "formula": "Antonie van Leeuwenhoek, who built better microscopes to see living microbes.",
+     "example": "He looked at tiny life in pond water.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "plantanimal",
+     "name": "Plant cell and animal cell",
+     "formula": "Plant cells also have a cell wall, chloroplasts and a large vacuole.",
+     "example": "An onion peel cell has a wall. A cheek cell does not.",
+     "pages": [
+      13
+     ]
+    },
+    {
+     "id": "stains",
+     "name": "Stains for slides",
+     "formula": "Onion peel: safranin. Cheek cells: methylene blue. Glycerin stops drying.",
+     "example": "Staining makes the parts easier to see.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "shapes",
+     "name": "Shape fits the job",
+     "formula": "Muscle cells are spindle-shaped. Nerve cells are long and branched.",
+     "example": "A long nerve cell carries messages across the body.",
+     "pages": [
+      13
+     ]
+    },
+    {
+     "id": "levels",
+     "name": "Levels of organisation",
+     "formula": "Cell → Tissue → Organ → Organ system → Organism",
+     "example": "Muscle cells form muscle tissue, which forms part of the heart.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "bigcell",
+     "name": "Largest single cell",
+     "formula": "The ostrich egg yolk, about 130 to 170 mm across.",
+     "example": "Most cells can be seen only through a microscope.",
+     "pages": [
+      15
+     ]
+    }
+   ]
+  },
+  {
+   "id": "microbes",
+   "title": "Kinds of microbes",
+   "items": [
+    {
+     "id": "unicell",
+     "name": "Single-celled microbes",
+     "formula": "Bacteria, protozoa such as Amoeba, yeast, and some algae.",
+     "example": "Paramecium is a single cell.",
+     "pages": [
+      15
+     ]
+    },
+    {
+     "id": "multicell",
+     "name": "Many-celled microbes",
+     "formula": "Moulds, such as bread mould.",
+     "example": "Yeast is a single-celled fungus, but a mould has many cells.",
+     "pages": [
+      23
+     ]
+    }
+   ]
+  },
+  {
+   "id": "useful",
+   "title": "Useful microbes",
+   "items": [
+    {
+     "id": "yeast",
+     "name": "Yeast",
+     "formula": "Respires on sugar and gives off carbon dioxide, which makes dough rise.",
+     "example": "Bread and idli batter are soft because of these gas bubbles.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "lacto",
+     "name": "Lactobacillus",
+     "formula": "Turns milk sugar into lactic acid, setting milk into curd.",
+     "example": "Lukewarm milk with a little curd sets by morning.",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "rhizobium",
+     "name": "Rhizobium",
+     "formula": "Lives in the root nodules of pulses and fixes nitrogen from the air.",
+     "example": "Farmers grow pulses to improve the soil.",
+     "pages": [
+      22
+     ]
+    },
+    {
+     "id": "biogas",
+     "name": "Biogas",
+     "formula": "Bacteria break down waste without oxygen, giving methane and carbon dioxide.",
+     "example": "Biogas from dung can be used as cooking fuel.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "compost",
+     "name": "Compost",
+     "formula": "Bacteria and fungi break dead plants and peels into rich manure.",
+     "example": "Kitchen peels become compost in a pit.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "oil",
+     "name": "Oil-eating bacteria",
+     "formula": "Dr Ananda Mohan Chakrabarty developed a bacterium that breaks down crude oil.",
+     "example": "It can help to clean up oil spills.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "microalgae",
+     "name": "Microalgae",
+     "formula": "They photosynthesise and give more than half of the Earth’s oxygen.",
+     "example": "Spirulina is also used as a food supplement.",
+     "pages": [
+      22
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "wall",
+   "text": "A cell wall is not only in plants. Fungi and bacteria have one too, and animal cells do not."
+  },
+  {
+   "id": "nuc",
+   "text": "Bacteria do have genetic material, but no well-defined nucleus."
+  },
+  {
+   "id": "virushost",
+   "text": "Viruses cannot reproduce on their own. They need a host cell."
+  },
+  {
+   "id": "allbad",
+   "text": "Not all microbes are harmful. Many are needed for curd, compost and soil fertility."
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "chapter": "sci-7-01-ever-evolving-science",
+ "terms": [
+  {
+   "id": "process",
+   "term": "Science as a process",
+   "meaning": "A way of thinking that welcomes curiosity, asks questions and stays open to the unknown. It is more than a list of facts.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "fields",
+   "term": "Fields of science",
+   "meaning": "Physics, chemistry, biology and earth sciences. They appear as separate chapters but are all connected.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "sustain",
+   "term": "Sustainable world",
+   "meaning": "A world where human activity does not harm the natural world that we depend on. Science can help tackle environmental challenges.",
+   "pages": [
+    2
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "think",
+   "title": "How a scientist works",
+   "items": [
+    {
+     "id": "deeper",
+     "name": "Asking deeper questions",
+     "formula": "Ask how things work, why events happen, and what the patterns in nature teach us.",
+     "example": "Not only \"does ice melt?\" but \"why does it melt faster in a warm room?\"",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "experience",
+     "name": "Learning by doing",
+     "formula": "Step outside the book: activities and experiments lead to deeper understanding.",
+     "example": "Testing which materials light a lamp teaches more than reading a list of them.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "question",
+     "name": "Question the answer",
+     "formula": "Good scientists also ask interesting questions. Practise by inventing a question for a given answer.",
+     "example": "Answer: \"Just make it half.\" Question: \"How do two friends share one cake equally?\"",
+     "pages": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "links",
+   "title": "Science is connected",
+   "items": [
+    {
+     "id": "observe",
+     "name": "Big ideas from simple observations",
+     "formula": "Careful watching of simple things can lead to real inventions.",
+     "example": "Studying bird wings and paper planes led towards designing aircraft.",
+     "pages": [
+      1
+     ]
+    },
+    {
+     "id": "connect",
+     "name": "One idea leads to another",
+     "formula": "An idea in one field often inspires discoveries or questions in another.",
+     "example": "Shadows lead to telling the time, and the shadows of the Earth and Moon lead to eclipses.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "respons",
+     "name": "Science and responsibility",
+     "formula": "Discovery comes with responsibility, because human activities are linked to the natural world and to society.",
+     "example": "Learning how factory waste harms a lake also tells us to treat the waste first.",
+     "pages": [
+      2
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "facts",
+   "text": "Science is not only memorising facts. Asking questions and testing them is science too."
+  },
+  {
+   "id": "apart",
+   "text": "Physics, chemistry and biology are not separate worlds. Ideas move between them."
+  }
+ ]
+}

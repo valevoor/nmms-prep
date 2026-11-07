@@ -1,0 +1,270 @@
+{
+ "chapter": "sci-7-09-life-processes-animals",
+ "terms": [
+  {
+   "id": "canal",
+   "term": "Alimentary canal",
+   "meaning": "The long food passage from the mouth to the anus.",
+   "pages": [
+    34
+   ]
+  },
+  {
+   "id": "peristalsis",
+   "term": "Peristalsis",
+   "meaning": "Waves of contraction in the food pipe wall that push food down.",
+   "pages": [
+    36
+   ]
+  },
+  {
+   "id": "villi",
+   "term": "Villi",
+   "meaning": "Tiny finger-like parts of the small intestine wall that increase the area for absorbing food.",
+   "pages": [
+    38
+   ]
+  },
+  {
+   "id": "ruminant",
+   "term": "Ruminant",
+   "meaning": "A grass-eating animal that swallows food partly chewed, then brings it back to chew it thoroughly.",
+   "pages": [
+    40
+   ]
+  },
+  {
+   "id": "gizzard",
+   "term": "Gizzard",
+   "meaning": "The muscular stomach chamber in birds, which grinds food with swallowed grit.",
+   "pages": [
+    40
+   ]
+  },
+  {
+   "id": "alveoli",
+   "term": "Alveoli",
+   "meaning": "Tiny air sacs in the lungs where oxygen and carbon dioxide are exchanged.",
+   "pages": [
+    41
+   ]
+  },
+  {
+   "id": "diaphragm",
+   "term": "Diaphragm",
+   "meaning": "The dome-shaped muscle under the chest that helps us to breathe.",
+   "pages": [
+    41
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "digest",
+   "title": "Digestion in humans",
+   "items": [
+    {
+     "id": "path",
+     "name": "Path of food",
+     "formula": "Mouth → Oesophagus → Stomach → Small intestine → Large intestine → Rectum → Anus",
+     "example": "Food passes through all of these in this order.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "saliva",
+     "name": "Saliva",
+     "formula": "Breaks starch into simple sugar.",
+     "example": "Rice tastes sweet if you chew it for long.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "iodinetest",
+     "name": "Iodine test for starch",
+     "formula": "Starch turns iodine solution blue-black.",
+     "example": "Boiled rice turns blue-black. Well-chewed rice hardly changes, because its starch has become sugar.",
+     "pages": [
+      36
+     ]
+    },
+    {
+     "id": "stomach",
+     "name": "In the stomach",
+     "formula": "Digestive juice breaks proteins. Acid kills bacteria. Mucus protects the stomach lining.",
+     "example": "Without mucus, the stomach’s own acid would damage it.",
+     "pages": [
+      36
+     ]
+    },
+    {
+     "id": "bile",
+     "name": "Bile from the liver",
+     "formula": "Mildly basic: it neutralises stomach acid and breaks fats into tiny droplets.",
+     "example": "It makes an oily meal easier to digest.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "pancreas",
+     "name": "Pancreatic juice",
+     "formula": "Basic: it breaks down carbohydrates, proteins and fats.",
+     "example": "The pancreas sends it to the small intestine.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "small",
+     "name": "Small intestine",
+     "formula": "About 6 m long. Digestion finishes here and nutrients are absorbed.",
+     "example": "It is the longest part of the alimentary canal.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "large",
+     "name": "Large intestine",
+     "formula": "About 1.5 m long. It absorbs most of the remaining water and some salts.",
+     "example": "What is left is stored in the rectum and passed out through the anus.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "celiac",
+     "name": "Celiac disease",
+     "formula": "The body reacts badly to gluten, a protein in wheat, barley and rye.",
+     "example": "Millets such as ragi and jowar have no gluten.",
+     "pages": [
+      38
+     ]
+    }
+   ]
+  },
+  {
+   "id": "breath",
+   "title": "Breathing and respiration",
+   "items": [
+    {
+     "id": "airpath",
+     "name": "Path of air",
+     "formula": "Nostrils → Windpipe → Two branches → Lungs → Alveoli",
+     "example": "Hair and mucus in the nose trap dust, so breathe through the nose.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "inhale",
+     "name": "Breathing in",
+     "formula": "Ribs go up and out, the diaphragm moves down, and the chest space grows.",
+     "example": "Air is drawn into the lungs.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "exhale",
+     "name": "Breathing out",
+     "formula": "Ribs go down and in, the diaphragm moves up, and the chest space shrinks.",
+     "example": "Air is pushed out of the lungs.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "airmix",
+     "name": "Air we breathe in and out",
+     "formula": "In: about 21% oxygen and 0.04% carbon dioxide. Out: about 16 to 17% oxygen and 4 to 5% carbon dioxide.",
+     "example": "Your breath turns lime water milky, and room air from a syringe does not.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "respeq",
+     "name": "Respiration in cells",
+     "formula": "Glucose + Oxygen → Carbon dioxide + Water + Energy",
+     "example": "This is how nutrients become usable energy.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "circ",
+     "name": "Circulatory system",
+     "formula": "The heart pumps blood through blood vessels, carrying oxygen and nutrients and removing waste.",
+     "example": "Blood brings oxygen from the lungs to every cell.",
+     "pages": [
+      45
+     ]
+    }
+   ]
+  },
+  {
+   "id": "others",
+   "title": "Other animals",
+   "items": [
+    {
+     "id": "rumen",
+     "name": "How a cow digests",
+     "formula": "Grass goes to the rumen and is partly digested. The cud returns to the mouth to be chewed again.",
+     "example": "This is called rumination, and it is why a resting cow keeps chewing.",
+     "pages": [
+      40
+     ]
+    },
+    {
+     "id": "gills",
+     "name": "Fish",
+     "formula": "Breathe through gills, taking oxygen dissolved in water.",
+     "example": "Tadpoles also use gills.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "frog",
+     "name": "Adult frog",
+     "formula": "Lungs on land, moist skin in water.",
+     "example": "A tadpole has gills, but it loses them as it grows.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "worm",
+     "name": "Earthworm",
+     "formula": "Breathes through its moist skin.",
+     "example": "It has no lungs or gills.",
+     "pages": [
+      45
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "resp",
+   "text": "Breathing and respiration are different. Breathing is physical movement of air, and respiration is a chemical process in cells."
+  },
+  {
+   "id": "co2",
+   "text": "Exhaled air still has plenty of oxygen, about 16 to 17%. It is not all carbon dioxide."
+  },
+  {
+   "id": "intest",
+   "text": "The small intestine is the longer one. \"Small\" and \"large\" describe its width, since the large intestine is wider."
+  },
+  {
+   "id": "diaph",
+   "text": "When you breathe in, the diaphragm moves down, not up."
+  }
+ ]
+}

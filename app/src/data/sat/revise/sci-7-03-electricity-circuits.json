@@ -1,0 +1,251 @@
+{
+ "chapter": "sci-7-03-electricity-circuits",
+ "terms": [
+  {
+   "id": "cell",
+   "term": "Electric cell",
+   "meaning": "A portable source of electrical energy with a positive and a negative terminal.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "battery",
+   "term": "Battery",
+   "meaning": "Two or more cells joined so that the positive terminal of one meets the negative terminal of the next.",
+   "pages": [
+    25
+   ]
+  },
+  {
+   "id": "filament",
+   "term": "Filament",
+   "meaning": "The thin wire in an incandescent lamp, which gets hot and glows when current passes.",
+   "pages": [
+    26
+   ]
+  },
+  {
+   "id": "led",
+   "term": "LED",
+   "meaning": "Light Emitting Diode: a lamp with no filament, whose current flows in one direction only.",
+   "pages": [
+    27
+   ]
+  },
+  {
+   "id": "circuit",
+   "term": "Electrical circuit",
+   "meaning": "A complete conducting path from one terminal of a cell to the other, through which current flows.",
+   "pages": [
+    30
+   ]
+  },
+  {
+   "id": "switch",
+   "term": "Switch",
+   "meaning": "A simple device that completes or breaks a circuit.",
+   "pages": [
+    32
+   ]
+  },
+  {
+   "id": "conductor",
+   "term": "Conductor",
+   "meaning": "A material through which electric current flows easily.",
+   "pages": [
+    36
+   ]
+  },
+  {
+   "id": "insulator",
+   "term": "Insulator",
+   "meaning": "A material through which electric current cannot pass.",
+   "pages": [
+    36
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "parts",
+   "title": "Cells and lamps",
+   "items": [
+    {
+     "id": "terminals",
+     "name": "Terminals of a cell",
+     "formula": "Positive: the small metal cap. Negative: the flat metal disc.",
+     "example": "In a cell holder, the flat disc goes towards the spring.",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "joincells",
+     "name": "Joining cells",
+     "formula": "Positive terminal to negative terminal of the next cell.",
+     "example": "In a torch, the cap of one cell touches the flat disc of the next.",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "fused",
+     "name": "Why a bulb fuses",
+     "formula": "Its filament is broken, so the circuit is open and no current flows.",
+     "example": "A fused bulb will not glow, even with a new cell.",
+     "pages": [
+      30
+     ]
+    },
+    {
+     "id": "ledwires",
+     "name": "Wires of an LED",
+     "formula": "Longer wire: positive. Shorter wire: negative.",
+     "example": "An LED with its longer wire on the battery’s positive terminal glows.",
+     "pages": [
+      27
+     ]
+    },
+    {
+     "id": "bulbled",
+     "name": "Bulb or LED: which way round?",
+     "formula": "A bulb glows either way round. An LED glows only when positive meets positive.",
+     "example": "Swap the wires: the bulb stays lit but the LED goes off.",
+     "pages": [
+      31
+     ]
+    }
+   ]
+  },
+  {
+   "id": "circuits",
+   "title": "Circuits and diagrams",
+   "items": [
+    {
+     "id": "direction",
+     "name": "Direction of current",
+     "formula": "From the positive terminal to the negative terminal of the cell, through the circuit.",
+     "example": "Trace it from the cell’s cap, through the lamp, back to the flat disc.",
+     "pages": [
+      30
+     ]
+    },
+    {
+     "id": "onoff",
+     "name": "Switch positions",
+     "formula": "ON: closed circuit, the lamp glows. OFF: an air gap makes an open circuit, the lamp is off.",
+     "example": "A safety pin touching two drawing pins acts as a switch in the ON position.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "anywhere",
+     "name": "Where a switch can go",
+     "formula": "Anywhere in the circuit.",
+     "example": "Before or after the lamp, it still controls the lamp.",
+     "pages": [
+      32
+     ]
+    },
+    {
+     "id": "diagram",
+     "name": "Circuit diagram",
+     "formula": "A drawing of a circuit using standard symbols.",
+     "example": "Cell symbol: a long thin line (positive) beside a short thick line (negative).",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "ledsym",
+     "name": "LED symbol",
+     "formula": "A triangle pointing at a bar, with two small arrows pointing away.",
+     "example": "The triangle points the way the current flows.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "dcac",
+     "name": "DC and AC",
+     "formula": "Cells and batteries supply direct current (DC). Wall sockets supply alternating current (AC).",
+     "example": "A torch runs on DC. A home’s wall socket gets AC from a power plant.",
+     "pages": [
+      36
+     ]
+    }
+   ]
+  },
+  {
+   "id": "materials",
+   "title": "Conductors and insulators",
+   "items": [
+    {
+     "id": "tester",
+     "name": "Conduction tester",
+     "formula": "A cell, a lamp and two free wire ends: the lamp glows if the material between them conducts.",
+     "example": "Touch the ends to a key and the lamp glows. Touch them to an eraser and it does not.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "goodc",
+     "name": "Examples of conductors",
+     "formula": "All metals, pencil lead (graphite) and the human body.",
+     "example": "Copper, aluminium foil, a steel spoon.",
+     "pages": [
+      35
+     ]
+    },
+    {
+     "id": "badc",
+     "name": "Examples of insulators",
+     "formula": "Plastic, rubber, dry wood, glass, paper, wax and cork.",
+     "example": "The plastic cover on a wire.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "copper",
+     "name": "Metal for house wiring",
+     "formula": "Silver, copper and gold conduct best. Copper is used because it costs less and is plentiful.",
+     "example": "House wires are copper, not silver.",
+     "pages": [
+      36
+     ]
+    },
+    {
+     "id": "safety",
+     "name": "Electrical safety",
+     "formula": "Conductors carry the current. Insulators protect us from shocks.",
+     "example": "Never touch a switch with wet hands, and never use a wire with damaged covering.",
+     "pages": [
+      36
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "source",
+   "text": "A switch is not the source of current. The cell or battery is. The switch only completes or breaks the path."
+  },
+  {
+   "id": "ledrev",
+   "text": "If an LED does not glow, it may not be faulty. It may simply be connected the wrong way round."
+  },
+  {
+   "id": "openclosed",
+   "text": "ON means a closed circuit and OFF means an open circuit. Do not swap \"open\" and \"closed\"."
+  },
+  {
+   "id": "body",
+   "text": "The human body conducts electricity. That is why a shock is dangerous."
+  }
+ ]
+}

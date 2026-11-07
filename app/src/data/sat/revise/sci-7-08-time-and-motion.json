@@ -1,0 +1,214 @@
+{
+ "chapter": "sci-7-08-time-and-motion",
+ "terms": [
+  {
+   "id": "oscillation",
+   "term": "Oscillation",
+   "meaning": "One full swing of a pendulum: from one end to the other and back.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "period",
+   "term": "Time period",
+   "meaning": "The time a pendulum takes to complete one oscillation.",
+   "pages": [
+    21
+   ]
+  },
+  {
+   "id": "bob",
+   "term": "Bob",
+   "meaning": "The small weight hanging from the thread of a pendulum.",
+   "pages": [
+    21
+   ]
+  },
+  {
+   "id": "speed",
+   "term": "Speed",
+   "meaning": "The distance an object covers in a unit of time.",
+   "pages": [
+    25
+   ]
+  },
+  {
+   "id": "uniform",
+   "term": "Uniform linear motion",
+   "meaning": "Moving in a straight line at a constant speed.",
+   "pages": [
+    28
+   ]
+  },
+  {
+   "id": "nonuniform",
+   "term": "Non-uniform linear motion",
+   "meaning": "Moving in a straight line while the speed keeps changing.",
+   "pages": [
+    28
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "oldclocks",
+   "title": "Old ways of keeping time",
+   "items": [
+    {
+     "id": "sundial",
+     "name": "Sundial",
+     "formula": "Tells the time from the position of a shadow.",
+     "example": "The Samrat Yantra at Jaipur is a giant stone sundial.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "ghati",
+     "name": "Sinking bowl water clock",
+     "formula": "A bowl with a tiny hole fills and sinks in 1 ghati = 24 minutes.",
+     "example": "A day of 24 hours has 60 ghatis, because 60 × 24 minutes = 24 hours.",
+     "pages": [
+      23
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pendulum",
+   "title": "The pendulum",
+   "items": [
+    {
+     "id": "tp",
+     "name": "Finding the time period",
+     "formula": "Time period = Total time ÷ Number of oscillations",
+     "example": "20 oscillations in 30 s: 30 ÷ 20 = 1.5 s",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "length",
+     "name": "What changes the time period?",
+     "formula": "Only the length of the pendulum at a given place. A longer pendulum has a longer time period.",
+     "example": "A heavier bob on the same thread does not change it.",
+     "pages": [
+      22
+     ]
+    },
+    {
+     "id": "galileo",
+     "name": "Galileo and the swinging lamp",
+     "formula": "Galileo timed a swinging lamp with his pulse and saw that each swing took the same time.",
+     "example": "Huygens later used this idea to build the pendulum clock.",
+     "pages": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "id": "units",
+   "title": "Units of time",
+   "items": [
+    {
+     "id": "si",
+     "name": "SI unit of time",
+     "formula": "The second, written s. 1 min = 60 s and 1 h = 3600 s.",
+     "example": "2 h = 7200 s",
+     "pages": [
+      23
+     ]
+    },
+    {
+     "id": "writing",
+     "name": "Writing units correctly",
+     "formula": "Small letters, singular, no full stop, and a space after the number.",
+     "example": "Write 5 s, not 5 secs or 5 sec.",
+     "pages": [
+      23
+     ]
+    }
+   ]
+  },
+  {
+   "id": "speedg",
+   "title": "Speed",
+   "items": [
+    {
+     "id": "formula",
+     "name": "Formula for speed",
+     "formula": "Speed = Total distance ÷ Total time",
+     "example": "150 km in 3 h: 150 ÷ 3 = 50 km/h",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "dist",
+     "name": "Finding distance",
+     "formula": "Distance = Speed × Time",
+     "example": "40 km/h for 2 h: 40 × 2 = 80 km",
+     "pages": [
+      27
+     ]
+    },
+    {
+     "id": "time",
+     "name": "Finding time",
+     "formula": "Time = Distance ÷ Speed",
+     "example": "90 km at 30 km/h: 90 ÷ 30 = 3 h",
+     "pages": [
+      27
+     ]
+    },
+    {
+     "id": "convert",
+     "name": "Changing units of speed",
+     "formula": "1 m/s = 3.6 km/h",
+     "example": "10 m/s × 3.6 = 36 km/h",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "meters",
+     "name": "Speedometer and odometer",
+     "formula": "Speedometer: speed in km/h. Odometer: distance travelled in km.",
+     "example": "A speedometer may read 60 while the odometer reads 12000.",
+     "pages": [
+      28
+     ]
+    },
+    {
+     "id": "testmotion",
+     "name": "Telling the motions apart",
+     "formula": "Equal distances in equal times: uniform. Unequal distances: non-uniform.",
+     "example": "5 m every second is uniform. 2 m, then 5 m, then 9 m is non-uniform.",
+     "pages": [
+      29
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "mass",
+   "text": "A heavier bob does not change the time period. Only the length does."
+  },
+  {
+   "id": "half",
+   "text": "One oscillation is there and back. A swing from one end to the other is only half of it."
+  },
+  {
+   "id": "avg",
+   "text": "Average speed is total distance ÷ total time, not the mean of the speeds. 60 km in 1 h and then 60 km in 3 h is 120 ÷ 4 = 30 km/h."
+  },
+  {
+   "id": "odo",
+   "text": "An odometer shows distance, not speed. A speedometer shows speed."
+  }
+ ]
+}

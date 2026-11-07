@@ -1,0 +1,227 @@
+{
+ "chapter": "sci-8-06-pressure-winds-cyclones",
+ "terms": [
+  {
+   "id": "pressure",
+   "term": "Pressure",
+   "meaning": "Force per unit area.",
+   "pages": [
+    81
+   ]
+  },
+  {
+   "id": "pascal",
+   "term": "Pascal",
+   "meaning": "The SI unit of pressure, written Pa. It is the same as a newton per square metre.",
+   "pages": [
+    82
+   ]
+  },
+  {
+   "id": "atmospheric",
+   "term": "Atmospheric pressure",
+   "meaning": "The pressure exerted by the air around us.",
+   "pages": [
+    86
+   ]
+  },
+  {
+   "id": "eye",
+   "term": "Eye of a cyclone",
+   "meaning": "The calm low-pressure centre that the winds spin around.",
+   "pages": [
+    92
+   ]
+  },
+  {
+   "id": "conductor",
+   "term": "Lightning conductor",
+   "meaning": "A metal rod on a tall building, joined by thick wire to the ground, to carry charge safely down.",
+   "pages": [
+    92
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "solid",
+   "title": "Pressure of solids and liquids",
+   "items": [
+    {
+     "id": "formula",
+     "name": "Formula for pressure",
+     "formula": "Pressure = Force ÷ Area",
+     "example": "100 N on 2 m²: 100 ÷ 2 = 50 Pa",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "bigarea",
+     "name": "Larger area, lower pressure",
+     "formula": "The same force spread out presses less.",
+     "example": "Broad school bag straps, and a porter’s folded cloth on the head.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "smallarea",
+     "name": "Smaller area, higher pressure",
+     "formula": "The same force on a tiny area presses hard.",
+     "example": "A sharp knife and the point of a nail.",
+     "pages": [
+      82
+     ]
+    },
+    {
+     "id": "sides",
+     "name": "Liquids press on the walls too",
+     "formula": "A liquid presses on the bottom and the sides of its container.",
+     "example": "Water spurts from a hole in the side of a bottle.",
+     "pages": [
+      84
+     ]
+    },
+    {
+     "id": "depth",
+     "name": "Pressure and depth",
+     "formula": "Liquid pressure depends on the height of liquid above, not on the width of the vessel.",
+     "example": "Dams are built broader at the base, and water tanks are kept high up.",
+     "pages": [
+      85
+     ]
+    }
+   ]
+  },
+  {
+   "id": "air",
+   "title": "Pressure of air",
+   "items": [
+    {
+     "id": "units",
+     "name": "Units of air pressure",
+     "formula": "1 mb = 1 hPa = 100 Pa",
+     "example": "A pressure of 1000 mb is 100000 Pa.",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "sucker",
+     "name": "Rubber sucker",
+     "formula": "Pressing it out pushes the air out, and the outside air pressure holds it on.",
+     "example": "This is how a hook with a sucker stays on a smooth wall.",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "notcrushed",
+     "name": "Why air does not crush us",
+     "formula": "The pressure inside our bodies balances the air pressure outside.",
+     "example": "Blood and other fluids press outward.",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "wind",
+     "name": "How wind forms",
+     "formula": "Air moves from high pressure to low pressure. Warm air rises and leaves low pressure.",
+     "example": "A bigger pressure difference gives a faster wind.",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "fastair",
+     "name": "Fast wind, low pressure",
+     "formula": "Fast-moving air has lower pressure.",
+     "example": "Blow between two hanging balloons and they move together. Storms can lift weak roofs.",
+     "pages": [
+      89
+     ]
+    }
+   ]
+  },
+  {
+   "id": "storms",
+   "title": "Storms and cyclones",
+   "items": [
+    {
+     "id": "clouds",
+     "name": "Charges in clouds",
+     "formula": "Ice particles and water droplets rub in strong winds, and charges build up.",
+     "example": "Lightning is the sudden flow of these charges.",
+     "pages": [
+      90
+     ]
+    },
+    {
+     "id": "thunder",
+     "name": "Thunder",
+     "formula": "Lightning heats the air so quickly that it expands with a loud sound.",
+     "example": "We see the flash before we hear the sound.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "names",
+     "name": "Local storms in India",
+     "formula": "Kalbaisakhi in West Bengal, Bordoisila in Assam, Mango showers in Kerala and Karnataka.",
+     "example": "These are thunderstorms before the monsoon.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "lightningsafe",
+     "name": "Safety in lightning",
+     "formula": "Crouch low, away from tall trees. A car or bus is safe.",
+     "example": "Do not hold a metal umbrella.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "cyclone",
+     "name": "How a cyclone forms",
+     "formula": "Warm moist air rises over a warm ocean, leaving very low pressure, and the Earth’s rotation spins the air in.",
+     "example": "A storm surge can flood the coast.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "imd",
+     "name": "Tracking cyclones",
+     "formula": "The India Meteorological Department (IMD) follows them using satellites.",
+     "example": "Warnings give people time to reach shelters.",
+     "pages": [
+      93
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "wide",
+   "text": "A wider vessel does not give more pressure at the same depth. Only the height of the liquid counts."
+  },
+  {
+   "id": "highlow",
+   "text": "Wind blows from high pressure to low pressure, not the other way."
+  },
+  {
+   "id": "tree",
+   "text": "Do not shelter under a tall lone tree in a thunderstorm."
+  },
+  {
+   "id": "eyecalm",
+   "text": "The eye of a cyclone is calm. The strongest winds are around it, so the danger is not over."
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "chapter": "sci-8-08-elements-compounds-mixtures",
+ "terms": [
+  {
+   "id": "mixture",
+   "term": "Mixture",
+   "meaning": "Two or more substances mixed without reacting, each keeping its own properties.",
+   "pages": [
+    15
+   ]
+  },
+  {
+   "id": "pure",
+   "term": "Pure substance",
+   "meaning": "A substance made of only one kind of particle.",
+   "pages": [
+    5
+   ]
+  },
+  {
+   "id": "element",
+   "term": "Element",
+   "meaning": "A simplest substance that cannot be broken down further into simpler substances.",
+   "pages": [
+    15
+   ]
+  },
+  {
+   "id": "compound",
+   "term": "Compound",
+   "meaning": "Two or more elements combined chemically in a fixed ratio, with new properties.",
+   "pages": [
+    9
+   ]
+  },
+  {
+   "id": "alloy",
+   "term": "Alloy",
+   "meaning": "A uniform mixture of metals, or of a metal and a non-metal.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "metalloid",
+   "term": "Metalloid",
+   "meaning": "An element with properties in between those of metals and non-metals.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "mineral",
+   "term": "Mineral",
+   "meaning": "A natural solid on the Earth, with a fixed chemical composition.",
+   "pages": [
+    14
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "mixtures",
+   "title": "Mixtures",
+   "items": [
+    {
+     "id": "nonuni",
+     "name": "Non-uniform mixture",
+     "formula": "The parts are not evenly spread and can often be told apart.",
+     "example": "Sprout salad, or sand in water.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "uni",
+     "name": "Uniform mixture",
+     "formula": "The parts are evenly spread throughout.",
+     "example": "Salt in water, air, and alloys.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "air",
+     "name": "Air is a mixture",
+     "formula": "About 78% nitrogen, along with oxygen, argon, carbon dioxide and water vapour.",
+     "example": "It looks the same throughout, so it is a uniform mixture.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "brass",
+     "name": "Brass",
+     "formula": "Copper + Zinc",
+     "example": "A shiny alloy used for vessels.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "bronze",
+     "name": "Bronze",
+     "formula": "Copper (4 parts) + Tin (1 part)",
+     "example": "It is also called Kamsya.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "steel",
+     "name": "Stainless steel",
+     "formula": "Iron + Nickel + Chromium + Carbon",
+     "example": "It resists rust better than iron does.",
+     "pages": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "elements",
+   "title": "Elements",
+   "items": [
+    {
+     "id": "states",
+     "name": "States of elements at room temperature",
+     "formula": "Most are solids, 11 are gases and only 2 are liquids: mercury and bromine.",
+     "example": "There are 118 known elements, so 118 − 11 − 2 = 105 are solids.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "metalloids",
+     "name": "Examples of metalloids",
+     "formula": "Silicon and boron.",
+     "example": "Neither is fully a metal or fully a non-metal.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "molecule",
+     "name": "Molecules of an element",
+     "formula": "In some gases, two atoms join as a molecule.",
+     "example": "Hydrogen is H₂, and oxygen is O₂.",
+     "pages": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compounds",
+   "title": "Compounds",
+   "items": [
+    {
+     "id": "electrolysis",
+     "name": "Splitting water with electricity",
+     "formula": "Water → Hydrogen + Oxygen",
+     "example": "Hydrogen burns with a pop sound. Oxygen makes a flame brighter.",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "heatsugar",
+     "name": "Heating sugar",
+     "formula": "It breaks into black carbon and water, so sugar is a compound.",
+     "example": "This is why overheated sugar turns black.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "ironmix",
+     "name": "Iron and sulfur as a mixture",
+     "formula": "A magnet pulls out the iron. Dilute acid gives hydrogen, with a pop sound.",
+     "example": "The yellow and black parts can both be seen.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "ironcomp",
+     "name": "Iron sulfide as a compound",
+     "formula": "A magnet has no effect. Dilute acid gives a gas that smells of rotten eggs.",
+     "example": "Heating iron and sulfur together forms this new substance.",
+     "pages": [
+      13
+     ]
+    },
+    {
+     "id": "native",
+     "name": "Kinds of minerals",
+     "formula": "Most are compounds, such as quartz and mica. A few are pure elements, such as gold.",
+     "example": "Rocks are mixtures of minerals.",
+     "pages": [
+      14
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "purewords",
+   "text": "Things sold as \"pure\", such as milk or honey, are mixtures in science."
+  },
+  {
+   "id": "compmix",
+   "text": "A compound has new properties and a fixed ratio. A mixture keeps the old ones, in any ratio."
+  },
+  {
+   "id": "airpure",
+   "text": "Air is not a pure substance, though it looks the same everywhere. It is a uniform mixture."
+  }
+ ]
+}

@@ -63,6 +63,56 @@ import constructions from './sat/revise/math-7-14-constructions-and-tilings.json
 import constructionsKn from './sat/revise/math-7-14-constructions-and-tilings.kn.json'
 import findingUnknown from './sat/revise/math-7-15-finding-the-unknown.json'
 import findingUnknownKn from './sat/revise/math-7-15-finding-the-unknown.kn.json'
+import everEvolvingScience7 from './sat/revise/sci-7-01-ever-evolving-science.json'
+import everEvolvingScience7Kn from './sat/revise/sci-7-01-ever-evolving-science.kn.json'
+import acidsBasesNeutral7 from './sat/revise/sci-7-02-acids-bases-neutral.json'
+import acidsBasesNeutral7Kn from './sat/revise/sci-7-02-acids-bases-neutral.kn.json'
+import electricityCircuits7 from './sat/revise/sci-7-03-electricity-circuits.json'
+import electricityCircuits7Kn from './sat/revise/sci-7-03-electricity-circuits.kn.json'
+import metalsNonMetals7 from './sat/revise/sci-7-04-metals-non-metals.json'
+import metalsNonMetals7Kn from './sat/revise/sci-7-04-metals-non-metals.kn.json'
+import changesPhysicalChemical7 from './sat/revise/sci-7-05-changes-physical-chemical.json'
+import changesPhysicalChemical7Kn from './sat/revise/sci-7-05-changes-physical-chemical.kn.json'
+import adolescenceGrowth7 from './sat/revise/sci-7-06-adolescence-growth.json'
+import adolescenceGrowth7Kn from './sat/revise/sci-7-06-adolescence-growth.kn.json'
+import heatTransferWaterCycle7 from './sat/revise/sci-7-07-heat-transfer-water-cycle.json'
+import heatTransferWaterCycle7Kn from './sat/revise/sci-7-07-heat-transfer-water-cycle.kn.json'
+import timeAndMotion7 from './sat/revise/sci-7-08-time-and-motion.json'
+import timeAndMotion7Kn from './sat/revise/sci-7-08-time-and-motion.kn.json'
+import lifeProcessesAnimals7 from './sat/revise/sci-7-09-life-processes-animals.json'
+import lifeProcessesAnimals7Kn from './sat/revise/sci-7-09-life-processes-animals.kn.json'
+import lifeProcessesPlants7 from './sat/revise/sci-7-10-life-processes-plants.json'
+import lifeProcessesPlants7Kn from './sat/revise/sci-7-10-life-processes-plants.kn.json'
+import lightShadowsReflections7 from './sat/revise/sci-7-11-light-shadows-reflections.json'
+import lightShadowsReflections7Kn from './sat/revise/sci-7-11-light-shadows-reflections.kn.json'
+import earthMoonSun7 from './sat/revise/sci-7-12-earth-moon-sun.json'
+import earthMoonSun7Kn from './sat/revise/sci-7-12-earth-moon-sun.kn.json'
+import investigativeWorld8 from './sat/revise/sci-8-01-investigative-world.json'
+import investigativeWorld8Kn from './sat/revise/sci-8-01-investigative-world.kn.json'
+import invisibleLivingWorld8 from './sat/revise/sci-8-02-invisible-living-world.json'
+import invisibleLivingWorld8Kn from './sat/revise/sci-8-02-invisible-living-world.kn.json'
+import healthDiseases8 from './sat/revise/sci-8-03-health-diseases.json'
+import healthDiseases8Kn from './sat/revise/sci-8-03-health-diseases.kn.json'
+import electricityEffects8 from './sat/revise/sci-8-04-electricity-effects.json'
+import electricityEffects8Kn from './sat/revise/sci-8-04-electricity-effects.kn.json'
+import exploringForces8 from './sat/revise/sci-8-05-exploring-forces.json'
+import exploringForces8Kn from './sat/revise/sci-8-05-exploring-forces.kn.json'
+import pressureWindsCyclones8 from './sat/revise/sci-8-06-pressure-winds-cyclones.json'
+import pressureWindsCyclones8Kn from './sat/revise/sci-8-06-pressure-winds-cyclones.kn.json'
+import particulateMatter8 from './sat/revise/sci-8-07-particulate-matter.json'
+import particulateMatter8Kn from './sat/revise/sci-8-07-particulate-matter.kn.json'
+import elementsCompoundsMixtures8 from './sat/revise/sci-8-08-elements-compounds-mixtures.json'
+import elementsCompoundsMixtures8Kn from './sat/revise/sci-8-08-elements-compounds-mixtures.kn.json'
+import solutesSolventsDensity8 from './sat/revise/sci-8-09-solutes-solvents-density.json'
+import solutesSolventsDensity8Kn from './sat/revise/sci-8-09-solutes-solvents-density.kn.json'
+import lightMirrorsLenses8 from './sat/revise/sci-8-10-light-mirrors-lenses.json'
+import lightMirrorsLenses8Kn from './sat/revise/sci-8-10-light-mirrors-lenses.kn.json'
+import keepingTimeSkies8 from './sat/revise/sci-8-11-keeping-time-skies.json'
+import keepingTimeSkies8Kn from './sat/revise/sci-8-11-keeping-time-skies.kn.json'
+import natureInHarmony8 from './sat/revise/sci-8-12-nature-in-harmony.json'
+import natureInHarmony8Kn from './sat/revise/sci-8-12-nature-in-harmony.kn.json'
+import earthLifeSustainingPlanet8 from './sat/revise/sci-8-13-earth-life-sustaining-planet.json'
+import earthLifeSustainingPlanet8Kn from './sat/revise/sci-8-13-earth-life-sustaining-planet.kn.json'
 import type { SatChapter, SatTopic } from './sat'
 
 export interface RevisionTerm {
@@ -132,6 +182,31 @@ export const REVISIONS: { en: Revision; kn: RevisionKn }[] = [
   { en: connectingDots, kn: connectingDotsKn },
   { en: constructions, kn: constructionsKn },
   { en: findingUnknown, kn: findingUnknownKn },
+  { en: everEvolvingScience7, kn: everEvolvingScience7Kn },
+  { en: acidsBasesNeutral7, kn: acidsBasesNeutral7Kn },
+  { en: electricityCircuits7, kn: electricityCircuits7Kn },
+  { en: metalsNonMetals7, kn: metalsNonMetals7Kn },
+  { en: changesPhysicalChemical7, kn: changesPhysicalChemical7Kn },
+  { en: adolescenceGrowth7, kn: adolescenceGrowth7Kn },
+  { en: heatTransferWaterCycle7, kn: heatTransferWaterCycle7Kn },
+  { en: timeAndMotion7, kn: timeAndMotion7Kn },
+  { en: lifeProcessesAnimals7, kn: lifeProcessesAnimals7Kn },
+  { en: lifeProcessesPlants7, kn: lifeProcessesPlants7Kn },
+  { en: lightShadowsReflections7, kn: lightShadowsReflections7Kn },
+  { en: earthMoonSun7, kn: earthMoonSun7Kn },
+  { en: investigativeWorld8, kn: investigativeWorld8Kn },
+  { en: invisibleLivingWorld8, kn: invisibleLivingWorld8Kn },
+  { en: healthDiseases8, kn: healthDiseases8Kn },
+  { en: electricityEffects8, kn: electricityEffects8Kn },
+  { en: exploringForces8, kn: exploringForces8Kn },
+  { en: pressureWindsCyclones8, kn: pressureWindsCyclones8Kn },
+  { en: particulateMatter8, kn: particulateMatter8Kn },
+  { en: elementsCompoundsMixtures8, kn: elementsCompoundsMixtures8Kn },
+  { en: solutesSolventsDensity8, kn: solutesSolventsDensity8Kn },
+  { en: lightMirrorsLenses8, kn: lightMirrorsLenses8Kn },
+  { en: keepingTimeSkies8, kn: keepingTimeSkies8Kn },
+  { en: natureInHarmony8, kn: natureInHarmony8Kn },
+  { en: earthLifeSustainingPlanet8, kn: earthLifeSustainingPlanet8Kn },
 ]
 
 /** A sheet in the given language; Kannada that is missing falls back to English. */

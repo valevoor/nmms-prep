@@ -1,0 +1,240 @@
+{
+ "chapter": "sci-8-05-exploring-forces",
+ "terms": [
+  {
+   "id": "force",
+   "term": "Force",
+   "meaning": "A push or pull on an object, from its interaction with another object.",
+   "pages": [
+    63
+   ]
+  },
+  {
+   "id": "friction",
+   "term": "Friction",
+   "meaning": "A force that acts against an object moving or trying to move over a surface.",
+   "pages": [
+    68
+   ]
+  },
+  {
+   "id": "gravity",
+   "term": "Gravitational force",
+   "meaning": "The force with which the Earth attracts objects. It is always attractive.",
+   "pages": [
+    71
+   ]
+  },
+  {
+   "id": "electrostatic",
+   "term": "Electrostatic force",
+   "meaning": "The force exerted by a charged body on another body, charged or not.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "weight",
+   "term": "Weight",
+   "meaning": "The force with which the Earth pulls an object towards itself, measured in newtons.",
+   "pages": [
+    72
+   ]
+  },
+  {
+   "id": "mass",
+   "term": "Mass",
+   "meaning": "The amount of matter in an object, measured in grams or kilograms.",
+   "pages": [
+    75
+   ]
+  },
+  {
+   "id": "upthrust",
+   "term": "Upthrust",
+   "meaning": "The upward force from a liquid on an object in it.",
+   "pages": [
+    76
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "effects",
+   "title": "What forces do",
+   "items": [
+    {
+     "id": "change",
+     "name": "Effects of a force",
+     "formula": "It can change speed, direction of motion, or shape.",
+     "example": "A kick changes a ball’s speed and direction. A press changes a clay ball’s shape.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "balanced",
+     "name": "Balanced forces",
+     "formula": "Equal forces in opposite directions cause no change in motion.",
+     "example": "In a tug-of-war with no winner, the rope stays still.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "interact",
+     "name": "Force needs two objects",
+     "formula": "A force comes from an interaction, and it stops when the interaction stops.",
+     "example": "A hand pushes a door, and the door pushes back on the hand.",
+     "pages": [
+      65
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types",
+   "title": "Kinds of force",
+   "items": [
+    {
+     "id": "contact",
+     "name": "Contact forces",
+     "formula": "Muscular force and friction need contact.",
+     "example": "Lifting a bag uses muscular force.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "noncontact",
+     "name": "Non-contact forces",
+     "formula": "Magnetic, electrostatic and gravitational forces act at a distance.",
+     "example": "A magnet pulls a pin before touching it.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "rough",
+     "name": "What friction depends on",
+     "formula": "The roughness of the two surfaces in contact.",
+     "example": "A ball rolls farther on glass than on carpet.",
+     "pages": [
+      68
+     ]
+    },
+    {
+     "id": "streamline",
+     "name": "Streamlined shapes",
+     "formula": "Air and water also resist motion, so a pointed shape reduces this.",
+     "example": "Aeroplanes, ships and high-speed trains are shaped this way.",
+     "pages": [
+      68
+     ]
+    },
+    {
+     "id": "magnetrule",
+     "name": "Magnetic poles",
+     "formula": "Like poles repel. Unlike poles attract.",
+     "example": "Two north poles push apart.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "charges",
+     "name": "Static charges",
+     "formula": "Like charges repel. Unlike charges attract.",
+     "example": "A balloon rubbed on hair picks up bits of paper.",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "upward",
+     "name": "Ball thrown upward",
+     "formula": "It slows down, stops for an instant at the top, then speeds up as it falls.",
+     "example": "Gravity pulls downward all the way.",
+     "pages": [
+      71
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wm",
+   "title": "Weight and mass",
+   "items": [
+    {
+     "id": "measure",
+     "name": "Instruments",
+     "formula": "Weight: spring balance. Mass: beam balance.",
+     "example": "A spring balance is marked in newtons.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "moon",
+     "name": "Weight on other worlds",
+     "formula": "A mass of 1 kg weighs about 10 N on Earth and about 1.6 N on the Moon.",
+     "example": "So 5 kg weighs about 50 N on Earth and 8 N on the Moon.",
+     "pages": [
+      75
+     ]
+    }
+   ]
+  },
+  {
+   "id": "float",
+   "title": "Floating and sinking",
+   "items": [
+    {
+     "id": "archimedes",
+     "name": "Archimedes’ principle",
+     "formula": "Upthrust = Weight of the liquid displaced",
+     "example": "An object that displaces 3 N of water feels 3 N of upthrust.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "floats",
+     "name": "When an object floats",
+     "formula": "The liquid it displaces weighs the same as the object. If less, it sinks.",
+     "example": "A wooden block floats. A stone sinks.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "pumice",
+     "name": "Pumice stone",
+     "formula": "This volcanic rock floats because it is full of air pockets.",
+     "example": "It is one rock that does not sink.",
+     "pages": [
+      76
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "wmsame",
+   "text": "Weight and mass are different. Mass is the same everywhere, but weight changes from place to place."
+  },
+  {
+   "id": "kg",
+   "text": "Weight is measured in newtons, not kilograms. Kilograms are for mass."
+  },
+  {
+   "id": "frictiondir",
+   "text": "Friction acts against the motion, not along with it."
+  },
+  {
+   "id": "uncharged",
+   "text": "A charged body can also attract an uncharged one, as with bits of paper."
+  }
+ ]
+}

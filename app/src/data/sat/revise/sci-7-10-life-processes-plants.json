@@ -1,0 +1,190 @@
+{
+ "chapter": "sci-7-10-life-processes-plants",
+ "terms": [
+  {
+   "id": "photosynthesis",
+   "term": "Photosynthesis",
+   "meaning": "The way plants make food: glucose and oxygen from carbon dioxide and water, using sunlight and chlorophyll.",
+   "pages": [
+    54
+   ]
+  },
+  {
+   "id": "chlorophyll",
+   "term": "Chlorophyll",
+   "meaning": "The green pigment in leaves, needed for photosynthesis.",
+   "pages": [
+    52
+   ]
+  },
+  {
+   "id": "stomata",
+   "term": "Stomata",
+   "meaning": "Tiny pores on leaves through which oxygen and carbon dioxide pass.",
+   "pages": [
+    59
+   ]
+  },
+  {
+   "id": "xylem",
+   "term": "Xylem",
+   "meaning": "Thin tubes that carry water and minerals up from the roots.",
+   "pages": [
+    60
+   ]
+  },
+  {
+   "id": "phloem",
+   "term": "Phloem",
+   "meaning": "Thin tubes that carry food from the leaves to all parts of the plant.",
+   "pages": [
+    60
+   ]
+  },
+  {
+   "id": "variegated",
+   "term": "Variegated leaf",
+   "meaning": "A leaf with both green and non-green patches.",
+   "pages": [
+    53
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "photo",
+   "title": "Photosynthesis",
+   "items": [
+    {
+     "id": "equation",
+     "name": "Equation of photosynthesis",
+     "formula": "Carbon dioxide + Water → Glucose + Oxygen (with sunlight and chlorophyll)",
+     "example": "Glucose is then stored as starch in leaves and in parts such as potatoes.",
+     "pages": [
+      58
+     ]
+    },
+    {
+     "id": "starchtest",
+     "name": "Testing a leaf for starch",
+     "formula": "Boil in water → warm in alcohol over a water bath → add iodine. Blue-black means starch.",
+     "example": "Alcohol removes the green colour, so the blue-black can be seen.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "sunneeded",
+     "name": "Proving light and chlorophyll are needed",
+     "formula": "Only the green patches kept in sunlight turn blue-black.",
+     "example": "The white patches of a variegated leaf do not, and neither does a plant kept in the dark.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "co2needed",
+     "name": "Proving carbon dioxide is needed",
+     "formula": "Half a leaf is kept in a bottle with caustic soda, which absorbs carbon dioxide. That half makes no starch.",
+     "example": "The half outside the bottle turns blue-black. The half inside does not.",
+     "pages": [
+      55
+     ]
+    },
+    {
+     "id": "oxygengas",
+     "name": "Proving oxygen is released",
+     "formula": "A water plant in sunlight gives off bubbles of a gas that makes a burning matchstick flare up.",
+     "example": "No bubbles appear in the dark.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "redleaves",
+     "name": "Red, violet and brown leaves",
+     "formula": "They also have chlorophyll and make food. Other pigments hide the green.",
+     "example": "The iodine test still shows starch in them.",
+     "pages": [
+      54
+     ]
+    }
+   ]
+  },
+  {
+   "id": "transport",
+   "title": "Transport in plants",
+   "items": [
+    {
+     "id": "redwater",
+     "name": "Twig in coloured water",
+     "formula": "Water rises through the xylem, so the veins and white petals turn red.",
+     "example": "The colour shows the path that water takes.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "foodmove",
+     "name": "Food in storage parts",
+     "formula": "Phloem brings food from the leaves to the roots, fruits, seeds and tubers.",
+     "example": "A potato stores food that came from the leaves.",
+     "pages": [
+      62
+     ]
+    }
+   ]
+  },
+  {
+   "id": "resp",
+   "title": "Respiration in plants",
+   "items": [
+    {
+     "id": "respeq",
+     "name": "Equation of plant respiration",
+     "formula": "Glucose + Oxygen → Carbon dioxide + Water + Energy",
+     "example": "It is the same reaction as in animals.",
+     "pages": [
+      58
+     ]
+    },
+    {
+     "id": "seeds",
+     "name": "Germinating seeds",
+     "formula": "They give off carbon dioxide, which turns lime water milky.",
+     "example": "Soaked moong seeds kept in a closed flask show this.",
+     "pages": [
+      61
+     ]
+    },
+    {
+     "id": "balance",
+     "name": "Bottle garden",
+     "formula": "Gases are shared: oxygen from photosynthesis goes to respiration, and carbon dioxide from respiration goes to photosynthesis.",
+     "example": "A water plant and a snail together in a tube in sunlight.",
+     "pages": [
+      64
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "dayonly",
+   "text": "Plants do not respire only at night. All parts respire all the time, while photosynthesis needs sunlight."
+  },
+  {
+   "id": "xp",
+   "text": "Do not swap them: xylem carries water upward, and phloem carries food."
+  },
+  {
+   "id": "alcohol",
+   "text": "Never heat alcohol directly over a flame. Use a water bath."
+  },
+  {
+   "id": "green",
+   "text": "A leaf that is not green can still make food, if it has hidden chlorophyll."
+  }
+ ]
+}

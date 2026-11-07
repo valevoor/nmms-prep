@@ -1,0 +1,285 @@
+{
+ "chapter": "sci-7-04-metals-non-metals",
+ "terms": [
+  {
+   "id": "lustre",
+   "term": "Lustre",
+   "meaning": "The shine of a metal, seen best on a freshly cut or polished surface.",
+   "pages": [
+    42
+   ]
+  },
+  {
+   "id": "malleable",
+   "term": "Malleable",
+   "meaning": "Can be beaten into thin sheets without breaking.",
+   "pages": [
+    42
+   ]
+  },
+  {
+   "id": "ductile",
+   "term": "Ductile",
+   "meaning": "Can be drawn into thin wires.",
+   "pages": [
+    44
+   ]
+  },
+  {
+   "id": "sonorous",
+   "term": "Sonorous",
+   "meaning": "Makes a ringing sound when struck.",
+   "pages": [
+    45
+   ]
+  },
+  {
+   "id": "brittle",
+   "term": "Brittle",
+   "meaning": "Breaks into pieces or powder when hit.",
+   "pages": [
+    44
+   ]
+  },
+  {
+   "id": "corrosion",
+   "term": "Corrosion",
+   "meaning": "The slow damage of a metal surface by moist air, water or chemicals.",
+   "pages": [
+    50
+   ]
+  },
+  {
+   "id": "galvan",
+   "term": "Galvanisation",
+   "meaning": "Coating iron with a thin layer of zinc so that it does not rust.",
+   "pages": [
+    50
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "compare",
+   "title": "Metals and non-metals compared",
+   "items": [
+    {
+     "id": "appearance",
+     "name": "Shine of metals and non-metals",
+     "formula": "Metals are generally lustrous. Most non-metals are dull.",
+     "example": "Polished copper shines. A lump of coal does not.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "hammer",
+     "name": "Hitting with a hammer",
+     "formula": "Metals flatten. Solid non-metals break into pieces.",
+     "example": "Aluminium becomes foil. Sulfur turns to powder.",
+     "pages": [
+      42
+     ]
+    },
+    {
+     "id": "wires",
+     "name": "Drawing into wires",
+     "formula": "Metals can be drawn into wires. Non-metals cannot.",
+     "example": "Copper wires, and the strings of a sitar.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "sound",
+     "name": "Sound when struck",
+     "formula": "Metals ring. Non-metals give a dull thud.",
+     "example": "School bells are made of metal.",
+     "pages": [
+      46
+     ]
+    },
+    {
+     "id": "conduct",
+     "name": "Heat and electricity",
+     "formula": "Metals are good conductors of both. Non-metals are generally poor conductors.",
+     "example": "A pan is metal, and its handle is wood or plastic.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "softmetals",
+     "name": "Metals that break the rules",
+     "formula": "Sodium and potassium are soft enough to cut with a knife. Mercury is a liquid at room temperature.",
+     "example": "Mercury has been used in thermometers.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "gold",
+     "name": "How ductile is gold?",
+     "formula": "1 g of gold can be drawn into a wire about 2 km long.",
+     "example": "So 3 g could make about 6 km of wire.",
+     "pages": [
+      44
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rust",
+   "title": "Rust and corrosion",
+   "items": [
+    {
+     "id": "needs",
+     "name": "What iron needs to rust",
+     "formula": "Both air and water.",
+     "example": "A nail in moist air rusts. A nail in dry air does not, and neither does a nail under boiled water topped with oil.",
+     "pages": [
+      49
+     ]
+    },
+    {
+     "id": "colours",
+     "name": "Colour of corrosion",
+     "formula": "Iron: brown. Copper: green. Silver: black.",
+     "example": "An old copper vessel gets a green coat.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "prevent",
+     "name": "Preventing rust",
+     "formula": "Keep air and water away: paint, oil, grease or galvanise.",
+     "example": "A gate is painted so that it does not rust.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "pillar",
+     "name": "Iron Pillar of Delhi",
+     "formula": "Built in the time of Chandragupta II, more than 1600 years ago, with hardly any rust.",
+     "example": "It shows the metal-working skill of ancient India.",
+     "pages": [
+      50
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oxides",
+   "title": "Oxides",
+   "items": [
+    {
+     "id": "metaloxide",
+     "name": "Oxides of metals",
+     "formula": "Generally basic: they turn red litmus blue.",
+     "example": "Magnesium burns with a dazzling white flame to give magnesium oxide, which is basic.",
+     "pages": [
+      51
+     ]
+    },
+    {
+     "id": "nonmetaloxide",
+     "name": "Oxides of non-metals",
+     "formula": "Generally acidic: they turn blue litmus red.",
+     "example": "Burning sulfur gives sulfur dioxide, which forms sulfurous acid in water.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "storage",
+     "name": "Storing reactive elements",
+     "formula": "Sodium is kept in kerosene. Phosphorus is kept in water.",
+     "example": "Sodium reacts fiercely with air and water, and phosphorus catches fire in air.",
+     "pages": [
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uses",
+   "title": "Uses",
+   "items": [
+    {
+     "id": "oxygen",
+     "name": "Oxygen",
+     "formula": "Needed for breathing and for burning.",
+     "example": "All living beings depend on it.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "nitrogen",
+     "name": "Nitrogen",
+     "formula": "Used to make fertilisers.",
+     "example": "It helps plants to grow.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "chlorine",
+     "name": "Chlorine",
+     "formula": "Used to purify water.",
+     "example": "It is added to clean drinking water.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "iodine",
+     "name": "Iodine",
+     "formula": "A solution of it is an antiseptic for wounds.",
+     "example": "It is put on a cut.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "special",
+     "name": "Zirconium and titanium",
+     "formula": "Zirconium: atomic energy. Titanium: aerospace.",
+     "example": "Both are special metals with modern uses.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "elements",
+     "name": "Elements",
+     "formula": "Metals and non-metals are elements: 118 are known, and none breaks down into simpler substances.",
+     "example": "Plastic, glass and wood are not elements.",
+     "pages": [
+      53
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "rusting",
+   "text": "Water alone does not rust iron, and neither does dry air. It takes both together."
+  },
+  {
+   "id": "oxide",
+   "text": "Do not swap the oxides: metal oxide is basic, non-metal oxide is acidic."
+  },
+  {
+   "id": "wood",
+   "text": "Wood is neither malleable nor brittle, and it is not an element either."
+  },
+  {
+   "id": "store",
+   "text": "Sodium goes in kerosene and phosphorus in water, not the other way round."
+  }
+ ]
+}

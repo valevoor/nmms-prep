@@ -1,0 +1,189 @@
+{
+ "chapter": "sci-8-07-particulate-matter",
+ "terms": [
+  {
+   "id": "particles",
+   "term": "Constituent particles",
+   "meaning": "The extremely small particles that all matter is made of.",
+   "pages": [
+    100
+   ]
+  },
+  {
+   "id": "interspace",
+   "term": "Interparticle space",
+   "meaning": "The gap between the particles of a substance.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "attraction",
+   "term": "Interparticle attraction",
+   "meaning": "The force that holds the particles together.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "melting",
+   "term": "Melting point",
+   "meaning": "The lowest temperature at which a solid melts into a liquid at atmospheric pressure.",
+   "pages": [
+    102
+   ]
+  },
+  {
+   "id": "fluid",
+   "term": "Fluid",
+   "meaning": "A liquid or gas: anything that can flow.",
+   "pages": [
+    106
+   ]
+  },
+  {
+   "id": "motion",
+   "term": "Constant motion of particles",
+   "meaning": "Particles of liquids and gases keep moving, so one substance spreads through another.",
+   "pages": [
+    110
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "states",
+   "title": "The three states",
+   "items": [
+    {
+     "id": "solid",
+     "name": "Particles in a solid",
+     "formula": "Closely packed with the strongest attraction. They only vibrate in place.",
+     "example": "A solid has a fixed shape and volume, and it is hard to compress.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "liquid",
+     "name": "Particles in a liquid",
+     "formula": "Attraction is a little weaker, so particles move within a limited space.",
+     "example": "A liquid has a fixed volume but takes the shape of its container.",
+     "pages": [
+      103
+     ]
+    },
+    {
+     "id": "gas",
+     "name": "Particles in a gas",
+     "formula": "Attraction is negligible and the spaces are the largest, so particles move freely.",
+     "example": "A gas has no fixed shape or volume, and it can be compressed easily.",
+     "pages": [
+      106
+     ]
+    },
+    {
+     "id": "syringe",
+     "name": "Syringe test",
+     "formula": "With the nozzle closed, air can be pushed in but water cannot.",
+     "example": "This shows that gas particles have much more space between them.",
+     "pages": [
+      107
+     ]
+    },
+    {
+     "id": "points",
+     "name": "Melting points",
+     "formula": "Ice 0 °C, urea 133 °C, iron 1538 °C.",
+     "example": "Iron’s particles are held much more strongly than those of ice.",
+     "pages": [
+      103
+     ]
+    },
+    {
+     "id": "boil",
+     "name": "Evaporation and boiling",
+     "formula": "Evaporation is slow, from the surface, at all temperatures. Boiling happens at the boiling point.",
+     "example": "Wet clothes dry without being boiled.",
+     "pages": [
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "id": "evidence",
+   "title": "Evidence for particles",
+   "items": [
+    {
+     "id": "sugar",
+     "name": "Sugar in water",
+     "formula": "The level barely rises, because sugar particles go into the spaces between water particles.",
+     "example": "The sugar seems to disappear, but the water tastes sweet.",
+     "pages": [
+      100
+     ]
+    },
+    {
+     "id": "kmno4",
+     "name": "Potassium permanganate in water",
+     "formula": "One grain slowly colours all the water, because the particles keep moving.",
+     "example": "It spreads faster in hot water.",
+     "pages": [
+      109
+     ]
+    },
+    {
+     "id": "perfume",
+     "name": "Smell across a room",
+     "formula": "Perfume particles mix with moving air and spread in all directions.",
+     "example": "An incense stick lit in a corner soon fills the room.",
+     "pages": [
+      105
+     ]
+    },
+    {
+     "id": "grind",
+     "name": "Grinding chalk",
+     "formula": "It only makes smaller grains, each still holding many particles of chalk.",
+     "example": "This is a physical change.",
+     "pages": [
+      99
+     ]
+    },
+    {
+     "id": "kanad",
+     "name": "Acharya Kanad",
+     "formula": "Taught long ago that matter is made of tiny particles called parmanu.",
+     "example": "He wrote about this in the Vaisheshika Sutras.",
+     "pages": [
+      101
+     ]
+    },
+    {
+     "id": "soap",
+     "name": "How soap cleans",
+     "formula": "One end of a soap particle holds oil and the other end holds water.",
+     "example": "The oil is lifted off the cloth in the wash.",
+     "pages": [
+      111
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "strength",
+   "text": "Attraction is strongest in solids and weakest in gases, not the other way round."
+  },
+  {
+   "id": "stop",
+   "text": "Particles in a solid are not completely still. They vibrate about fixed positions."
+  },
+  {
+   "id": "spm",
+   "text": "Dust and soot specks are not single particles of matter. Each holds a huge number of them."
+  }
+ ]
+}

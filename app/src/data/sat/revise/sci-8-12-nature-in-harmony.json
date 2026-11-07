@@ -1,0 +1,221 @@
+{
+ "chapter": "sci-8-12-nature-in-harmony",
+ "terms": [
+  {
+   "id": "habitat",
+   "term": "Habitat",
+   "meaning": "A place that gives an organism the right conditions to live and grow.",
+   "pages": [
+    76
+   ]
+  },
+  {
+   "id": "biotic",
+   "term": "Biotic components",
+   "meaning": "The living things in a habitat.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "abiotic",
+   "term": "Abiotic components",
+   "meaning": "The non-living things in a habitat, such as air, water and sunlight.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "population",
+   "term": "Population",
+   "meaning": "A group of individuals of the same species in a habitat at one time.",
+   "pages": [
+    78
+   ]
+  },
+  {
+   "id": "community",
+   "term": "Community",
+   "meaning": "Different populations living together in one habitat.",
+   "pages": [
+    79
+   ]
+  },
+  {
+   "id": "ecosystem",
+   "term": "Ecosystem",
+   "meaning": "A community together with the non-living parts of its area, all interacting.",
+   "pages": [
+    82
+   ]
+  },
+  {
+   "id": "decomposer",
+   "term": "Decomposer",
+   "meaning": "A fungus or bacterium that breaks dead things into simple nutrients for the soil.",
+   "pages": [
+    86
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "interact",
+   "title": "Interactions between organisms",
+   "items": [
+    {
+     "id": "mutualism",
+     "name": "Mutualism",
+     "formula": "Both organisms benefit.",
+     "example": "Bees get nectar and flowers get pollinated.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "commensalism",
+     "name": "Commensalism",
+     "formula": "One benefits, and the other is neither helped nor harmed.",
+     "example": "An orchid grows on a tree branch for support.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "parasitism",
+     "name": "Parasitism",
+     "formula": "One benefits while living on or in a host, and the host is harmed.",
+     "example": "A tick on a dog, or a roundworm in the intestine.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "predation",
+     "name": "Predation",
+     "formula": "One organism hunts and eats another.",
+     "example": "A lion and a deer.",
+     "pages": [
+      86
+     ]
+    },
+    {
+     "id": "competition",
+     "name": "Competition",
+     "formula": "Organisms struggle for the same limited resources.",
+     "example": "Trees competing for sunlight, or birds for nest sites.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "pond",
+     "name": "Effects that spread",
+     "formula": "Change one part and others change too.",
+     "example": "Fish eat dragonfly young, so more bees survive and shore plants make more seeds.",
+     "pages": [
+      77
+     ]
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": "Who eats whom",
+   "items": [
+    {
+     "id": "producers",
+     "name": "Producers",
+     "formula": "Green plants and algae, which make their own food.",
+     "example": "Grass is a producer.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "consumers",
+     "name": "Consumers",
+     "formula": "Herbivores eat plants, carnivores eat animals, and omnivores eat both.",
+     "example": "Deer, tiger and crow.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "chain",
+     "name": "Food chain",
+     "formula": "A line of who eats whom, starting from a producer.",
+     "example": "Grass → Grasshopper → Frog → Snake → Eagle",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "web",
+     "name": "Food web",
+     "formula": "Food chains linked together, because most organisms eat or are eaten by several others.",
+     "example": "A frog may eat many insects and be eaten by a snake or a bird.",
+     "pages": [
+      85
+     ]
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": "Protecting ecosystems",
+   "items": [
+    {
+     "id": "kinds",
+     "name": "Kinds of ecosystem",
+     "formula": "Aquatic, terrestrial and human-made.",
+     "example": "A pond, a forest and a farm.",
+     "pages": [
+      82
+     ]
+    },
+    {
+     "id": "mangrove",
+     "name": "Mangroves",
+     "formula": "They slow down storms and floods, and they absorb carbon dioxide.",
+     "example": "The Sundarbans is a UNESCO World Heritage Site.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "protected",
+     "name": "Protected areas",
+     "formula": "National parks, wildlife sanctuaries and biosphere reserves.",
+     "example": "Jim Corbett and Manas are national parks, and the Nilgiris is a biosphere reserve.",
+     "pages": [
+      89
+     ]
+    },
+    {
+     "id": "organic",
+     "name": "Farming with care",
+     "formula": "Too many chemicals harm the soil. Compost, crop variety and natural methods help.",
+     "example": "Kunapa Jala is an old liquid fertiliser from fermented residues.",
+     "pages": [
+      91
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "popcomm",
+   "text": "A population is one species. A community is many species together."
+  },
+  {
+   "id": "comparas",
+   "text": "In parasitism the host is harmed. In commensalism the other organism is not."
+  },
+  {
+   "id": "abio",
+   "text": "Water, soil and sunlight are part of an ecosystem too, though they are not alive."
+  }
+ ]
+}
