@@ -28,6 +28,8 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      // src/lib/update.ts registers the service worker, checks for new versions and reloads the page.
+      injectRegister: false,
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'NMMS Prep: Mental Ability',
@@ -46,6 +48,8 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // A new version takes over open pages too, so src/lib/update.ts sees it and reloads them.
+        clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,svg,png,json}'],
         // The past papers are bundled into the app script, which passed the default 2 MiB with the fourth
         // paper. Anything over the limit is left out of the offline cache, so keep it above the script's size.
