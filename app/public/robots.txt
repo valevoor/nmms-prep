@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valevoor.github.io/nmms-prep/sitemap.xml
