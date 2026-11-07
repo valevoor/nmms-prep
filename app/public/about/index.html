@@ -41,6 +41,8 @@
     <script>
       // Same saved theme as the app (default Light). Kept in sync with src/lib/theme.ts.
       try {
+        // This page's links into the app use #/, which must now open the app (see index.html).
+        sessionStorage.setItem('nmms-in-app', '1')
         var t = localStorage.getItem('nmms-theme')
         var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
         document.documentElement.dataset.theme = dark ? 'dark' : 'light'
@@ -70,9 +72,6 @@
         <h2>Who made this app?</h2>
         <p class="small"><a href="https://www.linkedin.com/in/vishwanathalevoor/" rel="me noopener">Vishwanath</a>, an NMMS teaching volunteer, developed this app. For feedback or support, you can reach Vishwanath on <a href="https://www.linkedin.com/in/vishwanathalevoor/" rel="me noopener">LinkedIn</a>.</p>
       </section>
-
-      <a class="btn" href="../#/">Start practising</a>
-      <p class="about-note"><a class="go" href="../welcome/">See what the app offers</a></p>
     </main>
     <script>
       // One anonymous visit count, as in src/lib/analytics.ts. Live site only; fails silently offline.
