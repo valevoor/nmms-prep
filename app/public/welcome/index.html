@@ -1,0 +1,175 @@
+<!doctype html>
+<!-- The landing page: index.html sends new visitors here. A plain page, not an app route: Google treats #/ routes
+     as the home page, so this needs its own URL and has to show its text without JavaScript.
+     landing.test.ts checks its numbers and tool links against the app's data. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NMMS Prep: Free MAT and SAT Practice App for Class 8</title>
+    <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 59 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
+    <link rel="canonical" href="https://valevoor.github.io/nmms-prep/welcome/" />
+    <meta name="theme-color" content="#2f5bea" />
+    <link rel="icon" type="image/svg+xml" href="../icon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NMMS Prep" />
+    <meta property="og:title" content="NMMS Prep: Free MAT and SAT Practice App for Class 8" />
+    <meta property="og:description" content="Free NMMS exam practice with 41 MAT chapters, 59 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
+    <meta property="og:url" content="https://valevoor.github.io/nmms-prep/welcome/" />
+    <meta property="og:image" content="https://valevoor.github.io/nmms-prep/icon-512.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "url": "https://valevoor.github.io/nmms-prep/welcome/",
+        "name": "NMMS Prep: Free MAT and SAT Practice App for Class 8",
+        "dateModified": "2026-11-07",
+        "mainEntity": {
+          "@type": "WebApplication",
+          "name": "NMMS Prep",
+          "url": "https://valevoor.github.io/nmms-prep/",
+          "description": "Free practice app for the MAT and SAT papers of the National Means-cum-Merit Scholarship (NMMS) exam, for Class 8 students and teachers.",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires a web browser. Works offline after the first visit.",
+          "inLanguage": ["en", "kn"],
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+          "author": {
+            "@type": "Person",
+            "name": "Vishwanath",
+            "description": "NMMS teaching volunteer",
+            "sameAs": "https://www.linkedin.com/in/vishwanathalevoor/"
+          }
+        }
+      }
+    </script>
+    <script>
+      // Same saved theme as the app (default Light). Kept in sync with src/lib/theme.ts.
+      try {
+        // Seen once: from now on the bare URL opens the app (see index.html).
+        localStorage.setItem('nmms-seen-landing', '1')
+        var t = localStorage.getItem('nmms-theme')
+        var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <link rel="stylesheet" href="../page.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../#/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
+      <a class="open" href="../#/">Open the app →</a>
+    </header>
+    <main>
+      <section>
+        <span class="tag">Free · No sign-up · Works offline</span>
+        <h1>Free NMMS practice app for Class 8</h1>
+        <p>Prepare for both papers of the National Means-cum-Merit Scholarship exam, MAT and SAT, on your phone or on the classroom projector.</p>
+        <a class="btn" href="../#/">Start practising</a>
+        <p class="updated muted">Updated for the 2026-27 syllabus, with question papers up to 2025-26.</p>
+      </section>
+
+      <section class="card">
+        <h2>MAT: Mental Ability Test</h2>
+        <p class="muted small">Learn the reasoning, then practise until it is easy.</p>
+        <ul class="small">
+          <li>41 chapters, from number series to paper folding</li>
+          <li>Picture tips and step-by-step worked examples</li>
+          <li>New practice questions whenever you run out</li>
+          <li>Quick tests, and a list of your mistakes to retry</li>
+        </ul>
+        <a class="go" href="../#/">See the MAT chapters →</a>
+      </section>
+
+      <section class="card">
+        <h2>SAT: Scholastic Aptitude Test</h2>
+        <p class="muted small">Revise maths, science and social science by topic.</p>
+        <ul class="small">
+          <li>59 revision topics with textbook chapter and page references</li>
+          <li>540 past exam questions from six years</li>
+          <li>Worked solutions for maths and science</li>
+        </ul>
+        <a class="go" href="../#/?test=sat">See the SAT topics →</a>
+      </section>
+
+      <section class="card">
+        <h2>Learn by doing</h2>
+        <p class="muted small">Try the hard topics with your own hands.</p>
+        <ul class="small">
+          <li>Try a mirror or water: type letters or place shapes, and see their image</li>
+          <li>Fold and punch: fold a sheet, cut holes, then open it out to see where they land</li>
+          <li>Draw and fold: draw on a see-through sheet and watch it fold over in 3D</li>
+          <li>Fold the dice: fold an open dice into a cube and see which faces are opposite</li>
+          <li>Cut the cube: slice a cube in 3D and count the pieces</li>
+          <li>Shapes and sizes: see perimeter, area, volume and nets step by step</li>
+        </ul>
+        <div class="go-row">
+          <a class="go" href="../#/t/mirror-image/try">Try a mirror →</a>
+          <a class="go" href="../#/t/paper-punch/punch">Fold and punch →</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>For teachers</h2>
+        <p class="small">Classroom mode shows MAT questions in large type on a projector, one at a time, with a timer and an explanation for each. It needs no accounts.</p>
+      </section>
+
+      <section class="questions">
+        <h2 class="questions-title">Questions and answers</h2>
+
+        <div class="q">
+          <h3>What is NMMS Prep?</h3>
+          <p class="small">An app for practising the two NMMS papers, MAT and SAT. NMMS is a Government of India scholarship worth ₹12,000 a year from Class 9 to Class 12.</p>
+        </div>
+
+        <div class="q">
+          <h3>How does it help with the MAT?</h3>
+          <p class="small">It covers 41 chapters of reasoning. You get practice questions with explanations, past exam questions and a quick test in each. Most chapters make new questions whenever you run out, and answers from the book and past papers are checked, but mistakes are still possible.</p>
+        </div>
+
+        <div class="q">
+          <h3>How does it help with the SAT?</h3>
+          <p class="small">It groups maths, science and social science into 59 revision topics, with 540 past exam questions and the textbook pages to study. Maths and science have worked solutions. Social science is shown as printed, without answers for now.</p>
+        </div>
+
+        <div class="q">
+          <h3>Is it free? Does it work offline?</h3>
+          <p class="small">It is free, with no sign-up. After your first visit it works without internet, and you can add it to your phone's home screen.</p>
+        </div>
+
+        <div class="q">
+          <h3>Is it up to date?</h3>
+          <p class="small">Yes. The SAT topics follow the 2026-27 textbooks, and the past papers go up to 2025-26.</p>
+        </div>
+
+        <div class="q">
+          <h3>Can students from any state use it?</h3>
+          <p class="small">Yes. MAT question types are much the same across states. SAT topics and past papers come from Karnataka, so check them against your own state's syllabus. The app is in English and Kannada, and some of the Kannada is still being reviewed.</p>
+        </div>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Disclaimer</h2>
+        <p class="small">AI is used to help build this app, so some facts, answers or translations may be wrong. If you are unsure about anything, please check it with your teacher or textbook.</p>
+      </section>
+
+      <a class="btn" href="../#/">Start practising</a>
+      <p class="about-note"><a class="go" href="../about/">About this app</a></p>
+    </main>
+    <script>
+      // One anonymous visit count, as in src/lib/analytics.ts. Live site only; fails silently offline.
+      try {
+        if (location.hostname === 'valevoor.github.io' && navigator.onLine && !navigator.webdriver) {
+          navigator.sendBeacon(
+            'https://nmms-prep.goatcounter.com/count?' +
+              new URLSearchParams({ p: '/welcome', t: document.title, r: document.referrer, s: [screen.width, screen.height, devicePixelRatio || 1].join(), rnd: Math.random().toString(36).slice(2) }),
+          )
+        }
+      } catch (e) {}
+    </script>
+  </body>
+</html>

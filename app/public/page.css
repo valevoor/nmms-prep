@@ -1,0 +1,209 @@
+/* The landing and About pages. The app's colours, from src/index.css; these pages don't load the app's stylesheet. */
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --text: #1a1d29;
+  --muted: #5d6478;
+  --border: #dfe3ee;
+  --primary: #2f5bea;
+  --primary-ink: #ffffff;
+  --primary-soft: #e6ecff;
+  --accent-soft: #fff4dc;
+  --accent-ink: #8a4b00;
+  --accent-line: #f5c76a;
+  --shadow: 0 1px 2px rgb(20 30 60 / 0.06), 0 4px 16px rgb(20 30 60 / 0.06);
+  --radius: 14px;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --bg: #11131a;
+  --surface: #1a1d27;
+  --text: #eceef5;
+  --muted: #9aa1b5;
+  --border: #2e3342;
+  --primary: #7b9bff;
+  --primary-ink: #0d1330;
+  --primary-soft: #232c4d;
+  --accent-soft: #3a2f16;
+  --accent-ink: #fcd34d;
+  --accent-line: #6b5420;
+  --shadow: none;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Kannada', 'Kannada Sangam MN', 'Nirmala UI', Tunga, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+a {
+  color: var(--primary);
+}
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0;
+}
+p {
+  margin: 0 0 10px;
+}
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 6px;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+.brand {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--text);
+  text-decoration: none;
+}
+.logo {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-weight: 800;
+}
+.open {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 16px;
+  text-decoration: none;
+}
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px 14px 28px;
+}
+.tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 10px;
+  border-radius: 99px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+h1 {
+  margin-bottom: 8px;
+  font-size: 27px;
+}
+.btn {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 16px;
+}
+.updated {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+.card {
+  margin-bottom: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.card h2,
+.q h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.card p:last-child,
+.q p:last-child {
+  margin-bottom: 0;
+}
+.go {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: -6px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.why h3 {
+  margin: 12px 0 4px;
+  font-size: 17px;
+}
+.go-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+.questions {
+  margin-top: 24px;
+}
+.questions-title {
+  margin-bottom: 4px;
+  font-size: 23px;
+}
+.q {
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+.questions-title + .q {
+  border-top: 0;
+}
+.disclaimer {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+.disclaimer h2 {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+.disclaimer p {
+  margin: 0;
+}
+
+.about-note {
+  margin-top: 4px;
+  text-align: center;
+}

@@ -5,14 +5,15 @@ import type { Plugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 /**
- * GitHub Pages and the build's preview answer /about/ with public/about/index.html, but the dev server
- * answers any folder path with the app. Without this the landing page can't open on the dev server.
+ * GitHub Pages and the build's preview answer /welcome/ and /about/ with their index.html in public/, but
+ * the dev server answers any folder path with the app. Without this those pages can't open on the dev server.
  */
-const aboutInDev: Plugin = {
-  name: 'about-in-dev',
+const staticPagesInDev: Plugin = {
+  name: 'static-pages-in-dev',
   configureServer(server) {
     server.middlewares.use((req, _res, next) => {
-      if (req.url?.split('?')[0] === '/about/') req.url = '/about/index.html'
+      const path = req.url?.split('?')[0]
+      if (path === '/welcome/' || path === '/about/') req.url = `${path}index.html`
       next()
     })
   },
@@ -23,7 +24,7 @@ export default defineConfig({
   // Relative base so the build works from any folder (GitHub Pages, a school server, a USB stick).
   base: './',
   plugins: [
-    aboutInDev,
+    staticPagesInDev,
     react(),
     VitePWA({
       registerType: 'autoUpdate',
