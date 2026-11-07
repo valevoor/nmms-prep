@@ -1,5 +1,26 @@
 [
  {
+  "id": "math-7-01-large-numbers",
+  "subject": "maths",
+  "cls": 7,
+  "no": 1,
+  "name": "Large Numbers Around Us",
+  "part": 1,
+  "pages": [
+   1,
+   23
+  ],
+  "area": "Number Systems & Arithmetic",
+  "topics": [
+   "Knowing Our Numbers",
+   "Indian and International (American) Place Value Systems",
+   "Lakhs Crores Millions and Billions",
+   "Rounding Off and Estimation",
+   "Number Patterns in Multiplication",
+   "Digit Counting & Matchstick Digit Puzzles"
+  ]
+ },
+ {
   "id": "math-7-02-arithmetic-expressions",
   "subject": "maths",
   "cls": 7,
@@ -16,6 +37,24 @@
    "Simplification of Numerical Expressions",
    "Commutative Associative and Distributive Properties",
    "Bracket Removal Rules"
+  ]
+ },
+ {
+  "id": "math-7-03-peek-beyond-point",
+  "subject": "maths",
+  "cls": 7,
+  "no": 3,
+  "name": "A Peek Beyond the Point",
+  "part": 1,
+  "pages": [
+   46,
+   80
+  ],
+  "area": "Arithmetic & Measurement (Decimals)",
+  "topics": [
+   "Decimals (Introduction, Place Value, Comparison, Addition, and Subtraction)",
+   "Tenths Hundredths and Thousandths",
+   "Metric Unit Conversions (Length, Weight, Currency)"
   ]
  },
  {
@@ -179,6 +218,26 @@
   ]
  },
  {
+  "id": "math-7-12-another-peek-beyond-point",
+  "subject": "maths",
+  "cls": 7,
+  "no": 12,
+  "name": "Another Peek Beyond the Point",
+  "part": 2,
+  "pages": [
+   67,
+   96
+  ],
+  "area": "Arithmetic (Decimal Multiplication & Division)",
+  "topics": [
+   "Decimals (Multiplication and Division)",
+   "Multiplying and Dividing by Powers of 10",
+   "Terminating and Non-Terminating Repeating Decimals",
+   "Cyclic Number 142857",
+   "Gregorian Leap Year Calendar Mathematics"
+  ]
+ },
+ {
   "id": "math-7-13-connecting-the-dots",
   "subject": "maths",
   "cls": 7,
@@ -197,6 +256,32 @@
    "Outliers",
    "Dot Plots",
    "Double Bar Graphs (Clustered Column Graphs)"
+  ]
+ },
+ {
+  "id": "math-7-14-constructions-and-tilings",
+  "subject": "maths",
+  "cls": 7,
+  "no": 14,
+  "name": "Constructions and Tilings",
+  "part": 2,
+  "pages": [
+   136,
+   163
+  ],
+  "area": "Geometry (Ruler-and-Compass Constructions & Tilings)",
+  "topics": [
+   "Practical Geometry (Ruler and Compass Constructions)",
+   "Perpendicular Bisector",
+   "Angle Bisector",
+   "Constructing 60°",
+   "90°",
+   "45°",
+   "120° and Parallel Lines",
+   "Regular Hexagon Properties",
+   "Tangrams",
+   "Tiling and Tessellations",
+   "Checkerboard Parity Arguments"
   ]
  },
  {
@@ -254,6 +339,24 @@
    "Standard Form / Scientific Notation",
    "Fundamental Principle of Counting / Combinatorics",
    "Linear vs. Exponential Growth & Order-of-Magnitude Estimation"
+  ]
+ },
+ {
+  "id": "math-8-03-story-of-numbers",
+  "subject": "maths",
+  "cls": 8,
+  "no": 3,
+  "name": "A Story of Numbers",
+  "part": 1,
+  "pages": [
+   48,
+   81
+  ],
+  "area": "Number Systems / History of Mathematics",
+  "topics": [
+   "Number Systems & Place Value",
+   "Ancient & Historical Numeration Systems",
+   "Base-n Number Conversions"
   ]
  },
  {
@@ -380,6 +483,43 @@
    "Time and Work",
    "Multi-Term Ratios & Map Scales",
    "Pie Charts (Circle Graphs)"
+  ]
+ },
+ {
+  "id": "math-8-11-geometric-themes",
+  "subject": "maths",
+  "cls": 8,
+  "no": 11,
+  "name": "Exploring Some Geometric Themes",
+  "part": 2,
+  "pages": [
+   70,
+   102
+  ],
+  "area": "Geometry (Fractals, 3D Solids, Nets & Projections)",
+  "topics": [
+   "Visualising Solid Shapes (3D Geometry)",
+   "Projections & Isometric Drawings",
+   "Fractals & Self-Similarity",
+   "Shortest Path on 3D Surfaces"
+  ]
+ },
+ {
+  "id": "math-8-12-tales-dots-bars-lines",
+  "subject": "maths",
+  "cls": 8,
+  "no": 12,
+  "name": "Tales by Dots, Bars, and Lines",
+  "part": 2,
+  "pages": [
+   103,
+   134
+  ],
+  "area": "Statistics & Data Handling",
+  "topics": [
+   "Data Handling & Measures of Central Tendency",
+   "Line Graphs & Time-Series Data Interpretation",
+   "Spreadsheets & Infographics"
   ]
  },
  {

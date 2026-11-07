@@ -3,10 +3,14 @@ import type { ReactElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it, vi } from 'vitest'
 import { READY_TOPICS } from './data/topics'
-import { SAT_TOPICS, satSolved } from './data/sat'
+import { SAT_TOPICS, satQuestions, satSolved } from './data/sat'
+import { REVISIONS } from './data/satRevise'
 import { Chapter } from './pages/Chapter'
 import { Home } from './pages/Home'
+import { Learn } from './pages/Learn'
 import { Practice } from './pages/Practice'
+import { SatFlashcards } from './pages/SatFlashcards'
+import { SatRevise } from './pages/SatRevise'
 import { SatPractice } from './pages/SatPractice'
 import { SatTopic } from './pages/SatTopic'
 
@@ -34,23 +38,25 @@ vi.mock('./lib/router', () => ({
 }))
 vi.mock('./lib/progress', async (orig) => {
   const p = await orig<typeof import('./lib/progress')>()
-  const empty: import('./lib/progress').TopicProgress = { attempts: {}, exam: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {} }
+  const empty: import('./lib/progress').TopicProgress = { attempts: {}, exam: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {}, flash: {} }
   return { ...p, useProgress: () => empty }
 })
 
 const MAT = READY_TOPICS.find((t) => t.id === 'number-series')!
-const SAT = SAT_TOPICS.find((t) => t.chapters.length === 1)!
+const SAT = SAT_TOPICS.find((t) => t.chapters.length === 1 && satQuestions(t).length > 0)!
 /** A topic whose past questions are solved (maths and science so far), so its cards have answer buttons, and one not solved yet. */
-const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1)!
-const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.chapters.length === 1 && satSolved(t).length === 0)!
+const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1 && satSolved(t).length > 0)!
+/** A topic with a revision sheet. */
+const SAT_REVISE = SAT_TOPICS.find((t) => t.chapters.some((c) => c.id === REVISIONS[0].en.chapter))!
+const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.chapters.length === 1 && satQuestions(t).length > 0 && satSolved(t).length === 0)!
 
 function render(el: ReactElement, query = ''): string {
   route.query = query
   return renderToStaticMarkup(el)
 }
 
-/** The first element whose class list holds every class in `sel` ("card question"), with all it contains. */
-function region(html: string, sel: string): string {
+/** The first element whose class list holds every class in `sel` ("card question") and whose HTML includes `has`, with all it contains. */
+function region(html: string, sel: string, has = ''): string {
   const want = sel.split(' ')
   for (const m of html.matchAll(/<([a-z0-9]+)\b[^>]*\bclass="([^"]*)"/g)) {
     const classes = m[2].split(/\s+/)
@@ -61,7 +67,11 @@ function region(html: string, sel: string): string {
     let depth = 1
     for (let x = open.exec(html); x; x = open.exec(html)) {
       depth += x[0].startsWith('</') ? -1 : 1
-      if (depth === 0) return html.slice(m.index, x.index + x[0].length)
+      if (depth === 0) {
+        const found = html.slice(m.index, x.index + x[0].length)
+        if (found.includes(has)) return found
+        break
+      }
     }
   }
   throw new Error(`No element with class "${sel}"`)
@@ -92,7 +102,7 @@ const PAIRS: Pair[] = [
   {
     name: 'Home: list row',
     mat: () => region(render(createElement(Home)), 'chapter-row'),
-    sat: () => region(render(createElement(Home), 'test=sat'), 'chapter-row'),
+    sat: () => region(render(createElement(Home), 'test=sat'), 'chapter-row', 'meter-thin'),
     matOnly: {
       'chapter-art': 'SAT topics have no chapter picture',
     },
@@ -126,9 +136,23 @@ const PAIRS: Pair[] = [
       'game-link': 'The games (Guess the rule, cube explorer…) are MAT-only',
     },
     satOnly: {
-      'sat-actions': 'Practice only: SAT has no Learn, Quick test or Classroom yet',
+      'flash-wide': 'Practice takes its own row: SAT has three buttons where MAT has four',
       'sat-note': 'Says the answers are worked out by us (or not added yet)',
     },
+  },
+  {
+    name: 'Revise: top bar',
+    mat: () => region(render(createElement(Learn, { topic: MAT })), 'topbar'),
+    sat: () => region(render(createElement(SatRevise, { topic: SAT_REVISE })), 'topbar'),
+    matOnly: {},
+    satOnly: {},
+  },
+  {
+    name: 'Flash cards: top bar',
+    mat: () => region(render(createElement(Learn, { topic: MAT })), 'topbar'),
+    sat: () => region(render(createElement(SatFlashcards, { topic: SAT_REVISE })), 'topbar'),
+    matOnly: {},
+    satOnly: {},
   },
   {
     name: 'Practice: question card (not solved yet)',

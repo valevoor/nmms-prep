@@ -64,7 +64,8 @@ for (const p of SAT_PAPERS) {
 }
 
 for (const c of SAT_CHAPTERS) {
-  if (!used.has(c.id)) problems.push(`${c.id}: no past-paper question is filed under this chapter (run tools/build_sat_chapters.ts)`)
+  // Maths chapters are listed for their revision sheets, even if no paper has asked about them yet.
+  if (!used.has(c.id) && c.subject !== 'maths') problems.push(`${c.id}: no past-paper question is filed under this chapter (run tools/build_sat_chapters.ts)`)
   if (!kn[c.id]?.name) problems.push(`${c.id}: no Kannada name in data/sat/chapters.kn.json`)
 }
 

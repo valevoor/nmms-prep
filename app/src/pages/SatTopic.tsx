@@ -1,6 +1,7 @@
 import { Page } from '../components/Page'
 import type { SatTopic as Topic } from '../data/sat'
 import { satChapterName, satQuestions, satSolved, satTopicName } from '../data/sat'
+import { topicRevisions } from '../data/satRevise'
 import { useLocale, useT } from '../lib/i18n'
 import { satKey, satMastery, satMistakes, summarize, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
@@ -24,6 +25,7 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
   const base = `sat/${t.id}`
   const subject = tr.sat.subjects[t.subject]
   const only = t.chapters.length === 1 ? t.chapters[0] : undefined
+  const canRevise = topicRevisions(t).length > 0
   return (
     <Page title={satTopicName(t, lang)} back="?test=sat">
       <section className="card topic-card">
@@ -57,17 +59,33 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
             </div>
           )}
         </dl>
-        <div className="actions sat-actions">
-          <a className="btn btn-primary" href={href(`${base}/practice`)}>
-            {tr.home.practice}
-          </a>
-        </div>
+        {canRevise ? (
+          <div className="actions">
+            <a className="btn btn-primary" href={href(`${base}/revise`)}>
+              {tr.sat.revise}
+            </a>
+            <a className="btn" href={href(`${base}/flashcards`)}>
+              {tr.sat.flashcards}
+            </a>
+            {items.length > 0 && (
+              <a className="btn flash-wide" href={href(`${base}/practice`)}>
+                {tr.home.practice}
+              </a>
+            )}
+          </div>
+        ) : (
+          <div className="actions sat-actions">
+            <a className="btn btn-primary" href={href(`${base}/practice`)}>
+              {tr.home.practice}
+            </a>
+          </div>
+        )}
         {mistakes.length > 0 && (
           <a className="mistakes-link" href={href(`${base}/practice?mode=mistakes`)}>
             {tr.home.retryWrong(mistakes.length)}
           </a>
         )}
-        <p className="muted sat-note">{solved.length > 0 ? tr.sat.answersReady : tr.sat.noAnswers}</p>
+        {items.length > 0 ? <p className="muted sat-note">{solved.length > 0 ? tr.sat.answersReady : tr.sat.noAnswers}</p> : <p className="muted sat-note">{tr.sat.noPastQuestions}</p>}
       </section>
 
       {t.chapters.length === 0 && (

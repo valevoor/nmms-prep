@@ -1,0 +1,154 @@
+{
+ "chapter": "math-7-06-number-play",
+ "terms": [
+  {
+   "id": "parity",
+   "term": "Parity",
+   "meaning": "Whether a number is even or odd.",
+   "pages": [
+    129
+   ]
+  },
+  {
+   "id": "magic",
+   "term": "Magic square",
+   "meaning": "A square grid where every row, column and diagonal has the same sum, called the magic sum.",
+   "pages": [
+    134
+   ]
+  },
+  {
+   "id": "virahanka",
+   "term": "Virahanka numbers",
+   "meaning": "1, 2, 3, 5, 8, 13… where each number is the sum of the two before it. They are also called Virahanka-Fibonacci numbers.",
+   "pages": [
+    141
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "parity",
+   "title": "Even and odd",
+   "items": [
+    {
+     "id": "add",
+     "name": "Adding and subtracting",
+     "formula": "Even ± even and odd ± odd are even. Even ± odd is odd.",
+     "example": "7 + 9 = 16 is even, and 8 + 9 = 17 is odd.",
+     "pages": [
+      129,
+      130
+     ]
+    },
+    {
+     "id": "manyodd",
+     "name": "Adding many odd numbers",
+     "formula": "An even count gives even. An odd count gives odd.",
+     "example": "1 + 3 + 5 = 9 is odd, so five odd numbers can never add up to 30.",
+     "pages": [
+      130
+     ]
+    },
+    {
+     "id": "consec",
+     "name": "Two numbers in a row",
+     "formula": "n + (n + 1) is always odd",
+     "example": "Ages one year apart cannot add up to 112.",
+     "pages": [
+      131
+     ]
+    },
+    {
+     "id": "multiply",
+     "name": "Multiplying",
+     "formula": "Odd × odd is odd. Anything else is even.",
+     "example": "7 × 9 = 63 is odd, and 7 × 8 = 56 is even.",
+     "pages": [
+      132
+     ]
+    },
+    {
+     "id": "nth",
+     "name": "The nth even and odd numbers",
+     "formula": "Even: 2n. Odd: 2n − 1.",
+     "example": "The 100th odd number is 2 × 100 − 1 = 199.",
+     "pages": [
+      133
+     ]
+    }
+   ]
+  },
+  {
+   "id": "magic",
+   "title": "Magic squares",
+   "items": [
+    {
+     "id": "sum15",
+     "name": "Magic sum using 1 to 9",
+     "formula": "The total is 45, so each row adds up to 15",
+     "example": "45 ÷ 3 = 15",
+     "pages": [
+      135
+     ]
+    },
+    {
+     "id": "centre",
+     "name": "Centre of a magic square",
+     "formula": "With 1 to 9, the centre is 5",
+     "example": "4 + 5 + 6 = 15 and 1 + 5 + 9 = 15",
+     "pages": [
+      135
+     ]
+    },
+    {
+     "id": "change",
+     "name": "Making a new magic square",
+     "formula": "Add or multiply every number by the same number",
+     "example": "Add 2 to each number: the magic sum becomes 15 + 3 × 2 = 21.",
+     "pages": [
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vira",
+   "title": "Virahanka numbers",
+   "items": [
+    {
+     "id": "next",
+     "name": "The next number",
+     "formula": "Add the two numbers before it",
+     "example": "1, 2, 3, 5, 8, 13, 21, 34, 55",
+     "pages": [
+      141
+     ]
+    },
+    {
+     "id": "pattern",
+     "name": "Even and odd in the sequence",
+     "formula": "Odd, even, odd repeats",
+     "example": "1, 2, 3, 5, 8, 13: every third number is even.",
+     "pages": [
+      142
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "oddcount",
+   "text": "Odd + odd is even, but odd + odd + odd is odd. Count how many odd numbers there are."
+  },
+  {
+   "id": "even0",
+   "text": "If one factor is even, the whole product is even. 3 × 5 × 2 = 30."
+  },
+  {
+   "id": "diag",
+   "text": "In a magic square, check the diagonals too, not only the rows and columns."
+  }
+ ]
+}

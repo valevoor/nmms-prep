@@ -1,0 +1,63 @@
+{
+  "chapter": "math-8-04-quadrilaterals",
+  "terms": [
+    { "id": "rectangle", "term": "Rectangle", "meaning": "A quadrilateral whose angles are all 90°.", "pages": [90] },
+    { "id": "square", "term": "Square", "meaning": "A quadrilateral with all angles equal and all sides equal.", "pages": [91] },
+    { "id": "parallelogram", "term": "Parallelogram", "meaning": "A quadrilateral whose two pairs of opposite sides are parallel.", "pages": [96] },
+    { "id": "rhombus", "term": "Rhombus", "meaning": "A quadrilateral with all four sides equal.", "pages": [100] },
+    { "id": "kite", "term": "Kite", "meaning": "A quadrilateral with two separate pairs of equal sides, each pair next to each other.", "pages": [105, 110] },
+    { "id": "trapezium", "term": "Trapezium", "meaning": "A quadrilateral with at least one pair of parallel opposite sides. If the other two sides are equal, it is an isosceles trapezium.", "pages": [106] }
+  ],
+  "groups": [
+    {
+      "id": "all",
+      "title": "All quadrilaterals",
+      "items": [
+        { "id": "sum", "name": "Angle sum of a quadrilateral", "formula": "Sum of the four angles = 360°", "example": "Angles 90°, 80°, 110° and x: x = 360° − 280° = 80°", "pages": [95] }
+      ]
+    },
+    {
+      "id": "right",
+      "title": "Rectangles and squares",
+      "items": [
+        { "id": "rectdiag", "name": "Diagonals of a rectangle", "formula": "Equal, and they bisect each other", "example": "If a diagonal is 10 cm, the other is 10 cm too, and each part is 5 cm.", "pages": [90] },
+        { "id": "rectsides", "name": "Sides of a rectangle", "formula": "Opposite sides are equal and parallel", "example": "A rectangle with sides 7 cm and 4 cm has perimeter 2 × (7 + 4) = 22 cm.", "pages": [90] },
+        { "id": "squarediag", "name": "Diagonals of a square", "formula": "Equal, and they bisect each other at 90°", "example": "They also cut each 90° corner into 45° + 45°.", "pages": [93] }
+      ]
+    },
+    {
+      "id": "para",
+      "title": "Parallelograms and rhombuses",
+      "items": [
+        { "id": "paraangles", "name": "Angles of a parallelogram", "formula": "Opposite angles are equal. Adjacent angles add up to 180°.", "example": "If one angle is 70°, the angles are 70°, 110°, 70° and 110°.", "pages": [97, 98] },
+        { "id": "parasides", "name": "Sides of a parallelogram", "formula": "Opposite sides are equal", "example": "Sides of 9 cm and 5 cm give perimeter 2 × (9 + 5) = 28 cm.", "pages": [96, 97] },
+        { "id": "paradiag", "name": "Diagonals of a parallelogram", "formula": "They bisect each other", "example": "A diagonal of 12 cm is cut into two parts of 6 cm.", "pages": [99] },
+        { "id": "rhombusdiag", "name": "Diagonals of a rhombus", "formula": "They bisect each other at 90°, and bisect its angles", "example": "Diagonals of 6 cm and 8 cm: each side is 5 cm, because 3² + 4² = 5².", "pages": [101, 102] }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Kites and trapeziums",
+      "items": [
+        { "id": "kitediag", "name": "Diagonals of a kite", "formula": "They cross at 90°, and one bisects the other", "example": "If the bisected diagonal is 8 cm, it is cut into 4 cm + 4 cm.", "pages": [105, 106] },
+        { "id": "trapangles", "name": "Angles on a side of a trapezium", "formula": "Angles between the parallel sides add up to 180°", "example": "If one of them is 65°, the other is 180° − 65° = 115°.", "pages": [106, 107] },
+        { "id": "isosceles", "name": "Isosceles trapezium", "formula": "The angles opposite the equal sides are equal", "example": "If one base angle is 75°, the other base angle is 75°.", "pages": [106, 107] }
+      ]
+    },
+    {
+      "id": "family",
+      "title": "How they are related",
+      "items": [
+        { "id": "family", "name": "Family of quadrilaterals", "formula": "Square → rectangle → parallelogram → trapezium", "example": "Every square is a rectangle, but not every rectangle is a square.", "pages": [110] },
+        { "id": "family2", "name": "Where the rhombus fits", "formula": "Square → rhombus → parallelogram", "example": "A square is both a rectangle and a rhombus. A rhombus is also a kite.", "pages": [110] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "paraequal", "text": "The diagonals of a parallelogram need not be equal. They are equal only in a rectangle." },
+    { "id": "rhombusequal", "text": "The diagonals of a rhombus need not be equal. They cross at 90°, but are equal only in a square." },
+    { "id": "trap", "text": "A trapezium has at least one pair of parallel sides, so a parallelogram also counts as a trapezium." },
+    { "id": "kitepair", "text": "In a kite the equal sides are next to each other. In a parallelogram they are opposite each other." },
+    { "id": "sum", "text": "The angles of a quadrilateral add up to 360°, not 180°. Two triangles make one quadrilateral: 180° + 180° = 360°." }
+  ]
+}

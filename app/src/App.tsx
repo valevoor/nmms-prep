@@ -23,6 +23,9 @@ import { paperQuestions } from './data/papers'
 import { getSatTopic } from './data/sat'
 import { SatTopic } from './pages/SatTopic'
 import { SatPractice } from './pages/SatPractice'
+import { SatRevise } from './pages/SatRevise'
+import { SatFlashcards } from './pages/SatFlashcards'
+import { topicRevisions } from './data/satRevise'
 import type { SatPracticeMode } from './pages/SatPractice'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
@@ -93,6 +96,8 @@ export default function App() {
     const satTopic = getSatTopic(topicId)
     if (!satTopic || parts.length > 3) return <NotFound />
     if (!view) return <SatTopic topic={satTopic} />
+    if ((view === 'revise' || view === 'flashcards') && topicRevisions(satTopic).length > 0)
+      return <TopicIdContext.Provider value="sat">{view === 'revise' ? <SatRevise topic={satTopic} /> : <SatFlashcards topic={satTopic} />}</TopicIdContext.Provider>
     // "questions" was the old list of past questions, which Practice now asks.
     if (view === 'practice' || view === 'questions') {
       const mode: SatPracticeMode = query.get('mode') === 'mistakes' ? 'mistakes' : 'exam'

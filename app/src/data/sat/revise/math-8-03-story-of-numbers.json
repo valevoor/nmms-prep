@@ -1,0 +1,55 @@
+{
+  "chapter": "math-8-03-story-of-numbers",
+  "terms": [
+    { "id": "system", "term": "Number system", "meaning": "A standard sequence of objects, names or written symbols in a fixed order, used to represent numbers.", "pages": [81] },
+    { "id": "numeral", "term": "Numeral", "meaning": "A symbol that represents a number in a written number system.", "pages": [81] },
+    { "id": "landmark", "term": "Landmark number", "meaning": "An easily recognised number used as a reference point, often with its own symbol. In Roman numerals, X and C stand for the landmark numbers 10 and 100.", "pages": [58, 81] },
+    { "id": "basen", "term": "Base-n number system", "meaning": "A system whose landmark numbers are the powers of n: 1, n, n², n³… Base 10 is also called the decimal system.", "pages": [63] },
+    { "id": "positional", "term": "Place value system", "meaning": "A number system where a symbol's position decides its value. It is also called a positional system.", "pages": [81] },
+    { "id": "hindu", "term": "Hindu number system", "meaning": "The place value system with 10 digits, including 0, used across the world today. It is also called the Indian or Hindu-Arabic number system.", "pages": [81] }
+  ],
+  "groups": [
+    {
+      "id": "roman",
+      "title": "Roman numerals",
+      "items": [
+        { "id": "romanmarks", "name": "Roman landmark numbers", "formula": "I 1, V 5, X 10, L 50, C 100, D 500, M 1000", "example": "XXVII = 10 + 10 + 5 + 1 + 1 = 27", "pages": [58] },
+        { "id": "romanless", "name": "One less than a landmark", "formula": "IV = 5 − 1 and XL = 50 − 10", "example": "XLIV = 40 + 4 = 44", "pages": [58] }
+      ]
+    },
+    {
+      "id": "bases",
+      "title": "Working with a base",
+      "items": [
+        { "id": "marks", "name": "Landmark numbers of base n", "formula": "n⁰ = 1, n¹, n², n³…", "example": "Base 5: 1, 5, 25, 125, 625", "pages": [63] },
+        { "id": "write", "name": "Writing a number in a base", "formula": "Take the largest landmark number first", "example": "In base 5: 38 = 25 + 5 + 5 + 1 + 1 + 1", "pages": [63] },
+        { "id": "egypt", "name": "Egyptian number system", "formula": "Base 10, with a new symbol for each power of 10", "example": "Landmark numbers: 1, 10, 100, 1000…", "pages": [61, 63] }
+      ]
+    },
+    {
+      "id": "place",
+      "title": "Place value systems",
+      "items": [
+        { "id": "babylon", "name": "Mesopotamian (Babylonian) system", "formula": "Base 60: places 1, 60, 60²…", "example": "1 hour = 60 minutes and 1 minute = 60 seconds come from this system.", "pages": [70] },
+        { "id": "maya", "name": "Mayan system", "formula": "Places 1, 20, 360…", "example": "The third place is 360, not 20 × 20 = 400, so it is not a true base-20 system.", "pages": [76] },
+        { "id": "chinese", "name": "Chinese rod numerals", "formula": "Base 10, made with rods", "example": "2634 = 2 × 10³ + 6 × 10² + 3 × 10 + 4 × 1", "pages": [76, 77] },
+        { "id": "hinduvalue", "name": "Value of a Hindu numeral", "formula": "Each digit × the power of 10 for its place", "example": "375 = 3 × 10² + 7 × 10 + 5 × 1", "pages": [78] }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "History of our numbers",
+      "items": [
+        { "id": "bakhshali", "name": "First known use of the digit 0", "formula": "The Bakhshali manuscript", "example": "It wrote numbers with ten digits around the 3rd century CE, with 0 as a dot.", "pages": [49] },
+        { "id": "aryabhata", "name": "Who first fully explained the 10-symbol system", "formula": "Aryabhata, around 499 CE", "example": "He also used it for long scientific calculations.", "pages": [49] },
+        { "id": "spread", "name": "How the Indian numerals spread", "formula": "India → Arab world → Europe", "example": "Al-Khwarizmi (around 825) and Al-Kindi (around 830) wrote about them. Fibonacci argued for them in Europe around 1200.", "pages": [49] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "numeral", "text": "A number and a numeral are different. The number is the amount; the numeral is the symbol. X and 10 are two numerals for the same number." },
+    { "id": "maya", "text": "The Mayan third place is 360, not 400. Do not take the system to be a true base-20 system." },
+    { "id": "roman", "text": "Roman numerals are not a base system, because their landmark numbers are not all powers of one number. 5 and 50 are not powers of 10." },
+    { "id": "zeroplace", "text": "In a place value system, 0 keeps the place empty. 305 and 35 are different numbers because of the 0." }
+  ]
+}

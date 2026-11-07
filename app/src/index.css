@@ -4581,6 +4581,65 @@ kbd {
   overflow-wrap: anywhere;
 }
 
+/* A SAT revision sheet (pages/SatRevise.tsx). */
+.revise-term + .revise-term {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.revise-term p,
+.example .revise-name,
+.example .revise-formula,
+.example .revise-eg {
+  margin: 0;
+}
+
+.revise-name {
+  font-weight: 700;
+}
+
+.revise-formula {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.example .revise-eg {
+  background: var(--surface-2);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.example .revise-formula,
+.example .revise-eg {
+  margin-top: 6px;
+}
+
+.example .revise-page {
+  margin: 6px 0 0;
+}
+
+.revise-page {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+}
+
+.revise-mistake {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent-ink);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.revise-mistake p {
+  margin: 0;
+}
+
 /* Home: the link to the About page, under both tabs. */
 .about-link {
   margin: 8px 0 0;
@@ -4592,4 +4651,56 @@ kbd {
   align-items: center;
   min-height: 44px;
   padding: 0 12px;
+}
+
+/* SAT flash cards (pages/SatFlashcards.tsx). */
+.flash-front {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.flash-card .revise-formula,
+.flash-card .revise-eg,
+.flash-card .revise-page {
+  margin: 8px 0 0;
+}
+
+.flash-card .revise-eg {
+  background: var(--surface-2);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.flash-wide {
+  flex: 1;
+  grid-column: 1 / -1;
+}
+
+.flash-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flash-status {
+  margin: 0;
+}
+
+.meter.flash-meter {
+  margin: 8px 0 14px;
+}
+
+.flash-card .flash-meaning {
+  margin: 8px 0 0;
+  font-size: 1.1rem;
+}
+
+.revise-chapter {
+  margin: 28px 0 4px;
+  font-size: 1.15rem;
+}
+
+.revise-chapter:first-child {
+  margin-top: 0;
 }

@@ -1,0 +1,43 @@
+{
+  "chapter": "math-8-07-proportional-reasoning-1",
+  "terms": [
+    { "id": "ratio", "term": "Ratio", "meaning": "A comparison of two quantities by division, written a : b. a and b are its terms.", "pages": [161] },
+    { "id": "simplest", "term": "Simplest form", "meaning": "A ratio whose terms have no common factor except 1. 12 : 18 in simplest form is 2 : 3.", "pages": [161, 162] },
+    { "id": "proportion", "term": "Proportion", "meaning": "Two ratios that are equal, written a : b :: c : d.", "pages": [163] },
+    { "id": "trairasika", "term": "Rule of Three (Trairasika)", "meaning": "The old Indian method for finding the fourth quantity in a proportion from the other three.", "pages": [168, 169] }
+  ],
+  "groups": [
+    {
+      "id": "ratios",
+      "title": "Ratios",
+      "items": [
+        { "id": "simple", "name": "Making a ratio simple", "formula": "Divide both terms by their HCF", "example": "24 : 36. The HCF is 12, so the ratio is 2 : 3.", "pages": [161, 162] },
+        { "id": "scale", "name": "Equal ratios", "formula": "Multiply both terms by the same number", "example": "3 : 2 = 6 : 4 = 15 : 10", "pages": [162] },
+        { "id": "resize", "name": "Resizing without changing the shape", "formula": "Multiply width and height by the same factor", "example": "A 30 by 20 picture made 2 times bigger is 60 by 40. The ratio stays 3 : 2.", "pages": [160, 162] }
+      ]
+    },
+    {
+      "id": "prop",
+      "title": "Proportion",
+      "items": [
+        { "id": "cross", "name": "Finding a missing term", "formula": "a : b :: c : d means a × d = b × c", "example": "2 : 5 :: 6 : d, so 2 × d = 5 × 6 and d = 15.", "pages": [163, 168] },
+        { "id": "three", "name": "Rule of Three", "formula": "Answer = (result × wanted amount) ÷ known amount", "example": "3 kg costs ₹120. 5 kg costs 120 × 5 ÷ 3 = ₹200.", "pages": [168, 169] },
+        { "id": "units", "name": "Units in a proportion", "formula": "Change to the same unit first", "example": "500 g costs ₹30. For 2 kg use 2000 g: 30 × 2000 ÷ 500 = ₹120.", "pages": [168, 170] }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Sharing in a ratio",
+      "items": [
+        { "id": "share", "name": "Dividing a quantity in the ratio m : n", "formula": "Shares are m/(m + n) and n/(m + n) of the total", "example": "₹700 in the ratio 4 : 3: 700 ÷ 7 = 100, so the shares are ₹400 and ₹300.", "pages": [174] },
+        { "id": "profit", "name": "Sharing a profit", "formula": "Share it in the ratio of the money invested", "example": "Investments ₹2000 and ₹3000 give the ratio 2 : 3. A profit of ₹500 becomes ₹200 and ₹300.", "pages": [174, 176] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "add", "text": "Adding the same number to both terms changes the ratio. 2 : 3 is not 4 : 5." },
+    { "id": "age", "text": "Age ratios change over time, because both ages increase by the same number. Ages 5 and 10 are 1 : 2, but after 5 years they are 10 : 15, which is 2 : 3." },
+    { "id": "order", "text": "The order of the terms matters. 3 : 2 is not the same as 2 : 3." },
+    { "id": "total", "text": "When sharing in the ratio 4 : 3, divide by 7, not by 4 or 3. Add the terms first." }
+  ]
+}

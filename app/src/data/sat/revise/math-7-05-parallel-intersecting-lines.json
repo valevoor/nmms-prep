@@ -1,0 +1,147 @@
+{
+ "chapter": "math-7-05-parallel-intersecting-lines",
+ "terms": [
+  {
+   "id": "linear",
+   "term": "Linear pair",
+   "meaning": "Two angles side by side on a straight line, formed where two lines cross.",
+   "pages": [
+    107
+   ]
+  },
+  {
+   "id": "vertical",
+   "term": "Vertically opposite angles",
+   "meaning": "The angles opposite each other where two lines cross.",
+   "pages": [
+    108
+   ]
+  },
+  {
+   "id": "perpendicular",
+   "term": "Perpendicular lines",
+   "meaning": "Lines that cross at 90°.",
+   "pages": [
+    109
+   ]
+  },
+  {
+   "id": "parallel",
+   "term": "Parallel lines",
+   "meaning": "Lines on the same flat surface that never meet.",
+   "pages": [
+    109
+   ]
+  },
+  {
+   "id": "transversal",
+   "term": "Transversal",
+   "meaning": "A line that crosses two or more lines at different points.",
+   "pages": [
+    115
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "crossing",
+   "title": "Two lines crossing",
+   "items": [
+    {
+     "id": "pair",
+     "name": "Angles in a linear pair",
+     "formula": "They add up to 180°",
+     "example": "If one is 110°, the other is 180° − 110° = 70°.",
+     "pages": [
+      107
+     ]
+    },
+    {
+     "id": "opp",
+     "name": "Rule for vertically opposite angles",
+     "formula": "They are equal",
+     "example": "If one angle is 110°, the opposite one is 110°, and the other two are 70°.",
+     "pages": [
+      108
+     ]
+    },
+    {
+     "id": "four",
+     "name": "All four angles",
+     "formula": "They add up to 360°",
+     "example": "110° + 70° + 110° + 70° = 360°",
+     "pages": [
+      107,
+      108
+     ]
+    }
+   ]
+  },
+  {
+   "id": "parallel",
+   "title": "Parallel lines and a transversal",
+   "items": [
+    {
+     "id": "eight",
+     "name": "Angles made by a transversal",
+     "formula": "Two lines and a transversal make 8 angles",
+     "example": "4 angles at each crossing: 4 + 4 = 8",
+     "pages": [
+      115
+     ]
+    },
+    {
+     "id": "corr",
+     "name": "Corresponding angles",
+     "formula": "Equal when the lines are parallel",
+     "example": "If one is 135°, the corresponding angle is 135°.",
+     "pages": [
+      117
+     ]
+    },
+    {
+     "id": "alt",
+     "name": "Alternate angles",
+     "formula": "Equal when the lines are parallel",
+     "example": "If one is 60°, the alternate angle is 60°.",
+     "pages": [
+      120
+     ]
+    },
+    {
+     "id": "inner",
+     "name": "Inner angles on the same side",
+     "formula": "Add up to 180° when the lines are parallel",
+     "example": "If one is 60°, the other is 180° − 60° = 120°.",
+     "pages": [
+      122
+     ]
+    },
+    {
+     "id": "test",
+     "name": "Testing for parallel lines",
+     "formula": "Equal corresponding angles mean the lines are parallel",
+     "example": "If corresponding angles are 75° and 80°, the lines are not parallel.",
+     "pages": [
+      118,
+      119
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "notparallel",
+   "text": "Corresponding and alternate angles are equal only when the lines are parallel. Check that first."
+  },
+  {
+   "id": "pairopp",
+   "text": "Do not mix these up: a linear pair adds up to 180°, while vertically opposite angles are equal."
+  },
+  {
+   "id": "nevermeet",
+   "text": "Lines that do not meet on the page may still meet if extended. Parallel lines never meet, however far they go."
+  }
+ ]
+}

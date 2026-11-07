@@ -185,6 +185,20 @@ export const en = {
     pastQuestionsStat: 'Past questions',
     papersStat: 'Papers',
     textbook: 'Study from the textbook',
+    revise: 'Revise',
+    reviseTitle: (name: string) => `Revise: ${name}`,
+    flashcards: 'Flash cards',
+    flashPrompt: 'Say the answer to yourself first.',
+    flashAgain: 'Show again later',
+    flashKnew: 'I knew it',
+    flashKnown: (n: number, total: number) => `${n} of ${total} cards known`,
+    flashMissedNext: 'The cards you missed will come first next time.',
+    flashAllKnown: 'You knew every card first time.',
+    noPastQuestions: 'No past paper has asked about this chapter yet, but questions can come from any chapter, so revise it too.',
+    keyTerms: 'Key terms',
+    commonMistakes: 'Common mistakes',
+    /** A revision sheet's book page: one page, or the first and last. */
+    bookPages: (p: number[]) => (p.length > 1 ? `Book pages ${p[0]}–${p[p.length - 1]}` : `Book page ${p[0]}`),
     noAnswers: 'Answers haven’t been added yet, so Practice shows these questions as printed, to read and discuss. Quick test and Classroom will open for SAT topics later.',
     answersReady: 'Pick an answer to each question to check it and see how to solve it. The papers have no answer key, so the answers are worked out by us.',
     /** Before the syllabus idea a SAT solution uses. */
@@ -193,7 +207,7 @@ export const en = {
     noteLabel: 'Note:',
     picture: (n: number) => `Picture for question ${n}`,
     optionPicture: (k: string) => `Option ${k}`,
-    footnote: 'SAT topics follow the 2026-27 Karnataka Class 7 and 8 textbooks, with related chapters combined for revision. Only chapters that the Karnataka SAT papers of 2019-20 to 2025-26 asked about are listed; questions on topics the new textbooks dropped are under “Old syllabus” chapters.',
+    footnote: 'SAT topics follow the 2026-27 Karnataka Class 7 and 8 textbooks, with related chapters combined for revision. All maths chapters are listed; for Science and Social Science, only chapters that the Karnataka SAT papers of 2019-20 to 2025-26 asked about. Questions on topics the new textbooks dropped are under “Old syllabus” chapters.',
   },
   /** The "Facts to remember" page (#/facts) and the links to it. */
   facts: {

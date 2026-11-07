@@ -1,0 +1,149 @@
+{
+ "chapter": "math-7-15-finding-the-unknown",
+ "terms": [
+  {
+   "id": "equation",
+   "term": "Equation",
+   "meaning": "Two expressions with an equal sign between them. The two sides are the LHS and the RHS.",
+   "pages": [
+    167
+   ]
+  },
+  {
+   "id": "solution",
+   "term": "Solution",
+   "meaning": "The value of the letter-number that makes LHS = RHS.",
+   "pages": [
+    168
+   ]
+  },
+  {
+   "id": "bijaganita",
+   "term": "Bijaganita",
+   "meaning": "The name for algebra in ancient India.",
+   "pages": [
+    182
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "solve",
+   "title": "Solving equations",
+   "items": [
+    {
+     "id": "balance",
+     "name": "Keeping the balance",
+     "formula": "Do the same thing to both sides",
+     "example": "x + 5 = 12. Subtract 5 from both sides: x = 7.",
+     "pages": [
+      169,
+      170
+     ]
+    },
+    {
+     "id": "check",
+     "name": "Checking an answer",
+     "formula": "Put it back and see if LHS = RHS",
+     "example": "5x − 4 = 21 with x = 5: 25 − 4 = 21.",
+     "pages": [
+      171
+     ]
+    },
+    {
+     "id": "move",
+     "name": "Moving a term across",
+     "formula": "An added term moves across as a subtraction",
+     "example": "2y + 7 = 21 gives 2y = 21 − 7 = 14.",
+     "pages": [
+      173
+     ]
+    },
+    {
+     "id": "factor",
+     "name": "Removing a multiplier",
+     "formula": "Divide the other side by it",
+     "example": "2y = 14 gives y = 14 ÷ 2 = 7.",
+     "pages": [
+      173
+     ]
+    },
+    {
+     "id": "divisor",
+     "name": "Removing a divisor",
+     "formula": "Multiply the other side by it",
+     "example": "u ÷ 15 = 6 gives u = 6 × 15 = 90.",
+     "pages": [
+      173
+     ]
+    },
+    {
+     "id": "both",
+     "name": "Unknown on both sides",
+     "formula": "Bring the unknowns to one side first",
+     "example": "5x + 2 = 3x + 10: 2x = 8, so x = 4.",
+     "pages": [
+      176,
+      177
+     ]
+    },
+    {
+     "id": "nosol",
+     "name": "Equations with no solution",
+     "formula": "Some equations cannot be solved",
+     "example": "x + 4 = x + 5 has no solution, because 4 more can never equal 5 more.",
+     "pages": [
+      172
+     ]
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Word problems",
+   "items": [
+    {
+     "id": "brick",
+     "name": "A brick puzzle",
+     "formula": "Let the unknown be a letter",
+     "example": "A brick weighs 1 kg more than half its weight: b = 1 + b/2, so b = 2 kg.",
+     "pages": [
+      181
+     ]
+    },
+    {
+     "id": "notes",
+     "name": "Equal numbers of notes",
+     "formula": "Count each kind by the same letter",
+     "example": "n notes of ₹50 and n of ₹100 total ₹600: 150n = 600, so n = 4.",
+     "pages": [
+      185
+     ]
+    },
+    {
+     "id": "heads",
+     "name": "Heads and legs",
+     "formula": "Let one kind be x, and the other the rest",
+     "example": "12 heads, 34 legs: 2x + 4(12 − x) = 34, so x = 7 hens and 5 cows.",
+     "pages": [
+      189
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "sign",
+   "text": "Change the sign when moving a term. 4x + 6 = 10 gives 4x = 10 − 6, not 10 + 6."
+  },
+  {
+   "id": "oneterm",
+   "text": "Divide the whole side, not one term. For 3x + 1 = 12, subtract 1 first: 3x = 11."
+  },
+  {
+   "id": "onlyone",
+   "text": "Do the same thing to both sides. Changing one side breaks the balance."
+  }
+ ]
+}

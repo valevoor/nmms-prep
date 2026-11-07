@@ -1,0 +1,44 @@
+{
+  "chapter": "math-8-06-distribute-multiply",
+  "terms": [
+    { "id": "distributive", "term": "Distributive property", "meaning": "Multiplying a sum means multiplying each part and adding. Brahmagupta called this khanda-gunanam, multiplication by parts.", "pages": [137, 142] },
+    { "id": "identity", "term": "Identity", "meaning": "An equation that is true for every value of its letters, such as a(b + c) = ab + ac.", "pages": [137, 139] }
+  ],
+  "groups": [
+    {
+      "id": "basic",
+      "title": "Multiplying expressions",
+      "items": [
+        { "id": "dist", "name": "Multiplying by a sum", "formula": "a(b + c) = ab + ac", "example": "23 × 37 = 23 × 30 + 23 × 7 = 690 + 161 = 851", "pages": [137] },
+        { "id": "two", "name": "Two brackets", "formula": "(a + b)(c + d) = ac + ad + bc + bd", "example": "(x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6", "pages": [139, 157] },
+        { "id": "increase", "name": "Increasing both numbers by 1", "formula": "(a + 1)(b + 1) = ab + a + b + 1", "example": "21 × 31 = 20 × 30 + 20 + 30 + 1 = 651", "pages": [138] },
+        { "id": "signs", "name": "Signs in brackets", "formula": "(−u) × (−v) = +uv", "example": "(x − 2)(x − 3) = x² − 3x − 2x + 6 = x² − 5x + 6", "pages": [140] }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Special identities",
+      "items": [
+        { "id": "sumsq", "name": "Square of a sum", "formula": "(a + b)² = a² + 2ab + b²", "example": "53² = 50² + 2 × 50 × 3 + 3² = 2500 + 300 + 9 = 2809", "pages": [145] },
+        { "id": "diffsq", "name": "Square of a difference", "formula": "(a − b)² = a² − 2ab + b²", "example": "48² = 50² − 2 × 50 × 2 + 2² = 2500 − 200 + 4 = 2304", "pages": [147] },
+        { "id": "squares", "name": "Difference of two squares", "formula": "a² − b² = (a + b)(a − b)", "example": "53² − 47² = 100 × 6 = 600", "pages": [148] },
+        { "id": "sridhar", "name": "Sridharacharya's quick square", "formula": "a² = (a + b)(a − b) + b²", "example": "98² = 100 × 96 + 2² = 9600 + 4 = 9604", "pages": [149] },
+        { "id": "ends5", "name": "Square of a number ending in 5", "formula": "(10k + 5)² = 100k(k + 1) + 25", "example": "35²: 3 × 4 = 12, then write 25: 1225", "pages": [149] }
+      ]
+    },
+    {
+      "id": "fast",
+      "title": "Quick multiplication",
+      "items": [
+        { "id": "by11", "name": "Multiplying by 11", "formula": "N × 11 = N × 10 + N", "example": "3874 × 11 = 38740 + 3874 = 42614", "pages": [144] },
+        { "id": "by99", "name": "Multiplying by 99 or 101", "formula": "N × 99 = N × 100 − N", "example": "46 × 99 = 4600 − 46 = 4554, and 46 × 101 = 4600 + 46 = 4646", "pages": [144] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "middle", "text": "Do not forget the middle term. (a + b)² is not a² + b². (2 + 3)² = 25, but 2² + 3² = 13." },
+    { "id": "minus", "text": "(a − b)² ends with +b², not −b². (5 − 2)² = 25 − 20 + 4 = 9." },
+    { "id": "both", "text": "When multiplying brackets, multiply every term by every term. 2(x + 3) = 2x + 6, not 2x + 3." },
+    { "id": "signs", "text": "Two minus signs multiply to a plus. (−2) × (−3) = +6." }
+  ]
+}

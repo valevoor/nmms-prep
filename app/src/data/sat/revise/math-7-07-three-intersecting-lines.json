@@ -1,0 +1,159 @@
+{
+ "chapter": "math-7-07-three-intersecting-lines",
+ "terms": [
+  {
+   "id": "equilateral",
+   "term": "Equilateral triangle",
+   "meaning": "A triangle with all 3 sides equal.",
+   "pages": [
+    146
+   ]
+  },
+  {
+   "id": "isosceles",
+   "term": "Isosceles triangle",
+   "meaning": "A triangle with 2 equal sides.",
+   "pages": [
+    149,
+    170
+   ]
+  },
+  {
+   "id": "scalene",
+   "term": "Scalene triangle",
+   "meaning": "A triangle with all sides of different lengths.",
+   "pages": [
+    170
+   ]
+  },
+  {
+   "id": "exterior",
+   "term": "Exterior angle",
+   "meaning": "The angle made outside a triangle when one side is extended.",
+   "pages": [
+    167
+   ]
+  },
+  {
+   "id": "altitude",
+   "term": "Altitude",
+   "meaning": "The line from a vertex to the opposite side, or that side extended, at right angles to it. It is also called the height.",
+   "pages": [
+    167
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "sides",
+   "title": "Sides of a triangle",
+   "items": [
+    {
+     "id": "inequality",
+     "name": "Triangle inequality",
+     "formula": "Each side is less than the sum of the other two",
+     "example": "4, 5, 7 works, because 4 + 5 is more than 7.",
+     "pages": [
+      154,
+      156
+     ]
+    },
+    {
+     "id": "shortcut",
+     "name": "Quick check",
+     "formula": "Check only the two shorter sides against the longest",
+     "example": "3, 4, 8: 3 + 4 = 7 is less than 8, so there is no triangle.",
+     "pages": [
+      157,
+      159
+     ]
+    },
+    {
+     "id": "thirdside",
+     "name": "Range of the third side",
+     "formula": "Between the difference and the sum of the other two",
+     "example": "Sides 5 and 8: the third side is more than 3 and less than 13.",
+     "pages": [
+      156,
+      159
+     ]
+    }
+   ]
+  },
+  {
+   "id": "angles",
+   "title": "Angles of a triangle",
+   "items": [
+    {
+     "id": "sum",
+     "name": "Angle sum",
+     "formula": "The three angles add up to 180°",
+     "example": "50° and 60°: the third is 180° − 110° = 70°.",
+     "pages": [
+      165,
+      166
+     ]
+    },
+    {
+     "id": "ext",
+     "name": "Exterior angle rule",
+     "formula": "It equals the sum of the two opposite inner angles",
+     "example": "Inner angles 50° and 60°: the exterior angle is 110°.",
+     "pages": [
+      167
+     ]
+    },
+    {
+     "id": "asa",
+     "name": "Two angles and a side between them",
+     "formula": "A triangle forms only if the two angles add up to less than 180°",
+     "example": "100° and 90° add up to 190°, so the arms never meet.",
+     "pages": [
+      163,
+      164
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "title": "Kinds of triangles",
+   "items": [
+    {
+     "id": "byangle",
+     "name": "Named by angles",
+     "formula": "Acute: all below 90°. Right: one 90°. Obtuse: one above 90°.",
+     "example": "60°, 70°, 50° is acute, and 30°, 40°, 110° is obtuse.",
+     "pages": [
+      169,
+      170
+     ]
+    },
+    {
+     "id": "equi",
+     "name": "Angles of an equilateral triangle",
+     "formula": "Each angle is 60°",
+     "example": "180° ÷ 3 = 60°",
+     "pages": [
+      166,
+      170
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "equalsum",
+   "text": "If two sides add up to exactly the third, there is no triangle. 3, 4, 7 lies flat, because 3 + 4 = 7."
+  },
+  {
+   "id": "twoobtuse",
+   "text": "A triangle cannot have two right or obtuse angles, because the three angles must add up to 180°."
+  },
+  {
+   "id": "extall",
+   "text": "The exterior angle equals the two opposite angles, not all three. It is not 180°."
+  }
+ ]
+}

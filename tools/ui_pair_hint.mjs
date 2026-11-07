@@ -9,6 +9,9 @@ const PAIRS = {
   'app/src/components/Options.tsx': 'app/src/pages/SatPractice.tsx and components/SatQuestion.tsx (the SAT question card)',
   'app/src/components/QuestionStem.tsx': 'app/src/pages/SatPractice.tsx and components/SatQuestion.tsx (the SAT question card)',
   'app/src/components/SatQuestion.tsx': 'app/src/pages/Practice.tsx, components/QuestionStem.tsx and components/Options.tsx (the MAT question card)',
+  'app/src/pages/Learn.tsx': 'app/src/pages/SatRevise.tsx (SAT revision)',
+  'app/src/pages/SatRevise.tsx': 'app/src/pages/Learn.tsx (MAT Learn)',
+  'app/src/pages/SatFlashcards.tsx': 'app/src/pages/Practice.tsx (MAT Practice; flash cards are SAT-only, but the finished card matches)',
   'app/src/pages/Home.tsx': 'the other tab in the same file: ChapterRow ↔ SatRow, the MAT hero ↔ SatHome',
 }
 

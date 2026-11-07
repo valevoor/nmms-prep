@@ -31,10 +31,12 @@ export interface TopicProgress {
   tests: TestResult[]
   /** Best scores in games such as "Guess the rule", by game id. */
   best: Record<string, number>
+  /** SAT flash cards: whether each was known the last time, by card id. */
+  flash: Record<string, boolean>
 }
 
 const MAX_MISTAKES = 50
-const empty = (): TopicProgress => ({ attempts: {}, exam: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {} })
+const empty = (): TopicProgress => ({ attempts: {}, exam: {}, generated: { correct: 0, wrong: 0 }, mistakes: [], tests: [], best: {}, flash: {} })
 
 const cache = new Map<string, TopicProgress>()
 const listeners = new Set<() => void>()
@@ -94,6 +96,11 @@ export function recordSatAnswer(topicId: string, id: string, correct: boolean) {
     const a = p.exam[id] ?? { correct: 0, wrong: 0, lastCorrect: false }
     return { ...p, exam: { ...p.exam, [id]: { correct: a.correct + (correct ? 1 : 0), wrong: a.wrong + (correct ? 0 : 1), lastCorrect: correct } } }
   })
+}
+
+/** Saves whether a SAT flash card was known. */
+export function recordFlash(topicId: string, cardId: string, known: boolean) {
+  update(satKey(topicId), (p) => ({ ...p, flash: { ...p.flash, [cardId]: known } }))
 }
 
 /** The solved questions answered wrong last time, in paper order. */

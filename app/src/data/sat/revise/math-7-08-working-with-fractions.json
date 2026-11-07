@@ -1,0 +1,140 @@
+{
+ "chapter": "math-7-08-working-with-fractions",
+ "terms": [
+  {
+   "id": "reciprocal",
+   "term": "Reciprocal",
+   "meaning": "The fraction turned upside down. The reciprocal of 3/4 is 4/3. A fraction times its reciprocal is 1.",
+   "pages": [
+    188
+   ]
+  },
+  {
+   "id": "apavartana",
+   "term": "Cancelling (apavartana)",
+   "meaning": "Dividing a numerator and a denominator by a common factor before multiplying.",
+   "pages": [
+    183
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "multiply",
+   "title": "Multiplying fractions",
+   "items": [
+    {
+     "id": "rule",
+     "name": "Fraction × fraction",
+     "formula": "(a/b) × (c/d) = (a × c)/(b × d)",
+     "example": "2/3 × 4/5 = 8/15",
+     "pages": [
+      182
+     ]
+    },
+    {
+     "id": "whole",
+     "name": "Whole number × fraction",
+     "formula": "Multiply the numerator by the whole number",
+     "example": "3 × 2/7 = 6/7",
+     "pages": [
+      175,
+      176
+     ]
+    },
+    {
+     "id": "cancel",
+     "name": "Cancelling first",
+     "formula": "Divide out common factors, then multiply",
+     "example": "4/9 × 3/8 = 1/3 × 1/2 = 1/6",
+     "pages": [
+      183
+     ]
+    },
+    {
+     "id": "area",
+     "name": "Area with fractional sides",
+     "formula": "Area = length × breadth",
+     "example": "Sides 1/2 and 3/4: area = 3/8 square units",
+     "pages": [
+      180
+     ]
+    }
+   ]
+  },
+  {
+   "id": "size",
+   "title": "How big is the product?",
+   "items": [
+    {
+     "id": "bothbig",
+     "name": "Both numbers more than 1",
+     "formula": "The product is more than both",
+     "example": "4/3 × 4 = 16/3",
+     "pages": [
+      184
+     ]
+    },
+    {
+     "id": "bothsmall",
+     "name": "Both numbers between 0 and 1",
+     "formula": "The product is less than both",
+     "example": "1/2 × 1/5 = 1/10",
+     "pages": [
+      185
+     ]
+    },
+    {
+     "id": "mixed",
+     "name": "One of each",
+     "formula": "The product lies between the two numbers",
+     "example": "1/2 × 6 = 3, which is between 1/2 and 6.",
+     "pages": [
+      185,
+      186
+     ]
+    }
+   ]
+  },
+  {
+   "id": "divide",
+   "title": "Dividing fractions",
+   "items": [
+    {
+     "id": "divrule",
+     "name": "Dividing by a fraction",
+     "formula": "Multiply by its reciprocal",
+     "example": "3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8",
+     "pages": [
+      189,
+      190
+     ]
+    },
+    {
+     "id": "history",
+     "name": "Who gave these rules",
+     "formula": "Brahmagupta, 628 CE",
+     "example": "He stated the rules for multiplying and dividing fractions in general form.",
+     "pages": [
+      182,
+      189
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "alwaysbigger",
+   "text": "Multiplying does not always make a number bigger. 1/2 × 1/5 = 1/10 is smaller than both."
+  },
+  {
+   "id": "wrongflip",
+   "text": "Turn over the divisor, not the first fraction. 3/4 ÷ 2/5 is 3/4 × 5/2."
+  },
+  {
+   "id": "addbottom",
+   "text": "Multiply both denominators. Do not keep the denominator as you do in addition. 1/2 × 1/2 = 1/4."
+  }
+ ]
+}

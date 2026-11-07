@@ -1,0 +1,52 @@
+{
+  "chapter": "math-8-09-baudhayana-pythagoras",
+  "terms": [
+    { "id": "hypotenuse", "term": "Hypotenuse", "meaning": "The side opposite the right angle in a right triangle. It is the longest side.", "pages": [37, 53] },
+    { "id": "theorem", "term": "Baudhayana-Pythagoras theorem", "meaning": "In a right triangle, the square on the hypotenuse equals the sum of the squares on the other two sides.", "pages": [46, 54] },
+    { "id": "triple", "term": "Baudhayana triple", "meaning": "Three counting numbers a, b, c with a² + b² = c². They can be the sides of a right triangle.", "pages": [48] },
+    { "id": "primitive", "term": "Primitive triple", "meaning": "A Baudhayana triple with no common factor greater than 1, such as 3, 4, 5.", "pages": [49] }
+  ],
+  "groups": [
+    {
+      "id": "theorem",
+      "title": "The theorem",
+      "items": [
+        { "id": "main", "name": "Sides of a right triangle", "formula": "a² + b² = c²", "example": "Sides 6 and 8: c² = 36 + 64 = 100, so c = 10.", "pages": [46, 54] },
+        { "id": "leg", "name": "Finding a shorter side", "formula": "b² = c² − a²", "example": "Hypotenuse 13 and side 5: b² = 169 − 25 = 144, so b = 12.", "pages": [46] },
+        { "id": "isright", "name": "Testing for a right angle", "formula": "Check if the two smaller squares add up to the largest", "example": "7, 24, 25: 49 + 576 = 625, so it is a right triangle.", "pages": [48] }
+      ]
+    },
+    {
+      "id": "squares",
+      "title": "Squares and their diagonals",
+      "items": [
+        { "id": "double", "name": "Doubling a square", "formula": "Square on the diagonal = 2 × the area", "example": "Side 3: area 9. The square on its diagonal has area 18.", "pages": [33] },
+        { "id": "half", "name": "Halving a square", "formula": "Join the midpoints of the sides", "example": "A square of area 16 gives an inner square of area 8.", "pages": [36] },
+        { "id": "iso", "name": "Isosceles right triangle", "formula": "c² = 2a², so c = a√2", "example": "Equal sides of 5: c² = 25 + 25 = 50, so c = 5√2.", "pages": [37] },
+        { "id": "rt2", "name": "Size of √2", "formula": "√2 is about 1.414", "example": "1.414² = 1.999396 and 1.415² = 2.002225, so √2 lies between them.", "pages": [38, 39] }
+      ]
+    },
+    {
+      "id": "triples",
+      "title": "Triples to know",
+      "items": [
+        { "id": "known", "name": "Common Baudhayana triples", "formula": "3, 4, 5 · 5, 12, 13 · 8, 15, 17 · 7, 24, 25", "example": "9² + 40² = 41² is another: 81 + 1600 = 1681.", "pages": [48, 49] },
+        { "id": "scaled", "name": "Making more triples", "formula": "Multiply all three numbers by the same number", "example": "3, 4, 5 × 2 gives 6, 8, 10.", "pages": [49] }
+      ]
+    },
+    {
+      "id": "use",
+      "title": "Using it",
+      "items": [
+        { "id": "rectdiag", "name": "Diagonal of a rectangle", "formula": "d² = length² + breadth²", "example": "Sides 8 cm and 15 cm: d² = 64 + 225 = 289, so d = 17 cm.", "pages": [41, 52] },
+        { "id": "rhombus", "name": "Side of a rhombus", "formula": "Half of each diagonal makes a right triangle", "example": "Diagonals 10 and 24: side² = 25 + 144 = 169, so side = 13.", "pages": [52, 53] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "add", "text": "Add the squares, not the sides. Sides 3 and 4 give hypotenuse 5, not 7." },
+    { "id": "root", "text": "Do not forget the square root at the end. If c² = 100, then c = 10, not 100." },
+    { "id": "subtract", "text": "To find a shorter side, subtract from the square of the hypotenuse. Do not add." },
+    { "id": "onlyright", "text": "The theorem is only for right triangles. Sides 4, 5, 6 do not fit: 16 + 25 = 41, not 36." }
+  ]
+}

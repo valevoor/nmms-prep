@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 59 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
+    <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 66 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
     <link rel="canonical" href="https://valevoor.github.io/nmms-prep/welcome/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NMMS Prep" />
     <meta property="og:title" content="NMMS Prep: Free MAT and SAT Practice App for Class 8" />
-    <meta property="og:description" content="Free NMMS exam practice with 41 MAT chapters, 59 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
+    <meta property="og:description" content="Free NMMS exam practice with 41 MAT chapters, 66 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
     <meta property="og:url" content="https://valevoor.github.io/nmms-prep/welcome/" />
     <meta property="og:image" content="https://valevoor.github.io/nmms-prep/icon-512.png" />
     <meta name="theme-color" content="#2f5bea" />
@@ -16,14 +16,14 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>NMMS Prep: Free MAT and SAT Practice App for Class 8</title>
     <script>
-      // A new visitor to the bare URL gets the landing page (public/welcome/index.html). A link into the app
-      // (any #/ route), a returning student (anything saved by the app) and the installed app go straight in.
+      // The main URL opens the landing page (public/welcome/index.html), with or without #/. The installed app and
+      // links to a chapter or tab go straight in. #/ is also how the landing and About pages enter the app, so once
+      // this tab has seen one of those pages or the app (nmms-in-app), #/ opens the app and a reload stays there.
       try {
-        var returning = Object.keys(localStorage).some(function (k) {
-          return k.indexOf('nmms-') === 0
-        })
         var installed = navigator.standalone || matchMedia('(display-mode: standalone)').matches
-        if (!location.hash && !returning && !installed && !/\/(welcome|about)\/?$/.test(location.pathname)) location.replace('./welcome/')
+        var homeLink = location.hash === '#/' && !sessionStorage.getItem('nmms-in-app')
+        if ((!location.hash || homeLink) && !installed && !/\/(welcome|about)\/?$/.test(location.pathname)) location.replace('./welcome/')
+        else sessionStorage.setItem('nmms-in-app', '1')
       } catch (e) {
         // Storage blocked: open the app.
       }

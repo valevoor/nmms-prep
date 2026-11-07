@@ -1,0 +1,165 @@
+{
+ "chapter": "math-7-13-connecting-the-dots",
+ "terms": [
+  {
+   "id": "statistics",
+   "term": "Statistical question",
+   "meaning": "A question that expects different answers across a group or over time, so it needs data.",
+   "pages": [
+    97,
+    98
+   ]
+  },
+  {
+   "id": "mean",
+   "term": "Arithmetic mean",
+   "meaning": "The sum of the values divided by how many there are. Old Indian texts called it samamiti, the equal measure.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "median",
+   "term": "Median",
+   "meaning": "The middle number when the data is put in order.",
+   "pages": [
+    106
+   ]
+  },
+  {
+   "id": "outlier",
+   "term": "Outlier",
+   "meaning": "A value much larger or much smaller than the rest of the data.",
+   "pages": [
+    107
+   ]
+  },
+  {
+   "id": "dotplot",
+   "term": "Dot plot",
+   "meaning": "A number line with a dot above it for each data value.",
+   "pages": [
+    102
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "values",
+   "title": "Representative values",
+   "items": [
+    {
+     "id": "meanf",
+     "name": "Finding the mean",
+     "formula": "Mean = sum of values ÷ number of values",
+     "example": "12, 15, 18, 19: 64 ÷ 4 = 16",
+     "pages": [
+      101
+     ]
+    },
+    {
+     "id": "bounds",
+     "name": "Where the mean lies",
+     "formula": "Between the smallest and largest values",
+     "example": "The mean of 12, 15, 18, 19 is 16, which lies between 12 and 19.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "range",
+     "name": "Range",
+     "formula": "Range = largest value − smallest value",
+     "example": "12, 15, 18, 19: 19 − 12 = 7",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "medodd",
+     "name": "Median of an odd number of values",
+     "formula": "Put in order and take the middle one",
+     "example": "5, 2, 9, 7, 3 in order is 2, 3, 5, 7, 9, so the median is 5.",
+     "pages": [
+      106
+     ]
+    },
+    {
+     "id": "medeven",
+     "name": "Median of an even number of values",
+     "formula": "Take the mean of the two middle values",
+     "example": "2, 3, 5, 7: (3 + 5) ÷ 2 = 4",
+     "pages": [
+      106,
+      107
+     ]
+    }
+   ]
+  },
+  {
+   "id": "effects",
+   "title": "Effects on the mean",
+   "items": [
+    {
+     "id": "outliers",
+     "name": "Outliers",
+     "formula": "They move the mean much more than the median",
+     "example": "1, 2, 3, 4, 90: the mean is 20, but the median is 3.",
+     "pages": [
+      107,
+      109
+     ]
+    },
+    {
+     "id": "zero",
+     "name": "A score of 0 and an absent match",
+     "formula": "Count a 0, but leave out a match not played",
+     "example": "Scores 40, 0, 20 in 3 matches: 60 ÷ 3 = 20. If the 0 was a missed match: 60 ÷ 2 = 30.",
+     "pages": [
+      111,
+      112
+     ]
+    }
+   ]
+  },
+  {
+   "id": "graphs",
+   "title": "Reading data",
+   "items": [
+    {
+     "id": "plots",
+     "name": "What a dot plot shows",
+     "formula": "Tall stacks show the common values",
+     "example": "Stacks of 1, 4 and 2 dots at 10, 11 and 12: the most common value is 11.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "compare",
+     "name": "Comparing two groups",
+     "formula": "Compare their means, medians and ranges",
+     "example": "A smaller range means the values are closer together.",
+     "pages": [
+      110,
+      125
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "order",
+   "text": "Sort the values before finding the median. For 5, 2, 9 the median is 5, not 2."
+  },
+  {
+   "id": "absent",
+   "text": "Do not count a match not played as a 0. It leaves the count altogether."
+  },
+  {
+   "id": "meanvalue",
+   "text": "The mean need not be a value in the data, and it need not be a whole number. The mean of 2 and 3 is 2.5."
+  }
+ ]
+}

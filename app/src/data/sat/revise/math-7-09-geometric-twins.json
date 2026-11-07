@@ -1,0 +1,164 @@
+{
+ "chapter": "math-7-09-geometric-twins",
+ "terms": [
+  {
+   "id": "congruent",
+   "term": "Congruent figures",
+   "meaning": "Figures that are exact copies, with the same shape and the same size. One fits exactly on the other.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "correspond",
+   "term": "Corresponding parts",
+   "meaning": "The vertices, sides and angles that match when one figure is placed on the other. The order in △ABC ≅ △XYZ shows the matching: A with X, B with Y, C with Z.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "included",
+   "term": "Included angle",
+   "meaning": "The angle between two given sides of a triangle.",
+   "pages": [
+    10
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "simple",
+   "title": "Simple figures",
+   "items": [
+    {
+     "id": "shapes",
+     "name": "When simple figures are congruent",
+     "formula": "Circles: same radius. Squares: same side.",
+     "example": "Rectangles need the same length and the same breadth.",
+     "pages": [
+      1,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "title": "Conditions for congruent triangles",
+   "items": [
+    {
+     "id": "sss",
+     "name": "SSS",
+     "formula": "All three sides are equal",
+     "example": "Sides 3, 4, 5 and 5, 3, 4 give congruent triangles.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "sas",
+     "name": "SAS",
+     "formula": "Two sides and the angle between them are equal",
+     "example": "Sides 5 and 7 with 40° between them fix the triangle.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "asa",
+     "name": "ASA",
+     "formula": "Two angles and the side between them are equal",
+     "example": "Angles 50° and 60° with a 6 cm side between them fix the triangle.",
+     "pages": [
+      13,
+      15
+     ]
+    },
+    {
+     "id": "aas",
+     "name": "AAS",
+     "formula": "Two angles and another side are equal",
+     "example": "If two angles match, the third matches too, so 180° − 50° − 60° = 70° in both.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "rhs",
+     "name": "RHS",
+     "formula": "Right angle, hypotenuse and one side are equal",
+     "example": "Right triangles with hypotenuse 13 and side 5 are congruent. The other side is 12 in both.",
+     "pages": [
+      17
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fail",
+   "title": "Conditions that do not work",
+   "items": [
+    {
+     "id": "aaa",
+     "name": "AAA",
+     "formula": "Equal angles do not fix the size",
+     "example": "Equilateral triangles with sides 2 cm and 5 cm have the same angles but are not congruent.",
+     "pages": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "ssa",
+     "name": "SSA",
+     "formula": "Two sides and an angle not between them are not enough",
+     "example": "Two different triangles can fit the same SSA values.",
+     "pages": [
+      12
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iso",
+   "title": "Results from congruence",
+   "items": [
+    {
+     "id": "isosceles",
+     "name": "Isosceles triangle",
+     "formula": "Angles opposite equal sides are equal",
+     "example": "If the top angle is 40°, each base angle is (180° − 40°) ÷ 2 = 70°.",
+     "pages": [
+      18,
+      22
+     ]
+    },
+    {
+     "id": "equilateral",
+     "name": "Equilateral triangle",
+     "formula": "Each angle is 60°",
+     "example": "180° ÷ 3 = 60°",
+     "pages": [
+      19,
+      22
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "order",
+   "text": "The order of letters matters. If △ABC ≅ △XYZ, then AB = XY, not AB = YZ."
+  },
+  {
+   "id": "aaa",
+   "text": "Equal angles alone do not make triangles congruent. They can have different sizes."
+  },
+  {
+   "id": "ssa",
+   "text": "In SAS the angle must be between the two sides. If it is not, the condition is SSA, which does not work."
+  }
+ ]
+}

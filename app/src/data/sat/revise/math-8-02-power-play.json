@@ -1,0 +1,65 @@
+{
+  "chapter": "math-8-02-power-play",
+  "terms": [
+    { "id": "base", "term": "Base and exponent", "meaning": "In 5⁴, 5 is the base and 4 is the exponent, also called the power. It is read as 5 raised to the power 4.", "pages": [22] },
+    { "id": "exponential", "term": "Exponential growth", "meaning": "Growth by multiplying by the same number at each step, also called multiplicative growth. Doubling is an example.", "pages": [21] },
+    { "id": "linear", "term": "Linear growth", "meaning": "Growth by adding the same amount at each step, like walking with steps of equal length.", "pages": [36] },
+    { "id": "powerline", "term": "Power line", "meaning": "The powers of a number in order. Moving one place up multiplies by that number, and one place down divides by it.", "pages": [29] },
+    { "id": "scientific", "term": "Scientific notation", "meaning": "Writing a number as x × 10ʸ, also called standard form. Here x is the coefficient, at least 1 and less than 10.", "pages": [31] },
+    { "id": "googol", "term": "Googol", "meaning": "The number 10¹⁰⁰. A googolplex is 10 raised to the power of a googol.", "pages": [43] }
+  ],
+  "groups": [
+    {
+      "id": "meaning",
+      "title": "What a power means",
+      "items": [
+        { "id": "power", "name": "A number raised to a power", "formula": "nᵃ = n multiplied by itself a times", "example": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32", "pages": [22] },
+        { "id": "minusone", "name": "Powers of −1", "formula": "Even power: +1. Odd power: −1.", "example": "(−1)¹⁰ = 1 and (−1)⁷ = −1", "pages": [22] },
+        { "id": "primeform", "name": "Prime factors in exponential form", "formula": "Group equal prime factors as powers", "example": "720 = 2⁴ × 3² × 5", "pages": [22] },
+        { "id": "cycle", "name": "Last digit of powers of 2", "formula": "2, 4, 8, 6, then the same again", "example": "2¹⁰ = 1024 ends in 4, the same as 2².", "pages": [44] }
+      ]
+    },
+    {
+      "id": "laws",
+      "title": "Rules of exponents",
+      "items": [
+        { "id": "multiply", "name": "Multiplying with the same base", "formula": "nᵃ × nᵇ = nᵃ⁺ᵇ", "example": "3² × 3⁴ = 3⁶ = 729", "pages": [24] },
+        { "id": "ofpower", "name": "Power of a power", "formula": "(nᵃ)ᵇ = nᵃᵇ", "example": "(2³)² = 2⁶ = 64", "pages": [24] },
+        { "id": "samepower", "name": "Multiplying with the same power", "formula": "mᵃ × nᵃ = (m × n)ᵃ", "example": "2³ × 5³ = 10³ = 1000", "pages": [25] },
+        { "id": "divide", "name": "Dividing with the same base", "formula": "nᵃ ÷ nᵇ = nᵃ⁻ᵇ", "example": "5⁶ ÷ 5⁴ = 5² = 25", "pages": [27] },
+        { "id": "dividepower", "name": "Dividing with the same power", "formula": "mᵃ ÷ nᵃ = (m ÷ n)ᵃ", "example": "12² ÷ 4² = 3² = 9", "pages": [25] },
+        { "id": "zero", "name": "Zero as the exponent", "formula": "n⁰ = 1, when n ≠ 0", "example": "7⁰ = 1, because 7³ ÷ 7³ = 1", "pages": [28] },
+        { "id": "negative", "name": "Negative power", "formula": "n⁻ᵃ = 1/nᵃ, when n ≠ 0", "example": "2⁻³ = 1/2³ = 1/8", "pages": [28, 29] }
+      ]
+    },
+    {
+      "id": "counting",
+      "title": "Counting choices",
+      "items": [
+        { "id": "choices", "name": "Choosing one from each group", "formula": "Multiply the number of choices", "example": "5 shirts and 4 caps: 5 × 4 = 20 ways", "pages": [26] },
+        { "id": "digitlock", "name": "A lock with digits", "formula": "k digits: 10ᵏ passwords", "example": "A 4-digit lock has 10⁴ = 10000 passwords, from 0000 to 9999.", "pages": [26, 27] },
+        { "id": "letterlock", "name": "A lock with letters", "formula": "k letters from A to Z: 26ᵏ passwords", "example": "A 3-letter lock has 26³ = 17576 passwords.", "pages": [27] }
+      ]
+    },
+    {
+      "id": "tens",
+      "title": "Powers of 10 and large numbers",
+      "items": [
+        { "id": "expanded", "name": "Expanded form with powers of 10", "formula": "Tenths, hundredths… use 10⁻¹, 10⁻²…", "example": "304.25 = 3 × 10² + 0 × 10¹ + 4 × 10⁰ + 2 × 10⁻¹ + 5 × 10⁻²", "pages": [30] },
+        { "id": "standard", "name": "Writing a number in standard form", "formula": "x × 10ʸ, with 1 ≤ x < 10", "example": "64000 = 6.4 × 10⁴", "pages": [31] },
+        { "id": "compare", "name": "Comparing numbers in standard form", "formula": "Compare the exponents first", "example": "3.2 × 10⁶ is more than 9.9 × 10⁵, because 6 is more than 5.", "pages": [32] },
+        { "id": "doubling", "name": "Ten doublings", "formula": "2¹⁰ = 1024", "example": "After 10 folds, paper is 1024 times as thick.", "pages": [21, 22] },
+        { "id": "indian", "name": "Indian names for large numbers", "formula": "Lakh 10⁵, crore 10⁷, arab 10⁹, kharab 10¹¹", "example": "Each is a hundred of the one before: 100 × 10⁵ = 10⁷.", "pages": [43] },
+        { "id": "international", "name": "International names for large numbers", "formula": "Million 10⁶, billion 10⁹, trillion 10¹²", "example": "Each is a thousand of the one before: 1000 × 10⁶ = 10⁹.", "pages": [43] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "times", "text": "A power is not a multiplication by the exponent. 4³ = 4 × 4 × 4 = 64, not 4 × 3 = 12." },
+    { "id": "addexp", "text": "When multiplying with the same base, add the exponents. 2³ × 2⁴ = 2⁷, not 2¹²." },
+    { "id": "ofpower", "text": "For a power of a power, multiply the exponents. (2³)² = 2⁶, not 2⁵." },
+    { "id": "zero", "text": "When the exponent is 0, the answer is 1, not 0. 9⁰ = 1." },
+    { "id": "negative", "text": "A negative power does not make the answer negative. 2⁻³ = 1/8, not −8." },
+    { "id": "coefficient", "text": "In standard form the coefficient must be at least 1 and less than 10. 72000 is 7.2 × 10⁴, not 0.72 × 10⁵ or 72 × 10³." }
+  ]
+}

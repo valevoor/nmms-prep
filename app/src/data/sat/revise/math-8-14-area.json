@@ -1,0 +1,180 @@
+{
+ "chapter": "math-8-14-area",
+ "terms": [
+  {
+   "id": "area",
+   "term": "Area",
+   "meaning": "The number of unit squares that cover a region, measured in square units.",
+   "pages": [
+    149
+   ]
+  },
+  {
+   "id": "altitude",
+   "term": "Height of a triangle",
+   "meaning": "The straight distance from a vertex to the opposite side, at right angles to it. It may fall outside the triangle.",
+   "pages": [
+    154,
+    155
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "shapes",
+   "title": "Area formulas",
+   "items": [
+    {
+     "id": "rect",
+     "name": "Rectangle and square",
+     "formula": "Rectangle: l × w. Square: s².",
+     "example": "9 cm by 4 cm has area 36 cm². A square of side 6 cm also has area 36 cm².",
+     "pages": [
+      149
+     ]
+    },
+    {
+     "id": "triangle",
+     "name": "Triangle",
+     "formula": "Area = 1/2 × base × height",
+     "example": "Base 10 cm and height 6 cm: 1/2 × 10 × 6 = 30 cm²",
+     "pages": [
+      154
+     ]
+    },
+    {
+     "id": "para",
+     "name": "Parallelogram",
+     "formula": "Area = base × height",
+     "example": "Base 8 cm and height 5 cm: 8 × 5 = 40 cm²",
+     "pages": [
+      161,
+      162
+     ]
+    },
+    {
+     "id": "rhombus",
+     "name": "Rhombus",
+     "formula": "Area = 1/2 × product of the diagonals",
+     "example": "Diagonals 20 cm and 15 cm: 1/2 × 20 × 15 = 150 cm²",
+     "pages": [
+      164,
+      165
+     ]
+    },
+    {
+     "id": "trap",
+     "name": "Trapezium",
+     "formula": "Area = 1/2 × h × (a + b)",
+     "example": "Parallel sides 7 cm and 5 cm, height 4 cm: 1/2 × 4 × 12 = 24 cm²",
+     "pages": [
+      166,
+      167
+     ]
+    },
+    {
+     "id": "polygon",
+     "name": "Any polygon",
+     "formula": "Divide it into triangles and add their areas",
+     "example": "A quadrilateral with a diagonal of 22 cm and heights 5 cm and 3 cm on it: 55 + 33 = 88 cm²",
+     "pages": [
+      159,
+      160
+     ]
+    }
+   ]
+  },
+  {
+   "id": "paths",
+   "title": "Paths and frames",
+   "items": [
+    {
+     "id": "path",
+     "name": "Path around a rectangle",
+     "formula": "Outer area − inner area",
+     "example": "Outer 12 m by 8 m, inner 10 m by 6 m: 96 − 60 = 36 m²",
+     "pages": [
+      150,
+      151
+     ]
+    }
+   ]
+  },
+  {
+   "id": "equal",
+   "title": "Triangles with equal area",
+   "items": [
+    {
+     "id": "samebase",
+     "name": "Same base and same height",
+     "formula": "The areas are equal",
+     "example": "Moving the top vertex along a line parallel to the base keeps the area the same.",
+     "pages": [
+      156
+     ]
+    },
+    {
+     "id": "rectfour",
+     "name": "Diagonals of a rectangle",
+     "formula": "They make 4 triangles of equal area",
+     "example": "A rectangle of area 60 cm² gives 4 triangles of 15 cm².",
+     "pages": [
+      155
+     ]
+    }
+   ]
+  },
+  {
+   "id": "units",
+   "title": "Units of area",
+   "items": [
+    {
+     "id": "inch",
+     "name": "Square inches and centimetres",
+     "formula": "1 in² = 6.4516 cm²",
+     "example": "1 in = 2.54 cm, and 2.54 × 2.54 = 6.4516. So 10 in² = 64.516 cm².",
+     "pages": [
+      171
+     ]
+    },
+    {
+     "id": "acre",
+     "name": "Acres",
+     "formula": "1 acre = 43560 ft²",
+     "example": "2 acres = 87120 ft²",
+     "pages": [
+      171
+     ]
+    },
+    {
+     "id": "squarem",
+     "name": "Larger square units",
+     "formula": "1 km² = 1000000 m²",
+     "example": "Because 1 km = 1000 m, and 1000 × 1000 = 1000000.",
+     "pages": [
+      171,
+      172
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "half",
+   "text": "Do not forget the 1/2 for a triangle, a rhombus or a trapezium."
+  },
+  {
+   "id": "slant",
+   "text": "Use the height at right angles to the base, not the slanting side. A parallelogram's area uses its height."
+  },
+  {
+   "id": "perimeter",
+   "text": "A bigger perimeter does not mean a bigger area. 1 by 10 has perimeter 22 and area 10, while 5 by 5 has perimeter 20 and area 25."
+  },
+  {
+   "id": "convert",
+   "text": "Square units convert with the square of the factor. 1 m = 100 cm, but 1 m² = 10000 cm²."
+  }
+ ]
+}

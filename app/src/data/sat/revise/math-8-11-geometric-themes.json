@@ -1,0 +1,191 @@
+{
+ "chapter": "math-8-11-geometric-themes",
+ "terms": [
+  {
+   "id": "fractal",
+   "term": "Fractal",
+   "meaning": "A self-similar shape: small parts look like the whole. They are found in nature and in art.",
+   "pages": [
+    70,
+    102
+   ]
+  },
+  {
+   "id": "net",
+   "term": "Net",
+   "meaning": "A flat shape that folds up to make a solid.",
+   "pages": [
+    80
+   ]
+  },
+  {
+   "id": "projection",
+   "term": "Projection",
+   "meaning": "A view of a solid on a flat surface, like its shadow. The usual ones are the front, top and side views.",
+   "pages": [
+    88,
+    91
+   ]
+  },
+  {
+   "id": "isometric",
+   "term": "Isometric projection",
+   "meaning": "A view of a cube turned so that all its edges look equal in length. It can be drawn on isometric grid paper.",
+   "pages": [
+    97,
+    102
+   ]
+  },
+  {
+   "id": "parts",
+   "term": "Faces, edges and vertices",
+   "meaning": "A face is a flat side, an edge is where two faces meet, and a vertex is a corner.",
+   "pages": [
+    78,
+    79
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "fractals",
+   "title": "Fractals",
+   "items": [
+    {
+     "id": "carpet",
+     "name": "Sierpinski carpet",
+     "formula": "After step n: 8ⁿ squares remain",
+     "example": "Each square becomes 9 and the middle is removed. Step 2: 8² = 64 squares.",
+     "pages": [
+      70,
+      71
+     ]
+    },
+    {
+     "id": "carpetarea",
+     "name": "Area of the carpet",
+     "formula": "Remaining area = (8/9)ⁿ of the start",
+     "example": "Step 2: 8/9 × 8/9 = 64/81",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "gasket",
+     "name": "Sierpinski gasket",
+     "formula": "After step n: 3ⁿ triangles remain",
+     "example": "Each triangle becomes 4 and the middle is removed. Step 3: 3³ = 27 triangles.",
+     "pages": [
+      72
+     ]
+    },
+    {
+     "id": "koch",
+     "name": "Koch snowflake",
+     "formula": "After step n: 3 × 4ⁿ sides",
+     "example": "Step 2: 3 × 4² = 48 sides, each 1/9 as long as a starting side.",
+     "pages": [
+      73
+     ]
+    }
+   ]
+  },
+  {
+   "id": "solids",
+   "title": "Solids",
+   "items": [
+    {
+     "id": "cuboid",
+     "name": "Cube or cuboid",
+     "formula": "6 faces, 12 edges, 8 vertices",
+     "example": "6 + 8 − 12 = 2",
+     "pages": [
+      78,
+      79
+     ]
+    },
+    {
+     "id": "prism",
+     "name": "Prism with an n-sided base",
+     "formula": "n + 2 faces, 3n edges, 2n vertices",
+     "example": "Triangular prism, n = 3: 5 faces, 9 edges, 6 vertices.",
+     "pages": [
+      78,
+      79
+     ]
+    },
+    {
+     "id": "pyramid",
+     "name": "Pyramid with an n-sided base",
+     "formula": "n + 1 faces, 2n edges, n + 1 vertices",
+     "example": "Square pyramid, n = 4: 5 faces, 8 edges, 5 vertices.",
+     "pages": [
+      78,
+      79
+     ]
+    },
+    {
+     "id": "cubenets",
+     "name": "Nets of a cube",
+     "formula": "11 different nets",
+     "example": "Nets that are only turned or flipped copies of each other count as one.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "cylnet",
+     "name": "Net of a cylinder",
+     "formula": "One rectangle and two circles",
+     "example": "The rectangle's length equals the circle's circumference.",
+     "pages": [
+      82
+     ]
+    }
+   ]
+  },
+  {
+   "id": "paths",
+   "title": "Shortest paths and views",
+   "items": [
+    {
+     "id": "path",
+     "name": "Shortest path on a cuboid",
+     "formula": "Unfold it into a net and draw a straight line",
+     "example": "On a net, a path with sides 24 cm and 32 cm has length √(24² + 32²) = 40 cm.",
+     "pages": [
+      84,
+      87
+     ]
+    },
+    {
+     "id": "views",
+     "name": "Three standard views",
+     "formula": "Front view, top view and side view",
+     "example": "A cylinder standing up: the top view is a circle, and the front view is a rectangle.",
+     "pages": [
+      91
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "onenet",
+   "text": "A solid can have more than one net. A cube has 11, so check by folding it in your mind."
+  },
+  {
+   "id": "anypath",
+   "text": "The net you choose changes the path. Try all the unfoldings and pick the shortest."
+  },
+  {
+   "id": "prismpyr",
+   "text": "Do not mix up a prism and a pyramid. A prism has two bases and 3n edges; a pyramid has one base and 2n edges."
+  },
+  {
+   "id": "sameview",
+   "text": "Different objects can have the same projection, so one view is not enough to know the solid."
+  }
+ ]
+}

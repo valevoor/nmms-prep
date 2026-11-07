@@ -1,0 +1,43 @@
+{
+  "chapter": "math-7-02-arithmetic-expressions",
+  "terms": [
+    { "id": "expression", "term": "Arithmetic expression", "meaning": "Numbers joined by operations. Its value is the number it works out to. 3 × 4 is an expression with value 12.", "pages": [24] },
+    { "id": "term", "term": "Term", "meaning": "A part of an expression separated by + signs, after writing each subtraction as adding a negative. 23 − 2 × 4 has terms 23 and −2 × 4.", "pages": [28, 29] }
+  ],
+  "groups": [
+    {
+      "id": "order",
+      "title": "Working out an expression",
+      "items": [
+        { "id": "brackets", "name": "Brackets", "formula": "Work out brackets first", "example": "100 − (15 + 56) = 100 − 71 = 29", "pages": [26, 27] },
+        { "id": "terms", "name": "Terms", "formula": "Work out each term, then add", "example": "23 − 2 × 4 + 16 = 23 + (−8) + 16 = 31", "pages": [28, 29] },
+        { "id": "swap", "name": "Swapping terms", "formula": "a + b = b + a", "example": "37 + 93 = 93 + 37 = 130", "pages": [30] },
+        { "id": "group", "name": "Grouping terms", "formula": "(a + b) + c = a + (b + c)", "example": "1 − 2 + 3 − 4 = (1 − 2) + (3 − 4) = −2", "pages": [31] }
+      ]
+    },
+    {
+      "id": "remove",
+      "title": "Removing brackets",
+      "items": [
+        { "id": "minus", "name": "Minus before a bracket", "formula": "a − (b + c) = a − b − c", "example": "200 − (40 + 3) = 200 − 40 − 3 = 157", "pages": [35] },
+        { "id": "minus2", "name": "Minus before a subtraction", "formula": "a − (b − c) = a − b + c", "example": "500 − (250 − 100) = 500 − 250 + 100 = 350", "pages": [35, 36] },
+        { "id": "plus", "name": "Plus before a bracket", "formula": "a + (b − c) = a + b − c", "example": "50 + (20 − 5) = 50 + 20 − 5 = 65", "pages": [35, 36] },
+        { "id": "dist", "name": "Multiplying a bracket", "formula": "a × (b + c) = a × b + a × c", "example": "4 × (10 + 3) = 40 + 12 = 52", "pages": [38, 39] }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Comparing without working out",
+      "items": [
+        { "id": "tinkersum", "name": "Comparing two sums", "formula": "Compare how each term changes", "example": "1023 + 125 and 1022 + 128: −1 and +3 is a net +2, so the second is larger.", "pages": [36] },
+        { "id": "tinkerdiff", "name": "Keeping a difference the same", "formula": "Change both numbers by the same amount", "example": "113 − 25 = 112 − 24 = 88", "pages": [36] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "left", "text": "Do not just work from left to right. 30 + 5 × 4 = 30 + 20 = 50, not 35 × 4 = 140." },
+    { "id": "minussign", "text": "A minus before a bracket changes every sign inside. 500 − (250 − 100) is 350, not 150." },
+    { "id": "subswap", "text": "Subtraction cannot be swapped by itself: 9 − 4 is not 4 − 9. Swap terms with their signs: 9 + (−4) = (−4) + 9." },
+    { "id": "distboth", "text": "Multiply every term in the bracket. 4 × (10 + 3) is 52, not 43." }
+  ]
+}

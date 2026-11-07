@@ -1,0 +1,130 @@
+{
+ "chapter": "math-7-04-expressions-letter-numbers",
+ "terms": [
+  {
+   "id": "letter",
+   "term": "Letter-number",
+   "meaning": "A letter that stands for a number that is unknown or can change.",
+   "pages": [
+    81,
+    82
+   ]
+  },
+  {
+   "id": "like",
+   "term": "Like terms",
+   "meaning": "Terms with the same letter-numbers, such as 5c and 3c.",
+   "pages": [
+    90
+   ]
+  },
+  {
+   "id": "unlike",
+   "term": "Unlike terms",
+   "meaning": "Terms with different letter-numbers, such as 3a and 2b. They cannot be joined into one term.",
+   "pages": [
+    90
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "write",
+   "title": "Writing and using expressions",
+   "items": [
+    {
+     "id": "translate",
+     "name": "From words to an expression",
+     "formula": "Use a letter for the number that changes",
+     "example": "c coconuts at ₹35 each cost 35c rupees.",
+     "pages": [
+      81,
+      82
+     ]
+    },
+    {
+     "id": "times",
+     "name": "Leaving out the × sign",
+     "formula": "4 × n is written 4n",
+     "example": "If d = 6, then 3d = 3 × 6 = 18.",
+     "pages": [
+      85,
+      87
+     ]
+    },
+    {
+     "id": "substitute",
+     "name": "Finding the value",
+     "formula": "Put the number in place of the letter",
+     "example": "If s = 7, then 3s − 2 = 21 − 2 = 19.",
+     "pages": [
+      85,
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "id": "simplify",
+   "title": "Simplifying",
+   "items": [
+    {
+     "id": "combine",
+     "name": "Adding like terms",
+     "formula": "Add the numbers in front",
+     "example": "5c + 3c + 10c = 18c, and 12n − 4n = 8n",
+     "pages": [
+      89,
+      90
+     ]
+    },
+    {
+     "id": "perimeter",
+     "name": "Perimeter of a rectangle",
+     "formula": "p = 2(l + b)",
+     "example": "l = 7 and b = 4: p = 2 × 11 = 22",
+     "pages": [
+      83,
+      84
+     ]
+    },
+    {
+     "id": "subbracket",
+     "name": "Subtracting a bracket",
+     "formula": "Change the sign of each term inside",
+     "example": "(40x + 75y) − (6x + 10y) = 34x + 65y",
+     "pages": [
+      86
+     ]
+    },
+    {
+     "id": "expand",
+     "name": "Multiplying a bracket",
+     "formula": "a(b + c) = ab + ac",
+     "example": "4(x + y) − y = 4x + 4y − y = 4x + 3y",
+     "pages": [
+      89
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "concat",
+   "text": "3d does not mean writing 3 next to the number. If d = 6, 3d is 18, not 36."
+  },
+  {
+   "id": "unlike",
+   "text": "Unlike terms stay apart. 3a + 2b is not 5ab."
+  },
+  {
+   "id": "bracket",
+   "text": "10y − 3 and 10(y − 3) are different. If y = 5, they are 47 and 20."
+  },
+  {
+   "id": "sign",
+   "text": "A minus before a bracket changes every term inside. 9 − (x + 2) = 7 − x, not 11 − x."
+  }
+ ]
+}

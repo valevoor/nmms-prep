@@ -1,0 +1,134 @@
+{
+ "chapter": "math-7-11-finding-common-ground",
+ "terms": [
+  {
+   "id": "hcf",
+   "term": "HCF",
+   "meaning": "The Highest Common Factor: the largest number that divides all the given numbers.",
+   "pages": [
+    48
+   ]
+  },
+  {
+   "id": "lcm",
+   "term": "LCM",
+   "meaning": "The Lowest Common Multiple: the smallest number that all the given numbers divide.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "coprime",
+   "term": "Co-prime numbers",
+   "meaning": "Numbers whose HCF is 1. They have no common prime factor.",
+   "pages": [
+    59
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "find",
+   "title": "Finding HCF and LCM",
+   "items": [
+    {
+     "id": "factorise",
+     "name": "Prime factorisation",
+     "formula": "Write the number as a product of primes",
+     "example": "84 = 2 × 2 × 3 × 7",
+     "pages": [
+      49,
+      50
+     ]
+    },
+    {
+     "id": "factors",
+     "name": "Factors from prime factors",
+     "formula": "Every factor is a product of some of its prime factors",
+     "example": "30 = 2 × 3 × 5, so 6 = 2 × 3 and 10 = 2 × 5 are factors.",
+     "pages": [
+      51
+     ]
+    },
+    {
+     "id": "hcfrule",
+     "name": "HCF from prime factors",
+     "formula": "Multiply the common prime factors",
+     "example": "84 = 2 × 2 × 3 × 7 and 108 = 2 × 2 × 3 × 3 × 3: HCF = 2 × 2 × 3 = 12",
+     "pages": [
+      52,
+      53
+     ]
+    },
+    {
+     "id": "lcmrule",
+     "name": "LCM from prime factors",
+     "formula": "Take each prime the most times it appears in any number",
+     "example": "6 = 2 × 3 and 8 = 2 × 2 × 2: LCM = 2 × 2 × 2 × 3 = 24",
+     "pages": [
+      57,
+      58
+     ]
+    },
+    {
+     "id": "product",
+     "name": "HCF and LCM together",
+     "formula": "HCF × LCM = product of the two numbers",
+     "example": "6 and 8: 2 × 24 = 48 = 6 × 8",
+     "pages": [
+      62,
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use",
+   "title": "When to use which",
+   "items": [
+    {
+     "id": "tile",
+     "name": "Largest size that fits exactly",
+     "formula": "Use the HCF",
+     "example": "The largest square tile for a 12 ft by 16 ft room has side 4 ft.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "bags",
+     "name": "Fewest equal bags",
+     "formula": "Use the HCF as the bag size",
+     "example": "84 kg and 108 kg: bags of 12 kg, so 7 + 9 = 16 bags.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "together",
+     "name": "When things happen together",
+     "formula": "Use the LCM",
+     "example": "Every 7 days and every 10 days: they match every 70 days.",
+     "pages": [
+      55,
+      56
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "mix",
+   "text": "Do not swap them. The HCF is never more than the smaller number, and the LCM is never less than the larger one."
+  },
+  {
+   "id": "product2",
+   "text": "The LCM need not be the product. For 6 and 8 the LCM is 24, not 48. It equals the product only for co-prime numbers."
+  },
+  {
+   "id": "threenums",
+   "text": "HCF × LCM = product works for two numbers, not always for three. For 2, 4, 8: 2 × 8 = 16, but the product is 64."
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "chapter": "math-7-10-operations-integers",
+ "terms": [
+  {
+   "id": "inverse",
+   "term": "Additive inverse",
+   "meaning": "The number that adds to a number to give 0. The additive inverse of 7 is −7.",
+   "pages": [
+    29
+   ]
+  },
+  {
+   "id": "zeropair",
+   "term": "Zero pair",
+   "meaning": "One positive token and one negative token together, which make 0.",
+   "pages": [
+    28
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "addsub",
+   "title": "Adding and subtracting",
+   "items": [
+    {
+     "id": "sub",
+     "name": "Subtracting a number",
+     "formula": "a − b = a + (−b)",
+     "example": "7 − 18 = 7 + (−18) = −11",
+     "pages": [
+      28,
+      29
+     ]
+    },
+    {
+     "id": "subneg",
+     "name": "Subtracting a negative",
+     "formula": "a − (−b) = a + b",
+     "example": "4 − (−12) = 4 + 12 = 16",
+     "pages": [
+      28,
+      29
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mult",
+   "title": "Multiplying",
+   "items": [
+    {
+     "id": "signs",
+     "name": "Signs in a product",
+     "formula": "Same signs: positive. Different signs: negative.",
+     "example": "(−4) × (−2) = 8, and (−4) × 2 = −8",
+     "pages": [
+      30,
+      35
+     ]
+    },
+    {
+     "id": "minusone",
+     "name": "Multiplying by −1",
+     "formula": "(−1) × a = −a",
+     "example": "(−1) × 9 = −9, the additive inverse of 9.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "many",
+     "name": "Many negative numbers",
+     "formula": "Even count: positive. Odd count: negative.",
+     "example": "(−1) × (−1) × (−1) = −1",
+     "pages": [
+      34,
+      35
+     ]
+    },
+    {
+     "id": "props",
+     "name": "Properties of multiplication",
+     "formula": "a × b = b × a and (a × b) × c = a × (b × c)",
+     "example": "(−2) × 5 = 5 × (−2) = −10",
+     "pages": [
+      35,
+      40
+     ]
+    },
+    {
+     "id": "distr",
+     "name": "Multiplying a sum",
+     "formula": "a × (b + c) = a × b + a × c",
+     "example": "−3 × (10 + 2) = −30 − 6 = −36",
+     "pages": [
+      41
+     ]
+    }
+   ]
+  },
+  {
+   "id": "div",
+   "title": "Dividing",
+   "items": [
+    {
+     "id": "divsigns",
+     "name": "Signs in a division",
+     "formula": "Same signs: positive. Different signs: negative.",
+     "example": "(−100) ÷ 25 = −4, and (−100) ÷ (−4) = 25",
+     "pages": [
+      38,
+      39
+     ]
+    },
+    {
+     "id": "marks",
+     "name": "Negative marking",
+     "formula": "Total = right × marks + wrong × (−marks)",
+     "example": "8 right at +4 and 3 wrong at −1: 32 − 3 = 29",
+     "pages": [
+      35,
+      43
+     ]
+    },
+    {
+     "id": "brahma",
+     "name": "Brahmagupta's names",
+     "formula": "Dhana is positive, rina is negative, and shunya is zero",
+     "example": "He gave rules for multiplying them, such as rina × rina = dhana.",
+     "pages": [
+      35
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "twominus",
+   "text": "Two minus signs multiplied give a plus, but adding two negatives stays negative. (−3) × (−2) = 6, while (−3) + (−2) = −5."
+  },
+  {
+   "id": "subsign",
+   "text": "Subtracting a negative adds it. 4 − (−12) is 16, not −8."
+  },
+  {
+   "id": "divassoc",
+   "text": "Division cannot be regrouped. (16 ÷ 4) ÷ 2 = 2, but 16 ÷ (4 ÷ 2) = 8."
+  }
+ ]
+}

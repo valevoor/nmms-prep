@@ -1,0 +1,166 @@
+{
+ "chapter": "math-8-10-proportional-reasoning-2",
+ "terms": [
+  {
+   "id": "rf",
+   "term": "Representative fraction",
+   "meaning": "The ratio of a distance on a map to the real distance, in the same unit.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "direct",
+   "term": "Direct proportion",
+   "meaning": "Two quantities that change by the same factor, so their quotient stays the same.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "inverse",
+   "term": "Inverse proportion",
+   "meaning": "When one quantity is multiplied by n, the other is divided by n, so their product stays the same.",
+   "pages": [
+    63,
+    69
+   ]
+  },
+  {
+   "id": "pie",
+   "term": "Pie chart",
+   "meaning": "A circle cut into parts, where the angle of each part shows its share of the total.",
+   "pages": [
+    60
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "maps",
+   "title": "Maps",
+   "items": [
+    {
+     "id": "map",
+     "name": "Using a map scale",
+     "formula": "Real distance = map distance × scale",
+     "example": "Scale 1 : 100000. 3 cm on the map is 300000 cm = 3 km.",
+     "pages": [
+      56,
+      57
+     ]
+    }
+   ]
+  },
+  {
+   "id": "terms",
+   "title": "Ratios with many terms",
+   "items": [
+    {
+     "id": "scaleterms",
+     "name": "Equal ratios with many terms",
+     "formula": "Multiply every term by the same number",
+     "example": "1 : 1.5 : 3 = 2 : 3 : 6",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "divide",
+     "name": "Dividing in the ratio p : q : r",
+     "formula": "First part = p ÷ (p + q + r) × total",
+     "example": "₹900 in the ratio 1 : 3 : 5: 900 ÷ 9 = 100, so ₹100, ₹300 and ₹500.",
+     "pages": [
+      59,
+      69
+     ]
+    },
+    {
+     "id": "angles",
+     "name": "Angles of a triangle in a ratio",
+     "formula": "Divide 180° in that ratio",
+     "example": "1 : 3 : 5: 180° ÷ 9 = 20°, so 20°, 60° and 100°.",
+     "pages": [
+      60
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pie",
+   "title": "Pie charts",
+   "items": [
+    {
+     "id": "angle",
+     "name": "Angle of a part",
+     "formula": "Value ÷ total × 360°",
+     "example": "15 out of 60 students: 15 ÷ 60 × 360° = 90°",
+     "pages": [
+      61
+     ]
+    },
+    {
+     "id": "percent",
+     "name": "Angle from a percentage",
+     "formula": "Percentage ÷ 100 × 360°",
+     "example": "25% is 25 ÷ 100 × 360° = 90°.",
+     "pages": [
+      61
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inverse",
+   "title": "Inverse proportion",
+   "items": [
+    {
+     "id": "product",
+     "name": "Rule for inverse proportion",
+     "formula": "x₁ × y₁ = x₂ × y₂",
+     "example": "6 workers take 10 days. 12 workers take 6 × 10 ÷ 12 = 5 days.",
+     "pages": [
+      63,
+      65
+     ]
+    },
+    {
+     "id": "speed",
+     "name": "Speed and time",
+     "formula": "Speed × time = distance stays the same",
+     "example": "At 5 km/h a trip takes 3 hours. At 15 km/h it takes 5 × 3 ÷ 15 = 1 hour.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "periods",
+     "name": "Sharing the same total",
+     "formula": "Number of parts × size of each part stays the same",
+     "example": "8 periods of 45 minutes is 360 minutes. With 9 periods, each is 360 ÷ 9 = 40 minutes.",
+     "pages": [
+      68
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "kind",
+   "text": "Check which kind of proportion it is. More workers means fewer days (inverse), but more items means more cost (direct)."
+  },
+  {
+   "id": "sides",
+   "text": "Sides of a triangle cannot be in the ratio 1 : 3 : 5, because 1 + 3 is less than 5. Angles can."
+  },
+  {
+   "id": "units",
+   "text": "A map ratio uses the same unit on both sides. For 1 : 100000, 1 cm means 100000 cm, not 100000 km."
+  },
+  {
+   "id": "pie360",
+   "text": "In a pie chart the angles add up to 360°, not 100°."
+  }
+ ]
+}

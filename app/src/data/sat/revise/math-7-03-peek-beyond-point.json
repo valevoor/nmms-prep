@@ -1,0 +1,46 @@
+{
+  "chapter": "math-7-03-peek-beyond-point",
+  "terms": [
+    { "id": "tenth", "term": "One-tenth", "meaning": "One of 10 equal parts of a unit, written 1/10 or 0.1.", "pages": [48] },
+    { "id": "hundredth", "term": "One-hundredth", "meaning": "One of 10 equal parts of a tenth, written 1/100 or 0.01.", "pages": [53] },
+    { "id": "decimal", "term": "Decimal point", "meaning": "The mark between the units and the tenths. Places to its right show tenths, hundredths and thousandths.", "pages": [58, 62] }
+  ],
+  "groups": [
+    {
+      "id": "place",
+      "title": "Decimal place value",
+      "items": [
+        { "id": "value", "name": "Places around the point", "formula": "Each place is 10 times the place on its right", "example": "23.45 = 2 × 10 + 3 × 1 + 4 × 1/10 + 5 × 1/100", "pages": [59, 62] },
+        { "id": "equal", "name": "Splitting a unit", "formula": "1 = 10 tenths = 100 hundredths = 1000 thousandths", "example": "1/10 = 10/100 = 100/1000", "pages": [53, 57] },
+        { "id": "regroup", "name": "Many tenths as a decimal", "formula": "Divide by 10", "example": "234 tenths = 234/10 = 23.4", "pages": [64] },
+        { "id": "read", "name": "Reading decimals", "formula": "Say each digit after the point", "example": "7.05 is seven point zero five: 7 units and 5 hundredths.", "pages": [62, 63] }
+      ]
+    },
+    {
+      "id": "units",
+      "title": "Units",
+      "items": [
+        { "id": "length", "name": "Length", "formula": "1 cm = 10 mm, 1 m = 100 cm, 1 km = 1000 m", "example": "5.6 cm = 56 mm, and 15 cm = 0.15 m", "pages": [65, 66] },
+        { "id": "weight", "name": "Weight", "formula": "1 kg = 1000 g, 1 g = 1000 mg", "example": "254 g = 0.254 kg", "pages": [67, 68] },
+        { "id": "money", "name": "Money", "formula": "₹1 = 100 paise", "example": "75 paise = ₹0.75, and 5 paise = ₹0.05", "pages": [69] }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Comparing and adding",
+      "items": [
+        { "id": "compare", "name": "Comparing decimals", "formula": "Compare digits from the left", "example": "4.27 is more than 4.195, because 2 tenths is more than 1 tenth.", "pages": [72, 73] },
+        { "id": "zeros", "name": "Zeros at the end", "formula": "They do not change the value", "example": "0.2 = 0.20 = 0.200, but 0.02 is smaller.", "pages": [72, 73] },
+        { "id": "add", "name": "Adding and subtracting", "formula": "Line up the decimal points", "example": "25.936 + 8.202 = 34.138", "pages": [74] },
+        { "id": "seq", "name": "Decimal number patterns", "formula": "Find the step between terms", "example": "4.4, 4.8, 5.2, 5.6: add 0.4 each time, so 6.0 comes next.", "pages": [75] },
+        { "id": "bounds", "name": "Estimating a sum", "formula": "The sum lies just above the sum of the whole parts", "example": "25.936 + 8.202 is more than 25 + 8 = 33 and less than 26 + 9 = 35.", "pages": [76] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "longer", "text": "More digits does not mean a bigger decimal. 0.5 is more than 0.123." },
+    { "id": "whole", "text": "7.05 is not 7.5. The 0 keeps the 5 in the hundredths place." },
+    { "id": "align", "text": "Line up the points, not the last digits. 2.5 + 1.25 = 3.75, not 1.50." },
+    { "id": "paise", "text": "5 paise is ₹0.05, not ₹0.5. ₹0.5 is 50 paise." }
+  ]
+}

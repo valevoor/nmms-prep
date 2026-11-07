@@ -1,0 +1,155 @@
+{
+ "chapter": "math-8-13-algebra-play",
+ "terms": [
+  {
+   "id": "pyramid",
+   "term": "Number pyramid",
+   "meaning": "A stack of cells where each cell is the sum of the two cells just below it.",
+   "pages": [
+    137
+   ]
+  },
+  {
+   "id": "virahanka",
+   "term": "Virahanka-Fibonacci numbers",
+   "meaning": "1, 2, 3, 5, 8, 13… where each number is the sum of the two before it.",
+   "pages": [
+    140
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "tricks",
+   "title": "Number tricks explained",
+   "items": [
+    {
+     "id": "think",
+     "name": "Think of a number",
+     "formula": "Call it x and follow each step",
+     "example": "Double, add 6, halve, subtract x: 2x → 2x + 6 → x + 3 → 3. The answer is always 3.",
+     "pages": [
+      135
+     ]
+    },
+    {
+     "id": "sum",
+     "name": "A number plus its reverse",
+     "formula": "ab + ba = 11(a + b)",
+     "example": "47 + 74 = 121 = 11 × 11",
+     "pages": [
+      145
+     ]
+    },
+    {
+     "id": "diff",
+     "name": "A number minus its reverse",
+     "formula": "Difference = 9 × (difference of the digits)",
+     "example": "74 − 47 = 27 = 9 × 3",
+     "pages": [
+      145
+     ]
+    },
+    {
+     "id": "cycle",
+     "name": "Three digits in a cycle",
+     "formula": "abc + bca + cab = 111(a + b + c)",
+     "example": "123 + 231 + 312 = 666 = 111 × 6",
+     "pages": [
+      145
+     ]
+    },
+    {
+     "id": "repeat",
+     "name": "A 3-digit number written twice",
+     "formula": "abcabc = 1001 × abc",
+     "example": "245245 = 1001 × 245, and 1001 = 7 × 11 × 13.",
+     "pages": [
+      145
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyramids",
+   "title": "Pyramids and grids",
+   "items": [
+    {
+     "id": "three",
+     "name": "Top of a 3-row pyramid",
+     "formula": "Bottom a, b, c: top = a + 2b + c",
+     "example": "Bottom 2, 5, 3: 2 + 10 + 3 = 15",
+     "pages": [
+      140
+     ]
+    },
+    {
+     "id": "four",
+     "name": "Top of a 4-row pyramid",
+     "formula": "Bottom a, b, c, d: top = a + 3b + 3c + d",
+     "example": "Bottom 1, 2, 3, 4: 1 + 6 + 9 + 4 = 20",
+     "pages": [
+      140
+     ]
+    },
+    {
+     "id": "calendar",
+     "name": "2 × 2 square on a calendar",
+     "formula": "Dates a, a + 1, a + 7, a + 8: sum = 4a + 16",
+     "example": "5, 6, 12, 13: 4 × 5 + 16 = 36",
+     "pages": [
+      141
+     ]
+    },
+    {
+     "id": "product",
+     "name": "Largest product from three digits",
+     "formula": "Use the largest digit alone, and the rest as the larger 2-digit number",
+     "example": "Digits 3, 5, 8: 53 × 8 = 424",
+     "pages": [
+      143,
+      144
+     ]
+    }
+   ]
+  },
+  {
+   "id": "equations",
+   "title": "Word problems",
+   "items": [
+    {
+     "id": "heads",
+     "name": "Heads and legs",
+     "formula": "Hens have 2 legs, horses have 4",
+     "example": "10 heads and 28 legs: 2h + 4(10 − h) = 28, so 6 hens and 4 horses.",
+     "pages": [
+      146
+     ]
+    },
+    {
+     "id": "doubling",
+     "name": "Working backwards",
+     "formula": "Undo each step in reverse order",
+     "example": "Double a number and subtract 4 to get 10. Add 4 to get 14, then halve: 7.",
+     "pages": [
+      147
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "place",
+   "text": "A 2-digit number ab means 10a + b, not a × b or a + b."
+  },
+  {
+   "id": "middle",
+   "text": "In a 3-row pyramid the middle bottom number counts twice, because it feeds two cells above it."
+  },
+  {
+   "id": "reverseorder",
+   "text": "When working backwards, undo the last step first. Subtracting after doubling is undone by adding before halving."
+  }
+ ]
+}

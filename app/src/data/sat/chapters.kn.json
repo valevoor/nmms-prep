@@ -1,5 +1,12 @@
 {
  "_note": "DRAFT Kannada chapter names, not yet reviewed by a native speaker or checked against the Kannada-medium textbooks. Keyed by syllabus chapter ID; a missing name falls back to English.",
+ "math-7-01-large-numbers": {"name": "ನಮ್ಮ ಸುತ್ತಲಿನ ದೊಡ್ಡ ಸಂಖ್ಯೆಗಳು"},
+ "math-7-03-peek-beyond-point": {"name": "ಬಿಂದುವಿನ ಆಚೆಗೆ ಒಂದು ನೋಟ"},
+ "math-7-12-another-peek-beyond-point": {"name": "ಬಿಂದುವಿನ ಆಚೆಗೆ ಮತ್ತೊಂದು ನೋಟ"},
+ "math-7-14-constructions-and-tilings": {"name": "ರಚನೆಗಳು ಮತ್ತು ಹಾಸುಗಳು"},
+ "math-8-03-story-of-numbers": {"name": "ಸಂಖ್ಯೆಗಳ ಕಥೆ"},
+ "math-8-11-geometric-themes": {"name": "ಕೆಲವು ಜ್ಯಾಮಿತೀಯ ವಿಷಯಗಳ ಅನ್ವೇಷಣೆ"},
+ "math-8-12-tales-dots-bars-lines": {"name": "ಚುಕ್ಕೆ, ಪಟ್ಟಿ ಮತ್ತು ರೇಖೆಗಳ ಕಥೆಗಳು"},
  "math-7-02-arithmetic-expressions": {"name": "ಅಂಕಗಣಿತದ ಅಭಿವ್ಯಕ್ತಿಗಳು"},
  "math-7-04-expressions-letter-numbers": {"name": "ಅಕ್ಷರ-ಸಂಖ್ಯೆಗಳನ್ನು ಬಳಸಿದ ಅಭಿವ್ಯಕ್ತಿಗಳು"},
  "math-7-05-parallel-intersecting-lines": {"name": "ಸಮಾಂತರ ಮತ್ತು ಛೇದಿಸುವ ರೇಖೆಗಳು"},

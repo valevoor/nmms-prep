@@ -1,0 +1,49 @@
+{
+  "chapter": "math-8-05-number-play",
+  "terms": [
+    { "id": "divisible", "term": "Divisible", "meaning": "A number is divisible by k if dividing it by k leaves remainder 0. 24 is divisible by 6.", "pages": [118] },
+    { "id": "digitalroot", "term": "Digital root", "meaning": "The single digit you reach by adding a number's digits again and again. 489 → 21 → 3.", "pages": [130] },
+    { "id": "cryptarithm", "term": "Cryptarithm", "meaning": "A sum or product written with letters, where each letter stands for one digit and different letters stand for different digits.", "pages": [132] }
+  ],
+  "groups": [
+    {
+      "id": "tests",
+      "title": "Divisibility tests",
+      "items": [
+        { "id": "ten", "name": "By 10, 5 and 2", "formula": "Look at the units digit: 0 for 10, 0 or 5 for 5, even for 2", "example": "730 is divisible by 10, 5 and 2.", "pages": [123] },
+        { "id": "four", "name": "By 4", "formula": "Check the last two digits", "example": "5316: 16 is divisible by 4, so 5316 is too.", "pages": [123] },
+        { "id": "eight", "name": "By 8", "formula": "Check the last three digits", "example": "7128: 128 is divisible by 8, so 7128 is too.", "pages": [123] },
+        { "id": "nine", "name": "By 9 and by 3", "formula": "Check the sum of the digits", "example": "7308: 7 + 3 + 0 + 8 = 18, which is divisible by 9 and by 3.", "pages": [124, 125] },
+        { "id": "eleven", "name": "By 11", "formula": "Add the digits with + and − in turn, starting from the units digit", "example": "2728: 8 − 2 + 7 − 2 = 11, so 2728 is divisible by 11.", "pages": [127, 129] },
+        { "id": "composite", "name": "By a number like 12 or 24", "formula": "Test two factors with no common factor except 1", "example": "12 = 3 × 4, so a number divisible by 3 and 4 is divisible by 12.", "pages": [130] }
+      ]
+    },
+    {
+      "id": "remainders",
+      "title": "Remainders",
+      "items": [
+        { "id": "ninerem", "name": "Remainder when dividing by 9", "formula": "Same as the remainder of the digit sum", "example": "7310: digit sum 11 leaves remainder 2, so 7310 leaves remainder 2.", "pages": [125] },
+        { "id": "rootrem", "name": "Digital root and 9", "formula": "Digital root = remainder when divided by 9", "example": "The digital root of 58 is 4, and 58 = 9 × 6 + 4. If the root is 9, the remainder is 0.", "pages": [130, 131] },
+        { "id": "form", "name": "Numbers with a given remainder", "formula": "Remainder r on dividing by d: dk + r", "example": "Remainder 3 on dividing by 5: 5k + 3, which gives 3, 8, 13, 18…", "pages": [122] },
+        { "id": "lcmrem", "name": "Same remainder for many divisors", "formula": "LCM × k + remainder", "example": "Remainder 1 on dividing by 2, 3 and 5: 30k + 1, which gives 31, 61, 91…", "pages": [122] }
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "Rules of divisibility",
+      "items": [
+        { "id": "summ", "name": "Sum and difference", "formula": "If k divides M and N, it divides M + N and M − N", "example": "7 divides 21 and 14, so it divides 35 and 7.", "pages": [118, 119] },
+        { "id": "factorsof", "name": "Factors of the divisor", "formula": "If k divides A, every factor of k also divides A", "example": "8 divides 40, so 1, 2 and 4 also divide 40.", "pages": [119, 120] },
+        { "id": "lcm", "name": "Divisible by two numbers", "formula": "Then it is divisible by their LCM", "example": "Divisible by 4 and 6 means divisible by 12.", "pages": [121] },
+        { "id": "signs", "name": "Changing + to − in a sum", "formula": "It keeps the answer even or odd", "example": "5 + 6 + 7 + 8 = 26 and 5 − 6 + 7 − 8 = −2 are both even.", "pages": [112, 113] },
+        { "id": "even4", "name": "Even numbers and 4", "formula": "Every even number is 4p or 4p + 2", "example": "Two even numbers that are not multiples of 4 add up to a multiple of 4: 6 + 10 = 16.", "pages": [116, 117] }
+      ]
+    }
+  ],
+  "mistakes": [
+    { "id": "lcmproduct", "text": "A number divisible by 4 and 6 need not be divisible by 24. 12 is divisible by 4 and 6, but not by 24. Use the LCM, not the product." },
+    { "id": "converse", "text": "If k divides M + N, it need not divide M and N. 5 divides 3 + 7 = 10, but it does not divide 3 or 7." },
+    { "id": "elevenzero", "text": "For 11, the alternating sum can be 0 as well as a multiple of 11. 121: 1 − 2 + 1 = 0, and 121 is divisible by 11." },
+    { "id": "digitsum3", "text": "The digit sum test works for 3 and 9, but not for 4 or 8. 13 has digit sum 4 but is not divisible by 4." }
+  ]
+}

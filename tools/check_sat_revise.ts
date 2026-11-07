@@ -1,0 +1,621 @@
+/**
+ * Checks the SAT revision sheets (data/sat/revise/, listed in data/satRevise.ts):
+ * - each sheet belongs to a listed chapter, its ids are unique and its book pages lie inside the chapter;
+ * - every formula and mistake has a rule below that re-works its claim and example separately from the
+ *   sheet's text (the rules hold their own copy of the numbers, so a changed example needs its rule changed);
+ * - the Kannada has every term, group, item and mistake, in Kannada script, with the same numbers.
+ * Run from app/:  npx tsx ../tools/check_sat_revise.ts
+ */
+import { SAT_CHAPTERS } from '../app/src/data/sat'
+import { REVISIONS } from '../app/src/data/satRevise'
+
+const problems: string[] = []
+const KANNADA = /[ಀ-೿]/
+const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i)
+const factors = (n: number) => range(1, n).filter((d) => n % d === 0)
+const isSquare = (n: number) => Number.isInteger(Math.sqrt(n))
+const isCube = (n: number) => Math.round(Math.cbrt(n)) ** 3 === n
+const odd = (n: number) => 2 * n - 1
+const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0)
+const between = (a: number, b: number) => range(a + 1, b - 1)
+const near = (a: number, b: number) => Math.abs(a - b) < 1e-9
+const N = range(1, 300)
+const tri = (n: number) => (n * (n + 1)) / 2
+/** Ways to write n as a sum of two positive cubes. */
+const cubePairs = (n: number) => range(1, Math.ceil(Math.cbrt(n))).filter((a) => { const b = n - a ** 3; return b >= a ** 3 && isCube(b) })
+const diffs = (xs: number[]) => xs.slice(1).map((x, i) => x - xs[i])
+/** How many levels of differences until they are all the same. */
+const levels = (xs: number[]) => { let l = 0; let d = xs; do { d = diffs(d); l++ } while (new Set(d).size > 1); return l }
+
+/** n multiplied by itself a times, by actually multiplying. */
+const times = (n: number, a: number) => range(1, a).reduce((p) => p * n, 1)
+const primeFactors = (n: number) => { const out: number[] = []; for (let d = 2; n > 1; d++) while (n % d === 0) { out.push(d); n /= d } return out }
+/** A law tried for small whole numbers. */
+const laws = (ok: (x: number, a: number, y: number) => boolean) => range(1, 9).every((x) => range(1, 6).every((a) => range(1, 6).every((y) => ok(x, a, y))))
+/** Counts ways to choose one from each group, one at a time. */
+const count = (groups: number[]) => { let ways = 0; const walk = (i: number) => { if (i === groups.length) ways++; else for (let k = 0; k < groups[i]; k++) walk(i + 1) }; walk(0); return ways }
+const inStandardForm = (x: number) => x >= 1 && x < 10
+/** A fact that can't be computed (history, a definition): not re-worked, only traced to the book page named here. */
+const read = (_page: string) => { readFacts++; return true }
+let readFacts = 0
+const digits = (n: number) => String(n).split('').map(Number)
+const digitSum = (n: number) => sum(digits(n))
+/** Digits added with + and − in turn, starting from the units digit. */
+const altSum = (n: number) => sum(digits(n).reverse().map((d, i) => (i % 2 === 0 ? d : -d)))
+const root = (n: number): number => (n < 10 ? n : root(digitSum(n)))
+const hcf = (a: number, b: number): number => (b === 0 ? a : hcf(b, a % b))
+const lcm = (a: number, b: number) => (a * b) / hcf(a, b)
+/** An identity tried for small whole numbers, negatives too. */
+const grid = (ok: (a: number, b: number, c: number) => boolean) => range(-9, 9).every((a) => range(-9, 9).every((b) => range(-9, 9).every((c) => ok(a, b, c))))
+const mean = (xs: number[]) => sum(xs) / xs.length
+const median = (xs: number[]) => { const o = [...xs].sort((p, q) => p - q); const m = o.length >> 1; return o.length % 2 ? o[m] : (o[m - 1] + o[m]) / 2 }
+/** The value of a list of digits with these place values, biggest first. */
+const placeValue = (digits: number[], places: number[]) => sum(digits.map((d, i) => d * places[i]))
+
+/** Each rule returns whether the claim holds. Keyed `<chapter>/<item or mistake id>`. */
+const RULES: Record<string, () => boolean> = {
+  'math-8-01-square-and-cube/square': () => 13 * 13 === 169,
+  'math-8-01-square-and-cube/fraction': () => near((2 / 3) ** 2, 4 / 9) && near(1.5 ** 2, 2.25),
+  'math-8-01-square-and-cube/factors': () =>
+    range(1, 2000).every((n) => (factors(n).length % 2 === 1) === isSquare(n)) && factors(9).join() === '1,3,9' && factors(10).join() === '1,2,5,10',
+  'math-8-01-square-and-cube/lastdigit': () => {
+    const seen = new Set(range(1, 2000).map((n) => (n * n) % 10))
+    return [...seen].sort().join() === '0,1,4,5,6,9' && !isSquare(2187)
+  },
+  'math-8-01-square-and-cube/zeros': () =>
+    300 ** 2 === 90000 && range(1, 2000).every((n) => { let z = 0; for (let s = n * n; s % 10 === 0; s /= 10) z++; return z % 2 === 0 }),
+  'math-8-01-square-and-cube/oddsum': () => N.every((n) => sum(range(1, n).map(odd)) === n * n) && 1 + 3 + 5 + 7 === 16 && 4 ** 2 === 16,
+  'math-8-01-square-and-cube/nthodd': () => range(1, 100).filter((n) => n % 2 === 1)[9] === 19 && odd(10) === 19,
+  'math-8-01-square-and-cube/nextsquare': () => N.every((n) => (n + 1) ** 2 === n * n + 2 * n + 1) && 2 * 20 + 1 === 41 && 20 ** 2 === 400 && 400 + 41 === 441 && 21 ** 2 === 441,
+  'math-8-01-square-and-cube/between': () =>
+    N.every((n) => between(n * n, (n + 1) ** 2).length === 2 * n) && between(49, 64)[0] === 50 && between(49, 64).at(-1) === 63 && between(49, 64).length === 14,
+  'math-8-01-square-and-cube/triangular': () => N.every((n) => tri(n) + tri(n + 1) === (n + 1) ** 2) && tri(4) === 10 && tri(5) === 15 && 25 === 5 ** 2,
+  'math-8-01-square-and-cube/primes': () => 2 ** 4 * 7 ** 2 === 784 && 2 ** 2 * 7 === 28 && Math.sqrt(784) === 28,
+  'math-8-01-square-and-cube/multiplier': () => 2 ** 3 * 3 ** 2 === 72 && range(1, 72).find((m) => isSquare(72 * m)) === 2 && 72 * 2 === 144 && 12 ** 2 === 144,
+  'math-8-01-square-and-cube/estimate': () =>
+    40 ** 2 < 2116 && 2116 < 50 ** 2 && 45 ** 2 === 2025 && 2025 < 2116 && 46 ** 2 === 2116 && range(40, 50).filter((n) => (n * n) % 10 === 6).join() === '44,46',
+  'math-8-01-square-and-cube/nearest': () => 14 ** 2 === 196 && 15 ** 2 === 225 && 200 - 196 < 225 - 200 && Math.round(Math.sqrt(200)) === 14,
+  'math-8-01-square-and-cube/cube': () => 6 * 6 * 6 === 216,
+  'math-8-01-square-and-cube/cubelast': () => {
+    const want: Record<number, number> = { 0: 0, 1: 1, 2: 8, 3: 7, 4: 4, 5: 5, 6: 6, 7: 3, 8: 2, 9: 9 }
+    return range(0, 2000).every((n) => n ** 3 % 10 === want[n % 10]) && 18 ** 3 === 5832
+  },
+  'math-8-01-square-and-cube/negative': () => (-4) ** 3 === -64 && -4 * -4 * -4 === -64,
+  'math-8-01-square-and-cube/taxi': () => {
+    const taxicabs = range(1, 14000).filter((n) => cubePairs(n).length >= 2)
+    return taxicabs.slice(0, 3).join() === '1729,4104,13832' && 1 + 12 ** 3 === 1729 && 9 ** 3 + 10 ** 3 === 1729
+  },
+  'math-8-01-square-and-cube/oddcubes': () => {
+    // Block n is the next n odd numbers, and adds up to n³.
+    let next = 1
+    return range(1, 50).every((n) => {
+      const block = range(next, next + n - 1).map(odd)
+      next += n
+      if (n === 5 && block.join() !== '21,23,25,27,29') return false
+      return sum(block) === n ** 3
+    })
+  },
+  'math-8-01-square-and-cube/cuberoot': () => 2 ** 6 * 3 ** 3 === 1728 && 2 ** 2 * 3 === 12 && 12 ** 3 === 1728,
+  'math-8-01-square-and-cube/differences': () => {
+    const squares = range(1, 9).map((n) => n * n)
+    const cubes = range(1, 9).map((n) => n ** 3)
+    const five = range(1, 5).map((n) => n ** 3)
+    return levels(squares) === 2 && levels(cubes) === 3 && diffs(five).join() === '7,19,37,61' && diffs(diffs(five)).join() === '12,18,24' && diffs(diffs(diffs(five))).join() === '6,6'
+  },
+  'math-8-01-square-and-cube/mistake:lastdigit': () => !isSquare(46) && (6 * 6) % 10 === 6,
+  'math-8-01-square-and-cube/mistake:zeros': () => !isSquare(4000),
+  'math-8-01-square-and-cube/mistake:between': () => between(16, 25).length === 8,
+  'math-8-01-square-and-cube/mistake:negative': () => (-6) ** 2 === 36 && (-6) ** 3 === -216,
+  'math-8-01-square-and-cube/mistake:groups': () => 2 ** 2 * 3 ** 3 === 108 && !isCube(108),
+
+  // Each law is tried over many bases and exponents, then its example on its own.
+  'math-8-02-power-play/power': () => times(2, 5) === 32 && [2, 3, 5, 7].every((n) => range(1, 8).every((a) => times(n, a) === n ** a)),
+  'math-8-02-power-play/minusone': () => range(1, 50).every((a) => times(-1, a) === (a % 2 === 0 ? 1 : -1)) && times(-1, 10) === 1 && times(-1, 7) === -1,
+  'math-8-02-power-play/primeform': () => 2 ** 4 * 3 ** 2 * 5 === 720 && primeFactors(720).join() === '2,2,2,2,3,3,5',
+  'math-8-02-power-play/cycle': () => range(1, 40).every((a) => 2 ** a % 10 === [2, 4, 8, 6][(a - 1) % 4]) && 2 ** 10 === 1024 && 2 ** 2 % 10 === 4,
+  'math-8-02-power-play/multiply': () => laws((n, a, b) => near(n ** a * n ** b, n ** (a + b))) && 3 ** 2 * 3 ** 4 === 729 && 3 ** 6 === 729,
+  'math-8-02-power-play/ofpower': () => laws((n, a, b) => near((n ** a) ** b, n ** (a * b))) && (2 ** 3) ** 2 === 64 && 2 ** 6 === 64,
+  'math-8-02-power-play/samepower': () => laws((m, a, n) => near(m ** a * n ** a, (m * n) ** a)) && 2 ** 3 * 5 ** 3 === 1000 && 10 ** 3 === 1000,
+  'math-8-02-power-play/divide': () => laws((n, a, b) => near(n ** a / n ** b, n ** (a - b))) && 5 ** 6 / 5 ** 4 === 25 && 5 ** 2 === 25,
+  'math-8-02-power-play/dividepower': () => laws((m, a, n) => near(m ** a / n ** a, (m / n) ** a)) && 12 ** 2 / 4 ** 2 === 9 && 3 ** 2 === 9,
+  'math-8-02-power-play/zero': () => range(1, 50).every((n) => n ** 0 === 1 && n ** 3 / n ** 3 === 1) && 7 ** 0 === 1,
+  'math-8-02-power-play/negative': () => range(1, 9).every((n) => range(1, 5).every((a) => near(n ** -a, 1 / times(n, a)))) && near(2 ** -3, 1 / 8),
+  'math-8-02-power-play/choices': () => count([5, 4]) === 20,
+  'math-8-02-power-play/digitlock': () => count([10, 10, 10, 10]) === 10 ** 4 && 10 ** 4 === 10000 && 9999 - 0 + 1 === 10000,
+  'math-8-02-power-play/letterlock': () => count([26, 26, 26]) === 26 ** 3 && 26 ** 3 === 17576,
+  'math-8-02-power-play/expanded': () => near(3 * 10 ** 2 + 0 * 10 + 4 * 10 ** 0 + 2 * 10 ** -1 + 5 * 10 ** -2, 304.25),
+  'math-8-02-power-play/standard': () => near(6.4 * 10 ** 4, 64000) && inStandardForm(6.4),
+  'math-8-02-power-play/compare': () => 3.2 * 10 ** 6 > 9.9 * 10 ** 5 && [1, 2.5, 9.99].every((x) => [1, 5, 9.99].every((z) => x * 10 ** 6 > z * 10 ** 5)),
+  'math-8-02-power-play/doubling': () => times(2, 10) === 1024 && near(0.001 * 2 ** 10, 1.024),
+  'math-8-02-power-play/indian': () => [10 ** 5, 10 ** 7, 10 ** 9, 10 ** 11].every((x, i, all) => i === 0 || x === 100 * all[i - 1]) && 100 * 10 ** 5 === 10 ** 7 && 100000 === 10 ** 5,
+  'math-8-02-power-play/international': () => [10 ** 6, 10 ** 9, 10 ** 12].every((x, i, all) => i === 0 || x === 1000 * all[i - 1]) && 1000 * 10 ** 6 === 10 ** 9,
+  'math-8-02-power-play/mistake:times': () => times(4, 3) === 64 && 4 * 3 === 12 && times(4, 3) !== 4 * 3,
+  'math-8-02-power-play/mistake:addexp': () => 2 ** 3 * 2 ** 4 === 2 ** 7 && 2 ** 3 * 2 ** 4 !== 2 ** 12,
+  'math-8-02-power-play/mistake:ofpower': () => (2 ** 3) ** 2 === 2 ** 6 && (2 ** 3) ** 2 !== 2 ** 5,
+  'math-8-02-power-play/mistake:zero': () => 9 ** 0 === 1,
+  'math-8-02-power-play/mistake:negative': () => near(2 ** -3, 1 / 8) && 2 ** -3 > 0,
+  'math-8-02-power-play/mistake:coefficient': () =>
+    [7.2 * 10 ** 4, 0.72 * 10 ** 5, 72 * 10 ** 3].every((x) => near(x, 72000)) && inStandardForm(7.2) && !inStandardForm(0.72) && !inStandardForm(72),
+  'math-8-03-story-of-numbers/romanmarks': () => placeValue([1, 1, 1, 2], [10, 10, 5, 1]) === 27 && 10 + 10 + 5 + 1 + 1 === 27,
+  'math-8-03-story-of-numbers/romanless': () => 5 - 1 === 4 && 50 - 10 === 40 && 40 + 4 === 44,
+  'math-8-03-story-of-numbers/marks': () => [0, 1, 2, 3, 4].map((a) => 5 ** a).join() === '1,5,25,125,625',
+  'math-8-03-story-of-numbers/write': () => { let left = 38; const used: number[] = []; for (const m of [25, 5, 1]) while (left >= m) { used.push(m); left -= m } return used.join() === '25,5,5,1,1,1' },
+  'math-8-03-story-of-numbers/egypt': () => read('p. 61, p. 63') && [0, 1, 2, 3].map((a) => 10 ** a).join() === '1,10,100,1000',
+  'math-8-03-story-of-numbers/babylon': () => read('p. 70') && 60 ** 2 === 3600,
+  'math-8-03-story-of-numbers/maya': () => read('p. 76') && 20 * 20 === 400,
+  'math-8-03-story-of-numbers/chinese': () => placeValue([2, 6, 3, 4], [10 ** 3, 10 ** 2, 10, 1]) === 2634,
+  'math-8-03-story-of-numbers/hinduvalue': () => placeValue([3, 7, 5], [10 ** 2, 10, 1]) === 375,
+  'math-8-03-story-of-numbers/bakhshali': () => read('p. 49'),
+  'math-8-03-story-of-numbers/aryabhata': () => read('p. 49'),
+  'math-8-03-story-of-numbers/spread': () => read('p. 49'),
+  'math-8-03-story-of-numbers/mistake:numeral': () => read('p. 81'),
+  'math-8-03-story-of-numbers/mistake:maya': () => read('p. 76') && 360 !== 20 ** 2,
+  'math-8-03-story-of-numbers/mistake:roman': () => ![5, 50].some((x) => [1, 10, 100, 1000].includes(x)),
+  'math-8-03-story-of-numbers/mistake:zeroplace': () => placeValue([3, 0, 5], [100, 10, 1]) === 305 && placeValue([3, 5], [10, 1]) === 35,
+
+  'math-8-04-quadrilaterals/sum': () => 90 + 80 + 110 === 280 && 360 - 280 === 80,
+  'math-8-04-quadrilaterals/rectdiag': () => read('p. 90') && 10 / 2 === 5,
+  'math-8-04-quadrilaterals/rectsides': () => read('p. 90') && 2 * (7 + 4) === 22,
+  'math-8-04-quadrilaterals/squarediag': () => read('p. 93') && 45 + 45 === 90,
+  'math-8-04-quadrilaterals/paraangles': () => read('pp. 97-98') && 180 - 70 === 110 && 70 + 110 + 70 + 110 === 360,
+  'math-8-04-quadrilaterals/parasides': () => read('pp. 96-97') && 2 * (9 + 5) === 28,
+  'math-8-04-quadrilaterals/paradiag': () => read('p. 99') && 12 / 2 === 6,
+  'math-8-04-quadrilaterals/rhombusdiag': () => read('pp. 101-102') && 3 ** 2 + 4 ** 2 === 5 ** 2 && 6 / 2 === 3 && 8 / 2 === 4,
+  'math-8-04-quadrilaterals/kitediag': () => read('pp. 105-106') && 8 / 2 === 4,
+  'math-8-04-quadrilaterals/trapangles': () => read('pp. 106-107') && 180 - 65 === 115,
+  'math-8-04-quadrilaterals/isosceles': () => read('pp. 106-107'),
+  'math-8-04-quadrilaterals/family': () => read('p. 110'),
+  'math-8-04-quadrilaterals/family2': () => read('p. 110'),
+  'math-8-04-quadrilaterals/mistake:paraequal': () => read('p. 98'),
+  'math-8-04-quadrilaterals/mistake:rhombusequal': () => read('p. 101'),
+  'math-8-04-quadrilaterals/mistake:trap': () => read('p. 110'),
+  'math-8-04-quadrilaterals/mistake:kitepair': () => read('p. 110'),
+  'math-8-04-quadrilaterals/mistake:sum': () => 180 + 180 === 360,
+
+  'math-8-05-number-play/ten': () => range(1, 3000).every((n) => (n % 10 === 0) === (String(n).at(-1) === '0') && (n % 5 === 0) === /[05]$/.test(String(n)) && (n % 2 === 0) === /[02468]$/.test(String(n))) && 730 % 10 === 0 && 730 % 5 === 0 && 730 % 2 === 0,
+  'math-8-05-number-play/four': () => range(1, 20000).every((n) => n % 4 === n % 100 % 4) && 16 % 4 === 0 && 5316 % 4 === 0,
+  'math-8-05-number-play/eight': () => range(1, 20000).every((n) => n % 8 === n % 1000 % 8) && 128 % 8 === 0 && 7128 % 8 === 0,
+  'math-8-05-number-play/nine': () => range(1, 20000).every((n) => n % 9 === digitSum(n) % 9 && n % 3 === digitSum(n) % 3) && digitSum(7308) === 18 && 7308 % 9 === 0 && 7308 % 3 === 0,
+  'math-8-05-number-play/eleven': () => range(1, 20000).every((n) => ((altSum(n) % 11) + 11) % 11 === n % 11) && altSum(2728) === 11 && 2728 % 11 === 0,
+  'math-8-05-number-play/composite': () => range(1, 3000).every((n) => (n % 12 === 0) === (n % 3 === 0 && n % 4 === 0)) && 3 * 4 === 12,
+  'math-8-05-number-play/ninerem': () => digitSum(7310) === 11 && 11 % 9 === 2 && 7310 % 9 === 2,
+  'math-8-05-number-play/rootrem': () => range(1, 5000).every((n) => root(n) === (n % 9 === 0 ? 9 : n % 9)) && root(58) === 4 && 9 * 6 + 4 === 58,
+  'math-8-05-number-play/form': () => [0, 1, 2, 3].map((k) => 5 * k + 3).join() === '3,8,13,18' && [3, 8, 13, 18].every((x) => x % 5 === 3),
+  'math-8-05-number-play/lcmrem': () => lcm(lcm(2, 3), 5) === 30 && [31, 61, 91].every((x) => x % 2 === 1 && x % 3 === 1 && x % 5 === 1) && range(2, 91).filter((x) => x % 2 === 1 && x % 3 === 1 && x % 5 === 1).join() === '31,61,91',
+  'math-8-05-number-play/summ': () => range(2, 12).every((k) => range(1, 30).every((m) => range(1, 30).every((n) => (k * m + k * n) % k === 0 && (k * m - k * n) % k === 0))) && 21 + 14 === 35 && 21 - 14 === 7 && 35 % 7 === 0,
+  'math-8-05-number-play/factorsof': () => factors(8).join() === '1,2,4,8' && 40 % 8 === 0 && [1, 2, 4].every((f) => 40 % f === 0),
+  'math-8-05-number-play/lcm': () => lcm(4, 6) === 12 && range(1, 3000).every((n) => !(n % 4 === 0 && n % 6 === 0) || n % 12 === 0),
+  'math-8-05-number-play/signs': () => 5 + 6 + 7 + 8 === 26 && 5 - 6 + 7 - 8 === -2 && range(1, 200).every((x) => (x + 7) % 2 === Math.abs(x - 7) % 2),
+  'math-8-05-number-play/even4': () => range(1, 2000).filter((n) => n % 2 === 0).every((n) => n % 4 === 0 || n % 4 === 2) && 6 % 4 === 2 && 10 % 4 === 2 && 6 + 10 === 16 && 16 % 4 === 0,
+  'math-8-05-number-play/mistake:lcmproduct': () => 12 % 4 === 0 && 12 % 6 === 0 && 12 % 24 !== 0,
+  'math-8-05-number-play/mistake:converse': () => (3 + 7) % 5 === 0 && 3 % 5 !== 0 && 7 % 5 !== 0,
+  'math-8-05-number-play/mistake:elevenzero': () => altSum(121) === 0 && 121 % 11 === 0,
+  'math-8-05-number-play/mistake:digitsum3': () => digitSum(13) === 4 && 13 % 4 !== 0,
+
+  'math-8-06-distribute-multiply/dist': () => grid((a, b, c) => a * (b + c) === a * b + a * c) && 23 * 37 === 851 && 23 * 30 === 690 && 23 * 7 === 161,
+  'math-8-06-distribute-multiply/two': () => grid((a, b, c) => (a + b) * (c + 7) === a * c + a * 7 + b * c + b * 7) && range(-9, 9).every((x) => (x + 2) * (x + 3) === x * x + 5 * x + 6),
+  'math-8-06-distribute-multiply/increase': () => grid((a, b) => (a + 1) * (b + 1) === a * b + a + b + 1) && 21 * 31 === 651 && 20 * 30 + 20 + 30 + 1 === 651,
+  'math-8-06-distribute-multiply/signs': () => -2 * -3 === 6 && range(-9, 9).every((x) => (x - 2) * (x - 3) === x * x - 5 * x + 6),
+  'math-8-06-distribute-multiply/sumsq': () => grid((a, b) => (a + b) ** 2 === a * a + 2 * a * b + b * b) && 53 ** 2 === 2809 && 2500 + 300 + 9 === 2809,
+  'math-8-06-distribute-multiply/diffsq': () => grid((a, b) => (a - b) ** 2 === a * a - 2 * a * b + b * b) && 48 ** 2 === 2304 && 2500 - 200 + 4 === 2304,
+  'math-8-06-distribute-multiply/squares': () => grid((a, b) => a * a - b * b === (a + b) * (a - b)) && 53 ** 2 - 47 ** 2 === 600 && 53 + 47 === 100 && 53 - 47 === 6,
+  'math-8-06-distribute-multiply/sridhar': () => grid((a, b) => a * a === (a + b) * (a - b) + b * b) && 98 ** 2 === 9604 && 100 * 96 + 4 === 9604,
+  'math-8-06-distribute-multiply/ends5': () => range(0, 200).every((k) => (10 * k + 5) ** 2 === 100 * k * (k + 1) + 25) && 35 ** 2 === 1225 && 3 * 4 === 12,
+  'math-8-06-distribute-multiply/by11': () => 3874 * 11 === 42614 && 38740 + 3874 === 42614,
+  'math-8-06-distribute-multiply/by99': () => 46 * 99 === 4554 && 4600 - 46 === 4554 && 46 * 101 === 4646 && 4600 + 46 === 4646,
+  'math-8-06-distribute-multiply/mistake:middle': () => (2 + 3) ** 2 === 25 && 2 ** 2 + 3 ** 2 === 13,
+  'math-8-06-distribute-multiply/mistake:minus': () => (5 - 2) ** 2 === 9 && 25 - 20 + 4 === 9,
+  'math-8-06-distribute-multiply/mistake:both': () => range(-9, 9).every((x) => 2 * (x + 3) === 2 * x + 6),
+  'math-8-06-distribute-multiply/mistake:signs': () => -2 * -3 === 6,
+
+  'math-8-07-proportional-reasoning-1/simple': () => hcf(24, 36) === 12 && 24 / 12 === 2 && 36 / 12 === 3 && hcf(12, 18) === 6 && 12 / 6 === 2 && 18 / 6 === 3,
+  'math-8-07-proportional-reasoning-1/scale': () => near(3 / 2, 6 / 4) && near(3 / 2, 15 / 10),
+  'math-8-07-proportional-reasoning-1/resize': () => 30 * 2 === 60 && 20 * 2 === 40 && near(60 / 40, 3 / 2),
+  'math-8-07-proportional-reasoning-1/cross': () => (5 * 6) / 2 === 15 && near(2 / 5, 6 / 15),
+  'math-8-07-proportional-reasoning-1/three': () => (120 * 5) / 3 === 200 && near(120 / 3, 200 / 5),
+  'math-8-07-proportional-reasoning-1/units': () => 2 * 1000 === 2000 && (30 * 2000) / 500 === 120,
+  'math-8-07-proportional-reasoning-1/share': () => 700 / (4 + 3) === 100 && (4 / 7) * 700 - 400 < 1e-9 && 400 + 300 === 700 && near(400 / 300, 4 / 3),
+  'math-8-07-proportional-reasoning-1/profit': () => hcf(2000, 3000) === 1000 && 200 + 300 === 500 && near(200 / 300, 2 / 3),
+  'math-8-07-proportional-reasoning-1/mistake:add': () => !near(2 / 3, 4 / 5),
+  'math-8-07-proportional-reasoning-1/mistake:age': () => near(5 / 10, 1 / 2) && near(10 / 15, 2 / 3) && !near(5 / 10, 10 / 15),
+  'math-8-07-proportional-reasoning-1/mistake:order': () => !near(3 / 2, 2 / 3),
+  'math-8-07-proportional-reasoning-1/mistake:total': () => 4 + 3 === 7,
+
+  'math-8-08-fractions-in-disguise/fdp': () => near(2 / 5, 0.4) && near(0.4 * 100, 40) && near(1 / 8, 0.125),
+  'math-8-08-fractions-in-disguise/of': () => near((15 / 100) * 240, 36),
+  'math-8-08-fractions-in-disguise/swap': () => grid((x, y) => near((x * y) / 100, (y * x) / 100)) && near(0.08 * 50, 4) && near(0.5 * 8, 4),
+  'math-8-08-fractions-in-disguise/over': () => near(250 / 100, 2.5) && near(2.5 * 40, 100),
+  'math-8-08-fractions-in-disguise/change': () => 160 - 100 === 60 && near((60 / 160) * 100, 37.5),
+  'math-8-08-fractions-in-disguise/times': () => near(1 + 65 / 100, 1.65),
+  'math-8-08-fractions-in-disguise/profit': () => 330 - 300 === 30,
+  'math-8-08-fractions-in-disguise/profitpc': () => read('p. 18') && (250 / 500) * 100 === 50,
+  'math-8-08-fractions-in-disguise/revenue': () => read('p. 19') && Math.abs((250 / 750) * 100 - 33.33) < 0.01,
+  'math-8-08-fractions-in-disguise/net': () => read('p. 19') && 50000 - 5000 === 45000,
+  'math-8-08-fractions-in-disguise/discount': () => near(800 * 0.75, 600),
+  'math-8-08-fractions-in-disguise/successive': () => near(0.7 * 0.8, 0.56) && near((1 - 0.56) * 100, 44),
+  'math-8-08-fractions-in-disguise/free': () => near((1 / (4 + 1)) * 100, 20),
+  'math-8-08-fractions-in-disguise/gst': () => near(450 * 0.09, 40.5) && near(450 + 40.5 + 40.5, 531) && near(450 * 1.18, 531),
+  'math-8-08-fractions-in-disguise/simple': () => near(1000 * (1 + 0.1 * 3), 1300),
+  'math-8-08-fractions-in-disguise/compound': () => near(1000 * 1.1 ** 3, 1331),
+  'math-8-08-fractions-in-disguise/halfyear': () => read('p. 24') && 10 / 2 === 5 && 2 * 2 === 4,
+  'math-8-08-fractions-in-disguise/fall': () => near(20000 * 0.95, 19000),
+  'math-8-08-fractions-in-disguise/mistake:reverse': () => near(((125 - 100) / 100) * 100, 25) && near(((125 - 100) / 125) * 100, 20),
+  'math-8-08-fractions-in-disguise/mistake:addoff': () => near((1 - 0.7 * 0.8) * 100, 44),
+  'math-8-08-fractions-in-disguise/mistake:updown': () => near(100 * 1.5, 150) && near(150 * 0.5, 75),
+  'math-8-08-fractions-in-disguise/mistake:base': () => near(((750 - 500) / 500) * 100, 50) && Math.abs(((750 - 500) / 750) * 100 - 33.33) < 0.01,
+
+  'math-8-09-baudhayana-pythagoras/main': () => 6 ** 2 + 8 ** 2 === 100 && Math.sqrt(100) === 10 && read('p. 54'),
+  'math-8-09-baudhayana-pythagoras/leg': () => 13 ** 2 - 5 ** 2 === 144 && Math.sqrt(144) === 12,
+  'math-8-09-baudhayana-pythagoras/isright': () => 7 ** 2 + 24 ** 2 === 25 ** 2 && 49 + 576 === 625,
+  'math-8-09-baudhayana-pythagoras/double': () => read('p. 33') && 3 ** 2 + 3 ** 2 === 18 && 3 ** 2 === 9,
+  'math-8-09-baudhayana-pythagoras/half': () => { const s = Math.sqrt(16) / 2; return near(s * s + s * s, 8) },
+  'math-8-09-baudhayana-pythagoras/iso': () => 5 ** 2 + 5 ** 2 === 50 && near(Math.sqrt(50), 5 * Math.SQRT2),
+  'math-8-09-baudhayana-pythagoras/rt2': () => near(1.414 ** 2, 1.999396) && near(1.415 ** 2, 2.002225) && 1.414 ** 2 < 2 && 2 < 1.415 ** 2,
+  'math-8-09-baudhayana-pythagoras/known': () => [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [9, 40, 41]].every(([a, b, c]) => a * a + b * b === c * c) && 81 + 1600 === 1681,
+  'math-8-09-baudhayana-pythagoras/scaled': () => range(1, 20).every((k) => (3 * k) ** 2 + (4 * k) ** 2 === (5 * k) ** 2) && 3 * 2 === 6 && 4 * 2 === 8 && 5 * 2 === 10,
+  'math-8-09-baudhayana-pythagoras/rectdiag': () => 8 ** 2 + 15 ** 2 === 289 && Math.sqrt(289) === 17,
+  'math-8-09-baudhayana-pythagoras/rhombus': () => 5 ** 2 + 12 ** 2 === 169 && 10 / 2 === 5 && 24 / 2 === 12 && Math.sqrt(169) === 13,
+  'math-8-09-baudhayana-pythagoras/mistake:add': () => Math.sqrt(3 ** 2 + 4 ** 2) === 5 && 3 + 4 === 7,
+  'math-8-09-baudhayana-pythagoras/mistake:root': () => Math.sqrt(100) === 10,
+  'math-8-09-baudhayana-pythagoras/mistake:subtract': () => read('p. 46'),
+  'math-8-09-baudhayana-pythagoras/mistake:onlyright': () => 4 ** 2 + 5 ** 2 === 41 && 6 ** 2 === 36,
+
+  'math-8-10-proportional-reasoning-2/map': () => 3 * 100000 === 300000 && 300000 / 100 / 1000 === 3,
+  'math-8-10-proportional-reasoning-2/scaleterms': () => near(1 * 2, 2) && near(1.5 * 2, 3) && near(3 * 2, 6),
+  'math-8-10-proportional-reasoning-2/divide': () => 1 + 3 + 5 === 9 && 900 / 9 === 100 && 100 + 300 + 500 === 900,
+  'math-8-10-proportional-reasoning-2/angles': () => 180 / 9 === 20 && 20 + 60 + 100 === 180,
+  'math-8-10-proportional-reasoning-2/angle': () => (15 / 60) * 360 === 90,
+  'math-8-10-proportional-reasoning-2/percent': () => (25 / 100) * 360 === 90,
+  'math-8-10-proportional-reasoning-2/product': () => (6 * 10) / 12 === 5 && 6 * 10 === 12 * 5,
+  'math-8-10-proportional-reasoning-2/speed': () => (5 * 3) / 15 === 1 && 5 * 3 === 15 * 1,
+  'math-8-10-proportional-reasoning-2/periods': () => 8 * 45 === 360 && 360 / 9 === 40,
+  'math-8-10-proportional-reasoning-2/mistake:kind': () => read('p. 63'),
+  'math-8-10-proportional-reasoning-2/mistake:sides': () => 1 + 3 < 5 && 180 / 9 > 0,
+  'math-8-10-proportional-reasoning-2/mistake:units': () => read('p. 56'),
+  'math-8-10-proportional-reasoning-2/mistake:pie360': () => read('p. 62'),
+
+  'math-8-11-geometric-themes/carpet': () => { let n = 1; for (let s = 0; s < 2; s++) n = n * 9 - n; return n === 64 && 8 ** 2 === 64 },
+  'math-8-11-geometric-themes/carpetarea': () => near((8 / 9) * (8 / 9), 64 / 81),
+  'math-8-11-geometric-themes/gasket': () => { let n = 1; for (let s = 0; s < 3; s++) n = n * 4 - n; return n === 27 && 3 ** 3 === 27 },
+  'math-8-11-geometric-themes/koch': () => { let sides = 3; let len = 1; for (let s = 0; s < 2; s++) { sides *= 4; len /= 3 } return sides === 48 && 3 * 4 ** 2 === 48 && near(len, 1 / 9) },
+  'math-8-11-geometric-themes/cuboid': () => 6 + 8 - 12 === 2,
+  'math-8-11-geometric-themes/prism': () => range(3, 12).every((n) => n + 2 + 2 * n - 3 * n === 2) && 3 + 2 === 5 && 3 * 3 === 9 && 2 * 3 === 6,
+  'math-8-11-geometric-themes/pyramid': () => range(3, 12).every((n) => n + 1 + (n + 1) - 2 * n === 2) && 4 + 1 === 5 && 2 * 4 === 8,
+  'math-8-11-geometric-themes/cubenets': () => read('p. 81'),
+  'math-8-11-geometric-themes/cylnet': () => read('p. 82'),
+  'math-8-11-geometric-themes/path': () => Math.sqrt(24 ** 2 + 32 ** 2) === 40,
+  'math-8-11-geometric-themes/views': () => read('p. 102'),
+  'math-8-11-geometric-themes/mistake:onenet': () => read('p. 81'),
+  'math-8-11-geometric-themes/mistake:anypath': () => read('p. 87'),
+  'math-8-11-geometric-themes/mistake:prismpyr': () => 3 * 4 !== 2 * 4,
+  'math-8-11-geometric-themes/mistake:sameview': () => read('p. 90'),
+
+  'math-8-12-tales-dots-bars-lines/formula': () => mean([4, 8, 9, 11]) === 8 && 4 + 8 + 9 + 11 === 32,
+  'math-8-12-tales-dots-bars-lines/balance': () => 8 - 4 === 4 && 9 - 8 + (11 - 8) === 4 && 1 + 3 === 4,
+  'math-8-12-tales-dots-bars-lines/insert': () => mean([4, 8, 9, 11, 13]) === 9 && 32 + 13 === 45 && mean([4, 8, 9, 11, 1]) < 8,
+  'math-8-12-tales-dots-bars-lines/same': () => mean([4, 8, 9, 11, 8]) === 8 && 32 + 8 === 40,
+  'math-8-12-tales-dots-bars-lines/shift': () => mean([14, 18, 19, 21]) === 18,
+  'math-8-12-tales-dots-bars-lines/scale': () => mean([8, 16, 18, 22]) === 16,
+  'math-8-12-tales-dots-bars-lines/freq': () => mean([4, 4, 4, 5, 5]) === 4.4 && 3 * 4 === 12 && 2 * 5 === 10,
+  'math-8-12-tales-dots-bars-lines/odd': () => median([3, 5, 7, 9, 20]) === 7,
+  'math-8-12-tales-dots-bars-lines/even': () => median([2, 4, 6, 10]) === 5,
+  'math-8-12-tales-dots-bars-lines/outlier': () => near(mean([3, 5, 7, 9, 20]), 8.8) && near(mean([3, 5, 7, 9, 100]), 24.8) && median([3, 5, 7, 9, 100]) === 7,
+  'math-8-12-tales-dots-bars-lines/linegraph': () => 40 - 10 > 50 - 40,
+  'math-8-12-tales-dots-bars-lines/sheet': () => read('pp. 112-113'),
+  'math-8-12-tales-dots-bars-lines/mistake:order': () => median([9, 3, 7]) === 7,
+  'math-8-12-tales-dots-bars-lines/mistake:evencount': () => median([1, 2, 3, 4]) === 2.5,
+  'math-8-12-tales-dots-bars-lines/mistake:meanmiddle': () => mean([1, 2]) === 1.5,
+  'math-8-12-tales-dots-bars-lines/mistake:freqdiv': () => read('p. 110'),
+
+  'math-8-13-algebra-play/think': () => range(-20, 50).every((x) => (2 * x + 6) / 2 - x === 3),
+  'math-8-13-algebra-play/sum': () => range(1, 9).every((a) => range(0, 9).every((b) => 10 * a + b + (10 * b + a) === 11 * (a + b))) && 47 + 74 === 121 && 11 * 11 === 121,
+  'math-8-13-algebra-play/diff': () => range(1, 9).every((a) => range(0, 9).every((b) => 10 * a + b - (10 * b + a) === 9 * (a - b))) && 74 - 47 === 27 && 9 * 3 === 27 && 7 - 4 === 3,
+  'math-8-13-algebra-play/cycle': () => 123 + 231 + 312 === 666 && 111 * 6 === 666 && range(1, 9).every((a) => range(0, 9).every((b) => range(0, 9).every((c) => 100 * a + 10 * b + c + (100 * b + 10 * c + a) + (100 * c + 10 * a + b) === 111 * (a + b + c)))),
+  'math-8-13-algebra-play/repeat': () => 245245 === 1001 * 245 && 7 * 11 * 13 === 1001 && range(100, 999).every((n) => Number(`${n}${n}`) === 1001 * n),
+  'math-8-13-algebra-play/three': () => grid((a, b, c) => a + b + (b + c) === a + 2 * b + c) && 2 + 10 + 3 === 15,
+  'math-8-13-algebra-play/four': () => grid((a, b, c) => { const d = 4; return a + b + (b + c) + (b + c + (c + d)) === a + 3 * b + 3 * c + d }) && 1 + 6 + 9 + 4 === 20,
+  'math-8-13-algebra-play/calendar': () => range(1, 20).every((a) => a + (a + 1) + (a + 7) + (a + 8) === 4 * a + 16) && 5 + 6 + 12 + 13 === 36,
+  'math-8-13-algebra-play/product': () => Math.max(35 * 8, 53 * 8, 38 * 5, 83 * 5, 58 * 3, 85 * 3) === 53 * 8 && 53 * 8 === 424,
+  'math-8-13-algebra-play/heads': () => 6 + 4 === 10 && 2 * 6 + 4 * 4 === 28 && 2 * 6 + 4 * (10 - 6) === 28,
+  'math-8-13-algebra-play/doubling': () => 2 * 7 - 4 === 10 && 10 + 4 === 14 && 14 / 2 === 7,
+  'math-8-13-algebra-play/mistake:place': () => read('p. 145'),
+  'math-8-13-algebra-play/mistake:middle': () => read('p. 139'),
+  'math-8-13-algebra-play/mistake:reverseorder': () => (10 + 4) / 2 === 7,
+
+  'math-8-14-area/rect': () => 9 * 4 === 36 && 6 ** 2 === 36,
+  'math-8-14-area/triangle': () => (1 / 2) * 10 * 6 === 30,
+  'math-8-14-area/para': () => 8 * 5 === 40,
+  'math-8-14-area/rhombus': () => (1 / 2) * 20 * 15 === 150,
+  'math-8-14-area/trap': () => (1 / 2) * 4 * (7 + 5) === 24 && 7 + 5 === 12,
+  'math-8-14-area/polygon': () => (1 / 2) * 22 * 5 === 55 && (1 / 2) * 22 * 3 === 33 && 55 + 33 === 88,
+  'math-8-14-area/path': () => 12 * 8 === 96 && 10 * 6 === 60 && 96 - 60 === 36,
+  'math-8-14-area/samebase': () => read('p. 155, p. 158'),
+  'math-8-14-area/rectfour': () => read('p. 155') && 60 / 4 === 15,
+  'math-8-14-area/inch': () => near(2.54 ** 2, 6.4516) && near(10 * 6.4516, 64.516),
+  'math-8-14-area/acre': () => 2 * 43560 === 87120,
+  'math-8-14-area/squarem': () => 1000 * 1000 === 1000000,
+  'math-8-14-area/mistake:half': () => read('p. 154'),
+  'math-8-14-area/mistake:slant': () => read('p. 162'),
+  'math-8-14-area/mistake:perimeter': () => 2 * (1 + 10) === 22 && 1 * 10 === 10 && 2 * (5 + 5) === 20 && 5 * 5 === 25,
+  'math-8-14-area/mistake:convert': () => 100 * 100 === 10000,
+
+  'math-7-01-large-numbers/indian': () => 9 * 10 ** 9 + 87 * 10 ** 7 + 65 * 10 ** 5 + 1000 + 234 === 9876501234,
+  'math-7-01-large-numbers/american': () => 9 * 10 ** 9 + 876 * 10 ** 6 + 501 * 1000 + 234 === 9876501234,
+  'math-7-01-large-numbers/equal': () => 10 * 10 ** 5 === 10 ** 6 && 10 ** 7 === 10 * 10 ** 6 && 100 * 10 ** 7 === 10 ** 9,
+  'math-7-01-large-numbers/ways': () => 50 * 100 + 7 * 10 + 2 === 5072 && 3 * 1000 + 20 * 100 + 72 === 5072,
+  'math-7-01-large-numbers/updown': () => read('p. 10') && 750 >= 732,
+  'math-7-01-large-numbers/nearest': () => Math.round(67285183 / 10 ** 5) * 10 ** 5 === 67300000 && Math.round(67285183 / 10 ** 7) * 10 ** 7 === 70000000,
+  'math-7-01-large-numbers/by5': () => 116 * 5 === 580 && 116 / 2 === 58,
+  'math-7-01-large-numbers/by25': () => 824 * 25 === 20600 && 824 / 4 === 206,
+  'math-7-01-large-numbers/digits': () => [[10, 99], [100, 999], [1000, 9999]].every(([lo, hi]) => String(lo * lo).length === 2 * String(lo).length - 1 && String(hi * hi).length === 2 * String(lo).length) && 10 * 10 === 100 && 99 * 99 === 9801,
+  'math-7-01-large-numbers/mistake:lakhmillion': () => 10 * 10 ** 5 === 10 ** 6,
+  'math-7-01-large-numbers/mistake:billion': () => 100 * 10 ** 7 === 10 ** 9,
+  'math-7-01-large-numbers/mistake:firstzero': () => [...'1023456789'].sort().join('') === '0123456789',
+  'math-7-01-large-numbers/mistake:digits3': () => 100 * 100 === 10000 && String(10000).length === 5,
+
+  'math-7-02-arithmetic-expressions/brackets': () => 100 - (15 + 56) === 29 && 15 + 56 === 71,
+  'math-7-02-arithmetic-expressions/terms': () => 23 - 2 * 4 + 16 === 31 && 23 + -8 + 16 === 31,
+  'math-7-02-arithmetic-expressions/swap': () => grid((a, b) => a + b === b + a) && 37 + 93 === 130,
+  'math-7-02-arithmetic-expressions/group': () => grid((a, b, c) => a + b + c === a + (b + c)) && 1 - 2 + 3 - 4 === -2 && 1 - 2 + (3 - 4) === -2,
+  'math-7-02-arithmetic-expressions/minus': () => grid((a, b, c) => a - (b + c) === a - b - c) && 200 - (40 + 3) === 157 && 200 - 40 - 3 === 157,
+  'math-7-02-arithmetic-expressions/minus2': () => grid((a, b, c) => a - (b - c) === a - b + c) && 500 - (250 - 100) === 350 && 500 - 250 + 100 === 350,
+  'math-7-02-arithmetic-expressions/plus': () => grid((a, b, c) => a + (b - c) === a + b - c) && 50 + (20 - 5) === 65,
+  'math-7-02-arithmetic-expressions/dist': () => grid((a, b, c) => a * (b + c) === a * b + a * c) && 4 * (10 + 3) === 52 && 4 * 10 === 40 && 4 * 3 === 12,
+  'math-7-02-arithmetic-expressions/tinkersum': () => 1023 + 125 < 1022 + 128 && -1 + 3 === 2,
+  'math-7-02-arithmetic-expressions/tinkerdiff': () => 113 - 25 === 88 && 112 - 24 === 88,
+  'math-7-02-arithmetic-expressions/mistake:left': () => 30 + 5 * 4 === 50 && 35 * 4 === 140,
+  'math-7-02-arithmetic-expressions/mistake:minussign': () => 500 - (250 - 100) === 350 && 500 - 250 - 100 === 150,
+  'math-7-02-arithmetic-expressions/mistake:subswap': () => 9 - 4 !== 4 - 9 && 9 + -4 === -4 + 9,
+  'math-7-02-arithmetic-expressions/mistake:distboth': () => 4 * (10 + 3) === 52 && 4 * 10 + 3 === 43,
+
+  'math-7-03-peek-beyond-point/value': () => near(2 * 10 + 3 + 4 / 10 + 5 / 100, 23.45),
+  'math-7-03-peek-beyond-point/equal': () => near(10 * 0.1, 1) && near(100 * 0.01, 1) && near(1000 * 0.001, 1) && near(10 / 100, 1 / 10) && near(100 / 1000, 1 / 10),
+  'math-7-03-peek-beyond-point/regroup': () => near(234 / 10, 23.4),
+  'math-7-03-peek-beyond-point/read': () => near(7 + 5 / 100, 7.05),
+  'math-7-03-peek-beyond-point/length': () => near(5.6 * 10, 56) && near(15 / 100, 0.15),
+  'math-7-03-peek-beyond-point/weight': () => near(254 / 1000, 0.254),
+  'math-7-03-peek-beyond-point/money': () => near(75 / 100, 0.75) && near(5 / 100, 0.05),
+  'math-7-03-peek-beyond-point/compare': () => 4.27 > 4.195,
+  'math-7-03-peek-beyond-point/zeros': () => 0.2 === 0.20 && 0.2 === 0.200 && 0.02 < 0.2,
+  'math-7-03-peek-beyond-point/add': () => near(25.936 + 8.202, 34.138),
+  'math-7-03-peek-beyond-point/seq': () => near(4.4 + 0.4, 4.8) && near(5.2 + 0.4, 5.6) && near(5.6 + 0.4, 6),
+  'math-7-03-peek-beyond-point/bounds': () => 25 + 8 === 33 && 26 + 9 === 35 && 33 < 25.936 + 8.202 && 25.936 + 8.202 < 35,
+  'math-7-03-peek-beyond-point/mistake:longer': () => 0.5 > 0.123,
+  'math-7-03-peek-beyond-point/mistake:whole': () => 7.05 !== 7.5,
+  'math-7-03-peek-beyond-point/mistake:align': () => near(2.5 + 1.25, 3.75),
+  'math-7-03-peek-beyond-point/mistake:paise': () => near(5 / 100, 0.05) && near(50 / 100, 0.5),
+
+  'math-7-04-expressions-letter-numbers/translate': () => read('pp. 81-82') && [1, 2, 7].every((c) => 35 * c === range(1, c).reduce((p) => p + 35, 0)),
+  'math-7-04-expressions-letter-numbers/times': () => 3 * 6 === 18,
+  'math-7-04-expressions-letter-numbers/substitute': () => 3 * 7 - 2 === 19 && 3 * 7 === 21,
+  'math-7-04-expressions-letter-numbers/combine': () => grid((c) => 5 * c + 3 * c + 10 * c === 18 * c && 12 * c - 4 * c === 8 * c),
+  'math-7-04-expressions-letter-numbers/perimeter': () => grid((l, b) => l + b + l + b === 2 * (l + b)) && 2 * (7 + 4) === 22 && 7 + 4 === 11,
+  'math-7-04-expressions-letter-numbers/subbracket': () => grid((x, y) => 40 * x + 75 * y - (6 * x + 10 * y) === 34 * x + 65 * y),
+  'math-7-04-expressions-letter-numbers/expand': () => grid((x, y) => 4 * (x + y) - y === 4 * x + 3 * y),
+  'math-7-04-expressions-letter-numbers/mistake:concat': () => 3 * 6 === 18,
+  'math-7-04-expressions-letter-numbers/mistake:unlike': () => 3 * 2 + 2 * 3 !== 5 * 2 * 3,
+  'math-7-04-expressions-letter-numbers/mistake:bracket': () => 10 * 5 - 3 === 47 && 10 * (5 - 3) === 20,
+  'math-7-04-expressions-letter-numbers/mistake:sign': () => range(-9, 9).every((x) => 9 - (x + 2) === 7 - x),
+
+  'math-7-05-parallel-intersecting-lines/pair': () => read('p. 107') && 180 - 110 === 70,
+  'math-7-05-parallel-intersecting-lines/opp': () => read('p. 108') && 180 - 110 === 70,
+  'math-7-05-parallel-intersecting-lines/four': () => 110 + 70 + 110 + 70 === 360,
+  'math-7-05-parallel-intersecting-lines/eight': () => 4 + 4 === 8,
+  'math-7-05-parallel-intersecting-lines/corr': () => read('p. 117'),
+  'math-7-05-parallel-intersecting-lines/alt': () => read('p. 120'),
+  'math-7-05-parallel-intersecting-lines/inner': () => read('pp. 121-122') && 180 - 60 === 120,
+  'math-7-05-parallel-intersecting-lines/test': () => read('pp. 118-119') && 75 !== 80,
+  'math-7-05-parallel-intersecting-lines/mistake:notparallel': () => read('p. 118'),
+  'math-7-05-parallel-intersecting-lines/mistake:pairopp': () => read('pp. 107-108'),
+  'math-7-05-parallel-intersecting-lines/mistake:nevermeet': () => read('p. 109'),
+
+  'math-7-06-number-play/add': () => (7 + 9) % 2 === 0 && (8 + 9) % 2 === 1 && 7 + 9 === 16 && 8 + 9 === 17,
+  'math-7-06-number-play/manyodd': () => 1 + 3 + 5 === 9 && range(1, 30).every((n) => sum(range(1, n).map(odd)) % 2 === n % 2),
+  'math-7-06-number-play/consec': () => range(0, 200).every((n) => (n + (n + 1)) % 2 === 1) && 112 % 2 === 0,
+  'math-7-06-number-play/multiply': () => 7 * 9 === 63 && 7 * 8 === 56 && range(1, 40).every((a) => range(1, 40).every((b) => (a * b) % 2 === (a % 2) * (b % 2))),
+  'math-7-06-number-play/nth': () => odd(100) === 199,
+  'math-7-06-number-play/sum15': () => sum(range(1, 9)) === 45 && 45 / 3 === 15,
+  'math-7-06-number-play/centre': () => 4 + 5 + 6 === 15 && 1 + 5 + 9 === 15,
+  'math-7-06-number-play/change': () => 15 + 3 * 2 === 21,
+  'math-7-06-number-play/next': () => [1, 2, 3, 5, 8, 13, 21, 34, 55].every((x, i, a) => i < 2 || x === a[i - 1] + a[i - 2]),
+  'math-7-06-number-play/pattern': () => [1, 2, 3, 5, 8, 13].filter((x) => x % 2 === 0).join() === '2,8',
+  'math-7-06-number-play/mistake:oddcount': () => (1 + 3) % 2 === 0 && (1 + 3 + 5) % 2 === 1,
+  'math-7-06-number-play/mistake:even0': () => 3 * 5 * 2 === 30,
+  'math-7-06-number-play/mistake:diag': () => read('p. 134'),
+
+  'math-7-07-three-intersecting-lines/inequality': () => 4 + 5 > 7 && 4 + 7 > 5 && 5 + 7 > 4,
+  'math-7-07-three-intersecting-lines/shortcut': () => 3 + 4 === 7 && 7 < 8,
+  'math-7-07-three-intersecting-lines/thirdside': () => { const ok = range(1, 20).filter((x) => 5 + 8 > x && 5 + x > 8 && 8 + x > 5); return ok[0] === 4 && ok.at(-1) === 12 && 8 - 5 === 3 && 8 + 5 === 13 },
+  'math-7-07-three-intersecting-lines/sum': () => 50 + 60 === 110 && 180 - 110 === 70,
+  'math-7-07-three-intersecting-lines/ext': () => 180 - 70 === 110 && 50 + 60 === 110,
+  'math-7-07-three-intersecting-lines/asa': () => 100 + 90 === 190 && 190 > 180,
+  'math-7-07-three-intersecting-lines/byangle': () => [60, 70, 50].every((a) => a < 90) && 60 + 70 + 50 === 180 && 30 + 40 + 110 === 180 && 110 > 90,
+  'math-7-07-three-intersecting-lines/equi': () => 180 / 3 === 60,
+  'math-7-07-three-intersecting-lines/mistake:equalsum': () => 3 + 4 === 7,
+  'math-7-07-three-intersecting-lines/mistake:twoobtuse': () => 90 + 90 === 180,
+  'math-7-07-three-intersecting-lines/mistake:extall': () => read('p. 167'),
+
+  'math-7-08-working-with-fractions/rule': () => near((2 / 3) * (4 / 5), 8 / 15),
+  'math-7-08-working-with-fractions/whole': () => near(3 * (2 / 7), 6 / 7),
+  'math-7-08-working-with-fractions/cancel': () => near((4 / 9) * (3 / 8), 1 / 6) && near((1 / 3) * (1 / 2), 1 / 6),
+  'math-7-08-working-with-fractions/area': () => near((1 / 2) * (3 / 4), 3 / 8),
+  'math-7-08-working-with-fractions/bothbig': () => near((4 / 3) * 4, 16 / 3) && 16 / 3 > 4 && 16 / 3 > 4 / 3,
+  'math-7-08-working-with-fractions/bothsmall': () => near((1 / 2) * (1 / 5), 1 / 10) && 1 / 10 < 1 / 5,
+  'math-7-08-working-with-fractions/mixed': () => (1 / 2) * 6 === 3 && 1 / 2 < 3 && 3 < 6,
+  'math-7-08-working-with-fractions/divrule': () => near(3 / 4 / (2 / 5), 15 / 8) && near((3 / 4) * (5 / 2), 15 / 8),
+  'math-7-08-working-with-fractions/history': () => read('p. 182, p. 195'),
+  'math-7-08-working-with-fractions/mistake:alwaysbigger': () => near((1 / 2) * (1 / 5), 1 / 10),
+  'math-7-08-working-with-fractions/mistake:wrongflip': () => near(3 / 4 / (2 / 5), (3 / 4) * (5 / 2)),
+  'math-7-08-working-with-fractions/mistake:addbottom': () => (1 / 2) * (1 / 2) === 1 / 4,
+
+  'math-7-09-geometric-twins/shapes': () => read('pp. 1-3'),
+  'math-7-09-geometric-twins/sss': () => read('p. 6'),
+  'math-7-09-geometric-twins/sas': () => read('p. 10'),
+  'math-7-09-geometric-twins/asa': () => read('pp. 13-15'),
+  'math-7-09-geometric-twins/aas': () => read('p. 16') && 180 - 50 - 60 === 70,
+  'math-7-09-geometric-twins/rhs': () => read('p. 17') && Math.sqrt(13 ** 2 - 5 ** 2) === 12,
+  'math-7-09-geometric-twins/aaa': () => read('p. 22'),
+  'math-7-09-geometric-twins/ssa': () => read('p. 12'),
+  'math-7-09-geometric-twins/isosceles': () => read('p. 18') && (180 - 40) / 2 === 70,
+  'math-7-09-geometric-twins/equilateral': () => 180 / 3 === 60,
+  'math-7-09-geometric-twins/mistake:order': () => read('p. 4'),
+  'math-7-09-geometric-twins/mistake:aaa': () => read('p. 22'),
+  'math-7-09-geometric-twins/mistake:ssa': () => read('p. 12'),
+
+  'math-7-10-operations-integers/sub': () => 7 - 18 === -11 && 7 + -18 === -11,
+  'math-7-10-operations-integers/subneg': () => 4 - -12 === 16,
+  'math-7-10-operations-integers/signs': () => -4 * -2 === 8 && -4 * 2 === -8,
+  'math-7-10-operations-integers/minusone': () => -1 * 9 === -9 && 9 + -9 === 0,
+  'math-7-10-operations-integers/many': () => -1 * -1 * -1 === -1 && range(1, 12).every((n) => times(-1, n) === (n % 2 ? -1 : 1)),
+  'math-7-10-operations-integers/props': () => grid((a, b, c) => a * b === b * a && a * b * c === a * (b * c)) && -2 * 5 === -10,
+  'math-7-10-operations-integers/distr': () => grid((a, b, c) => a * (b + c) === a * b + a * c) && -3 * (10 + 2) === -36,
+  'math-7-10-operations-integers/divsigns': () => -100 / 25 === -4 && -100 / -4 === 25,
+  'math-7-10-operations-integers/marks': () => 8 * 4 + 3 * -1 === 29,
+  'math-7-10-operations-integers/brahma': () => read('p. 35'),
+  'math-7-10-operations-integers/mistake:twominus': () => -3 * -2 === 6 && -3 + -2 === -5,
+  'math-7-10-operations-integers/mistake:subsign': () => 4 - -12 === 16,
+  'math-7-10-operations-integers/mistake:divassoc': () => 16 / 4 / 2 === 2 && 16 / (4 / 2) === 8,
+
+  'math-7-11-finding-common-ground/factorise': () => primeFactors(84).join() === '2,2,3,7',
+  'math-7-11-finding-common-ground/factors': () => primeFactors(30).join() === '2,3,5' && 30 % 6 === 0 && 30 % 10 === 0,
+  'math-7-11-finding-common-ground/hcfrule': () => hcf(84, 108) === 12 && primeFactors(108).join() === '2,2,3,3,3',
+  'math-7-11-finding-common-ground/lcmrule': () => lcm(6, 8) === 24 && primeFactors(24).join() === '2,2,2,3',
+  'math-7-11-finding-common-ground/product': () => hcf(6, 8) * lcm(6, 8) === 48 && 6 * 8 === 48 && range(1, 60).every((a) => range(1, 60).every((b) => hcf(a, b) * lcm(a, b) === a * b)),
+  'math-7-11-finding-common-ground/tile': () => hcf(12, 16) === 4,
+  'math-7-11-finding-common-ground/bags': () => hcf(84, 108) === 12 && 84 / 12 === 7 && 108 / 12 === 9 && 7 + 9 === 16,
+  'math-7-11-finding-common-ground/together': () => lcm(7, 10) === 70,
+  'math-7-11-finding-common-ground/mistake:mix': () => range(1, 60).every((a) => range(1, 60).every((b) => hcf(a, b) <= Math.min(a, b) && lcm(a, b) >= Math.max(a, b))),
+  'math-7-11-finding-common-ground/mistake:product2': () => lcm(6, 8) === 24 && 6 * 8 === 48 && hcf(7, 10) === 1 && lcm(7, 10) === 70,
+  'math-7-11-finding-common-ground/mistake:threenums': () => hcf(hcf(2, 4), 8) * lcm(lcm(2, 4), 8) === 16 && 2 * 4 * 8 === 64,
+
+  'math-7-12-another-peek-beyond-point/divten': () => near(123 / 10, 12.3) && near(24 / 100, 0.24),
+  'math-7-12-another-peek-beyond-point/mulsten': () => near(3.25 * 100, 325),
+  'math-7-12-another-peek-beyond-point/count': () => 596 * 248 === 147808 && near(5.96 * 24.8, 147.808),
+  'math-7-12-another-peek-beyond-point/big': () => near(3.4 * 6.5, 22.1),
+  'math-7-12-another-peek-beyond-point/small': () => near(0.75 * 0.4, 0.3),
+  'math-7-12-another-peek-beyond-point/between': () => near(0.75 * 5, 3.75) && 0.75 < 3.75 && 3.75 < 5,
+  'math-7-12-another-peek-beyond-point/fractions': () => near(1 / 8, 0.125) && near(125 / 1000, 0.125) && primeFactors(8).every((p) => p === 2 || p === 5),
+  'math-7-12-another-peek-beyond-point/divisor': () => near(4.68 / 0.13, 36) && 468 / 13 === 36,
+  'math-7-12-another-peek-beyond-point/seven': () => 142857 * 7 === 999999 && near(1 / 7, 0.142857142857),
+  'math-7-12-another-peek-beyond-point/rule': () => { const leap = (y: number) => (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0; return leap(2024) && leap(2000) && !leap(1900) },
+  'math-7-12-another-peek-beyond-point/drift': () => near(0.2422 * 100, 24.22) && near(365.2422 - 365, 0.2422),
+  'math-7-12-another-peek-beyond-point/mistake:shift': () => 2.5 * 10 === 25 && 2.5 / 10 === 0.25,
+  'math-7-12-another-peek-beyond-point/mistake:smaller': () => 8 * 0.5 === 4,
+  'math-7-12-another-peek-beyond-point/mistake:century': () => 1900 % 100 === 0 && 1900 % 400 !== 0,
+
+  'math-7-13-connecting-the-dots/meanf': () => mean([12, 15, 18, 19]) === 16 && 12 + 15 + 18 + 19 === 64,
+  'math-7-13-connecting-the-dots/bounds': () => 12 < 16 && 16 < 19,
+  'math-7-13-connecting-the-dots/range': () => 19 - 12 === 7,
+  'math-7-13-connecting-the-dots/medodd': () => median([5, 2, 9, 7, 3]) === 5,
+  'math-7-13-connecting-the-dots/medeven': () => median([2, 3, 5, 7]) === 4,
+  'math-7-13-connecting-the-dots/outliers': () => mean([1, 2, 3, 4, 90]) === 20 && median([1, 2, 3, 4, 90]) === 3,
+  'math-7-13-connecting-the-dots/zero': () => mean([40, 0, 20]) === 20 && mean([40, 20]) === 30,
+  'math-7-13-connecting-the-dots/plots': () => Math.max(1, 4, 2) === 4,
+  'math-7-13-connecting-the-dots/compare': () => read('p. 110'),
+  'math-7-13-connecting-the-dots/mistake:order': () => median([5, 2, 9]) === 5,
+  'math-7-13-connecting-the-dots/mistake:absent': () => read('p. 112'),
+  'math-7-13-connecting-the-dots/mistake:meanvalue': () => mean([2, 3]) === 2.5,
+
+  'math-7-14-constructions-and-tilings/perp': () => read('pp. 137-138'),
+  'math-7-14-constructions-and-tilings/ninety': () => read('pp. 141-142'),
+  'math-7-14-constructions-and-tilings/fortyfive': () => 90 / 2 === 45 && 360 / 8 === 45,
+  'math-7-14-constructions-and-tilings/sixty': () => 180 / 3 === 60 && 180 - 60 === 120,
+  'math-7-14-constructions-and-tilings/parallel': () => read('pp. 147-148'),
+  'math-7-14-constructions-and-tilings/hex': () => 6 * 60 === 360,
+  'math-7-14-constructions-and-tilings/domino': () => 5 * 3 === 15 && 15 % 2 === 1 && 4 * 3 === 12 && 12 % 2 === 0,
+  'math-7-14-constructions-and-tilings/colour': () => 8 + 6 === 14 && 8 !== 6,
+  'math-7-14-constructions-and-tilings/regular': () => 6 * 60 === 360 && 4 * 90 === 360 && 3 * 120 === 360 && range(3, 30).filter((n) => Number.isInteger(360 / ((180 * (n - 2)) / n))).join() === '3,4,6',
+  'math-7-14-constructions-and-tilings/mistake:evenenough': () => read('pp. 159-160'),
+  'math-7-14-constructions-and-tilings/mistake:pentagon': () => (180 * (5 - 2)) / 5 === 108 && 3 * 108 === 324 && 324 !== 360,
+  'math-7-14-constructions-and-tilings/mistake:radius': () => read('p. 140'),
+
+  'math-7-15-finding-the-unknown/balance': () => 7 + 5 === 12,
+  'math-7-15-finding-the-unknown/check': () => 5 * 5 - 4 === 21 && 25 - 4 === 21,
+  'math-7-15-finding-the-unknown/move': () => 21 - 7 === 14 && 2 * 7 + 7 === 21,
+  'math-7-15-finding-the-unknown/factor': () => 14 / 2 === 7,
+  'math-7-15-finding-the-unknown/divisor': () => 6 * 15 === 90 && 90 / 15 === 6,
+  'math-7-15-finding-the-unknown/both': () => 5 * 4 + 2 === 3 * 4 + 10 && 10 - 2 === 8 && 5 - 3 === 2,
+  'math-7-15-finding-the-unknown/nosol': () => range(-50, 50).every((x) => x + 4 !== x + 5),
+  'math-7-15-finding-the-unknown/brick': () => 2 === 1 + 2 / 2,
+  'math-7-15-finding-the-unknown/notes': () => 50 * 4 + 100 * 4 === 600 && 50 + 100 === 150,
+  'math-7-15-finding-the-unknown/heads': () => 2 * 7 + 4 * (12 - 7) === 34 && 12 - 7 === 5,
+  'math-7-15-finding-the-unknown/mistake:sign': () => 4 * 1 + 6 === 10 && 10 - 6 === 4,
+  'math-7-15-finding-the-unknown/mistake:oneterm': () => 12 - 1 === 11,
+  'math-7-15-finding-the-unknown/mistake:onlyone': () => read('p. 169'),
+
+  // --- end of rules
+}
+
+/** The numbers written in a line, as Kannada must repeat them. */
+const numbers = (s: string) => (s.match(/\d+(?:\.\d+)?/g) ?? []).sort().join(' ')
+const used = new Set<string>()
+
+for (const { en, kn } of REVISIONS) {
+  const chapter = SAT_CHAPTERS.find((c) => c.id === en.chapter)
+  if (!chapter) {
+    problems.push(`${en.chapter}: not a listed SAT chapter`)
+    continue
+  }
+  const at = (id: string) => `${en.chapter}/${id}`
+  const checkPages = (id: string, pages: number[]) => {
+    if (pages.length < 1 || pages.length > 2 || pages.some((p) => p < chapter.pages[0] || p > chapter.pages[1])) problems.push(`${at(id)}: pages ${pages} are outside the chapter`)
+  }
+  const rule = (key: string) => {
+    used.add(at(key))
+    const f = RULES[at(key)]
+    if (!f) problems.push(`${at(key)}: no rule in tools/check_sat_revise.ts`)
+    else if (!f()) problems.push(`${at(key)}: its rule fails`)
+  }
+  const sameNumbers = (id: string, a: string, b: string | undefined) => {
+    if (!b) problems.push(`${at(id)}: no Kannada`)
+    else if (numbers(a) !== numbers(b)) problems.push(`${at(id)}: Kannada numbers differ: "${a}" / "${b}"`)
+  }
+  const inKannada = (id: string, b: string | undefined) => {
+    if (!b || !KANNADA.test(b)) problems.push(`${at(id)}: needs Kannada script: "${b}"`)
+  }
+
+  if (!en.terms.length) problems.push(`${en.chapter}: no key terms`)
+  const terms = new Set<string>()
+  for (const t of en.terms) {
+    if (terms.has(t.id)) problems.push(`${at(t.id)}: term id used twice`)
+    terms.add(t.id)
+    checkPages(t.id, t.pages)
+    inKannada(`term ${t.id}`, kn.terms[t.id]?.term)
+    inKannada(`term ${t.id}`, kn.terms[t.id]?.meaning)
+    sameNumbers(`term ${t.id}`, t.meaning, kn.terms[t.id]?.meaning)
+  }
+  for (const id of Object.keys(kn.terms)) if (!terms.has(id)) problems.push(`${at(id)}: Kannada term with no English`)
+
+  const items = new Set<string>()
+  for (const g of en.groups) {
+    inKannada(`group ${g.id}`, kn.groups[g.id])
+    for (const x of g.items) {
+      if (items.has(x.id)) problems.push(`${at(x.id)}: item id used twice`)
+      items.add(x.id)
+      checkPages(x.id, x.pages)
+      rule(x.id)
+      const k = kn.items[x.id]
+      // A name that is only capitals, such as SSS, stays as it is.
+      if (/[a-z]/.test(x.name)) inKannada(`item ${x.id}`, k?.name)
+      sameNumbers(`item ${x.id}`, x.example, k?.example)
+      // A formula with words needs Kannada; one that is only maths stays as it is.
+      if (/\b(?!abc|bca|cab)[a-z]{3,}/.test(x.formula)) inKannada(`formula ${x.id}`, k?.formula)
+      if (k?.formula) sameNumbers(`formula ${x.id}`, x.formula, k.formula)
+    }
+  }
+  for (const id of Object.keys(kn.items)) if (!items.has(id)) problems.push(`${at(id)}: Kannada item with no English`)
+
+  for (const m of en.mistakes) {
+    rule(`mistake:${m.id}`)
+    inKannada(`mistake ${m.id}`, kn.mistakes[m.id])
+    sameNumbers(`mistake ${m.id}`, m.text, kn.mistakes[m.id])
+  }
+}
+for (const c of SAT_CHAPTERS) if (c.subject === 'maths' && !REVISIONS.some((r) => r.en.chapter === c.id)) problems.push(`${c.id}: this maths chapter has no revision sheet`)
+for (const key of Object.keys(RULES)) if (!used.has(key)) problems.push(`${key}: a rule for something not on the sheet`)
+
+if (problems.length) {
+  console.error(problems.join('\n'))
+  process.exit(1)
+}
+console.log(`SAT revision: ${REVISIONS.length} sheet(s), ${used.size} formulas and mistakes (${used.size - readFacts} re-worked, ${readFacts} facts traced to a book page).`)

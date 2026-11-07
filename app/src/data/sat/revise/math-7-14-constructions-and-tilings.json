@@ -1,0 +1,152 @@
+{
+ "chapter": "math-7-14-constructions-and-tilings",
+ "terms": [
+  {
+   "id": "bisector",
+   "term": "Perpendicular bisector",
+   "meaning": "A line that cuts a segment into two equal parts and is at 90° to it.",
+   "pages": [
+    137
+   ]
+  },
+  {
+   "id": "anglebis",
+   "term": "Angle bisector",
+   "meaning": "A line that cuts an angle into two equal angles.",
+   "pages": [
+    143,
+    144
+   ]
+  },
+  {
+   "id": "hexagon",
+   "term": "Regular hexagon",
+   "meaning": "A 6-sided figure with equal sides and equal angles.",
+   "pages": [
+    151
+   ]
+  },
+  {
+   "id": "tiling",
+   "term": "Tiling",
+   "meaning": "Covering a region using a set of shapes, without gaps or overlaps.",
+   "pages": [
+    157
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "construct",
+   "title": "Constructions",
+   "items": [
+    {
+     "id": "perp",
+     "name": "Equal distances from two points",
+     "formula": "Such points lie on the perpendicular bisector",
+     "example": "If AX = AY and BX = BY, then line AB is the perpendicular bisector of XY.",
+     "pages": [
+      137,
+      138
+     ]
+    },
+    {
+     "id": "ninety",
+     "name": "A 90° angle",
+     "formula": "Draw the perpendicular bisector of a segment",
+     "example": "It meets the segment at 90° at its midpoint.",
+     "pages": [
+      141,
+      142
+     ]
+    },
+    {
+     "id": "fortyfive",
+     "name": "A 45° angle",
+     "formula": "Bisect a 90° angle",
+     "example": "90° ÷ 2 = 45°, and 360° ÷ 8 = 45°",
+     "pages": [
+      143
+     ]
+    },
+    {
+     "id": "sixty",
+     "name": "A 60° angle",
+     "formula": "Draw an equilateral triangle",
+     "example": "Each angle is 60°, and 180° − 60° = 120° on a straight line.",
+     "pages": [
+      153
+     ]
+    },
+    {
+     "id": "parallel",
+     "name": "A line through a point, parallel to another",
+     "formula": "Copy an angle to make equal corresponding angles",
+     "example": "Equal corresponding angles make the lines parallel.",
+     "pages": [
+      147,
+      148
+     ]
+    },
+    {
+     "id": "hex",
+     "name": "Regular hexagon from triangles",
+     "formula": "Six equilateral triangles around a point",
+     "example": "6 × 60° = 360°",
+     "pages": [
+      151,
+      152
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tile",
+   "title": "Tiling",
+   "items": [
+    {
+     "id": "domino",
+     "name": "Grid with 2 × 1 tiles",
+     "formula": "An m × n grid can be tiled only if m × n is even",
+     "example": "5 × 3 has 15 squares, so it cannot be tiled. 4 × 3 has 12, so it can.",
+     "pages": [
+      158
+     ]
+    },
+    {
+     "id": "colour",
+     "name": "Colouring a grid",
+     "formula": "Each 2 × 1 tile covers 1 black and 1 white square",
+     "example": "A region with 8 black and 6 white squares cannot be tiled, even with 14 squares.",
+     "pages": [
+      159,
+      160
+     ]
+    },
+    {
+     "id": "regular",
+     "name": "Regular polygons that tile the plane",
+     "formula": "Only triangles, squares and hexagons",
+     "example": "6 × 60° = 360°, 4 × 90° = 360° and 3 × 120° = 360°",
+     "pages": [
+      161
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "evenenough",
+   "text": "An even number of squares is not enough for tiling with 2 × 1 tiles. The black and white counts must also match."
+  },
+  {
+   "id": "pentagon",
+   "text": "Regular pentagons cannot tile the plane. Their 108° angles do not fit around a point: 3 × 108° = 324°."
+  },
+  {
+   "id": "radius",
+   "text": "For a perpendicular bisector, use the same compass radius from both ends, and make it more than half the segment."
+  }
+ ]
+}
