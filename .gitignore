@@ -21,3 +21,6 @@ sat-syllabus/textbooks/8th English Maths Part 2 2026-27.pdf
 sat-syllabus/textbooks/8th English Science Part 2 2026-27.pdf
 sat-syllabus/textbooks/8th English SS Part 1 2026-27.pdf
 sat-syllabus/textbooks/8th English SS Part 2 2026-27.pdf
+.vscode/extensions.json
+# Text and images extracted from the textbooks, which are marked "not to be republished"
+/.textbook-cache/
