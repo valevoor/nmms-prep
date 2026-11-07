@@ -1,0 +1,215 @@
+{
+ "chapter": "ss-7-01-major-developments-world",
+ "terms": [
+  {
+   "id": "history",
+   "term": "History",
+   "meaning": "A systematic study of the past, built on when, where and who.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "christ",
+   "term": "Christ",
+   "meaning": "A word meaning Saviour.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "parable",
+   "term": "Parable",
+   "meaning": "A moral story, the way Jesus taught.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "prophet",
+   "term": "Prophet",
+   "meaning": "One who proclaims God's message.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "islam",
+   "term": "Islam and Muslim",
+   "meaning": "Islam means peace or submission; a Muslim is one who surrenders to God.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "hijrah",
+   "term": "Hijrah",
+   "meaning": "The Prophet's move from Mecca to Madina, which starts the Islamic era.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "caliph",
+   "term": "Caliph",
+   "meaning": "A successor of Prophet Muhammad.",
+   "pages": [
+    5
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "christian",
+   "title": "Christianity",
+   "items": [
+    {
+     "id": "jesus",
+     "name": "Life of Jesus",
+     "formula": "Born in Bethlehem (Israel) to Mary; at about 30 he left home to serve the poor.",
+     "example": "Religious leaders accused him of treason and he was crucified.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "jteach",
+     "name": "Teachings of Jesus",
+     "formula": "We are all God's children, so all brothers. \"Love your neighbour as yourself.\"",
+     "example": "Service to mankind is service to God.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "church",
+     "name": "Spread of Christianity",
+     "formula": "His twelve disciples spread the teachings; Rome later recognised the faith.",
+     "example": "Rome became the centre of the Church, with the Pope as its head.",
+     "pages": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "islamg",
+   "title": "Islam",
+   "items": [
+    {
+     "id": "muhammad",
+     "name": "Life of Prophet Muhammad",
+     "formula": "Born at Mecca to Abdullah and Aminah; married Khadijah.",
+     "example": "At forty he received prophethood in the cave of Hira; his messages form the Quran, in Arabic.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "iteach",
+     "name": "Teachings of Islam",
+     "formula": "One God; traders must not cheat; no interest on loans.",
+     "example": "Infanticide, alcohol and gambling are great sins.",
+     "pages": [
+      5
+     ]
+    },
+    {
+     "id": "pillars",
+     "name": "Five religious practices of Islam",
+     "formula": "Kalima (faith), Namaz (prayer five times a day), Roza (fasting in Ramzan), Zakath (giving to the poor), Haj (pilgrimage to Mecca).",
+     "example": "Haj is done once in a lifetime.",
+     "pages": [
+      5
+     ]
+    },
+    {
+     "id": "arabs",
+     "name": "Contributions of the Arabs",
+     "formula": "Algebra, chemistry, astronomy; Unani medicine; they passed Indian numbers, including zero, to the West.",
+     "example": "Baghdad was their centre of learning.",
+     "pages": [
+      6
+     ]
+    },
+    {
+     "id": "arablit",
+     "name": "Famous works in Persian",
+     "formula": "The Arabian Nights, Omar Khayyam's Rubaiyat and Firdausi's Shahnamah.",
+     "example": "Arabs conquered Sindh in India.",
+     "pages": [
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "later",
+   "title": "Crusades, Mongols and Turks",
+   "items": [
+    {
+     "id": "crusade",
+     "name": "The Crusades",
+     "formula": "Nine wars between Christians and Muslims for Palestine and Jerusalem.",
+     "example": "Main cause: the Turks stopped Christian pilgrims entering Palestine.",
+     "pages": [
+      6,
+      7
+     ]
+    },
+    {
+     "id": "cresult",
+     "name": "Outcome of the Crusades",
+     "formula": "About 40,000 took Jerusalem in the first; later ones, like the fourth with about 50,000, failed.",
+     "example": "Christians lost the holy land, but Europe-Asia trade grew.",
+     "pages": [
+      7,
+      8
+     ]
+    },
+    {
+     "id": "qublai",
+     "name": "Genghis Khan and Qublai Khan",
+     "formula": "Genghis Khan united the Mongols; his grandson Qublai Khan became Emperor of China.",
+     "example": "Qublai fed the hungry in famines and became a Buddhist.",
+     "pages": [
+      8,
+      9
+     ]
+    },
+    {
+     "id": "timur",
+     "name": "Timur",
+     "formula": "Conquered Persia, Iraq, Syria and Afghanistan, and invaded India.",
+     "example": "Babur, founder of Mughal rule, was from his line.",
+     "pages": [
+      9
+     ]
+    },
+    {
+     "id": "ottoman",
+     "name": "Ottoman Turks",
+     "formula": "Nomads from Turkistan (now Turkmenistan) who became Muslims and built the Ottoman military state.",
+     "example": "Turks set up the Delhi Sultanate in India.",
+     "pages": [
+      9
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "qubl",
+   "text": "Qublai Khan was Genghis Khan's grandson, not his son."
+  },
+  {
+   "id": "persian",
+   "text": "The Rubaiyat and Shahnamah are in Persian, though they are counted among the Arabs' contributions."
+  },
+  {
+   "id": "bethl",
+   "text": "Jesus was born in Bethlehem; Prophet Muhammad was born in Mecca."
+  }
+ ]
+}

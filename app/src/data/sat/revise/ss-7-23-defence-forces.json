@@ -1,0 +1,172 @@
+{
+ "chapter": "ss-7-23-defence-forces",
+ "terms": [
+  {
+   "id": "defence",
+   "term": "Defence Forces",
+   "meaning": "The Army, Navy and Air Force, which defend the country from attack.",
+   "pages": [
+    116
+   ]
+  },
+  {
+   "id": "paramilitary",
+   "term": "Paramilitary forces",
+   "meaning": "Forces that support the defence forces in emergencies, such as the BSF and Coast Guard.",
+   "pages": [
+    119
+   ]
+  },
+  {
+   "id": "ncc",
+   "term": "NCC",
+   "meaning": "National Cadet Corps: training for school and college students; motto \"Discipline and Unity\".",
+   "pages": [
+    121
+   ]
+  },
+  {
+   "id": "homeguards",
+   "term": "Home Guards",
+   "meaning": "Volunteers who help the police with internal security and in disasters.",
+   "pages": [
+    122
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "basics",
+   "title": "Basics",
+   "items": [
+    {
+     "id": "supreme",
+     "name": "Supreme Commander",
+     "formula": "The President of India commands the defence forces.",
+     "example": "The three services join the Independence Day and Republic Day parades.",
+     "pages": [
+      116
+     ]
+    },
+    {
+     "id": "borders",
+     "name": "India's borders",
+     "formula": "15,200 km of land border and 7,516.60 km of coast.",
+     "example": "Duties: defend borders, keep the country united, stop smuggling.",
+     "pages": [
+      116
+     ]
+    },
+    {
+     "id": "training",
+     "name": "Defence training centres",
+     "formula": "National Defence College (New Delhi), Indian Military Academy (Dehra Dun), National Defence Academy (Khadakwasla, Pune).",
+     "example": "Another centre is at Udakamandala (Ooty).",
+     "pages": [
+      116
+     ]
+    }
+   ]
+  },
+  {
+   "id": "three",
+   "title": "The three services",
+   "items": [
+    {
+     "id": "army",
+     "name": "The Indian Army",
+     "formula": "Second largest in the world: 12,37,117 soldiers plus 9,60,000 reserves; led by a General.",
+     "example": "It also does relief work in floods and earthquakes.",
+     "pages": [
+      117
+     ]
+    },
+    {
+     "id": "navy",
+     "name": "The Indian Navy",
+     "formula": "Sixth largest in the world; led by an Admiral; aircraft carriers INS Virat and INS Vikramaditya.",
+     "example": "The Seabird naval base is at Karwar.",
+     "pages": [
+      117
+     ]
+    },
+    {
+     "id": "airforce",
+     "name": "The Indian Air Force",
+     "formula": "Fourth largest in the world; led by an Air Chief Marshal; seven Commands.",
+     "example": "About 1,00,000 personnel and 1330 war planes, including Jaguar and Rafale.",
+     "pages": [
+      118,
+      119
+     ]
+    },
+    {
+     "id": "hq",
+     "name": "Headquarters of the services",
+     "formula": "Army, Navy and Air Force headquarters are all in New Delhi.",
+     "example": "Air Force training: Bengaluru, Hyderabad and Dindigul.",
+     "pages": [
+      117
+     ]
+    }
+   ]
+  },
+  {
+   "id": "support",
+   "title": "Supporting forces",
+   "items": [
+    {
+     "id": "bsf",
+     "name": "BSF and Border Roads",
+     "formula": "BSF guards the borders (motto \"Duty until Death\") and fought at Kargil.",
+     "example": "The Border Roads Organisation builds and clears roads and bridges.",
+     "pages": [
+      119,
+      120
+     ]
+    },
+    {
+     "id": "coast",
+     "name": "Coast Guard and CISF",
+     "formula": "The Coast Guard guards coasts, stops smuggling and rescues in storms.",
+     "example": "The CISF (1,45,000 strong) is the world's largest industrial security force.",
+     "pages": [
+      120
+     ]
+    },
+    {
+     "id": "redcross",
+     "name": "Indian Red Cross Society",
+     "formula": "Works through branches in 1100 districts; the President of India is its President.",
+     "example": "Its motto: \"Serve Humanity\".",
+     "pages": [
+      121
+     ]
+    },
+    {
+     "id": "ranks",
+     "name": "Army ranks, top down",
+     "formula": "General, Lieutenant General, Major General, Brigadier, Colonel, Lieutenant Colonel, Major, Captain, Lieutenant.",
+     "example": "Navy and Air Force have their own ranks.",
+     "pages": [
+      122
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "sizes",
+   "text": "Army: second largest. Navy: sixth largest. Air Force: fourth largest."
+  },
+  {
+   "id": "chiefs",
+   "text": "Army chief: General. Navy chief: Admiral. Air Force chief: Air Chief Marshal."
+  },
+  {
+   "id": "mottos",
+   "text": "\"Duty until Death\" is the BSF's motto; \"Discipline and Unity\" is the NCC's; \"Serve Humanity\" is the Red Cross's."
+  }
+ ]
+}

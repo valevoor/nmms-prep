@@ -1,0 +1,194 @@
+{
+ "chapter": "ss-7-12-physical-divisions-india",
+ "terms": [
+  {
+   "id": "rift",
+   "term": "Narmada-Sone rift valley",
+   "meaning": "The valley that splits the Peninsular Plateau into the Malwa Plateau (north) and the Deccan Plateau (south).",
+   "pages": [
+    164
+   ]
+  },
+  {
+   "id": "playa",
+   "term": "Playa",
+   "meaning": "A salt lake in the Thar desert.",
+   "pages": [
+    166
+   ]
+  },
+  {
+   "id": "malnad",
+   "term": "Malnad region",
+   "meaning": "Karnataka's hilly, rainy, forested belt between the coast and the Maidan, called the Sahyadri Ranges.",
+   "pages": [
+    168
+   ]
+  },
+  {
+   "id": "maidan",
+   "term": "Maidan region",
+   "meaning": "Karnataka's undulating plateau east of the Malnad, split by the Tungabhadra into north and south.",
+   "pages": [
+    168
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "india",
+   "title": "India",
+   "items": [
+    {
+     "id": "location",
+     "name": "India's location and extent",
+     "formula": "8°N to 37°N and 68°E to 97°E, all in the Northern Hemisphere.",
+     "example": "The Tropic of Cancer passes through the middle; seventh largest by area.",
+     "pages": [
+      161
+     ]
+    },
+    {
+     "id": "neighbours",
+     "name": "India's neighbours",
+     "formula": "North-west: Pakistan, Afghanistan. North: China, Nepal, Bhutan. East: Bangladesh, Myanmar.",
+     "example": "Sri Lanka lies across the Palk Strait and the Gulf of Mannar.",
+     "pages": [
+      162
+     ]
+    },
+    {
+     "id": "four",
+     "name": "India's four physical divisions",
+     "formula": "Northern Mountains, Northern Plains, Peninsular Plateaus and Coastal Plains.",
+     "example": "Plus the islands and the Thar desert.",
+     "pages": [
+      163
+     ]
+    },
+    {
+     "id": "himalaya",
+     "name": "The Himalayas",
+     "formula": "Mt. Everest (8848 m) is the world's highest; Mt. K2 or Godwin Austin (8611 m) is India's highest.",
+     "example": "They block cold Central Asian winds and stop the monsoon to give rain.",
+     "pages": [
+      164
+     ]
+    },
+    {
+     "id": "plains",
+     "name": "The Northern Plains",
+     "formula": "Built of alluvium from the Sutlej, Ganges and Brahmaputra.",
+     "example": "Fertile and flat, so densely populated.",
+     "pages": [
+      164
+     ]
+    },
+    {
+     "id": "plateau",
+     "name": "Peninsular Plateau peaks",
+     "formula": "Aravallis' highest: Gurushikhar (1722 m). South India's highest: Anaimudi (2695 m) on the Anamalai hills.",
+     "example": "Western and Eastern Ghats meet at the Nilgiris (Ooty).",
+     "pages": [
+      164,
+      165
+     ]
+    },
+    {
+     "id": "coasts",
+     "name": "India's coastal plains",
+     "formula": "Western: narrow and rocky, from the Gulf of Kuch to Kanyakumari. Eastern: broader, from the Ganga delta to Kanyakumari.",
+     "example": "Both have seaports.",
+     "pages": [
+      165
+     ]
+    },
+    {
+     "id": "islands",
+     "name": "India's islands",
+     "formula": "247 in all: 204 Andaman and Nicobar (volcanic rock) and 43 Lakshadweep (coral sand).",
+     "example": "Andaman and Nicobar are in the Bay of Bengal; Lakshadweep in the Arabian Sea.",
+     "pages": [
+      166
+     ]
+    },
+    {
+     "id": "thar",
+     "name": "Thar desert",
+     "formula": "In north-west India, about two-thirds of it in Rajasthan.",
+     "example": "Sambhar is India's largest salt lake.",
+     "pages": [
+      166
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ka",
+   "title": "Karnataka",
+   "items": [
+    {
+     "id": "kaloc",
+     "name": "Karnataka's location",
+     "formula": "11°N to 18°N and 74°E to 78°E; eighth largest state; 31 districts and 227 taluks.",
+     "example": "Neighbours: Maharashtra, Goa, Telangana, Andhra Pradesh, Tamil Nadu, Kerala.",
+     "pages": [
+      167
+     ]
+    },
+    {
+     "id": "kacoast",
+     "name": "Karnataka's coastal plain",
+     "formula": "About 324 km, from Goa to Kerala: Uttara Kannada, Udupi and Dakshina Kannada.",
+     "example": "New Mangalore port is the \"Gateway of Karnataka\".",
+     "pages": [
+      167,
+      168
+     ]
+    },
+    {
+     "id": "kamalnad",
+     "name": "Malnad facts",
+     "formula": "Agumbe gets the most rain in Karnataka; Mullayanagiri (1913 m) is the highest peak.",
+     "example": "Jog falls is here.",
+     "pages": [
+      168
+     ]
+    },
+    {
+     "id": "kamaidan",
+     "name": "Northern and Southern Maidan",
+     "formula": "North: flat basalt with black soil and low rain. South (Mysore Plateau): hilly, red soil, more rain.",
+     "example": "Both slope east, with the Krishna-Bhima and the Kaveri.",
+     "pages": [
+      168,
+      169
+     ]
+    },
+    {
+     "id": "facts",
+     "name": "Famous things from Karnataka",
+     "formula": "Mudhol Hounds; Ilkal silk sarees; Athani slippers; Davangere was the \"Manchester of Karnataka\".",
+     "example": "Savanur has giant Baobab trees.",
+     "pages": [
+      169
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "peaks",
+   "text": "Everest is the world's highest peak, but India's highest peak is K2 (Godwin Austin)."
+  },
+  {
+   "id": "islandrock",
+   "text": "Andaman and Nicobar are volcanic rock; Lakshadweep is coral."
+  },
+  {
+   "id": "soils",
+   "text": "Northern Maidan has black soil; Southern Maidan has red soil."
+  }
+ ]
+}

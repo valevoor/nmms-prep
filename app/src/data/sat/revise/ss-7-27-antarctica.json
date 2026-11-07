@@ -1,0 +1,198 @@
+{
+ "chapter": "ss-7-27-antarctica",
+ "terms": [
+  {
+   "id": "white",
+   "term": "White Continent",
+   "meaning": "Antarctica, since about 98% of it is under ice; also called the Snow Desert or Cold Desert.",
+   "pages": [
+    166
+   ]
+  },
+  {
+   "id": "krill",
+   "term": "Krill",
+   "meaning": "A small shrimp-like sea animal that lives in large groups and feeds the bigger sea animals.",
+   "pages": [
+    168
+   ]
+  },
+  {
+   "id": "rookery",
+   "term": "Rookery",
+   "meaning": "The nest penguins build in rock hollows to breed.",
+   "pages": [
+    169
+   ]
+  },
+  {
+   "id": "science",
+   "term": "Continent of Science",
+   "meaning": "Antarctica, kept only for scientific research by the Antarctic Treaty.",
+   "pages": [
+    171
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "loc",
+   "title": "Location and features",
+   "items": [
+    {
+     "id": "where",
+     "name": "Location of Antarctica",
+     "formula": "Around the South Pole, mostly inside the Antarctic Circle (66°30' S).",
+     "example": "Cape Horn, 990 km away, is the nearest land.",
+     "pages": [
+      165,
+      166
+     ]
+    },
+    {
+     "id": "size",
+     "name": "Size of Antarctica",
+     "formula": "Fifth largest continent, 14.2 million sq km.",
+     "example": "Bigger than India and China, about one and a half times the USA.",
+     "pages": [
+      165
+     ]
+    },
+    {
+     "id": "ice",
+     "name": "Ice and height",
+     "formula": "Ice about 2300 m thick; average height about 2300 m, the highest continent.",
+     "example": "About 90% of the world's fresh water is stored here as ice.",
+     "pages": [
+      166,
+      167
+     ]
+    },
+    {
+     "id": "eastwest",
+     "name": "East and West Antarctica",
+     "formula": "The Trans-Antarctic range divides it. East (Greater Antarctica): over half, with the South Pole. West: towards the Pacific, much below sea level.",
+     "example": "The Ross Sea and Weddell Sea cut in at either end.",
+     "pages": [
+      167
+     ]
+    },
+    {
+     "id": "peaks",
+     "name": "Peaks and volcano",
+     "formula": "Vinson Massif (5140 m), in the Ellsworth Mountains, is the highest.",
+     "example": "Mt. Erebus on Ross Island is the most active volcano.",
+     "pages": [
+      167,
+      168
+     ]
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": "Life",
+   "items": [
+    {
+     "id": "plants",
+     "name": "Plants and light",
+     "formula": "Only mosses, algae and lichens on bare rock.",
+     "example": "Six months of sunshine and six months of darkness.",
+     "pages": [
+      168
+     ]
+    },
+    {
+     "id": "penguins",
+     "name": "Animals of Antarctica",
+     "formula": "Penguins (Adelie, Emperor, Chinstrap), whales, seals and seabirds live in and by the sea.",
+     "example": "Six species of seals; hunting endangers them.",
+     "pages": [
+      168
+     ]
+    },
+    {
+     "id": "vostok",
+     "name": "Coldest place on Earth",
+     "formula": "Vostok, near the South Pole: -89°C.",
+     "example": "Penguins can't fly.",
+     "pages": [
+      169
+     ]
+    }
+   ]
+  },
+  {
+   "id": "explore",
+   "title": "Exploration and treaty",
+   "items": [
+    {
+     "id": "ross",
+     "name": "Early explorers",
+     "formula": "James Clark Ross of Britain found the Ross Sea in 1841.",
+     "example": "Robert Falcon Scott crossed this sea.",
+     "pages": [
+      169
+     ]
+    },
+    {
+     "id": "amundsen",
+     "name": "Reaching the South Pole",
+     "formula": "The Norwegian Roald Amundsen reached it in 1911.",
+     "example": "Scott arrived about a month later in 1912 and died on the way back.",
+     "pages": [
+      170
+     ]
+    },
+    {
+     "id": "treaty",
+     "name": "Antarctic Treaty",
+     "formula": "Signed in Washington DC on 1 December 1959 by 12 nations; in force 23 June 1961; covers land south of 60°.",
+     "example": "Science only: no nuclear tests, no land claims, no pollution, no whaling.",
+     "pages": [
+      171
+     ]
+    }
+   ]
+  },
+  {
+   "id": "india",
+   "title": "India in Antarctica",
+   "items": [
+    {
+     "id": "firsttrip",
+     "name": "India's first expedition",
+     "formula": "Led by Dr. S. Z. Qasim; left Goa on 6 December 1981 and reached on 9 January 1982 aboard the Polar Circle.",
+     "example": "More than 30 nations have research stations there.",
+     "pages": [
+      172
+     ]
+    },
+    {
+     "id": "stations",
+     "name": "India's research stations",
+     "formula": "Dakshina Gangotri (built 1983, now a store); Maitri on the Schirmacher Oasis (1988-89), for 26 people.",
+     "example": "Near Maitri is the freshwater lake Priyadarshini; Bharati is for ocean research.",
+     "pages": [
+      172,
+      173
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "firstst",
+   "text": "Dakshina Gangotri was India's first station; Maitri is the second, still in use."
+  },
+  {
+   "id": "pole",
+   "text": "Amundsen reached the South Pole first (1911); Scott came second and died returning."
+  },
+  {
+   "id": "highest",
+   "text": "Antarctica is the highest continent on average, though it is only fifth largest."
+  }
+ ]
+}

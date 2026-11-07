@@ -113,6 +113,120 @@ import natureInHarmony8 from './sat/revise/sci-8-12-nature-in-harmony.json'
 import natureInHarmony8Kn from './sat/revise/sci-8-12-nature-in-harmony.kn.json'
 import earthLifeSustainingPlanet8 from './sat/revise/sci-8-13-earth-life-sustaining-planet.json'
 import earthLifeSustainingPlanet8Kn from './sat/revise/sci-8-13-earth-life-sustaining-planet.kn.json'
+import ss7_majorDevelopmentsWorld from './sat/revise/ss-7-01-major-developments-world.json'
+import ss7_majorDevelopmentsWorldKn from './sat/revise/ss-7-01-major-developments-world.kn.json'
+import ss7_medievalEurope from './sat/revise/ss-7-02-medieval-europe.json'
+import ss7_medievalEuropeKn from './sat/revise/ss-7-02-medieval-europe.kn.json'
+import ss7_adventOfEuropeans from './sat/revise/ss-7-03-advent-of-europeans.json'
+import ss7_adventOfEuropeansKn from './sat/revise/ss-7-03-advent-of-europeans.kn.json'
+import ss7_india18thCentury from './sat/revise/ss-7-04-india-18th-century.json'
+import ss7_india18thCenturyKn from './sat/revise/ss-7-04-india-18th-century.kn.json'
+import ss7_growthBritishSupremacy from './sat/revise/ss-7-05-growth-british-supremacy.json'
+import ss7_growthBritishSupremacyKn from './sat/revise/ss-7-05-growth-british-supremacy.kn.json'
+import ss7_impactBritishRule from './sat/revise/ss-7-06-impact-british-rule.json'
+import ss7_impactBritishRuleKn from './sat/revise/ss-7-06-impact-british-rule.kn.json'
+import ss7_mysorePrincelyStates from './sat/revise/ss-7-07-mysore-princely-states.json'
+import ss7_mysorePrincelyStatesKn from './sat/revise/ss-7-07-mysore-princely-states.kn.json'
+import ss7_bhakthiCultSufiHeritage from './sat/revise/ss-7-08-bhakthi-cult-sufi-heritage.json'
+import ss7_bhakthiCultSufiHeritageKn from './sat/revise/ss-7-08-bhakthi-cult-sufi-heritage.kn.json'
+import ss7_legislativeExecutiveJudicialTerms from './sat/revise/ss-7-09-legislative-executive-judicial-terms.json'
+import ss7_legislativeExecutiveJudicialTermsKn from './sat/revise/ss-7-09-legislative-executive-judicial-terms.kn.json'
+import ss7_unionGovernment from './sat/revise/ss-7-10-union-government.json'
+import ss7_unionGovernmentKn from './sat/revise/ss-7-10-union-government.kn.json'
+import ss7_stateGovernment from './sat/revise/ss-7-11-state-government.json'
+import ss7_stateGovernmentKn from './sat/revise/ss-7-11-state-government.kn.json'
+import ss7_physicalDivisionsIndia from './sat/revise/ss-7-12-physical-divisions-india.json'
+import ss7_physicalDivisionsIndiaKn from './sat/revise/ss-7-12-physical-divisions-india.kn.json'
+import ss7_northAmerica from './sat/revise/ss-7-13-north-america.json'
+import ss7_northAmericaKn from './sat/revise/ss-7-13-north-america.kn.json'
+import ss7_southAmerica from './sat/revise/ss-7-14-south-america.json'
+import ss7_southAmericaKn from './sat/revise/ss-7-14-south-america.kn.json'
+import ss7_socialReligiousReforms from './sat/revise/ss-7-15-social-religious-reforms.json'
+import ss7_socialReligiousReformsKn from './sat/revise/ss-7-15-social-religious-reforms.kn.json'
+import ss7_firstWarIndianIndependence from './sat/revise/ss-7-16-first-war-indian-independence.json'
+import ss7_firstWarIndianIndependenceKn from './sat/revise/ss-7-16-first-war-indian-independence.kn.json'
+import ss7_freedomMovement from './sat/revise/ss-7-17-freedom-movement.json'
+import ss7_freedomMovementKn from './sat/revise/ss-7-17-freedom-movement.kn.json'
+import ss7_unificationOfKarnataka from './sat/revise/ss-7-18-unification-of-karnataka.json'
+import ss7_unificationOfKarnatakaKn from './sat/revise/ss-7-18-unification-of-karnataka.kn.json'
+import ss7_proSocialMovementsKarnataka from './sat/revise/ss-7-19-pro-social-movements-karnataka.json'
+import ss7_proSocialMovementsKarnatakaKn from './sat/revise/ss-7-19-pro-social-movements-karnataka.kn.json'
+import ss7_karnatakaEconomicSocialTransformation from './sat/revise/ss-7-20-karnataka-economic-social-transformation.json'
+import ss7_karnatakaEconomicSocialTransformationKn from './sat/revise/ss-7-20-karnataka-economic-social-transformation.kn.json'
+import ss7_progressDifferentFields from './sat/revise/ss-7-21-progress-different-fields.json'
+import ss7_progressDifferentFieldsKn from './sat/revise/ss-7-21-progress-different-fields.kn.json'
+import ss7_judiciary from './sat/revise/ss-7-22-judiciary.json'
+import ss7_judiciaryKn from './sat/revise/ss-7-22-judiciary.kn.json'
+import ss7_defenceForces from './sat/revise/ss-7-23-defence-forces.json'
+import ss7_defenceForcesKn from './sat/revise/ss-7-23-defence-forces.kn.json'
+import ss7_indiaNeighbouringCountries from './sat/revise/ss-7-24-india-neighbouring-countries.json'
+import ss7_indiaNeighbouringCountriesKn from './sat/revise/ss-7-24-india-neighbouring-countries.kn.json'
+import ss7_unitedNationsOrganization from './sat/revise/ss-7-25-united-nations-organization.json'
+import ss7_unitedNationsOrganizationKn from './sat/revise/ss-7-25-united-nations-organization.kn.json'
+import ss7_australia from './sat/revise/ss-7-26-australia.json'
+import ss7_australiaKn from './sat/revise/ss-7-26-australia.kn.json'
+import ss7_antarctica from './sat/revise/ss-7-27-antarctica.json'
+import ss7_antarcticaKn from './sat/revise/ss-7-27-antarctica.kn.json'
+import ss8_sources from './sat/revise/ss-8-01-sources.json'
+import ss8_sourcesKn from './sat/revise/ss-8-01-sources.kn.json'
+import ss8_bharathavarshaPrehistoric from './sat/revise/ss-8-02-bharathavarsha-prehistoric.json'
+import ss8_bharathavarshaPrehistoricKn from './sat/revise/ss-8-02-bharathavarsha-prehistoric.kn.json'
+import ss8_sindhuSaraswatiVedic from './sat/revise/ss-8-03-sindhu-saraswati-vedic.json'
+import ss8_sindhuSaraswatiVedicKn from './sat/revise/ss-8-03-sindhu-saraswati-vedic.kn.json'
+import ss8_prominentWorldCivilizations from './sat/revise/ss-8-04-prominent-world-civilizations.json'
+import ss8_prominentWorldCivilizationsKn from './sat/revise/ss-8-04-prominent-world-civilizations.kn.json'
+import ss8_sanatanaDharma from './sat/revise/ss-8-05-sanatana-dharma.json'
+import ss8_sanatanaDharmaKn from './sat/revise/ss-8-05-sanatana-dharma.kn.json'
+import ss8_jainismBuddhism from './sat/revise/ss-8-06-jainism-buddhism.json'
+import ss8_jainismBuddhismKn from './sat/revise/ss-8-06-jainism-buddhism.kn.json'
+import ss8_meaningImportancePoliticalScience from './sat/revise/ss-8-07-meaning-importance-political-science.json'
+import ss8_meaningImportancePoliticalScienceKn from './sat/revise/ss-8-07-meaning-importance-political-science.kn.json'
+import ss8_citizenCitizenship from './sat/revise/ss-8-08-citizen-citizenship.json'
+import ss8_citizenCitizenshipKn from './sat/revise/ss-8-08-citizen-citizenship.kn.json'
+import ss8_manAndSociety from './sat/revise/ss-8-09-man-and-society.json'
+import ss8_manAndSocietyKn from './sat/revise/ss-8-09-man-and-society.kn.json'
+import ss8_manAndCulture from './sat/revise/ss-8-10-man-and-culture.json'
+import ss8_manAndCultureKn from './sat/revise/ss-8-10-man-and-culture.kn.json'
+import ss8_earthOurLivingPlanet from './sat/revise/ss-8-11-earth-our-living-planet.json'
+import ss8_earthOurLivingPlanetKn from './sat/revise/ss-8-11-earth-our-living-planet.kn.json'
+import ss8_lithosphere from './sat/revise/ss-8-12-lithosphere.json'
+import ss8_lithosphereKn from './sat/revise/ss-8-12-lithosphere.kn.json'
+import ss8_atmosphere from './sat/revise/ss-8-13-atmosphere.json'
+import ss8_atmosphereKn from './sat/revise/ss-8-13-atmosphere.kn.json'
+import ss8_meaningImportanceEconomics from './sat/revise/ss-8-14-meaning-importance-economics.json'
+import ss8_meaningImportanceEconomicsKn from './sat/revise/ss-8-14-meaning-importance-economics.kn.json'
+import ss8_meaningImportanceBusinessStudies from './sat/revise/ss-8-15-meaning-importance-business-studies.json'
+import ss8_meaningImportanceBusinessStudiesKn from './sat/revise/ss-8-15-meaning-importance-business-studies.kn.json'
+import ss8_mauryasKushans from './sat/revise/ss-8-16-mauryas-kushans.json'
+import ss8_mauryasKushansKn from './sat/revise/ss-8-16-mauryas-kushans.kn.json'
+import ss8_guptasVardhanas from './sat/revise/ss-8-17-guptas-vardhanas.json'
+import ss8_guptasVardhanasKn from './sat/revise/ss-8-17-guptas-vardhanas.kn.json'
+import ss8_shathavahanasKadambasGangas from './sat/revise/ss-8-18-shathavahanas-kadambas-gangas.json'
+import ss8_shathavahanasKadambasGangasKn from './sat/revise/ss-8-18-shathavahanas-kadambas-gangas.kn.json'
+import ss8_chalukyasBadamiPallavasKanchi from './sat/revise/ss-8-19-chalukyas-badami-pallavas-kanchi.json'
+import ss8_chalukyasBadamiPallavasKanchiKn from './sat/revise/ss-8-19-chalukyas-badami-pallavas-kanchi.kn.json'
+import ss8_rashtrakutasChalukyasKalyana from './sat/revise/ss-8-20-rashtrakutas-chalukyas-kalyana.json'
+import ss8_rashtrakutasChalukyasKalyanaKn from './sat/revise/ss-8-20-rashtrakutas-chalukyas-kalyana.kn.json'
+import ss8_cholasHoysalasDwarasamudra from './sat/revise/ss-8-21-cholas-hoysalas-dwarasamudra.json'
+import ss8_cholasHoysalasDwarasamudraKn from './sat/revise/ss-8-21-cholas-hoysalas-dwarasamudra.kn.json'
+import ss8_democracy from './sat/revise/ss-8-22-democracy.json'
+import ss8_democracyKn from './sat/revise/ss-8-22-democracy.kn.json'
+import ss8_localSelfGovernment from './sat/revise/ss-8-23-local-self-government.json'
+import ss8_localSelfGovernmentKn from './sat/revise/ss-8-23-local-self-government.kn.json'
+import ss8_sociologyDailyLife from './sat/revise/ss-8-24-sociology-daily-life.json'
+import ss8_sociologyDailyLifeKn from './sat/revise/ss-8-24-sociology-daily-life.kn.json'
+import ss8_kindsOfSocieties from './sat/revise/ss-8-25-kinds-of-societies.json'
+import ss8_kindsOfSocietiesKn from './sat/revise/ss-8-25-kinds-of-societies.kn.json'
+import ss8_hydrosphere from './sat/revise/ss-8-26-hydrosphere.json'
+import ss8_hydrosphereKn from './sat/revise/ss-8-26-hydrosphere.kn.json'
+import ss8_biosphere from './sat/revise/ss-8-27-biosphere.json'
+import ss8_biosphereKn from './sat/revise/ss-8-27-biosphere.kn.json'
+import ss8_basicConceptsEconomics from './sat/revise/ss-8-28-basic-concepts-economics.json'
+import ss8_basicConceptsEconomicsKn from './sat/revise/ss-8-28-basic-concepts-economics.kn.json'
+import ss8_emergenceBusinessOrganisations from './sat/revise/ss-8-29-emergence-business-organisations.json'
+import ss8_emergenceBusinessOrganisationsKn from './sat/revise/ss-8-29-emergence-business-organisations.kn.json'
+import ss8_largeScaleBusinessOrganisations from './sat/revise/ss-8-30-large-scale-business-organisations.json'
+import ss8_largeScaleBusinessOrganisationsKn from './sat/revise/ss-8-30-large-scale-business-organisations.kn.json'
 import type { SatChapter, SatTopic } from './sat'
 
 export interface RevisionTerm {
@@ -207,6 +321,63 @@ export const REVISIONS: { en: Revision; kn: RevisionKn }[] = [
   { en: keepingTimeSkies8, kn: keepingTimeSkies8Kn },
   { en: natureInHarmony8, kn: natureInHarmony8Kn },
   { en: earthLifeSustainingPlanet8, kn: earthLifeSustainingPlanet8Kn },
+  { en: ss7_majorDevelopmentsWorld, kn: ss7_majorDevelopmentsWorldKn },
+  { en: ss7_medievalEurope, kn: ss7_medievalEuropeKn },
+  { en: ss7_adventOfEuropeans, kn: ss7_adventOfEuropeansKn },
+  { en: ss7_india18thCentury, kn: ss7_india18thCenturyKn },
+  { en: ss7_growthBritishSupremacy, kn: ss7_growthBritishSupremacyKn },
+  { en: ss7_impactBritishRule, kn: ss7_impactBritishRuleKn },
+  { en: ss7_mysorePrincelyStates, kn: ss7_mysorePrincelyStatesKn },
+  { en: ss7_bhakthiCultSufiHeritage, kn: ss7_bhakthiCultSufiHeritageKn },
+  { en: ss7_legislativeExecutiveJudicialTerms, kn: ss7_legislativeExecutiveJudicialTermsKn },
+  { en: ss7_unionGovernment, kn: ss7_unionGovernmentKn },
+  { en: ss7_stateGovernment, kn: ss7_stateGovernmentKn },
+  { en: ss7_physicalDivisionsIndia, kn: ss7_physicalDivisionsIndiaKn },
+  { en: ss7_northAmerica, kn: ss7_northAmericaKn },
+  { en: ss7_southAmerica, kn: ss7_southAmericaKn },
+  { en: ss7_socialReligiousReforms, kn: ss7_socialReligiousReformsKn },
+  { en: ss7_firstWarIndianIndependence, kn: ss7_firstWarIndianIndependenceKn },
+  { en: ss7_freedomMovement, kn: ss7_freedomMovementKn },
+  { en: ss7_unificationOfKarnataka, kn: ss7_unificationOfKarnatakaKn },
+  { en: ss7_proSocialMovementsKarnataka, kn: ss7_proSocialMovementsKarnatakaKn },
+  { en: ss7_karnatakaEconomicSocialTransformation, kn: ss7_karnatakaEconomicSocialTransformationKn },
+  { en: ss7_progressDifferentFields, kn: ss7_progressDifferentFieldsKn },
+  { en: ss7_judiciary, kn: ss7_judiciaryKn },
+  { en: ss7_defenceForces, kn: ss7_defenceForcesKn },
+  { en: ss7_indiaNeighbouringCountries, kn: ss7_indiaNeighbouringCountriesKn },
+  { en: ss7_unitedNationsOrganization, kn: ss7_unitedNationsOrganizationKn },
+  { en: ss7_australia, kn: ss7_australiaKn },
+  { en: ss7_antarctica, kn: ss7_antarcticaKn },
+  { en: ss8_sources, kn: ss8_sourcesKn },
+  { en: ss8_bharathavarshaPrehistoric, kn: ss8_bharathavarshaPrehistoricKn },
+  { en: ss8_sindhuSaraswatiVedic, kn: ss8_sindhuSaraswatiVedicKn },
+  { en: ss8_prominentWorldCivilizations, kn: ss8_prominentWorldCivilizationsKn },
+  { en: ss8_sanatanaDharma, kn: ss8_sanatanaDharmaKn },
+  { en: ss8_jainismBuddhism, kn: ss8_jainismBuddhismKn },
+  { en: ss8_meaningImportancePoliticalScience, kn: ss8_meaningImportancePoliticalScienceKn },
+  { en: ss8_citizenCitizenship, kn: ss8_citizenCitizenshipKn },
+  { en: ss8_manAndSociety, kn: ss8_manAndSocietyKn },
+  { en: ss8_manAndCulture, kn: ss8_manAndCultureKn },
+  { en: ss8_earthOurLivingPlanet, kn: ss8_earthOurLivingPlanetKn },
+  { en: ss8_lithosphere, kn: ss8_lithosphereKn },
+  { en: ss8_atmosphere, kn: ss8_atmosphereKn },
+  { en: ss8_meaningImportanceEconomics, kn: ss8_meaningImportanceEconomicsKn },
+  { en: ss8_meaningImportanceBusinessStudies, kn: ss8_meaningImportanceBusinessStudiesKn },
+  { en: ss8_mauryasKushans, kn: ss8_mauryasKushansKn },
+  { en: ss8_guptasVardhanas, kn: ss8_guptasVardhanasKn },
+  { en: ss8_shathavahanasKadambasGangas, kn: ss8_shathavahanasKadambasGangasKn },
+  { en: ss8_chalukyasBadamiPallavasKanchi, kn: ss8_chalukyasBadamiPallavasKanchiKn },
+  { en: ss8_rashtrakutasChalukyasKalyana, kn: ss8_rashtrakutasChalukyasKalyanaKn },
+  { en: ss8_cholasHoysalasDwarasamudra, kn: ss8_cholasHoysalasDwarasamudraKn },
+  { en: ss8_democracy, kn: ss8_democracyKn },
+  { en: ss8_localSelfGovernment, kn: ss8_localSelfGovernmentKn },
+  { en: ss8_sociologyDailyLife, kn: ss8_sociologyDailyLifeKn },
+  { en: ss8_kindsOfSocieties, kn: ss8_kindsOfSocietiesKn },
+  { en: ss8_hydrosphere, kn: ss8_hydrosphereKn },
+  { en: ss8_biosphere, kn: ss8_biosphereKn },
+  { en: ss8_basicConceptsEconomics, kn: ss8_basicConceptsEconomicsKn },
+  { en: ss8_emergenceBusinessOrganisations, kn: ss8_emergenceBusinessOrganisationsKn },
+  { en: ss8_largeScaleBusinessOrganisations, kn: ss8_largeScaleBusinessOrganisationsKn },
 ]
 
 /** A sheet in the given language; Kannada that is missing falls back to English. */

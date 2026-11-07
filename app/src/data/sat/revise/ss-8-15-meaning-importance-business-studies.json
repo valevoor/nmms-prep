@@ -1,0 +1,228 @@
+{
+ "chapter": "ss-8-15-meaning-importance-business-studies",
+ "terms": [
+  {
+   "id": "business",
+   "term": "Business",
+   "meaning": "An economic activity of producing goods and services and getting them to consumers.",
+   "pages": [
+    114
+   ]
+  },
+  {
+   "id": "trade",
+   "term": "Trade",
+   "meaning": "The part of business concerned with buying and selling goods.",
+   "pages": [
+    115
+   ]
+  },
+  {
+   "id": "home",
+   "term": "Home trade",
+   "meaning": "Trade inside a country, through retailers and wholesalers.",
+   "pages": [
+    115
+   ]
+  },
+  {
+   "id": "entrepot",
+   "term": "Entrepot trade",
+   "meaning": "Buying from one country in order to sell to others. Singapore is the best example.",
+   "pages": [
+    118
+   ]
+  },
+  {
+   "id": "ethics",
+   "term": "Business ethics",
+   "meaning": "Honest, fair ways of doing business, with only a reasonable profit.",
+   "pages": [
+    121
+   ]
+  },
+  {
+   "id": "aids",
+   "term": "Aids to trade",
+   "meaning": "Services that remove obstacles between producer and consumer.",
+   "pages": [
+    120
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "aims",
+   "title": "Objectives",
+   "items": [
+    {
+     "id": "econobj",
+     "name": "Economic objectives",
+     "formula": "A reasonable profit that covers costs, and supplying what consumers need.",
+     "example": "It uses new techniques and tells people through advertisement.",
+     "pages": [
+      114
+     ]
+    },
+    {
+     "id": "socobj",
+     "name": "Social objectives",
+     "formula": "Jobs at fair wages, paying taxes, and welfare work.",
+     "example": "Starting schools, hospitals and public gardens.",
+     "pages": [
+      114
+     ]
+    }
+   ]
+  },
+  {
+   "id": "retail",
+   "title": "Trade inside the country",
+   "items": [
+    {
+     "id": "retailer",
+     "name": "Retailers",
+     "formula": "Buy from wholesalers and sell to consumers, as the last link.",
+     "example": "They also store goods, give credit and suggest alternatives.",
+     "pages": [
+      115
+     ]
+    },
+    {
+     "id": "hawker",
+     "name": "Hawkers and peddlers",
+     "formula": "Hawkers carry goods on their heads, usually one or two kinds. Peddlers use wheeled carts, with more kinds.",
+     "example": "Both sell at your door.",
+     "pages": [
+      116
+     ]
+    },
+    {
+     "id": "street",
+     "name": "Street traders and shandy sellers",
+     "formula": "Street traders sell on pavements. Shandy sellers come to weekly markets.",
+     "example": "Villagers bring what they grow and buy their needs with the money.",
+     "pages": [
+      116,
+      117
+     ]
+    },
+    {
+     "id": "whole",
+     "name": "Wholesalers",
+     "formula": "Buy in large quantities from producers and sell in small quantities to retailers.",
+     "example": "They give credit, storage and market news.",
+     "pages": [
+      117
+     ]
+    }
+   ]
+  },
+  {
+   "id": "foreign",
+   "title": "Foreign trade",
+   "items": [
+    {
+     "id": "three",
+     "name": "Three types of foreign trade",
+     "formula": "Import: buying from other countries. Export: selling to them. Entrepot: buying in order to resell.",
+     "example": "Singapore and Middle East countries do entrepot trade.",
+     "pages": [
+      118
+     ]
+    },
+    {
+     "id": "need",
+     "name": "Why countries need foreign trade",
+     "formula": "No country has all natural resources.",
+     "example": "Those with extra export and those short of something import.",
+     "pages": [
+      118
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ind",
+   "title": "Industries",
+   "items": [
+    {
+     "id": "genetic",
+     "name": "Primary industries",
+     "formula": "Genetic: raising crops and animals (dairy, poultry). Extractive: taking materials from the earth (mining, oil).",
+     "example": "They use natural resources.",
+     "pages": [
+      119
+     ]
+    },
+    {
+     "id": "secondary",
+     "name": "Secondary industries",
+     "formula": "Manufacturing: raw material to finished goods (sugarcane to sugar). Construction: roads, canals and bridges.",
+     "example": "They depend on labour.",
+     "pages": [
+      119
+     ]
+    },
+    {
+     "id": "cottage",
+     "name": "Cottage and small scale industries",
+     "formula": "Cottage: at home with family, for local markets (pottery, carpentry). Small scale: in sheds, with power and machines.",
+     "example": "Small scale goods: soaps, fans, bicycles.",
+     "pages": [
+      119,
+      120
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aidsg",
+   "title": "Aids to trade and fair practice",
+   "items": [
+    {
+     "id": "hind",
+     "name": "Which service removes which hindrance",
+     "formula": "Place: transport. Finance: banks. Loss: insurance. Time: storage. Knowledge: advertisement.",
+     "example": "Warehouses with cold storage solve the time problem.",
+     "pages": [
+      120,
+      121
+     ]
+    },
+    {
+     "id": "bad",
+     "name": "Unethical business practices",
+     "formula": "Adulteration, overcharging, false weights, hoarding and black marketing.",
+     "example": "They make people suffer and should be avoided.",
+     "pages": [
+      121
+     ]
+    },
+    {
+     "id": "govt",
+     "name": "Government steps for fair business",
+     "formula": "Public Distribution System, Bureau of Indian Standards, ISI and AGMARK marks.",
+     "example": "Also Janatha bazaars, co-operative societies and printing the MRP.",
+     "pages": [
+      121
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "profit",
+   "text": "The aim of business isn't just profit: it is reasonable profit plus social objectives."
+  },
+  {
+   "id": "exim",
+   "text": "Import is buying and export is selling. In entrepot trade the goods are bought to be sold abroad again."
+  },
+  {
+   "id": "gene",
+   "text": "Genetic industries grow living things and can renew them. Extractive ones can't be renewed."
+  }
+ ]
+}

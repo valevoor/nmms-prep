@@ -52,8 +52,9 @@ export default defineConfig({
         clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,svg,png,json}'],
         // The past papers are bundled into the app script, which passed the default 2 MiB with the fourth
-        // paper. Anything over the limit is left out of the offline cache, so keep it above the script's size.
-        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+        // paper, and 4 MiB with the social science revision sheets. Anything over the limit is left out of the
+        // offline cache, so keep it above the script's size.
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         // The talk deck at /slides/ is added after the build; don't answer it with the app's index.html.
         navigateFallbackDenylist: [/\/slides\//],
       },

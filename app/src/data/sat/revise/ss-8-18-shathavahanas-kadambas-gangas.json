@@ -1,0 +1,182 @@
+{
+ "chapter": "ss-8-18-shathavahanas-kadambas-gangas",
+ "terms": [
+  {
+   "id": "deccan",
+   "term": "Deccan",
+   "meaning": "South India: the land from the Vindhya mountains to Kanyakumari.",
+   "pages": [
+    14
+   ]
+  },
+  {
+   "id": "agrahara",
+   "term": "Agrahara",
+   "meaning": "A centre of learning like a residential school. Talagunda and Balligave had the main ones.",
+   "pages": [
+    18
+   ]
+  },
+  {
+   "id": "manastambha",
+   "term": "Manastambha",
+   "meaning": "A tall pillar, a special contribution of the Gangas.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "mahamastaka",
+   "term": "Mahamastakabhisheka",
+   "meaning": "The ceremony for Gommateshwara at Shravanabelagola, held once every 12 years.",
+   "pages": [
+    19
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "shat",
+   "title": "The Shatavahanas (230 B.C.E. to 220 C.E.)",
+   "items": [
+    {
+     "id": "simukha",
+     "name": "Beginning of the Shatavahanas",
+     "formula": "First dynasty of the Deccan, between the Godavari and Krishna; once vassals of Chandragupta Maurya.",
+     "example": "Simukha became independent and made Srikakulam his capital.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "gautami",
+     "name": "Gautami Puthra Shatakarni",
+     "formula": "The greatest Shatavahana; drove out the Sakas and is linked to the Shalivahana Saka.",
+     "example": "Title: Trisamudratoyapitavahana. Yajnashri Shatakarni was the last king.",
+     "pages": [
+      14,
+      15
+     ]
+    },
+    {
+     "id": "shatsoc",
+     "name": "Shatavahana society and culture",
+     "formula": "No varna discrimination, women in high posts, trade at Nasik, Kalyan, Broach and Bhatkal.",
+     "example": "Hala wrote Gathasaptashati in Prakrit; Ajanta and Amaravati paintings date from this time.",
+     "pages": [
+      15
+     ]
+    },
+    {
+     "id": "karle",
+     "name": "The chaitya at Karle",
+     "formula": "Built by Bhootapala, a merchant of Banavasi.",
+     "example": "Shatavahanas followed the Vedic tradition but supported Buddhism and Jainism.",
+     "pages": [
+      15
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kad",
+   "title": "The Kadambas (325 C.E. to 540 C.E.)",
+   "items": [
+    {
+     "id": "mayura",
+     "name": "Mayuravarma",
+     "formula": "Insulted by the Pallava king Shivaskanda Varma, Mayurasharma took up arms and founded the Kadamba kingdom.",
+     "example": "First dynasty of Karnataka, with capital Banavasi (North Canara).",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "kadinsc",
+     "name": "Kadamba-era inscriptions",
+     "formula": "Halmidi: first Kannada inscription (5th century). Talagunda: first Sanskrit inscription in Karnataka. Malavalli: Prakrit.",
+     "example": "The Chandravalli inscription says Mayuravarma raised the Chandravathi lake wall.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "kadcult",
+     "name": "Kadamba contributions",
+     "formula": "About 300 years of political unity; foundation of Karnataka architecture at Banavasi.",
+     "example": "Court language first Prakrit, later Sanskrit; Kannada was the people's language.",
+     "pages": [
+      17,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ganga",
+   "title": "The Gangas (350 C.E. to 1004 C.E.)",
+   "items": [
+    {
+     "id": "gcapitals",
+     "name": "Ganga capitals",
+     "formula": "Kuvalala (Kolar), Talakadu and Manyapura (Manne).",
+     "example": "Gangawadi began with Dadiga and had 27 kings.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "durvinita",
+     "name": "Durvinita",
+     "formula": "The famous Ganga king: built irrigation lakes (Nallala inscription).",
+     "example": "He wrote Shabdavatara and translated Gunadhya's Vaddakathe into Sanskrit.",
+     "pages": [
+      18,
+      21
+     ]
+    },
+    {
+     "id": "gomata",
+     "name": "Gommateshwara at Shravanabelagola",
+     "formula": "A 58 foot monolith set up by Chavundaraya, minister of Rachamalla IV.",
+     "example": "Bahubali, youngest of 100 brothers, gave up the kingdom he had won from Bharata.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "gtemples",
+     "name": "Ganga temples",
+     "formula": "Kapileshwara at Manne, Pataleshwara and Maruleshwara at Talakad, Kolaramma at Kolar.",
+     "example": "Also the Nageshwara temple at Begur.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "glit",
+     "name": "Ganga-era books",
+     "formula": "Sree Purusha: Gajashastra. Shivamara II: Gajashtaka. Chavundaraya: Chavunda Purana.",
+     "example": "Nemichandra: Dravyasara Samgraha. Hemasena: Raghava Pandaviya.",
+     "pages": [
+      21
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "first",
+   "text": "The Shatavahanas were the first in the Deccan, but the Kadambas were the first dynasty of Karnataka."
+  },
+  {
+   "id": "chavunda",
+   "text": "Chavundaraya installed Gommateshwara as a minister; he was not the king."
+  },
+  {
+   "id": "talag",
+   "text": "Halmidi is the first Kannada inscription; Talagunda is the first Sanskrit one in Karnataka."
+  }
+ ]
+}

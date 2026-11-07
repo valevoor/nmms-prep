@@ -1,0 +1,232 @@
+{
+ "chapter": "ss-8-01-sources",
+ "terms": [
+  {
+   "id": "source",
+   "term": "Source of history",
+   "meaning": "The basic material historians use to build an account of the past, such as tools, coins, buildings and writings.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "literary",
+   "term": "Literary sources",
+   "meaning": "Written works from a period. They are of two kinds: native and foreign.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "arch",
+   "term": "Archaeological sources",
+   "meaning": "Physical remains found by research and digging: inscriptions, coins, monuments, pots and other ruins.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "numis",
+   "term": "Numismatics",
+   "meaning": "The study of how coins began and developed.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "monument",
+   "term": "Monument",
+   "meaning": "A surviving building that shows our cultural heritage, such as a temple, stupa, palace or fort.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "excav",
+   "term": "Excavation",
+   "meaning": "Digging out buried remains using scientific methods.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "oral",
+   "term": "Oral sources",
+   "meaning": "Poems, songs and ballads passed down by word of mouth. They help us know local history.",
+   "pages": [
+    5
+   ]
+  },
+  {
+   "id": "sthala",
+   "term": "Sthala-Purana",
+   "meaning": "A legend about a place, usually a religious one. It shows beliefs more than direct history.",
+   "pages": [
+    6
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "lit",
+   "title": "Literary sources",
+   "items": [
+    {
+     "id": "native",
+     "name": "Native literature",
+     "formula": "Written by Indians, in any Indian language with a written form.",
+     "example": "Kautilya: Arthashastra. Kalhana: Rajatarangini. Banabhatta: Harsha Charitha. Pampa: Vikramarjuna Vijaya.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "native2",
+     "name": "More native works and their authors",
+     "formula": "Ashwaghosha: Buddha Charita. Vishakadatta: Mudrarakshasa. Hala: Gathasaptashati.",
+     "example": "Srivijaya: Kavirajamarga. Chand Bardayi: Prithviraja Raso.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "foreign",
+     "name": "Foreign literature",
+     "formula": "Written by foreign writers, travellers and scholars.",
+     "example": "Megasthenes: Indica. Huien Tsang: Si-Yu-Ki. Fa-Hien: Gho-Kho-Ki. Ptolemy: Geography.",
+     "pages": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "foreign2",
+     "name": "Foreign sources on Sri Lanka and Vijayanagara",
+     "formula": "Ceylon gives us Deepavamsha and Mahavamsha.",
+     "example": "Nuniz, Barbosa and Nicolo Conti wrote about the Vijayanagar Empire.",
+     "pages": [
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "archg",
+   "title": "Archaeological sources",
+   "items": [
+    {
+     "id": "insc",
+     "name": "What inscriptions tell us",
+     "formula": "Religion, culture, economy and administration of their time.",
+     "example": "The earliest in India are Emperor Ashoka's, on rocks and stone pillars.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "ashoka",
+     "name": "Ashoka's inscriptions",
+     "formula": "Mostly in Brahmi and Kharoshti scripts, in the Prakrit language. Some are in Greek and Aramaic.",
+     "example": "In Karnataka they were found at Maski and Brahmagiri.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "halmidi",
+     "name": "First Kannada inscription",
+     "formula": "The Halmidi Inscription.",
+     "example": "It belongs to the reign of Kakutsavarma of the Kadamba dynasty.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "famous",
+     "name": "Other inscriptions and their kings",
+     "formula": "Allahabad Pillar: Samudra Gupta. Aihole: Pulikeshi II. Hathigumpa: Kharavela.",
+     "example": "Uttarameruru belongs to the Cholas.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "coins",
+     "name": "What coins tell us",
+     "formula": "They show the king's power, and also the religion, culture and economy of the time.",
+     "example": "Samudra Gupta issued 7 types of gold coins.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "roman",
+     "name": "Roman coins in Bengaluru",
+     "formula": "They prove this region traded with the Romans.",
+     "example": "That trade was about 2000 years ago.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "tech",
+     "name": "Monuments that show science and technology",
+     "formula": "Mehrauli's Iron Pillar and the Whispering Gallery of Gol Gumbaz.",
+     "example": "Gol Gumbaz is at Vijayapura.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "digs",
+     "name": "What excavations revealed",
+     "formula": "Bhimbetka and Sanganakallu: Stone Age culture.",
+     "example": "Harappa and Mohenjodaro: the Indus Valley Civilization.",
+     "pages": [
+      4,
+      5
+     ]
+    },
+    {
+     "id": "c14",
+     "name": "Carbon-14 dating",
+     "formula": "Used only on remains of living things. After death C-12 stays constant while C-14 falls, halving in 5700 years.",
+     "example": "After 11400 years, a quarter of the C-14 is left.",
+     "pages": [
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oralg",
+   "title": "Oral sources and legends",
+   "items": [
+    {
+     "id": "oralpeople",
+     "name": "People remembered in oral literature",
+     "formula": "The Nayakas of Chitradurga, Kempegowda, Tippu Sultan, Sangolli Rayanna and Kitturu Rani Chennamma.",
+     "example": "Tribes and communities without writing kept their experiences this way.",
+     "pages": [
+      5
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "halfc",
+   "text": "C-14 dating does not work on stone or metal, because it is only for remains of things that once lived."
+  },
+  {
+   "id": "coinsarch",
+   "text": "Coins and inscriptions are archaeological sources even though they carry writing. Literary sources are written works."
+  },
+  {
+   "id": "legend",
+   "text": "A Sthala-Purana is not direct history. It shows what people believed about a place."
+  }
+ ]
+}

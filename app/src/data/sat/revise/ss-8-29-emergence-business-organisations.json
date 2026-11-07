@@ -1,0 +1,176 @@
+{
+ "chapter": "ss-8-29-emergence-business-organisations",
+ "terms": [
+  {
+   "id": "sole",
+   "term": "Sole trading concern",
+   "meaning": "A business owned and run by one person, who takes all profit and all loss.",
+   "pages": [
+    90
+   ]
+  },
+  {
+   "id": "partnership",
+   "term": "Partnership firm",
+   "meaning": "Two or more people sharing the profits of a business run by all or any of them for all.",
+   "pages": [
+    91
+   ]
+  },
+  {
+   "id": "deed",
+   "term": "Partnership deed",
+   "meaning": "The written, stamped agreement signed by all partners, with the firm's terms.",
+   "pages": [
+    92
+   ]
+  },
+  {
+   "id": "huf",
+   "term": "Hindu undivided family business",
+   "meaning": "A family firm of male members descended from a common ancestor, found only in India.",
+   "pages": [
+    94
+   ]
+  },
+  {
+   "id": "karta",
+   "term": "Karta",
+   "meaning": "The eldest member who manages a Hindu undivided family business; his liability is unlimited.",
+   "pages": [
+    94
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "kinds",
+   "title": "Kinds of business organisation",
+   "items": [
+    {
+     "id": "four",
+     "name": "Four kinds of business organisation",
+     "formula": "Private sector, public sector, joint sector and public utilities.",
+     "example": "Small private ones: sole trading, partnership and Hindu undivided family.",
+     "pages": [
+      90
+     ]
+    }
+   ]
+  },
+  {
+   "id": "soleg",
+   "title": "Sole trading",
+   "items": [
+    {
+     "id": "soleplus",
+     "name": "Merits of sole trading",
+     "formula": "No legal formalities, own capital, direct contact with customers.",
+     "example": "The owner keeps all the profit.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "soleminus",
+     "name": "Demerits of sole trading",
+     "formula": "Limited capital and skill; one person bears all losses.",
+     "example": "It may close on the owner's death or insolvency.",
+     "pages": [
+      91
+     ]
+    }
+   ]
+  },
+  {
+   "id": "part",
+   "title": "Partnership",
+   "items": [
+    {
+     "id": "act",
+     "name": "Partnership Act",
+     "formula": "Passed in 1932; section 4 defines a partnership.",
+     "example": "Up to 10 partners in financial business, 20 in general business.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "active",
+     "name": "Active and sleeping partners",
+     "formula": "Active: put in capital and run the business. Sleeping: put in capital but don't take part.",
+     "example": "Both share profit and loss by their capital.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "nominal",
+     "name": "Nominal and minor partners",
+     "formula": "Nominal: no capital, no work, no profit, but liable for losses. Minor: under 18, gets profit but not losses.",
+     "example": "A minor can join only by all partners' agreement.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "pplus",
+     "name": "Merits of partnership",
+     "formula": "Easy to form, more capital, division of work, losses shared.",
+     "example": "It can be dissolved with fourteen days' notice.",
+     "pages": [
+      93
+     ]
+    },
+    {
+     "id": "pminus",
+     "name": "Demerits of partnership",
+     "formula": "Disputes, unlimited liability, little stability, shares hard to transfer.",
+     "example": "A partner's death or insolvency may end the firm.",
+     "pages": [
+      93,
+      94
+     ]
+    },
+    {
+     "id": "reg",
+     "name": "Registering a partnership",
+     "formula": "Optional; done with the Registrar of Firms, who issues a Certificate of Registration.",
+     "example": "Only a registered firm can sue third parties for loans above Rs. 100.",
+     "pages": [
+      94
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hufg",
+   "title": "Hindu undivided family",
+   "items": [
+    {
+     "id": "generations",
+     "name": "Who has a birth right in HUF property",
+     "formula": "Male members of three successive generations after the holder: sons, grandsons and great grandsons.",
+     "example": "Other members' liability is limited to their share.",
+     "pages": [
+      94
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "regopt",
+   "text": "Registering a partnership is not compulsory; sole trading concerns can't be registered at all."
+  },
+  {
+   "id": "nominalp",
+   "text": "A nominal partner gets no profit but is still liable for losses."
+  },
+  {
+   "id": "max",
+   "text": "The partner limit is 10 for financial (banking) business and 20 for general business."
+  }
+ ]
+}

@@ -1,0 +1,306 @@
+{
+ "chapter": "ss-8-12-lithosphere",
+ "terms": [
+  {
+   "id": "litho",
+   "term": "Lithosphere",
+   "meaning": "The outermost solid layer of the Earth (\"litho\" means rock), thick under continents and thin under the sea.",
+   "pages": [
+    79
+   ]
+  },
+  {
+   "id": "magmalava",
+   "term": "Magma and lava",
+   "meaning": "Molten rock is magma while underground, and lava once it comes out.",
+   "pages": [
+    82
+   ]
+  },
+  {
+   "id": "vent",
+   "term": "Vent, crater and caldera",
+   "meaning": "Vent: passage for magma. Crater: funnel-shaped hollow on top. Caldera: large basin-shaped crater with steep sides.",
+   "pages": [
+    84
+   ]
+  },
+  {
+   "id": "focus",
+   "term": "Focus and epicentre",
+   "meaning": "Focus: where an earthquake starts inside the crust. Epicentre: the point on the surface straight above it.",
+   "pages": [
+    85
+   ]
+  },
+  {
+   "id": "seismo",
+   "term": "Seismology",
+   "meaning": "The study of earthquakes. A Seismograph records the waves.",
+   "pages": [
+    85
+   ]
+  },
+  {
+   "id": "tsunami",
+   "term": "Tsunami",
+   "meaning": "A large sea wave caused by an underwater earthquake. The Japanese word means harbour waves.",
+   "pages": [
+    86
+   ]
+  },
+  {
+   "id": "weather",
+   "term": "Weathering",
+   "meaning": "The breaking down of rocks by temperature, rain, wind and other agents.",
+   "pages": [
+    87
+   ]
+  },
+  {
+   "id": "denude",
+   "term": "Denudation",
+   "meaning": "Changing the land's surface by rivers, glaciers, groundwater, wind and sea waves.",
+   "pages": [
+    88
+   ]
+  },
+  {
+   "id": "aquifer",
+   "term": "Aquifer",
+   "meaning": "A porous rock bed that holds a lot of underground water.",
+   "pages": [
+    91
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "layers",
+   "title": "Earth's layers",
+   "items": [
+    {
+     "id": "age",
+     "name": "Age and heat of the Earth",
+     "formula": "More than 4.6 billion years old.",
+     "example": "Going down, it gets 1°C hotter every 32 metres, so we have reached only 10 to 12 km.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "crust",
+     "name": "The Crust",
+     "formula": "Top layer, about 60 km deep. Upper part SIAL (silica, aluminium): continental. Lower part SIMA (silica, magnesium): oceanic.",
+     "example": "Lighter materials are on top.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "mantle",
+     "name": "The Mantle",
+     "formula": "Middle layer, down to 2900 km, with semi-molten magma.",
+     "example": "The Moho separates crust and mantle; Gutenberg separates mantle and core.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "core",
+     "name": "The Core",
+     "formula": "Innermost layer, down to 6371 km, called NIFE (nickel and iron).",
+     "example": "The outer core is molten and the inner core is solid.",
+     "pages": [
+      80
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rocks",
+   "title": "Rocks",
+   "items": [
+    {
+     "id": "igneous",
+     "name": "Igneous (primary) rocks",
+     "formula": "Formed by cooling of molten matter; the first rocks.",
+     "example": "\"Igneous\" comes from Latin Ignis and Sanskrit Agni, meaning fire.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "intr",
+     "name": "Intrusive and extrusive igneous rocks",
+     "formula": "Intrusive: cool slowly underground, large crystals (granite). Extrusive: cool fast on the surface, fine or glassy (basalt).",
+     "example": "Same magma, but where it cools changes the crystals.",
+     "pages": [
+      82
+     ]
+    },
+    {
+     "id": "sedim",
+     "name": "Sedimentary (secondary) rocks",
+     "formula": "Broken pieces carried by water, wind or ice, laid down in layers.",
+     "example": "Also called stratified or aqueous rocks.",
+     "pages": [
+      82
+     ]
+    },
+    {
+     "id": "sedkinds",
+     "name": "Three kinds of sedimentary rock",
+     "formula": "Mechanical: sandstone, shale. Chemical: rock salt, gypsum. Organic: limestone, coal.",
+     "example": "Rock salt forms when salty water evaporates.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "meta",
+     "name": "Metamorphic rocks and what they come from",
+     "formula": "Heat and pressure change old rock. Granite → Gneiss, Basalt → Schist, Limestone → Marble.",
+     "example": "Also Sandstone → Quartzite and Coal → Graphite → Diamond. They are the hardest rocks.",
+     "pages": [
+      83
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inner",
+   "title": "Internal forces",
+   "items": [
+    {
+     "id": "volc",
+     "name": "Types of volcano",
+     "formula": "Active: Stromboli, Etna. Dormant: Vesuvius, Fujiyama, Kilimanjaro. Extinct: Aconcagua, Arthur's Seat.",
+     "example": "There are about 1350 active volcanoes in the world.",
+     "pages": [
+      84
+     ]
+    },
+    {
+     "id": "ring",
+     "name": "Pacific Ring of Fire",
+     "formula": "The Circum-Pacific Belt, around the Pacific's edges, with the largest volcanoes.",
+     "example": "Others: the Mid-Atlantic Belt and the Mid-Continental Belt.",
+     "pages": [
+      85
+     ]
+    },
+    {
+     "id": "quake",
+     "name": "Causes of earthquakes",
+     "formula": "Moving plates, volcanoes, faulting and human actions such as big dams and mines.",
+     "example": "Koyna dam in Maharashtra is the book's human-made example.",
+     "pages": [
+      85,
+      86
+     ]
+    },
+    {
+     "id": "waves",
+     "name": "Three earthquake waves",
+     "formula": "Primary: fastest, pass through all matter. Secondary: can't pass through liquids. Surface: slowest but most destructive.",
+     "example": "The Richter scale records magnitude.",
+     "pages": [
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "id": "outer",
+   "title": "External forces",
+   "items": [
+    {
+     "id": "wtypes",
+     "name": "Three types of weathering",
+     "formula": "Mechanical: broken with no chemical change. Chemical: rainwater changes the minerals. Biological: plants, animals and people.",
+     "example": "Chemical types: oxidation, carbonation, hydration, solution.",
+     "pages": [
+      87,
+      88
+     ]
+    },
+    {
+     "id": "river",
+     "name": "A river's three courses",
+     "formula": "Upper: erosion, V valleys, waterfalls. Middle: carrying, meanders. Lower: deposits, flood plains, deltas.",
+     "example": "The river's work is the Fluvial Cycle.",
+     "pages": [
+      89,
+      90
+     ]
+    },
+    {
+     "id": "rivterms",
+     "name": "Parts of a river system",
+     "formula": "Source: where it begins. Mouth: where it meets the sea. Tributary: a stream feeding it. Confluence: where they join.",
+     "example": "An estuary is a tidal mouth; a delta is a fan of deposits.",
+     "pages": [
+      89
+     ]
+    },
+    {
+     "id": "glacier",
+     "name": "Work of a glacier",
+     "formula": "Slow-moving ice. Erosion: cirque, horn, U valleys. Deposits: moraines.",
+     "example": "Moraines are lateral, medial, ground and terminal. The work is the Glacial Cycle.",
+     "pages": [
+      90,
+      91
+     ]
+    },
+    {
+     "id": "springs",
+     "name": "Springs, geysers and artesian wells",
+     "formula": "Perennial: always flowing. Intermittent: sometimes. Hot: warm water. Geyser: a jet (Old Faithful, USA).",
+     "example": "Artesian wells, common in Australia, come from a basin between non-porous rocks.",
+     "pages": [
+      91,
+      92
+     ]
+    },
+    {
+     "id": "karst",
+     "name": "Karst topography",
+     "formula": "Limestone landforms made by underground water: sinkholes, caves, stalactites and stalagmites.",
+     "example": "Limestone caves in India: Akalagavi (Ulavi), Belum and Bohra.",
+     "pages": [
+      92
+     ]
+    },
+    {
+     "id": "wind",
+     "name": "Work of wind and sea waves",
+     "formula": "Wind (Aeolian cycle): mushroom rocks, barchans, loess. Waves: cliffs, sea caves, stacks, beaches.",
+     "example": "The Loess plain of China is yellow soil.",
+     "pages": [
+      93
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "magma",
+   "text": "It is magma underground and lava only after it reaches the surface."
+  },
+  {
+   "id": "stal",
+   "text": "Stalactites hang from the roof; stalagmites rise from the floor."
+  },
+  {
+   "id": "epi",
+   "text": "The focus is underground. The epicentre is on the surface above it."
+  },
+  {
+   "id": "wfast",
+   "text": "Primary waves are fastest, but the slowest surface waves do the most damage."
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "chapter": "ss-7-25-united-nations-organization",
+ "terms": [
+  {
+   "id": "un",
+   "term": "United Nations (UN)",
+   "meaning": "The body of world nations set up on 24 October 1945 for lasting peace; first called UNO.",
+   "pages": [
+    136
+   ]
+  },
+  {
+   "id": "emblem",
+   "term": "UN emblem",
+   "meaning": "The continents with olive branches on two sides, standing for peace and friendship.",
+   "pages": [
+    135,
+    136
+   ]
+  },
+  {
+   "id": "veto",
+   "term": "Veto Power",
+   "meaning": "The power of any one permanent member to block a Security Council decision.",
+   "pages": [
+    138
+   ]
+  },
+  {
+   "id": "udhr",
+   "term": "Universal Declaration of Human Rights",
+   "meaning": "The UN's declaration of 10 December 1948.",
+   "pages": [
+    141
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "origin",
+   "title": "Origin and aims",
+   "items": [
+    {
+     "id": "ww2",
+     "name": "Why the UN was formed",
+     "formula": "World War II (1939-45) killed about four crore people.",
+     "example": "51 nations met at San Francisco, led by Roosevelt, Churchill and Stalin.",
+     "pages": [
+      135,
+      136
+     ]
+    },
+    {
+     "id": "aims",
+     "name": "Aims of the UN",
+     "formula": "Keep world peace and security, build friendly relations, solve economic and social problems together, respect human rights.",
+     "example": "24 October is UN Day.",
+     "pages": [
+      136
+     ]
+    }
+   ]
+  },
+  {
+   "id": "organs",
+   "title": "Main bodies",
+   "items": [
+    {
+     "id": "ga",
+     "name": "General Assembly",
+     "formula": "The UN's \"Parliament\": meets every September; each member has 5 representatives but one vote.",
+     "example": "There are 193 members (2022).",
+     "pages": [
+      137
+     ]
+    },
+    {
+     "id": "sc",
+     "name": "Security Council",
+     "formula": "15 members: 5 permanent (USA, Russia, Britain, France, China) and 10 elected for two years.",
+     "example": "A resolution needs nine votes and no permanent member's veto.",
+     "pages": [
+      137,
+      138
+     ]
+    },
+    {
+     "id": "ecosoc",
+     "name": "Economic and Social Council",
+     "formula": "Works on human rights, illiteracy, poverty, hunger, refugees, health and equality for women.",
+     "example": "It also covers child protection and drug control.",
+     "pages": [
+      138
+     ]
+    },
+    {
+     "id": "icj",
+     "name": "International Court of Justice",
+     "formula": "At The Hague in the Netherlands, with 15 judges elected by the General Assembly and Security Council.",
+     "example": "It settles disputes between member nations.",
+     "pages": [
+      138
+     ]
+    },
+    {
+     "id": "sg",
+     "name": "Secretariat and Secretary-General",
+     "formula": "The Secretary-General heads the Secretariat; at present Antonio Guterres (Portugal).",
+     "example": "The General Assembly chooses, with the Security Council's approval.",
+     "pages": [
+      138,
+      139
+     ]
+    },
+    {
+     "id": "trust",
+     "name": "Trusteeship Council",
+     "formula": "Formed with 5 members to protect 11 territories that weren't self-governing.",
+     "example": "All 11 became independent by 1994.",
+     "pages": [
+      139
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agencies",
+   "title": "Agencies, results and India",
+   "items": [
+    {
+     "id": "agencies",
+     "name": "UN agencies and their head offices",
+     "formula": "UNESCO: Paris. FAO: Rome. WHO: Geneva. UNICEF: New York.",
+     "example": "The UN flag is light blue with the emblem.",
+     "pages": [
+      140
+     ]
+    },
+    {
+     "id": "achieve",
+     "name": "Achievements of the UN",
+     "formula": "Aid to refugees and children, help for new nations, preventing another world war.",
+     "example": "Its limits: no army of its own, and the veto can block decisions.",
+     "pages": [
+      140,
+      141
+     ]
+    },
+    {
+     "id": "india",
+     "name": "India and the UN",
+     "formula": "A signatory of the 1945 Charter; against racism and colonialism; first to call for a nuclear test ban.",
+     "example": "Vijayalakshmi Pandit was the first woman to chair the UN; Nagendra Singh was Chief Justice of the ICJ.",
+     "pages": [
+      142
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "permanent",
+   "text": "India is not a permanent member of the Security Council; the five are USA, Russia, Britain, France and China."
+  },
+  {
+   "id": "parl",
+   "text": "The General Assembly is the UN's \"Parliament\"; the Security Council is like its executive."
+  },
+  {
+   "id": "nine",
+   "text": "Nine votes alone aren't enough: one permanent member's veto still blocks a resolution."
+  }
+ ]
+}

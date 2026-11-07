@@ -1,0 +1,239 @@
+{
+ "chapter": "ss-7-02-medieval-europe",
+ "terms": [
+  {
+   "id": "renaissance",
+   "term": "Renaissance",
+   "meaning": "\"Re-birth\" or \"revival\": the burst of new literature, art and science in Europe, about 1400-1600 C.E., starting in Italy.",
+   "pages": [
+    12
+   ]
+  },
+  {
+   "id": "humanism",
+   "term": "Humanism",
+   "meaning": "The belief that man plays the main role in the world and is God's greatest creation, not a sinner.",
+   "pages": [
+    13
+   ]
+  },
+  {
+   "id": "rationalism",
+   "term": "Rationalism",
+   "meaning": "Testing every idea by reason, without prejudice, and accepting it only if true.",
+   "pages": [
+    13
+   ]
+  },
+  {
+   "id": "protestant",
+   "term": "Protestant",
+   "meaning": "\"One who rebelled\": the Catholic Church's name for Luther's followers.",
+   "pages": [
+    23
+   ]
+  },
+  {
+   "id": "counter",
+   "term": "Counter Reformation",
+   "meaning": "The Catholic Church's effort to reform itself from within.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "colonisation",
+   "term": "Colonisation",
+   "meaning": "One country's political and economic control over another's territory.",
+   "pages": [
+    32
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "ren",
+   "title": "The Renaissance",
+   "items": [
+    {
+     "id": "ages",
+     "name": "Three ages of European history",
+     "formula": "Ancient: till about 500 C.E. Middle: about 500 to 1500 C.E. Modern: from about 1500 C.E.",
+     "example": "Renaissance, Reformation and Explorations mark the modern age.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "constant",
+     "name": "Fall of Constantinople",
+     "formula": "Turkish Sultan Mohammed II took it in 1453 C.E.; its scholars fled to Italy with Greek and Latin books.",
+     "example": "Constantinople is today's Istanbul.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "print",
+     "name": "Printing press",
+     "formula": "Gutenberg used movable type at Mainz around 1450 C.E.; Caxton set up a press in England in 1477.",
+     "example": "One person could print 24,000 copies a year instead of two books.",
+     "pages": [
+      15,
+      16
+     ]
+    },
+    {
+     "id": "writers",
+     "name": "Renaissance writers",
+     "formula": "Petrarch (sonnets), Dante (Divine Comedy), Boccaccio (Decameron), Cervantes (Don Quixote).",
+     "example": "Shakespeare: Julius Caesar, Romeo and Juliet, King Lear, Macbeth.",
+     "pages": [
+      16,
+      17
+     ]
+    },
+    {
+     "id": "art",
+     "name": "Renaissance art",
+     "formula": "Leonardo da Vinci: Mona Lisa, The Last Supper, Virgin on the Rocks. Michael Angelo: statue of Moses. Donatello: David.",
+     "example": "Churches: St. Peter's in Rome, St. Paul's in London, with round arches.",
+     "pages": [
+      18,
+      19
+     ]
+    },
+    {
+     "id": "science",
+     "name": "Renaissance science",
+     "formula": "Copernicus: the Earth goes round the Sun. Kepler proved him right. Galileo made the telescope.",
+     "example": "Newton explained gravity; Harvey found blood circulation.",
+     "pages": [
+      20,
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ref",
+   "title": "Religious Reformation",
+   "items": [
+    {
+     "id": "early",
+     "name": "Early reformers",
+     "formula": "John Wycliffe, the \"Morning Star of the Reformation\", at Oxford.",
+     "example": "John Hus refused to act against his conscience and was burnt alive.",
+     "pages": [
+      22
+     ]
+    },
+    {
+     "id": "luther",
+     "name": "Martin Luther",
+     "formula": "Opposed Pope Leo X's sale of indulgences; nailed 95 statements on the Wittenberg church door.",
+     "example": "He translated the Bible into German.",
+     "pages": [
+      22,
+      23
+     ]
+    },
+    {
+     "id": "loyola",
+     "name": "Ignatius Loyola",
+     "formula": "A Spanish general who led the Counter Reformation and founded the Society of Jesus in 1541 C.E.",
+     "example": "Its members, the Jesuits, spread education and health care.",
+     "pages": [
+      24
+     ]
+    }
+   ]
+  },
+  {
+   "id": "explore",
+   "title": "Geographical explorations",
+   "items": [
+    {
+     "id": "causes",
+     "name": "Causes of the explorations",
+     "formula": "Turks blocked trade at Constantinople; Marco Polo's reports of rich Asia; demand for spices.",
+     "example": "Compass, astrolabe and caravel ships made long voyages possible.",
+     "pages": [
+      25,
+      26
+     ]
+    },
+    {
+     "id": "diaz",
+     "name": "Prince Henry and Bartholomeo Diaz",
+     "formula": "Henry the Navigator founded a navigation school. Diaz reached Africa's southern tip in 1488.",
+     "example": "Diaz called it the Cape of Storms; King John II renamed it the Cape of Good Hope.",
+     "pages": [
+      28
+     ]
+    },
+    {
+     "id": "gama",
+     "name": "Vasco da Gama",
+     "formula": "Reached Calicut on India's west coast in 1498, via the Cape of Good Hope and Melindi.",
+     "example": "He actually landed at Kappad, about 10 km from Calicut, ruled by the Zamorins.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "columbus",
+     "name": "Christopher Columbus",
+     "formula": "Sailed west for Spain in August 1492 with 88 sailors; sighted land on 12 October 1492.",
+     "example": "He reached the Bahamas (West Indies), thought it was India and called the people Red Indians.",
+     "pages": [
+      29,
+      30
+     ]
+    },
+    {
+     "id": "america",
+     "name": "Brazil and the name America",
+     "formula": "Cabral reached Brazil by accident. Amerigo Vespucci called the land a New World.",
+     "example": "Geographer Waldseemüller named it America after Amerigo.",
+     "pages": [
+      30
+     ]
+    },
+    {
+     "id": "magellan",
+     "name": "Ferdinand Magellan",
+     "formula": "Left Spain in 1519 with 5 ships; crossed the Magellan Strait into the calm Pacific; killed in the Philippines.",
+     "example": "His ship Victoria returned in 1522: the first round-the-world voyage.",
+     "pages": [
+      30,
+      31
+     ]
+    },
+    {
+     "id": "effects",
+     "name": "Effects of the explorations",
+     "formula": "Global trade grew, Christianity spread, and Europeans competed for colonies.",
+     "example": "The cruel slave trade began in the West Indies, Mexico, Peru and Brazil.",
+     "pages": [
+      32
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "dates",
+   "text": "Order of voyages: Diaz 1488, Columbus 1492, Vasco da Gama 1498, Magellan 1519-1522."
+  },
+  {
+   "id": "magdied",
+   "text": "Magellan himself died in the Philippines; his crew finished the voyage on the Victoria."
+  },
+  {
+   "id": "colind",
+   "text": "Columbus never reached India: he reached the West Indies and didn't know it was a new land."
+  }
+ ]
+}

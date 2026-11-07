@@ -1,0 +1,182 @@
+{
+ "chapter": "ss-8-30-large-scale-business-organisations",
+ "terms": [
+  {
+   "id": "coop",
+   "term": "Co-operative society",
+   "meaning": "A voluntary body started by weaker sections to serve its members as equals.",
+   "pages": [
+    96
+   ]
+  },
+  {
+   "id": "jsc",
+   "term": "Joint stock company",
+   "meaning": "A business created by law, with a separate legal entity, perpetual succession and a common seal.",
+   "pages": [
+    98
+   ]
+  },
+  {
+   "id": "mnc",
+   "term": "Multinational corporation (MNC)",
+   "meaning": "A company that owns and runs business in two or more countries, controlled from one head office.",
+   "pages": [
+    99
+   ]
+  },
+  {
+   "id": "utility",
+   "term": "Public utility",
+   "meaning": "A government undertaking that gives essential services without aiming at profit, such as water or railways.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "stock",
+   "term": "Stock exchange",
+   "meaning": "A market where shares and debentures of listed companies are bought and sold.",
+   "pages": [
+    101
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "coopg",
+   "title": "Co-operative societies",
+   "items": [
+    {
+     "id": "first",
+     "name": "The first co-operative society",
+     "formula": "Started in 1844 at Rochdale in England, a consumer society; the book credits Robert Owen.",
+     "example": "Farmers' credit societies free them from moneylenders.",
+     "pages": [
+      96
+     ]
+    },
+    {
+     "id": "features",
+     "name": "Features of co-operative societies",
+     "formula": "Voluntary, open to all adults, one member one vote, government supervision.",
+     "example": "Profit shared, not less than 6.25%, with a part to the general fund.",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "cplus",
+     "name": "Merits and demerits of co-operatives",
+     "formula": "Merits: easy to form, little capital, limited liability, savings habit.",
+     "example": "Demerits: limited capital, mismanagement, corruption and favouritism.",
+     "pages": [
+      97,
+      98
+     ]
+    },
+    {
+     "id": "india",
+     "name": "Co-operative movement in India",
+     "formula": "Began with the Act of 1904; the 1912 Act made registration compulsory.",
+     "example": "About eight lakh societies today.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "karnataka",
+     "name": "Co-operatives in Karnataka",
+     "formula": "The first was at Kanaginahala in Gadag; Bengaluru City Central Co-operative society began in 1905.",
+     "example": "Dharwad district is called the cradle of the co-operative movement.",
+     "pages": [
+      98
+     ]
+    }
+   ]
+  },
+  {
+   "id": "companies",
+   "title": "Companies and MNCs",
+   "items": [
+    {
+     "id": "jscact",
+     "name": "Joint stock companies",
+     "formula": "Governed by the Companies Act of 1956; owned by shareholders in proportion to their shares.",
+     "example": "Haney: capital divided into transferable shares.",
+     "pages": [
+      98,
+      99
+     ]
+    },
+    {
+     "id": "mncfeat",
+     "name": "Features of MNCs",
+     "formula": "Very large, in at least six countries, central control, big role in international trade.",
+     "example": "Born as early as 1860, popular after the Second World War; first in the USA.",
+     "pages": [
+      99
+     ]
+    },
+    {
+     "id": "mncs",
+     "name": "Examples of MNCs",
+     "formula": "Sony (Japan), Coca-cola (USA), Samsung (South Korea), Philips (Holland).",
+     "example": "Indian MNCs: Tatas, Birla, Infosys, Wipro; many came after liberalisation in 1991.",
+     "pages": [
+      99,
+      101
+     ]
+    },
+    {
+     "id": "mncminus",
+     "name": "Disadvantages of MNCs",
+     "formula": "Home country takes most profit; monopoly, tax avoidance, exploiting labour in host countries.",
+     "example": "They may interfere in politics.",
+     "pages": [
+      100
+     ]
+    }
+   ]
+  },
+  {
+   "id": "public",
+   "title": "Public sector and stock markets",
+   "items": [
+    {
+     "id": "govt",
+     "name": "Government and joint sector undertakings",
+     "formula": "Government: run by a ministry (mining, ship building). Joint sector: public and government together (Gujarat Fertilizers, Cochin Refineries).",
+     "example": "Public utilities aim at service, not profit.",
+     "pages": [
+      101
+     ]
+    },
+    {
+     "id": "bse",
+     "name": "India's stock exchanges",
+     "formula": "The first was in Mumbai in 1875.",
+     "example": "All are controlled by SEBI.",
+     "pages": [
+      101,
+      102
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "vote",
+   "text": "In a co-operative each member has one vote however many shares they hold; in a company, ownership follows shares."
+  },
+  {
+   "id": "dharwad",
+   "text": "The first Karnataka co-operative was at Kanaginahala (Gadag), but Dharwad district is called the cradle of the movement."
+  },
+  {
+   "id": "profitpu",
+   "text": "Public utilities don't aim to earn profit, unlike companies."
+  }
+ ]
+}

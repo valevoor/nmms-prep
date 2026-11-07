@@ -1,0 +1,298 @@
+{
+ "chapter": "ss-8-13-atmosphere",
+ "terms": [
+  {
+   "id": "atm",
+   "term": "Atmosphere",
+   "meaning": "A layer of gases, dust and water vapour around the Earth, about 1000 km thick.",
+   "pages": [
+    96
+   ]
+  },
+  {
+   "id": "weather",
+   "term": "Weather and climate",
+   "meaning": "Weather: conditions of a place at one time. Climate: the average over a long period.",
+   "pages": [
+    98
+   ]
+  },
+  {
+   "id": "insol",
+   "term": "Insolation",
+   "meaning": "Incoming solar radiation from the Sun to the Earth.",
+   "pages": [
+    98
+   ]
+  },
+  {
+   "id": "isotherm",
+   "term": "Isotherm",
+   "meaning": "A line on a map joining places with the same temperature.",
+   "pages": [
+    99
+   ]
+  },
+  {
+   "id": "isobar",
+   "term": "Isobar",
+   "meaning": "A line on a map joining places with the same pressure.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "doldrum",
+   "term": "Doldrum",
+   "meaning": "The calm belt with little wind at the equator. Also called the ITCZ.",
+   "pages": [
+    100
+   ]
+  },
+  {
+   "id": "humid",
+   "term": "Humidity",
+   "meaning": "The amount of water vapour in the air. A hygrometer measures it.",
+   "pages": [
+    104
+   ]
+  },
+  {
+   "id": "rainshadow",
+   "term": "Rain shadow region",
+   "meaning": "The leeward side of a mountain, which gets little rain. Hassan is one, while Mangaluru is windward.",
+   "pages": [
+    106
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "comp",
+   "title": "Make-up and layers",
+   "items": [
+    {
+     "id": "gases",
+     "name": "Gases in the air",
+     "formula": "Nitrogen 78.08%, Oxygen 20.94%.",
+     "example": "The remaining 1% is mostly Argon (0.93%), with Carbon dioxide (0.03%).",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "tropo",
+     "name": "Troposphere",
+     "formula": "Lowest layer: up to 18 km at the equator and 8 km at the poles.",
+     "example": "All weather happens here.",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "strato",
+     "name": "Stratosphere",
+     "formula": "Up to 50 km. Ozone here absorbs the Sun's ultraviolet rays.",
+     "example": "No clouds, so it is ideal for jet aircraft.",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "meso",
+     "name": "Mesosphere",
+     "formula": "Up to 80 km, and the coldest layer.",
+     "example": "Temperature falls as you go up.",
+     "pages": [
+      97
+     ]
+    },
+    {
+     "id": "thermo",
+     "name": "Thermosphere and Exosphere",
+     "formula": "Thermosphere (Ionosphere): very hot, and its ions reflect radio waves. Exosphere: top layer, very thin.",
+     "example": "The five layers from the ground: Tropo, Strato, Meso, Thermo, Exo.",
+     "pages": [
+      97
+     ]
+    }
+   ]
+  },
+  {
+   "id": "temp",
+   "title": "Temperature",
+   "items": [
+    {
+     "id": "lapse",
+     "name": "Normal lapse rate",
+     "formula": "Temperature falls about 6.4°C for each 1 km of height.",
+     "example": "Climbing 3 km, it falls about 19.2°C.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "inversion",
+     "name": "Inversion of temperature",
+     "formula": "Temperature rises with height in some cases.",
+     "example": "Mountain valleys on long, clear, still winter nights over snow.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "zones",
+     "name": "Temperature zones",
+     "formula": "Torrid: 0° to 23°30'. Temperate: 23°30' to 66°30'. Frigid: 66°30' to 90°.",
+     "example": "Both north and south of the equator.",
+     "pages": [
+      98,
+      99
+     ]
+    },
+    {
+     "id": "extreme",
+     "name": "Hottest and coldest places",
+     "formula": "Hottest: Al Aziziya, Libya. Coldest: Vostok, Antarctica.",
+     "example": "In India: Ganganagar in Rajasthan and Leh in Ladakh.",
+     "pages": [
+      99
+     ]
+    }
+   ]
+  },
+  {
+   "id": "press",
+   "title": "Pressure and winds",
+   "items": [
+    {
+     "id": "bar",
+     "name": "Atmospheric pressure",
+     "formula": "Measured by a barometer in millibars; 1013.25 mb at sea level.",
+     "example": "It drops about 34 mb per 300 metres, and higher temperature gives lower pressure.",
+     "pages": [
+      99,
+      100
+     ]
+    },
+    {
+     "id": "belts",
+     "name": "Seven pressure belts",
+     "formula": "Equatorial low (0-5°), Sub-tropical high (30-35°), Sub-polar low (60-65°), Polar high (80-90°).",
+     "example": "All but the equatorial one come in a north and a south pair, giving 7.",
+     "pages": [
+      100,
+      101
+     ]
+    },
+    {
+     "id": "tools",
+     "name": "Wind instruments",
+     "formula": "Wind vane: direction. Anemometer: speed.",
+     "example": "Wind is the horizontal movement of air.",
+     "pages": [
+      101
+     ]
+    },
+    {
+     "id": "planetary",
+     "name": "Planetary winds",
+     "formula": "Trade: sub-tropical high to equator. Westerlies: sub-tropical high to sub-polar low. Polar: polar high to sub-polar low.",
+     "example": "Strong southern westerlies: Roaring Forties, Furious Fifties, Shrieking Sixties.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "monsoon",
+     "name": "India's monsoon winds",
+     "formula": "South-west: June to September. North-east: late September to mid-December.",
+     "example": "These are seasonal winds.",
+     "pages": [
+      102
+     ]
+    },
+    {
+     "id": "local",
+     "name": "Local wind names",
+     "formula": "Loo (India), Chinook (USA), Fohn (Alps), Mistral (France), Sirocco (Sahara).",
+     "example": "Also Brick Fielder (Australia) and Blizzard (Antarctica).",
+     "pages": [
+      103
+     ]
+    },
+    {
+     "id": "cyclone",
+     "name": "Cyclone and anti-cyclone",
+     "formula": "Cyclone: low at the centre, winds spiral in, anti-clockwise in the north. Anti-cyclone: high at the centre, winds blow out, clockwise in the north.",
+     "example": "Typhoon (Japan, China), Hurricane (USA, Mexico), Willy willies (Australia).",
+     "pages": [
+      103
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rain",
+   "title": "Humidity, clouds and rain",
+   "items": [
+    {
+     "id": "rh",
+     "name": "Relative humidity",
+     "formula": "Actual water vapour ÷ the most the air can hold × 100.",
+     "example": "If air holds 10 g and could hold 20 g, RH = 50%.",
+     "pages": [
+      104
+     ]
+    },
+    {
+     "id": "clouds",
+     "name": "Four cloud types",
+     "formula": "Stratus: low sheets, fair weather. Cumulus: cauliflower, rain. Cirrus: highest, feathery, fair. Nimbus: dark, heavy rain.",
+     "example": "Cirrus is called mare's tail; cumulus is called wool packs.",
+     "pages": [
+      104,
+      105
+     ]
+    },
+    {
+     "id": "rtypes",
+     "name": "Three types of rainfall",
+     "formula": "Convectional: heated air rises (\"afternoon rain\"). Orographic: a mountain forces air up. Cyclonic: air rises in a cyclone.",
+     "example": "Mangaluru gets orographic rain.",
+     "pages": [
+      105,
+      106
+     ]
+    },
+    {
+     "id": "records",
+     "name": "Rainfall records",
+     "formula": "Wettest: Mawsynram, 1140 cm a year. Driest: Atacama, Chile.",
+     "example": "Agumbe is the Cherrapunji of South India; Royli gets just 8.3 cm.",
+     "pages": [
+      107
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "ozone",
+   "text": "Ozone is in the stratosphere, but weather changes happen in the troposphere below it."
+  },
+  {
+   "id": "inverse",
+   "text": "High temperature means low pressure, because warm air expands. The two are inversely related."
+  },
+  {
+   "id": "cdir",
+   "text": "Cyclones turn anti-clockwise in the north and clockwise in the south. Anti-cyclones do the reverse."
+  },
+  {
+   "id": "meteo",
+   "text": "Meteorology studies weather, and Climatology studies climate."
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "chapter": "ss-8-11-earth-our-living-planet",
+ "terms": [
+  {
+   "id": "geoid",
+   "term": "Geoid",
+   "meaning": "\"Earth-shaped\": flattened at the poles and bulging at the equator. Also called an oblate spheroid.",
+   "pages": [
+    73
+   ]
+  },
+  {
+   "id": "grid",
+   "term": "Grid or graticule",
+   "meaning": "The network made where latitude and longitude lines cross at right angles.",
+   "pages": [
+    73
+   ]
+  },
+  {
+   "id": "latitude",
+   "term": "Latitude",
+   "meaning": "An imaginary line joining places at the same angular distance north or south of the equator.",
+   "pages": [
+    75
+   ]
+  },
+  {
+   "id": "longitude",
+   "term": "Longitude",
+   "meaning": "An imaginary line from pole to pole that crosses the equator at a right angle.",
+   "pages": [
+    75
+   ]
+  },
+  {
+   "id": "meridian",
+   "term": "Meridian",
+   "meaning": "Another name for longitude: \"meri\" (mid) and \"dian\" (day), as places on it share noon.",
+   "pages": [
+    75
+   ]
+  },
+  {
+   "id": "local",
+   "term": "Local time",
+   "meaning": "Time by the Sun's position at a place: 12 noon when the Sun is overhead there.",
+   "pages": [
+    76
+   ]
+  },
+  {
+   "id": "standard",
+   "term": "Standard time",
+   "meaning": "One uniform time for a whole country, from its central meridian.",
+   "pages": [
+    76
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "size",
+   "title": "The Earth",
+   "items": [
+    {
+     "id": "names",
+     "name": "Names of the Earth",
+     "formula": "Living Planet, Unique Planet, Watery Planet and Blue Planet.",
+     "example": "It is the third planet from the Sun and the fifth largest.",
+     "pages": [
+      72
+     ]
+    },
+    {
+     "id": "area",
+     "name": "Land and water on Earth",
+     "formula": "Total 510 million sq km: water 361 million (70.78%), land 149 million (29.22%).",
+     "example": "The land to water ratio is 1 : 2.43.",
+     "pages": [
+      72
+     ]
+    },
+    {
+     "id": "diam",
+     "name": "Earth's two diameters",
+     "formula": "Equator: 12756 km. Poles: 12714 km.",
+     "example": "The difference of 42 km is the proof that the Earth is a geoid.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "contin",
+     "name": "Continents",
+     "formula": "7: Asia, Africa, North America, South America, Antarctica, Europe and Australia.",
+     "example": "Asia is the largest and Australia the smallest.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "oceans",
+     "name": "Oceans",
+     "formula": "4: Pacific, Atlantic, Indian and Arctic.",
+     "example": "Pacific: largest and deepest. Arctic: smallest and shallowest.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "hemi",
+     "name": "Land and Water Hemispheres",
+     "formula": "North: 60% land, 40% water. South: 81% water, 19% land.",
+     "example": "That is why the North is the Land Hemisphere.",
+     "pages": [
+      73
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lat",
+   "title": "Latitudes",
+   "items": [
+    {
+     "id": "equator",
+     "name": "The equator",
+     "formula": "0° latitude, the longest line, called the Great Circle.",
+     "example": "Other latitudes get shorter away from it.",
+     "pages": [
+      75
+     ]
+    },
+    {
+     "id": "nlat",
+     "name": "Number of latitudes",
+     "formula": "90 on each side plus the equator makes 181.",
+     "example": "Two degrees of latitude are 110.4 km apart on the ground.",
+     "pages": [
+      75
+     ]
+    },
+    {
+     "id": "tropics",
+     "name": "Tropics of Cancer and Capricorn",
+     "formula": "Cancer: 23°30' North. Capricorn: 23°30' South.",
+     "example": "Both are the same distance from the equator.",
+     "pages": [
+      75
+     ]
+    },
+    {
+     "id": "circles",
+     "name": "Arctic and Antarctic Circles",
+     "formula": "Arctic: 66°30' North. Antarctic: 66°30' South.",
+     "example": "The poles are at 90° North and 90° South.",
+     "pages": [
+      75
+     ]
+    }
+   ]
+  },
+  {
+   "id": "long",
+   "title": "Longitudes and time",
+   "items": [
+    {
+     "id": "prime",
+     "name": "Prime Meridian",
+     "formula": "0° longitude, through Greenwich in England.",
+     "example": "180 lines east and 180 west make 360 longitudes.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "lengths",
+     "name": "How far apart longitudes are",
+     "formula": "111 km at the equator, less towards the poles, where they meet.",
+     "example": "All longitudes are the same length.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "timediff",
+     "name": "Time per degree of longitude",
+     "formula": "4 minutes for 1°, so 1 hour for 15°.",
+     "example": "360° × 4 minutes = 1440 minutes = 24 hours.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "ega",
+     "name": "East gains, West loses",
+     "formula": "East of Greenwich add the time; west of it subtract.",
+     "example": "At 12 noon GMT, a place 30° East of Greenwich has 2 pm.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "ist",
+     "name": "Indian Standard Time",
+     "formula": "Based on 82°30' East, which passes through Prayagraj.",
+     "example": "82.5 × 4 = 330 minutes, so IST is 5 hours 30 minutes ahead of GMT.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "zones",
+     "name": "Time zones",
+     "formula": "The globe has 24, each 1 hour apart.",
+     "example": "Russia 11, USA and Canada 5 each, Australia 3.",
+     "pages": [
+      77
+     ]
+    },
+    {
+     "id": "idl",
+     "name": "International Date Line",
+     "formula": "Along the 180° meridian in the Pacific, with detours around land.",
+     "example": "Crossing it west to east you repeat a day; east to west you lose one.",
+     "pages": [
+      77,
+      78
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "latlong",
+   "text": "Latitudes run east-west and get shorter away from the equator. Longitudes run pole to pole and are all equal in length."
+  },
+  {
+   "id": "addsub",
+   "text": "Moving east, add time. Moving west, subtract. Don't reverse them."
+  },
+  {
+   "id": "idlday",
+   "text": "West to east across the date line gains a day; going east to west loses one. It's the opposite of what many guess."
+  }
+ ]
+}

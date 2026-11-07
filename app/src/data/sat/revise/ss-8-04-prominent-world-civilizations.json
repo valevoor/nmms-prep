@@ -1,0 +1,302 @@
+{
+ "chapter": "ss-8-04-prominent-world-civilizations",
+ "terms": [
+  {
+   "id": "hiero",
+   "term": "Hieroglyphics",
+   "meaning": "\"Sacred writings\": the Egyptian script of small drawings.",
+   "pages": [
+    23
+   ]
+  },
+  {
+   "id": "mummy",
+   "term": "Mummy",
+   "meaning": "A dead body preserved with chemicals and wrapped in thin cloth.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "pharaoh",
+   "term": "Pharaoh",
+   "meaning": "The title of Egypt's kings. It means a person who lives in a palatial house.",
+   "pages": [
+    25
+   ]
+  },
+  {
+   "id": "cunei",
+   "term": "Cuneiform",
+   "meaning": "The writing system the Sumerians developed in Mesopotamia.",
+   "pages": [
+    26
+   ]
+  },
+  {
+   "id": "ziggurat",
+   "term": "Ziggurat",
+   "meaning": "An artificial hill with a place of worship on top. The Jews called these the Towers of Babel.",
+   "pages": [
+    27
+   ]
+  },
+  {
+   "id": "gladiator",
+   "term": "Gladiator",
+   "meaning": "A fighter of ancient Rome who fought people or animals to entertain crowds.",
+   "pages": [
+    34
+   ]
+  },
+  {
+   "id": "princep",
+   "term": "Princep",
+   "meaning": "\"The First Citizen of the State\": the title Octavius took.",
+   "pages": [
+    35
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "egypt",
+   "title": "Egypt",
+   "items": [
+    {
+     "id": "nile",
+     "name": "Why the Nile mattered",
+     "formula": "Its yearly flood left a layer of fertile clay soil on the valley.",
+     "example": "Egypt also gave us the calendar and complex irrigation.",
+     "pages": [
+      23,
+      24
+     ]
+    },
+    {
+     "id": "osiris",
+     "name": "Egyptian belief about death",
+     "formula": "Each person answers to Osiris, god of life after death, for their deeds.",
+     "example": "So tall stone towers, called Pyramids by the Greeks, were built over graves.",
+     "pages": [
+      24,
+      25
+     ]
+    },
+    {
+     "id": "hyksos",
+     "name": "The Hyksos in Egypt",
+     "formula": "An Arabian shepherd tribe that ruled for 500 years.",
+     "example": "Thebes rose against them in 1700 B.C.E. and drove them out.",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "cleo",
+     "name": "Cleopatra",
+     "formula": "The last Egyptian queen, defeated by Augustus in 30 B.C.E.",
+     "example": "Egypt then became a province of Rome.",
+     "pages": [
+      26
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meso",
+   "title": "Mesopotamia",
+   "items": [
+    {
+     "id": "rivers",
+     "name": "Meaning of Mesopotamia",
+     "formula": "\"Land between the rivers\": the Euphrates and Tigris.",
+     "example": "The name was given by the Greeks.",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "hanging",
+     "name": "The Hanging Gardens",
+     "formula": "A wonder of the Old World, on the Euphrates, around the 7th century B.C.E.",
+     "example": "Most credit Nebuchadnezzar II, who built them for his wife Amitis.",
+     "pages": [
+      27
+     ]
+    },
+    {
+     "id": "hammurabi",
+     "name": "Code of Hammurabi",
+     "formula": "Hammurabi, the famous Amorite king, enforced \"an eye for an eye\".",
+     "example": "Edicts found in 1901 are now in the Louvre in Paris.",
+     "pages": [
+      28
+     ]
+    },
+    {
+     "id": "mesorder",
+     "name": "Peoples who ruled Mesopotamia, in order",
+     "formula": "Sumerians, Akkadians, Amorites, Hittites, Assyrians, Chaldeans.",
+     "example": "Sumerians arrived in 4000 B.C.E.; Persians attacked in the 6th century B.C.E.",
+     "pages": [
+      28,
+      29
+     ]
+    }
+   ]
+  },
+  {
+   "id": "china",
+   "title": "China",
+   "items": [
+    {
+     "id": "hwang",
+     "name": "China's Sorrow",
+     "formula": "The Hwang Ho river.",
+     "example": "Its floods changed course without warning and ruined homes, fields and canals.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "shang",
+     "name": "First Chinese dynasties",
+     "formula": "Shang: 18th to 12th century B.C.E. Then the Chau ruled until 250 B.C.E.",
+     "example": "Chau kings gave land to officials in return for support in war.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "wall",
+     "name": "The Great Wall of China",
+     "formula": "Qin Shihuangti ordered the northern walls joined. Work ran from the 7th century B.C.E. to the 16th century C.E.",
+     "example": "It stretches more than 5000 km.",
+     "pages": [
+      30
+     ]
+    },
+    {
+     "id": "porcelain",
+     "name": "Chinese gifts to the world",
+     "formula": "Porcelain and the Great Wall; also silk.",
+     "example": "Glazed porcelain had developed by the Han dynasty (200 B.C.E.).",
+     "pages": [
+      31
+     ]
+    }
+   ]
+  },
+  {
+   "id": "greece",
+   "title": "Greece and Rome",
+   "items": [
+    {
+     "id": "greek",
+     "name": "Greek life",
+     "formula": "They called themselves Hellenese, believed gods lived on Mount Olympus, and held Olympic Games every 4 years.",
+     "example": "There were no priests; the king prayed for all.",
+     "pages": [
+      32
+     ]
+    },
+    {
+     "id": "alex",
+     "name": "Alexander",
+     "formula": "King of Macedonia and pupil of Aristotle. He defeated Persia and marched to India.",
+     "example": "He died at Babylonia in 323 B.C.E.",
+     "pages": [
+      32
+     ]
+    },
+    {
+     "id": "classes",
+     "name": "Patricians and Plebeians",
+     "formula": "Patricians: rich landowners who controlled the Senate. Plebeians: common people with few rights.",
+     "example": "After their 5th century B.C.E. revolt, Plebeians could choose the Tribunes.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "punic",
+     "name": "Punic Wars",
+     "formula": "Rome against Carthage for control of Sicily, for 118 years.",
+     "example": "Carthage lost.",
+     "pages": [
+      33,
+      34
+     ]
+    },
+    {
+     "id": "spartacus",
+     "name": "Spartacus",
+     "formula": "He led about 60,000 slaves in revolt against Rome.",
+     "example": "It was crushed after one year.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "caesar",
+     "name": "End of the Roman Republic",
+     "formula": "Brutus killed Julius Caesar. Caesar's nephew Octavius then ruled as Augustus for 44 years.",
+     "example": "Later rulers were dictators and Rome declined.",
+     "pages": [
+      35
+     ]
+    }
+   ]
+  },
+  {
+   "id": "america",
+   "title": "America",
+   "items": [
+    {
+     "id": "maya",
+     "name": "The Mayas",
+     "formula": "Yucatan in Mexico, Guatemala and Honduras; language Yucutec.",
+     "example": "The earliest cities date from about 320 C.E.",
+     "pages": [
+      36
+     ]
+    },
+    {
+     "id": "aztec",
+     "name": "The Aztecs",
+     "formula": "Their city Tenochtitlan stood on an island in Lake Texcoco; language Nahua.",
+     "example": "The Spanish entered the Mexican valley in 1519 C.E. and conquered them.",
+     "pages": [
+      36,
+      37
+     ]
+    },
+    {
+     "id": "inca",
+     "name": "The Incas",
+     "formula": "15th and 16th centuries, across Peru, Ecuador, Chile and Argentina.",
+     "example": "They were skilled in gold work, and the Sun God was their main deity.",
+     "pages": [
+      37,
+      38
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "scripts",
+   "text": "Egypt: hieroglyphics. Mesopotamia: cuneiform. Harappa's script is a third one, still unread."
+  },
+  {
+   "id": "hang",
+   "text": "The Hanging Gardens did not hang in the air. Plants grew on terraces and their branches hung down."
+  },
+  {
+   "id": "sorrow",
+   "text": "The Hwang Ho gave China its start but is called its sorrow, because of its floods."
+  }
+ ]
+}

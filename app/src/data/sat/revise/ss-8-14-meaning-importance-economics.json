@@ -1,0 +1,179 @@
+{
+ "chapter": "ss-8-14-meaning-importance-economics",
+ "terms": [
+  {
+   "id": "econ",
+   "term": "Economics",
+   "meaning": "From Greek \"Oikos\" (house) and \"Nomos\" (management), so literally managing a household.",
+   "pages": [
+    109
+   ]
+  },
+  {
+   "id": "utility",
+   "term": "Utility",
+   "meaning": "The ability of goods and services to satisfy wants.",
+   "pages": [
+    111
+   ]
+  },
+  {
+   "id": "econgoods",
+   "term": "Economic goods and services",
+   "meaning": "Things in limited supply, so you must pay for them.",
+   "pages": [
+    111
+   ]
+  },
+  {
+   "id": "activity",
+   "term": "Economic activities",
+   "meaning": "Activities people do to earn money and satisfy wants.",
+   "pages": [
+    111
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "history",
+   "title": "The subject and its thinkers",
+   "items": [
+    {
+     "id": "india",
+     "name": "Early Indian economic writing",
+     "formula": "Manusmruti covers farming, tax and revenue.",
+     "example": "Kautilya's Arthashastra, of the Mauryan period, covers finance and administration.",
+     "pages": [
+      109
+     ]
+    },
+    {
+     "id": "smith",
+     "name": "Father of Economics",
+     "formula": "Adam Smith, 18th century.",
+     "example": "He called economics \"the study of Wealth\".",
+     "pages": [
+      110
+     ]
+    },
+    {
+     "id": "pigou",
+     "name": "A. C. Pigou on economics",
+     "formula": "Studying it is not only enlightening but also profitable.",
+     "example": "So it helps both knowledge and daily life.",
+     "pages": [
+      110
+     ]
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "title": "Why study economics",
+   "items": [
+    {
+     "id": "problems",
+     "name": "Problems it helps us understand",
+     "formula": "Poverty, unemployment and economic inequality.",
+     "example": "It also looks for solutions.",
+     "pages": [
+      110
+     ]
+    },
+    {
+     "id": "choice",
+     "name": "The problem of choice",
+     "formula": "Unlimited wants but limited income.",
+     "example": "Economics helps you decide what to buy first.",
+     "pages": [
+      110
+     ]
+    },
+    {
+     "id": "producers",
+     "name": "Questions producers face",
+     "formula": "What to produce, how, for whom and at what price.",
+     "example": "Economics guides these choices.",
+     "pages": [
+      110
+     ]
+    },
+    {
+     "id": "prices",
+     "name": "Prices and resources",
+     "formula": "It explains why prices rise and fall, and how to keep them stable.",
+     "example": "It also shows how to use limited land, water and forests with care.",
+     "pages": [
+      110
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "title": "Four kinds of economic activity",
+   "items": [
+    {
+     "id": "prod",
+     "name": "Production activities",
+     "formula": "Those that make goods and services.",
+     "example": "Farming, fishing, mining, industries and transport.",
+     "pages": [
+      111
+     ]
+    },
+    {
+     "id": "cons",
+     "name": "Consumption activities",
+     "formula": "Buying and using goods and services to satisfy wants.",
+     "example": "A student buying a pen and writing with it.",
+     "pages": [
+      111
+     ]
+    },
+    {
+     "id": "exch",
+     "name": "Exchange activities",
+     "formula": "The marketing system that gets goods to consumers.",
+     "example": "Collecting, transporting, selling and buying.",
+     "pages": [
+      111
+     ]
+    },
+    {
+     "id": "dist",
+     "name": "Distribution activities",
+     "formula": "Sharing the income from production fairly among the factors of production.",
+     "example": "This includes fixing the price of those factors.",
+     "pages": [
+      112
+     ]
+    },
+    {
+     "id": "tuition",
+     "name": "When an activity becomes economic",
+     "formula": "Doing it for money makes it economic.",
+     "example": "Free tuition isn't; the same tuition for a fee is.",
+     "pages": [
+      112
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "house",
+   "text": "Economics started as household management, but today it goes far beyond the home."
+  },
+  {
+   "id": "artha",
+   "text": "Kautilya's Arthashastra is about administration and finance, and it was written in the Mauryan period, long before Adam Smith."
+  },
+  {
+   "id": "consprod",
+   "text": "Using a pen is consumption, while making pens is production."
+  }
+ ]
+}

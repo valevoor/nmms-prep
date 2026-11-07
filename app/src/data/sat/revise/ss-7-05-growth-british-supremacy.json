@@ -1,0 +1,154 @@
+{
+ "chapter": "ss-7-05-growth-british-supremacy",
+ "terms": [
+  {
+   "id": "diwani",
+   "term": "Diwani",
+   "meaning": "The right to collect land revenue.",
+   "pages": [
+    52
+   ]
+  },
+  {
+   "id": "misl",
+   "term": "Misl",
+   "meaning": "One of the Sikh groups of the late 18th century.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "subsidiary",
+   "term": "Doctrine of Subsidiary Alliance",
+   "meaning": "Wellesley's plan: a ruler kept a British army in his state and paid for it, or gave up land.",
+   "pages": [
+    57
+   ]
+  },
+  {
+   "id": "lapse",
+   "term": "Doctrine of Lapse",
+   "meaning": "Dalhousie's rule: a king with no natural heir lost his kingdom, since adopted sons couldn't inherit.",
+   "pages": [
+    57,
+    58
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "bengal",
+   "title": "Bengal after Plassey",
+   "items": [
+    {
+     "id": "clive",
+     "name": "Clive and the misrule",
+     "formula": "Robert Clive was the first Governor of Bengal (1758); Company servants then looted openly.",
+     "example": "The British replaced Mir Jafar with his son-in-law Mir Qasim.",
+     "pages": [
+      50,
+      51
+     ]
+    },
+    {
+     "id": "buxar",
+     "name": "Battle of Buxar (1764)",
+     "formula": "Mir Qasim, removed for ending the dastak misuse, allied with the Nawab of Oudh and the Mughal king.",
+     "example": "The British beat all three and grew stronger.",
+     "pages": [
+      51
+     ]
+    },
+    {
+     "id": "diwaniright",
+     "name": "Grant of Diwani (1765)",
+     "formula": "Clive's treaty with Shah Alam II: Diwani of Bengal, Bihar and Odisha for 26 lakh rupees a year.",
+     "example": "Bengal was then heavily exploited; in the famine a third of its people died.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "regulating",
+     "name": "Regulating Act (1773)",
+     "formula": "British Parliament's control over the Company; Warren Hastings became the first Governor General.",
+     "example": "Pitt's India Act (1784) fixed its defects.",
+     "pages": [
+      54
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wars",
+   "title": "Wars that spread British rule",
+   "items": [
+    {
+     "id": "mysore",
+     "name": "Anglo-Mysore wars (1767-1799)",
+     "formula": "Four wars against Hyder Ali and Tippu Sultan.",
+     "example": "Tippu's kingdom was split four ways: British, Nizam, Marathas and the Wodeyars.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "maratha",
+     "name": "Anglo-Maratha wars (1775-1818)",
+     "formula": "Three wars; the Peshwa surrendered and the British abolished the post.",
+     "example": "Internal quarrels weakened the Marathas.",
+     "pages": [
+      56
+     ]
+    },
+    {
+     "id": "ranjit",
+     "name": "Ranjit Singh and the Sikh wars",
+     "formula": "Ranjit Singh became king of Lahore at 18 and united the Sikhs; the Afghan king gave him the Kohinoor.",
+     "example": "After his death (1839), the British won four wars and took Punjab in 1849.",
+     "pages": [
+      56
+     ]
+    }
+   ]
+  },
+  {
+   "id": "policies",
+   "title": "Cunning British policies",
+   "items": [
+    {
+     "id": "subeffect",
+     "name": "Effects of the Subsidiary Alliance",
+     "formula": "Army costs ruined the states, they lost land and sovereignty.",
+     "example": "It was Lord Wellesley's policy (1799-1805).",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "lapseeffect",
+     "name": "Effects of the Doctrine of Lapse",
+     "formula": "Oudh, Satara, Nagpur, Jhansi and others were annexed.",
+     "example": "By 1856, two thirds of the subcontinent was British.",
+     "pages": [
+      58
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "welldal",
+   "text": "Subsidiary Alliance was Wellesley's; the Doctrine of Lapse was Dalhousie's."
+  },
+  {
+   "id": "gg",
+   "text": "Clive was the first Governor of Bengal; Warren Hastings was the first Governor General."
+  },
+  {
+   "id": "buxdiw",
+   "text": "Buxar was in 1764; the Diwani was granted a year later, in 1765."
+  }
+ ]
+}

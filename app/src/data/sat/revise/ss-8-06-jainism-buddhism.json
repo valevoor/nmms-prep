@@ -1,0 +1,255 @@
+{
+ "chapter": "ss-8-06-jainism-buddhism",
+ "terms": [
+  {
+   "id": "shramanic",
+   "term": "Shramanic Tradition",
+   "meaning": "The group of religions that Jainism and Buddhism belong to.",
+   "pages": [
+    45
+   ]
+  },
+  {
+   "id": "tirth",
+   "term": "Tirthankara",
+   "meaning": "One of the 24 great teachers of Jainism.",
+   "pages": [
+    46
+   ]
+  },
+  {
+   "id": "jina",
+   "term": "Jina",
+   "meaning": "One who has conquered the senses. Jains are named after this word.",
+   "pages": [
+    46
+   ]
+  },
+  {
+   "id": "kaivalya",
+   "term": "Kaivalya",
+   "meaning": "Enlightenment in Jainism. Vardhamana attained it at 42.",
+   "pages": [
+    46
+   ]
+  },
+  {
+   "id": "sallekhana",
+   "term": "Sallekhana",
+   "meaning": "Purifying the soul through meditation and fasting until the body is given up.",
+   "pages": [
+    47
+   ]
+  },
+  {
+   "id": "dcp",
+   "term": "Dharma Chakra Pravarthana",
+   "meaning": "Buddha's first sermon, at the deer park in Sarnath.",
+   "pages": [
+    48
+   ]
+  },
+  {
+   "id": "mahapari",
+   "term": "Mahaparinirvana",
+   "meaning": "The end of Buddha's life, at Kushinagar in his 80th year.",
+   "pages": [
+    49
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "bg",
+   "title": "Why they arose",
+   "items": [
+    {
+     "id": "rise",
+     "name": "Reasons Jainism and Buddhism arose",
+     "formula": "Rigid varna, new cities and traders, and Janapadas turning into kingships.",
+     "example": "They arose in the Gangetic Plains in the 6th century BCE.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "lang",
+     "name": "What both religions preached",
+     "formula": "Desire causes human problems, so live simply.",
+     "example": "They taught in Pali and Prakrit rather than Sanskrit.",
+     "pages": [
+      45
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jain",
+   "title": "Jainism",
+   "items": [
+    {
+     "id": "first",
+     "name": "First, 23rd and 24th Tirthankaras",
+     "formula": "Rishabhanatha, Parswanatha and Vardhamana.",
+     "example": "Parswanatha was the son of King Aswasena, 8th century B.C.E.",
+     "pages": [
+      46
+     ]
+    },
+    {
+     "id": "maha",
+     "name": "Life of Vardhamana Mahaveera",
+     "formula": "599 to 527 B.C.E. Born at Kundala grama in Vaishali; father Siddhartha, mother Trishaladevi.",
+     "example": "He left home at 30, searched for 12 years, and was enlightened at 42.",
+     "pages": [
+      46
+     ]
+    },
+    {
+     "id": "nirvana",
+     "name": "Mahaveera's Nirvana",
+     "formula": "At Pavapuri in Bihar, in his 72nd year.",
+     "example": "He spent his last 30 years teaching.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "vows",
+     "name": "The five vows",
+     "formula": "Non-violence, Truth, Astheya (no stealing), Aparigraha (no property) and Brahmacharya.",
+     "example": "Parswanatha taught the first 4; Vardhamana added the 5th.",
+     "pages": [
+      46,
+      47
+     ]
+    },
+    {
+     "id": "triratna",
+     "name": "The Triratnas",
+     "formula": "Samyakgyan, Samyakdarshan and Samyakcharitra.",
+     "example": "Right knowledge, faith and conduct are the three jewels.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "sects",
+     "name": "Two Jain sects",
+     "formula": "Swethambars wear white; Digambars wear no clothes.",
+     "example": "Mahaveera's teachings were put into 12 angas in Prakrit.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "south",
+     "name": "Jainism in the south",
+     "formula": "A group moved south from a famine in Bihar and settled at Shravanabelagola.",
+     "example": "Kannada poets Pampa, Ranna, Janna and Ponna were Jains.",
+     "pages": [
+      48
+     ]
+    }
+   ]
+  },
+  {
+   "id": "budd",
+   "title": "Buddhism",
+   "items": [
+    {
+     "id": "buddha",
+     "name": "Who Gautama Buddha was",
+     "formula": "Born Siddartha, son of Shuddodana, king of the Shakya republic.",
+     "example": "He gave up royal life to look for truth.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "truths",
+     "name": "The Four Noble Truths",
+     "formula": "The world is full of sorrow; desire causes it; freedom from desire brings peace; the Eightfold Path removes desire.",
+     "example": "Buddha preached these first at Sarnath.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "path",
+     "name": "Eightfold Path, also called the Middle Path",
+     "formula": "Right Action, Speech, Vision, Livelihood, Effort, Recollection, Resolve and Thought.",
+     "example": "Each of the 8 begins with \"Right\".",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "tripitaka",
+     "name": "The Tripitakas",
+     "formula": "Vinaya, Dhamma and Abhidhamma pitakas.",
+     "example": "Later branches: Hinayana, Mahayana and Vajrayana.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "spread",
+     "name": "Spread of Buddhism",
+     "formula": "To Malaya, Burma, Thailand, Vietnam, Cambodia, Sri Lanka and Bamiyan.",
+     "example": "Dr. B. R. Ambedkar embraced Buddhism in 1956.",
+     "pages": [
+      49
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inv",
+   "title": "Foreign invasions",
+   "items": [
+    {
+     "id": "darius",
+     "name": "King Darius",
+     "formula": "He built a strong Persian empire in the 6th century B.C.E., reaching the Indian border.",
+     "example": "His dynasty was the Akhimenian.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "porus",
+     "name": "Alexander and Paurava",
+     "formula": "They fought on the flooded Jhelum, after Ambhi of Taxila invited Alexander.",
+     "example": "Paurava (Porus) asked to be treated \"as one king deserves to be treated by another\".",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "gandhara",
+     "name": "Effect of Alexander's attack",
+     "formula": "Small republics joined up and the Mauryan dynasty rose.",
+     "example": "Greek influence shows in Gandhara art.",
+     "pages": [
+      50
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "trir",
+   "text": "Jainism has Triratnas (three jewels) and Buddhism has the Tripitakas (three baskets of teachings). Don't mix them."
+  },
+  {
+   "id": "ages",
+   "text": "Mahaveera was enlightened at 42 and died in his 72nd year, but Buddha died in his 80th."
+  },
+  {
+   "id": "fifth",
+   "text": "Parswanatha gave 4 vows. Brahmacharya, the 5th, came from Vardhamana."
+  }
+ ]
+}

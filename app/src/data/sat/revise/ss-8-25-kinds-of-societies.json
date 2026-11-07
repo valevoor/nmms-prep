@@ -1,0 +1,157 @@
+{
+ "chapter": "ss-8-25-kinds-of-societies",
+ "terms": [
+  {
+   "id": "hunting",
+   "term": "Hunting and food-gathering society",
+   "meaning": "The oldest and simplest society: small, nomadic groups who hunt and gather wild food.",
+   "pages": [
+    65
+   ]
+  },
+  {
+   "id": "cattle",
+   "term": "Cattle-rearing society",
+   "meaning": "A society that lives by rearing herds of cattle.",
+   "pages": [
+    66
+   ]
+  },
+  {
+   "id": "farming",
+   "term": "Farming society",
+   "meaning": "A society that lives by cultivating large areas of land, using animals to plough.",
+   "pages": [
+    66
+   ]
+  },
+  {
+   "id": "industrial",
+   "term": "Industrial society",
+   "meaning": "A society that depends on industries using science and technology.",
+   "pages": [
+    67
+   ]
+  },
+  {
+   "id": "division",
+   "term": "Division of labour",
+   "meaning": "Dividing work according to workers' skills.",
+   "pages": [
+    67
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "hunt",
+   "title": "Hunting society",
+   "items": [
+    {
+     "id": "hsize",
+     "name": "Size of a hunting group",
+     "formula": "Never more than 40-50 people, in small scattered groups.",
+     "example": "They used stone axes, spears and daggers.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "hwealth",
+     "name": "Wealth and rule in hunting society",
+     "formula": "No idea of wealth: they share everything.",
+     "example": "No rulers and ruled, since there are no political institutions; family ties bind them.",
+     "pages": [
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cat",
+   "title": "Cattle-rearing society",
+   "items": [
+    {
+     "id": "csize",
+     "name": "Size of a cattle-rearing society",
+     "formula": "Hundreds to thousands of people: the Bhaktiyari community has about 5000 to 1,50,000.",
+     "example": "Found today in parts of Africa and Central Asia.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "cwhere",
+     "name": "Where cattle-rearing societies live",
+     "formula": "Grasslands, hills and deserts not fit for farming.",
+     "example": "The person with the most cattle is the richest and leads.",
+     "pages": [
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "farm",
+   "title": "Farming society",
+   "items": [
+    {
+     "id": "plough",
+     "name": "The Farming Revolution",
+     "formula": "Began with the plough around 3000 B.C.E.; animals pulling it raised food output more.",
+     "example": "People settled in one place and villages formed.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "skills",
+     "name": "Why new skills grew in farming society",
+     "formula": "More food meant not everyone had to farm all day.",
+     "example": "So people took up other work.",
+     "pages": [
+      67
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ind",
+   "title": "Industrial society",
+   "items": [
+    {
+     "id": "inventions",
+     "name": "What changed industrial society",
+     "formula": "The steam engine, internal combustion engine, electricity and nuclear energy.",
+     "example": "People migrate to cities, so cities grow.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "stages",
+     "name": "The four kinds as stages",
+     "formula": "Hunting, then cattle-rearing, then farming, then industrial.",
+     "example": "They can also be seen as stages of human evolution.",
+     "pages": [
+      67
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "sizes",
+   "text": "Hunting groups are tiny (40-50); cattle-rearing societies are much bigger (hundreds to thousands)."
+  },
+  {
+   "id": "settle",
+   "text": "Villages began with farming, not with hunting or cattle-rearing, which kept people moving."
+  },
+  {
+   "id": "rich",
+   "text": "In cattle-rearing society wealth is counted in cattle; the hunting society has no idea of wealth at all."
+  }
+ ]
+}

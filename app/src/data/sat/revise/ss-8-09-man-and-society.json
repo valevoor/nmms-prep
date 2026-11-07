@@ -1,0 +1,189 @@
+{
+ "chapter": "ss-8-09-man-and-society",
+ "terms": [
+  {
+   "id": "sociology",
+   "term": "Sociology",
+   "meaning": "The study of society. The word comes from Latin \"Socius\" and Greek \"Logos\".",
+   "pages": [
+    64
+   ]
+  },
+  {
+   "id": "socialization",
+   "term": "Socialization",
+   "meaning": "The process of learning language, behaviour and ways of thinking by living among people.",
+   "pages": [
+    65
+   ]
+  },
+  {
+   "id": "web",
+   "term": "Web of social relationships",
+   "meaning": "How human society is described, since people exist through their ties with others.",
+   "pages": [
+    65
+   ]
+  },
+  {
+   "id": "sociologist",
+   "term": "Sociologist",
+   "meaning": "A person who studies society, culture, behaviour and social relationships.",
+   "pages": [
+    66
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "def",
+   "title": "Definitions and uses",
+   "items": [
+    {
+     "id": "comte",
+     "name": "August Comte's definition",
+     "formula": "The scientific study of what relates to social order and social progress.",
+     "example": "He first used the word Sociology.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "maciver",
+     "name": "MacIver and Page's definition",
+     "formula": "A study of social relationships.",
+     "example": "Shorter than Comte's, and focused on relationships.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "uses",
+     "name": "Why study sociology",
+     "formula": "Personality development, solving social problems, knowing modern developments.",
+     "example": "It also promotes the welfare of weaker sections.",
+     "pages": [
+      64,
+      65
+     ]
+    }
+   ]
+  },
+  {
+   "id": "social",
+   "title": "Man in society",
+   "items": [
+    {
+     "id": "animal",
+     "name": "Why man is a social being",
+     "formula": "No society without man, and no man without society.",
+     "example": "Nobody could live all alone in a town.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "agents",
+     "name": "Who socialises us",
+     "formula": "Family, school, peer groups and mass communication.",
+     "example": "School gives formal education; peers teach co-operation.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "kamala",
+     "name": "Kamala of Midnapore",
+     "formula": "Found in 1920 after 9 years among animals; she walked on all fours and ate raw flesh.",
+     "example": "It shows that without society a person doesn't develop human ways.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "language",
+     "name": "Language and human life",
+     "formula": "Language separates man from animals and lets us express exact relationships and feelings.",
+     "example": "Without it there would be no schools, mass media or civilization.",
+     "pages": [
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "early",
+   "title": "Early sociologists",
+   "items": [
+    {
+     "id": "father",
+     "name": "Father of Sociology",
+     "formula": "Auguste Comte.",
+     "example": "He named the scientific study of society.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "spencer",
+     "name": "Herbert Spencer",
+     "formula": "A 19th century British sociologist.",
+     "example": "He studied the evolution of society.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "durkheim",
+     "name": "Emile Durkheim",
+     "formula": "A French sociologist.",
+     "example": "He worked to make sociology a science.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "weber",
+     "name": "Max Weber",
+     "formula": "A German sociologist, also a scholar of economics, philosophy and history.",
+     "example": "He studied the labour force and the Christian religion.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "marx",
+     "name": "Karl Marx",
+     "formula": "A German philosopher, learned in history and economics.",
+     "example": "He extended the scope of sociology.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "indians",
+     "name": "Sociology in India",
+     "formula": "The British introduced it at Bombay University in 1914.",
+     "example": "G. S. Ghurye, M. N. Srinivas, A. R. Desai, Iravati Karve and S. C. Dubey are leading names.",
+     "pages": [
+      68
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "root",
+   "text": "\"Socius\" is Latin and \"Logos\" is Greek, so the word has two language roots."
+  },
+  {
+   "id": "kam",
+   "text": "Kamala learnt to speak only later, among people. Language comes through society, not by itself."
+  },
+  {
+   "id": "school",
+   "text": "Family and peers socialise us too, so socialization is not only what school does."
+  }
+ ]
+}

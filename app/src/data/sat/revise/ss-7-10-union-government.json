@@ -1,0 +1,183 @@
+{
+ "chapter": "ss-7-10-union-government",
+ "terms": [
+  {
+   "id": "parliament",
+   "term": "Parliament",
+   "meaning": "India's Union Legislature: the President plus the Lok Sabha and Rajya Sabha.",
+   "pages": [
+    145
+   ]
+  },
+  {
+   "id": "loksabha",
+   "term": "Lok Sabha",
+   "meaning": "The lower house, directly elected by citizens above 18.",
+   "pages": [
+    145
+   ]
+  },
+  {
+   "id": "rajyasabha",
+   "term": "Rajya Sabha",
+   "meaning": "The upper house, mostly elected by state assemblies, not by citizens.",
+   "pages": [
+    146
+   ]
+  },
+  {
+   "id": "speaker",
+   "term": "Speaker",
+   "meaning": "The Lok Sabha member chosen by the others to run the house and keep order.",
+   "pages": [
+    146
+   ]
+  },
+  {
+   "id": "cabinet",
+   "term": "Cabinet system",
+   "meaning": "The Prime Minister and ministers form the Union Cabinet; each minister answers for a department.",
+   "pages": [
+    150
+   ]
+  },
+  {
+   "id": "noconf",
+   "term": "No-confidence motion",
+   "meaning": "A vote by which a Lok Sabha majority can remove the Cabinet.",
+   "pages": [
+    151
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "houses",
+   "title": "The two houses",
+   "items": [
+    {
+     "id": "union",
+     "name": "India's union",
+     "formula": "28 states and 8 union territories.",
+     "example": "The Union Government is also called the Central Government.",
+     "pages": [
+      144
+     ]
+    },
+    {
+     "id": "ls",
+     "name": "Lok Sabha facts",
+     "formula": "Up to 552 seats, five-year term; a member must be at least 25.",
+     "example": "A member can contest any number of times.",
+     "pages": [
+      145
+     ]
+    },
+    {
+     "id": "lsqual",
+     "name": "Who can't be a Lok Sabha member",
+     "formula": "A non-citizen, someone holding a government post, the mentally unfit, the imprisoned, or an insolvent.",
+     "example": "Insolvent means unable to pay one's debts.",
+     "pages": [
+      145,
+      146
+     ]
+    },
+    {
+     "id": "rs",
+     "name": "Rajya Sabha facts",
+     "formula": "Up to 250 seats: 238 elected by state assemblies and 12 nominated by the President.",
+     "example": "Members must be 30, serve six years; the Vice-President is Chairman.",
+     "pages": [
+      146
+     ]
+    },
+    {
+     "id": "powers",
+     "name": "Powers of Parliament",
+     "formula": "Makes laws, controls money (the Financial Bill starts in the Lok Sabha), questions ministers, amends the Constitution.",
+     "example": "No tax or spending without Parliament's approval.",
+     "pages": [
+      147
+     ]
+    },
+    {
+     "id": "privilege",
+     "name": "MPs and the opposition",
+     "formula": "MPs have freedom of speech in Parliament that no court can question.",
+     "example": "The opposition leader points out the government's lapses.",
+     "pages": [
+      146,
+      147
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exec",
+   "title": "The Union Executive",
+   "items": [
+    {
+     "id": "president",
+     "name": "The President",
+     "formula": "Head of the Republic and first citizen; lives in Rashtrapati Bhavan; elected by MPs and state MLAs.",
+     "example": "Must be at least 35; term five years.",
+     "pages": [
+      148,
+      149
+     ]
+    },
+    {
+     "id": "ppowers",
+     "name": "Powers of the President",
+     "formula": "Appoints the PM and ministers, signs bills into Acts, commands the forces, appoints judges, grants pardons.",
+     "example": "No bill becomes an Act without the President's assent.",
+     "pages": [
+      149
+     ]
+    },
+    {
+     "id": "vp",
+     "name": "The Vice-President",
+     "formula": "Elected by both houses; at least 35; term five years.",
+     "example": "Chairs the Rajya Sabha and acts for the President when absent.",
+     "pages": [
+      149
+     ]
+    },
+    {
+     "id": "pm",
+     "name": "Role of the Prime Minister",
+     "formula": "Head of government and leader of the Lok Sabha; allots and reshuffles portfolios.",
+     "example": "When the PM resigns, the whole Cabinet goes.",
+     "pages": [
+      150
+     ]
+    },
+    {
+     "id": "buildings",
+     "name": "Parliament buildings",
+     "formula": "Rashtrapati Bhavan has 340 rooms, finished in 1929.",
+     "example": "The new Parliament House (28-05-2023) has an 888-seat Lok Sabha hall and a 384-seat Rajya Sabha hall.",
+     "pages": [
+      151
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "ages",
+   "text": "Ages: Lok Sabha 25, Rajya Sabha 30, President and Vice-President 35."
+  },
+  {
+   "id": "chair",
+   "text": "The Rajya Sabha is chaired by the Vice-President; the Lok Sabha has a Speaker elected by its members."
+  },
+  {
+   "id": "terms",
+   "text": "Lok Sabha members serve five years; Rajya Sabha members serve six."
+  }
+ ]
+}

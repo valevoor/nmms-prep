@@ -1,0 +1,238 @@
+{
+ "chapter": "ss-8-02-bharathavarsha-prehistoric",
+ "terms": [
+  {
+   "id": "subcont",
+   "term": "Subcontinent",
+   "meaning": "A huge land area that is part of a continent. India occupies the south of Asia.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "penin",
+   "term": "Peninsula",
+   "meaning": "Land with water on three sides and land on one side.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "prehist",
+   "term": "Prehistoric Age",
+   "meaning": "The time before writing was discovered, so it has no written records.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "archaeol",
+   "term": "Archaeologist",
+   "meaning": "A scholar who studies the distant past from the things people left behind.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "nomad",
+   "term": "Nomad",
+   "meaning": "A person with no settled home, living by hunting and gathering food.",
+   "pages": [
+    11
+   ]
+  },
+  {
+   "id": "indsite",
+   "term": "Industrial site",
+   "meaning": "A place where people made stone tools, shown by heaps of broken stone chips.",
+   "pages": [
+    12
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "geo",
+   "title": "India's land",
+   "items": [
+    {
+     "id": "names",
+     "name": "Other names of Greater India",
+     "formula": "Bharathavarsha, Bharatha Khanda, Sindhudweepa and Akhandabharatha.",
+     "example": "Today India has 28 states and 8 union territories.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "neigh",
+     "name": "Countries sharing India's boundary",
+     "formula": "Pakistan, Afghanistan, China, Nepal, Bhutan, Bangladesh and Myanmar.",
+     "example": "Sri Lanka is across the sea, so it is not on this list.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "feat",
+     "name": "India's four physical regions",
+     "formula": "The Himalayas, the Indo-Gangetic Plain, the Deccan Plateau and the coast.",
+     "example": "Attacks came mainly from the north-west, through the Bolan and Khyber passes.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "narmada",
+     "name": "What the Narmada divides",
+     "formula": "The Malwa Plateau (Central Highlands) from the Deccan Plateau in the south.",
+     "example": "This north and south division led to cultural diversity.",
+     "pages": [
+      9
+     ]
+    },
+    {
+     "id": "coast",
+     "name": "India's coastline",
+     "formula": "6,100 km on the mainland, and 7,516.60 km with the islands.",
+     "example": "The islands add 1,416.60 km.",
+     "pages": [
+      9
+     ]
+    },
+    {
+     "id": "coastnames",
+     "name": "Names of the two coasts",
+     "formula": "East: Coromandel and Utkal. West: Konkan and Malabar.",
+     "example": "Ports on them drew the Romans and helped the Pandyas, Cheras and Cholas rise.",
+     "pages": [
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hist",
+   "title": "Three periods of history",
+   "items": [
+    {
+     "id": "pre",
+     "name": "Pre-historic period",
+     "formula": "Only archaeological remains, with no written records.",
+     "example": "Stone Age culture.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "proto",
+     "name": "Proto-historic period",
+     "formula": "Remains and writing both exist, but the writing can't be read.",
+     "example": "Indus Valley Civilization.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "historic",
+     "name": "Historic period",
+     "formula": "Remains and readable written documents both exist.",
+     "example": "From the Vedic Civilization onwards.",
+     "pages": [
+      11
+     ]
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": "Life in the Stone Age",
+   "items": [
+    {
+     "id": "sites",
+     "name": "Where prehistoric people lived",
+     "formula": "Near rivers and lakes, in areas with plenty of stone for tools.",
+     "example": "Bhimbetka, Hunasagi and Kurnool.",
+     "pages": [
+      11,
+      12
+     ]
+    },
+    {
+     "id": "fire",
+     "name": "Proof that Stone Age people used fire",
+     "formula": "Ash found in the caves of Kurnool.",
+     "example": "Fire probably gave cooking, light and safety from animals.",
+     "pages": [
+      12
+     ]
+    },
+    {
+     "id": "art",
+     "name": "Cave drawings",
+     "formula": "Wild animals and hunting, drawn on cave walls and rocks.",
+     "example": "Seen in Madhya Pradesh, Uttar Pradesh and Karnataka.",
+     "pages": [
+      12
+     ]
+    },
+    {
+     "id": "change",
+     "name": "How animal husbandry began",
+     "formula": "About 12,000 years ago the earth warmed and grasslands spread, so animals multiplied.",
+     "example": "People watched the animals, captured them and tamed them.",
+     "pages": [
+      12
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ages",
+   "title": "The three Stone Ages",
+   "items": [
+    {
+     "id": "old",
+     "name": "Old Stone Age",
+     "formula": "The oldest period, from 2 million years ago to 12,000 years ago.",
+     "example": "It has three stages: Early, Middle and Late.",
+     "pages": [
+      13
+     ]
+    },
+    {
+     "id": "mid",
+     "name": "Middle Stone Age",
+     "formula": "From 12,000 to about 10,000 years ago, with very small \"delicate\" stone weapons.",
+     "example": "Tiny stones were set in bone or wood handles, as axes and saws.",
+     "pages": [
+      14
+     ]
+    },
+    {
+     "id": "new",
+     "name": "New Stone Age",
+     "formula": "After 10,000 years ago, with bright, sharp-bladed tools.",
+     "example": "Grinding stones, pots for grain and cooking, and woven cloth.",
+     "pages": [
+      14
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "proto",
+   "text": "The Indus Valley is proto-historic, not prehistoric: it has writing, but nobody can read it yet."
+  },
+  {
+   "id": "wood",
+   "text": "People also used wood and bone, but mostly only the stone tools have survived."
+  },
+  {
+   "id": "order",
+   "text": "The order is Old, then Middle, then New. Pots and weaving belong to the New Stone Age."
+  }
+ ]
+}

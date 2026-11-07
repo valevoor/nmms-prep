@@ -1,0 +1,240 @@
+{
+ "chapter": "ss-8-26-hydrosphere",
+ "terms": [
+  {
+   "id": "sea",
+   "term": "Sea",
+   "meaning": "A part of an ocean reaching far inland, smaller than an ocean, such as the Arabian Sea.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "gulf",
+   "term": "Gulf",
+   "meaning": "A part of an ocean or sea that cuts into the land, smaller than a sea, such as the Gulf of Mannar.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "bay",
+   "term": "Bay",
+   "meaning": "A small half-circle of water partly surrounded by land, such as the Bay of Bengal.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "strait",
+   "term": "Strait",
+   "meaning": "A narrow strip of water joining two large water bodies, such as the Palk Strait.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "isthmus",
+   "term": "Isthmus",
+   "meaning": "A narrow strip of land joining two large land masses; a place for ocean canals.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "salinity",
+   "term": "Salinity",
+   "meaning": "The amount of salt dissolved in sea water, in parts per thousand (ppt).",
+   "pages": [
+    71
+   ]
+  },
+  {
+   "id": "tide",
+   "term": "Tide",
+   "meaning": "The regular rise and fall of the sea level.",
+   "pages": [
+    74
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "floor",
+   "title": "The ocean floor",
+   "items": [
+    {
+     "id": "canals",
+     "name": "Canals across isthmuses",
+     "formula": "Suez: between Asia and Africa. Panama: between North and South America.",
+     "example": "Both cut through a narrow neck of land.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "shelf",
+     "name": "Continental shelf",
+     "formula": "The shallow area by the coast, about 100 fathoms deep on average (1 fathom = 6 ft).",
+     "example": "100 fathoms = 600 ft. Good for fishing and minerals.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "slope",
+     "name": "Continental slope and deep sea plain",
+     "formula": "Slope: steep, with submarine canyons. Plain (abyssal plain): the largest area, with sea mounts and guyots.",
+     "example": "The slope links the shelf and the plain.",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "deep",
+     "name": "Deepest point of the oceans",
+     "formula": "Challenger Deep of the Mariana Trench, about 10,929 metres, in the Pacific.",
+     "example": "Other trenches: Tonga and Kurile.",
+     "pages": [
+      71
+     ]
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "title": "Temperature and salt",
+   "items": [
+    {
+     "id": "temp",
+     "name": "Ocean temperature",
+     "formula": "Warmer near the equator and colder with depth.",
+     "example": "Sunlight reaches only about 200 metres down.",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "avgsal",
+     "name": "Average salinity",
+     "formula": "35 ppt, which is 35 grams of salt in 1000 grams of water.",
+     "example": "Highest near the tropics and lowest near the poles.",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "why",
+     "name": "Why the sea is salty",
+     "formula": "Rivers bring salts; the water evaporates and the salt stays.",
+     "example": "Over a long time salt builds up.",
+     "pages": [
+      71
+     ]
+    },
+    {
+     "id": "saltiest",
+     "name": "Very salty water bodies",
+     "formula": "Lake Van (Turkey), the Dead Sea, Lake Sambar (India) and the Red Sea.",
+     "example": "Lake Van is the saltiest of these.",
+     "pages": [
+      71
+     ]
+    }
+   ]
+  },
+  {
+   "id": "move",
+   "title": "Currents and tides",
+   "items": [
+    {
+     "id": "warmcold",
+     "name": "Warm and cold currents",
+     "formula": "Warm: from the equator towards the poles. Cold: from the poles towards the equator.",
+     "example": "Earth's rotation, temperature, wind and salinity drive them.",
+     "pages": [
+      72
+     ]
+    },
+    {
+     "id": "pacific",
+     "name": "Pacific Ocean currents",
+     "formula": "Warm: Kuroshio, East Australian. Cold: Oyashio, California, Peru (Humboldt).",
+     "example": "The West wind drift is also cold.",
+     "pages": [
+      72
+     ]
+    },
+    {
+     "id": "atlantic",
+     "name": "Atlantic Ocean currents",
+     "formula": "Warm: Gulf Stream, North Atlantic drift, Brazilian. Cold: Labrador, Canary, Falkland, Benguela.",
+     "example": "The Norwegian current is cold too.",
+     "pages": [
+      72,
+      73
+     ]
+    },
+    {
+     "id": "indian",
+     "name": "Indian Ocean currents",
+     "formula": "North: change direction with the monsoon. South: warm Mozambique, Madagascar, Agulhas; cold West Australian.",
+     "example": "So the north Indian Ocean has seasonal currents.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "fishing",
+     "name": "Major fishing grounds",
+     "formula": "Where warm and cold currents meet: Kuroshio and Oyashio off Japan; Gulf Stream and Labrador at the Grand Bank.",
+     "example": "The Dogger Bank is in the North Sea.",
+     "pages": [
+      73
+     ]
+    },
+    {
+     "id": "tidetime",
+     "name": "Timing of tides",
+     "formula": "High to low tide: 6 hrs 13 minutes. High to high: 12 hrs 26 minutes.",
+     "example": "In 24 hrs 52 minutes there are 2 high and 2 low tides.",
+     "pages": [
+      74
+     ]
+    },
+    {
+     "id": "springneap",
+     "name": "Spring and neap tides",
+     "formula": "Spring: Sun, Moon and Earth in a line (new and full moon), highest highs. Neap: Moon at a right angle (quarter days), weaker tides.",
+     "example": "Tides come from the pull of the Moon and Sun.",
+     "pages": [
+      74
+     ]
+    },
+    {
+     "id": "tideuse",
+     "name": "Uses of tides",
+     "formula": "Navigation, keeping harbours clean, salt making, fishing and tidal energy.",
+     "example": "They also help in choosing port sites.",
+     "pages": [
+      75
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "gulfbay",
+   "text": "A strait is water joining two seas; an isthmus is land joining two land masses."
+  },
+  {
+   "id": "spring",
+   "text": "Spring tides have nothing to do with the spring season: they happen at new moon and full moon."
+  },
+  {
+   "id": "warmdir",
+   "text": "Warm currents flow away from the equator; cold currents flow towards it."
+  }
+ ]
+}

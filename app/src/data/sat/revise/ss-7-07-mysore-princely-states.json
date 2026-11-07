@@ -1,0 +1,388 @@
+{
+ "chapter": "ss-7-07-mysore-princely-states",
+ "terms": [
+  {
+   "id": "gandab",
+   "term": "Ganda-Bherunda",
+   "meaning": "The two-headed imaginary bird that was the Wodeyars' royal emblem.",
+   "pages": [
+    72
+   ]
+  },
+  {
+   "id": "athara",
+   "term": "Athara Kacheri",
+   "meaning": "Chikkadevaraja's central office in the capital, with 18 departments.",
+   "pages": [
+    73
+   ]
+  },
+  {
+   "id": "dalavayi",
+   "term": "Dalavayi",
+   "meaning": "An official who ran Mysore's government in the king's name when the kings were weak.",
+   "pages": [
+    74
+   ]
+  },
+  {
+   "id": "rendition",
+   "term": "Rendition (Punardana)",
+   "meaning": "The British handing Mysore back to Chamaraja Wodeyar X in 1881.",
+   "pages": [
+    80
+   ]
+  },
+  {
+   "id": "paleyagar",
+   "term": "Paleyagar",
+   "meaning": "A small chieftain under Vijayanagara; his territory was a Paleyapattu.",
+   "pages": [
+    89
+   ]
+  },
+  {
+   "id": "sistu",
+   "term": "Shivappa Nayaka's Sistu",
+   "meaning": "Land revenue fixed by land class (fertility, irrigation), at one-third of the gross produce.",
+   "pages": [
+    90,
+    91
+   ]
+  },
+  {
+   "id": "kalagapti",
+   "term": "Kalagapti",
+   "meaning": "The Nizam's 53 rules that took away people's basic freedoms.",
+   "pages": [
+    109
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "wod",
+   "title": "Wodeyars, Hyder and Tippu",
+   "items": [
+    {
+     "id": "chikka",
+     "name": "Chikkadevaraja Wodeyar (1673-1704)",
+     "formula": "Set up the Athara Kacheri, fixed weights and measures, began a postal system, dammed the Kaveri near Srirangapattana.",
+     "example": "He leased Bengaluru from the Mughals for three lakh varahas and was called \"Navakoti Narayana\".",
+     "pages": [
+      73,
+      74
+     ]
+    },
+    {
+     "id": "chikkalit",
+     "name": "Writers in Chikkadevaraja's court",
+     "formula": "Singararya wrote Mitravinda-govinda, the first Kannada drama.",
+     "example": "Sanchi Honnamma wrote Hadibadeya Dharma.",
+     "pages": [
+      74
+     ]
+    },
+    {
+     "id": "hyder",
+     "name": "Hyder Ali (1761-1782)",
+     "formula": "A commander under Dalavayi Nanjarajayya who took power as Karyakarta, setting aside Krishnaraja Wodeyar II.",
+     "example": "Illiterate but able, he doubled Mysore's territory and started the Lalbagh.",
+     "pages": [
+      74,
+      76
+     ]
+    },
+    {
+     "id": "war12",
+     "name": "First and Second Mysore wars",
+     "formula": "First (1767-1769): British lost and signed the treaty of Madras. Second (1780-1784): Hyder died; Tippu ended it with the Mangaluru treaty.",
+     "example": "Hyder fought the second because the British didn't help him against the Marathas.",
+     "pages": [
+      75,
+      76
+     ]
+    },
+    {
+     "id": "war34",
+     "name": "Third and Fourth Mysore wars",
+     "formula": "Third (1790-1792): Tippu gave up half his kingdom, paid indemnity and gave two sons as hostages. Fourth (1799): he died at Srirangapattana.",
+     "example": "His kingdom was then split four ways.",
+     "pages": [
+      76
+     ]
+    },
+    {
+     "id": "tippu",
+     "name": "Achievements of Tippu Sultan",
+     "formula": "Spread sericulture, modernised the army with French help, used rockets, gave grants to temples and Shringeri Math.",
+     "example": "He built Dariya Doulath and the Jumma Masjid at Srirangapattana, with mints there and at Bengaluru.",
+     "pages": [
+      77,
+      78
+     ]
+    }
+   ]
+  },
+  {
+   "id": "later",
+   "title": "Mysore after Tippu",
+   "items": [
+    {
+     "id": "kw3",
+     "name": "Krishnaraja Wodeyar III",
+     "formula": "Put on the throne at five, with Poornaiah as Diwan.",
+     "example": "He was removed after the Bidanuru revolt, and commissioners ruled (1831-1881).",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "cubbon",
+     "name": "Mark Cubbon (1834-1861)",
+     "formula": "Moved the capital to Bengaluru, made districts and taluks, made Kannada the official language.",
+     "example": "The state's first railway, Bengaluru to Jolarpet, began in 1859.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "bowring",
+     "name": "Bowring and Chamaraja Wodeyar X",
+     "formula": "Bowring (1862-1870) reformed revenue and set up Public Instruction. Chamaraja Wodeyar X ruled from the 1881 Rendition.",
+     "example": "The People's Representative Assembly began in 1881; Diwans: Rangacharlu and Sheshadri Iyer.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "naalvadi",
+     "name": "Naalvadi Krishnaraja Wodeyar (1902-1940)",
+     "formula": "Gave J. N. Tata 371 acres for a science institute, set up the Legislative Assembly (1907), built the KRS dam, gave women the vote.",
+     "example": "Gandhiji called his Mysore \"Ramarajya\" and him \"Rajyashri\".",
+     "pages": [
+      80,
+      82
+     ]
+    },
+    {
+     "id": "mv",
+     "name": "Sir M. Vishveshwaraiah (Diwan 1912-1918)",
+     "formula": "\"Industrialization or Destruction\": Bhadravathi iron works, Mysuru Bank (1913), Kannada Sahitya Parishad (1915), Mysuru University (1916).",
+     "example": "First Kannadiga to get the Bharatha Ratna, in 1955.",
+     "pages": [
+      83,
+      84
+     ]
+    },
+    {
+     "id": "mirza",
+     "name": "Sir Mirza Ismail (Diwan 1926-1941)",
+     "formula": "HAL, glass and porcelain factories in Bengaluru, Mandya sugar factory, Irwin Canal, Brindavan Garden.",
+     "example": "NIMHANS and other hospitals were started in his time.",
+     "pages": [
+      84,
+      85
+     ]
+    },
+    {
+     "id": "reddy",
+     "name": "Mysore joins India",
+     "formula": "K. C. Reddy's Palace Satyagraha; a responsible government on 24 October 1947.",
+     "example": "Jayachamarajendra Wodeyar became the first Governor and K. C. Reddy the first Chief Minister.",
+     "pages": [
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keladi",
+   "title": "Keladi, Chitradurga and Yelahanka",
+   "items": [
+    {
+     "id": "hiriya",
+     "name": "Hiriya Venkatappa Nayaka",
+     "formula": "Made Keladi independent; beat the Portuguese at Mangaluru with Abbakka of Ullala.",
+     "example": "He set up a victory pillar at Hanagal after beating the Adil Shahis.",
+     "pages": [
+      89
+     ]
+    },
+    {
+     "id": "shivappa",
+     "name": "Shivappa Nayaka",
+     "formula": "Took Portuguese ports, title \"Padugadalodeya\"; built forts at Bekal and Chandragiri.",
+     "example": "He welcomed Goan traders and Christians and gave them land.",
+     "pages": [
+      89,
+      90
+     ]
+    },
+    {
+     "id": "chennammaji",
+     "name": "Rani Chennammaji of Keladi",
+     "formula": "Shivappa Nayaka's daughter-in-law; sheltered Shivaji's son Rajaram from the Mughals.",
+     "example": "She gave land for a church in Mangaluru; Hyder finally took Keladi.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "madakari",
+     "name": "Madakari Nayaka and Obavva",
+     "formula": "Chitradurga's greatest Nayaka, king at twelve; Hyder's first siege failed when Obavva killed the intruders at the secret path.",
+     "example": "Hyder later won; the fort has seven walls.",
+     "pages": [
+      92,
+      93
+     ]
+    },
+    {
+     "id": "kempe",
+     "name": "Kempegowda I and II",
+     "formula": "I: founded Bengaluru, built its fort and the Kempambudhi, Dharmambudhi, Halasuru and Sampangi lakes.",
+     "example": "II: built four watch towers at Bengaluru's limits; the family later ruled from Magadi.",
+     "pages": [
+      93,
+      94
+     ]
+    }
+   ]
+  },
+  {
+   "id": "regions",
+   "title": "Kodagu, Kittur and Tulunadu",
+   "items": [
+    {
+     "id": "kodagu",
+     "name": "Kodagu's history",
+     "formula": "The Haleri dynasty (founded by Veeraraja); Mudduraja made Muddurajakeri (Madikeri) the capital.",
+     "example": "The British took Kodagu in 1834 and exiled Chikkaveera Rajendra.",
+     "pages": [
+      95,
+      96
+     ]
+    },
+    {
+     "id": "amara",
+     "name": "Amarasullia revolt (1837)",
+     "formula": "Farmers rose against heavy land tax and held Sullia, Puttur, Kasaragod and Mangaluru for thirteen days.",
+     "example": "Leaders: Puttabasappa, Kalyanaswami, Guddemane Appayya Gowda.",
+     "pages": [
+      96,
+      97
+     ]
+    },
+    {
+     "id": "cariappa",
+     "name": "Two great soldiers of Kodagu",
+     "formula": "Field Marshal K. M. Cariappa, first Indian General and chief of independent India's forces.",
+     "example": "General K. S. Thimayya led India to victory against Pakistan. Kodagu joined Karnataka in 1956.",
+     "pages": [
+      97,
+      98
+     ]
+    },
+    {
+     "id": "kittur",
+     "name": "Rani Chennamma of Kittur",
+     "formula": "Collector Thackeray called her adopted son's claim illegal; she fought, and Thackeray was killed.",
+     "example": "Betrayed later, she was imprisoned at Bailhongal; she was the first Indian woman to oppose British rule.",
+     "pages": [
+      98,
+      99
+     ]
+    },
+    {
+     "id": "rayanna",
+     "name": "Sangolli Rayanna",
+     "formula": "Chennamma's follower who fought a guerrilla war against the British.",
+     "example": "Captured by traitors and hanged; a banyan tree grows on his grave at Nandagada.",
+     "pages": [
+      99
+     ]
+    },
+    {
+     "id": "tulu",
+     "name": "Tulunadu",
+     "formula": "Today's Dakshina Kannada and Udupi; long ruled by the Alupas; Abbakka of Ullala beat the Portuguese.",
+     "example": "Naga and Bhuta worship; Madhvacharya came from here; Kittel's Kannada dictionary was printed at the Basel Mission Press.",
+     "pages": [
+      100,
+      101
+     ]
+    },
+    {
+     "id": "tulufree",
+     "name": "Tulunadu's freedom fighters",
+     "formula": "Karnad Sadashiva Rao, the \"Deshabhakta\"; Attavar Yellappa, a minister in Netaji's Azad Hind Fauz.",
+     "example": "Kudmul Ranga Rao worked against untouchability; Canara, Corporation, Syndicate and Vijaya Banks began here.",
+     "pages": [
+      102,
+      103
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hk",
+   "title": "Hyderabad-Karnataka",
+   "items": [
+    {
+     "id": "halagali",
+     "name": "Revolt of the Halagali Bedas (1857)",
+     "formula": "The Bedanayakas refused the Arms Act's demand for permission to keep arms.",
+     "example": "290 were captured and 19 hanged; Rami shot three soldiers and died a martyr.",
+     "pages": [
+      104,
+      105
+     ]
+    },
+    {
+     "id": "sindhura",
+     "name": "Sindhura Lakshmana",
+     "formula": "Took from the rich and the British treasury and gave to the poor.",
+     "example": "He was shot dead by the British; his tomb is at Bilagi.",
+     "pages": [
+      105
+     ]
+    },
+    {
+     "id": "surapura",
+     "name": "Naalvadi Venkatappa Nayaka of Surapura",
+     "formula": "Planned to unite South Indian kings against the British in 1857; Surapura fell in 1858.",
+     "example": "Betrayed by Salar Jung, he was shot on the way to exile; twelve Nayakas ruled Surapura from 1636.",
+     "pages": [
+      106,
+      107
+     ]
+    },
+    {
+     "id": "liberation",
+     "name": "Liberation of Hyderabad-Karnataka",
+     "formula": "Leaders: Swami Ramananda Tirtha, Hardikar Manjappa (\"Gandhi of Karnataka\"), Vande Mataram Ramachandra Rao, Sharanagowda Inamdar (\"Sardar\").",
+     "example": "The Indian Army entered on 17 September 1948 and the Nizam surrendered.",
+     "pages": [
+      109,
+      111
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "chenn",
+   "text": "Rani Chennamma fought at Kittur; Rani Chennammaji ruled Keladi. They are two different queens."
+  },
+  {
+   "id": "diwans",
+   "text": "Vishveshwaraiah was Diwan from 1912 to 1918; Mirza Ismail later, from 1926 to 1941. Both served Naalvadi."
+  },
+  {
+   "id": "lalbagh",
+   "text": "Hyder Ali started the Lalbagh; Kempegowda II's watch tower stands there."
+  }
+ ]
+}

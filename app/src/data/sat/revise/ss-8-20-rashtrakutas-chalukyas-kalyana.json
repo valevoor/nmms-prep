@@ -1,0 +1,191 @@
+{
+ "chapter": "ss-8-20-rashtrakutas-chalukyas-kalyana",
+ "terms": [
+  {
+   "id": "mahasandhi",
+   "term": "Mahasandhivigrahi",
+   "meaning": "The minister for foreign affairs in the Rashtrakuta council.",
+   "pages": [
+    30
+   ]
+  },
+  {
+   "id": "gramapati",
+   "term": "Gramapati",
+   "meaning": "The village head (prabhugavunda), who also led the village army.",
+   "pages": [
+    30
+   ]
+  },
+  {
+   "id": "kampana",
+   "term": "Kampana",
+   "meaning": "A unit of village administration under the Kalyana Chalukyas, like today's hobli.",
+   "pages": [
+    34
+   ]
+  },
+  {
+   "id": "kadita",
+   "term": "Kaditavergade",
+   "meaning": "The officer who collected land revenue.",
+   "pages": [
+    34
+   ]
+  },
+  {
+   "id": "vachana",
+   "term": "Vachana literature",
+   "meaning": "Short sayings in everyday Kannada, the unique gift of this period.",
+   "pages": [
+    35
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "rash",
+   "title": "Rashtrakutas (753 to 973)",
+   "items": [
+    {
+     "id": "extent",
+     "name": "The Rashtrakuta kingdom",
+     "formula": "Kannadigas, once tributaries of the Chalukyas; their kingdom ran from the Narmada to the Cauvery.",
+     "example": "Founder: Dantidurga.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "amogha",
+     "name": "Amoghavarsha",
+     "formula": "A peace-loving king who made marriage ties with the Gangas and Pallavas.",
+     "example": "The Arab traveller Sulaiman called him one of the four great emperors of the world.",
+     "pages": [
+      29
+     ]
+    },
+    {
+     "id": "radmin",
+     "name": "Rashtrakuta administration",
+     "formula": "Rashtra (mandala), vishaya, nadu and grama, with the vishayapati, rashtrapati and nadagavunda.",
+     "example": "Income: land revenue, tolls and taxes on trades like ferries.",
+     "pages": [
+      30
+     ]
+    },
+    {
+     "id": "rlit",
+     "name": "Rashtrakuta literature",
+     "formula": "Shrivijaya's Kavirajamarga, the first Kannada work; Pampa's Adipurana and Vikramarjunavijaya; Ponna's Shanti Purana.",
+     "example": "Sanskrit: Trivikrama's Nalachampu, Halayudha's Kavirahasya.",
+     "pages": [
+      31
+     ]
+    },
+    {
+     "id": "vadda",
+     "name": "Vaddaradhane",
+     "formula": "A prose collection of Jain stories by Shivakotiacharya.",
+     "example": "It uses native Kannada words and comes before Pampa.",
+     "pages": [
+      31
+     ]
+    },
+    {
+     "id": "nadoja",
+     "name": "Nadoja award",
+     "formula": "Given each year by Kannada University, Hampi, in memory of Pampa.",
+     "example": "Salotgi in Vijayapura district was a leading centre of learning.",
+     "pages": [
+      31
+     ]
+    },
+    {
+     "id": "ellora",
+     "name": "Kailashnath temple at Ellora",
+     "formula": "A monolith built by Krishna I, from a rock 100 feet high, 276 feet long and 154 feet wide.",
+     "example": "The Elephanta caves near Mumbai have the Ardhanarishwara and Maheshamurti.",
+     "pages": [
+      32
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kal",
+   "title": "Chalukyas of Kalyana (973 to 1189)",
+   "items": [
+    {
+     "id": "tailapa",
+     "name": "Tailapa II",
+     "formula": "A Rashtrakuta tributary who beat Karka II, took Manyakheta and founded the Kalyana Chalukya kingdom.",
+     "example": "He ruled about 24 years.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "some1",
+     "name": "Someshwara I",
+     "formula": "Built Kalyana (today's Basava Kalyana in Bidar) as his capital.",
+     "example": "He beat Rajadhiraja Chola at Koppam.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "vik6",
+     "name": "Vikramaditya VI",
+     "formula": "The greatest Kalyana Chalukya; began the Chalukya Vikrama era in 1076 C.E.",
+     "example": "Vignaneshwara, author of Mitakshara, lived in his time.",
+     "pages": [
+      33
+     ]
+    },
+    {
+     "id": "basava",
+     "name": "Basaveshwara",
+     "formula": "Taught \"Kayave Kailasa\" (the body is Shiva's abode) and wrote vachanas in everyday Kannada.",
+     "example": "He set up the Anubhava Mantapa in 1162 C.E.; Karnataka named him its Cultural Leader in 2024.",
+     "pages": [
+      34
+     ]
+    },
+    {
+     "id": "klit",
+     "name": "Kalyana Chalukya literature",
+     "formula": "Ranna: Gadayuddha. Durgasimha: Panchatantra. Bilhana: Vikramankadeva Charita. Nayasena: Dharmamruta.",
+     "example": "Someshwara III's Manasollasa is a Sanskrit encyclopaedia.",
+     "pages": [
+      34,
+      35
+     ]
+    },
+    {
+     "id": "kart",
+     "name": "Kalyana Chalukya temples and mints",
+     "formula": "Kashi Vishweshwara at Lakkundi, Mahadev at Itagi, Trikuteshwara at Gadag.",
+     "example": "Mints at Lakkundi and Sudi made gadyana, pana and other coins.",
+     "pages": [
+      35
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "firstk",
+   "text": "Kavirajamarga (Shrivijaya) is the first Kannada work; Pampa is called Adikavi, the first poet."
+  },
+  {
+   "id": "kailas",
+   "text": "The Kailasanath at Ellora is Rashtrakuta; the Kailasanath at Kanchi is Pallava."
+  },
+  {
+   "id": "karka",
+   "text": "Karka II was the last Rashtrakuta; Tailapa II, who beat him, began the Kalyana Chalukyas."
+  }
+ ]
+}

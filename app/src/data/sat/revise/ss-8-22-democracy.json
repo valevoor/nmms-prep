@@ -1,0 +1,200 @@
+{
+ "chapter": "ss-8-22-democracy",
+ "terms": [
+  {
+   "id": "democracy",
+   "term": "Democracy",
+   "meaning": "Rule of the people. From Greek \"Demos\" (people) and \"Kratia\" (rule).",
+   "pages": [
+    43
+   ]
+  },
+  {
+   "id": "direct",
+   "term": "Direct democracy",
+   "meaning": "People themselves make policies and laws. Works only in small countries, such as Switzerland.",
+   "pages": [
+    44
+   ]
+  },
+  {
+   "id": "indirect",
+   "term": "Indirect (representative) democracy",
+   "meaning": "People elect representatives who make the laws. It suits big countries like India.",
+   "pages": [
+    44
+   ]
+  },
+  {
+   "id": "franchise",
+   "term": "Universal adult franchise",
+   "meaning": "The right of every adult to vote, whatever their caste, religion, language or gender.",
+   "pages": [
+    47
+   ]
+  },
+  {
+   "id": "byelection",
+   "term": "By-election",
+   "meaning": "An election to fill a seat that falls vacant within the five-year term.",
+   "pages": [
+    48
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "defs",
+   "title": "Meaning",
+   "items": [
+    {
+     "id": "ancient",
+     "name": "Democracy in ancient India",
+     "formula": "The Sabha and Samithi of the Vedic period.",
+     "example": "It works on \"one man, one vote\".",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "lincoln",
+     "name": "Abraham Lincoln's definition",
+     "formula": "Government of the people, by the people and for the people.",
+     "example": "He was a President of the USA.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "bryce",
+     "name": "Lord Bryce's definition",
+     "formula": "Power lies with the whole community, not with any one class.",
+     "example": "It stresses who holds power.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "finer",
+     "name": "Herman Finer's definition",
+     "formula": "Democracy is not only a form of government but also a way of life.",
+     "example": "It stresses daily life, not just elections.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "refer",
+     "name": "Tools of direct democracy",
+     "formula": "Referendum and initiative.",
+     "example": "It was practised in ancient Greece.",
+     "pages": [
+      44
+     ]
+    }
+   ]
+  },
+  {
+   "id": "feat",
+   "title": "Features and success",
+   "items": [
+    {
+     "id": "chars",
+     "name": "Main features of democracy",
+     "formula": "Consent of the people, free and fair elections at intervals, rule of law, rights, and a recognised opposition.",
+     "example": "Liberty and equality are its basis; it is against personality worship.",
+     "pages": [
+      44,
+      45
+     ]
+    },
+    {
+     "id": "success",
+     "name": "What democracy needs to succeed",
+     "formula": "Alert people, tolerance, good leaders, a strong opposition, educated voters and a free press.",
+     "example": "Efficient local bodies strengthen it too.",
+     "pages": [
+      45,
+      46
+     ]
+    },
+    {
+     "id": "merits",
+     "name": "Merits of democracy",
+     "formula": "Equality, decisions by debate, rights through an independent judiciary, peaceful change of government.",
+     "example": "It lowers the danger of revolution.",
+     "pages": [
+      46
+     ]
+    },
+    {
+     "id": "demerit",
+     "name": "A demerit of democracy",
+     "formula": "Representatives without education, skill or leadership, or with selfish aims, weaken it.",
+     "example": "Ignorance of social and economic issues does harm.",
+     "pages": [
+      46,
+      47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vote",
+   "title": "Voting and elections in India",
+   "items": [
+    {
+     "id": "age",
+     "name": "Voting age in India",
+     "formula": "18 years, lowered from 21 by the 61st Amendment of 1989.",
+     "example": "Someone born in 2008 could vote in 2026.",
+     "pages": [
+      47
+     ]
+    },
+    {
+     "id": "cand",
+     "name": "What to look for in a candidate",
+     "formula": "Keen to serve, approachable, educated and honest, not corrupt, with no criminal record.",
+     "example": "Voters must not be swayed by caste, money or muscle power.",
+     "pages": [
+      47,
+      48
+     ]
+    },
+    {
+     "id": "general",
+     "name": "General elections",
+     "formula": "Held every five years in India.",
+     "example": "Other countries use other periods.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "ec",
+     "name": "Election Commission of India",
+     "formula": "One Chief Election Commissioner and two Election Commissioners, appointed by the President; based in New Delhi.",
+     "example": "State Election Commissions hold local body elections.",
+     "pages": [
+      48
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "india",
+   "text": "India is too large for direct democracy, so it has representative democracy. Switzerland has direct democracy."
+  },
+  {
+   "id": "amend",
+   "text": "The voting age became 18 through the 61st Amendment; the 42nd Amendment added fundamental duties."
+  },
+  {
+   "id": "bygen",
+   "text": "A by-election fills one vacant seat mid-term; a general election is held for all seats every five years."
+  }
+ ]
+}

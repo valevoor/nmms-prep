@@ -1,0 +1,157 @@
+{
+ "chapter": "ss-7-03-advent-of-europeans",
+ "terms": [
+  {
+   "id": "searoute",
+   "term": "New sea route to India",
+   "meaning": "Found by Vasco da Gama, who reached Calicut on 17 May 1498 C.E.",
+   "pages": [
+    35
+   ]
+  },
+  {
+   "id": "dastak",
+   "term": "Dastak",
+   "meaning": "A special pass that let British traders trade without paying tax.",
+   "pages": [
+    38
+   ]
+  },
+  {
+   "id": "carnatic",
+   "term": "Carnatic wars",
+   "meaning": "Wars between the English and French in India for political and trade supremacy.",
+   "pages": [
+    39
+   ]
+  },
+  {
+   "id": "monopoly",
+   "term": "Trade monopoly",
+   "meaning": "Sole control of a trade. The Portuguese first had it in the eastern trade.",
+   "pages": [
+    35
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "port",
+   "title": "The Portuguese (1498-1961)",
+   "items": [
+    {
+     "id": "first",
+     "name": "First and last Europeans in India",
+     "formula": "The Portuguese were both the first to come and the last to leave.",
+     "example": "Their aims: trade monopoly, colonies and spreading Christianity.",
+     "pages": [
+      35,
+      37
+     ]
+    },
+    {
+     "id": "albu",
+     "name": "Portuguese governors",
+     "formula": "Francisco de Almeida was the first Viceroy. Albuquerque (1509) took Goa from the Sultan of Vijayapur in 1510.",
+     "example": "Goa stayed their capital; they also held Diu, Daman, Salsette and Hugli.",
+     "pages": [
+      36,
+      37
+     ]
+    },
+    {
+     "id": "pdecline",
+     "name": "Decline of the Portuguese",
+     "formula": "Strong Dutch and English navies, corrupt officials, forced conversions.",
+     "example": "The fall of Vijayanagara hurt their trade.",
+     "pages": [
+      36
+     ]
+    },
+    {
+     "id": "goa",
+     "name": "Liberation of Goa",
+     "formula": "Portugal stayed after 1947; the Indian Navy drove them out in 1961 C.E.",
+     "example": "Goa, Diu and Daman were their last possessions.",
+     "pages": [
+      37
+     ]
+    }
+   ]
+  },
+  {
+   "id": "others",
+   "title": "Dutch, English and French",
+   "items": [
+    {
+     "id": "dutch",
+     "name": "The Dutch",
+     "formula": "Dutch East India Company, 1602 C.E.; capital Pulicat.",
+     "example": "Centres: Surat, Machalipatnam, Nagapatnam, Cochin. Beaten by the English, they turned to South East Asia.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "english",
+     "name": "The English East India Company",
+     "formula": "Founded in 1600 C.E. with Queen Elizabeth's permission.",
+     "example": "Sir Thomas Roe got trading rights at Surat from Jahangir in 1615; Calcutta was their first capital.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "farrukh",
+     "name": "How the English grew strong",
+     "formula": "Mughal Emperor Farrukh Siyyar gave them dastaks for duty-free trade in Bengal.",
+     "example": "They built forts, hired soldiers and stored arms.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "french",
+     "name": "The French",
+     "formula": "Last to come: French East India Company, 1664; first warehouse at Surat, 1668; capital Pondicherry.",
+     "example": "Governor Dupleix spread French influence in Hyderabad and the Carnatic.",
+     "pages": [
+      39
+     ]
+    },
+    {
+     "id": "fdecline",
+     "name": "Decline of the French",
+     "formula": "Little support from France, revolutions at home, a weaker navy than the English.",
+     "example": "Their centres: Pondicherry, Mahe, Karaikal, Chandranagar.",
+     "pages": [
+      39
+     ]
+    },
+    {
+     "id": "order",
+     "name": "Order of the East India Companies",
+     "formula": "British 1600, Dutch 1602, French 1664.",
+     "example": "The British company came first, 2 years before the Dutch.",
+     "pages": [
+      39
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "firstco",
+   "text": "The Portuguese reached India first, but the first East India Company was the British one (1600)."
+  },
+  {
+   "id": "capitals",
+   "text": "Capitals: Portuguese Goa, Dutch Pulicat, French Pondicherry, English first Calcutta."
+  },
+  {
+   "id": "almeida",
+   "text": "Almeida was the first Portuguese Viceroy; Albuquerque came later and took Goa."
+  }
+ ]
+}

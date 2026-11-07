@@ -1,0 +1,184 @@
+{
+ "chapter": "ss-8-19-chalukyas-badami-pallavas-kanchi",
+ "terms": [
+  {
+   "id": "karnatabala",
+   "term": "Karnatabala",
+   "meaning": "The famous army of the Badami Chalukyas.",
+   "pages": [
+    23
+   ]
+  },
+  {
+   "id": "vishaya",
+   "term": "Vishaya",
+   "meaning": "A district in the Chalukya kingdom, run by a vishayadhipati.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "tripadi",
+   "term": "Tripadi",
+   "meaning": "A three-line Kannada verse form that began in this period.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "vesara",
+   "term": "Vesara style",
+   "meaning": "The Chalukya style of temple architecture.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "nayannar",
+   "term": "Nayannars and Alwars",
+   "meaning": "Nayannars: 63 saints of the Shaiva faith. Alwars: 12 saints of the Vaishnava faith.",
+   "pages": [
+    27
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "chal",
+   "title": "Chalukyas of Badami (540 to 753)",
+   "items": [
+    {
+     "id": "jaya",
+     "name": "Founder of the Badami Chalukyas",
+     "formula": "Raja Jayasimha.",
+     "example": "They ruled for about 200 years, from the 6th to the mid 8th century.",
+     "pages": [
+      22,
+      23
+     ]
+    },
+    {
+     "id": "pul2",
+     "name": "Pulakeshi II's victories",
+     "formula": "Defeated the Gangas, Kadambas, Alupas and the Pallava Mahendravarma; stopped Harsha at the Narmada.",
+     "example": "Titles: Dakshinapatheshwara, Lord of the Peninsula.",
+     "pages": [
+      22
+     ]
+    },
+    {
+     "id": "vengi",
+     "name": "Chalukyas of Vengi",
+     "formula": "Pulakeshi II made his brother Kubja Vishnuvardhana head of Vengi.",
+     "example": "That branch ruled for about five centuries.",
+     "pages": [
+      22,
+      23
+     ]
+    },
+    {
+     "id": "hiuen",
+     "name": "Foreign views of Pulakeshi II",
+     "formula": "Hiuen Tsang praised his just rule and brave army.",
+     "example": "Arab historians say he had ties with the Persian king Khusru II.",
+     "pages": [
+      23
+     ]
+    },
+    {
+     "id": "fall",
+     "name": "End of the Badami Chalukyas",
+     "formula": "Narasimhavarma I took Vatapi to avenge his father.",
+     "example": "Under the last king Kirtivarma, the Rashtrakutas took over.",
+     "pages": [
+      23
+     ]
+    },
+    {
+     "id": "clit",
+     "name": "Literature under the Badami Chalukyas",
+     "formula": "Kannada was the state language; Kappe Arabhatta's inscription has a tripadi.",
+     "example": "Sanskrit: Ravikirti, Vijjika (Kaumudi Mahotsav), Akalanka.",
+     "pages": [
+      24
+     ]
+    },
+    {
+     "id": "cart",
+     "name": "Chalukya temples",
+     "formula": "Aihole was a cradle of temple building; the style matured at Pattadakallu (Virupaksha, Mallikarjuna).",
+     "example": "Badami caves have Vishnu, Varaha, Harihara and Ardhanarishwara.",
+     "pages": [
+      24,
+      25
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pall",
+   "title": "Pallavas of Kanchi (350 to 895)",
+   "items": [
+    {
+     "id": "pfirst",
+     "name": "Beginning and end of the Pallavas",
+     "formula": "First kings of Tamil Nadu, once officials of the Shatavahanas; first king Shivaskandavarma.",
+     "example": "Aditya Chola ended their rule under Aparajita.",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "nara",
+     "name": "Narasimhavarma I",
+     "formula": "Most famous Pallava: beat Pulakeshi II, took Vatapi, titles Mahamalla and Vatapikonda.",
+     "example": "He built Mahabalipuram, a city on the coast near Kanchi.",
+     "pages": [
+      25
+     ]
+    },
+    {
+     "id": "padmin",
+     "name": "Pallava administration",
+     "formula": "Kingdom in mandala, nadu and grama.",
+     "example": "The gramasabha handled village problems and the gramabhojaka ran the village.",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "plit",
+     "name": "Pallava literature",
+     "formula": "Bharavi: Kiratarjuniya. Dandi: Dashakumar Charita.",
+     "example": "Mahendravarma wrote Matta Vilasa Prahasana and Bhagavadajjukam.",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "part",
+     "name": "Pallava temples",
+     "formula": "Monolithic Pancharathas and the \"Arjuna's Meditation\" carving at Mahabalipuram.",
+     "example": "At Kanchi: Kailasanath, Ekambarnath and Vaikunta Perumal.",
+     "pages": [
+      27
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "pulnar",
+   "text": "Pulakeshi II beat Mahendravarma; then Mahendravarma's son Narasimhavarma I beat Pulakeshi II."
+  },
+  {
+   "id": "vijjika",
+   "text": "Vijjika, who wrote Kaumudi Mahotsav, was Pulakeshi II's daughter-in-law, not his daughter."
+  },
+  {
+   "id": "nayalw",
+   "text": "63 Nayannars were Shaiva; 12 Alwars were Vaishnava."
+  }
+ ]
+}

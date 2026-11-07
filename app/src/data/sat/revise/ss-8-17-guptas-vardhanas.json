@@ -1,0 +1,225 @@
+{
+ "chapter": "ss-8-17-guptas-vardhanas",
+ "terms": [
+  {
+   "id": "guptaera",
+   "term": "Gupta era",
+   "meaning": "The era believed to begin with Chandragupta I's reign in 320 C.E.",
+   "pages": [
+    7
+   ]
+  },
+  {
+   "id": "prashasti",
+   "term": "Allahabad Prashasti",
+   "meaning": "Harisena's Sanskrit praise of Samudragupta, carved on Ashoka's pillar.",
+   "pages": [
+    7
+   ]
+  },
+  {
+   "id": "vikram",
+   "term": "Vikramaditya",
+   "meaning": "The title earned by Chandragupta II.",
+   "pages": [
+    8
+   ]
+  },
+  {
+   "id": "kumaramatya",
+   "term": "Kumar Amatyas",
+   "meaning": "The officials who made up the Gupta bureaucracy.",
+   "pages": [
+    9
+   ]
+  },
+  {
+   "id": "nalanda",
+   "term": "Nalanda",
+   "meaning": "An ancient Buddhist university, supported by the Guptas and Harsha.",
+   "pages": [
+    11,
+    12
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "guptas",
+   "title": "The Gupta kings",
+   "items": [
+    {
+     "id": "cg1",
+     "name": "Chandragupta I",
+     "formula": "Married a Licchavi princess and was called Maharajadhiraja.",
+     "example": "Srigupta founded the dynasty, which rose in the 4th century C.E.",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "samudra",
+     "name": "Samudragupta",
+     "formula": "Ruled most of India and performed the Aswamedha yaga.",
+     "example": "A poet and musician too: his gold coins show him playing the veena.",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "cg2",
+     "name": "Chandragupta II",
+     "formula": "Defeated the Sakas and added Western India.",
+     "example": "His reign is remembered for literature and art more than battles.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "pillar",
+     "name": "Iron Pillar at Mehrauli",
+     "formula": "23 feet 8 inches tall, about 6,000 kg, and still not rusted.",
+     "example": "It shows the metal skill of the time.",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "decline",
+     "name": "Why the Gupta Empire declined",
+     "formula": "Hun attacks, powerful vassals, no large army of its own, and collapse of trade.",
+     "example": "Pataliputra shrank to the size of a village.",
+     "pages": [
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lit",
+   "title": "Literature and science",
+   "items": [
+    {
+     "id": "kalidasa",
+     "name": "Kalidasa's works",
+     "formula": "Poems: Meghadoota, Raghuvamsha, Kumarasambhava, Ritu Samhara. Play: Abhijnana Shakuntala.",
+     "example": "In Meghadoota, an exiled Yaksha sends a cloud with a message to his wife.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "others",
+     "name": "Other Gupta-age works",
+     "formula": "Sudraka: Mricchakatika. Vishakhadatta: Mudrarakshasa.",
+     "example": "Puranas and Dharmashastras were also written then.",
+     "pages": [
+      8
+     ]
+    },
+    {
+     "id": "shak",
+     "name": "Story of Abhijnana Shakuntala",
+     "formula": "Durvasa's curse makes Dushyanta forget Shakuntala; a ring found in a fish restores his memory.",
+     "example": "Their son is Sarvadamana.",
+     "pages": [
+      8,
+      9
+     ]
+    },
+    {
+     "id": "medicine",
+     "name": "Gupta-age medicine",
+     "formula": "Dhanwantari: father of Indian medicine. Charaka: Charaka Samhita. Sushruta: surgery, Sushruta Samhita.",
+     "example": "Sushruta mentions a separate wing to treat soldiers.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "arya",
+     "name": "Aryabhata",
+     "formula": "Astronomer and mathematician, believed to have invented zero.",
+     "example": "He explained eclipses: solar when the Moon is between Sun and Earth, lunar when the Earth is between.",
+     "pages": [
+      10
+     ]
+    },
+    {
+     "id": "varaha",
+     "name": "Varahamihira",
+     "formula": "Astronomer who wrote Panchasiddhantika.",
+     "example": "Also Bruhat Samhita, Bruhat Jataka and Laghu Jataka.",
+     "pages": [
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vard",
+   "title": "The Vardhanas",
+   "items": [
+    {
+     "id": "vfound",
+     "name": "Founder and kings of the Vardhanas",
+     "formula": "Founder Pushyabhuti; famous kings Prabhakaravardhana and Harshavardhana.",
+     "example": "They ruled from Thaneswar in the 6th century.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "harsha",
+     "name": "Harsha's conquests",
+     "formula": "He beat Shashanka of Bengal, took Kanauj, and ruled Bengal and Magadha.",
+     "example": "Pulikeshi II stopped him at the Narmada, as Ravikirti's Aihole inscription records.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "vadmin",
+     "name": "Harsha's officials",
+     "formula": "Mahasandhivigraha (negotiator), Mahabaladhikruta (general), Bhogapati (tax), Doota.",
+     "example": "Land tax was the main income.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "sources",
+     "name": "Sources for Harsha's time",
+     "formula": "Bana's Harshacharita and Hiuen Tsang's writings.",
+     "example": "Some inscriptions too.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "nal",
+     "name": "Facts about Nalanda",
+     "formula": "Harsha gifted a 25 metre bronze Buddha.",
+     "example": "Nagarjuna and Dharmapala taught there; Hiuen Tsang stayed there.",
+     "pages": [
+      12
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "cgs",
+   "text": "Chandragupta I began the Gupta era; Chandragupta II was Vikramaditya. Both differ from Chandragupta Maurya."
+  },
+  {
+   "id": "mudra",
+   "text": "Mudrarakshasa is by Vishakhadatta, not Kalidasa."
+  },
+  {
+   "id": "harshwin",
+   "text": "Harsha lost to Pulikeshi II at the Narmada; Pulikeshi was the winner."
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "chapter": "ss-7-13-north-america",
+ "terms": [
+  {
+   "id": "cordillera",
+   "term": "Western Cordilleras",
+   "meaning": "Young folded mountains, like the Himalayas, from Alaska to Panama; the Rockies are the main range.",
+   "pages": [
+    175
+   ]
+  },
+  {
+   "id": "prairie",
+   "term": "Prairies",
+   "meaning": "The vast, treeless Great Central Plains, called the \"Wheat bowl\" of the world.",
+   "pages": [
+    176
+   ]
+  },
+  {
+   "id": "shield",
+   "term": "Canadian Shield",
+   "meaning": "Very old rocks around Hudson Bay, like the Deccan Plateau.",
+   "pages": [
+    177
+   ]
+  },
+  {
+   "id": "taiga",
+   "term": "Taiga",
+   "meaning": "The belt of evergreen coniferous forest south of the Tundra: pine, fir, spruce.",
+   "pages": [
+    182
+   ]
+  },
+  {
+   "id": "cropbelt",
+   "term": "Crop belt",
+   "meaning": "A region specialising in one crop, such as the Corn belt or Cotton belt.",
+   "pages": [
+    186
+   ]
+  },
+  {
+   "id": "lumberjack",
+   "term": "Lumberjack",
+   "meaning": "A person who cuts timber in Canada.",
+   "pages": [
+    190
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "loc",
+   "title": "Location",
+   "items": [
+    {
+     "id": "extent",
+     "name": "Location of North America",
+     "formula": "Entirely north of the equator, 7°N to 84°N; the Bering Strait separates it from Asia.",
+     "example": "The Isthmus of Panama links it to South America.",
+     "pages": [
+      173
+     ]
+    },
+    {
+     "id": "size",
+     "name": "Size of North America",
+     "formula": "Third largest continent, after Asia and Africa: 24.24 million sq km, about 7 times India.",
+     "example": "24 countries; the largest are Canada, USA and Mexico. Greenland is its largest island.",
+     "pages": [
+      173
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phys",
+   "title": "Physical divisions",
+   "items": [
+    {
+     "id": "fourdiv",
+     "name": "Four physical divisions of North America",
+     "formula": "Western Cordilleras (Rockies), Great Central Plains, Canadian Shield, Appalachian Highlands.",
+     "example": "Compare: Rockies like the Himalayas, Shield like the Deccan.",
+     "pages": [
+      174
+     ]
+    },
+    {
+     "id": "highlow",
+     "name": "Highest and lowest points",
+     "formula": "Mount McKinley (6194 m) is the highest; Death Valley (86 m below sea level) the lowest.",
+     "example": "Plateaus between the ranges: Columbia, Colorado, Mexican.",
+     "pages": [
+      175
+     ]
+    },
+    {
+     "id": "canyon",
+     "name": "Grand Canyon and Old Faithful",
+     "formula": "The Colorado river cut the Grand Canyon (about 1800 m deep, 3 to 29 km wide).",
+     "example": "Old Faithful is a geyser in Yellowstone National Park.",
+     "pages": [
+      176,
+      179
+     ]
+    },
+    {
+     "id": "appal",
+     "name": "Appalachian Highlands",
+     "formula": "Old folded mountains worn down, from Newfoundland to Alabama.",
+     "example": "Rich in coal, lead, zinc and iron; the St. Lawrence valley separates them from the Labrador plateau.",
+     "pages": [
+      177
+     ]
+    },
+    {
+     "id": "rivers",
+     "name": "Rivers of North America",
+     "formula": "Mississippi and Missouri drain 2/3 of the land; the Mississippi flows into the Gulf of Mexico.",
+     "example": "The St. Lawrence passes the Great Lakes and is frozen 3 months a year.",
+     "pages": [
+      178,
+      179
+     ]
+    },
+    {
+     "id": "lakes",
+     "name": "The Great Lakes (HOMES)",
+     "formula": "Huron, Ontario, Michigan, Erie and Superior.",
+     "example": "Superior is the largest freshwater lake in the world; Chicago is on Lake Michigan.",
+     "pages": [
+      179,
+      180
+     ]
+    }
+   ]
+  },
+  {
+   "id": "veg",
+   "title": "Climate and vegetation",
+   "items": [
+    {
+     "id": "tundra",
+     "name": "Tundra",
+     "formula": "Inside the Arctic Circle: mosses and lichens; reindeer, caribou and polar bears.",
+     "example": "Found in Canada, Alaska and Greenland.",
+     "pages": [
+      182
+     ]
+    },
+    {
+     "id": "forests",
+     "name": "Other forest belts",
+     "formula": "Deciduous (oak, chestnut) east of the Great Lakes; tropical (mahogany) in Mexico and the West Indies.",
+     "example": "California has a Mediterranean climate; the south-west has cactus deserts.",
+     "pages": [
+      183,
+      185
+     ]
+    }
+   ]
+  },
+  {
+   "id": "econ",
+   "title": "Farming, minerals and people",
+   "items": [
+    {
+     "id": "farming",
+     "name": "Farming in North America",
+     "formula": "Only ten percent of the land is farmed, but output is huge: wheat in the Prairies, maize in USA and Mexico.",
+     "example": "Cuba is the \"Sugar bowl of the world\"; California is the \"Wine Country\".",
+     "pages": [
+      186,
+      187
+     ]
+    },
+    {
+     "id": "minerals",
+     "name": "Minerals of North America",
+     "formula": "Gold in California; iron around Lake Superior; Mexico leads in silver; USA leads in copper.",
+     "example": "Appalachian coal; USA is the largest coal exporter.",
+     "pages": [
+      188
+     ]
+    },
+    {
+     "id": "industry",
+     "name": "Industries of North America",
+     "formula": "Pittsburgh is the \"Steel city\"; Chicago is known for plastics and meat packing.",
+     "example": "Canada is a top exporter of paper, pulp and newsprint.",
+     "pages": [
+      190,
+      191
+     ]
+    },
+    {
+     "id": "people",
+     "name": "People of North America",
+     "formula": "Mostly Europeans, American Indians and Africans, speaking English, Spanish or French.",
+     "example": "About 98% live in towns; the east is most crowded, the icy north almost empty.",
+     "pages": [
+      191,
+      192
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "third",
+   "text": "North America is the third largest continent; Asia and Africa are bigger."
+  },
+  {
+   "id": "homes",
+   "text": "Lake Superior, not Michigan, is the largest of the Great Lakes."
+  },
+  {
+   "id": "rockapp",
+   "text": "The Rockies are young folded mountains in the west; the Appalachians are old, worn-down mountains in the east."
+  }
+ ]
+}

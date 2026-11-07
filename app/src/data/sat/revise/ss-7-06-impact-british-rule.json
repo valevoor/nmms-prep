@@ -1,0 +1,217 @@
+{
+ "chapter": "ss-7-06-impact-british-rule",
+ "terms": [
+  {
+   "id": "permanent",
+   "term": "Permanent Land Revenue System",
+   "meaning": "Cornwallis's 1793 system in Bengal, Bihar and Odisha: zamindars collected a fixed land tax as government agents.",
+   "pages": [
+    61
+   ]
+  },
+  {
+   "id": "ryotwari",
+   "term": "Ryotwari System",
+   "meaning": "Farmers paid land tax straight to the government, with no middlemen.",
+   "pages": [
+    62
+   ]
+  },
+  {
+   "id": "mahalwari",
+   "term": "Mahalwari System",
+   "meaning": "Land tax fixed for a whole mahal (village or estate), collected by the local zamindar.",
+   "pages": [
+    62
+   ]
+  },
+  {
+   "id": "drain",
+   "term": "Drain of wealth",
+   "meaning": "Dadabhai Navroji's idea that India grew poor because huge wealth flowed to England.",
+   "pages": [
+    67
+   ]
+  },
+  {
+   "id": "diarchy",
+   "term": "Diarchy",
+   "meaning": "Rule shared between two authorities. The 1935 Act brought it in at the Centre.",
+   "pages": [
+    69
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "land",
+   "title": "Land revenue",
+   "items": [
+    {
+     "id": "bidding",
+     "name": "Warren Hastings' bidding system",
+     "formula": "Tax collection went to the highest bidder.",
+     "example": "Zamindars bid high but couldn't collect, so income varied.",
+     "pages": [
+      61
+     ]
+    },
+    {
+     "id": "peffect",
+     "name": "Effect of the Permanent System on farmers",
+     "formula": "Zamindars overtaxed them, didn't improve farming, and demanded tax even when crops failed.",
+     "example": "Output fell and bonded labour grew.",
+     "pages": [
+      61,
+      62
+     ]
+    },
+    {
+     "id": "munro",
+     "name": "Ryotwari details",
+     "formula": "Brought in by Sir Thomas Munroe in Madras province in 1801, in South and West India.",
+     "example": "Tax was half the produce, due even after floods or drought.",
+     "pages": [
+      62
+     ]
+    },
+    {
+     "id": "mahal",
+     "name": "Mahalwari details",
+     "formula": "Began in 1833 in Uttar Pradesh, parts of Madhya Pradesh and Punjab.",
+     "example": "Mahal means village or estate.",
+     "pages": [
+      62
+     ]
+    },
+    {
+     "id": "overall",
+     "name": "Overall effect of British land policy",
+     "formula": "Land became something to buy and sell; cash crops replaced food crops.",
+     "example": "Cotton, jute and tobacco paid the British, but caused food shortage.",
+     "pages": [
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "edu",
+   "title": "English education",
+   "items": [
+    {
+     "id": "charter",
+     "name": "Charter Act of 1813",
+     "formula": "Set aside one lakh rupees for Indians' education.",
+     "example": "Nothing was spent until 1823.",
+     "pages": [
+      63
+     ]
+    },
+    {
+     "id": "medium",
+     "name": "Medium of instruction",
+     "formula": "In 1835 William Bentick chose English and western science, based on Macaulay's note.",
+     "example": "Macaulay looked down on Indian knowledge.",
+     "pages": [
+      64,
+      65
+     ]
+    },
+    {
+     "id": "scholars",
+     "name": "Europeans who praised Indian culture",
+     "formula": "William Jones founded the Asiatic Society of Bengal (1784); Charles Wilkins translated the Bhagavadgita (1785).",
+     "example": "Max Muller translated the Rig Veda.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "wood",
+     "name": "Wood's education policy",
+     "formula": "The 1854 policy, from Charles Wood's report; universities at Bombay, Calcutta and Madras in 1857.",
+     "example": "English became the official language in 1844.",
+     "pages": [
+      65
+     ]
+    },
+    {
+     "id": "eduimpact",
+     "name": "Effects of western education",
+     "formula": "Indians of different languages could talk in English, which helped nationalism.",
+     "example": "Traditional education declined; new literary movements began.",
+     "pages": [
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "econ",
+   "title": "Economy and constitution",
+   "items": [
+    {
+     "id": "trade",
+     "name": "British trade policy",
+     "formula": "India was to export raw materials and import British machine goods.",
+     "example": "Open trade pushed Indian cottage industries towards ruin; Adam Smith called the British \"plunderers\".",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "acts",
+     "name": "Regulating Act and Pitt's India Act",
+     "formula": "1773: the first milestone, a constitution for the Company. 1784: William Pitt made the Company part of the government.",
+     "example": "Warren Hastings put the 1773 Act into effect.",
+     "pages": [
+      68
+     ]
+    },
+    {
+     "id": "morley",
+     "name": "Morley-Minto Reforms (1909)",
+     "formula": "Enlarged the central and provincial legislatures and let some Indians in.",
+     "example": "They gave no real responsibility to people's representatives.",
+     "pages": [
+      68,
+      69
+     ]
+    },
+    {
+     "id": "montagu",
+     "name": "Montagu-Chelmsford Reforms (1919)",
+     "formula": "Followed Montagu's 1917 promise of more Indian representation and self-government.",
+     "example": "A High Commissioner for India was appointed in London.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "act1935",
+     "name": "Government of India Act 1935",
+     "formula": "A federation of states and provinces; diarchy at the Centre; responsible governments in provinces.",
+     "example": "It is a major milestone.",
+     "pages": [
+      69
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "rev",
+   "text": "Permanent: Cornwallis, zamindars. Ryotwari: Munroe, farmers pay directly. Mahalwari: tax per village."
+  },
+  {
+   "id": "direct",
+   "text": "Paying tax directly (Ryotwari) did not make it lighter: the tax was still very high."
+  },
+  {
+   "id": "univ",
+   "text": "The policy was 1854, but the three universities opened in 1857."
+  }
+ ]
+}

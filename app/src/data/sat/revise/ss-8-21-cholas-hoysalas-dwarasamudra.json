@@ -1,0 +1,191 @@
+{
+ "chapter": "ss-8-21-cholas-hoysalas-dwarasamudra",
+ "terms": [
+  {
+   "id": "ur",
+   "term": "Ur",
+   "meaning": "The committee of villagers in every Chola village.",
+   "pages": [
+    38
+   ]
+  },
+  {
+   "id": "mahasabha",
+   "term": "Mahasabha",
+   "meaning": "The elected village committee of each kurram, also called perumguri; its members were perumakkal.",
+   "pages": [
+    38
+   ]
+  },
+  {
+   "id": "garuda",
+   "term": "Garuda",
+   "meaning": "The Hoysala king's special guards, who gave up their lives when he died.",
+   "pages": [
+    40
+   ]
+  },
+  {
+   "id": "madanika",
+   "term": "Madanika (Shilabalika)",
+   "meaning": "A carved female figure on the pillar brackets, as at the Chennakeshava temple, Beluru.",
+   "pages": [
+    41
+   ]
+  },
+  {
+   "id": "vishisht",
+   "term": "Vishishtadvaita",
+   "meaning": "The faith Ramanujacharya spread across Karnataka under Vishnuvardhana.",
+   "pages": [
+    40
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "chola",
+   "title": "The Cholas (850 to 1279)",
+   "items": [
+    {
+     "id": "cfound",
+     "name": "Founders of the Chola kingdom",
+     "formula": "Karikala Chola, by Sangam literature; Vijayalaya Chola revived it with Thanjavur as capital.",
+     "example": "They ruled from the 9th to the 13th century, after the Pallavas.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "rajaraja",
+     "name": "Rajaraja Chola I",
+     "formula": "Beat the Cheras, Gangas and Pandyas, built a navy and captured Sri Lanka.",
+     "example": "He built the Brihadeeshwara temple at Thanjavur.",
+     "pages": [
+      37
+     ]
+    },
+    {
+     "id": "cadmin",
+     "name": "Chola village self-government",
+     "formula": "Members were elected, but only Sanskrit scholars and rich people could stand.",
+     "example": "One-sixth of the crop was taken as tax.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "lakes",
+     "name": "Chola irrigation",
+     "formula": "They built many lakes, including Bellandur lake near Bangalore.",
+     "example": "A huge pond at Gangaikonda Cholapuram.",
+     "pages": [
+      38
+     ]
+    },
+    {
+     "id": "brihad",
+     "name": "Brihadeeshwara temple",
+     "formula": "500 feet tall in a courtyard 250 feet wide, with a 200 foot shikara.",
+     "example": "The Cholas were Shaivites.",
+     "pages": [
+      39
+     ]
+    },
+    {
+     "id": "ckarnataka",
+     "name": "Chola temples in Karnataka",
+     "formula": "Aprameya near Channapatna, Choleshwara at Begur, Mukteshwara near Binnamangala.",
+     "example": "Uttaramerur was their famous agrahara.",
+     "pages": [
+      39
+     ]
+    },
+    {
+     "id": "tamil",
+     "name": "Tamil literature under the Cholas",
+     "formula": "Kamba's Ramayana, Sekkilar's Periya Purana, Thirukkadeva's Jeevaka Chintamani.",
+     "example": "The empire weakened under Rajendra Chola III and fell to the Pandyas.",
+     "pages": [
+      39
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "title": "The Hoysalas of Dwarasamudra (984 to 1346)",
+   "items": [
+    {
+     "id": "sala",
+     "name": "How the Hoysalas got their name",
+     "formula": "Sala killed a tiger at Sosevuru (Angadi, Mudigere taluk) when the monk Sudatta said \"Hoysala!\".",
+     "example": "Sala was the founder.",
+     "pages": [
+      39
+     ]
+    },
+    {
+     "id": "vishnu",
+     "name": "Vishnuvardhana",
+     "formula": "Won Gangavadi from the Cholas, title Talakadugonda; built the Kirtinarayan temple and Chennakeshava at Belur.",
+     "example": "Vikramaditya VI of the Chalukyas defeated him.",
+     "pages": [
+      39,
+      40
+     ]
+    },
+    {
+     "id": "hadmin",
+     "name": "Hoysala administration",
+     "formula": "Provincial system; gowda, senabova and talawara in villages.",
+     "example": "Lakes: Shanti Sagara, Ballalaraya Samudra, Vishnu Samudra. The kingdom declined under Ballala III.",
+     "pages": [
+      40
+     ]
+    },
+    {
+     "id": "hlit",
+     "name": "Hoysala literature",
+     "formula": "Janna: Yashodhara Charite. Harihara: Girija Kalyana. Raghavanka: Harishchandra Kavya. Keshiraja: Shabdamani Darpana.",
+     "example": "Rudrabhatta: Jagannatha Vijaya. Ramanujacharya: Sreebhasya.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "hart",
+     "name": "Features of Hoysala temples",
+     "formula": "Carved in soap stone, with a star-shaped sanctum, jagati, decorative panels, shikara and pillars.",
+     "example": "Five features in all.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "htemples",
+     "name": "Hoysala temples and sculptors",
+     "formula": "Halebidu's Hoysaleshwara (built by Ketamalla); Somanathapura's Keshava (by Somadandanayaka).",
+     "example": "Sculptors: Dasoja, Chavana, Jakana and Dankana.",
+     "pages": [
+      42
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "bigtemple",
+   "text": "Brihadeeshwara at Thanjavur is Chola; Chennakeshava at Belur is Hoysala."
+  },
+  {
+   "id": "talak",
+   "text": "Talakadugonda was Vishnuvardhana's title for taking Gangavadi from the Cholas; Vatapikonda was a Pallava title."
+  },
+  {
+   "id": "elect",
+   "text": "Chola village elections were not open to all: only Sanskrit scholars and the rich could stand."
+  }
+ ]
+}

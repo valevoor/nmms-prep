@@ -1,0 +1,180 @@
+{
+ "chapter": "ss-8-27-biosphere",
+ "terms": [
+  {
+   "id": "bio",
+   "term": "Biosphere",
+   "meaning": "The part of the Earth where life exists: the fourth part of the Earth, with all its living things.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "ecology",
+   "term": "Ecology",
+   "meaning": "The study of how living things interact with their physical, chemical and biological surroundings.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "balance",
+   "term": "Ecological balance",
+   "meaning": "The natural balance among the organisms living together.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "ecosystem",
+   "term": "Ecosystem",
+   "meaning": "A community of plants and animals together with their surroundings, including the non-living part.",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "env",
+   "term": "Environment",
+   "meaning": "The surroundings of an organism, natural (geographical) or cultural (man-made).",
+   "pages": [
+    77
+   ]
+  },
+  {
+   "id": "pollutant",
+   "term": "Pollutant",
+   "meaning": "A substance that causes pollution, visible like smoke or invisible like bacteria.",
+   "pages": [
+    78
+   ]
+  },
+  {
+   "id": "biodiv",
+   "term": "Biodiversity",
+   "meaning": "The variety of plants (flora) and animals (fauna) in a region.",
+   "pages": [
+    81
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "pol",
+   "title": "Four kinds of pollution",
+   "items": [
+    {
+     "id": "causes",
+     "name": "Causes of environmental pollution",
+     "formula": "Over-population, industries, cities, over-use of resources and vehicles.",
+     "example": "Man-made pollutants are more harmful than natural ones.",
+     "pages": [
+      78
+     ]
+    },
+    {
+     "id": "air",
+     "name": "Air pollution",
+     "formula": "Pollutants: CO2, CO, sulphur dioxide, nitrogen oxides, CFCs. Effects: ozone loss, global warming, breathing problems.",
+     "example": "Control: fewer vehicle emissions, more trees, clean energy.",
+     "pages": [
+      78
+     ]
+    },
+    {
+     "id": "water",
+     "name": "Water pollution",
+     "formula": "Sources: industrial effluents, sewage, farm waste, oil spills. Effects: cholera, typhoid, jaundice, death of water life.",
+     "example": "Control: treat effluents and sewage.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "soil",
+     "name": "Soil pollution",
+     "formula": "From industrial, mining, urban and farm waste; it lowers fertility and kills soil organisms.",
+     "example": "Control: careful use of fertilizers and pesticides.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "noise",
+     "name": "Noise pollution",
+     "formula": "Unwanted sound from industry, vehicles and aircraft; it causes hearing loss, headaches and heart disease.",
+     "example": "Control: keep industries and airports away from homes, limit horns and loudspeakers.",
+     "pages": [
+      79,
+      80
+     ]
+    }
+   ]
+  },
+  {
+   "id": "global",
+   "title": "Global problems",
+   "items": [
+    {
+     "id": "warming",
+     "name": "Global warming",
+     "formula": "The slow rise in Earth's temperature from the greenhouse effect.",
+     "example": "Glaciers melt and sea level rises, as in the Himalayas and polar regions.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "greenhouse",
+     "name": "Greenhouse effect",
+     "formula": "Carbon dioxide and other gases trap heat given off by the Earth.",
+     "example": "Burning fossil fuels adds these gases.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "ozone",
+     "name": "Ozone depletion",
+     "formula": "CFCs from air conditioners, fridges and sprays destroy stratospheric ozone.",
+     "example": "The worst ozone hole is over Antarctica.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "acid",
+     "name": "Acid rain",
+     "formula": "Rain that picks up acids, such as sulphuric acid, from polluted air. It is called the \"lake killer\".",
+     "example": "The \"Black Triangle\" over Poland, Czech Republic and south-east Germany is badly hit.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "save",
+     "name": "Saving biodiversity and the Earth",
+     "formula": "Give rare species good living conditions.",
+     "example": "Education, awareness and careful use of resources save the Earth.",
+     "pages": [
+      81
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "gw",
+   "text": "Global warming comes from the greenhouse effect; ozone depletion comes from CFCs. They are different problems."
+  },
+  {
+   "id": "ecoenv",
+   "text": "Ecology is the study; the ecosystem is the community and its surroundings being studied."
+  },
+  {
+   "id": "natural",
+   "text": "Pollution has natural sources too, such as volcanoes and forest fires, but man-made ones are worse."
+  }
+ ]
+}

@@ -1,0 +1,165 @@
+{
+ "chapter": "ss-7-11-state-government",
+ "terms": [
+  {
+   "id": "vidhanamandala",
+   "term": "Vidhana Mandala",
+   "meaning": "The state legislature's houses, which with the Governor make the State Legislature.",
+   "pages": [
+    156
+   ]
+  },
+  {
+   "id": "assembly",
+   "term": "Legislative Assembly (Vidhana Sabha)",
+   "meaning": "The lower house, of the people's elected representatives (MLAs).",
+   "pages": [
+    156
+   ]
+  },
+  {
+   "id": "council",
+   "term": "Legislative Council (Vidhana Parishat)",
+   "meaning": "The upper house; no more than one-third the size of the Assembly.",
+   "pages": [
+    157,
+    158
+   ]
+  },
+  {
+   "id": "governor",
+   "term": "Governor",
+   "meaning": "The constitutional head of a state, nominated by the President for five years.",
+   "pages": [
+    158
+   ]
+  },
+  {
+   "id": "prule",
+   "term": "President's rule",
+   "meaning": "When the state government is dissolved, the Governor runs the state for the President.",
+   "pages": [
+    159
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "legis",
+   "title": "State legislature",
+   "items": [
+    {
+     "id": "linguistic",
+     "name": "How states are organised",
+     "formula": "States were made on a linguistic basis; Kannada is Karnataka's language.",
+     "example": "They follow the Central Government's model.",
+     "pages": [
+      156
+     ]
+    },
+    {
+     "id": "bicam",
+     "name": "States with two houses",
+     "formula": "Only six states have both an Assembly and a Council; Karnataka is one.",
+     "example": "All others have only an Assembly.",
+     "pages": [
+      156
+     ]
+    },
+    {
+     "id": "seats",
+     "name": "Karnataka Legislative Assembly",
+     "formula": "224 elected seats; MLAs serve five years and elect a Speaker.",
+     "example": "The nominated Anglo-Indian seat ended with the 104th Amendment in 2020.",
+     "pages": [
+      156
+     ]
+    },
+    {
+     "id": "mlaqual",
+     "name": "Who can be an MLA",
+     "formula": "A citizen of at least 25, holding no office of profit, not insolvent.",
+     "example": "MLAs must solve their constituency's problems.",
+     "pages": [
+      157
+     ]
+    },
+    {
+     "id": "apowers",
+     "name": "Powers of the Legislative Assembly",
+     "formula": "Final say on money matters; can remove ministers by a no-confidence motion.",
+     "example": "MLAs also vote in the President's election.",
+     "pages": [
+      157
+     ]
+    },
+    {
+     "id": "mlc",
+     "name": "Karnataka Legislative Council",
+     "formula": "75 members, some nominated by the Governor, others elected by MLAs, local bodies, graduates and teachers.",
+     "example": "MLCs must be 30 and serve six years.",
+     "pages": [
+      158
+     ]
+    },
+    {
+     "id": "buildings",
+     "name": "Karnataka's government buildings",
+     "formula": "Vidhana Soudha in Bengaluru; Suvarna Soudha in Belagavi.",
+     "example": "The High Court is in Bengaluru.",
+     "pages": [
+      155
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exec",
+   "title": "State executive",
+   "items": [
+    {
+     "id": "gqual",
+     "name": "Who can be Governor",
+     "formula": "A citizen of at least 35, not a member of Parliament or a state legislature.",
+     "example": "Term: five years.",
+     "pages": [
+      158
+     ]
+    },
+    {
+     "id": "gpowers",
+     "name": "Powers of the Governor",
+     "formula": "Appoints the Chief Minister and ministers; bills need the Governor's assent.",
+     "example": "In a crisis the Governor reports to the President.",
+     "pages": [
+      158,
+      159
+     ]
+    },
+    {
+     "id": "cm",
+     "name": "Powers of the Chief Minister",
+     "formula": "Head of the state government: advises on appointing ministers, allots portfolios, can dismiss ministers.",
+     "example": "The CM keeps good Centre-State relations.",
+     "pages": [
+      159
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "govcm",
+   "text": "The Governor is the constitutional head; the Chief Minister is the real chief executive."
+  },
+  {
+   "id": "nominated",
+   "text": "The Governor is nominated by the President, not elected by the people."
+  },
+  {
+   "id": "pairs",
+   "text": "Vidhana Sabha matches the Lok Sabha (lower house); Vidhana Parishat matches the Rajya Sabha (upper house)."
+  }
+ ]
+}

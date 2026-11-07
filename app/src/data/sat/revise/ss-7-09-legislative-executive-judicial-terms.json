@@ -1,0 +1,218 @@
+{
+ "chapter": "ss-7-09-legislative-executive-judicial-terms",
+ "terms": [
+  {
+   "id": "legislature",
+   "term": "Legislature",
+   "meaning": "The organ that makes laws. From French \"Parler\" and Latin \"Parliamentum\", to talk or discuss.",
+   "pages": [
+    128
+   ]
+  },
+  {
+   "id": "executive",
+   "term": "Executive",
+   "meaning": "The organ that carries out laws. From medieval Latin \"Exsequi\", to carry out.",
+   "pages": [
+    133
+   ]
+  },
+  {
+   "id": "judiciary",
+   "term": "Judiciary",
+   "meaning": "The organ that interprets laws and gives justice. From Latin \"Justitia\".",
+   "pages": [
+    139
+   ]
+  },
+  {
+   "id": "unicameral",
+   "term": "Unicameral and bicameral",
+   "meaning": "A legislature with one house is unicameral; with two houses, bicameral.",
+   "pages": [
+    131
+   ]
+  },
+  {
+   "id": "writ",
+   "term": "Writ",
+   "meaning": "A court order issued to protect a citizen's rights.",
+   "pages": [
+    142
+   ]
+  },
+  {
+   "id": "review",
+   "term": "Judicial review",
+   "meaning": "The court's power to check whether laws and orders follow the Constitution, and strike them down if not.",
+   "pages": [
+    142
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "leg",
+   "title": "The legislature",
+   "items": [
+    {
+     "id": "nicknames",
+     "name": "Nicknames of the legislature",
+     "formula": "Barometer of public opinion, mirror of public opinion, law making factory.",
+     "example": "It is the first organ of government.",
+     "pages": [
+      128,
+      129
+     ]
+    },
+    {
+     "id": "names",
+     "name": "Legislatures of other countries",
+     "formula": "Maldives: Majlis. Germany: Bundestag. Israel: Knesset. France: National Assembly. Denmark: Folketing.",
+     "example": "India's is the Parliament.",
+     "pages": [
+      129
+     ]
+    },
+    {
+     "id": "legwork",
+     "name": "What the legislature does",
+     "formula": "Makes and amends laws, forms the government, amends the Constitution, raises public grievances.",
+     "example": "The party with a majority forms the government.",
+     "pages": [
+      130
+     ]
+    },
+    {
+     "id": "uni",
+     "name": "Countries with one house",
+     "formula": "Greece, Finland, Sweden, Denmark, Portugal, New Zealand.",
+     "example": "It avoids repeated debates and saves money.",
+     "pages": [
+      131
+     ]
+    },
+    {
+     "id": "bi",
+     "name": "Two-house legislatures",
+     "formula": "India: Lok Sabha (lower) and Rajya Sabha (upper). England: House of Commons and House of Lords.",
+     "example": "Bicameralism began in England by historical accident.",
+     "pages": [
+      131,
+      132
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exe",
+   "title": "The executive",
+   "items": [
+    {
+     "id": "narrow",
+     "name": "Executive in the narrow and broad sense",
+     "formula": "Narrow: the chief executive and advisers (India's President and Cabinet). Broad: everyone who carries out laws, down to clerks.",
+     "example": "It is called the administrative organ.",
+     "pages": [
+      133,
+      134
+     ]
+    },
+    {
+     "id": "garner",
+     "name": "Garner's definition of the executive",
+     "formula": "The organ that carries out the state's will expressed through the legislature, Constitution and courts.",
+     "example": "Willoughby: it sees that laws are carried out.",
+     "pages": [
+      134
+     ]
+    },
+    {
+     "id": "nominal",
+     "name": "Nominal and real executive",
+     "formula": "Nominal: power used in the head of state's name (India's President, Britain's monarch). Real: the Prime Minister and Cabinet.",
+     "example": "In India the real power is with the Cabinet.",
+     "pages": [
+      135,
+      136
+     ]
+    },
+    {
+     "id": "parl",
+     "name": "Parliamentary and presidential executive",
+     "formula": "Parliamentary: chosen by and answerable to the legislature (India). Presidential: elected directly, not answerable to it (America).",
+     "example": "In America one person is head of both state and government.",
+     "pages": [
+      136
+     ]
+    },
+    {
+     "id": "plural",
+     "name": "Single, plural, political and permanent executive",
+     "formula": "Single: powers with the centre (England). Plural: shared among many (Switzerland).",
+     "example": "Political: elected for a fixed term. Permanent: civil servants serving until retirement.",
+     "pages": [
+      136,
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jud",
+   "title": "The judiciary",
+   "items": [
+    {
+     "id": "rawls",
+     "name": "John Rawls on the judiciary",
+     "formula": "It protects citizens' rights, punishes criminals, upholds justice and protects the innocent.",
+     "example": "It is called the security-guard of the nation.",
+     "pages": [
+      139
+     ]
+    },
+    {
+     "id": "jsig",
+     "name": "Why the judiciary matters",
+     "formula": "Protects laws, rights and freedom; keeps order; builds trust that all are equal before law.",
+     "example": "It stops the government overstepping its powers.",
+     "pages": [
+      140
+     ]
+    },
+    {
+     "id": "unified",
+     "name": "Unified and federal judiciary",
+     "formula": "Unified: one chain of courts, Supreme Court down to magistrates (India, Canada). Federal: separate courts for centre and states (USA, Switzerland).",
+     "example": "In India the Supreme Court is the final court of appeal.",
+     "pages": [
+      141
+     ]
+    },
+    {
+     "id": "jfunc",
+     "name": "Functions of the judiciary",
+     "formula": "Interpreting laws, giving judgements, issuing writs, giving advice, judicial review.",
+     "example": "India's courts can advise the government; America's don't.",
+     "pages": [
+      142
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "three",
+   "text": "Legislature makes laws, executive carries them out, judiciary interprets and protects them."
+  },
+  {
+   "id": "nominal",
+   "text": "India's President is the nominal executive; the real power lies with the Prime Minister's Cabinet."
+  },
+  {
+   "id": "permpol",
+   "text": "Ministers are the political executive and change with elections; civil servants are the permanent executive."
+  }
+ ]
+}

@@ -1,0 +1,192 @@
+{
+ "chapter": "ss-7-24-india-neighbouring-countries",
+ "terms": [
+  {
+   "id": "neighbours",
+   "term": "India's neighbours",
+   "meaning": "Seven: China, Nepal, Bhutan (north), Myanmar, Bangladesh (east), Pakistan (north-west), Sri Lanka (south).",
+   "pages": [
+    124
+   ]
+  },
+  {
+   "id": "pok",
+   "term": "Pak-Occupied Kashmir (PoK)",
+   "meaning": "The part of Kashmir Pakistani forces seized in 1948.",
+   "pages": [
+    126
+   ]
+  },
+  {
+   "id": "mcmahon",
+   "term": "McMahon Line",
+   "meaning": "The 3440 km India-China border, named after Sir McMahon of the British government.",
+   "pages": [
+    130
+   ]
+  },
+  {
+   "id": "panchasheela",
+   "term": "Panchasheela Treaty",
+   "meaning": "Signed by Nehru and Chinese Prime Minister Chou-En-Lai in 1954.",
+   "pages": [
+    129
+   ]
+  },
+  {
+   "id": "saarc",
+   "term": "SAARC",
+   "meaning": "South Asian Association for Regional Co-operation, begun in 1985.",
+   "pages": [
+    133
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "pak",
+   "title": "Pakistan",
+   "items": [
+    {
+     "id": "issues",
+     "name": "Problems between India and Pakistan",
+     "formula": "Kashmir, military attacks, terrorism, water dispute, protection of minorities, trade.",
+     "example": "Kashmir has been the main obstacle since 1947.",
+     "pages": [
+      126
+     ]
+    },
+    {
+     "id": "wars",
+     "name": "Wars with Pakistan",
+     "formula": "Four: 1947, 1965, 1971 and 1999.",
+     "example": "Pakistan gave 2,700 sq km of Jammu and Kashmir land to China.",
+     "pages": [
+      126
+     ]
+    },
+    {
+     "id": "shimla",
+     "name": "Shimla Agreement (1972)",
+     "formula": "After the 1971 war, signed under Indira Gandhi: solve all issues, including Kashmir, by peaceful talks.",
+     "example": "It is a two-country agreement.",
+     "pages": [
+      127
+     ]
+    },
+    {
+     "id": "lahore",
+     "name": "Lahore Bus Yatra and after",
+     "formula": "In 1999 Vajpayee started the Amritsar-Lahore bus; the Agra summit failed.",
+     "example": "Terrorists attacked Parliament on 13 December 2001.",
+     "pages": [
+      127,
+      128
+     ]
+    }
+   ]
+  },
+  {
+   "id": "china",
+   "title": "China",
+   "items": [
+    {
+     "id": "tibet",
+     "name": "Tibet",
+     "formula": "China took military control of Tibet in 1950; India sheltered more than 80,000 Tibetans with the Dalai Lama.",
+     "example": "Tibetan settlements in Karnataka: Bailukuppe (Mysore) and Mundagod.",
+     "pages": [
+      128,
+      129
+     ]
+    },
+    {
+     "id": "war62",
+     "name": "The 1962 war",
+     "formula": "China attacked from the eastern borders to Ladakh (Aksai Chin) and still holds the land it took.",
+     "example": "China also claims 90,000 sq km in Arunachal Pradesh.",
+     "pages": [
+      129,
+      130
+     ]
+    }
+   ]
+  },
+  {
+   "id": "others",
+   "title": "Other neighbours",
+   "items": [
+    {
+     "id": "nepal",
+     "name": "Nepal",
+     "formula": "A landlocked country with an open border; ties rest on the 1950 Friendship and Peace Agreement.",
+     "example": "Under the 1971 trade treaty, Nepal's goods enter India tax-free.",
+     "pages": [
+      130
+     ]
+    },
+    {
+     "id": "bhutan",
+     "name": "Bhutan",
+     "formula": "By the 1949 agreement India won't interfere inside Bhutan, which seeks India's help in foreign affairs.",
+     "example": "India helped Bhutan join the UN and gave aid from 1961 to 1981.",
+     "pages": [
+      130,
+      131
+     ]
+    },
+    {
+     "id": "lanka",
+     "name": "Sri Lanka",
+     "formula": "Ashoka sent Buddhist missionaries. Tamils sought a separate state; India sent the IPKF in 1988.",
+     "example": "The LTTE killed Rajiv Gandhi on 21 May 1991; Katchatheevu island was settled in 1974-76.",
+     "pages": [
+      131,
+      132
+     ]
+    },
+    {
+     "id": "bangla",
+     "name": "Bangladesh",
+     "formula": "Once East Pakistan; Sheikh Mujibur Rehaman's Awami League led its struggle; independent in 1971 with India's help.",
+     "example": "In 1972 the two signed a 25-year friendship treaty; Chakma refugees remain an issue.",
+     "pages": [
+      132
+     ]
+    },
+    {
+     "id": "members",
+     "name": "SAARC members",
+     "formula": "India, Bangladesh, Bhutan, Maldives, Nepal, Pakistan, Sri Lanka and Afghanistan.",
+     "example": "Afghanistan joined as the eighth member in 2007.",
+     "pages": [
+      133
+     ]
+    },
+    {
+     "id": "aims",
+     "name": "Aims of SAARC",
+     "formula": "Mutual trust, welfare of South Asian people, and economic, cultural and scientific co-operation.",
+     "example": "India launched a satellite for SAARC members to share academic information.",
+     "pages": [
+      133
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "saarcafg",
+   "text": "SAARC began with seven members in 1985; Afghanistan is the eighth. Myanmar and China are neighbours but not members."
+  },
+  {
+   "id": "shimlay",
+   "text": "The Shimla Agreement was 1972, after the 1971 war; the Panchasheela was with China in 1954."
+  },
+  {
+   "id": "kargil",
+   "text": "The 1999 war with Pakistan is the Kargil war; the 1962 war was with China."
+  }
+ ]
+}

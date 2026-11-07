@@ -1,0 +1,164 @@
+{
+ "chapter": "ss-8-07-meaning-importance-political-science",
+ "terms": [
+  {
+   "id": "polsci",
+   "term": "Political Science",
+   "meaning": "The social science that studies the state, government and people's political activity.",
+   "pages": [
+    52
+   ]
+  },
+  {
+   "id": "polis",
+   "term": "Polis",
+   "meaning": "The Greek word for city-state. \"Politics\" comes from it.",
+   "pages": [
+    52
+   ]
+  },
+  {
+   "id": "politics",
+   "term": "Politics today",
+   "meaning": "The practical side of the problems of state and government.",
+   "pages": [
+    53
+   ]
+  },
+  {
+   "id": "organs",
+   "term": "Organs of government",
+   "meaning": "The Legislature, the Executive and the Judiciary.",
+   "pages": [
+    54
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "think",
+   "title": "Thinkers and definitions",
+   "items": [
+    {
+     "id": "greeks",
+     "name": "Who started systematic study of politics",
+     "formula": "The Greeks. Egyptians, Persians, Indians and others had ideas, but not a system.",
+     "example": "Socrates and his disciple Plato were great political thinkers.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "plato",
+     "name": "Plato's famous book",
+     "formula": "\"Republic\". It was the first to discuss the nature and work of state and government.",
+     "example": "Plato was a disciple of Socrates.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "aristotle",
+     "name": "Father of Political Science",
+     "formula": "Aristotle.",
+     "example": "His book \"The Politics\" was the first book on the subject.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "kautilya",
+     "name": "India's work on political principles",
+     "formula": "Kautilya's Arthashastra.",
+     "example": "It holds much on how a state is run.",
+     "pages": [
+      52
+     ]
+    },
+    {
+     "id": "garner",
+     "name": "Garner's definition",
+     "formula": "Political Science starts and ends with the state.",
+     "example": "So the state is the central subject.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "janet",
+     "name": "Paul Janet's definition",
+     "formula": "The science of the origin and principles of the state.",
+     "example": "It stresses where the state came from.",
+     "pages": [
+      53
+     ]
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "title": "Why study it",
+   "items": [
+    {
+     "id": "ideas",
+     "name": "Ideas it explains",
+     "formula": "Monarchy, freedom, justice, laws, equality, good government, war and peace.",
+     "example": "It explains how these ideas began and grew.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "plan",
+     "name": "How it helps a state's future",
+     "formula": "The past and present help in planning ahead.",
+     "example": "It helps build a modern welfare state.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "insts",
+     "name": "Institutions it explains",
+     "formula": "Political parties, the federal system, local bodies, and the Constitution and laws.",
+     "example": "It also covers the Legislature, Executive and Judiciary.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "citizens",
+     "name": "What it does for people",
+     "formula": "It builds political awareness, good leaders and good citizens.",
+     "example": "It helps officials find solutions to people's problems.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "intl",
+     "name": "Beyond one country",
+     "formula": "It teaches international relations.",
+     "example": "It shows the value of peace and co-operation among nations.",
+     "pages": [
+      54
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "books",
+   "text": "\"Republic\" is by Plato and \"The Politics\" is by Aristotle. Don't swap them."
+  },
+  {
+   "id": "father",
+   "text": "Aristotle is the Father of Political Science, though Plato wrote about the state first."
+  },
+  {
+   "id": "term",
+   "text": "Politics and Political Science are not the same: politics is the practical side, political science the whole study."
+  }
+ ]
+}

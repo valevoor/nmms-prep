@@ -1077,6 +1077,128 @@
   ]
  },
  {
+  "id": "ss-7-01-major-developments-world",
+  "subject": "social",
+  "cls": 7,
+  "no": 1,
+  "name": "Major Developments in the World",
+  "part": 1,
+  "pages": [
+   1,
+   10
+  ],
+  "area": "History",
+  "topics": [
+   "Rise of Christianity and Islam",
+   "Life and Teachings of Jesus Christ and Prophet Muhammad",
+   "Arab Civilization Contributions",
+   "The Crusades",
+   "Mongols (Genghis Khan, Qublai Khan, Timur)",
+   "Ottoman Turks"
+  ]
+ },
+ {
+  "id": "ss-7-02-medieval-europe",
+  "subject": "social",
+  "cls": 7,
+  "no": 2,
+  "name": "Medieval Europe",
+  "part": 1,
+  "pages": [
+   11,
+   34
+  ],
+  "area": "History",
+  "topics": [
+   "Beginning of the Modern Age",
+   "Renaissance in Europe",
+   "Religious Reformation and Counter-Reformation",
+   "Geographical Explorations and Sea Voyages"
+  ]
+ },
+ {
+  "id": "ss-7-03-advent-of-europeans",
+  "subject": "social",
+  "cls": 7,
+  "no": 3,
+  "name": "The Advent of Europeans to India",
+  "part": 1,
+  "pages": [
+   35,
+   41
+  ],
+  "area": "History",
+  "topics": [
+   "Arrival of Portuguese",
+   "Dutch",
+   "English",
+   "and French in India",
+   "European Trading Companies and Settlements",
+   "Dastaks"
+  ]
+ },
+ {
+  "id": "ss-7-04-india-18th-century",
+  "subject": "social",
+  "cls": 7,
+  "no": 4,
+  "name": "India in the 18th Century (1707–1757 C.E.)",
+  "part": 1,
+  "pages": [
+   42,
+   49
+  ],
+  "area": "History",
+  "topics": [
+   "Decline of Mughal Empire",
+   "Maratha Supremacy and Peshwas",
+   "Third Battle of Panipat",
+   "Carnatic Wars",
+   "Battle of Plassey"
+  ]
+ },
+ {
+  "id": "ss-7-05-growth-british-supremacy",
+  "subject": "social",
+  "cls": 7,
+  "no": 5,
+  "name": "The Growth of British Supremacy (1758–1856 C.E.)",
+  "part": 1,
+  "pages": [
+   50,
+   59
+  ],
+  "area": "History",
+  "topics": [
+   "Battle of Buxar",
+   "Grant of Diwani Rights",
+   "Regulating Act 1773",
+   "Anglo-Mysore / Anglo-Maratha / Anglo-Sikh Wars",
+   "Ranjit Singh",
+   "Subsidiary Alliance",
+   "Doctrine of Lapse"
+  ]
+ },
+ {
+  "id": "ss-7-06-impact-british-rule",
+  "subject": "social",
+  "cls": 7,
+  "no": 6,
+  "name": "Impact of British Rule",
+  "part": 1,
+  "pages": [
+   60,
+   70
+  ],
+  "area": "History",
+  "topics": [
+   "British Land Revenue Systems (Permanent Zamindari, Ryotwari, Mahalwari)",
+   "Introduction of English Education (Macaulay, Wood's Despatch)",
+   "Drain of Wealth Theory",
+   "Constitutional Acts (1773 to 1935)"
+  ]
+ },
+ {
   "id": "ss-7-07-mysore-princely-states",
   "subject": "social",
   "cls": 7,
@@ -1121,6 +1243,64 @@
    "Alwars and Dasas",
    "Vachana and Keerthana Literature",
    "Sufi Saints and Chishti Order"
+  ]
+ },
+ {
+  "id": "ss-7-09-legislative-executive-judicial-terms",
+  "subject": "social",
+  "cls": 7,
+  "no": 9,
+  "name": "Introduction to Legislative, Executive and Judicial Terminologies",
+  "part": 1,
+  "pages": [
+   128,
+   143
+  ],
+  "area": "Civics",
+  "topics": [
+   "Three Organs of Government",
+   "Unicameral vs. Bicameral Legislature",
+   "Types of Executive",
+   "Unified vs. Federal Judiciary"
+  ]
+ },
+ {
+  "id": "ss-7-10-union-government",
+  "subject": "social",
+  "cls": 7,
+  "no": 10,
+  "name": "Union Government",
+  "part": 1,
+  "pages": [
+   144,
+   153
+  ],
+  "area": "Civics",
+  "topics": [
+   "Parliament of India",
+   "Lok Sabha and Rajya Sabha",
+   "President and Vice-President of India",
+   "Prime Minister and Union Cabinet",
+   "28 States and 8 Union Territories"
+  ]
+ },
+ {
+  "id": "ss-7-11-state-government",
+  "subject": "social",
+  "cls": 7,
+  "no": 11,
+  "name": "State Government",
+  "part": 1,
+  "pages": [
+   154,
+   160
+  ],
+  "area": "Civics",
+  "topics": [
+   "State Legislature (Vidhana Mandala)",
+   "Vidhana Sabha (Legislative Assembly) and Vidhana Parishad (Legislative Council)",
+   "Governor",
+   "Chief Minister and State Cabinet"
   ]
  },
  {
@@ -1211,6 +1391,26 @@
   ]
  },
  {
+  "id": "ss-7-16-first-war-indian-independence",
+  "subject": "social",
+  "cls": 7,
+  "no": 16,
+  "name": "First War of Indian Independence (1857–58 C.E.)",
+  "part": 2,
+  "pages": [
+   14,
+   22
+  ],
+  "area": "History",
+  "topics": [
+   "Revolt of 1857",
+   "Sepoy Mutiny vs. First War of Indian Independence",
+   "Mangal Pandey",
+   "Leaders of 1857 Revolt",
+   "Queen Victoria's Proclamation of 1858"
+  ]
+ },
+ {
   "id": "ss-7-17-freedom-movement",
   "subject": "social",
   "cls": 7,
@@ -1242,6 +1442,48 @@
   ]
  },
  {
+  "id": "ss-7-18-unification-of-karnataka",
+  "subject": "social",
+  "cls": 7,
+  "no": 18,
+  "name": "Unification of Karnataka and Border Disputes",
+  "part": 2,
+  "pages": [
+   66,
+   77
+  ],
+  "area": "History",
+  "topics": [
+   "Ekikarana Movement of Karnataka",
+   "20 Administrative Units of Pre-Unification Karnataka",
+   "Alur Venkata Rao",
+   "Three Stages of Unification (1947–1956)",
+   "Fazal Ali Commission (SRC)",
+   "Renaming as Karnataka (1973)",
+   "Maharashtra and Kerala Border Disputes (Mahajan Report & Kasaragod)"
+  ]
+ },
+ {
+  "id": "ss-7-19-pro-social-movements-karnataka",
+  "subject": "social",
+  "cls": 7,
+  "no": 19,
+  "name": "Pro-Social Movements of Karnataka",
+  "part": 2,
+  "pages": [
+   78,
+   89
+  ],
+  "area": "History",
+  "topics": [
+   "Environmental Movements in Karnataka (Appiko, Sahyadri Mining Protest, Salumarada Thimmakka)",
+   "Women's Movements",
+   "Farmers' Agitations (Kagodu, Nargund/Navalgund, KRRS)",
+   "Dalit Movement (DSS, Basavalingappa Incident)",
+   "Save Kannada and Gokak Movement (1982)"
+  ]
+ },
+ {
   "id": "ss-7-20-karnataka-economic-social-transformation",
   "subject": "social",
   "cls": 7,
@@ -1257,6 +1499,26 @@
    "Land Reforms in Karnataka (1955 B.D. Jatti Committee, 1974 Land Reforms Act)",
    "Backward Classes Commissions (Miller 1918, Havanur 1975, Venkataswamy 1983, Chinnappa Reddy)",
    "Panchayat Raj System in Karnataka (Balwantrai Mehta, Abdul Nazeer Sab)"
+  ]
+ },
+ {
+  "id": "ss-7-21-progress-different-fields",
+  "subject": "social",
+  "cls": 7,
+  "no": 21,
+  "name": "Progress in Different Fields",
+  "part": 2,
+  "pages": [
+   97,
+   107
+  ],
+  "area": "History",
+  "topics": [
+   "Mass Media in Karnataka",
+   "Information Technology (Silicon City Bengaluru)",
+   "Biotechnology (Biocon, Dolly the Sheep)",
+   "Agricultural & Irrigation Projects of Karnataka",
+   "Industrial Development & Policies of Karnataka"
   ]
  },
  {
@@ -1743,6 +2005,26 @@
   ]
  },
  {
+  "id": "ss-8-19-chalukyas-badami-pallavas-kanchi",
+  "subject": "social",
+  "cls": 8,
+  "no": 19,
+  "name": "The Chalukyas of Badami and the Pallavas of Kanchi",
+  "part": 2,
+  "pages": [
+   22,
+   28
+  ],
+  "area": "History",
+  "topics": [
+   "The Chalukyas of Badami (Vatapi)",
+   "Pulakeshi II and Aihole Inscription",
+   "Vesara / Chalukya Style Architecture (Badami, Aihole, Pattadakallu)",
+   "The Pallavas of Kanchi",
+   "Narasimhavarma I (Mahamalla / Vatapikonda) and Mahabalipuram"
+  ]
+ },
+ {
   "id": "ss-8-20-rashtrakutas-chalukyas-kalyana",
   "subject": "social",
   "cls": 8,
@@ -1761,6 +2043,26 @@
    "The Chalukyas of Kalyana",
    "Vikramaditya VI",
    "Basaveshwara and Vachana Literature"
+  ]
+ },
+ {
+  "id": "ss-8-21-cholas-hoysalas-dwarasamudra",
+  "subject": "social",
+  "cls": 8,
+  "no": 21,
+  "name": "The Cholas and Hoysalas of Dwarasamudra",
+  "part": 2,
+  "pages": [
+   37,
+   42
+  ],
+  "area": "History",
+  "topics": [
+   "The Imperial Cholas of Thanjavur",
+   "Rajaraja Chola I and Rajendra Chola I",
+   "Chola Village Self-Government (Ur, Mahasabha, Perumguri, Uttaramerur)",
+   "The Hoysalas of Dwarasamudra (Halebidu)",
+   "Vishnuvardhana and Hoysala Soapstone Architecture (Belur, Halebidu, Somanathapura)"
   ]
  },
  {
@@ -1857,6 +2159,27 @@
    "Temperature and Salinity of Ocean Water",
    "Warm and Cold Ocean Currents",
    "Tides (Spring and Neap Tides) and Conservation of Oceans"
+  ]
+ },
+ {
+  "id": "ss-8-27-biosphere",
+  "subject": "social",
+  "cls": 8,
+  "no": 27,
+  "name": "Biosphere",
+  "part": 2,
+  "pages": [
+   77,
+   82
+  ],
+  "area": "Geography",
+  "topics": [
+   "Biosphere and Ecology",
+   "Environmental Pollution (Air, Water, Soil, Noise)",
+   "Global Warming and Greenhouse Effect",
+   "Ozone Depletion (CFCs)",
+   "Acid Rain (Lake Killer / Black Triangle)",
+   "Biodiversity Conservation"
   ]
  },
  {

@@ -1,0 +1,206 @@
+{
+ "chapter": "ss-8-16-mauryas-kushans",
+ "terms": [
+  {
+   "id": "maurya",
+   "term": "Mauryan Empire",
+   "meaning": "India's first empire, ruled from Magadha.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "indica",
+   "term": "Indica",
+   "meaning": "The record of Chandragupta's time by the Greek ambassador Megasthenes. It is lost, known only from extracts.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "dhamma",
+   "term": "Ashoka's Dharma",
+   "meaning": "His moral teaching, inspired by Buddha's compassion, set out in his edicts.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "mahamatra",
+   "term": "Dharma Mahamatra",
+   "meaning": "An officer Ashoka appointed to spread these teachings.",
+   "pages": [
+    3
+   ]
+  },
+  {
+   "id": "saka",
+   "term": "Saka era",
+   "meaning": "The era begun by Kanishka in 78 C.E.",
+   "pages": [
+    4
+   ]
+  },
+  {
+   "id": "yuchi",
+   "term": "Yuchi",
+   "meaning": "The nomadic Central Asian tribe the Kushans came from.",
+   "pages": [
+    4
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "maur",
+   "title": "The Mauryas",
+   "items": [
+    {
+     "id": "founder",
+     "name": "Kings of the Mauryan dynasty",
+     "formula": "Chandragupta Maurya (founder), Bindusara and Ashoka.",
+     "example": "Chandragupta's minister was Vishnugupta, also called Kautilya and Chanakya.",
+     "pages": [
+      1
+     ]
+    },
+    {
+     "id": "artha",
+     "name": "Arthashastra's discovery and content",
+     "formula": "R. Shamasastry found it in 1902 in Mysore's Oriental Library.",
+     "example": "It covers administration, foreign policy, finance, spies and the military.",
+     "pages": [
+      1
+     ]
+    },
+    {
+     "id": "cities",
+     "name": "Five city centres of Ashoka's time",
+     "formula": "Pataliputra (capital), Taxila, Ujjain, Kalinga and Suvarnagiri.",
+     "example": "Suvarnagiri was in the Deccan, in modern Karnataka; Taxila was the north-west gateway.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "kalinga",
+     "name": "Battle of Kalinga",
+     "formula": "Eight years after his coronation Ashoka won it: about 150000 captured and 1,00,000 dead.",
+     "example": "The suffering made him regret war and turn to Dhamma.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "edicts",
+     "name": "Ashoka's edicts",
+     "formula": "Mostly in Prakrit language and Brahmi script. His titles: Devanam Priya and Priyadarshi.",
+     "example": "Rock edicts were found at Brahmagiri in Chitradurga district.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "emblem",
+     "name": "India's National Emblem",
+     "formula": "Taken from the capital of Ashoka's Sarnath pillar.",
+     "example": "The Dharmachakra is carved on its pedestal.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "admin",
+     "name": "Mauryan administration",
+     "formula": "Provinces, a permanent army, spies and many officials.",
+     "example": "Land tax was the main income.",
+     "pages": [
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kush",
+   "title": "The Kushans",
+   "items": [
+    {
+     "id": "kfounder",
+     "name": "Kings of the Kushan dynasty",
+     "formula": "Founder Kujalakadphisus, then Vimakadphisus and Kanishka.",
+     "example": "They beat the Sakas and Parthians and settled in Gandhara.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "coins",
+     "name": "Kushan coins",
+     "formula": "Vimakadphisus brought out gold coins.",
+     "example": "After him they minted mainly gold and copper.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "kanishka",
+     "name": "Kanishka's empire",
+     "formula": "From 78 C.E., capital Purushapura, reaching Sanchi and Banaras.",
+     "example": "It also took in Central Asia, and Mathura was another key town.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "kbuddh",
+     "name": "Kanishka and Buddhism",
+     "formula": "Mahayana grew and Gandhara sculpture flourished under him.",
+     "example": "Scholars: Nagarjuna, Aswagosha, Vasumitra. Missionaries went to Central Asia and China.",
+     "pages": [
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "councils",
+   "title": "Buddhist councils",
+   "items": [
+    {
+     "id": "c12",
+     "name": "First and second Buddhist councils",
+     "formula": "First: Ajatashatru, at Rajgriha, chaired by Mahakasyapa.",
+     "example": "Second: Kalasoka, at Vaishali, chaired by Sabakami.",
+     "pages": [
+      5
+     ]
+    },
+    {
+     "id": "c34",
+     "name": "Third and fourth Buddhist councils",
+     "formula": "Third: Ashoka, at Pataliputra, chaired by Moggaliputta Tissa.",
+     "example": "Fourth: Kanishka, at Kunadalvana in Kashmir, chaired by Vasumitra.",
+     "pages": [
+      5
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "names",
+   "text": "Vishnugupta, Kautilya and Chanakya are all the same person."
+  },
+  {
+   "id": "foundp",
+   "text": "Kanishka is the most famous Kushan king, but Kujalakadphisus is the founder."
+  },
+  {
+   "id": "gandh",
+   "text": "Gandhara art grew under the Kushans, not the Mauryas."
+  }
+ ]
+}

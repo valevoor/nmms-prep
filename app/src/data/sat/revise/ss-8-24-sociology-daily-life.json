@@ -1,0 +1,110 @@
+{
+ "chapter": "ss-8-24-sociology-daily-life",
+ "terms": [
+  {
+   "id": "interaction",
+   "term": "Social interaction",
+   "meaning": "Two or more people communicating through language and symbols and influencing each other.",
+   "pages": [
+    63
+   ]
+  },
+  {
+   "id": "bodylang",
+   "term": "Body language",
+   "meaning": "Showing feelings with gestures and facial expressions, useful when we don't share a language.",
+   "pages": [
+    63
+   ]
+  },
+  {
+   "id": "role",
+   "term": "Role consciousness",
+   "meaning": "Knowing what is expected of each role, and acting to match it.",
+   "pages": [
+    64
+   ]
+  },
+  {
+   "id": "prejudice",
+   "term": "Prejudice",
+   "meaning": "A fixed belief held without scientific proof, such as thinking women know less than men.",
+   "pages": [
+    63
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "use",
+   "title": "Sociology and daily life",
+   "items": [
+    {
+     "id": "gk",
+     "name": "Why general knowledge isn't enough",
+     "formula": "Everyday talk can carry prejudice.",
+     "example": "Sociology can show by study that women are as capable as men.",
+     "pages": [
+      63
+     ]
+    },
+    {
+     "id": "unbiased",
+     "name": "What sociology helps us do",
+     "formula": "Study any subject without prejudice.",
+     "example": "It gives correct information for daily life.",
+     "pages": [
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "talk",
+   "title": "Language and roles",
+   "items": [
+    {
+     "id": "place",
+     "name": "Language and where we live",
+     "formula": "We learn the language that suits our surroundings.",
+     "example": "Without a shared language, daily life is hard.",
+     "pages": [
+      63
+     ]
+    },
+    {
+     "id": "hospital",
+     "name": "Example of role consciousness",
+     "formula": "The doctor prescribes and the nurse cares for the patient as told.",
+     "example": "You don't ask the teacher for medicine or the doctor about lessons.",
+     "pages": [
+      64
+     ]
+    },
+    {
+     "id": "many",
+     "name": "Many roles of one person",
+     "formula": "In a family one can be brother, son and grandson at once.",
+     "example": "Roles change with age and conditions.",
+     "pages": [
+      64
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "twoplus",
+   "text": "Social interaction needs more than one person; it is between people, not inside one person."
+  },
+  {
+   "id": "casual",
+   "text": "A common saying is not a scientific truth. Sociology checks claims by study."
+  },
+  {
+   "id": "onerole",
+   "text": "A person doesn't have just one role: everyone plays several at once."
+  }
+ ]
+}

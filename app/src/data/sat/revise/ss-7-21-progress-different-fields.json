@@ -1,0 +1,191 @@
+{
+ "chapter": "ss-7-21-progress-different-fields",
+ "terms": [
+  {
+   "id": "communication",
+   "term": "Communication system",
+   "meaning": "Sending news or information from one person or place to another.",
+   "pages": [
+    97
+   ]
+  },
+  {
+   "id": "it",
+   "term": "Information Technology",
+   "meaning": "Creating and spreading information with the help of technology.",
+   "pages": [
+    100
+   ]
+  },
+  {
+   "id": "biotech",
+   "term": "Biotechnology",
+   "meaning": "Using the features of living things to make useful products with technology.",
+   "pages": [
+    101
+   ]
+  },
+  {
+   "id": "erosion",
+   "term": "Soil erosion",
+   "meaning": "The washing away of the fertile top soil by wind, rain and floods.",
+   "pages": [
+    103
+   ]
+  },
+  {
+   "id": "industrialisation",
+   "term": "Industrialisation",
+   "meaning": "Setting up factories and the transport and power they need.",
+   "pages": [
+    104,
+    105
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "media",
+   "title": "Mass media",
+   "items": [
+    {
+     "id": "three",
+     "name": "Three kinds of mass media",
+     "formula": "Print, electronic and entertainment media.",
+     "example": "Newspapers are called a record of the day's history.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "mangaluru",
+     "name": "First Kannada newspaper",
+     "formula": "Mangalooru Samachara.",
+     "example": "Papers can be daily, weekly, monthly or annual.",
+     "pages": [
+      98
+     ]
+    },
+    {
+     "id": "electronic",
+     "name": "Electronic media",
+     "formula": "TV, radio, mobile and internet: news in seconds and early warnings of disasters.",
+     "example": "Mobile reaches even people who can't read.",
+     "pages": [
+      98,
+      99
+     ]
+    },
+    {
+     "id": "cinema",
+     "name": "Commercial and art cinema",
+     "formula": "Art (parallel) cinema studies a subject seriously and fights superstition.",
+     "example": "Drama is close to film.",
+     "pages": [
+      99
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "title": "IT and biotechnology",
+   "items": [
+    {
+     "id": "silicon",
+     "name": "Bengaluru and IT",
+     "formula": "Called India's Silicon City; Infosys and Wipro lead in software.",
+     "example": "Karnataka's IT plan came in 1997; the Cyber Park project began in 2000.",
+     "pages": [
+      100
+     ]
+    },
+    {
+     "id": "dolly",
+     "name": "Dolly the sheep",
+     "formula": "The world's first cloned sheep, by the scientist Wilmut in 1997.",
+     "example": "Branches of biotechnology: tissue culture, DNA fingerprinting, cloning.",
+     "pages": [
+      101
+     ]
+    },
+    {
+     "id": "biopark",
+     "name": "Biotechnology in Karnataka",
+     "formula": "Biotech Parks at the Agriculture Universities of Bengaluru and Dharwad; a marine centre at Karwar.",
+     "example": "Biocon is a leading private company.",
+     "pages": [
+      102
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agri",
+   "title": "Agriculture and industry",
+   "items": [
+    {
+     "id": "area",
+     "name": "Karnataka's land",
+     "formula": "About 1,91,791 sq km; about 190.50 lakh hectares.",
+     "example": "58% is cultivable, 16.1% forest and 13.23% non-agricultural.",
+     "pages": [
+      102,
+      103
+     ]
+    },
+    {
+     "id": "backbone",
+     "name": "Why agriculture is the backbone",
+     "formula": "It gives food, raw materials for industry, jobs and markets.",
+     "example": "In 2011, 49% of Karnataka's people depended on farming.",
+     "pages": [
+      102,
+      104
+     ]
+    },
+    {
+     "id": "irrigation",
+     "name": "Irrigation projects",
+     "formula": "Tungabhadra, Upper Krishna, Bhadra, Ghataprabha, Malaprabha, Hemavati, Harangi and others.",
+     "example": "The \"Krishiranga\" programme gives farmers tips.",
+     "pages": [
+      103
+     ]
+    },
+    {
+     "id": "industries",
+     "name": "Industries of Karnataka",
+     "formula": "Iron and steel, aluminium, cotton, silk, sugar, paper, electronics and cement.",
+     "example": "Gandhiji: cottage industries are lamps guiding a country to progress.",
+     "pages": [
+      105
+     ]
+    },
+    {
+     "id": "policy",
+     "name": "Industrial policies",
+     "formula": "Central policies of 1948, 1956, 1977 and 1980; Karnataka's own in 1996 and 2001.",
+     "example": "Industry should not harm nature.",
+     "pages": [
+      106
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "itbt",
+   "text": "IT works with information; biotechnology works with living things."
+  },
+  {
+   "id": "state96",
+   "text": "Karnataka's own industrial policy came in 1996; the earlier ones were the Central government's."
+  },
+  {
+   "id": "soilwhy",
+   "text": "Soil erosion has human causes too, such as cutting forests and wrong farming."
+  }
+ ]
+}

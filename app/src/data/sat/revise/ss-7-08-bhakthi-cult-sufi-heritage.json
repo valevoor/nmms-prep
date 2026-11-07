@@ -1,0 +1,226 @@
+{
+ "chapter": "ss-7-08-bhakthi-cult-sufi-heritage",
+ "terms": [
+  {
+   "id": "bhakthi",
+   "term": "Bhakthi Cult",
+   "meaning": "The path that devotion is the best way to Moksha, with brotherhood for all.",
+   "pages": [
+    116
+   ]
+  },
+  {
+   "id": "sufi",
+   "term": "Sufi",
+   "meaning": "From \"Saaf\", meaning clean. Sufi saints were Muslims in plain woollen dress.",
+   "pages": [
+    123
+   ]
+  },
+  {
+   "id": "doha",
+   "term": "Doha",
+   "meaning": "A two-line poem; Kabir taught through them.",
+   "pages": [
+    120
+   ]
+  },
+  {
+   "id": "kindi",
+   "term": "Kanakana Kindi",
+   "meaning": "The window at Udupi through which Krishna is said to have turned to give Kanakadasa darshana.",
+   "pages": [
+    119
+   ]
+  },
+  {
+   "id": "chisthi",
+   "term": "Chisthi sect",
+   "meaning": "An important Sufi order founded by Moyinuddin Chisthi of Ajmer.",
+   "pages": [
+    124
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "gist",
+   "title": "Main ideas",
+   "items": [
+    {
+     "id": "gistb",
+     "name": "What the Bhakthi saints taught",
+     "formula": "Equality, no caste discrimination, no superstition, uniting people's hearts.",
+     "example": "They wrote in simple local languages, which enriched them.",
+     "pages": [
+      116
+     ]
+    },
+    {
+     "id": "gists",
+     "name": "What the Sufis taught",
+     "formula": "One God, all are his children and equal; love and service is dharma.",
+     "example": "Sufism came from Arabia and later absorbed Yoga, Vedanta and Buddhist ideas.",
+     "pages": [
+      123
+     ]
+    }
+   ]
+  },
+  {
+   "id": "south",
+   "title": "Bhakthi in South India",
+   "items": [
+    {
+     "id": "aandal",
+     "name": "Aandal",
+     "formula": "One of the twelve Alwars; original name Godadevi; adopted daughter of Periyalwar.",
+     "example": "She wrote Thirupaavai, loving Krishna as her husband.",
+     "pages": [
+      116,
+      117
+     ]
+    },
+    {
+     "id": "akka",
+     "name": "Akkamahadevi",
+     "formula": "Born at Uduthadi (Shivamogga); left King Koushika's palace; wrote vachanas as \"Channamallikarjuna\".",
+     "example": "She stayed at Basaveshwara's Anubhava Mantapa and died in the Kadali forest of Srishaila.",
+     "pages": [
+      117
+     ]
+    },
+    {
+     "id": "purandara",
+     "name": "Purandaradasa (1480-1564)",
+     "formula": "Born Srinivasa Nayaka, a miser who gave away his wealth; Vyasaraya named him Purandara.",
+     "example": "Pen name \"Purandara Vittala\"; called Karnataka Sangeetha Pithamaha.",
+     "pages": [
+      117,
+      118
+     ]
+    },
+    {
+     "id": "kanaka",
+     "name": "Kanakadasa (1508-1606)",
+     "formula": "Born Thimmappa at Bada (Haveri), a warrior chief; disciple of Vyasaraya; pen name \"Adikeshava\".",
+     "example": "Works: Haribhakthisara, Nalacharithre, Ramadhanya Charithe, Mohana Tarangini.",
+     "pages": [
+      118,
+      119
+     ]
+    },
+    {
+     "id": "sharifa",
+     "name": "Shishunala Sharifa",
+     "formula": "Born in 1819 at Shishunala; first Kannada Muslim poet, called the \"Kabeera of Karnataka\".",
+     "example": "A disciple of Govindabhatta, he wrote Thathvapadas across caste and religion.",
+     "pages": [
+      119
+     ]
+    }
+   ]
+  },
+  {
+   "id": "north",
+   "title": "Bhakthi in North India",
+   "items": [
+    {
+     "id": "kabir",
+     "name": "Kabirdas",
+     "formula": "Disciple of Ramananda, raised by the weavers Neeru and Neema of Varanasi.",
+     "example": "Allah and Rama are one God; Hindus and Muslims are pots of the same clay. His followers: Kabir Panthis.",
+     "pages": [
+      120
+     ]
+    },
+    {
+     "id": "nanak",
+     "name": "Gurunanak (1469-1539)",
+     "formula": "Founder of Sikhism, born at Talvandi (now Pakistan); his Japji is in the Grantha Sahib.",
+     "example": "He opposed idol worship, caste and Sati; \"Naanak Jhara\" at Bidar marks his visit.",
+     "pages": [
+      120,
+      121
+     ]
+    },
+    {
+     "id": "tulasi",
+     "name": "Tulasidas (1532-1623)",
+     "formula": "Devotee of Rama who wrote Ramacharithamanasa in Hindi.",
+     "example": "In the North it is called Tulasiramayana.",
+     "pages": [
+      121
+     ]
+    },
+    {
+     "id": "chaithanya",
+     "name": "Chaithanya (1485-1533)",
+     "formula": "Born Vishwambara at Navadweep (Bengal); took Sanyasa at 25.",
+     "example": "Bengalis call him Chaithanya Mahaprabhu; the Hare Krishna movement follows him.",
+     "pages": [
+      121,
+      122
+     ]
+    },
+    {
+     "id": "meera",
+     "name": "Meerabai (1498-1569)",
+     "formula": "A Rajput princess married into Mewar, called \"Kaliyuga's Radha\".",
+     "example": "Her favourite deity was Giridhara Gopala.",
+     "pages": [
+      122
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sufig",
+   "title": "Sufi saints",
+   "items": [
+    {
+     "id": "nizam",
+     "name": "Nizamuddin Auliya",
+     "formula": "A Delhi Sufi who lived in poverty and refused a village gifted by the Sultan.",
+     "example": "He preached kindness to all who came.",
+     "pages": [
+      124
+     ]
+    },
+    {
+     "id": "bande",
+     "name": "Khwaja Bande Nawaz",
+     "formula": "A Chisthi saint of Kalaburagi, also called Gesudaraj (\"long haired\"); wrote in Dakhani.",
+     "example": "His Urs is held at Kalaburagi every year.",
+     "pages": [
+      124
+     ]
+    },
+    {
+     "id": "places",
+     "name": "Sufi saints and their places",
+     "formula": "Ajmer: Moyinuddin Chisthi. Delhi: Nizamuddin Auliya. Kalaburagi: Bande Nawaz. Fatehpur Sikri: Salim Chisthi.",
+     "example": "Arcot: Tippu Masthara Aulia.",
+     "pages": [
+      124,
+      125
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "pens",
+   "text": "Pen names: Akka \"Channamallikarjuna\", Purandara \"Purandara Vittala\", Kanaka \"Adikeshava\"."
+  },
+  {
+   "id": "kabkar",
+   "text": "Kabir is a North Indian saint; Shishunala Sharifa is called the Kabir of Karnataka."
+  },
+  {
+   "id": "radha",
+   "text": "\"Kaliyuga's Radha\" is Meerabai, not Aandal, though both loved Krishna."
+  }
+ ]
+}

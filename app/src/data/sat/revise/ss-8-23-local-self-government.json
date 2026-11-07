@@ -1,0 +1,217 @@
+{
+ "chapter": "ss-8-23-local-self-government",
+ "terms": [
+  {
+   "id": "lsg",
+   "term": "Local self government",
+   "meaning": "Local bodies elected by local people to solve local problems. It decentralises power.",
+   "pages": [
+    50
+   ]
+  },
+  {
+   "id": "gramasabha",
+   "term": "Grama Sabha",
+   "meaning": "The village council of all villagers aged 18 and above. It has no election.",
+   "pages": [
+    52
+   ]
+  },
+  {
+   "id": "pdo",
+   "term": "PDO",
+   "meaning": "Panchayat Development Officer, appointed by the state to run a Grama Panchayat with its secretary.",
+   "pages": [
+    53
+   ]
+  },
+  {
+   "id": "ceo",
+   "term": "CEO of a Zilla Panchayat",
+   "meaning": "The executive head, of District Commissioner rank. Attends meetings but can't vote.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "mayor",
+   "term": "Mayor",
+   "meaning": "Head of a City Corporation and the \"First citizen\" of the city, elected by corporators for one year.",
+   "pages": [
+    60
+   ]
+  },
+  {
+   "id": "commissioner",
+   "term": "Commissioner",
+   "meaning": "The real executive of a City Corporation, usually from the IAS.",
+   "pages": [
+    61
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "hist",
+   "title": "Background",
+   "items": [
+    {
+     "id": "acts",
+     "name": "Laws behind local government",
+     "formula": "British Acts of 1919 and 1935; the 73rd and 74th Amendments came into force in 1993.",
+     "example": "The goal was Gandhiji's Grama Swarajya.",
+     "pages": [
+      50
+     ]
+    },
+    {
+     "id": "ka",
+     "name": "Panchayat Raj in Karnataka",
+     "formula": "The 1983 Act set up Zilla Parishats and Mandal Panchayats; the 1993 Act made the three-tier Panchayat Raj.",
+     "example": "Gram, Taluk and Zilla Panchayats.",
+     "pages": [
+      50,
+      51
+     ]
+    },
+    {
+     "id": "objectives",
+     "name": "Aims of local self government",
+     "formula": "Involve local people, teach them administration, decentralise power, build local leaders.",
+     "example": "Problems are solved at the local level.",
+     "pages": [
+      51
+     ]
+    },
+    {
+     "id": "income",
+     "name": "Income of rural local bodies",
+     "formula": "Cesses (water, health, education, library), building and land taxes, rents, and state grants.",
+     "example": "Tourist spots can also be taxed.",
+     "pages": [
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural",
+   "title": "Rural bodies",
+   "items": [
+    {
+     "id": "gsmeet",
+     "name": "Grama Sabha meetings",
+     "formula": "At least once in six months, chaired by the Grama Panchayat president.",
+     "example": "It recommends who should get government schemes.",
+     "pages": [
+      52,
+      53
+     ]
+    },
+    {
+     "id": "gp",
+     "name": "Grama Panchayat",
+     "formula": "Population 5,000 to 7,000 (2,000 in Uttara Kannada, Dakshina Kannada and Malnad); one member for 400 voters.",
+     "example": "Term 5 years; Adhyaksha and Upadhyaksha for 30 months; meets at least once in two months.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "toilet",
+     "name": "Toilet rule for panchayat members",
+     "formula": "From the 2000 amendment, a member must have a toilet at home, or build one within one year.",
+     "example": "A third of members must be present to decide.",
+     "pages": [
+      53
+     ]
+    },
+    {
+     "id": "counts",
+     "name": "Panchayats in Karnataka (2023-24)",
+     "formula": "31 Zilla, 239 Taluk and 5954 Gram Panchayats.",
+     "example": "From the Karnataka Economic Survey 2023-24.",
+     "pages": [
+      54
+     ]
+    },
+    {
+     "id": "tp",
+     "name": "Taluk Panchayat",
+     "formula": "One member per 10,000 voters; a fifth of Grama Panchayat presidents join by lot for a year.",
+     "example": "Run by an executive officer; it combines the gram panchayats' plans for the Zilla Panchayat.",
+     "pages": [
+      55
+     ]
+    },
+    {
+     "id": "zp",
+     "name": "Zilla Panchayat",
+     "formula": "One member per 40,000 people (30,000 in the coastal and Chikkamagaluru districts, 18,000 in Kodagu).",
+     "example": "Its Adhyaksha can sanction one lakh rupees for disaster relief; it has 5 standing committees.",
+     "pages": [
+      55,
+      56
+     ]
+    }
+   ]
+  },
+  {
+   "id": "urban",
+   "title": "Urban bodies",
+   "items": [
+    {
+     "id": "sec",
+     "name": "State Election Commission",
+     "formula": "Set up under Articles 243K and 243ZA (73rd and 74th Amendments).",
+     "example": "It holds panchayat and urban body elections.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Town and City Municipalities",
+     "formula": "Town: 20,000 to 50,000 people, 23 to 27 councillors. City: 50,000 to 3 lakh, 31 to 37 councillors.",
+     "example": "The state nominates 5 more members who can't vote; the Chief Officer is the head of administration.",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "corp",
+     "name": "City Corporation (Mahanagara Palike)",
+     "formula": "Over two lakh people and an income above one crore rupees; 30 to 100 corporators.",
+     "example": "Karnataka has 11: 10 city corporations and BBMP, which has 225 wards.",
+     "pages": [
+      59,
+      60
+     ]
+    },
+    {
+     "id": "uincome",
+     "name": "Income of urban bodies",
+     "formula": "Taxes on buildings, sites, shops and carts; rents; cesses; state grants.",
+     "example": "Water, market and entertainment cesses add revenue.",
+     "pages": [
+      58
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "sabha",
+   "text": "The Grama Sabha has no election: every adult villager is a member. The Grama Panchayat is elected."
+  },
+  {
+   "id": "amend73",
+   "text": "The 73rd Amendment is for panchayats (rural); the 74th is for urban local bodies."
+  },
+  {
+   "id": "terms",
+   "text": "Panchayat presidents serve 30 months, but mayors and municipal presidents serve one year. Members serve 5 years."
+  }
+ ]
+}

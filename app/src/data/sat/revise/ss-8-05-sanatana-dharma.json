@@ -1,0 +1,224 @@
+{
+ "chapter": "ss-8-05-sanatana-dharma",
+ "terms": [
+  {
+   "id": "sanatana",
+   "term": "Sanatana",
+   "meaning": "A word that means most ancient and also ever new, so everlasting.",
+   "pages": [
+    40
+   ]
+  },
+  {
+   "id": "shruti",
+   "term": "Shruti",
+   "meaning": "\"That which is heard\": the Vedas, passed on from guru to pupil without a script.",
+   "pages": [
+    41
+   ]
+  },
+  {
+   "id": "smriti",
+   "term": "Smriti",
+   "meaning": "\"That which is remembered\": post-Vedic works recalling the Vedas and Upanishads.",
+   "pages": [
+    42
+   ]
+  },
+  {
+   "id": "vyasa",
+   "term": "Vedavyasa",
+   "meaning": "\"The one who classified the Vedas\": a name of the sage Krishnadwaipayana.",
+   "pages": [
+    41
+   ]
+  },
+  {
+   "id": "vedanga",
+   "term": "Vedanga",
+   "meaning": "An auxiliary subject that helps in understanding the Vedas.",
+   "pages": [
+    42
+   ]
+  },
+  {
+   "id": "darshana",
+   "term": "Darshana",
+   "meaning": "A school of Indian philosophy. The Darshanas are called its pillars.",
+   "pages": [
+    43
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "vedas",
+   "title": "The Vedas",
+   "items": [
+    {
+     "id": "four",
+     "name": "The four Vedas",
+     "formula": "Rigveda, Yajurveda, Samaveda and Atharvanaveda.",
+     "example": "Veda means knowledge.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "samhita",
+     "name": "Samhitha",
+     "formula": "Mantras and hymns that praise natural elements and deities.",
+     "example": "The first of each Veda's 4 divisions.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "brahmana",
+     "name": "Bramhana",
+     "formula": "Explains how to perform yagnas.",
+     "example": "Written mostly in prose.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "aranyaka",
+     "name": "Aaranyaka",
+     "formula": "Gives the meaning of the hymns and yagnas.",
+     "example": "It comes after the Bramhana.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "upanishad",
+     "name": "Upanishad",
+     "formula": "Guru and pupil discuss creation, the creator and human existence.",
+     "example": "The other three divisions stress karma; the Upanishads stress knowledge.",
+     "pages": [
+      41
+     ]
+    },
+    {
+     "id": "prayer",
+     "name": "Prayer from the Brihadaaranyaka Upanishad",
+     "formula": "Lead me from ignorance to truth, darkness to light, death to immortality.",
+     "example": "It begins \"Asatoma sadgamaya\".",
+     "pages": [
+      41,
+      42
+     ]
+    }
+   ]
+  },
+  {
+   "id": "smr",
+   "title": "Smritis and the texts with them",
+   "items": [
+    {
+     "id": "dharmasutra",
+     "name": "Why Smritis are called Dharmasutras",
+     "formula": "They give rules for everyday life and good conduct.",
+     "example": "There are 18, and the Manusmriti is the oldest and most influential.",
+     "pages": [
+      42
+     ]
+    },
+    {
+     "id": "const",
+     "name": "Which text guides our social outlook today",
+     "formula": "Our Constitution.",
+     "example": "The hierarchy in the Manusmriti is not accepted today.",
+     "pages": [
+      42
+     ]
+    },
+    {
+     "id": "vedangas",
+     "name": "The six Vedangas",
+     "formula": "Siksha (phonetics), Chandas (prosody), Vyakaran (grammar), Nirukta (etymology), Jyotishya (astrology), Kalpa (religious practices).",
+     "example": "Together they help with pronouncing and practising the Vedas.",
+     "pages": [
+      42
+     ]
+    },
+    {
+     "id": "itihasa",
+     "name": "Itihasa and Puranas",
+     "formula": "The epics are the Ramayana and Mahabharata.",
+     "example": "There are 18 Puranas and as many Upapuranas, with stories of gods and kings' family lines.",
+     "pages": [
+      42,
+      43
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dar",
+   "title": "Philosophy and worship",
+   "items": [
+    {
+     "id": "six",
+     "name": "The six major Darshanas",
+     "formula": "Nyaya, Vaisesika, Saankhya, Yoga, Purva Mimamsa and Uttara Mimamsa.",
+     "example": "All six accept the Vedas.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "asthika",
+     "name": "Asthika and Nasthika",
+     "formula": "Asthika accepts the authority of the Vedas; Nasthika does not.",
+     "example": "Jainism, Buddhism and Charvaka are Nasthika.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "saguna",
+     "name": "Saguna and Nirguna",
+     "formula": "Saguna has a name and form; Nirguna has neither.",
+     "example": "Worship of named deities is already found in the Vedas.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "agama",
+     "name": "Three schools of the Agama tradition",
+     "formula": "Vaishnava, Shaiva and Shaakta.",
+     "example": "Agama literature made room for the worship of idols.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "vivek",
+     "name": "Swami Vivekananda at Chicago",
+     "formula": "On 27 September 1893: \"Help and not fight; assimilation and not destruction.\"",
+     "example": "He spoke on the last day of the Parliament of Religions.",
+     "pages": [
+      43
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "shrusmr",
+   "text": "Shruti is what was heard (the Vedas). Smriti is what is remembered (later works). Don't swap them."
+  },
+  {
+   "id": "nasth",
+   "text": "Nasthika here means not accepting the authority of the Vedas. Jainism and Buddhism are in this group."
+  },
+  {
+   "id": "div",
+   "text": "Four Vedas and also four divisions of each Veda: these are two different lists."
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "chapter": "ss-7-20-karnataka-economic-social-transformation",
+ "terms": [
+  {
+   "id": "landreform",
+   "term": "Land reforms",
+   "meaning": "Measures to fix unequal land ownership and help tenants and the landless.",
+   "pages": [
+    90
+   ]
+  },
+  {
+   "id": "economic",
+   "term": "Economic holding",
+   "meaning": "A farm big enough to give a family a comfortable living after all costs.",
+   "pages": [
+    92,
+    93
+   ]
+  },
+  {
+   "id": "coopfarm",
+   "term": "Co-operative farming",
+   "meaning": "Farmers pool their land, farm together and share the money after saving some for the land.",
+   "pages": [
+    93
+   ]
+  },
+  {
+   "id": "lease",
+   "term": "Lease",
+   "meaning": "A contract that guarantees the landowner a fixed amount from the tenant for a fixed time.",
+   "pages": [
+    96
+   ]
+  },
+  {
+   "id": "panchayatraj",
+   "term": "Panchayat Raj",
+   "meaning": "Decentralised administration that lets local people take part and decide.",
+   "pages": [
+    95
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "land",
+   "title": "Land reforms",
+   "items": [
+    {
+     "id": "jatti",
+     "name": "B. D. Jatti committee (1955)",
+     "formula": "Proposed a ceiling of 116 acres of dry land or 27 acres of irrigated land per family.",
+     "example": "Put in place in 1957, it mostly helped the rich.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "acre",
+     "name": "Land measures",
+     "formula": "One acre = 100 cents = 40 guntas.",
+     "example": "So 2 acres = 80 guntas.",
+     "pages": [
+      91
+     ]
+    },
+    {
+     "id": "tiller",
+     "name": "Land Reforms Act of 1974",
+     "formula": "Under Chief Minister D. Devaraj Urs: \"The tiller became the owner of the land\".",
+     "example": "It ended all tenancy; claims went to a tribunal, appealable only in the High Court.",
+     "pages": [
+      91,
+      92
+     ]
+    },
+    {
+     "id": "ceiling",
+     "name": "Land ceiling of 1974",
+     "formula": "Dry land: 54 acres. Irrigated, one crop: 27 acres. Irrigated, two or more crops: 10 to 18 acres.",
+     "example": "The Inam Abolition Act came in 1977.",
+     "pages": [
+      92
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcc",
+   "title": "Backward Classes Commissions",
+   "items": [
+    {
+     "id": "miller",
+     "name": "Miller Commission (1918)",
+     "formula": "India's first backward class commission, under Krishnaraja Wodeyar IV, led by Justice Lesley C. Miller.",
+     "example": "The first reservation rule followed in 1921; Sahukar Chennaiah and M. Basavaiah led the non-Brahmin movement.",
+     "pages": [
+      93,
+      94
+     ]
+    },
+    {
+     "id": "havanur",
+     "name": "Havanur Commission (1975)",
+     "formula": "Set up by Devaraj Urs under L. G. Havanur; used 1975 SSLC pass rates to measure backwardness.",
+     "example": "Its 1977 government order empowered backward classes.",
+     "pages": [
+      94
+     ]
+    },
+    {
+     "id": "later",
+     "name": "Later commissions",
+     "formula": "T. Venkataswamy Commission (1983) and the Chinnappa Reddy committee under Ramakrishna Hegde.",
+     "example": "Neither was implemented, due to political pressure.",
+     "pages": [
+      94
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pr",
+   "title": "Panchayat Raj",
+   "items": [
+    {
+     "id": "mehta",
+     "name": "Balwantrai Mehta committee (1955)",
+     "formula": "Recommended a three-tier local government.",
+     "example": "Karnataka passed the Mysore Village Panchayats and Local Boards Act in 1959.",
+     "pages": [
+      95
+     ]
+    },
+    {
+     "id": "nazeer",
+     "name": "Abdul Nazeer Sab",
+     "formula": "Panchayat Raj Minister of the 1983 Janata government and architect of its changes.",
+     "example": "It opened local government to dalits, backward classes and women.",
+     "pages": [
+      95
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "urs",
+   "text": "\"The tiller is the owner\" was the 1974 Act under Devaraj Urs, not the 1957 reforms."
+  },
+  {
+   "id": "firstbcc",
+   "text": "The first backward class commission in India was Miller's (1918); Havanur's (1975) was Karnataka's first after independence."
+  },
+  {
+   "id": "ceil",
+   "text": "More water means a smaller ceiling: 54 acres dry, but only 10 to 18 acres with two crops."
+  }
+ ]
+}

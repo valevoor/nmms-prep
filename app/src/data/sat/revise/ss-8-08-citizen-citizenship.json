@@ -1,0 +1,241 @@
+{
+ "chapter": "ss-8-08-citizen-citizenship",
+ "terms": [
+  {
+   "id": "citizen",
+   "term": "Citizen",
+   "meaning": "A permanent member of a state who has civil and political rights and owes it loyalty.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "subject",
+   "term": "Subject",
+   "meaning": "A person ruled by someone else's state. Before 1947 Indians were British subjects.",
+   "pages": [
+    56
+   ]
+  },
+  {
+   "id": "alien",
+   "term": "Alien",
+   "meaning": "A foreigner living in a state for a time, who is a citizen of another state.",
+   "pages": [
+    57
+   ]
+  },
+  {
+   "id": "natural",
+   "term": "Natural citizenship",
+   "meaning": "Citizenship based on where a person is born.",
+   "pages": [
+    58
+   ]
+  },
+  {
+   "id": "naturalised",
+   "term": "Naturalised citizenship",
+   "meaning": "Citizenship an alien gets after meeting set conditions.",
+   "pages": [
+    58
+   ]
+  },
+  {
+   "id": "single",
+   "term": "Single citizenship",
+   "meaning": "One national citizenship only, with no separate state citizenship, as in India.",
+   "pages": [
+    60
+   ]
+  },
+  {
+   "id": "dual",
+   "term": "Dual citizenship",
+   "meaning": "Citizenship of both the nation and the state, as in the USA.",
+   "pages": [
+    61
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "meaning",
+   "title": "Who is a citizen",
+   "items": [
+    {
+     "id": "greek",
+     "name": "Citizenship in ancient Greece",
+     "formula": "Only those who took an active part in running the state.",
+     "example": "Women, manual workers and slaves had no rights of citizenship.",
+     "pages": [
+      56
+     ]
+    },
+    {
+     "id": "vattel",
+     "name": "Vattel's idea of a modern citizen",
+     "formula": "A member of civil society, bound by duties and an equal receiver of its benefits.",
+     "example": "The citizen is under the state's authority too.",
+     "pages": [
+      56
+     ]
+    },
+    {
+     "id": "benefits",
+     "name": "Benefits a citizen enjoys",
+     "formula": "Security, law and order, welfare schemes, fundamental rights, voting and contesting elections.",
+     "example": "Only citizens can become President, Vice-President or a Supreme Court judge.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "vs",
+     "name": "Citizen and alien compared",
+     "formula": "Citizens: permanent, political rights, can't be driven out. Aliens: temporary, no political rights, can be asked to leave.",
+     "example": "An expired visa or illegal activity can make an alien leave.",
+     "pages": [
+      58
+     ]
+    }
+   ]
+  },
+  {
+   "id": "world",
+   "title": "Becoming a citizen by naturalisation",
+   "items": [
+    {
+     "id": "domicile",
+     "name": "Domicile or residence",
+     "formula": "Living long in a foreign state can earn citizenship.",
+     "example": "England and USA: 5 years. France: 10 years.",
+     "pages": [
+      58
+     ]
+    },
+    {
+     "id": "marriage",
+     "name": "Marriage",
+     "formula": "A woman may get her foreign husband's citizenship, but usually not the reverse.",
+     "example": "In Japan and some other countries the husband also gets it.",
+     "pages": [
+      58,
+      59
+     ]
+    },
+    {
+     "id": "others",
+     "name": "Service, application and property",
+     "formula": "Government service abroad, applying with good character, or buying property.",
+     "example": "Mexico has a rule on property.",
+     "pages": [
+      59
+     ]
+    }
+   ]
+  },
+  {
+   "id": "india",
+   "title": "Citizenship in India",
+   "items": [
+    {
+     "id": "act",
+     "name": "The Citizenship Act",
+     "formula": "Passed by Parliament in 1955, amended in 1986 and 2019.",
+     "example": "Only Parliament can make citizenship law; state legislatures can't.",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "birth",
+     "name": "Citizenship by birth",
+     "formula": "Born in India on or after 26 January 1950.",
+     "example": "A child born in Mysuru in 2015 is a citizen by birth.",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "descent",
+     "name": "Citizenship by descent",
+     "formula": "Born outside India on or after 26 January 1950, with a parent who was then an Indian citizen.",
+     "example": "Either parent is enough.",
+     "pages": [
+      59
+     ]
+    },
+    {
+     "id": "reg",
+     "name": "Citizenship by registration",
+     "formula": "A non-citizen can become one by registering under the Constitution or the Act.",
+     "example": "It is one of the 5 ways in India.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "nat",
+     "name": "Citizenship by naturalization in India",
+     "formula": "Foreigners apply to the President after living in India for at least 7 years.",
+     "example": "Conditions must be met before applying.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "terr",
+     "name": "Citizenship by incorporation of territory",
+     "formula": "When a new territory joins India, its people get citizenship by government order.",
+     "example": "No personal application is needed.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "loss",
+     "name": "Three ways to lose Indian citizenship",
+     "formula": "Renunciation (by choice), Termination (taking another country's citizenship), Deprivation (fraud or disloyalty).",
+     "example": "Deprivation is forced termination by the government.",
+     "pages": [
+      60
+     ]
+    },
+    {
+     "id": "duties",
+     "name": "Duties of a citizen",
+     "formula": "Respect the Constitution, obey laws, pay taxes, oppose corruption and dowry, defend the nation.",
+     "example": "Rights and duties are two faces of the same coin.",
+     "pages": [
+      61,
+      62
+     ]
+    },
+    {
+     "id": "fd",
+     "name": "Fundamental duties in our Constitution",
+     "formula": "Added in 1976 by the 42nd Amendment, under Article 51A.",
+     "example": "They remind citizens of their social and economic obligations.",
+     "pages": [
+      62
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "termren",
+   "text": "Renunciation is done by the citizen's own choice. Termination happens by law when another citizenship is taken."
+  },
+  {
+   "id": "dualind",
+   "text": "India has single citizenship. Living in Karnataka doesn't give a separate Karnataka citizenship."
+  },
+  {
+   "id": "years",
+   "text": "India's naturalisation period is 7 years. The 5 and 10 years are England or USA and France."
+  }
+ ]
+}

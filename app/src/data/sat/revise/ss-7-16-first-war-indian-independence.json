@@ -1,0 +1,171 @@
+{
+ "chapter": "ss-7-16-first-war-indian-independence",
+ "terms": [
+  {
+   "id": "fwi",
+   "term": "First War of Indian Independence",
+   "meaning": "The 1857 struggle against British rule; the British called it only a Sepoy Mutiny.",
+   "pages": [
+    14
+   ]
+  },
+  {
+   "id": "wmb",
+   "term": "White Man's Burden",
+   "meaning": "Rudyard Kipling's idea that the British had a duty to \"civilise\" Indians, a cover for imperialism.",
+   "pages": [
+    17
+   ]
+  },
+  {
+   "id": "farangi",
+   "term": "Farangi",
+   "meaning": "A Persian word used in Urdu and Hindi as an insult for Europeans.",
+   "pages": [
+    20
+   ]
+  },
+  {
+   "id": "proclamation",
+   "term": "Queen Victoria's Proclamation",
+   "meaning": "The 1858 promise to respect Indians' rights, customs and religion, after the Company's rule ended.",
+   "pages": [
+    21
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "nature",
+   "title": "How it was seen",
+   "items": [
+    {
+     "id": "savarkar",
+     "name": "Who called it a war of independence",
+     "formula": "V. D. Savarkar first; Pattabhi Sitaramaiah too.",
+     "example": "Nehru: a soldiers' mutiny that quickly became a people's revolt.",
+     "pages": [
+      14
+     ]
+    }
+   ]
+  },
+  {
+   "id": "causes",
+   "title": "Causes",
+   "items": [
+    {
+     "id": "political",
+     "name": "Political causes",
+     "formula": "Subsidiary Alliance and the Doctrine of Lapse cost kings their thrones; Satara, Jhansi, Oudh and others were taken.",
+     "example": "Bahadur Shah II was reduced to a king in name only.",
+     "pages": [
+      15
+     ]
+    },
+    {
+     "id": "admin",
+     "name": "Administrative causes",
+     "formula": "High posts were only for Europeans; English replaced Persian in the courts.",
+     "example": "Middlemen ran much of the administration.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "economic",
+     "name": "Economic causes",
+     "formula": "Cottage industries died, land tax was harsh, zamindars lost income, and wealth drained away.",
+     "example": "Droughts killed thousands.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "social",
+     "name": "Social and religious causes",
+     "formula": "Racial insults (\"Dogs and Indians are prohibited\"), spread of Christianity, and reforms conservatives disliked.",
+     "example": "Railways and the telegraph were viewed with suspicion.",
+     "pages": [
+      16,
+      17
+     ]
+    },
+    {
+     "id": "military",
+     "name": "Military causes",
+     "formula": "Low pay, no promotion, a ban on religious symbols.",
+     "example": "Canning's Common Military Service Act sent soldiers anywhere.",
+     "pages": [
+      17
+     ]
+    },
+    {
+     "id": "immediate",
+     "name": "Immediate cause",
+     "formula": "The Enfield Rifle's cartridges, which had to be bitten open, were said to be greased with pig and cow fat.",
+     "example": "This hurt both Hindu and Muslim soldiers.",
+     "pages": [
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "course",
+   "title": "Course of the revolt",
+   "items": [
+    {
+     "id": "meerut",
+     "name": "How the revolt began",
+     "formula": "Mangal Pandey killed a British officer at Barackpore; the revolt began at Meerut on 10 May 1857.",
+     "example": "Soldiers marched to Delhi and declared Bahadur Shah II Emperor.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "leaders",
+     "name": "Leaders and their centres",
+     "formula": "Delhi: Bakht Khan. Kanpur: Nana Saheb, Tatya Tope. Lucknow: Begum Hazrat Mahal. Jhansi: Laxmibai. Bihar: Kunwar Singh.",
+     "example": "The British crushed every centre.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "karnataka",
+     "name": "The revolt in Karnataka",
+     "formula": "Mundargi Bhima Rao, the Halagali hunters, Venkatappa Nayaka of Surapura and Baba Saheb of Nargund.",
+     "example": "It also spread to other southern regions.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "results",
+     "name": "Results of the revolt",
+     "formula": "The East India Company's rule ended and the British Queen took over India.",
+     "example": "It inspired the later freedom movement.",
+     "pages": [
+      21
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "started",
+   "text": "Mangal Pandey acted at Barackpore before the revolt; the revolt itself began at Meerut."
+  },
+  {
+   "id": "kipling",
+   "text": "\"White Man's Burden\" was Kipling's phrase, used by the British, not an Indian idea."
+  },
+  {
+   "id": "failed",
+   "text": "The revolt failed, but it still ended Company rule."
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "chapter": "ss-8-03-sindhu-saraswati-vedic",
+ "terms": [
+  {
+   "id": "harappan",
+   "term": "Harappan Civilization",
+   "meaning": "Another name for the Sindhu-Saraswati (Indus Valley) Civilization, after Harappa, the first site found.",
+   "pages": [
+    15
+   ]
+  },
+  {
+   "id": "bronze",
+   "term": "Bronze Age",
+   "meaning": "What the Harappan period is also called, after the alloy its people used.",
+   "pages": [
+    15
+   ]
+  },
+  {
+   "id": "script",
+   "term": "Picture Script",
+   "meaning": "The name scholars give the Harappan writing on seals. It is still not deciphered.",
+   "pages": [
+    19
+   ]
+  },
+  {
+   "id": "veda",
+   "term": "Veda",
+   "meaning": "From the word \"Vid\", which means knowledge.",
+   "pages": [
+    21
+   ]
+  },
+  {
+   "id": "hothri",
+   "term": "Hothri",
+   "meaning": "A person who recites the hymns of the Rigveda.",
+   "pages": [
+    21
+   ]
+  },
+  {
+   "id": "rajan",
+   "term": "Rajan",
+   "meaning": "The Vedic word for a king, who was helped by the Sabha, Samiti and Vidata.",
+   "pages": [
+    21
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "find",
+   "title": "Finding the civilization",
+   "items": [
+    {
+     "id": "age",
+     "name": "How old the civilization is",
+     "formula": "It existed about 5000 years ago and began to decline about 4000 years ago.",
+     "example": "Most sites are in Sindh and Punjab, others in Rajasthan and Gujarat.",
+     "pages": [
+      15,
+      20
+     ]
+    },
+    {
+     "id": "dig",
+     "name": "Who dug at Harappa and Mohenjo-daro",
+     "formula": "Dayaram Sahani at Harappa (1920), R. D. Banerjee at Mohenjo-daro (1921).",
+     "example": "Both worked before the 1924 announcement.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "marshall",
+     "name": "Who announced the discovery",
+     "formula": "Sir John Marshall, head of Indian Archaeology, in 1924.",
+     "example": "He published it in the Illustrated London News.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "early",
+     "name": "Early visitors to Harappa",
+     "formula": "Charles Masson (1826) and Alexander Burns.",
+     "example": "Alexander Cunningham, first Director General of Archaeology, did small digs.",
+     "pages": [
+      16
+     ]
+    }
+   ]
+  },
+  {
+   "id": "town",
+   "title": "Town planning",
+   "items": [
+    {
+     "id": "fort",
+     "name": "Two parts of a Harappan town",
+     "formula": "West: small and raised, called the fort. East: wide and low, called the village.",
+     "example": "Each had a wall of interlocked burnt clay bricks.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "bath",
+     "name": "Public bath at Mohenjo-Daro",
+     "formula": "A leak-proof brick tank with stairs on two sides and rooms around it.",
+     "example": "Water probably came from a nearby well and was drained after use.",
+     "pages": [
+      16
+     ]
+    },
+    {
+     "id": "houses",
+     "name": "Harappan houses",
+     "formula": "Brick, one or two storeys, rooms around a central space, doors to the street but no windows.",
+     "example": "Every house had its own bath.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "drains",
+     "name": "Harappan drains",
+     "formula": "Brick drains covered with stone slabs that had holes for cleaning.",
+     "example": "House drains joined the street drains.",
+     "pages": [
+      18
+     ]
+    },
+    {
+     "id": "sitefacts",
+     "name": "What each Harappan site is known for",
+     "formula": "Lothal: dockyard and sea trade. Dholavira: rain water management. Kalibangan: fire places.",
+     "example": "Granaries: Harappa, Mohenjo-Daro and Lothal.",
+     "pages": [
+      17,
+      20
+     ]
+    },
+    {
+     "id": "villages",
+     "name": "First villages",
+     "formula": "Burzahom (Kashmir): pit houses against cold and animals.",
+     "example": "Mehrgarh, near the Bolan pass: barley, wheat, sheep and goats.",
+     "pages": [
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "econ",
+   "title": "Life and work",
+   "items": [
+    {
+     "id": "seals",
+     "name": "Harappan seals",
+     "formula": "The bull and the peepal leaf are the main figures.",
+     "example": "Seals found in Mesopotamia show close trade ties.",
+     "pages": [
+      19
+     ]
+    },
+    {
+     "id": "crops",
+     "name": "Harappan farming",
+     "formula": "Wheat, barley, pulses and cotton, with oxen to plough.",
+     "example": "Copper for bronze came from Baluchistan and Rajasthan.",
+     "pages": [
+      20
+     ]
+    },
+    {
+     "id": "decline",
+     "name": "Possible reasons for the decline",
+     "formula": "Rivers drying up or changing course, loss of forests, long floods.",
+     "example": "People moved east and south, but Lothal lasted longer.",
+     "pages": [
+      20,
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vedic",
+   "title": "Vedic Civilization",
+   "items": [
+    {
+     "id": "period",
+     "name": "Dates of the Vedic period",
+     "formula": "1500 BCE to 700 BCE, the start of India's historic period.",
+     "example": "It is divided into the Early (Rigvedic) and Later Vedic periods.",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "rig",
+     "name": "The Rigveda",
+     "formula": "The first Veda: 1028 Suktas in 10 Mandalas.",
+     "example": "The Purushasukta, in the tenth Mandala, mentions the varnas.",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "earlyv",
+     "name": "Society in the Early Vedic period",
+     "formula": "Varna by profession, women equal, widow marriage allowed.",
+     "example": "Main work: animal husbandry and farming.",
+     "pages": [
+      21
+     ]
+    },
+    {
+     "id": "later",
+     "name": "Society in the Later Vedic period",
+     "formula": "Caste by birth, women not equal, widow marriage banned.",
+     "example": "Dowry, parda and child marriage began, and farming became the main work.",
+     "pages": [
+      21
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "varna",
+   "text": "Early Vedic varna depended on profession. Fixing it by birth came in the Later Vedic period."
+  },
+  {
+   "id": "mar",
+   "text": "Sahani and Banerjee did the digging. Marshall is the one who announced it to the world."
+  },
+  {
+   "id": "vidata",
+   "text": "The Vidata disappeared in the Later Vedic period, while the Sabha and Samiti are named with it in the early one."
+  }
+ ]
+}

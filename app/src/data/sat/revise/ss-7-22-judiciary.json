@@ -1,0 +1,171 @@
+{
+ "chapter": "ss-7-22-judiciary",
+ "terms": [
+  {
+   "id": "judicial",
+   "term": "Judicial system",
+   "meaning": "A system that gives judgements based on laws.",
+   "pages": [
+    108
+   ]
+  },
+  {
+   "id": "law",
+   "term": "Law",
+   "meaning": "Rules that regulate behaviour, control crime, keep order and protect citizens' rights.",
+   "pages": [
+    108
+   ]
+  },
+  {
+   "id": "lokadalat",
+   "term": "Lok Adalat",
+   "meaning": "A people's court that settles cases by compromise, quickly and cheaply.",
+   "pages": [
+    112
+   ]
+  },
+  {
+   "id": "pil",
+   "term": "Public Interest Litigation (PIL)",
+   "meaning": "A complaint by an affected citizen against a government body that breaks the law; the court takes it up without fees.",
+   "pages": [
+    113
+   ]
+  },
+  {
+   "id": "litigation",
+   "term": "Litigation",
+   "meaning": "A dispute taken to court.",
+   "pages": [
+    113
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "courts",
+   "title": "What courts do",
+   "items": [
+    {
+     "id": "func",
+     "name": "Functions of the courts",
+     "formula": "Interpret laws and settle disputes between people, and between people and government.",
+     "example": "They are independent of the legislature and executive.",
+     "pages": [
+      108,
+      109
+     ]
+    },
+    {
+     "id": "levels",
+     "name": "Levels of courts in India",
+     "formula": "Supreme Court (national, New Delhi), High Courts (state), Subordinate Courts (district, magistrate, Lok Adalats).",
+     "example": "Appeals go from lower to higher courts.",
+     "pages": [
+      111
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc",
+   "title": "Supreme Court",
+   "items": [
+    {
+     "id": "scmake",
+     "name": "Supreme Court make-up",
+     "formula": "The Chief Justice of India and 33 other judges, all appointed by the President.",
+     "example": "1 + 33 = 34 judges in all; it sits in New Delhi.",
+     "pages": [
+      109
+     ]
+    },
+    {
+     "id": "scqual",
+     "name": "Who can be a Supreme Court judge",
+     "formula": "A High Court judge for at least five years, a High Court advocate for ten years, or a distinguished jurist.",
+     "example": "They retire at 65.",
+     "pages": [
+      109
+     ]
+    },
+    {
+     "id": "scfunc",
+     "name": "Functions of the Supreme Court",
+     "formula": "Settles Centre-State and inter-State disputes, issues writs for fundamental rights, interprets the Constitution.",
+     "example": "It advises the President when asked.",
+     "pages": [
+      110
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hc",
+   "title": "High Courts and lower courts",
+   "items": [
+    {
+     "id": "hcfacts",
+     "name": "High Courts",
+     "formula": "The highest court of a state; India has 25; Karnataka's is in Bengaluru.",
+     "example": "Judges retire at 62; English or a regional language may be used.",
+     "pages": [
+      110,
+      111
+     ]
+    },
+    {
+     "id": "hcqual",
+     "name": "Who can be a High Court judge",
+     "formula": "A citizen with ten years in the judiciary or ten years as a High Court advocate.",
+     "example": "The President appoints the Chief Justice after consulting the Chief Justice of India and the Governor.",
+     "pages": [
+      111
+     ]
+    },
+    {
+     "id": "civil",
+     "name": "Civil and criminal courts",
+     "formula": "Civil: money, property and contracts. Criminal: murder, theft and robbery.",
+     "example": "Both are subordinate courts under the High Court.",
+     "pages": [
+      112
+     ]
+    },
+    {
+     "id": "adalat",
+     "name": "How a Lok Adalat works",
+     "formula": "Only parties who agree to settle; its judgement is final and binding, with no appeal.",
+     "example": "Anyone forced into a compromise can complain to the police.",
+     "pages": [
+      112
+     ]
+    },
+    {
+     "id": "president",
+     "name": "Protection for the President",
+     "formula": "Can't be arrested or face a criminal case during the term.",
+     "example": "Decisions made in office can't be questioned in court.",
+     "pages": [
+      113
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "retire",
+   "text": "Supreme Court judges retire at 65; High Court judges at 62."
+  },
+  {
+   "id": "noappeal",
+   "text": "There is no appeal against a Lok Adalat judgement, unlike other courts."
+  },
+  {
+   "id": "civcrim",
+   "text": "A property dispute goes to a civil court; a theft goes to a criminal court."
+  }
+ ]
+}

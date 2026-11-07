@@ -1,0 +1,189 @@
+{
+ "chapter": "ss-7-15-social-religious-reforms",
+ "terms": [
+  {
+   "id": "renaissance",
+   "term": "Indian Renaissance",
+   "meaning": "The 19th century awakening under western ideas of science, humanism and rationalism, also called the Social and Religious Reformation.",
+   "pages": [
+    1
+   ]
+  },
+  {
+   "id": "sati",
+   "term": "Sati",
+   "meaning": "The practice of a widow dying on her husband's pyre, declared illegal by William Bentinck in 1829.",
+   "pages": [
+    2
+   ]
+  },
+  {
+   "id": "shuddhi",
+   "term": "Shuddhi Movement",
+   "meaning": "Shraddananda's movement to bring converts back to Hinduism.",
+   "pages": [
+    5
+   ]
+  },
+  {
+   "id": "theosophy",
+   "term": "Theosophical Society",
+   "meaning": "Brahmavidya Samaja, founded at New York in 1875 by Madame Blavatsky and Colonel Olcott.",
+   "pages": [
+    7
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "samajs",
+   "title": "Reform organisations",
+   "items": [
+    {
+     "id": "roy",
+     "name": "Raja Ram Mohan Roy",
+     "formula": "\"Father of Indian Renaissance\" (Tagore's words); founded Atmiya Sabha (1814) and Brahma Sabha (1828), renamed Brahma Samaj.",
+     "example": "He opposed sati, caste, idol-worship and polygamy, and started the newspaper Samvada Kaumudi.",
+     "pages": [
+      2
+     ]
+    },
+    {
+     "id": "prarthana",
+     "name": "Prarthana Samaj (1867)",
+     "formula": "Started by Atmaram Panduranga in Bombay; leaders M. G. Ranade and N. G. Chandavarkar.",
+     "example": "It worked for widow marriage, intercaste marriage and women's uplift.",
+     "pages": [
+      3
+     ]
+    },
+    {
+     "id": "phule",
+     "name": "Jyotiba Phule and the Satya Shodak Samaj (1873)",
+     "formula": "A non-Brahmin movement in Maharashtra; his book Gulamgiri (Slavery).",
+     "example": "With Savitribai he opened a girls' school in Pune; Ambedkar saw him as his mentor.",
+     "pages": [
+      3,
+      4
+     ]
+    },
+    {
+     "id": "derozio",
+     "name": "Young Bengal Movement",
+     "formula": "Led by Henri Vivian Derozio, who urged youth to think for themselves.",
+     "example": "It grew from Roy's ideas.",
+     "pages": [
+      4
+     ]
+    },
+    {
+     "id": "arya",
+     "name": "Arya Samaj (1875)",
+     "formula": "Dayananda Saraswati (born Moolashankar): \"Return to the Vedas\"; his book Satyartha Prakasha.",
+     "example": "Lala Hamsaraj set up the D.A.V. school in Lahore (1886).",
+     "pages": [
+      4,
+      5
+     ]
+    },
+    {
+     "id": "vivek",
+     "name": "Swami Vivekananda and the Ramakrishna Mission (1897)",
+     "formula": "Born Narendranath Dutta on 12 January 1863, disciple of Ramakrishna Paramahamsa; spoke at Chicago in 1893.",
+     "example": "Tilak called him \"The True Father of Indian Nationalism\"; Chamarajendra Wodeyar X helped fund his trip.",
+     "pages": [
+      6,
+      7
+     ]
+    },
+    {
+     "id": "vidya",
+     "name": "Eshwarchandra Vidyasagar",
+     "formula": "Opened a Sanskrit College for non-Brahmins.",
+     "example": "He led the first legal upper-class widow remarriage in Kolkata in 1856.",
+     "pages": [
+      7
+     ]
+    },
+    {
+     "id": "besant",
+     "name": "Annie Besant and the Theosophists",
+     "formula": "Their international office is at Adyar near Chennai; Besant set up the Central Hindu College (later BHU) and the Home Rule Movement.",
+     "example": "She was the first woman President of the Congress (1917).",
+     "pages": [
+      7,
+      8
+     ]
+    },
+    {
+     "id": "syed",
+     "name": "Sir Syed Ahmad Khan and the Aligarh Movement",
+     "formula": "Spread English education among Muslims; opposed purdah and polygamy; started the Aligarh Institute Gazette.",
+     "example": "His Mohammedan Anglo-Oriental College (1875) became Aligarh Muslim University in 1920.",
+     "pages": [
+      8,
+      9
+     ]
+    },
+    {
+     "id": "narayana",
+     "name": "Sri Narayana Guru",
+     "formula": "Born in 1854 in an Ezhava family; founded the Sri Narayana Dharma Paripalana Yogam (1903).",
+     "example": "\"One God, One Religion and One Caste\"; temples open to all.",
+     "pages": [
+      9,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "id": "women",
+   "title": "Women reformers",
+   "items": [
+    {
+     "id": "savitri",
+     "name": "Savitribai Phule",
+     "formula": "Taught at the girls' school in Pune with her husband; ran a home for child widows.",
+     "example": "She led the Satya Shodak Samaj after him and died nursing plague patients; Fatima Sheikh was her companion.",
+     "pages": [
+      10,
+      11
+     ]
+    },
+    {
+     "id": "tharabai",
+     "name": "Tharabai Shinde",
+     "formula": "Maharashtra's first woman freedom fighter, of the Satya Shodak Samaj.",
+     "example": "Her book Stri Purush Tulana opposed the exploitation of women.",
+     "pages": [
+      11
+     ]
+    },
+    {
+     "id": "ramabai",
+     "name": "Panditha Ramabai",
+     "formula": "A Christian reformer who founded the Mukti Mission in 1889.",
+     "example": "It still shelters widows, orphans and alcoholics.",
+     "pages": [
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "founders",
+   "text": "Arya Samaj: Dayananda. Brahma Samaj: Roy. Prarthana Samaj: Atmaram Panduranga. Satya Shodak Samaj: Phule."
+  },
+  {
+   "id": "ny",
+   "text": "The Theosophical Society began in New York, not India; only its international office is at Adyar."
+  },
+  {
+   "id": "rmission",
+   "text": "Vivekananda founded the Ramakrishna Mission and named it after his guru; Ramakrishna didn't found it."
+  }
+ ]
+}

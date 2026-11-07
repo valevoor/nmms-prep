@@ -1,0 +1,224 @@
+{
+ "chapter": "ss-7-14-south-america",
+ "terms": [
+  {
+   "id": "selvas",
+   "term": "Selvas",
+   "meaning": "The Amazon's tropical rainforest, the world's largest.",
+   "pages": [
+    201
+   ]
+  },
+  {
+   "id": "grasslands",
+   "term": "Llanos, Campos and Pampas",
+   "meaning": "Grasslands of South America: Llanos (Orinoco, Venezuela), Campos (Brazil), Pampas (Argentina).",
+   "pages": [
+    201,
+    203
+   ]
+  },
+  {
+   "id": "laplata",
+   "term": "La Plata",
+   "meaning": "The joint river system of the Parana, Paraguay and Uruguay.",
+   "pages": [
+    198
+   ]
+  },
+  {
+   "id": "gaucho",
+   "term": "Gaucho",
+   "meaning": "A cowboy who rears cattle on the Pampas.",
+   "pages": [
+    205
+   ]
+  },
+  {
+   "id": "hollow",
+   "term": "Hollow Continent",
+   "meaning": "A name for South America, as people live on the coasts and the interior is nearly empty.",
+   "pages": [
+    208
+   ]
+  },
+  {
+   "id": "latex",
+   "term": "Latex",
+   "meaning": "The milky sap of rubber trees in the Amazon forests.",
+   "pages": [
+    201
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "loc",
+   "title": "Location",
+   "items": [
+    {
+     "id": "where",
+     "name": "Location of South America",
+     "formula": "12°N to 56°S and 35°W to 81°W; mostly in the Southern Hemisphere.",
+     "example": "The Equator and the Tropic of Capricorn cross it; it is triangular.",
+     "pages": [
+      196
+     ]
+    },
+    {
+     "id": "size",
+     "name": "Size of South America",
+     "formula": "Fourth largest continent: 178.4 lakh sq km, 5.42 times India.",
+     "example": "13 countries: Brazil largest, French Guyana smallest; Bolivia and Paraguay have no coast.",
+     "pages": [
+      194,
+      196
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phys",
+   "title": "Physical features",
+   "items": [
+    {
+     "id": "four",
+     "name": "Four physical divisions",
+     "formula": "Andes Mountains, Eastern Highlands, Central Lowlands, Western Coastal Plains.",
+     "example": "The Central Lowlands hold the Amazon, Orinoco and La Plata basins.",
+     "pages": [
+      196,
+      197
+     ]
+    },
+    {
+     "id": "andes",
+     "name": "The Andes",
+     "formula": "The world's longest mountain chain, 6440 km along the Pacific, in the Ring of Fire.",
+     "example": "Highest peak: Aconcagua (6,960 m), on the Argentina-Chile border; rich in copper and tin.",
+     "pages": [
+      197
+     ]
+    },
+    {
+     "id": "angel",
+     "name": "Angel Falls",
+     "formula": "The world's highest waterfall (974 m), in the Guyana Highlands.",
+     "example": "The Guyana and Brazilian Highlands are old rocks like the Deccan.",
+     "pages": [
+      197
+     ]
+    },
+    {
+     "id": "amazon",
+     "name": "The Amazon",
+     "formula": "6450 km from the Andes; the largest river in the world, with more than 1,000 tributaries.",
+     "example": "Lake Titicaca (Bolivia) is the highest lake in the world.",
+     "pages": [
+      198,
+      199
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clim",
+   "title": "Climate and life",
+   "items": [
+    {
+     "id": "rain",
+     "name": "Climate of South America",
+     "formula": "The Amazon basin is hot and wet, with convectional \"afternoon\" rains.",
+     "example": "East of the Andes is a rain shadow; Atacama (Chile) is the driest place, with no rain for 200 years.",
+     "pages": [
+      200
+     ]
+    },
+    {
+     "id": "trees",
+     "name": "Trees of the rainforest",
+     "formula": "Hardwoods like mahogany and ebony, and rubber trees.",
+     "example": "Brazil's south-east coast has deciduous forest.",
+     "pages": [
+      201
+     ]
+    },
+    {
+     "id": "animals",
+     "name": "Animals of South America",
+     "formula": "\"Continent of Birds\": the condor, and the flightless rhea. Anaconda, jaguar, puma, piranha.",
+     "example": "Llama and alpaca are used by local people; the Galapagos have giant tortoises.",
+     "pages": [
+      203
+     ]
+    }
+   ]
+  },
+  {
+   "id": "econ",
+   "title": "Farming and people",
+   "items": [
+    {
+     "id": "crops",
+     "name": "Crops of South America",
+     "formula": "Only about 10% of land is farmed: maize (native), wheat in Argentina and Chile, potato in the Andes.",
+     "example": "Rice grows along the Brazilian coast.",
+     "pages": [
+      204
+     ]
+    },
+    {
+     "id": "coffee",
+     "name": "Brazil's coffee",
+     "formula": "Brazil is the world's largest coffee producer, the \"Coffee pot of the world\".",
+     "example": "Rio de Janeiro is the \"Coffee port of the world\".",
+     "pages": [
+      205
+     ]
+    },
+    {
+     "id": "livestock",
+     "name": "Livestock and fishing",
+     "formula": "Pampas cattle (Argentina was once the top beef exporter); sheep on Patagonia.",
+     "example": "Peru and Chile have the best fishing grounds.",
+     "pages": [
+      205,
+      206
+     ]
+    },
+    {
+     "id": "urban",
+     "name": "Towns in South America",
+     "formula": "About 80% of people live in towns, against a world average of 47%.",
+     "example": "Uruguay is highest (93%) and Guyana lowest (36%).",
+     "pages": [
+      206
+     ]
+    },
+    {
+     "id": "growth",
+     "name": "Population growth",
+     "formula": "Birth rate 21 per 1000, like the world's; death rate 6, below the world's 9.",
+     "example": "So natural increase is faster than the world average.",
+     "pages": [
+      208
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "grass",
+   "text": "Llanos are in Venezuela, Campos in Brazil and Pampas in Argentina."
+  },
+  {
+   "id": "amazonlong",
+   "text": "The Amazon is the largest river in the world, but the Andes are the longest mountain chain."
+  },
+  {
+   "id": "rhea",
+   "text": "The rhea is a large bird that can't fly; the condor is the biggest flying bird."
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "chapter": "ss-8-28-basic-concepts-economics",
+ "terms": [
+  {
+   "id": "demand",
+   "term": "Demand",
+   "meaning": "A want backed by willingness and ability to pay: the quantity bought at a given price and time.",
+   "pages": [
+    83
+   ]
+  },
+  {
+   "id": "supply",
+   "term": "Supply",
+   "meaning": "The quantity of goods and services ready for sale at a given price.",
+   "pages": [
+    83
+   ]
+  },
+  {
+   "id": "consumption",
+   "term": "Consumption",
+   "meaning": "Using goods and services to satisfy wants.",
+   "pages": [
+    85
+   ]
+  },
+  {
+   "id": "utility",
+   "term": "Utility",
+   "meaning": "The power to satisfy a want. It can't be measured and varies by person, time and place.",
+   "pages": [
+    85
+   ]
+  },
+  {
+   "id": "price",
+   "term": "Price",
+   "meaning": "Value expressed in money: what is paid for a good or service.",
+   "pages": [
+    86
+   ]
+  },
+  {
+   "id": "ni",
+   "term": "National income",
+   "meaning": "The total money value of all goods and services a country produces in a year.",
+   "pages": [
+    87
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "ds",
+   "title": "Demand, supply and price",
+   "items": [
+    {
+     "id": "law",
+     "name": "Demand and price",
+     "formula": "When price rises, demand usually falls.",
+     "example": "Demand is called the index of a nation's progress.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "slaw",
+     "name": "Supply and price",
+     "formula": "When price rises, supply usually rises too.",
+     "example": "In some cases supply stays the same whatever the price.",
+     "pages": [
+      83,
+      84
+     ]
+    },
+    {
+     "id": "pillars",
+     "name": "Two pillars of economic activity",
+     "formula": "Demand and supply: a change in one quickly affects the other, seen in the price.",
+     "example": "Price's main job is to make demand equal supply.",
+     "pages": [
+      84
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prod",
+   "title": "Production and distribution",
+   "items": [
+    {
+     "id": "production",
+     "name": "Meaning of production",
+     "formula": "Man can't create anything new, only add utility to what nature gives.",
+     "example": "It is complete only when goods reach the consumer.",
+     "pages": [
+      84
+     ]
+    },
+    {
+     "id": "factors",
+     "name": "Factors of production and their rewards",
+     "formula": "Land, labour, capital and organisation get rent, wages, interest and profit.",
+     "example": "Each is paid by the part it plays.",
+     "pages": [
+      84
+     ]
+    },
+    {
+     "id": "cons2",
+     "name": "Two types of consumption",
+     "formula": "Goods used to make other goods, and finished goods used to satisfy wants.",
+     "example": "More consumption means more production, income and jobs.",
+     "pages": [
+      85
+     ]
+    },
+    {
+     "id": "profit",
+     "name": "Profit",
+     "formula": "What the producer keeps after paying rent, wages and interest.",
+     "example": "Efficiency decides profit or loss.",
+     "pages": [
+      87
+     ]
+    }
+   ]
+  },
+  {
+   "id": "util",
+   "title": "Four kinds of utility",
+   "items": [
+    {
+     "id": "principle",
+     "name": "Principle utility",
+     "formula": "Used in its original form.",
+     "example": "Water, fruit, eggs.",
+     "pages": [
+      86
+     ]
+    },
+    {
+     "id": "form",
+     "name": "Form utility",
+     "formula": "Gained by giving a thing a new shape.",
+     "example": "A sculptor's idol from stone; a carpenter's chair from wood.",
+     "pages": [
+      86
+     ]
+    },
+    {
+     "id": "time",
+     "name": "Time utility",
+     "formula": "Gained by storing a thing until it is scarce.",
+     "example": "Mango pickle eaten when mangoes are out of season.",
+     "pages": [
+      86
+     ]
+    },
+    {
+     "id": "place",
+     "name": "Place utility",
+     "formula": "Gained by moving a thing to where it isn't grown.",
+     "example": "Shimla apples or Kodagu oranges sold far away.",
+     "pages": [
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nat",
+   "title": "The nation's income and work",
+   "items": [
+    {
+     "id": "pci",
+     "name": "Per capita income",
+     "formula": "National income ÷ population.",
+     "example": "₹1000 crore shared by 10 lakh people is ₹10,000 each.",
+     "pages": [
+      88
+     ]
+    },
+    {
+     "id": "coop",
+     "name": "Co-operation",
+     "formula": "People join as equals for self-help: one vote each, shared profit, no middlemen.",
+     "example": "Its spirit: \"Each for all and all for each\".",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "labour",
+     "name": "Physical and mental labour",
+     "formula": "Physical: digging, ploughing, carrying loads. Mental: teachers, scientists, lawyers, clerks.",
+     "example": "Gandhiji believed in the dignity of all labour.",
+     "pages": [
+      88
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "utiluse",
+   "text": "Utility isn't the same as usefulness: alcohol has no use but has utility, because it satisfies a want."
+  },
+  {
+   "id": "sat",
+   "text": "Utility is the power to satisfy; satisfaction is its effect."
+  },
+  {
+   "id": "pcini",
+   "text": "Per capita income is national income divided by population, so a rich nation with a huge population can still have low per capita income."
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+{
+ "chapter": "ss-8-10-man-and-culture",
+ "terms": [
+  {
+   "id": "culture",
+   "term": "Culture",
+   "meaning": "The whole of knowledge, arts, morals, law, customs and abilities we learn as members of society. The word comes from Latin \"colere\", to cultivate.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "plural",
+   "term": "Pluralistic culture",
+   "meaning": "Many cultures in one society, from different religions and life styles.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "values",
+   "term": "Values",
+   "meaning": "Behaviour society expects, such as honesty, cleanliness and patriotism. They help us judge good and bad.",
+   "pages": [
+    70
+   ]
+  },
+  {
+   "id": "conv",
+   "term": "Conventions",
+   "meaning": "Things we do again and again in daily life without much thought.",
+   "pages": [
+    70
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "nature",
+   "title": "How culture behaves",
+   "items": [
+    {
+     "id": "shape",
+     "name": "What shapes a culture",
+     "formula": "Geography, traditions and the needs of a society.",
+     "example": "So we can't call one culture good and another bad.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "pass",
+     "name": "How culture passes on",
+     "formula": "From one generation to the next.",
+     "example": "The language we speak came from our elders.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "change",
+     "name": "Culture keeps changing",
+     "formula": "Dress, hair styles and food habits change over the years.",
+     "example": "So every society's culture differs too.",
+     "pages": [
+      69
+     ]
+    }
+   ]
+  },
+  {
+   "id": "div",
+   "title": "Diversity",
+   "items": [
+    {
+     "id": "influence",
+     "name": "Cultures influence one another",
+     "formula": "The chudidar came to us from elsewhere; trousers, shirts and English from the British.",
+     "example": "Differences don't stop cultures from borrowing.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "unity",
+     "name": "Unity in diversity",
+     "formula": "India has hundreds of tribes, thousands of castes, many races and hundreds of languages.",
+     "example": "Walk down a street in Bengaluru and you see this mix.",
+     "pages": [
+      70
+     ]
+    }
+   ]
+  },
+  {
+   "id": "customs",
+   "title": "What culture is made of",
+   "items": [
+    {
+     "id": "make",
+     "name": "Customs and traditions",
+     "formula": "Beliefs, values, rules, conventions and morals, taken together.",
+     "example": "All of these make up a culture.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "eg",
+     "name": "Examples of conventions",
+     "formula": "How we eat, sleep and greet people.",
+     "example": "Nobody asks the teacher each day how to sit in class.",
+     "pages": [
+      70
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "good",
+   "text": "In sociology, culture doesn't mean only good manners. It covers all we learn in society."
+  },
+  {
+   "id": "rank",
+   "text": "Don't rank cultures as better or worse: each is shaped by its own place and needs."
+  },
+  {
+   "id": "valconv",
+   "text": "Values are about good and bad. Conventions are daily habits."
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "chapter": "ss-7-19-pro-social-movements-karnataka",
+ "terms": [
+  {
+   "id": "environment",
+   "term": "Environment",
+   "meaning": "The living and non-living things together.",
+   "pages": [
+    79
+   ]
+  },
+  {
+   "id": "appiko",
+   "term": "Appiko",
+   "meaning": "Karnataka's tree-hugging movement to save forests, like Chipko in the north.",
+   "pages": [
+    80
+   ]
+  },
+  {
+   "id": "socialforestry",
+   "term": "Social forestry",
+   "meaning": "The forest department's planting of exotic trees like Nilgiri and Acacia.",
+   "pages": [
+    80
+   ]
+  },
+  {
+   "id": "kolaga",
+   "term": "Kolaga system",
+   "meaning": "The measuring jar for crops whose size the Kagodu farmers protested in 1951.",
+   "pages": [
+    83
+   ]
+  },
+  {
+   "id": "dss",
+   "term": "Dalit Sangharsha Samiti",
+   "meaning": "The Karnataka dalit organisation formed under the Association of Dalit Writers and Artists; Prof. B. Krishnappa was its convenor.",
+   "pages": [
+    86
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "envg",
+   "title": "Environmental movements",
+   "items": [
+    {
+     "id": "gandhi",
+     "name": "Gandhiji on nature",
+     "formula": "\"Nature has enough for everybody's need, not everybody's greed.\"",
+     "example": "Environmental movements reached Karnataka in the 1970s.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "kudremukh",
+     "name": "Fights over rivers and mines",
+     "formula": "Sahyadri Mining Protest Forum against Kudremukh mining, which polluted the Bhadra.",
+     "example": "Protests against Harihar Polyfibres polluting the Tungabhadra, and against mining in Ballari.",
+     "pages": [
+      79,
+      80
+     ]
+    },
+    {
+     "id": "thimmakka",
+     "name": "Salumarada Thimmakka",
+     "formula": "The illiterate \"mother\" of 284 trees.",
+     "example": "She received the Padmashri in 2019.",
+     "pages": [
+      79
+     ]
+    },
+    {
+     "id": "chipko",
+     "name": "Chipko and Appiko",
+     "formula": "Movements to protect trees; Sunderlal Bahuguna gave his life to Chipko.",
+     "example": "Environmentalists opposed Nilgiri because it lowers groundwater.",
+     "pages": [
+      80
+     ]
+    },
+    {
+     "id": "organic",
+     "name": "Organic farming",
+     "formula": "A movement against chemical fertilizers.",
+     "example": "Karnataka set up an Organic Farming Mission and leads the country.",
+     "pages": [
+      81
+     ]
+    }
+   ]
+  },
+  {
+   "id": "womeng",
+   "title": "Women's movements",
+   "items": [
+    {
+     "id": "firsts",
+     "name": "Firsts for Karnataka women",
+     "formula": "Srirangamma and Rukminamma were the first women with B.A. Honours.",
+     "example": "Indiramma was the first woman Mayor of Bengaluru.",
+     "pages": [
+      81
+     ]
+    },
+    {
+     "id": "reservation",
+     "name": "Reservation for women",
+     "formula": "Karnataka was the first state to give women 50% of seats in local bodies.",
+     "example": "Women have 33% of government jobs; 1975 was International Women's Year.",
+     "pages": [
+      82
+     ]
+    }
+   ]
+  },
+  {
+   "id": "farm",
+   "title": "Farmers' agitations",
+   "items": [
+    {
+     "id": "kagodu",
+     "name": "Kagodu agitation (1951)",
+     "formula": "The first post-independence farmers' fight, in Shivamogga, against the Kolaga system.",
+     "example": "Led by Shantaveri Gopala Gowda; Ram Manohar Lohia came to support it.",
+     "pages": [
+      83
+     ]
+    },
+    {
+     "id": "malaprabha",
+     "name": "Malaprabha farmers' protest (1980)",
+     "formula": "Cotton failed; more than 20 farmers of Navalgund, Naragund and Savadatti died in police firing.",
+     "example": "Leaders of later farmers' groups: M. D. Nanjundaswamy, Sundaresh, Puttannaiah.",
+     "pages": [
+      84
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dalit",
+   "title": "Dalit movement",
+   "items": [
+    {
+     "id": "early",
+     "name": "Early steps for dalits",
+     "formula": "Chamaraja Wodeyar X opened schools for dalits after Vivekananda's visit.",
+     "example": "In 1936 M. C. Raja led the first dalit entry into Mysore palace.",
+     "pages": [
+      85
+     ]
+    },
+    {
+     "id": "slogans",
+     "name": "Watchwords of the dalit movement",
+     "formula": "Education, organisation and agitation, inspired by Ambedkar, the \"Dalit Surya\".",
+     "example": "B. Shyamsundar set up the Bhimasena Organisation in 1970.",
+     "pages": [
+      85
+     ]
+    },
+    {
+     "id": "busa",
+     "name": "Basavalingappa episode (1973)",
+     "formula": "Minister Basavalingappa called Kannada literature \"fodder\"; the protests made him resign.",
+     "example": "It raised dalit awareness; the Association of Dalit Writers and Artists formed at Bhadravati in 1976.",
+     "pages": [
+      85,
+      86
+     ]
+    },
+    {
+     "id": "writers",
+     "name": "Dalit writers",
+     "formula": "Devanuru Mahadeva and Dr. Siddalingaiah showed dalit life through their works.",
+     "example": "Dalit writers now help shape their community's future.",
+     "pages": [
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kannada",
+   "title": "Save Kannada",
+   "items": [
+    {
+     "id": "savek",
+     "name": "Save Kannada movement",
+     "formula": "In the 1960s, A. N. Krishna Rao, Chidanandamurthy, M. N. Ramamurthy and Vatal Nagaraj worked for Kannada in Bengaluru.",
+     "example": "Groups: Karnataka Yuvajana Sabha, Kannada Jagruta Parishat, Kannada Shakti Kendra.",
+     "pages": [
+      87
+     ]
+    },
+    {
+     "id": "gokak",
+     "name": "Gokak agitation (1982)",
+     "formula": "The Gokak committee gave Kannada first place: 150 of the 350 marks in the three-language plan.",
+     "example": "When the report wasn't accepted, Dr. Rajkumar led a statewide agitation, backed by Kuvempu.",
+     "pages": [
+      87,
+      88
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "chipapp",
+   "text": "Chipko and Appiko are both tree-hugging movements; Bahuguna is linked with Chipko."
+  },
+  {
+   "id": "reserv",
+   "text": "Local bodies: 50% for women. Government jobs: 33%."
+  },
+  {
+   "id": "gokakwho",
+   "text": "Dr. V. K. Gokak chaired the committee; Dr. Rajkumar led the agitation for it."
+  }
+ ]
+}

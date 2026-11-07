@@ -1,0 +1,198 @@
+{
+ "chapter": "ss-7-18-unification-of-karnataka",
+ "terms": [
+  {
+   "id": "unification",
+   "term": "Unification Movement",
+   "meaning": "Kannadigas' movement to bring all Kannada areas, scattered under many rulers, into one state.",
+   "pages": [
+    67
+   ]
+  },
+  {
+   "id": "kulapurohita",
+   "term": "Karnataka Kulapurohita",
+   "meaning": "\"Family priest of Karnataka\": the title given to Alur Venkata Rao in 1941.",
+   "pages": [
+    69
+   ]
+  },
+  {
+   "id": "src",
+   "term": "State Reorganisation Committee",
+   "meaning": "The Fazal Ali Committee (with H. N. Kunzru and K. M. Panikkar) that redrew states by language in 1955.",
+   "pages": [
+    71
+   ]
+  },
+  {
+   "id": "border",
+   "term": "Border dispute",
+   "meaning": "A quarrel with a neighbour state over Kannada-majority areas left outside Karnataka.",
+   "pages": [
+    74
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "background",
+   "title": "Background",
+   "items": [
+    {
+     "id": "kavi",
+     "name": "Kannada land in Kavirajamarga",
+     "formula": "It stretched from the Cauvery to the Godavari.",
+     "example": "After Vijayanagara fell, Kannada areas came under more than 20 administrations.",
+     "pages": [
+      66
+     ]
+    },
+    {
+     "id": "twenty",
+     "name": "The 20 administrative units",
+     "formula": "Madras-Karnataka, Mumbai-Karnataka, Coorg, cantonments, Mysore and Hyderabad, plus 14 small provinces.",
+     "example": "6 main units + 14 small ones = 20.",
+     "pages": [
+      68
+     ]
+    },
+    {
+     "id": "kvvs",
+     "name": "Early organisations",
+     "formula": "Karnataka Vidya Vardhaka Sangha (1890, first president R. H. Deshpande), Kannada Sahitya Parishat (1915), Karnataka Sabha (1916).",
+     "example": "Venkata Rango Katti served the cause early.",
+     "pages": [
+      67
+     ]
+    },
+    {
+     "id": "belagavi",
+     "name": "Belagavi Congress session (1924)",
+     "formula": "Huyilgol Narayan Rao sang \"Udayavagali Namma Cheluva Kannadanadu\".",
+     "example": "Gandhiji, the President, supported unification.",
+     "pages": [
+      67
+     ]
+    }
+   ]
+  },
+  {
+   "id": "voices",
+   "title": "Writers and papers",
+   "items": [
+    {
+     "id": "alur",
+     "name": "Alur Venkata Rao",
+     "formula": "Asked \"Where is Karnataka?\" and wrote Past Glory of Karnataka with his own money.",
+     "example": "Hyderabad Kannadigas called him Karnataka Kulapurohita in 1941.",
+     "pages": [
+      69
+     ]
+    },
+    {
+     "id": "poets",
+     "name": "Poets of unification",
+     "formula": "Kuvempu: \"Jayahe Karnataka Maate\". Govinda Pai, the first Rashtrakavi, fought for Kasargod.",
+     "example": "Shantakavi sang door to door to raise money for the Sahitya Sammelana.",
+     "pages": [
+      69,
+      70
+     ]
+    },
+    {
+     "id": "papers",
+     "name": "Newspapers of the movement",
+     "formula": "Bombay Karnataka: Vijaya, Rajahamsa, Kannada Kesari. Mysore: Suryodaya Prakashika, Hitabodhini.",
+     "example": "Papers and books kept the movement alive.",
+     "pages": [
+      69
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stages",
+   "title": "Three stages after independence",
+   "items": [
+    {
+     "id": "stage1",
+     "name": "First stage (1947-48)",
+     "formula": "The 20 units were regrouped into five: Mumbai, Madras, Mysore, Hyderabad and Coorg.",
+     "example": "The Constituent Assembly made A, B, C and D blocks, not language states.",
+     "pages": [
+      70
+     ]
+    },
+    {
+     "id": "stage2",
+     "name": "Second stage (1953)",
+     "formula": "Potty Sriramulu died after a 58-day fast; Andhra Pradesh was formed in 1953.",
+     "example": "Seven taluks of Ballari joined Mysore; Chief Minister Kengal Hanumanthaiah backed unification.",
+     "pages": [
+      70,
+      71
+     ]
+    },
+    {
+     "id": "stage3",
+     "name": "Final stage (1956)",
+     "formula": "On 1 November 1956 the unified state was formed as \"Mysore State\".",
+     "example": "It joined old Mysore, Bombay and Hyderabad Kannada districts, Coorg, South Canara and Kollegal.",
+     "pages": [
+      71,
+      72
+     ]
+    },
+    {
+     "id": "name",
+     "name": "Mysore renamed Karnataka",
+     "formula": "S. Nijalingappa was the first Chief Minister (1956).",
+     "example": "On 1 November 1973, under D. Devaraj Urs, the state was named Karnataka.",
+     "pages": [
+      74
+     ]
+    }
+   ]
+  },
+  {
+   "id": "disputes",
+   "title": "Border disputes",
+   "items": [
+    {
+     "id": "maha",
+     "name": "Dispute with Maharashtra",
+     "formula": "Over Belagavi, and Kannada areas like Akalkote, South Sholapur and Jat.",
+     "example": "The Mahajan report (1966) kept Belagavi in Karnataka; the legislature meets yearly at Suvarna Soudha.",
+     "pages": [
+      75
+     ]
+    },
+    {
+     "id": "kerala",
+     "name": "Dispute with Kerala",
+     "formula": "Over Kasargod, once ruled by Kannada kings; Bekal fort was built by the Ikkeri kings.",
+     "example": "The 1955 report gave it to Kerala; Kaiyara Kinhannarai kept the struggle alive.",
+     "pages": [
+      75,
+      76
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "mysorename",
+   "text": "In 1956 the unified state was called Mysore State; the name Karnataka came only in 1973."
+  },
+  {
+   "id": "firstcm",
+   "text": "Nijalingappa was the first CM of the unified state; Kengal Hanumanthaiah was CM earlier, of the old state."
+  },
+  {
+   "id": "ballari",
+   "text": "Ballari joined Mysore in 1953, when Andhra was formed, before the 1956 unification."
+  }
+ ]
+}

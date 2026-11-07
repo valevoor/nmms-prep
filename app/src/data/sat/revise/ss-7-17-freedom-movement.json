@@ -1,0 +1,355 @@
+{
+ "chapter": "ss-7-17-freedom-movement",
+ "terms": [
+  {
+   "id": "nationalism",
+   "term": "Nationalism",
+   "meaning": "The feeling of \"We are One\" among people of a region, with pride in it.",
+   "pages": [
+    24
+   ]
+  },
+  {
+   "id": "moderates",
+   "term": "Moderates",
+   "meaning": "Early Congress leaders (1885-1905) who used prayers, appeals and protests within the law.",
+   "pages": [
+    27
+   ]
+  },
+  {
+   "id": "mendicancy",
+   "term": "Policy of Mendicancy",
+   "meaning": "The extremists' mocking name for the moderates' method of begging for favours.",
+   "pages": [
+    29
+   ]
+  },
+  {
+   "id": "satyagraha",
+   "term": "Satyagraha",
+   "meaning": "\"Satya\" (truth) + \"agraha\" (persuasion): standing firm on the side of truth.",
+   "pages": [
+    38
+   ]
+  },
+  {
+   "id": "khilafat",
+   "term": "Khilafat Movement",
+   "meaning": "Indian Muslims' support for the Turkish Caliph against Britain, led by the Ali brothers with Gandhiji.",
+   "pages": [
+    39
+   ]
+  },
+  {
+   "id": "twonation",
+   "term": "Two-nation theory",
+   "meaning": "Jinnah's claim that Hindus and Muslims were separate nations, which led to Pakistan.",
+   "pages": [
+    57
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "growth",
+   "title": "Rise of nationalism (1885-1919)",
+   "items": [
+    {
+     "id": "factors",
+     "name": "Factors behind Indian nationalism",
+     "formula": "Western education, uniform administration, economic exploitation (Naoroji's drain theory), pride in tradition, reform movements, 1857, racial discrimination (Ilbert Act, 1884).",
+     "example": "Scholars like William Jones and Max Muller showed India's rich past.",
+     "pages": [
+      24,
+      26
+     ]
+    },
+    {
+     "id": "congress",
+     "name": "Founding of the Indian National Congress",
+     "formula": "1885 in Mumbai, the idea of A. O. Hume; first President W. C. Banerjee; 72 delegates.",
+     "example": "Aim: national unity and putting people's demands to the government.",
+     "pages": [
+      26
+     ]
+    },
+    {
+     "id": "modleaders",
+     "name": "Moderate leaders and demands",
+     "formula": "Dadabhai Naoroji, Surendranath Banerjee, Gokhale, Ranade.",
+     "example": "They asked for free speech, Indians in high posts, ICS exams in India, and an end to salt tax.",
+     "pages": [
+      28
+     ]
+    },
+    {
+     "id": "lbp",
+     "name": "Extremists: Lal, Bal and Pal (1905-1919)",
+     "formula": "Lala Lajpat Rai (\"Lion of Punjab\"), Tilak (\"Swaraj is my birthright\"), Bipin Chandra Pal.",
+     "example": "Tilak ran Kesari and Maratha and started Ganesha and Shivaji festivals; Aurobindo pushed swadeshi.",
+     "pages": [
+      29,
+      30
+     ]
+    },
+    {
+     "id": "bengal",
+     "name": "Partition of Bengal (1905)",
+     "formula": "Curzon split Bengal by religion; 16 October 1905 was a National Mourning Day with \"Amar Sonar Bangla\" and rakhis.",
+     "example": "It was cancelled in 1911.",
+     "pages": [
+      29,
+      31
+     ]
+    },
+    {
+     "id": "league",
+     "name": "Muslim League and Surat split",
+     "formula": "Muslim League founded at Dhaka in 1906 by Agha Khan and Nawab Salimullah; Congress split at Surat in 1907.",
+     "example": "Tilak was jailed at Mandalay, where he wrote Gita Rahasya.",
+     "pages": [
+      31,
+      32
+     ]
+    },
+    {
+     "id": "rowlatt",
+     "name": "Rowlatt Act and Jallianwala Bagh (1919)",
+     "formula": "The Rowlatt Act allowed arrest on suspicion alone. On 13 April 1919 General Dyer fired on a closed meeting at Amritsar.",
+     "example": "Official count: 379 dead; the real toll was higher.",
+     "pages": [
+      32,
+      34
+     ]
+    },
+    {
+     "id": "revolution",
+     "name": "Revolutionaries",
+     "formula": "Khudiram Bose, first martyr hanged (1908), at 19. Savarkar formed Mitramela (1899), later Abhinava Bharat.",
+     "example": "Bhagat Singh, Rajguru and Sukhdev bombed the Central Assembly (1929); Bhagat Singh first gave \"Inquilab Zindabad\".",
+     "pages": [
+      34,
+      36
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gandhi",
+   "title": "The Gandhian Age (1919-1947)",
+   "items": [
+    {
+     "id": "early",
+     "name": "Gandhiji's early life",
+     "formula": "Born 2 October 1869 at Porbandar; law in England; fought apartheid in South Africa.",
+     "example": "Back in 1915, he set up Sabarmati Ashram (1916); Gokhale was his political guru.",
+     "pages": [
+      37,
+      38
+     ]
+    },
+    {
+     "id": "books",
+     "name": "Gandhiji's books and papers",
+     "formula": "Influenced by the Gita, Ruskin's Unto this last and Tolstoy. He wrote My Experiments with Truth and Hind Swaraj.",
+     "example": "His weeklies: Harijan and Young India.",
+     "pages": [
+      37,
+      40
+     ]
+    },
+    {
+     "id": "farmers",
+     "name": "Gandhiji's first struggles",
+     "formula": "Champaran (Bihar, 1917), against forced indigo growing; Rajendra Prasad rose from it.",
+     "example": "Kheda was another farmers' fight; the Mapillai revolt (1921) was in Malabar.",
+     "pages": [
+      48
+     ]
+    },
+    {
+     "id": "noncoop",
+     "name": "Non-Co-operation Movement (1920-22)",
+     "formula": "Boycott of courts, schools, elections, British goods and titles; Tagore and Gandhiji returned honours.",
+     "example": "Gandhiji called it off after Chowri-Chowra (1922), where 22 policemen were burnt.",
+     "pages": [
+      39,
+      40
+     ]
+    },
+    {
+     "id": "simon",
+     "name": "Nehru Report and Simon Commission",
+     "formula": "Motilal Nehru's report (1927) proposed self-rule. The all-British Simon Commission (1928) met \"Go back, Simon\".",
+     "example": "Lala Lajpat Rai died after a lathi-charge at Lahore (1928).",
+     "pages": [
+      40,
+      42
+     ]
+    },
+    {
+     "id": "purna",
+     "name": "Purna Swaraj (1929)",
+     "formula": "The Lahore session declared complete freedom; 26 January 1930 was Purna Swarajya Day.",
+     "example": "So the Constitution came into force on 26 January 1950, now Republic Day.",
+     "pages": [
+      42
+     ]
+    },
+    {
+     "id": "dandi",
+     "name": "Dandi March (1930)",
+     "formula": "Began 12 March 1930: Gandhiji and 78 followers walked 375 km from Sabarmati to Dandi to make salt.",
+     "example": "Khan Abdul Gaffar Khan (\"Frontier Gandhi\") founded Khudai Khidmatgar; Ankola had a famous salt satyagraha.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "rtc",
+     "name": "Round Table Conferences (1930-32)",
+     "formula": "Three in London; Gandhiji attended only the second.",
+     "example": "They solved nothing; the Government of India Act followed in 1935.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "quit",
+     "name": "Quit India Movement (1942)",
+     "formula": "After the Cripps Mission failed, Congress met in Mumbai on 8 August 1942: \"Do or Die\".",
+     "example": "Parallel governments arose in Ballia, Tamluk and Satara; Isuru (Shivamogga) declared itself independent.",
+     "pages": [
+      43,
+      44
+     ]
+    },
+    {
+     "id": "jp",
+     "name": "Socialists and Jayaprakash Narayan",
+     "formula": "The Congress Socialist Party (1934), with J.P. as General Secretary and Acharya Narendra Dev.",
+     "example": "J.P. escaped from Hazaribagh jail, later led \"Total Revolution\" and was called \"Lokanayak\".",
+     "pages": [
+      45,
+      46
+     ]
+    }
+   ]
+  },
+  {
+   "id": "women",
+   "title": "Women freedom fighters",
+   "items": [
+    {
+     "id": "abbakka",
+     "name": "Rani Abbakkadevi of Ullala",
+     "formula": "Of the Chowta dynasty; refused Portuguese taxes and beat them in 1555 C.E.",
+     "example": "Betrayed by her estranged husband, she died in prison; a stamp honoured her in 2003.",
+     "pages": [
+      49,
+      50
+     ]
+    },
+    {
+     "id": "siddamma",
+     "name": "Ballari Siddamma",
+     "formula": "First woman in Mysore state to join the flag hoisting, at Shivapura (1938).",
+     "example": "She joined the forest satyagraha and Quit India, and later became MLA of Davangere.",
+     "pages": [
+      50,
+      51
+     ]
+    },
+    {
+     "id": "kamala",
+     "name": "Kamaladevi Chattopadhyay",
+     "formula": "With Avantibai Gokhale, the first women to break the salt law; jailed at Yerawada.",
+     "example": "She led the Sevadal women's unit; Padma Bhushan (1955), Magsaysay Award (1966).",
+     "pages": [
+      51,
+      53
+     ]
+    },
+    {
+     "id": "yasho",
+     "name": "Yashodharamma Dasappa",
+     "formula": "Joined the Shivapura Flag Satyagraha (1938); her house was a Quit India base.",
+     "example": "She became an MLA, an MP and Social Welfare Minister.",
+     "pages": [
+      53,
+      54
+     ]
+    },
+    {
+     "id": "uma",
+     "name": "Umabai Kundapur",
+     "formula": "Wrote the Marathi play Swadeshi Vrath; led the Sevadal women's unit started by Hardekar in 1923.",
+     "example": "She was jailed for the salt agitation and later ran the Kasturba Foundation.",
+     "pages": [
+      54,
+      55
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "title": "Towards independence",
+   "items": [
+    {
+     "id": "bose",
+     "name": "Subhash Chandra Bose and the INA",
+     "formula": "Left Congress in 1939 and founded the Forward Bloc; escaped to Germany; led the INA from Singapore (1943).",
+     "example": "\"Give me blood, I will give you freedom!\"; the INA raised the tricolour on Indian soil.",
+     "pages": [
+      58,
+      59
+     ]
+    },
+    {
+     "id": "ambedkar",
+     "name": "Dr. B. R. Ambedkar",
+     "formula": "Born 14 April 1891 at Mhow; led the Mahad Satyagraha; papers Mooka Nayak and Bahishkrith Bharath.",
+     "example": "Chairman of the Drafting Committee; the Poona Pact (1932) with Gandhiji; Bharat Ratna (1990).",
+     "pages": [
+      60,
+      61
+     ]
+    },
+    {
+     "id": "jinnah",
+     "name": "Jinnah and Pakistan",
+     "formula": "Joined the Muslim League in 1913; his fourteen demands (1929); the 1940 Lahore session adopted the demand.",
+     "example": "The name Pakistan was proposed by Chaudhary Rahamat Ali in 1933.",
+     "pages": [
+      57
+     ]
+    },
+    {
+     "id": "freedom",
+     "name": "Independence",
+     "formula": "On 3 June 1947 Lord Mountbatten, the last Viceroy, announced partition.",
+     "example": "Pakistan was formed on 14 August and India became free on 15 August 1947; Nehru was the first Prime Minister.",
+     "pages": [
+      56
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "eras",
+   "text": "Moderates: 1885-1905. Extremists: 1905-1919. Gandhian Age: 1919-1947."
+  },
+  {
+   "id": "hume",
+   "text": "A. O. Hume founded the Congress, but its first President was W. C. Banerjee."
+  },
+  {
+   "id": "lahore",
+   "text": "Two Lahore sessions: Congress's 1929 Purna Swaraj, and the Muslim League's 1940 Pakistan demand."
+  }
+ ]
+}

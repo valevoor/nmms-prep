@@ -1,0 +1,183 @@
+{
+ "chapter": "ss-7-04-india-18th-century",
+ "terms": [
+  {
+   "id": "ashta",
+   "term": "Ashta Pradhans",
+   "meaning": "Shivaji's council of eight ministers. The Peshwa was the most important.",
+   "pages": [
+    43
+   ]
+  },
+  {
+   "id": "peshwa",
+   "term": "Peshwa",
+   "meaning": "The Prime Minister of the Maratha king, who later ran the government.",
+   "pages": [
+    43
+   ]
+  },
+  {
+   "id": "carnatic",
+   "term": "Carnatic",
+   "meaning": "The Coromandel coast (coastal Tamil Nadu and Andhra) and its hinterland, a Mughal province with Arcot as capital.",
+   "pages": [
+    45
+   ]
+  },
+  {
+   "id": "era",
+   "term": "Era of Maratha Supremacy",
+   "meaning": "What historians call the 18th century.",
+   "pages": [
+    43
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "mughal",
+   "title": "The Mughals and Marathas",
+   "items": [
+    {
+     "id": "decline",
+     "name": "Why the Mughals declined",
+     "formula": "Weak kings after Aurangzeb (1707), and the raids of Nadir Shah and Ahmed Shah Abdali.",
+     "example": "Nadir Shah (1739) took the Peacock throne and the Kohinoor.",
+     "pages": [
+      42,
+      43
+     ]
+    },
+    {
+     "id": "peshwas",
+     "name": "Peshwa rule",
+     "formula": "Seven Peshwas ruled for about 100 years, 1713-1818.",
+     "example": "Shivaji founded the Maratha Empire.",
+     "pages": [
+      43
+     ]
+    },
+    {
+     "id": "bv",
+     "name": "Balaji Vishwanath (1713-20)",
+     "formula": "Signed the treaty of Delhi with the Mughal Emperor.",
+     "example": "He won the right to collect taxes from six Deccan subhas.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "br1",
+     "name": "Baji Rao I (1720-40)",
+     "formula": "Came to power at 20; took Hyderabad, Malwa, Gujarat and Bundelkhand, and attacked Delhi.",
+     "example": "He was hailed as \"Shivaji II\".",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "bbr",
+     "name": "Balaji Baji Rao (1740-61)",
+     "formula": "Spread Maratha power to Punjab, Orissa and parts of Tamil Nadu.",
+     "example": "His rule ended with the defeat at Panipat.",
+     "pages": [
+      44
+     ]
+    },
+    {
+     "id": "panipat",
+     "name": "Third Battle of Panipat",
+     "formula": "14 January 1761: Ahmad Shah Abdali defeated the Marathas.",
+     "example": "Weaker Marathas gave the British their chance.",
+     "pages": [
+      44,
+      45
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carn",
+   "title": "The Carnatic wars (1746-63)",
+   "items": [
+    {
+     "id": "cause",
+     "name": "Cause of the Carnatic wars",
+     "formula": "After the Nawab of Arcot died, Chand Saheb (backed by the French) and Mohammad Ali (backed by the British) fought for the throne.",
+     "example": "Clive led the British; Dupleix led the French.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "results",
+     "name": "Results of the three Carnatic wars",
+     "formula": "First: French won (Treaty of Aix-la-chapelle). Second: British kept Arcot, French Hyderabad. Third: British won.",
+     "example": "After the third, the French were sidelined.",
+     "pages": [
+      45
+     ]
+    },
+    {
+     "id": "whyfrench",
+     "name": "Why the French lost",
+     "formula": "They neglected trade for politics, had a weaker navy and quarrelling officials.",
+     "example": "The French company was under the government; the British one was private.",
+     "pages": [
+      46
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bengal",
+   "title": "Bengal and Plassey",
+   "items": [
+    {
+     "id": "siraj",
+     "name": "Why Siraj-ud-Daula clashed with the British",
+     "formula": "They fortified Fort William in Calcutta without his permission and abused tax concessions.",
+     "example": "He seized the British warehouses.",
+     "pages": [
+      46,
+      47
+     ]
+    },
+    {
+     "id": "plassey",
+     "name": "Battle of Plassey (1757)",
+     "formula": "Clive won because the Nawab's general Mir Jafar betrayed Siraj for the promise of becoming Nawab.",
+     "example": "Mir Jafar was to pay 17 crores 70 lakh rupees; Aminchand arranged the deal.",
+     "pages": [
+      47,
+      48
+     ]
+    },
+    {
+     "id": "pconseq",
+     "name": "Results of Plassey",
+     "formula": "Mir Jafar became a puppet Nawab; the Company got the Twenty four paraganas.",
+     "example": "It laid the foundation of British rule in India and led to Buxar.",
+     "pages": [
+      48
+     ]
+    }
+   ]
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "plpan",
+   "text": "Plassey (1757) was British against Siraj; the Third Battle of Panipat (1761) was Abdali against the Marathas."
+  },
+  {
+   "id": "shiv2",
+   "text": "\"Shivaji II\" was Peshwa Baji Rao I, not Shivaji's son."
+  },
+  {
+   "id": "first",
+   "text": "The French won the first Carnatic war; the British won only in the end."
+  }
+ ]
+}
