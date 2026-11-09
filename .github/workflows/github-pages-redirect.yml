@@ -1,0 +1,47 @@
+# The app moved to https://mystudyprep.in. GitHub Pages (https://valevoor.github.io/nmms-prep/) now only
+# serves github-pages-redirect/: a page that sends every old address to the same page on the new site,
+# and a sw.js that removes the old app's offline copy from phones that installed it.
+name: GitHub Pages redirect
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - github-pages-redirect/**
+      - .github/workflows/github-pages-redirect.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The same redirect page answers the old app, its landing, About and slides pages, and anything else.
+      - run: |
+          mkdir -p site/welcome site/about site/slides
+          cp github-pages-redirect/index.html github-pages-redirect/sw.js site/
+          for f in site/404.html site/welcome/index.html site/about/index.html site/slides/index.html; do
+            cp github-pages-redirect/index.html "$f"
+          done
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

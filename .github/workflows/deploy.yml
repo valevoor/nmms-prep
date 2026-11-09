@@ -1,5 +1,7 @@
-# Checks the app, then builds and publishes it to GitHub Pages on every push to main.
-name: Deploy to GitHub Pages
+# Checks the app, then builds it and deploys it to Cloudflare (https://mystudyprep.in) on every push to main.
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN (a token with "Edit Cloudflare Workers" rights)
+# and CLOUDFLARE_ACCOUNT_ID.
+name: Deploy to Cloudflare
 
 on:
   push:
@@ -8,17 +10,18 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # One deployment at a time; a newer push replaces a queued one.
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: cloudflare
+      url: https://mystudyprep.in/
     defaults:
       run:
         working-directory: app
@@ -37,16 +40,11 @@ jobs:
       # The talk deck (slides/, a Marp file) is published at /slides/ next to the app.
       - run: npx --yes @marp-team/marp-cli@4 ../slides/nmms-exam-overview.md --html -o dist/slides/index.html
       - run: cp -r ../slides/assets dist/slides/assets
-      - uses: actions/upload-pages-artifact@v3
+      # Uploads dist/ as set in app/wrangler.jsonc.
+      - uses: cloudflare/wrangler-action@v3
         with:
-          path: app/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: app
+          wranglerVersion: '4'
+          command: deploy

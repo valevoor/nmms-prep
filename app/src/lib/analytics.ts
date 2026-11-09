@@ -11,7 +11,8 @@
 /** The site code from goatcounter.com: "abc" for https://abc.goatcounter.com. Empty turns counting off. */
 const GOATCOUNTER_CODE = 'nmms-prep'
 
-const LIVE_HOST = 'valevoor.github.io'
+/** mystudyprep.in and www.mystudyprep.in. */
+const LIVE_HOST = /(^|\.)mystudyprep\.in$/
 
 /** Hash routes as paths: "#/t/number-series/practice?mode=book" -> "/t/number-series/practice". */
 const pathOf = (hash: string) => '/' + hash.replace(/^#\/?/, '').split('?')[0].replace(/\/+$/, '')
@@ -41,7 +42,7 @@ function count() {
 }
 
 export function startAnalytics() {
-  if (!GOATCOUNTER_CODE || location.hostname !== LIVE_HOST || navigator.webdriver) return
+  if (!GOATCOUNTER_CODE || !LIVE_HOST.test(location.hostname) || navigator.webdriver) return
   count()
   window.addEventListener('hashchange', count)
 }

@@ -110,9 +110,11 @@ npm run preview          # serve the build (to test offline mode)
 
 ## Live site
 
-**https://valevoor.github.io/nmms-prep/**
+**https://mystudyprep.in/**
 
-Every push to `main` publishes automatically via GitHub Actions (`.github/workflows/deploy.yml`). The workflow runs lint, the tests and the answer checks, then builds and deploys. If any check fails, nothing is published and the live site stays as it was. Progress is shown under the repository's **Actions** tab.
+Every push to `main` publishes automatically via GitHub Actions (`.github/workflows/deploy.yml`). The workflow runs lint, the tests and the answer checks, then builds and deploys to Cloudflare Workers (`app/wrangler.jsonc`), using the repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. If any check fails, nothing is published and the live site stays as it was. Progress is shown under the repository's **Actions** tab.
+
+The app used to live at https://valevoor.github.io/nmms-prep/. GitHub Pages now serves only `github-pages-redirect/` (published by `.github/workflows/github-pages-redirect.yml`), which sends every old link to the same page on mystudyprep.in and removes the old offline copy from students' phones. Progress saved on the old address stays there: browsers keep each site's data apart.
 
 **Visit counts.** The live site counts visits anonymously with [GoatCounter](https://www.goatcounter.com) and [Umami](https://umami.is): no cookies, nothing stored on the phone, no names or logins. Visits made offline aren't counted. GoatCounter is configured in `app/src/lib/analytics.ts`, and Umami via the cloud tracker script in `app/index.html`.
 
