@@ -100,10 +100,11 @@ export default function App() {
       return <TopicIdContext.Provider value="sat">{view === 'revise' ? <SatRevise topic={satTopic} /> : <SatFlashcards topic={satTopic} />}</TopicIdContext.Provider>
     // "questions" was the old list of past questions, which Practice now asks.
     if (view === 'practice' || view === 'questions') {
-      const mode: SatPracticeMode = query.get('mode') === 'mistakes' ? 'mistakes' : 'exam'
+      const asked = query.get('mode')
+      const mode = asked === 'book' || asked === 'exam' || asked === 'mistakes' ? (asked as SatPracticeMode) : undefined
       return (
         <TopicIdContext.Provider value="sat">
-          <SatPractice key={mode} topic={satTopic} mode={mode} />
+          <SatPractice key={mode ?? ''} topic={satTopic} mode={mode} />
         </TopicIdContext.Provider>
       )
     }

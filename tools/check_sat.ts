@@ -1,7 +1,7 @@
 /**
- * Checks the SAT past papers (data/pyq/*-sat.json) and the SAT chapter list (data/sat/chapters.json):
- * every paper has questions 1 to 90 once each with unique ids, four non-empty options and a known
- * section; each question is filed under a listed chapter or none (`topic: null`); every picture exists;
+ * Checks the SAT past papers (data/pyq/*-sat.json), the book's SAT questions (data/sat/book.json) and the SAT
+ * chapter list (data/sat/chapters.json): every paper has questions 1 to 90 once each, and every book section its
+ * questions 1 to N, with unique ids, four non-empty options and a known section; every book question has an answer; each question is filed under a listed chapter or none (`topic: null`); every picture exists;
  * an answer, once added, is one of the options and says where it came from (`keyFrom`); every listed
  * every chapter has a Kannada name; and each group of combined chapters
  * (data/sat/groups.json) lists two or more listed chapters of its own subject, none of them in another
@@ -10,7 +10,7 @@
  */
 import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { OLD_CHAPTERS, SAT_CHAPTERS, SAT_PAPERS, SAT_TOPICS, SECTION_SUBJECT, satQuestions } from '../app/src/data/sat'
+import { OLD_CHAPTERS, SAT_BOOK, SAT_CHAPTERS, SAT_PAPERS, SAT_SOURCES, SAT_TOPICS, SECTION_SUBJECT, satBookQuestions, satQuestions } from '../app/src/data/sat'
 
 const PUBLIC = join(import.meta.dirname, '../app/public')
 const SECTIONS = new Set(['physics', 'chemistry', 'biology', 'history', 'geography', 'social', 'maths'])
@@ -23,14 +23,22 @@ const used = new Map<string, number>()
 const oldChapters = new Map(OLD_CHAPTERS.map((c) => [c.id, c]))
 const oldUsed = new Set<string>()
 
-for (const p of SAT_PAPERS) {
-  const numbers = new Set<number>()
+/**
+ * How many questions each section of the book has, from its answer keys. Social science (145) and maths (152)
+ * are still being added; add them here when they are in.
+ */
+const BOOK_SECTIONS: Record<string, number> = { physics: 64, chemistry: 70, biology: 108 }
+
+for (const p of SAT_SOURCES) {
+  const numbers = new Set<string>()
   for (const q of p.questions) {
-    const at = `${p.id} Q${q.paperNo} (${q.id})`
+    const at = `${p.id} ${p.book ? `${q.subject} ` : ''}Q${q.paperNo} (${q.id})`
     if (ids.has(q.id)) problems.push(`${at}: id used twice`)
     ids.add(q.id)
-    if (numbers.has(q.paperNo)) problems.push(`${at}: question number used twice`)
-    numbers.add(q.paperNo)
+    const no = p.book ? `${q.subject} ${q.paperNo}` : String(q.paperNo)
+    if (numbers.has(no)) problems.push(`${at}: question number used twice`)
+    numbers.add(no)
+    if (p.book && !q.answer && !q.note) problems.push(`${at}: a book question needs an answer (the book has a key), or a note saying why it has none`)
     if (!SECTIONS.has(q.subject)) problems.push(`${at}: unknown section "${q.subject}"`)
     if (!q.prompt.trim()) problems.push(`${at}: no question text`)
     if (!Number.isInteger(q.sourcePage)) problems.push(`${at}: no source page`)
@@ -55,12 +63,15 @@ for (const p of SAT_PAPERS) {
       if (solved.keyFrom !== 'book' && solved.keyFrom !== 'solved') problems.push(`${at}: an answer needs keyFrom "book" (official key) or "solved"`)
     }
   }
-  const missing = Array.from({ length: 90 }, (_, i) => i + 1).filter((n) => !numbers.has(n))
+  const expected = p.book
+    ? Object.entries(BOOK_SECTIONS).flatMap(([section, n]) => Array.from({ length: n }, (_, i) => `${section} ${i + 1}`))
+    : Array.from({ length: 90 }, (_, i) => String(i + 1))
+  const missing = expected.filter((n) => !numbers.has(n))
   if (missing.length) problems.push(`${p.id}: no question ${missing.join(', ')}`)
-  if (numbers.size !== 90) problems.push(`${p.id}: ${numbers.size} questions, expected 90`)
+  if (numbers.size !== expected.length) problems.push(`${p.id}: ${numbers.size} questions, expected ${expected.length}`)
   const loose = p.questions.filter((q) => q.topic === null).length
   const none = p.questions.filter((q) => q.topic === null && !q.oldChapter).length
-  console.log(`${p.id}: ${p.questions.length} questions, ${p.questions.length - loose} in a chapter, ${loose - none} in an old-syllabus chapter, ${none} uncategorized`)
+  console.log(`${p.id}: ${p.questions.length} questions, ${p.questions.length - loose} in a chapter, ${loose - none} in an old-syllabus chapter, ${none} in Miscellaneous`)
 }
 
 for (const c of SAT_CHAPTERS) {
@@ -94,6 +105,9 @@ if (oldChapters.size !== OLD_CHAPTERS.length) problems.push('two old-syllabus ch
 const all = SAT_PAPERS.flatMap((p) => p.questions.map((q) => q.id))
 const shown = SAT_TOPICS.flatMap((t) => satQuestions(t).map((x) => x.q.id))
 if (shown.length !== all.length || new Set(shown).size !== all.length) problems.push(`topics show ${shown.length} questions (${new Set(shown).size} different); the papers have ${all.length}`)
+const inBook = SAT_BOOK.questions.map((q) => q.id)
+const shownBook = SAT_TOPICS.flatMap((t) => satBookQuestions(t).map((x) => x.q.id))
+if (shownBook.length !== inBook.length || new Set(shownBook).size !== inBook.length) problems.push(`topics show ${shownBook.length} book questions (${new Set(shownBook).size} different); the book has ${inBook.length}`)
 
 if (problems.length) {
   console.log(`\n✗ ${problems.length} problem(s):`)

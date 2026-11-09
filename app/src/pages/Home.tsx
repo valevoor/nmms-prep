@@ -11,7 +11,7 @@ import { getLastTopic } from '../lib/lastTopic'
 import { mastery, satKey, satMastery, satMistakes, useProgress } from '../lib/progress'
 import { href, useRoute } from '../lib/router'
 import { pastStats } from '../data/papers'
-import { SAT_SUBJECTS, SAT_TOPICS, satPastStats, satSolved, satTopicName } from '../data/sat'
+import { SAT_SUBJECTS, SAT_TOPICS, satBookQuestions, satPastStats, satSolved, satTopicName } from '../data/sat'
 import type { SatTopic } from '../data/sat'
 import type { Dict } from '../lib/i18n'
 
@@ -118,7 +118,7 @@ function ContinueCard() {
 
 /** "Class 7 · Ch 13, 14" or, across classes, "Class 7 · Ch 11 + Class 8 · Ch 10". */
 function chapterRefs(t: Dict, topic: SatTopic): string {
-  if (topic.chapters.length === 0) return t.sat.uncategorizedRefs
+  if (topic.chapters.length === 0) return t.sat.miscRefs
   const classes = [...new Set(topic.chapters.map((c) => c.cls))]
   return classes
     .map((cls) =>
@@ -138,6 +138,7 @@ function SatRow({ topic }: { topic: SatTopic }) {
   const lang = useLocale()
   const past = SAT_PAST[topic.id]
   const solved = SAT_SOLVED[topic.id]
+  const book = SAT_BOOK_COUNT[topic.id]
   const p = useProgress(satKey(topic.id))
   const m = satMastery(p, solved)
   const wrong = satMistakes(p, solved).length
@@ -154,6 +155,7 @@ function SatRow({ topic }: { topic: SatTopic }) {
           )}
           <span className="muted past-line">
             <Rich parts={t.home.pastLine(past.questions, past.years, past.papers)} />
+            {book > 0 && ` · ${t.sat.bookCount(book)}`}
           </span>
         </span>
         {wrong > 0 && (
@@ -171,10 +173,11 @@ function SatRow({ topic }: { topic: SatTopic }) {
 
 const SAT_SOLVED = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satSolved(x)]))
 const SAT_PAST = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satPastStats(x)]))
+const SAT_BOOK_COUNT = Object.fromEntries(SAT_TOPICS.map((x) => [x.id, satBookQuestions(x).length]))
 
 /**
  * A subject's topics in the chosen order. Most asked sorts the textbook topics by past-paper questions (ties: more
- * years, then textbook order); the old-syllabus and Uncategorized topics stay at the end, as they aren't in the textbooks.
+ * years, then textbook order); the old-syllabus and Miscellaneous topics stay at the end, as they aren't in the textbooks.
  */
 function subjectTopics(subject: string, sort: Sort): SatTopic[] {
   const list = SAT_TOPICS.filter((x) => x.subject === subject)

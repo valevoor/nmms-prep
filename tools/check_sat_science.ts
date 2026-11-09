@@ -1,16 +1,15 @@
 /**
- * Checks the answers to the SAT papers' science questions (data/pyq/ka-<year>-sat.json, subjects physics,
- * chemistry and biology). Each question has its own rule here, written independently of the solution: a value
+ * Checks the answers to the SAT science questions (subjects physics, chemistry and biology) of the papers
+ * (data/pyq/ka-<year>-sat.json) and the study book (data/sat/book.json, whose key is checked here too). Each question has its own rule here, written independently of the solution: a value
  * to compute, the pairs of a match-the-following, the true statements or the T/F marks, a balanced equation,
  * or, for facts and pictures, whether each option is true. Exactly one option must fit, and it must be the
  * key. Every answered question needs `keyFrom` and a solution in English and Kannada whose concept cites the
  * syllabus section it uses (a number from sat-syllabus/*.md), or, for a chapter the 2026-27 textbooks dropped,
- * says "Old syllabus – <chapter>:". A science question with no answer must say why in its note.
+ * says "Old syllabus – <chapter>:", or, for a Miscellaneous question (in no chapter, old or new), "Beyond the syllabus:".
+ * A science question with no answer must say why in its note.
  * Run from app/:  npx tsx ../tools/check_sat_science.ts
  */
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
-import { SAT_PAPERS, SECTION_SUBJECT } from '../app/src/data/sat'
+import { SAT_SOURCES, SECTION_SUBJECT } from '../app/src/data/sat'
 import oldChapters from '../app/src/data/sat/old-chapters.json'
 
 const KEYS = ['A', 'B', 'C', 'D'] as const
@@ -295,17 +294,267 @@ const RULES: Record<string, Rule> = {
   'ka2526s-33': set('X Y'),
   'ka2526s-34': t('FFFT', 'yellow vein mosaic is viral'),
   'ka2526s-35': pairs({ iii: 'a', ii: 'b', i: 'd', iv: 'c' }), // by eye: iii kidneys, ii ureters, i bladder, iv urethra
+  // ---- Book: NMMS.pdf (data/sat/book.json) ----
+  'bkp-01': t('TFFF', 'W = Fs cos θ is least (−Fs) at 180°'),
+  'bkp-02': t('TFFF', 'friction between the moving parts heats the bowl'),
+  'bkp-03': num(14 * 10 * 12),
+  'bkp-04': t('FFFT', 'the lowest boiling point, 145 K'),
+  'bkp-05': t('FFTF', 'potential energy is greatest at the greatest height'),
+  'bkp-06': num(96000 / (8 * 30)),
+  'bkp-07': t('FTFF', 'the push moves the book along the force'),
+  'bkp-09': t('FFFT', 'A 50 J < C 180 J < B 200 J'),
+  'bkp-10': t('FTFF', 'focusing far away, the eye lens flattens'),
+  'bkp-11': num(360 / 90 - 1),
+  'bkp-12': num(50 / 2),
+  'bkp-13': t('FFTF', 'persistence of vision, 1/16 s'),
+  'bkp-14': t('FTFF', 'M is symmetric about a vertical line'),
+  'bkp-16': t('FFFT', 'binoculars for a far but earthly scene'),
+  'bkp-17': t('TFFF', 'violet bends most, red least'),
+  'bkp-18': t('FFTF', 'a kaleidoscope uses plane mirror strips'),
+  'bkp-20': t('FTFF', 'pink is not one of the seven colours'),
+  'bkp-21': t('TFFF', 'by eye: A is an upright T; B, C, D are turned'),
+  'bkp-22': t('FFFT', 'by eye: only D has equal angles on both sides of the normal'),
+  'bkp-23': t('FTFF', 'the wheel pushes the road backwards'),
+  'bkp-24': t('FTFF', 'streamlining reduces drag'),
+  'bkp-25': t('FTFF', 'ice is smooth: little friction'),
+  'bkp-26': t('TFFF', 'smoothest to roughest'),
+  'bkp-27': t('TFFF', 'gravity and friction act everywhere'),
+  'bkp-28': t('FFFT', 'speed, shape and the fluid'),
+  'bkp-29': t('TFFF', 'starting friction exceeds moving friction'),
+  'bkp-30': num(346 * 4 / 2),
+  'bkp-32': t('FFFT', 'loud sound carries farther'),
+  'bkp-33': t('FTFF', 'fast (high-frequency) vibration'),
+  'bkp-35': num(10 * 20),
+  'bkp-36': num(1000 / (4000 * 0.1)),
+  'bkp-37': t('FFTF', 'silencers lower the amplitude'),
+  'bkp-38': t('FFFT', 'quality (timbre) stays'),
+  'bkp-39': t('FFTF', 'regular repetition: music'),
+  'bkp-40': t('FTFF', 'high pitch is shrill'),
+  'bkp-42': t('FTFF', 'same start and end, same displacement'),
+  'bkp-43': t('FFTF', '44 m distance, 4 m displacement'),
+  'bkp-44': t('TFFF', 'circular motion: same speed, changing velocity'),
+  'bkp-47': t('FFTF', 'the Moon only reflects sunlight'),
+  'bkp-48': t('FTFF', 'the Earth moves on in its orbit'),
+  'bkp-50': t('FTFF', 'on the line of the Earth’s axis'),
+  'bkp-51': t('FTFF', 'the Earth rotates west to east'),
+  'bkp-52': t('TFFF', 'Saturn > Earth > Venus > Mars'),
+  'bkp-53': t('FTFF', 'water reflects light'),
+  'bkp-54': t('FTFF', 'convex: wide field of view'),
+  'bkp-55': t('FTFF', 'convection currents'),
+  'bkp-56': t('FTFF', 'same force, smaller area when standing'),
+  'bkp-57': t('TFFF', 'fast air, low pressure'),
+  'bkp-58': t('FFFT', 'only the toy car moves'),
+  'bkp-59': t('TFFF', 'outside air pressure crushes it'),
+  'bkp-60': t('FFTF', 'close-packed particles repel'),
+  'bkp-63': t('TFFF', 'smaller pad, more pressure'),
+  'bkp-64': t('FFTF', 'equal and opposite momentum'),
+  'bkc-01': t('FFFT', 'acid colourless, base pink'),
+  'bkc-02': t('FFTF', 'soapy feel: base'),
+  'bkc-03': t('FTFF', 'turmeric red: base'),
+  'bkc-04': t('TFFF', 'compost for basic soil'),
+  'bkc-05': t('FTFF', 'lime water is basic'),
+  'bkc-06': t('FFTF', 'acid + base'),
+  'bkc-07': t('FTFF', 'neutralises stomach HCl'),
+  'bkc-08': t('TFFF', 'organic manure for basic soil'),
+  'bkc-09': t('FTFF', 'red, red, blue'),
+  'bkc-10': t('FFFT', 'methyl orange red: acid'),
+  'bkc-11': t('TFFF', 'acid dark pink, base green'),
+  'bkc-12': t('FTFF', 'distilled water hardly conducts'),
+  'bkc-13': t('FFTF', 'the coating keeps moisture off'),
+  'bkc-14': t('TFFF', 'pure cathode, impure anode, CuSO₄'),
+  'bkc-15': t('FFFT', 'fine ash particles in the air'),
+  'bkc-16': t('FTFF', 'bleaching powder gives chlorine'),
+  'bkc-17': t('FFTF', 'E. coli marks faecal pollution'),
+  'bkc-18': t('FFFT', 'CFCs deplete ozone'),
+  'bkc-19': t('FFTF', 'LPG burns cleanly for cooking'),
+  'bkc-20': t('FFFT', 'cotton does not melt'),
+  'bkc-21': t('FFFT', 'fossil fuels are running out'),
+  'bkc-22': t('FTFF', 'many useful petrochemicals'),
+  'bkc-23': t('FFFT', 'coke, coal gas, tar'),
+  'bkc-24': t('FFTF', 'different boiling points'),
+  'bkc-25': t('FFTF', 'kerosene is less volatile'),
+  'bkc-26': t('FTFF', 'compressed: higher pressure'),
+  'bkc-27': t('FFTF', 'natural gas lies on top'),
+  'bkc-28': t('FTFF', 'Tyndall effect'),
+  'bkc-29': t('FFTF', '18 electrons: argon'),
+  'bkc-30': t('FTFF', '10 electrons each'),
+  'bkc-32': t('FFFT', 'SO₂ forms an acid'),
+  'bkc-33': t('FFTF', 'lustre'),
+  'bkc-34': t('FTFF', 'zinc gives hydrogen'),
+  'bkc-35': t('FFTF', 'chlorine purifies water'),
+  'bkc-36': t('FTFF', 'gallium and caesium'),
+  'bkc-37': t('FFFT', 'zinc is more electropositive'),
+  'bkc-38': t('FFFT', 'nitrogen flushing'),
+  'bkc-39': t('FFTF', 'zinc is more reactive'),
+  'bkc-40': t('TFFF', 'pure gold is too soft'),
+  'bkc-41': t('FFTF', 'silver is expensive'),
+  'bkc-43': t('FFFT', 'N and P'),
+  'bkc-44': t('TFFF', 'tincture of iodine'),
+  'bkc-45': balanced(['Mg', 'O₂', 'MgO']),
+  'bkc-46': t('FTFF', 'copper is deposited'),
+  'bkc-47': t('TFFF', 'carbon dioxide'),
+  'bkc-48': t('FFFT', 'CO₂ turns lime water milky'),
+  'bkc-49': t('TFFF', 'S true, R shows it'),
+  'bkc-50': t('FFTF', 'ozone absorbs UV'),
+  'bkc-51': t('TFFF', 'zinc on iron'),
+  'bkc-52': t('FFFT', 'oxygen and moisture'),
+  'bkc-53': t('FTFF', 'salt water speeds rusting'),
+  'bkc-54': t('TFFF', 'evaporated salt is impure'),
+  'bkc-55': t('FTFF', 'nylon rope'),
+  'bkc-56': t('FFTF', 'rayon: bedsheets with cotton, carpets with wool'),
+  'bkc-57': t('FFTF', 'both true'),
+  'bkc-58': t('FTFF', 'melamine resists fire'),
+  'bkc-59': t('FFTF', 'nylon from coal, air, water'),
+  'bkc-60': t('FFFT', 'esters'),
+  'bkc-61': t('TFFF', 'thermosetting: cross-linked'),
+  'bkc-64': t('FTFF', 'sand smothers a petrol fire'),
+  'bkc-65': t('FTFF', 'carbon monoxide'),
+  'bkc-66': t('FFTF', 'sulphur must be lit'),
+  'bkc-67': num(280000 / 7),
+  'bkc-68': t('FTFF', 'green copper carbonate'),
+  'bkc-70': t('FFFT', 'CO₂ extinguisher'),
+  'bkb-001': set('ii iv'),
+  'bkb-002': t('FFTF', 'both true, ii explains i'),
+  'bkb-003': t('FTFF', 'chromosomes'),
+  'bkb-004': t('FFTF', 'an egg is one cell'),
+  'bkb-005': pairs({ i: 'd', ii: 'c', iii: 'b', iv: 'a' }),
+  'bkb-006': t('FTFF', 'both change shape'),
+  'bkb-007': t('FFFT', 'size suits function'),
+  'bkb-008': t('FFTF', 'nucleus, membrane, cytoplasm'),
+  'bkb-009': set('i iii'),
+  'bkb-010': t('TFFF', 'mitochondria make ATP'),
+  'bkb-011': t('FTFF', 'rough ER: proteins'),
+  'bkb-012': t('TFFF', 'shape and rigidity'),
+  'bkb-013': t('TFFF', 'by eye: cytoplasm, nucleus, membrane, mitochondrion'),
+  'bkb-014': t('FFTF', 'chromosomes'),
+  'bkb-015': t('FFFT', 'coordinates activities'),
+  'bkb-016': t('TFFF', 'onion cells have a cell wall'),
+  'bkb-017': t('FTFF', 'no organised nucleus'),
+  'bkb-018': t('FFFT', 'by eye: a chloroplast'),
+  'bkb-019': t('FFTF', 'pesticides harm health'),
+  'bkb-022': t('TFFF', 'A true, B false'),
+  'bkb-023': t('FFFT', 'long maturity is unwanted'),
+  'bkb-024': pairs({ i: 'b', ii: 'c', iii: 'a' }),
+  'bkb-025': t('TFFF', 'moat, chain pump, dhekli, rahat'),
+  'bkb-026': list('iii ii iv i'),
+  'bkb-027': set('i ii'),
+  'bkb-028': t('TFFF', 'uniform spacing and depth'),
+  'bkb-029': set('i ii iii'),
+  'bkb-030': t('FTFF', 'water gives no energy'),
+  'bkb-031': t('FFFT', 'legumes fix nitrogen'),
+  'bkb-032': t('FFFT', 'drip saves water'),
+  'bkb-033': t('FFFT', 'plough'),
+  'bkb-034': t('FTFF', 'grasshopper is a consumer'),
+  'bkb-035': t('FFFT', 'salt and water'),
+  'bkb-036': t('FFFT', 'radish root and leaves'),
+  'bkb-037': set('ii iii iv'),
+  'bkb-038': list('ii i iv iii'),
+  'bkb-039': t('FFTF', 'deforestation'),
+  'bkb-040': t('FFTF', 'IUCN'),
+  'bkb-042': t('TFFF', 'biosphere'),
+  'bkb-043': t('TFFF', 'ecosystem'),
+  'bkb-044': t('FTFF', 'factories'),
+  'bkb-045': t('TFFF', 'sewage'),
+  'bkb-046': t('TFFF', 'reverse osmosis removes salt'),
+  'bkb-047': t('FFFT', 'sedimentation'),
+  'bkb-048': t('TFFF', 'habitat'),
+  'bkb-049': t('FFTF', '1973'),
+  'bkb-050': t('FFTF', 'coal is exhaustible'),
+  'bkb-051': t('FFFT', 'all of the above'),
+  'bkb-052': t('FFFT', 'all of these'),
+  'bkb-053': t('TFFF', 'in situ'),
+  'bkb-054': t('TFFF', 'species'),
+  'bkb-055': t('FFFT', 'it raises the temperature'),
+  'bkb-056': t('FFFT', 'cardboard comes from wood'),
+  'bkb-057': t('FFTF', 'the cheetah (in India)'),
+  'bkb-058': t('FTFF', 'fast, gives CO₂'),
+  'bkb-059': t('FFTF', 'fermentation'),
+  'bkb-060': t('TFFF', 'dead or weakened microbes'),
+  'bkb-061': t('FFFT', 'Rhizobium fixes nitrogen'),
+  'bkb-062': t('FFTF', 'sugar reduces moisture'),
+  'bkb-063': t('FTFF', 'nitrogen'),
+  'bkb-064': t('TFFF', 'complex organic to simple inorganic'),
+  'bkb-065': t('TFFF', 'plant proteins'),
+  'bkb-066': t('FTFF', 'Fleming – penicillin'),
+  'bkb-067': t('FFTF', 'both true, R explains A'),
+  'bkb-068': t('FFFT', 'ovum and sperm'),
+  'bkb-069': t('TFFF', 'IVF'),
+  'bkb-070': t('FFFT', 'continuation of the species'),
+  'bkb-071': t('FTFF', 'to beat the odds of nature'),
+  'bkb-072': set('ii iv'),
+  'bkb-073': t('FFTF', 'better chance of fertilisation'),
+  'bkb-074': t('FTFF', 'high blood sugar'),
+  'bkb-075': t('TFFF', 'both correct'),
+  'bkb-076': set('ii iii'),
+  'bkb-077': t('FFTF', 'drugs harm health'),
+  'bkb-078': pairs({ 1: 'e', 2: 'a', 3: 'd', 4: 'b' }),
+  'bkb-079': t('TFFF', 'microscopic and unicellular'),
+  'bkb-081': t('FFTF', 'by eye: ovum, fertilisation, zygote, embryo'),
+  'bkb-082': t('TFFF', 'by eye: 1 plumule, 3 radicle'),
+  'bkb-083': t('FTFF', 'statements 1, 2 and 3'),
+  'bkb-084': t('TFFF', 'left side, then the aorta'),
+  'bkb-085': t('FTFF', 'starch to sugar'),
+  'bkb-087': t('TFFF', 'food vacuole'),
+  'bkb-088': t('FFTF', 'peristalsis'),
+  'bkb-089': t('TFFF', 'aorta'),
+  'bkb-090': t('FFFT', 'kidney, ureter, bladder, urethra'),
+  'bkb-091': t('FTFF', 'small intestine'),
+  'bkb-092': t('FFFT', 'stomata'),
+  'bkb-093': t('FTFF', 'duodenum'),
+  'bkb-094': t('FFFT', 'peptidase'),
+  'bkb-095': t('FTFF', 'kidney'),
+  'bkb-096': t('FTFF', 'Monera, Plantae, Fungi, Protista, Animalia'),
+  'bkb-097': t('FFTF', 'chitin and glycoproteins'),
+  'bkb-098': t('FFFT', 'arthropods: haemocoel'),
+  'bkb-099': t('TFFF', 'deodar is a gymnosperm'),
+  'bkb-100': t('FTFF', 'gymnosperms and angiosperms'),
+  'bkb-102': t('FTFF', 'reptiles have three chambers'),
+  'bkb-103': t('FFTF', 'Wuchereria'),
+  'bkb-104': t('FFFT', 'no flowers'),
+  'bkb-106': t('FTFF', 'Spirogyra is an alga'),
+  'bkb-107': t('FFTF', 'Euglena'),
+  'bkb-108': t('FFTF', 'Thallophyta'),
+  // ---- end of book ----
 }
 
 /** Questions left without an answer on purpose (each says why in its note). */
-const UNSOLVED = new Set(['ka21s-23', 'ka2223s-15', 'ka2324s-26', 'ka2526s-09'])
+const UNSOLVED = new Set([
+  'ka21s-23',
+  'ka2223s-15',
+  'ka2324s-26',
+  'ka2526s-09',
+  // ---- Book unsolved ----
+  'bkp-08',
+  'bkp-15',
+  'bkp-19',
+  'bkp-31',
+  'bkp-34',
+  'bkp-41',
+  'bkp-45',
+  'bkp-46',
+  'bkp-49',
+  'bkp-61',
+  'bkp-62',
+  'bkc-31',
+  'bkc-42',
+  'bkc-62',
+  'bkc-63',
+  'bkc-69',
+  'bkb-020',
+  'bkb-021',
+  'bkb-041',
+  'bkb-080',
+  'bkb-086',
+  'bkb-101',
+  'bkb-105',
+  // ---- end of book unsolved ----
+])
 
 const OLD = new Map(oldChapters.map((c) => [c.id, c]))
 const problems: string[] = []
-const kn = (paper: string) => JSON.parse(readFileSync(join(import.meta.dirname, `../app/src/data/pyq/${paper}.kn.json`), 'utf8')).questions
 let checked = 0
-for (const p of SAT_PAPERS) {
-  const knQ = kn(p.id)
+for (const p of SAT_SOURCES) {
+  const knQ = p.kn
   for (const q of p.questions.filter((x) => SECTION_SUBJECT[x.subject] === 'science')) {
     const at = `${p.id} Q${q.paperNo} (${q.id})`
     if (UNSOLVED.has(q.id)) {
@@ -330,6 +579,9 @@ for (const p of SAT_PAPERS) {
       if (old) {
         if (!en.concept.startsWith(`Old syllabus – ${old.name}: `)) problems.push(`${at}: the concept should start "Old syllabus – ${old.name}: "`)
         if (!k.concept.startsWith(`ಹಳೆಯ ಪಠ್ಯಕ್ರಮ – ${old.kn}: `)) problems.push(`${at}: the Kannada concept should start "ಹಳೆಯ ಪಠ್ಯಕ್ರಮ – ${old.kn}: "`)
+      } else if (q.topic === null) {
+        if (!en.concept.startsWith('Beyond the syllabus: ')) problems.push(`${at}: a Miscellaneous concept should start "Beyond the syllabus: "`)
+        if (!k.concept.startsWith('ಪಠ್ಯಕ್ರಮದ ಹೊರಗೆ: ')) problems.push(`${at}: the Kannada concept should start "ಪಠ್ಯಕ್ರಮದ ಹೊರಗೆ: "`)
       } else if (!/^\d/.test(en.concept)) problems.push(`${at}: the concept should start with its syllabus section`)
       else if (en.concept.split(' ')[0] !== k.concept.split(' ')[0]) problems.push(`${at}: the Kannada concept cites a different section`)
     }
@@ -346,7 +598,7 @@ for (const p of SAT_PAPERS) {
   }
 }
 for (const id of [...Object.keys(RULES), ...UNSOLVED])
-  if (!SAT_PAPERS.some((p) => p.questions.some((q) => q.id === id && SECTION_SUBJECT[q.subject] === 'science'))) problems.push(`${id}: listed here but isn't a science question`)
+  if (!SAT_SOURCES.some((p) => p.questions.some((q) => q.id === id && SECTION_SUBJECT[q.subject] === 'science'))) problems.push(`${id}: listed here but isn't a science question`)
 
 if (problems.length) {
   console.error(problems.join('\n'))

@@ -1,13 +1,14 @@
 /**
  * The SAT (Scholastic Aptitude Test) side of the app: its chapters (data/sat/chapters.json, built from
- * sat-syllabus/ by tools/build_sat_chapters.ts) and the Karnataka SAT past papers (data/pyq/*-sat.json).
+ * sat-syllabus/ by tools/build_sat_chapters.ts), the Karnataka SAT past papers (data/pyq/*-sat.json) and the
+ * study book's SAT questions (data/sat/book.json, from NMMS.pdf, with the book's key; shown in Practice's Book tab).
  * Each question is filed under the syllabus chapter it belongs to (`topic`), or under none (`null`) when
  * the 2026-27 textbooks no longer cover it. For revision, related chapters are combined into one topic
  * (data/sat/groups.json); every other chapter is a topic on its own. A question under no chapter
  * names the older syllabus's chapter it was asked from (`oldChapter`, data/sat/old-chapters.json); those
- * "Old syllabus" topics follow each subject's textbook topics, and an "Uncategorized" topic holds any
- * question with neither (shown only if there is one). The maths and science questions are solved (checked by tools/check_sat_maths.ts and tools/check_sat_science.ts); tools/check_sat.ts checks the papers, the chapter list and the groups. Each paper's Kannada, as
- * printed in it, is in data/pyq/*-sat.kn.json (checked by tools/check_i18n.ts).
+ * "Old syllabus" topics follow each subject's textbook topics, and a "Miscellaneous" topic holds any
+ * question with neither (shown only if there is one). The maths and science questions are solved (checked by tools/check_sat_maths.ts and tools/check_sat_science.ts; the book's social science by tools/check_sat_social.ts); tools/check_sat.ts checks the papers, the book, the chapter list and the groups. The Kannada, as
+ * printed, is in data/pyq/*-sat.kn.json and data/sat/book.kn.json (checked by tools/check_i18n.ts).
  */
 import type { OptionKey } from '../types'
 import chaptersJson from './sat/chapters.json'
@@ -26,6 +27,8 @@ import ka2425 from './pyq/ka-2024-25-sat.json'
 import ka2425Kn from './pyq/ka-2024-25-sat.kn.json'
 import ka2526 from './pyq/ka-2025-26-sat.json'
 import ka2526Kn from './pyq/ka-2025-26-sat.kn.json'
+import bookJson from './sat/book.json'
+import bookKn from './sat/book.kn.json'
 
 export type SatSubject = 'maths' | 'science' | 'social'
 export const SAT_SUBJECTS: SatSubject[] = ['maths', 'science', 'social']
@@ -102,6 +105,8 @@ export interface SatPaper {
   questions: SatQuestion[]
   /** The paper's printed Kannada, by question id (draft, not yet reviewed). Missing fields fall back to English. */
   kn: Record<string, Partial<SatQuestionText>>
+  /** The study book (NMMS.pdf), not a past paper: its questions are numbered within each section. */
+  book?: true
 }
 
 interface PaperJson {
@@ -127,6 +132,12 @@ export const SAT_PAPERS: SatPaper[] = [
   paper(ka2425, ka2425Kn),
   paper(ka2526, ka2526Kn),
 ]
+
+/** The study book's SAT questions (NMMS.pdf), with its answer key checked by us. */
+export const SAT_BOOK: SatPaper = { ...paper(bookJson, bookKn), book: true }
+
+/** Every source of SAT questions: the past papers, then the book. */
+export const SAT_SOURCES: SatPaper[] = [...SAT_PAPERS, SAT_BOOK]
 
 /** A question's words in the given language. */
 export function satQuestionText(p: SatPaper, q: SatQuestion, lang: string): SatQuestionText {
@@ -165,8 +176,8 @@ export interface SatTopic {
   chapters: SatChapter[]
   /** An "Old syllabus" topic: its id in data/sat/old-chapters.json; `chapters` is then empty. */
   oldChapter?: string
-  /** The subject's questions under no chapter, old or new; `chapters` is then empty. */
-  uncategorized?: true
+  /** Miscellaneous: the subject's questions under no chapter, old or new; `chapters` is then empty. */
+  misc?: true
 }
 
 /** A chapter of the older syllabus that the 2026-27 textbooks dropped. */
@@ -191,7 +202,7 @@ const byBook = (a: SatChapter, b: SatChapter) => a.cls - b.cls || a.no - b.no
 const GROUPS = groupsJson as GroupJson[]
 const grouped = new Map(GROUPS.flatMap((g) => g.chapters.map((id) => [id, g] as const)))
 
-/** A subject's topics after its textbook ones: its old-syllabus chapters, then Uncategorized if anything is. */
+/** A subject's topics after its textbook ones: its old-syllabus chapters, then Miscellaneous if anything is in it. */
 function notInTextbooks(subject: SatSubject): SatTopic[] {
   const old = OLD_CHAPTERS.filter((c) => c.subject === subject).map((c): SatTopic => ({
     id: `old-${c.id}`,
@@ -201,8 +212,8 @@ function notInTextbooks(subject: SatSubject): SatTopic[] {
     chapters: [],
     oldChapter: c.id,
   }))
-  const rest: SatTopic = { id: `uncategorized-${subject}`, subject, name: 'Uncategorized', kn: 'ವರ್ಗೀಕರಿಸದ ಪ್ರಶ್ನೆಗಳು', chapters: [], uncategorized: true }
-  return satQuestions(rest).length ? [...old, rest] : old
+  const rest: SatTopic = { id: `miscellaneous-${subject}`, subject, name: 'Miscellaneous', kn: 'ಇತರ ಪ್ರಶ್ನೆಗಳು', chapters: [], misc: true }
+  return questionsIn(rest, SAT_SOURCES).length ? [...old, rest] : old
 }
 
 /** Every topic, by subject: textbook topics in the textbook order of their first chapter, then the rest. */
@@ -239,15 +250,25 @@ export interface PaperQuestionRef {
   chapter?: SatChapter
 }
 
-/** A topic's past-paper questions, oldest paper first and in paper order. */
-export function satQuestions(t: SatTopic): PaperQuestionRef[] {
-  if (t.oldChapter) return SAT_PAPERS.flatMap((p) => p.questions.filter((q) => q.oldChapter === t.oldChapter).map((q) => ({ paper: p, q })))
-  if (t.uncategorized)
-    return SAT_PAPERS.flatMap((p) =>
+/** A topic's questions from these sources, in source order and then question order. */
+function questionsIn(t: SatTopic, sources: SatPaper[]): PaperQuestionRef[] {
+  if (t.oldChapter) return sources.flatMap((p) => p.questions.filter((q) => q.oldChapter === t.oldChapter).map((q) => ({ paper: p, q })))
+  if (t.misc)
+    return sources.flatMap((p) =>
       p.questions.filter((q) => q.topic === null && !q.oldChapter && SECTION_SUBJECT[q.subject] === t.subject).map((q) => ({ paper: p, q })),
     )
   const chapters = new Map(t.chapters.map((c) => [c.id, c]))
-  return SAT_PAPERS.flatMap((p) => p.questions.filter((q) => q.topic && chapters.has(q.topic)).map((q) => ({ paper: p, q, chapter: chapters.get(q.topic!)! })))
+  return sources.flatMap((p) => p.questions.filter((q) => q.topic && chapters.has(q.topic)).map((q) => ({ paper: p, q, chapter: chapters.get(q.topic!)! })))
+}
+
+/** A topic's past-paper questions, oldest paper first and in paper order. */
+export function satQuestions(t: SatTopic): PaperQuestionRef[] {
+  return questionsIn(t, SAT_PAPERS)
+}
+
+/** A topic's questions from the study book, in book order. */
+export function satBookQuestions(t: SatTopic): PaperQuestionRef[] {
+  return questionsIn(t, [SAT_BOOK])
 }
 
 /** How many of a topic's questions came in past papers, and in how many of the papers. */
@@ -256,7 +277,7 @@ export function satPastStats(t: SatTopic): { questions: number; years: number; p
   return { questions: qs.length, years: new Set(qs.map((r) => r.paper.id)).size, papers: SAT_PAPERS.length }
 }
 
-/** A topic's solved questions (maths and science so far), which Practice asks one at a time. */
+/** A topic's questions with an answer, book and past papers, which Practice asks one at a time. */
 export function satSolved(t: SatTopic): PaperQuestionRef[] {
-  return satQuestions(t).filter((x) => x.q.answer)
+  return questionsIn(t, SAT_SOURCES).filter((x) => x.q.answer)
 }

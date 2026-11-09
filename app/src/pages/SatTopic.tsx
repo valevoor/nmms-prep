@@ -1,6 +1,6 @@
 import { Page } from '../components/Page'
 import type { SatTopic as Topic } from '../data/sat'
-import { satChapterName, satQuestions, satSolved, satTopicName } from '../data/sat'
+import { satBookQuestions, satChapterName, satQuestions, satSolved, satTopicName } from '../data/sat'
 import { topicRevisions } from '../data/satRevise'
 import { useLocale, useT } from '../lib/i18n'
 import { satKey, satMastery, satMistakes, summarize, useProgress } from '../lib/progress'
@@ -8,14 +8,16 @@ import { href } from '../lib/router'
 
 /**
  * One SAT topic (#/sat/<id>): a textbook chapter, or a few related ones combined for revision. It shows
- * where to study each chapter in the textbook, what it covers, and Practice, which asks its past exam questions; a topic with solved questions (maths
- * and science so far) also shows its progress, as a MAT chapter does.
- * An "Old syllabus" or Uncategorized topic has no textbook chapter, so it says why instead.
+ * where to study each chapter in the textbook, what it covers, and Practice, which asks its study-book and past exam questions; a topic with
+ * solved questions also shows its progress, as a MAT chapter does.
+ * An "Old syllabus" or Miscellaneous topic has no textbook chapter, so it says why instead.
  */
 export function SatTopic({ topic: t }: { topic: Topic }) {
   const tr = useT()
   const lang = useLocale()
   const items = satQuestions(t)
+  const book = satBookQuestions(t)
+  const any = items.length + book.length > 0
   const papers = new Set(items.map((x) => x.paper.id)).size
   const solved = satSolved(t)
   const p = useProgress(satKey(t.id))
@@ -32,7 +34,7 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
         <div>
           <span className="chip">
             {t.chapters.length === 0
-              ? tr.sat.uncategorizedChip(subject)
+              ? tr.sat.miscChip(subject)
               : only
                 ? tr.sat.chip(only.cls, subject, only.no)
                 : tr.sat.groupChip(subject, t.chapters.length)}
@@ -44,14 +46,22 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
           </div>
         )}
         <dl className="stats">
+          {book.length > 0 && (
+            <div>
+              <dt>{tr.sat.bookQuestionsStat}</dt>
+              <dd>{book.length}</dd>
+            </div>
+          )}
           <div>
             <dt>{tr.sat.pastQuestionsStat}</dt>
             <dd>{items.length}</dd>
           </div>
-          <div>
-            <dt>{tr.sat.papersStat}</dt>
-            <dd>{papers}</dd>
-          </div>
+          {book.length === 0 && (
+            <div>
+              <dt>{tr.sat.papersStat}</dt>
+              <dd>{papers}</dd>
+            </div>
+          )}
           {solved.length > 0 && (
             <div>
               <dt>{tr.home.accuracy}</dt>
@@ -67,7 +77,7 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
             <a className="btn" href={href(`${base}/flashcards`)}>
               {tr.sat.flashcards}
             </a>
-            {items.length > 0 && (
+            {any && (
               <a className="btn flash-wide" href={href(`${base}/practice`)}>
                 {tr.home.practice}
               </a>
@@ -85,13 +95,13 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
             {tr.home.retryWrong(mistakes.length)}
           </a>
         )}
-        {items.length > 0 ? <p className="muted sat-note">{solved.length > 0 ? tr.sat.answersReady : tr.sat.noAnswers}</p> : <p className="muted sat-note">{tr.sat.noPastQuestions}</p>}
+        <p className="muted sat-note">{items.length > 0 ? (solved.length > 0 ? tr.sat.answersReady : tr.sat.noAnswers) : book.length > 0 ? tr.sat.bookOnly : tr.sat.noPastQuestions}</p>
       </section>
 
       {t.chapters.length === 0 && (
         <section className="card sat-study">
-          <h2>{t.oldChapter ? tr.sat.oldTitle : tr.sat.uncategorizedTitle}</h2>
-          <p>{t.oldChapter ? tr.sat.oldNote : tr.sat.uncategorizedNote}</p>
+          <h2>{t.oldChapter ? tr.sat.oldTitle : tr.sat.miscTitle}</h2>
+          <p>{t.oldChapter ? tr.sat.oldNote : tr.sat.miscNote}</p>
         </section>
       )}
       {t.chapters.length > 0 && (

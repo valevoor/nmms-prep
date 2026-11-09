@@ -1,30 +1,36 @@
 import { useMemo, useState } from 'react'
 import { Page } from '../components/Page'
 import type { PaperQuestionRef, SatTopic } from '../data/sat'
-import { satQuestions, satSolved, satTopicName } from '../data/sat'
+import { satBookQuestions, satQuestions, satSolved, satTopicName } from '../data/sat'
 import { useLocale, useT } from '../lib/i18n'
 import { recordSatAnswer, satKey, satMistakes, useProgress } from '../lib/progress'
 import { href } from '../lib/router'
 import type { OptionKey } from '../types'
 import { SatExplanation, SatQuestionBody } from '../components/SatQuestion'
+import { satSource } from '../lib/source'
 
-export type SatPracticeMode = 'exam' | 'mistakes'
+export type SatPracticeMode = 'book' | 'exam' | 'mistakes'
 
 /**
- * A SAT topic's past exam questions one at a time (#/sat/<id>/practice), like MAT's Practice: pick an answer to
- * a solved question (maths and science so far), see if it's right and how to solve it, then go on. A question without an
- * answer yet is shown as printed, to read and discuss. The Mistakes tab asks again the ones last answered wrong.
+ * A SAT topic's questions one at a time (#/sat/<id>/practice), like MAT's Practice: the Book tab asks the study
+ * book's questions and Past exams the papers' ones. Pick an answer to a solved question, see if it's right and how to
+ * solve it, then go on. A question without an answer yet is shown as printed, to read and discuss. The Mistakes tab
+ * asks again the ones last answered wrong. With no mode asked for, it opens on the book's questions if it has any.
  */
-export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPracticeMode }) {
+export function SatPractice({ topic, mode: asked }: { topic: SatTopic; mode?: SatPracticeMode }) {
   const t = useT()
   const lang = useLocale()
   const progress = useProgress(satKey(topic.id))
   const all = useMemo(() => satQuestions(topic), [topic])
+  const book = useMemo(() => satBookQuestions(topic), [topic])
   const solved = useMemo(() => satSolved(topic), [topic])
   const mistakes = satMistakes(progress, solved)
+  const start: SatPracticeMode = book.length > 0 ? 'book' : 'exam'
+  // A tab with nothing in it isn't shown, so asking for it opens the first one instead.
+  const mode: SatPracticeMode = !asked || (asked === 'book' && !book.length) || (asked === 'exam' && !all.length) ? start : asked
   // The mistakes list is frozen at the first answer, so it doesn't shrink under the student mid-session.
   const [frozen, setFrozen] = useState<PaperQuestionRef[] | null>(null)
-  const queue = frozen ?? (mode === 'exam' ? all : mistakes)
+  const queue = frozen ?? (mode === 'book' ? book : mode === 'exam' ? all : mistakes)
   const many = topic.chapters.length > 1
 
   const [index, setIndex] = useState(0)
@@ -62,7 +68,9 @@ export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPractic
   return (
     <Page title={satTopicName(topic, lang)} back={base} right={<span className="counter">{`${Math.min(index + 1, queue.length)} / ${queue.length}`}</span>}>
       <nav className="tabs" aria-label={t.practice.mode}>
-        {(['exam', 'mistakes'] as SatPracticeMode[]).map((m) => (
+        {(['book', 'exam', 'mistakes'] as SatPracticeMode[])
+          .filter((m) => (m === 'book' ? book.length > 0 : m === 'exam' ? all.length > 0 : true))
+          .map((m) => (
           <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`${base}/practice?mode=${m}`)} aria-current={m === mode ? 'page' : undefined}>
             {t.practice[m]}
           </a>
@@ -73,8 +81,8 @@ export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPractic
         <section className="card empty">
           <h3>{t.practice.noMistakes}</h3>
           <p className="muted">{t.practice.noMistakesBody}</p>
-          <a className="btn btn-primary" href={href(`${base}/practice?mode=exam`)}>
-            {t.practice.exam}
+          <a className="btn btn-primary" href={href(`${base}/practice?mode=${start}`)}>
+            {start === 'book' ? t.practice.practiseBook : t.practice.exam}
           </a>
         </section>
       ) : finished ? (
@@ -96,9 +104,9 @@ export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPractic
                   {t.practice.retryMistakes(mistakes.length)}
                 </a>
               ))}
-            {mode === 'exam' && (
+            {mode !== 'mistakes' && (
               <button className="btn" onClick={restart}>
-                {t.practice.examAgain}
+                {mode === 'book' ? t.practice.bookAgain : t.practice.examAgain}
               </button>
             )}
           </div>
@@ -107,7 +115,7 @@ export function SatPractice({ topic, mode }: { topic: SatTopic; mode: SatPractic
         <section className="card question sat-q" key={item.q.id}>
           <div className="q-head">
             <span className="muted">
-              <span className="chip chip-exam">{t.common.realExam}</span> {t.common.paperQ(t.common.states[item.paper.state], item.paper.year, item.q.paperNo)}
+              {!item.paper.book && <span className="chip chip-exam">{t.common.realExam}</span>} {satSource(t, item.paper, item.q)}
             </span>
             {many && item.chapter && <span className="muted">{t.sat.fromChapter(item.chapter.cls, t.sat.subjects[item.chapter.subject], item.chapter.no)}</span>}
           </div>

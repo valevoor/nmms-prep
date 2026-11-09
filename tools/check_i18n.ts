@@ -9,7 +9,7 @@
  */
 import { CHAPTER_FILES } from '../app/src/data/chapters'
 import { PAPER_FILES } from '../app/src/data/papers'
-import { SAT_PAPERS } from '../app/src/data/sat'
+import { SAT_SOURCES } from '../app/src/data/sat'
 
 const KANNADA = /[ಀ-೿]/
 /**
@@ -70,9 +70,9 @@ for (const p of PAPER_FILES) {
 /** English words in a SAT option or table cell (not units like “km”, algebra like “at” or “abc”, or roman numerals). */
 const SAT_WORDS = /\b(?!(?:ppm|abc|bca|cab|[ivx]+)\b)[a-z]{3,}/
 
-// The SAT papers: every question has the paper's Kannada, and every option and table cell with English
+// The SAT papers and the book's SAT questions: every question has the printed Kannada, and every option and table cell with English
 // words in it has a Kannada version (tables keep their shape).
-for (const p of SAT_PAPERS) {
+for (const p of SAT_SOURCES) {
   const name = `${p.id} (SAT)`
   const ids = new Set(p.questions.map((q) => q.id))
   for (const id of Object.keys(p.kn)) if (!ids.has(id)) problems.push(`${name}: ${id} is in the Kannada file but not in the paper`)

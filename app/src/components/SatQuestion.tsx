@@ -4,8 +4,9 @@ import { MathText } from './MathText'
 import type { SatPaper, SatQuestion, SatQuestionText } from '../data/sat'
 import { satQuestionText } from '../data/sat'
 import { DICTS, useLocale, useShowBoth, useT } from '../lib/i18n'
-import type { Locale } from '../lib/i18n'
+import type { Dict, Locale } from '../lib/i18n'
 import { otherLocale } from '../lib/i18n/content'
+import { satSource } from '../lib/source'
 import { OPTION_KEYS } from '../types'
 import type { OptionKey } from '../types'
 
@@ -87,18 +88,26 @@ export function SatQuestionBody({ paper, q, chosen, onPick }: { paper: SatPaper;
   )
 }
 
-/** A solved question's worked solution and where its answer comes from, as MAT's Explanation shows them. */
+/** Where an answer comes from: the papers have no key; the book's key is checked, and corrected where it is wrong. */
+function keySource(t: Dict, paper: SatPaper, q: SatQuestion): string {
+  if (paper.book) return q.keyFrom === 'book' ? t.sat.keyBookChecked : t.sat.keyBookCorrected
+  return q.keyFrom === 'book' ? t.common.keyOfficial : t.common.keyWorkedOutPaper
+}
+
+/**
+ * A solved question's worked solution and where its answer comes from, as MAT's Explanation shows them. A book
+ * social science answer has no worked solution, so it shows only where the answer comes from.
+ */
 export function SatExplanation({ paper, q }: { paper: SatPaper; q: SatQuestion }) {
   const t = useT()
   const lang = useLocale()
   const otherLang = otherLocale(lang)
   const text = satQuestionText(paper, q, lang)
   const other = useShowBoth() ? satQuestionText(paper, q, otherLang) : undefined
-  if (!text.solution) return null
   const render = mathRender(q)
   return (
     <div className="explanation">
-      {other?.solution ? (
+      {!text.solution ? null : other?.solution ? (
         <div className="bi">
           <SolutionWords solution={text.solution} lang={lang} tagged render={render} />
           <SolutionWords solution={other.solution} lang={otherLang} tagged render={render} />
@@ -107,7 +116,7 @@ export function SatExplanation({ paper, q }: { paper: SatPaper; q: SatQuestion }
         <SolutionWords solution={text.solution} lang={lang} render={render} />
       )}
       <p className="source">
-        {t.common.paperQ(t.common.states[paper.state], paper.year, q.paperNo)} · {q.keyFrom === 'book' ? t.common.keyOfficial : t.common.keyWorkedOutPaper}
+        {satSource(t, paper, q)} · {keySource(t, paper, q)}
       </p>
     </div>
   )
