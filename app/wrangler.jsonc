@@ -1,0 +1,9 @@
+// Cloudflare Workers deploy: serves the built app (dist/) as static files.
+// Build first (npm run build); `npx wrangler deploy` then uploads dist/.
+{
+  "name": "nmms-prep",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
