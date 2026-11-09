@@ -44,8 +44,8 @@ vi.mock('./lib/progress', async (orig) => {
 
 const MAT = READY_TOPICS.find((t) => t.id === 'number-series')!
 const SAT = SAT_TOPICS.find((t) => t.chapters.length === 1 && satQuestions(t).length > 0)!
-/** A topic whose past questions are solved (maths and science so far), so its cards have answer buttons, and one not solved yet. */
-const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1 && satSolved(t).length > 0)!
+/** A topic with solved past questions, so its Past exams cards have answer buttons, and one not solved yet. */
+const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.length === 1 && satQuestions(t).some((x) => x.q.answer))!
 /** A topic with a revision sheet. */
 const SAT_REVISE = SAT_TOPICS.find((t) => t.chapters.some((c) => c.id === REVISIONS[0].en.chapter))!
 const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.chapters.length === 1 && satQuestions(t).length > 0 && satSolved(t).length === 0)!

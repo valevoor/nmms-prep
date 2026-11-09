@@ -1,14 +1,13 @@
 /**
- * Checks the answers to the SAT papers' maths questions (data/pyq/ka-<year>-sat.json, subject "maths").
+ * Checks the answers to the SAT maths questions of the papers (data/pyq/ka-<year>-sat.json, subject "maths") and of
+ * the study book (data/sat/book.json, whose key is checked here too).
  * Each question has its own rule here, worked out independently of the written solution: a value to
  * compute, a condition the right option must meet (an equation it solves, an identity it matches at
  * random values) or, for statements and pictures, whether each option is true. Exactly one option must
  * fit, and it must be the key. Every answered question needs `keyFrom` and a solution in English and
  * Kannada; a maths question with no answer must say why in its note.  Run from app/:  npx tsx ../tools/check_sat_maths.ts
  */
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
-import { SAT_PAPERS } from '../app/src/data/sat'
+import { SAT_SOURCES } from '../app/src/data/sat'
 
 const KEYS = ['A', 'B', 'C', 'D'] as const
 type Key = (typeof KEYS)[number]
@@ -243,16 +242,173 @@ const RULES: Record<string, Rule> = {
   'ka2526s-88': num((7 / 3) * (1 / 15) + (2 / 35) * (-2 / 9)),
   'ka2526s-89': num((200 * (22 / 7) * 70) / 100),
   'ka2526s-90': num(1500 * 1.1 - 500 * 0.9),
+  // ---- Book: NMMS.pdf (data/sat/book.json) ----
+  'bkm-001': solves((a) => alt(`78${a}3945`) % 11 === 0),
+  'bkm-002': num(1 / 7),
+  'bkm-003': solves((x) => x > 2 && x < 3),
+  'bkm-004': t('FFTF', 'by eye: 5 of 8 equal parts'),
+  'bkm-005': num(2 / 5 + 23 / 20 + 3 / 4),
+  'bkm-006': num(35 / 18 + (-5 / 3) * (7 / 6)),
+  'bkm-007': num(16 ** 0.75),
+  'bkm-008': solves((a) => (9 + a) % 3 === 0),
+  'bkm-009': t('FTFF', '0, 1, 2, … are the whole numbers'),
+  'bkm-010': t('FTFF', 'addition and multiplication are associative'),
+  'bkm-011': solves((d) => digits(`985${d}865`) % 9 === 0),
+  'bkm-012': num(99 * 99 + 95),
+  'bkm-013': num(Math.floor(99999 / 137) * 137),
+  'bkm-014': solves(isPrime),
+  'bkm-015': num(462 ** 2),
+  'bkm-016': num(45 - (1000 % 45)),
+  'bkm-017': num(lcm(5, 6, 10, 12, 15)),
+  'bkm-018': num(3),
+  'bkm-019': num(range(4, 199).filter((n) => n % 7 === 0).length),
+  'bkm-020': num(Math.sqrt(26 ** 2 - 4 * 165)),
+  'bkm-021': num(gcd(gcd(144, 240), 612)),
+  'bkm-022': num(6 * 999 + 21 / 7),
+  'bkm-023': num((104 - 16) / 4 + 8),
+  'bkm-024': solves((x) => 5 * x === 3 * (x + 4)),
+  'bkm-025': num((6 * 8) / 2),
+  'bkm-026': solves((y) => y + 2 * 7 === 16),
+  'bkm-027': solves((p) => 2 * 100 + 5 * 10 + p === 252),
+  'bkm-028': t('FTFF', 'x = 0 gives y = 1'),
+  'bkm-029': (v) => !v.includes("±") && solves((p) => p + 2 !== 0 && Math.sqrt((p * p - 4) ** 2) === 0)(v),
+  'bkm-030': (v) => !v.includes("±") && solves((p) => p !== 0 && 2 * p - 1 === p ** 0)(v),
+  'bkm-031': (v) => !v.includes("±") && solves((x) => x !== 0 && 300 * x - 2 === 297 + x ** 0)(v),
+  'bkm-032': solves((x) => near(x - 1, Math.cbrt(2 ** 3))),
+  'bkm-033': num(4 * 30 / 40),
+  'bkm-034': solves((s) => s - 3 + (s - 2 - 3) === 8),
+  'bkm-035': solves((a) => near(Math.sqrt(0.0169 * a), 1.3)),
+  'bkm-036': solves((x) => near(2 * x - 1, Math.sqrt((x + 2) ** 2))),
+  'bkm-037': t('FTFF', 'only (−1, 8) satisfies y = −5x + 3'),
+  'bkm-038': solves((x) => x + x / 2 === 111),
+  'bkm-039': solves((b) => b % 2 === 0 && b + (b - 2) === 26),
+  'bkm-040': solves((x) => 2 ** (3 * x) === 64),
+  'bkm-041': solves((b) => b % 11 === 0 && b + (b - 11) + (b - 22) === 99),
+  'bkm-042': solves((x) => 3 * x - 1 === 17),
+  'bkm-043': solves((x) => near(Math.sqrt(9 * x), 15)),
+  'bkm-044': num(6060 / 3),
+  'bkm-045': num(4 * 1200),
+  'bkm-046': num((980 * 15000) / (15000 + 9500)),
+  'bkm-047': num(8400 * (1 - 1 / 3 - 1 / 4)),
+  'bkm-048': num(1 / (Math.sqrt(3) / 4)),
+  'bkm-049': num((18 / 3) * 10),
+  'bkm-050': solves((s) => near((0.6 * s - 10) / (0.4 * s - 10), 5 / 3)),
+  'bkm-051': num((7 * 1.2) / (8 * 1.1)),
+  'bkm-052': num(320 / 5 / (160 / 4)),
+  'bkm-053': solves((r) => near((90 * r + 150) / (r + 1), 102)),
+  'bkm-054': num((30.5 * 3) / 5),
+  'bkm-055': solves((r) => near(r * r + 4, 4 * r)),
+  'bkm-056': num(6 * 10 - (5 + 8 + 10 + 12 + 17)),
+  'bkm-057': num(sum(range(1, 5).map((k) => k ** 3)) / 5),
+  'bkm-058': num((4 * 520 + 26 * 310) / 30),
+  'bkm-059': num(46 * 50),
+  'bkm-060': num(3 * 30 + 3 * 20 - 5 * 24),
+  'bkm-061': num(360 / (180 - 144)),
+  'bkm-062': num((100 / 4) ** 2),
+  'bkm-063': num(4 * 12),
+  'bkm-064': num((12 * 12) / 2),
+  'bkm-065': num(4 * Math.hypot(3, 4)),
+  'bkm-066': num(180 - (180 - (180 - 113) - 42)),
+  'bkm-067': num((35 - 15) / 15),
+  'bkm-068': num(90 - (90 - (90 * 2) / 5)),
+  'bkm-069': num(360 / (180 / 6)),
+  'bkm-070': num((180 - 36) / 2),
+  'bkm-071': num(360 / (180 / 5)),
+  'bkm-072': t('FFTF', '2 × 90 + 144 × 5 = 900 = (7 − 2) × 180'),
+  'bkm-073': num((360 - 2 * 140) / 2 + (180 - 140) / 2),
+  'bkm-074': num((180 * 3) / 5),
+  'bkm-075': num(180 - (90 - (90 * 2) / 5)),
+  'bkm-076': num((360 - 77 - 57 + 10) / 2),
+  'bkm-077': num(360 - (360 - 140) - 53 - (180 - 122)),
+  'bkm-079': num((180 - 360 / 5) / (180 - 360 / 10)),
+  'bkm-080': num(180 - (180 - 55 - 62)),
+  'bkm-081': num(180 - (180 - 75 - 45)),
+  'bkm-082': solves((d) => Math.abs(d - 2 * (22 / 7) * 38 * 120) < 1),
+  'bkm-083': num(Math.sqrt(3 ** 2 + 4 ** 2)),
+  'bkm-084': num(Math.hypot(4, 8)),
+  'bkm-085': (v) => parseFloat(v) === (2 ** 2 - 1) * 100,
+  'bkm-086': num(220 * 200 - 200 * 180),
+  'bkm-087': solves((l) => l * (l - 5) === 750),
+  'bkm-088': num(2 * (25 + 20)),
+  'bkm-089': num((14 * 2 * Math.sqrt(25 ** 2 - 7 ** 2)) / 2),
+  'bkm-090': num(1 / 9),
+  'bkm-091': num((15 / 3) ** 3),
+  'bkm-092': (v) => parseFloat(v) === 2 * 4 * 6,
+  'bkm-093': num((56 / 7) * (40 / 5) * (25 / 2.5)),
+  'bkm-094': num(Math.sqrt(8.1 * 3.6)),
+  'bkm-095': num(6000 / (4 * Math.sqrt(10000))),
+  'bkm-096': num(3 * 2 * (22 / 7) * 7),
+  'bkm-097': num((26 * 10) / (2 * 2)),
+  'bkm-098': num(2 * (4 + 3) * 3 * 4),
+  'bkm-099': num((90 / 3) * (60 / 2)),
+  'bkm-100': same((e) => 12 * e.x * e.y + 4 * e.x ** 2 - 3 * e.y ** 2 - (2 * e.x * e.y + 9 * e.x ** 2)),
+  'bkm-101': same((e) => 11 * e.a - 8 * e.a * e.b + 4 * e.b - 2 - (3 * e.a - 6 * e.a * e.b + 2 * e.b + 11)),
+  'bkm-102': t('FFTF', '9x × (−5xyz) = −45x²yz'),
+  'bkm-103': same((e) => (e.a - e.b) * (e.a + e.b) + (e.b - e.c) * (e.b + e.c) + (e.c - e.a) * (e.c + e.a)),
+  'bkm-104': num(1 ** 3 + (-2) ** 3),
+  'bkm-105': t('TFFF', '(A − B)(A + B) = (2y² − 2z²)(2x²)'),
+  'bkm-106': num(2 ** 3 + 3 * 80 * 2),
+  'bkm-107': num(Math.sqrt(10 ** 2 + 4)),
+  'bkm-108': same((e) => 5 * e.x * (2 * e.x + 3 * e.y) - 3 * e.x * (6 * e.x - e.y)),
+  'bkm-109': t('TFFF', 'only A gives m = 8'),
+  'bkm-110': num(-6 / 11 - 8 / 9),
+  'bkm-111': same((e) => (e.x ** 2 - e.y ** 2) / (e.x + e.y)),
+  'bkm-112': num(998 ** 2),
+  'bkm-113': solves((k) => 5 * k + 6 === 51),
+  'bkm-114': t('TFFF', 'AB + AC > 2AD for a median'),
+  'bkm-115': num(180 - 2 * (180 - (7 * 180) / 9)),
+  'bkm-116': num(6 * 180 - 2 * 360),
+  'bkm-117': num((2 * Math.sqrt(27 * 14 * 7 * 6)) / 21),
+  'bkm-118': num(Math.hypot(6 + 3, 3 + 9)),
+  'bkm-119': num(360 - 2 * ((180 - 58) / 2) - 90),
+  'bkm-120': num(2 * (180 - 50) - 180),
+  'bkm-121': num(180 - (180 - 65)),
+  'bkm-122': num((8 * Math.sqrt(5 ** 2 - 4 ** 2)) / 2),
+  'bkm-123': num((14 * 12) / 15),
+  'bkm-125': num(3 * 4 - 4),
+  'bkm-126': num((20 * Math.sqrt(29 ** 2 - 20 ** 2)) / 2),
+  'bkm-127': num(27 / 3),
+  'bkm-128': num(Math.hypot(6, 8) / 2),
+  'bkm-129': num((3 / 5) * (15 / 10)),
+  'bkm-130': num(((1 / 4) ** 2 - (1 / 4) ** 3) * 2 ** 6),
+  'bkm-131': num((1 / 10) / (-1 / 8)),
+  'bkm-132': num(3 / 2),
+  'bkm-133': solves((n) => n - 1 === 3 - n),
+  'bkm-134': num(2 * 7.5 + 2.5 - 3 * 1.5),
+  'bkm-135': same((e) => 1 / (1 / e.x + 1 / e.y)),
+  'bkm-136': t('TFFF', 'the product under the roots is 1'),
+  'bkm-137': num((256 * 256 - 144 * 144) / 112),
+  'bkm-138': solves((n) => 2 * n + 1 === 2013),
+  'bkm-139': num(Math.cbrt(1 / 8) + 1),
+  'bkm-140': num(Math.sqrt(64) * 10),
+  'bkm-141': num(48 ** (-2 / 7) * 16 ** (-5 / 7) * 3 ** (-5 / 7)),
+  'bkm-142': solves((z) => Math.abs(z - 1.4 / 0.48) < 0.05),
+  'bkm-143': num((Math.log(5) / Math.log(4)) * (Math.log(6) / Math.log(5)) * (Math.log(7) / Math.log(6)) * (Math.log(8) / Math.log(7))),
+  'bkm-144': num(2 ** 100 * 5 ** 25),
+  'bkm-145': num(Math.sqrt((10 + Math.sqrt(25)) * (12 - Math.sqrt(49)))),
+  'bkm-146': solves((x) => 6 ** x === (2 ** 3 * 3 ** 4 * 1080) / 15),
+  'bkm-147': solves((x) => near(625 ** 0.25, 25 ** (x - 1.5))),
+  'bkm-148': solves((m) => 2 * m + 2 === m - 9),
+  'bkm-149': solves((n) => near(Math.sqrt(3 ** n), 2187)),
+  'bkm-150': solves((x) => near(2 ** (x + 4) - 2 ** (x + 2), 3)),
+  'bkm-151': t('TFFF', '4 × 2⁵⁰ = 2⁵²'),
+  'bkm-152': same(() => 1),
+  // ---- end of book ----
 }
 
 /** Questions left without an answer on purpose (each says why in its note). */
-const UNSOLVED = new Set(['ka2324s-86'])
+const UNSOLVED = new Set([
+  'ka2324s-86',
+  // ---- Book unsolved ----
+  'bkm-078',
+  'bkm-124',
+  // ---- end of book unsolved ----
+])
 
 const problems: string[] = []
-const kn = (paper: string) => JSON.parse(readFileSync(join(import.meta.dirname, `../app/src/data/pyq/${paper}.kn.json`), 'utf8')).questions
 let checked = 0
-for (const p of SAT_PAPERS) {
-  const knQ = kn(p.id)
+for (const p of SAT_SOURCES) {
+  const knQ = p.kn
   for (const q of p.questions.filter((x) => x.subject === 'maths')) {
     const at = `${p.id} Q${q.paperNo} (${q.id})`
     const solved = q as typeof q & { keyFrom?: string; solution?: { concept: string; steps: string[] } }
@@ -283,7 +439,7 @@ for (const p of SAT_PAPERS) {
     checked++
   }
 }
-for (const id of Object.keys(RULES)) if (!SAT_PAPERS.some((p) => p.questions.some((q) => q.id === id && q.subject === 'maths'))) problems.push(`${id}: rule for a question that isn't a maths question`)
+for (const id of Object.keys(RULES)) if (!SAT_SOURCES.some((p) => p.questions.some((q) => q.id === id && q.subject === 'maths'))) problems.push(`${id}: rule for a question that isn't a maths question`)
 
 if (problems.length) {
   console.error(problems.join('\n'))

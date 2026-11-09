@@ -23,11 +23,8 @@ const used = new Map<string, number>()
 const oldChapters = new Map(OLD_CHAPTERS.map((c) => [c.id, c]))
 const oldUsed = new Set<string>()
 
-/**
- * How many questions each section of the book has, from its answer keys. Social science (145) and maths (152)
- * are still being added; add them here when they are in.
- */
-const BOOK_SECTIONS: Record<string, number> = { physics: 64, chemistry: 70, biology: 108 }
+/** How many questions each section of the book has, from its answer keys. */
+const BOOK_SECTIONS: Record<string, number> = { physics: 64, chemistry: 70, biology: 108, social: 145, maths: 152 }
 
 for (const p of SAT_SOURCES) {
   const numbers = new Set<string>()
