@@ -1,0 +1,255 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a single proof-reader's column; summary table first, then filterable findings grouped by section and chapter. */
+:root {
+  --paper: #fbfbfd;
+  --sheet: #ffffff;
+  --ink: #1b2330;
+  --muted: #5b6474;
+  --rule: #dfe2ea;
+  --accent: #2b4c9b;
+  --wrong: #b4233a;   --wrong-bg: #fbe9ec;
+  --unclear: #9a5b00; --unclear-bg: #fdf1dc;
+  --missing: #2b4c9b; --missing-bg: #e7edfa;
+  --misprint: #5d5a72; --misprint-bg: #eeedf3;
+  --debatable: #146b63; --debatable-bg: #e1f3f0;
+  --display: "Literata", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #12161d; --sheet: #191e27; --ink: #e6e9ef; --muted: #9aa3b2; --rule: #2c3340; --accent: #8fb0ff;
+  --wrong: #ff8a9b; --wrong-bg: #3a1a22; --unclear: #f2b45a; --unclear-bg: #382a14;
+  --missing: #8fb0ff; --missing-bg: #1c2742; --misprint: #b9b5cf; --misprint-bg: #26252f;
+  --debatable: #6fd3c6; --debatable-bg: #12302d; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #12161d; --sheet: #191e27; --ink: #e6e9ef; --muted: #9aa3b2; --rule: #2c3340; --accent: #8fb0ff;
+  --wrong: #ff8a9b; --wrong-bg: #3a1a22; --unclear: #f2b45a; --unclear-bg: #382a14;
+  --missing: #8fb0ff; --missing-bg: #1c2742; --misprint: #b9b5cf; --misprint-bg: #26252f;
+  --debatable: #6fd3c6; --debatable-bg: #12302d; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 920px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; display: grid; gap: 48px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 650; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.12; }
+h2 { font-size: 1.45rem; line-height: 1.25; }
+h3 { font-size: 1.1rem; line-height: 1.3; font-weight: 500; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--accent); }
+.eyebrow { font: 600 0.78rem/1.3 var(--body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 16px; }
+.lede { font-size: 1.08rem; }
+.meta { color: var(--muted); font-size: 0.92rem; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+section { display: grid; gap: 18px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* summary table */
+.tablebox { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--sheet); }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 0.93rem; }
+th, td { padding: 10px 12px; text-align: right; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-weight: 600; font-size: 0.8rem; letter-spacing: 0.03em; color: var(--muted); vertical-align: bottom; }
+tbody tr:last-child td { border-bottom: 0; }
+tfoot td { font-weight: 600; border-top: 2px solid var(--rule); border-bottom: 0; }
+td.zero { color: var(--muted); opacity: 0.6; }
+
+/* legend */
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; }
+.legend div { display: grid; gap: 4px; align-content: start; }
+.legend p { font-size: 0.93rem; color: var(--muted); }
+
+.pill { display: inline-block; font: 600 0.74rem/1 var(--body); letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 8px; border-radius: 3px; white-space: nowrap; justify-self: start; }
+.c-wrong { color: var(--wrong); background: var(--wrong-bg); }
+.c-unclear { color: var(--unclear); background: var(--unclear-bg); }
+.c-missing { color: var(--missing); background: var(--missing-bg); }
+.c-misprint { color: var(--misprint); background: var(--misprint-bg); }
+.c-debatable { color: var(--debatable); background: var(--debatable-bg); }
+
+/* filters */
+.filters { display: grid; gap: 12px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); padding-block: 12px; border-bottom: 1px solid var(--rule); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.row .lbl { font-size: 0.82rem; color: var(--muted); min-width: 70px; }
+button.f { font: 500 0.88rem/1 var(--body); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 999px; padding: 9px 13px; min-height: 38px; cursor: pointer; }
+button.f[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+button.f:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input[type="search"] { font: 400 0.95rem var(--body); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 9px 12px; min-height: 40px; flex: 1 1 220px; min-width: 0; }
+.count { font-size: 0.88rem; color: var(--muted); }
+
+/* findings */
+#list { display: grid; gap: 36px; }
+.sec { display: grid; gap: 22px; }
+.chap { display: grid; gap: 0; }
+.chap h3 { padding-bottom: 8px; border-bottom: 1px solid var(--ink); }
+.item { display: grid; grid-template-columns: 112px 1fr; gap: 6px 18px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.where { display: grid; gap: 2px; align-content: start; }
+.qno { font: 500 1rem/1.2 var(--mono); }
+.pg { font-size: 0.8rem; color: var(--muted); }
+.body { display: grid; gap: 8px; min-width: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.keys { font: 500 0.86rem/1.2 var(--mono); color: var(--muted); }
+.keys b { color: var(--ink); font-weight: 500; }
+.text { font-size: 0.97rem; max-width: 68ch; overflow-wrap: anywhere; }
+.empty { color: var(--muted); padding: 24px 0; }
+
+.method { display: grid; gap: 14px; }
+.method ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 70ch; }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 6px; }
+
+@media (max-width: 560px) {
+  .item { grid-template-columns: 1fr; }
+  .where { grid-auto-flow: column; justify-content: start; gap: 12px; align-items: baseline; }
+}
+@media (prefers-reduced-motion: no-preference) { button.f { transition: background .12s, color .12s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Errata report · __SOURCE__</div>
+    <h1>__HEADING__</h1>
+    <p class="lede">__INTRO__</p>
+    <div class="meta"><span>Checked __DATE__</span><span id="m-total"></span>__PAGENOTE__</div>
+  </header>
+
+  <section aria-labelledby="h-sum">
+    <h2 id="h-sum">Summary</h2>
+    <p>Most questions are fine: the findings cover <strong id="s-share"></strong> of the questions checked. The ones that matter most for students are the <span class="pill c-wrong">wrong key</span> rows, because a student who works the question correctly will be marked wrong.</p>
+    <div class="tablebox"><table id="sumtable"><thead></thead><tbody></tbody><tfoot></tfoot></table></div>
+  </section>
+
+  <section aria-labelledby="h-kinds">
+    <h2 id="h-kinds">Kinds of finding</h2>
+    <div class="legend">
+      <div><span class="pill c-wrong">Wrong key</span><p>The key’s answer is wrong. The correct option is given, with the working.</p></div>
+      <div><span class="pill c-unclear">No single answer</span><p>Two options are right, none is, or the question or figure can’t be read as printed. The question needs rewording.</p></div>
+      <div><span class="pill c-missing">Key missing</span><p>The key gives no answer. A worked answer is given.</p></div>
+      <div><span class="pill c-debatable">Debatable</span><p>The key can be defended, but another option fits better, or the fact behind it is disputed or out of date.</p></div>
+      <div><span class="pill c-misprint">Misprint</span><p>A typo, a mislabelled option, a mismatch between language versions or a repeated question. The key’s answer stands.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-find">
+    <h2 id="h-find">Findings</h2>
+    <div class="filters" role="group" aria-label="Filter findings">
+      <div class="row" id="f-sec"><span class="lbl">Section</span></div>
+      <div class="row" id="f-cat"><span class="lbl">Kind</span></div>
+      <div class="row"><label class="lbl" for="q">Search</label><input id="q" type="search" placeholder="A word, a chapter or a question number"><span class="count" id="count" aria-live="polite"></span></div>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <section class="method" aria-labelledby="h-method">
+    <h2 id="h-method">How the answers were checked</h2>
+    <ul>__METHOD__</ul>
+  </section>
+
+  <footer>
+    <p>__FOOTER__</p>
+  </footer>
+</div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+(function () {
+  var all = JSON.parse(document.getElementById('data').textContent);
+  var data = all.findings, CHECKED = all.checked;
+  var SECTIONS = Object.keys(CHECKED);
+  var CATS = [['wrong', 'Wrong key'], ['unclear', 'No single answer'], ['missing', 'Key missing'], ['debatable', 'Debatable'], ['misprint', 'Misprint']];
+  var CATNAME = {}; CATS.forEach(function (c) { CATNAME[c[0]] = c[1]; });
+  var totalChecked = SECTIONS.reduce(function (s, k) { return s + CHECKED[k]; }, 0);
+
+  document.getElementById('m-total').textContent = totalChecked.toLocaleString('en-IN') + ' questions checked · ' + data.length + ' findings';
+  var affected = data.length;
+  document.getElementById('s-share').textContent = Math.round(affected / totalChecked * 100) + '%';
+
+  // summary table
+  var t = document.getElementById('sumtable');
+  var head = '<tr><th scope="col">Section</th><th scope="col">Questions checked</th>' + CATS.map(function (c) { return '<th scope="col">' + c[1] + '</th>'; }).join('') + '</tr>';
+  t.tHead.innerHTML = head;
+  var totals = {}; CATS.forEach(function (c) { totals[c[0]] = 0; });
+  t.tBodies[0].innerHTML = SECTIONS.map(function (s) {
+    return '<tr><th scope="row" style="text-align:left;font-weight:500">' + s + '</th><td>' + CHECKED[s] + '</td>' + CATS.map(function (c) {
+      var n = data.filter(function (f) { return f.section === s && f.cat === c[0]; }).length; totals[c[0]] += n;
+      return '<td class="' + (n ? '' : 'zero') + '">' + n + '</td>';
+    }).join('') + '</tr>';
+  }).join('');
+  t.tFoot.innerHTML = '<tr><td>All</td><td>' + totalChecked.toLocaleString('en-IN') + '</td>' + CATS.map(function (c) { return '<td>' + totals[c[0]] + '</td>'; }).join('') + '</tr>';
+
+  // filters
+  var state = { sec: 'all', cats: {}, q: '' };
+  try { var saved = JSON.parse(localStorage.getItem('errata-filters') || 'null'); if (saved) state = saved; } catch (e) {}
+  if (!state.cats) state.cats = {};
+  function save() { try { localStorage.setItem('errata-filters', JSON.stringify(state)); } catch (e) {} }
+
+  var fsec = document.getElementById('f-sec');
+  ['all'].concat(SECTIONS).forEach(function (s) {
+    var b = document.createElement('button'); b.className = 'f'; b.type = 'button'; b.id = 'sec-' + s.replace(/\W+/g, '-');
+    b.textContent = s === 'all' ? 'All' : s;
+    b.addEventListener('click', function () { state.sec = s; save(); render(); });
+    fsec.appendChild(b);
+  });
+  var fcat = document.getElementById('f-cat');
+  CATS.forEach(function (c) {
+    var b = document.createElement('button'); b.className = 'f'; b.type = 'button'; b.id = 'cat-' + c[0];
+    b.textContent = c[1];
+    b.addEventListener('click', function () { state.cats[c[0]] = !state.cats[c[0]]; save(); render(); });
+    fcat.appendChild(b);
+  });
+  var qi = document.getElementById('q'); qi.value = state.q || '';
+  qi.addEventListener('input', function () { state.q = qi.value; save(); render(); });
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function keyLine(f) {
+    if (f.cat === 'misprint' || (f.book && f.book === f.correct)) return f.book ? '<span class="keys">Key <b>' + esc(f.book) + '</b> stands</span>' : '';
+    var parts = [];
+    if (f.book) parts.push('Printed key <b>' + esc(f.book) + '</b>');
+    if (f.correct && f.correct !== '—') parts.push((f.cat === 'debatable' ? 'Better fit ' : 'Correct ') + '<b>' + esc(f.correct) + '</b>');
+    return parts.length ? '<span class="keys">' + parts.join(' &nbsp;→&nbsp; ') + '</span>' : '';
+  }
+
+  var list = document.getElementById('list');
+  function render() {
+    Array.prototype.forEach.call(fsec.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', String(b.id === 'sec-' + state.sec.replace(/\W+/g, '-'))); });
+    var anyCat = CATS.some(function (c) { return state.cats[c[0]]; });
+    CATS.forEach(function (c) { document.getElementById('cat-' + c[0]).setAttribute('aria-pressed', String(!!state.cats[c[0]])); });
+    var q = (state.q || '').trim().toLowerCase();
+    var shown = data.filter(function (f) {
+      if (state.sec !== 'all' && f.section !== state.sec) return false;
+      if (anyCat && !state.cats[f.cat]) return false;
+      if (q) {
+        var hay = (f.section + ' ' + f.chapter + ' q' + f.q + ' ' + f.text + ' ' + CATNAME[f.cat]).toLowerCase();
+        if (/^\d+$/.test(q)) return String(f.q).split(/\D+/).indexOf(q) >= 0;
+        return hay.indexOf(q) >= 0;
+      }
+      return true;
+    });
+    document.getElementById('count').textContent = 'Showing ' + shown.length + ' of ' + data.length;
+    if (!shown.length) { list.innerHTML = '<p class="empty">No findings match. Clear the search or pick another section.</p>'; return; }
+    var html = '', sec = null, chap = null;
+    shown.forEach(function (f) {
+      if (f.section !== sec) {
+        if (chap !== null) html += '</div>'; if (sec !== null) html += '</div>';
+        sec = f.section; chap = null;
+        html += '<div class="sec"><h2>' + esc(sec) + '</h2>';
+      }
+      if (f.chapter !== chap) {
+        if (chap !== null) html += '</div>';
+        chap = f.chapter;
+        html += '<div class="chap"><h3>' + esc(chap) + '</h3>';
+      }
+      var qlabel = 'Q' + f.q;
+      html += '<article class="item"><div class="where"><span class="qno">' + esc(qlabel) + '</span><span class="pg num">' + (f.pdf == null ? '' : f.printed !== f.pdf ? 'p. ' + f.printed + ' (PDF ' + f.pdf + ')' : 'p. ' + f.pdf) + '</span></div>' +
+        '<div class="body"><div class="tags"><span class="pill c-' + f.cat + '">' + CATNAME[f.cat] + '</span>' + keyLine(f) + '</div>' +
+        '<p class="text">' + esc(f.text) + '</p></div></article>';
+    });
+    html += '</div></div>';
+    list.innerHTML = html;
+  }
+  render();
+})();
+</script>

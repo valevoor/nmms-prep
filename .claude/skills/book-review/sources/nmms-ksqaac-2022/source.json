@@ -1,0 +1,165 @@
+{
+ "title": "KSQAAC Spardha Yashassu NMMS Study Material 2022",
+ "reportTitle": "Spardha Yashassu Answer Check",
+ "heading": "Answer check of the NMMS study material",
+ "audience": "the book's authors at KSQAAC",
+ "pdf": "NMMS.pdf",
+ "pageOffset": 9,
+ "pdfFile": "Spardha-Yashassu-Answer-Check.pdf",
+ "intro": "We checked every answer in the book against an independent working, including the Mental Ability Test chapters and the SAT science, social science and maths questions. This report lists every place where the key is wrong, the question has no single right answer, or the text has a misprint, so they can be corrected in the next edition.",
+ "method": [
+  [
+   "Mental Ability Test (38 chapters).",
+   "Each question was typed in from the printed page and given a rule written separately from the book’s solution. A program applies the rule to every option and checks that exactly one option fits and that it matches the key. Picture questions were solved by eye and checked against the key one by one."
+  ],
+  [
+   "SAT science.",
+   "Each question has its own rule, written independently of the book, and a program checks that exactly one option is true and that it matches the key."
+  ],
+  [
+   "SAT social science.",
+   "Each answer was checked against the Karnataka Class 7 and 8 social science textbooks. Where the textbook itself is out of date or wrong, the finding says so."
+  ],
+  [
+   "SAT maths.",
+   "Every question was worked out again from the printed page, including the figures."
+  ],
+  [
+   "Kannada.",
+   "The checks were made on the English text. Where the Kannada differs from the English in a way that changes the answer, the finding says so. The Kannada was not proofread on its own."
+  ]
+ ],
+ "footer": "Prepared by the team behind NMMS Prep, a free offline practice app built from this study material (valevoor.github.io/nmms-prep). We are grateful to the authors for the material, and happy to share the working behind any finding.",
+ "sections": [
+  {
+   "name": "MAT",
+   "files": [
+    "app/src/data/mat/*.json"
+   ],
+   "number": "bookNo",
+   "checked": 590,
+   "chapter": {
+    "field": "topic",
+    "names": {
+     "number-series": "Ch 17 · Number Series",
+     "number-analogy": "Ch 14 · Number Analogy",
+     "letter-series": "Ch 21 · Letter Series",
+     "wrong-number": "Ch 19 · Find the Wrong Number",
+     "odd-one-numbers": "Ch 18 · Odd One Out: Numbers",
+     "coding-decoding": "Ch 23 · Coding–Decoding",
+     "directions": "Ch 31 · Directions",
+     "blood-relations": "Ch 32 · Blood Relations",
+     "calendar": "Ch 34 · Calendar",
+     "clock": "Ch 35 · Clock",
+     "odd-one-letters": "Ch 16 · Odd One Out: Letters",
+     "number-sequence": "Ch 20 · Number Sequence",
+     "letter-number-analogy": "Ch 22 · Letter–Number Analogy",
+     "analogy-of-figures": "Ch 1 · Analogy of Figures",
+     "figure-series": "Ch 2 · Figure Series",
+     "number-patterns": "Ch 15 · Number Patterns",
+     "arithmetical-operations": "Ch 25 · Arithmetical Operations",
+     "signs-symbols": "Ch 26 · Signs and Symbols",
+     "hidden-figures": "Ch 3 · Hidden Figures",
+     "similar-figures": "Ch 4 · Similar Figures in Different Position",
+     "intersecting-figures": "Ch 5 · Intersecting Figures",
+     "fold-sheet": "Ch 6 · Figure Fold Transparent Sheet",
+     "paper-punch": "Ch 7 · Paper Fold and Punch",
+     "mirror-image": "Ch 8 · Mirror Image",
+     "water-image": "Ch 9 · Water Image",
+     "cubes-cutting": "Ch 10 · Cubes Cutting",
+     "dice": "Ch 11 · Numbers in Opposite Faces",
+     "counting-figures": "Ch 12 · Counting of Figures",
+     "cubes-colouring": "Ch 13 · Cubes Colouring",
+     "figure-numbers": "Ch 24 · Figures and Number Relationship",
+     "number-matrix": "Ch 27 · Number Matrix",
+     "letter-matrix": "Ch 28 · Letter Matrix",
+     "letter-values": "Ch 29 · Numbers and Letters by a Rule",
+     "pyramid": "Ch 30 · Number and Letter Pyramid",
+     "venn-diagrams": "Ch 33 · Venn Diagrams",
+     "arrangement": "Ch 36 · Arrangement",
+     "age-problems": "Ch 37 · Age Problems",
+     "statements-decisions": "Ch 38 · Statements and Decisions",
+     "superimpose-figures": "Ch 39 · Superimpose Figures",
+     "missing-figures": "Ch 40 · Missing Figures",
+     "miscellaneous": "Ch 41 · Miscellaneous"
+    }
+   },
+   "key": {
+    "from": "note"
+   }
+  },
+  {
+   "name": "SAT Science",
+   "files": [
+    "app/src/data/sat/book.json"
+   ],
+   "number": "paperNo",
+   "checked": 242,
+   "where": {
+    "subject": [
+     "physics",
+     "chemistry",
+     "biology"
+    ]
+   },
+   "chapter": {
+    "field": "subject",
+    "names": {
+     "physics": "Physics",
+     "chemistry": "Chemistry",
+     "biology": "Biology"
+    }
+   },
+   "key": {
+    "from": "printed",
+    "by": "subject"
+   }
+  },
+  {
+   "name": "SAT Social Science",
+   "files": [
+    "app/src/data/sat/book.json"
+   ],
+   "number": "paperNo",
+   "checked": 145,
+   "where": {
+    "subject": [
+     "social"
+    ]
+   },
+   "chapter": {
+    "field": "subject",
+    "names": {
+     "social": "Social Science"
+    }
+   },
+   "key": {
+    "from": "printed",
+    "by": "subject"
+   }
+  },
+  {
+   "name": "SAT Maths",
+   "files": [
+    "app/src/data/sat/book.json"
+   ],
+   "number": "paperNo",
+   "checked": 152,
+   "where": {
+    "subject": [
+     "maths"
+    ]
+   },
+   "chapter": {
+    "field": "subject",
+    "names": {
+     "maths": "Maths"
+    }
+   },
+   "key": {
+    "from": "printed",
+    "by": "subject"
+   }
+  }
+ ]
+}

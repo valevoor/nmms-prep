@@ -1,0 +1,342 @@
+{
+ "_about": "Findings for this source that do not come from the app data. An entry is added to the report as it is; with \"replace\": true it replaces the finding the data gives for that question; with \"skip\": true it drops it; with \"pending\": true it is used only until the app data has its own finding for that question (then delete it). Social science and maths entries were checked by hand on 9 Nov 2026 from the rendered pages.",
+ "findings": [
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 14,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "A",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 146 + 24 = 170.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 18,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "C",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 5³ − 5² = 125 − 25 = 100 (check: 6³ − 6² = 216 − 36 = 180).",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 20,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "B",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 5³ + 5 = 125 + 5 = 130.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 22,
+   "pdf": 60,
+   "cat": "unclear",
+   "book": "—",
+   "correct": "—",
+   "text": "No rule fits the series as printed (4, 4, 9, 29, 111, ?). If 111 is a misprint for 119, the answer is C (599). Please check against the original paper.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 23,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "D",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 5³ + 5² = 125 + 25 = 150 (check: 6³ + 6² = 216 + 36 = 252).",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 24,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "C",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 94 × 2 + 2 = 190.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 26,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "C",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 107 × 4 − 1 = 427.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 27,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "B",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 467 + 111 = 578.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 28,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "C",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 47 × 2 + 7 = 101 (check: 101 × 2 + 9 = 211).",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": 29,
+   "pdf": 60,
+   "cat": "missing",
+   "book": "—",
+   "correct": "B",
+   "text": "The answer key covers only Q1–13, Q25 and Q30. Worked answer: 8 − 5 = 3. The book prints the third number as “1.`2”; it should be 12.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 26 · Signs and Symbols",
+   "q": 15,
+   "pdf": 77,
+   "cat": "missing",
+   "book": "—",
+   "correct": "B",
+   "text": "The answer key has no answer for this question.",
+   "replace": true
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 17 · Number Series",
+   "q": "15, 16, 17, 19, 21",
+   "pdf": 59,
+   "cat": "misprint",
+   "book": "",
+   "correct": "",
+   "text": "These five questions repeat earlier questions in the same chapter."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 1 · Analogy of Figures",
+   "q": 15,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 33 · Venn Diagrams",
+   "q": 14,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 38 · Statements and Decisions",
+   "q": 11,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 35 · Clock",
+   "q": 7,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 30 · Number and Letter Pyramid",
+   "q": 13,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 7 · Paper Fold and Punch",
+   "q": 7,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 12 · Counting of Figures",
+   "q": 5,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 12 · Counting of Figures",
+   "q": 6,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "MAT",
+   "chapter": "Ch 12 · Counting of Figures",
+   "q": 7,
+   "skip": true,
+   "why": "The note only explains the answer to students."
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "History",
+   "q": 9,
+   "pdf": 236,
+   "cat": "debatable",
+   "book": "D",
+   "correct": "D",
+   "text": "All four options say “only”, but the Inca empire also covered parts of Bolivia and Colombia, so even D is incomplete. Dropping “only” would fix it.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "History",
+   "q": 45,
+   "pdf": 243,
+   "cat": "debatable",
+   "book": "C",
+   "correct": "C",
+   "text": "The key calls Dhanvantari the “Father of Indian Medicine”, a title usually given to Charaka. Q15 also lists Charaka as a Gupta-period scientist, while most historians place him in the Kushana period. The key follows the state textbook; a note in the book would help students who meet the other view.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "History",
+   "q": "48, 56",
+   "pdf": 244,
+   "cat": "misprint",
+   "book": "",
+   "correct": "",
+   "text": "Q48 and Q56 ask the same thing (the Latin word “colere”).",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Political Science",
+   "q": 70,
+   "pdf": 251,
+   "cat": "misprint",
+   "book": "C",
+   "correct": "C",
+   "text": "Option D repeats “vi” (“i, ii, vi, v and vi”). The key (C) is right.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Economics",
+   "q": 83,
+   "pdf": 254,
+   "cat": "misprint",
+   "book": "C",
+   "correct": "C",
+   "text": "The statements are numbered i–iv, but the options refer to A, B, C and D. Statement ii (more national income means more per capita income) is not always true, since it depends on population.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Geography",
+   "q": "104, 137",
+   "pdf": 259,
+   "cat": "wrong",
+   "book": "C",
+   "correct": "A",
+   "text": "Both questions ask which water body is the saltiest, and the key gives Lake Van (C) both times. That follows the textbook’s figure of 330 ppt for Lake Van, but Lake Van’s measured salinity is about 22 ppt. The Dead Sea, at about 340 ppt, is far saltier, so the answer is A. The same question is printed twice.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Geography",
+   "q": 106,
+   "pdf": 259,
+   "cat": "misprint",
+   "book": "A",
+   "correct": "A",
+   "text": "Statement A is garbled (“…is 180° longitude it is short detours in order”) and is hard to judge as printed. The key is A.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Geography",
+   "q": 124,
+   "pdf": 264,
+   "cat": "unclear",
+   "book": "D",
+   "correct": "—",
+   "text": "Option A is missing (the options start at B), and the wording of B–D (“not complementary”, “irrational”, “proportional”) is hard to follow. The key is D.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Geography",
+   "q": 129,
+   "pdf": 265,
+   "cat": "unclear",
+   "book": "D",
+   "correct": "—",
+   "text": "None of the pairs is a correct rock change. Granite turns into gneiss, sandstone into quartzite and limestone into marble. Graphite → diamond (the key, D) is a change of mineral under pressure, not a metamorphic rock.",
+   "pending": true
+  },
+  {
+   "section": "SAT Social Science",
+   "chapter": "Geography",
+   "q": 130,
+   "pdf": 265,
+   "cat": "unclear",
+   "book": "B",
+   "correct": "—",
+   "text": "Stromboli (the key, B) is active, but so is Krakatoa: Anak Krakatau erupted in 2018 and after. Replacing Krakatoa with a dormant or extinct volcano would leave one answer.",
+   "pending": true
+  },
+  {
+   "section": "SAT Maths",
+   "chapter": "1 · Numbers",
+   "q": 2,
+   "pdf": 269,
+   "cat": "unclear",
+   "book": "C",
+   "correct": "—",
+   "text": "As printed, 3 − 4(3 − 4) − 1 = 6, so the value is 1/6, which is not an option. The key’s 1/7 needs the “−1” to be an index on (3 − 4): [3 − 4(3 − 4)⁻¹]⁻¹ = (3 + 4)⁻¹ = 1/7.",
+   "pending": true
+  },
+  {
+   "section": "SAT Maths",
+   "chapter": "7 · Triangles",
+   "q": 123,
+   "pdf": 291,
+   "cat": "misprint",
+   "book": "B",
+   "correct": "B",
+   "text": "The question calls the altitude CF, but the figure and the question’s last line call it CE. The key (B) is right.",
+   "pending": true
+  },
+  {
+   "section": "SAT Maths",
+   "chapter": "8 · Theory of Indices",
+   "q": 138,
+   "pdf": 294,
+   "cat": "misprint",
+   "book": "B",
+   "correct": "B",
+   "text": "The Kannada prints 9n + 9n + 9n for 9ⁿ + 9ⁿ + 9ⁿ. The key (B) is right.",
+   "pending": true
+  }
+ ]
+}

@@ -24,3 +24,5 @@ sat-syllabus/textbooks/8th English SS Part 2 2026-27.pdf
 .vscode/extensions.json
 # Text and images extracted from the textbooks, which are marked "not to be republished"
 /.textbook-cache/
+# Book review output (.claude/skills/book-review)
+.book-review/
