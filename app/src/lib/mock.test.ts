@@ -123,6 +123,19 @@ describe('MAT and SAT together', () => {
   })
 })
 
+describe('a real MAT paper with SAT', () => {
+  it('asks the MAT paper as printed in 90 minutes, then SAT at a minute a question', () => {
+    const paper = PAPER_FILES[PAPER_FILES.length - 1]
+    const c: MockConfig = { tests: ['mat', 'sat'], length: 45, paper: paper.id }
+    const items = buildMock(c, seeded(7))
+    const mat = items.filter((x) => x.q)
+    expect(mat.map((x) => x.q!.id)).toEqual(paper.questions.filter((q) => q.status !== 'needs-review').map((q) => q.id))
+    expect(items.filter((x) => x.sat)).toHaveLength(45)
+    expect(mockSeconds(c, items)).toBe((90 + 45) * 60)
+    checkItems(items)
+  })
+})
+
 describe('scoring', () => {
   it('scores each test, groups by chapter weakest first and finds a slow chapter', () => {
     const m = newMock({ tests: ['mat', 'sat'], length: 15 })

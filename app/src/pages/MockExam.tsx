@@ -38,7 +38,7 @@ import {
 } from '../lib/mock'
 import type { MockConfig, MockExam as Mock, MockItem, MockLength, MockResult, MockTest } from '../lib/mock'
 import { recordAnswer, recordSatAnswer } from '../lib/progress'
-import { href, useRoute } from '../lib/router'
+import { href } from '../lib/router'
 import { termsText } from '../lib/series'
 import type { OptionKey } from '../types'
 
@@ -62,7 +62,7 @@ function describe(t: Dict, c: MockConfig): string {
   const parts = [c.tests.map((x) => x.toUpperCase()).join(' + ')]
   const paper = c.paper && !c.mat ? PAPER_FILES.find((p) => p.id === c.paper) : undefined
   if (paper) parts.push(t.mock.paperName(paper.year))
-  else parts.push(t.mock.lengthName(c.length))
+  if (!paper || c.tests.includes('sat')) parts.push(t.mock.lengthName(c.length))
   const chosen = (c.tests.includes('mat') ? (c.mat?.length ?? 0) : 0) + (c.tests.includes('sat') ? (c.sat?.length ?? 0) : 0)
   if (c.mat || c.sat) parts.push(t.mock.chaptersCount(chosen))
   return parts.join(' · ')
@@ -135,9 +135,8 @@ function Picker({ title, items, chosen, onChange }: { title: string; items: { id
 function Start({ current, history }: { current: Mock | null; history: MockResult[] }) {
   const t = useT()
   const lang = useLocale()
-  // Opened from a SAT page, the SAT test is ticked; otherwise MAT.
-  const from = useRoute().query.get('test')
-  const [tests, setTests] = useState<MockTest[]>(from === 'sat' ? ['sat'] : ['mat'])
+  // Both tests start ticked, as the real exam has both; untick one to practise the other alone.
+  const [tests, setTests] = useState<MockTest[]>(MOCK_TESTS)
   const [some, setSome] = useState(false)
   const [mat, setMat] = useState<string[]>([])
   const [sat, setSat] = useState<string[]>([])
@@ -148,7 +147,8 @@ function Start({ current, history }: { current: Mock | null; history: MockResult
 
   const hasMat = tests.includes('mat')
   const hasSat = tests.includes('sat')
-  const papersOffered = hasMat && !hasSat && !some
+  // A real paper is a whole MAT paper, so it needs all MAT chapters; with SAT ticked too, SAT follows the length.
+  const papersOffered = hasMat && !some
   const realPaper = papersOffered && paper !== 'mixed'
   const config: MockConfig = {
     tests,
@@ -159,9 +159,10 @@ function Start({ current, history }: { current: Mock | null; history: MockResult
   }
   const missing = some ? tests.filter((x) => (x === 'mat' ? mat : sat).length === 0) : []
   // Questions per test: the length, or fewer when the chosen chapters run out.
-  const counts = tests.map((x) => (realPaper ? PAPER_SIZE[paper] : some ? Math.min(length, available(x, x === 'mat' ? mat : sat)) : length))
+  const counts = tests.map((x) => (realPaper && x === 'mat' ? PAPER_SIZE[paper] : some ? Math.min(length, available(x, x === 'mat' ? mat : sat)) : length))
   const total = counts.reduce((s, n) => s + n, 0)
-  const minutes = realPaper ? 90 : total
+  // A real MAT paper gets the real exam's 90 minutes; everything else a minute a question.
+  const minutes = realPaper ? 90 + (hasSat ? counts[tests.indexOf('sat')] : 0) : total
   const short = some && missing.length === 0 && counts.some((n) => n < length)
 
   const toggleTest = (x: MockTest) => {
@@ -280,16 +281,16 @@ function Start({ current, history }: { current: Mock | null; history: MockResult
         </fieldset>
       )}
 
-      {!realPaper && (
+      {(!realPaper || hasSat) && (
         <fieldset className="card mock-choice">
-          <legend className="section-title">{t.mock.howLong}</legend>
+          <legend className="section-title">{realPaper ? t.mock.howLongSat : t.mock.howLong}</legend>
           <div className="mock-lengths">
             {LENGTHS.map((n) => (
               <label key={n} className={`mock-option${length === n ? ' on' : ''}`}>
                 <input type="radio" name="mock-length" checked={length === n} onChange={() => setLength(n)} />
                 <span>
                   <strong>{t.mock.lengthName(n)}</strong>
-                  <span className="muted">{t.mock.lengthSub(n, tests.length > 1)}</span>
+                  <span className="muted">{t.mock.lengthSub(n, tests.length > 1 && !realPaper)}</span>
                 </span>
               </label>
             ))}

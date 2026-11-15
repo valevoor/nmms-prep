@@ -600,6 +600,7 @@ export const en = {
     paperDone: (s: number, n: number) => `Done · best ${s}/${n}`,
     morePapers: (n: number, from: string, to: string) => `${n} more years (${from} to ${to})`,
     howLong: 'How long',
+    howLongSat: 'How long: SAT',
     lengthName: (n: number): string => (n >= 90 ? 'Full paper' : n >= 45 ? 'Half paper' : 'Short'),
     lengthSub: (n: number, perTest: boolean) => `${n} questions${perTest ? ' per test' : ''}`,
     chaptersCount: (n: number) => `${n} chapter${n === 1 ? '' : 's'}`,

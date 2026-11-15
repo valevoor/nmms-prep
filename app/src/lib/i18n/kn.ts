@@ -596,6 +596,7 @@ export const kn: Dict = {
     paperDone: (s, n) => `ಮುಗಿದಿದೆ · ಉತ್ತಮ ${s}/${n}`,
     morePapers: (n, from, to) => `ಇನ್ನೂ ${n} ವರ್ಷಗಳು (${from} ರಿಂದ ${to})`,
     howLong: 'ಎಷ್ಟು ಉದ್ದ',
+    howLongSat: 'ಎಷ್ಟು ಉದ್ದ: SAT',
     lengthName: (n) => (n >= 90 ? 'ಪೂರ್ಣ ಪತ್ರಿಕೆ' : n >= 45 ? 'ಅರ್ಧ ಪತ್ರಿಕೆ' : 'ಚಿಕ್ಕದು'),
     lengthSub: (n, perTest) => `${perTest ? 'ಪ್ರತಿ ಪರೀಕ್ಷೆಗೆ ' : ''}${n} ಪ್ರಶ್ನೆಗಳು`,
     chaptersCount: (n) => `${n} ಅಧ್ಯಾಯ(ಗಳು)`,
