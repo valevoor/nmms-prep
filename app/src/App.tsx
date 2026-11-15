@@ -33,7 +33,7 @@ import { QuickTest } from './pages/QuickTest'
 import { MockExam } from './pages/MockExam'
 import { GuessRule } from './pages/GuessRule'
 
-const MODES: PracticeMode[] = ['book', 'exam', 'more', 'mistakes']
+const MODES: PracticeMode[] = ['warmup', 'book', 'exam', 'more', 'mistakes']
 
 /** Home's scroll position, so going back to it lands on the same chapter row. */
 let homeScroll = 0
@@ -135,8 +135,8 @@ function topicPage(topic: ReadyTopic, view: string | undefined, tab: string | un
       return <Learn topic={topic} />
     case 'practice': {
       const m = tab as PracticeMode
-      // The exam tab exists only for chapters with past-paper questions.
-      const mode = MODES.includes(m) && (m !== 'exam' || paperQuestions(topic.id).length > 0) ? m : 'book'
+      // The exam tab exists only for chapters with past-paper questions, the warm-up only for chapters with one.
+      const mode = MODES.includes(m) && (m !== 'exam' || paperQuestions(topic.id).length > 0) && (m !== 'warmup' || !!topic.warmup) ? m : 'book'
       return <Practice key={mode} topic={topic} mode={mode} />
     }
     case 'test':

@@ -221,6 +221,10 @@ export type PatternId =
   | 'ag-times'
   | 'ag-sum'
   | 'ag-ratio'
+  | 'ag-wu-line'
+  | 'ag-wu-gap'
+  | 'ag-wu-expr'
+  | 'ag-wu-eqn'
   // Statements and decisions (Chapter 38)
   | 'sd-two'
   | 'sd-three'
@@ -245,6 +249,8 @@ export interface Question {
   link?: [string, string]
   /** A family tree to draw in the explanation (Blood Relations). */
   tree?: FamilyTree
+  /** Age Problems warm-up: a time line under the question, as [years from now, age shown] ('?' for the one asked). */
+  ageLine?: [number, string][]
   /** A clock face to draw in the explanation: [hours, minutes]. */
   clock?: [number, number]
   /** A number table the question's groups are taken from (Number Patterns); rows of numbers. */
@@ -287,6 +293,8 @@ export interface Question {
 /** The translatable words of a question. */
 export interface QuestionText {
   prompt?: string
+  /** The table's words (headings), for 'text' questions with a table. */
+  table?: string[][]
   rule?: string
   working?: string
   note?: string

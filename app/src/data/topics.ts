@@ -108,6 +108,7 @@ import { generateLetterValues } from '../lib/generators/letterValues'
 import { generatePyramid } from '../lib/generators/pyramid'
 import { generateVennDiagram } from '../lib/generators/vennDiagrams'
 import { generateArrangement } from '../lib/generators/arrangement'
+import { ageWarmupRound } from '../lib/generators/ageWarmup'
 import { generateAgeProblem } from '../lib/generators/ageProblems'
 import { generateStatements } from '../lib/generators/statements'
 import { generateIntersecting } from '../lib/generators/venn'
@@ -130,6 +131,8 @@ export interface ReadyTopic {
   meta: TopicMeta
   /** What the student looks for in each question; changes the "Find the missing …" prompt. */
   missing?: 'number' | 'letters' | 'wrong' | 'odd' | 'code' | 'direction' | 'relation' | 'answer' | 'grid' | 'figure' | 'hidden' | 'turned' | 'folded' | 'punched' | 'mirror' | 'water' | 'group' | 'superimposed' | 'part'
+  /** Makes a warm-up round (Practice → Warm-up): simple questions that build up to the book's; optional per topic. */
+  warmup?: (rng?: () => number) => Question[]
   /** Makes a fresh practice question; optional per topic. */
   generate?: (rng?: () => number) => Question
   /** "Guess the rule" game; shown only for topics that have one. Its text is in lib/i18n (game.topics). */
@@ -499,6 +502,7 @@ export const READY_TOPICS: ReadyTopic[] = [
     meta: ageProblemsMeta as TopicMeta,
     missing: 'answer',
     generate: generateAgeProblem,
+    warmup: ageWarmupRound,
   },
   {
     id: 'statements-decisions',

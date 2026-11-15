@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useT } from '../lib/i18n'
 import { useQuestionTexts } from '../lib/i18n/content'
+import { AgeTimeline } from './AgeTimeline'
 import { BiBlock } from './Bi'
 import type { Question } from '../types'
 import { FigureStem } from './FigureView'
@@ -57,7 +58,7 @@ export function QuestionStem({ q, reveal, size = 'md', extra }: Props) {
       {q.table && !q.pattern.startsWith('lv-') && (
         <table className={matrix ? 'matrix-table' : 'code-table'}>
           <tbody>
-            {q.table.map((row, r) => (
+            {(first.table ?? q.table).map((row, r) => (
               <tr key={r}>
                 {row.map((cell, i) => {
                   const shown = cell === '?' && blank < fills.length ? fills[blank++] : undefined
@@ -75,6 +76,7 @@ export function QuestionStem({ q, reveal, size = 'md', extra }: Props) {
       {!hasFig && q.table && !q.pattern.startsWith('lv-') && extra}
       {first.prompt && <BiBlock className="stem-prompt" text={first.prompt} other={second?.prompt} lang={lang} otherLang={otherLang} />}
       {/* "= 11" stays on one line when an equation wraps. */}
+      {q.ageLine && <AgeTimeline marks={q.ageLine} />}
       {q.terms.length > 0 && <p className="stem-seq">{q.terms.join('\u2002').replace(/ = /g, ' =\u00a0')}</p>}
       {!hasFig && !q.table && extra}
     </div>

@@ -13,6 +13,7 @@ const META_KN = Object.fromEntries(CHAPTER_FILES.map((c) => [c.id, c.metaKn]))
 
 export interface ShownText {
   prompt?: string
+  table?: string[][]
   rule: string
   working: string
   note?: string
@@ -28,6 +29,7 @@ export function questionText(q: Question, locale: Locale): ShownText {
   const kn = locale === 'kn' ? (q.kn ?? BOOK_KN[q.id]) : undefined
   return {
     prompt: kn?.prompt ?? q.prompt,
+    table: kn?.table ?? q.table,
     rule: kn?.rule ?? q.rule,
     working: kn?.working ?? q.working,
     note: kn?.note ?? q.note,
