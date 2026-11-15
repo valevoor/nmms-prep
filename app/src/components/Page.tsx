@@ -30,6 +30,13 @@ export function Page({ title, back, right, hideMock, wide, children }: Props) {
           </span>
         )}
         <h1>{title}</h1>
+        {/* Home only. A real page, not an app route, so that Google can index it (public/about/index.html). */}
+        {back === undefined && (
+          <a className="about-btn" href="/about/" aria-label={t.home.about} title={t.home.about}>
+            <span aria-hidden>ℹ️</span>
+            <span className="about-btn-text">{t.home.aboutShort}</span>
+          </a>
+        )}
         {!hideMock && <MockLink />}
         <BothToggle />
         <div className="topbar-right">{right}</div>

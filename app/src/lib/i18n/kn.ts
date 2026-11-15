@@ -156,6 +156,7 @@ export const kn: Dict = {
     sortBook: 'ಪುಸ್ತಕದ ಕ್ರಮ',
     sortMost: 'ಹೆಚ್ಚು ಕೇಳಿದವು',
     about: 'ಈ ಆ್ಯಪ್ ಬಗ್ಗೆ',
+    aboutShort: 'ಮಾಹಿತಿ',
   },
   sat: {
     tabsLabel: 'ಯಾವ ಪರೀಕ್ಷೆ',

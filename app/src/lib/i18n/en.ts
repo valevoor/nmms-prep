@@ -153,6 +153,7 @@ export const en = {
     sortBook: 'Book order',
     sortMost: 'Most asked',
     about: 'About this app',
+    aboutShort: 'About',
   },
   /** The SAT (Scholastic Aptitude Test) chapters: Home's SAT tab, /sat/<chapter> and its past questions. */
   sat: {
