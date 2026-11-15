@@ -184,7 +184,7 @@ export function Shapes({ shape, step }: { shape: ShapeId; step: ShapeStep }) {
   const turn = (dy: number, dp: number) => () => setView((v) => ({ yaw: v.yaw + dy, pitch: clampPitch(v.pitch + dp) }))
 
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <nav className="shape-chips" aria-label={t.shapeLabel}>
         {SHAPE_IDS.map((s) => (
           <a key={s} href={href(`shapes/${s}/${step}`)} aria-current={s === shape ? 'page' : undefined}>

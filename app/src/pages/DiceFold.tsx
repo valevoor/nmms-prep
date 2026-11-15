@@ -68,7 +68,7 @@ export function DiceFold() {
   const info2 = both ? (showPairs ? DICTS[otherLang].fold.seen : DICTS[otherLang].fold.guess) : undefined
 
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <section className="card explore-card">
         <div className="explore-seg fold-nets" role="group" aria-label={t.nets}>
           {BOOK_NETS.map(({ q }) => (

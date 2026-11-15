@@ -163,7 +163,7 @@ export function PunchFold() {
   const other = both ? DICTS[otherLang] : undefined
 
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <section className="card explore-card">
         <div className="explore-seg sheet-tools" role="group" aria-label={t.tools}>
           {TOOLS.map(({ tool: tl, icon }) => (

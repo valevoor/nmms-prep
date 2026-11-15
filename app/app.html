@@ -1,4 +1,6 @@
 <!doctype html>
+<!-- The app. worker.ts (live) and the service worker (offline) answer every app path (/mat, /sat/…) with this page;
+     the landing page at / is public/index.html. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,31 +8,23 @@
     <!-- The app answers nested paths (/mat/number-series/learn), so relative URLs (figures/…) start from the root. -->
     <base href="/" />
     <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 80 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
-    <link rel="canonical" href="https://mystudyprep.in/welcome/" />
+    <link rel="canonical" href="https://mystudyprep.in/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NMMS Prep" />
     <meta property="og:title" content="NMMS Prep: Free MAT and SAT Practice App for Class 8" />
     <meta property="og:description" content="Free NMMS exam practice with 41 MAT chapters, 80 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
-    <meta property="og:url" content="https://mystudyprep.in/welcome/" />
-    <meta property="og:image" content="https://mystudyprep.in/icon-512.png" />
+    <meta property="og:url" content="https://mystudyprep.in/" />
+    <!-- 1200×630, made from tools/og-image.html -->
+    <meta property="og:image" content="https://mystudyprep.in/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NMMS Prep: free MAT and SAT practice for Class 8, with 41 MAT chapters, 80 SAT topics and past exam questions. Works offline, in English and Kannada." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#2f5bea" />
     <link rel="icon" type="image/svg+xml" href="./icon.svg" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>NMMS Prep: Free MAT and SAT Practice App for Class 8</title>
-    <script>
-      // The main URL (/, or the old /#/) opens the landing page (public/welcome/index.html). The installed app and
-      // links to a chapter or tab go straight in. / is also how the landing and About pages enter the app, so once
-      // this tab has seen one of those pages or the app (nmms-in-app), / opens the app and a reload stays there.
-      // Old hash routes (/#/t/…) open the app, and src/lib/router.ts turns them into paths.
-      try {
-        var installed = navigator.standalone || matchMedia('(display-mode: standalone)').matches
-        var home = location.pathname === '/' && (!location.hash || location.hash === '#/')
-        if (home && !installed && !sessionStorage.getItem('nmms-in-app')) location.replace('/welcome/')
-        else sessionStorage.setItem('nmms-in-app', '1')
-      } catch (e) {
-        // Storage blocked: open the app.
-      }
-    </script>
     <script>
       // Apply the saved theme before first paint (default Light). Kept in sync with src/lib/theme.ts.
       try {

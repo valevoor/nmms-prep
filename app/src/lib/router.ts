@@ -2,8 +2,8 @@ import { useSyncExternalStore } from 'react'
 
 /**
  * Path routes (/mat/number-series/practice/book), so each page has its own URL for Cloudflare Web Analytics
- * and search engines. The Worker (wrangler.jsonc, "single-page-application") and, offline, the service
- * worker answer every app path with index.html. Links are plain <a href> tags: a click on one inside the
+ * and search engines. / is the landing page (public/index.html). worker.ts and, offline, the service worker
+ * answer every app path with app.html. Links are plain <a href> tags: a click on one inside the
  * app is caught here and becomes a history.pushState, so the page doesn't reload.
  */
 export interface Route {
@@ -11,8 +11,8 @@ export interface Route {
   query: URLSearchParams
 }
 
-/** Served as their own files, not by the app. */
-const NOT_APP = /^\/(welcome|about|slides)(\/|$)/
+/** Served as their own pages, not by the app: the landing page (/), About, the slides, and the old /welcome/. */
+const NOT_APP = /^\/($|(welcome|about|slides)(\/|$))/
 
 const ROUTE_EVENT = 'nmms-route'
 
@@ -50,7 +50,7 @@ export function pathFromHash(hash: string): string | undefined {
   const [path, qs = ''] = hash.slice(2).split('?')
   const query = new URLSearchParams(qs)
   const parts = path.split('/').filter(Boolean)
-  if (parts.length === 0) return query.get('test') === 'sat' ? 'sat' : ''
+  if (parts.length === 0) return query.get('test') === 'sat' ? 'sat' : 'mat'
   if (parts[0] === 't') parts[0] = 'mat'
   const mode = query.get('mode')
   if ((parts[0] === 'mat' || parts[0] === 'sat') && parts[2] === 'practice' && parts.length === 3 && mode) parts.push(mode)

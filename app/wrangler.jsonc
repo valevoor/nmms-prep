@@ -3,9 +3,10 @@
 {
   "name": "nmms-prep",
   "compatibility_date": "2026-10-01",
+  // Runs only for paths that aren't files: app pages (/mat/number-series/learn) get app.html.
+  "main": "./worker.ts",
   "assets": {
     "directory": "./dist",
-    // App paths (/mat/number-series/learn) aren't files: answer them with index.html.
-    "not_found_handling": "single-page-application"
+    "binding": "ASSETS"
   }
 }

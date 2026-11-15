@@ -102,7 +102,7 @@ interface Pair {
 const PAIRS: Pair[] = [
   {
     name: 'Home: list row',
-    mat: () => region(render(createElement(Home)), 'chapter-row'),
+    mat: () => region(render(createElement(Home), 'mat'), 'chapter-row'),
     sat: () => region(render(createElement(Home), 'sat'), 'chapter-row', 'meter-thin'),
     matOnly: {
       'chapter-art': 'SAT topics have no chapter picture',
@@ -114,7 +114,7 @@ const PAIRS: Pair[] = [
   },
   {
     name: 'Home: hero',
-    mat: () => region(render(createElement(Home)), 'hero'),
+    mat: () => region(render(createElement(Home), 'mat'), 'hero'),
     sat: () => region(render(createElement(Home), 'sat'), 'hero'),
     matOnly: {},
     satOnly: { 'sat-jump': 'Jump-to-subject buttons; the SAT list is split by subject, MAT has one list' },

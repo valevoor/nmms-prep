@@ -74,7 +74,7 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
   )
 
   return (
-    <Page title={t.chapters[topic.chapter] ?? topic.name} back="" right={<span className="counter">{counter}</span>}>
+    <Page title={t.chapters[topic.chapter] ?? topic.name} back="mat" right={<span className="counter">{counter}</span>}>
       <nav className="tabs" aria-label={t.practice.mode}>
         {tabs}
       </nav>

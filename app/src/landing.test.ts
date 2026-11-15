@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import landing from '../public/welcome/index.html?raw'
+import landing from '../public/index.html?raw'
+import ogImage from '../../tools/og-image.html?raw'
 import { SAT_TOPICS, SAT_PAPERS } from './data/sat'
 import { READY_TOPICS, getTopic } from './data/topics'
 
@@ -13,6 +14,11 @@ describe('Landing page numbers', () => {
     const topics = SAT_TOPICS.filter((t) => t.chapters.length > 0).length
     expect(landing).toContain(`${topics} SAT topics`)
     expect(landing).toContain(`${topics} revision topics`)
+  })
+  it('has the same numbers in the link preview image (tools/og-image.html: render it again after a change)', () => {
+    const topics = SAT_TOPICS.filter((t) => t.chapters.length > 0).length
+    expect(ogImage).toContain(`${READY_TOPICS.length} MAT chapters`)
+    expect(ogImage).toContain(`${topics} SAT topics`)
   })
   it('counts the SAT past questions', () => {
     const questions = SAT_PAPERS.reduce((n, p) => n + p.questions.length, 0)

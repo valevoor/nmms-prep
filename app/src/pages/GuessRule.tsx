@@ -29,7 +29,7 @@ export function GuessRule({ topic }: { topic: ReadyTopic }) {
   }
 
   return (
-    <Page title={t.game.title} back="">
+    <Page title={t.game.title} back="mat">
       {phase === 'intro' && (
         <section className="card intro">
           <span className="game-icon" aria-hidden>

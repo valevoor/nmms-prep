@@ -35,7 +35,7 @@ export function Reflect({ kind }: { kind: Kind }) {
   const letters = tab === 'letters'
 
   return (
-    <Page title={k.title} back="">
+    <Page title={k.title} back="mat">
       <section className="card explore-card rf-card">
         <div className="explore-seg" role="group" aria-label={t.tabs}>
           {(['letters', 'shapes'] as const).map((id) => (

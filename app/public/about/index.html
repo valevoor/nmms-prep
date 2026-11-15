@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- The About page, linked from Home and the landing page (public/welcome/). Plain HTML so that it has its own URL. -->
+<!-- The About page, linked from Home and the landing page (public/index.html). Plain HTML so that it has its own URL. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,13 @@
     <meta property="og:title" content="About NMMS Prep: Why This Free App Was Built and Who Made It" />
     <meta property="og:description" content="Why NMMS Prep was built for students with limited access to exam preparation and for their teachers, and who developed it." />
     <meta property="og:url" content="https://mystudyprep.in/about/" />
-    <meta property="og:image" content="https://mystudyprep.in/icon-512.png" />
+    <!-- 1200×630, made from tools/og-image.html -->
+    <meta property="og:image" content="https://mystudyprep.in/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NMMS Prep: free MAT and SAT practice for Class 8, with 41 MAT chapters, 80 SAT topics and past exam questions. Works offline, in English and Kannada." />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,8 +47,6 @@
     <script>
       // Same saved theme as the app (default Light). Kept in sync with src/lib/theme.ts.
       try {
-        // This page's links into the app go to /, which must now open the app, not come back here (see index.html).
-        sessionStorage.setItem('nmms-in-app', '1')
         var t = localStorage.getItem('nmms-theme')
         var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
         document.documentElement.dataset.theme = dark ? 'dark' : 'light'
@@ -55,7 +59,7 @@
   <body>
     <header class="topbar">
       <a class="brand" href="/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
-      <a class="open" href="/">Open the app →</a>
+      <a class="open" href="/mat">Open the app →</a>
     </header>
     <main>
       <h1>About NMMS Prep</h1>

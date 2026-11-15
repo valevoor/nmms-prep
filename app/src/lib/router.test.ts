@@ -3,7 +3,7 @@ import { pathFromHash } from './router'
 
 describe('old hash routes become paths', () => {
   it.each([
-    ['#/', ''],
+    ['#/', 'mat'],
     ['#/?test=sat', 'sat'],
     ['#/t/number-series', 'mat/number-series'],
     ['#/t/number-series/learn', 'mat/number-series/learn'],

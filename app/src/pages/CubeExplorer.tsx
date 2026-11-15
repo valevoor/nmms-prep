@@ -62,7 +62,7 @@ export function CubeExplorer() {
         : FACES.map((f) => [t.faces[f], s[f]])
 
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <section className="card explore-card">
         <div className="explore-stage">
           <Suspense fallback={<p className="cube-scene-msg muted">{t.loading}</p>}>

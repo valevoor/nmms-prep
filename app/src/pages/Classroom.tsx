@@ -82,7 +82,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
   return (
     <Page
       title={t.classroom.title(t.chapters[topic.chapter] ?? topic.name)}
-      back=""
+      back="mat"
       wide
       right={
         <div className="topbar-switches">

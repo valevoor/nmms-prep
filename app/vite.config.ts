@@ -5,15 +5,28 @@ import type { Plugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 /**
- * GitHub Pages and the build's preview answer /welcome/ and /about/ with their index.html in public/, but
- * the dev server answers any folder path with the app. Without this those pages can't open on the dev server.
+ * The site's pages, as worker.ts serves them live: / is the landing page (public/index.html), /about/ is
+ * public/about/index.html, and every other path that isn't a file is an app page, answered with app.html.
+ * The dev server and the build's preview would otherwise answer every path with index.html.
  */
-const staticPagesInDev: Plugin = {
-  name: 'static-pages-in-dev',
+function pageFor(url = '') {
+  const path = url.split('?')[0]
+  if (path === '/' || path === '/about/') return `${path}index.html`
+  // Vite's own requests (/@vite/client, /src/main.tsx, /node_modules/…) and files pass through.
+  if (/^\/(@|src\/|node_modules\/)/.test(path) || /\.[a-z0-9]+$/i.test(path)) return url
+  return '/app.html'
+}
+const sitePages: Plugin = {
+  name: 'site-pages',
   configureServer(server) {
     server.middlewares.use((req, _res, next) => {
-      const path = req.url?.split('?')[0]
-      if (path === '/welcome/' || path === '/about/') req.url = `${path}index.html`
+      req.url = pageFor(req.url)
+      next()
+    })
+  },
+  configurePreviewServer(server) {
+    server.middlewares.use((req, _res, next) => {
+      req.url = pageFor(req.url)
       next()
     })
   },
@@ -23,8 +36,10 @@ const staticPagesInDev: Plugin = {
 export default defineConfig({
   // The app uses path routes (/mat/number-series), so it is served from the site's root.
   base: '/',
+  // The app is app.html; index.html is the landing page in public/.
+  build: { rollupOptions: { input: 'app.html' } },
   plugins: [
-    staticPagesInDev,
+    sitePages,
     react(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -35,7 +50,7 @@ export default defineConfig({
         name: 'NMMS Prep: Mental Ability',
         short_name: 'NMMS Prep',
         description: 'Free offline practice for the NMMS MAT and SAT papers (Class 8).',
-        start_url: '/',
+        start_url: '/mat',
         scope: '/',
         display: 'standalone',
         orientation: 'any',
@@ -55,10 +70,10 @@ export default defineConfig({
         // paper, and 4 MiB with the social science revision sheets. Anything over the limit is left out of the
         // offline cache, so keep it above the script's size.
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
-        // Offline, every app path (/mat/number-series/learn) is answered with index.html. The talk deck at
-        // /slides/ is added after the build, so it is left out.
-        navigateFallback: 'index.html',
-        navigateFallbackDenylist: [/^\/slides\//, /^\/(welcome|about)\//],
+        // Offline, every app path (/mat/number-series/learn) is answered with app.html; the landing page (/)
+        // and About come from the precache. The talk deck at /slides/ is added after the build, so it is left out.
+        navigateFallback: 'app.html',
+        navigateFallbackDenylist: [/^\/$/, /^\/slides\//, /^\/(welcome|about)\//],
       },
     }),
   ],

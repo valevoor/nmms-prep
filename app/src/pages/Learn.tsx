@@ -82,7 +82,7 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
   const pool = pastOnly(topic) ? paperQuestions(topic.id) : topic.questions
   const examples = meta.workedExamples.map((id) => pool.find((q) => q.id === id)).filter((q): q is Question => !!q)
   return (
-    <Page title={t.learn.title(t.chapters[topic.chapter] ?? topic.name)} back="">
+    <Page title={t.learn.title(t.chapters[topic.chapter] ?? topic.name)} back="mat">
       <BiBlock className="lead" text={meta.intro} other={second?.intro} lang={lang} otherLang={otherLang} />
       {meta.videos && (
         <>

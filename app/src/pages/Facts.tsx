@@ -163,7 +163,7 @@ export function Facts({ tab }: { tab: FactTab }) {
   const t = useT().facts
   const View = VIEWS[tab]
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <nav className="facts-tabs" aria-label={t.tabsLabel}>
         {FACT_TABS.map((k) => (
           <a key={k} href={href(`facts/${k}`)} aria-current={k === tab ? 'page' : undefined}>

@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- The landing page: index.html sends the bare URL here. A plain page, not an app route, so search engines see
-     its text without running JavaScript.
+<!-- The landing page, at the site's main URL (/). A plain page, not an app route, so search engines see its text
+     without running JavaScript. The app itself is app.html, served for every app path (/mat, /sat/…; worker.ts).
      landing.test.ts checks its numbers and tool links against the app's data. -->
 <html lang="en">
   <head>
@@ -8,23 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NMMS Prep: Free MAT and SAT Practice App for Class 8</title>
     <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 80 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
-    <link rel="canonical" href="https://mystudyprep.in/welcome/" />
+    <link rel="canonical" href="https://mystudyprep.in/" />
     <meta name="theme-color" content="#2f5bea" />
-    <link rel="icon" type="image/svg+xml" href="../icon.svg" />
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NMMS Prep" />
     <meta property="og:title" content="NMMS Prep: Free MAT and SAT Practice App for Class 8" />
     <meta property="og:description" content="Free NMMS exam practice with 41 MAT chapters, 80 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
-    <meta property="og:url" content="https://mystudyprep.in/welcome/" />
-    <meta property="og:image" content="https://mystudyprep.in/icon-512.png" />
+    <meta property="og:url" content="https://mystudyprep.in/" />
+    <!-- 1200×630, made from tools/og-image.html -->
+    <meta property="og:image" content="https://mystudyprep.in/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NMMS Prep: free MAT and SAT practice for Class 8, with 41 MAT chapters, 80 SAT topics and past exam questions. Works offline, in English and Kannada." />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "url": "https://mystudyprep.in/welcome/",
+        "url": "https://mystudyprep.in/",
         "name": "NMMS Prep: Free MAT and SAT Practice App for Class 8",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-15",
         "mainEntity": {
           "@type": "WebApplication",
           "name": "NMMS Prep",
@@ -46,10 +52,14 @@
       }
     </script>
     <script>
+      // Old app links (/#/t/number-series) and the installed app (its start page used to be /) go into the app,
+      // where src/lib/router.ts turns an old #/ route into its path.
+      try {
+        var installed = navigator.standalone || matchMedia('(display-mode: standalone)').matches
+        if (location.hash.indexOf('#/') === 0 || installed) location.replace('/mat' + location.hash)
+      } catch (e) {}
       // Same saved theme as the app (default Light). Kept in sync with src/lib/theme.ts.
       try {
-        // This page's links into the app go to /, which must now open the app, not come back here (see index.html).
-        sessionStorage.setItem('nmms-in-app', '1')
         var t = localStorage.getItem('nmms-theme')
         var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
         document.documentElement.dataset.theme = dark ? 'dark' : 'light'
@@ -57,19 +67,19 @@
         document.documentElement.dataset.theme = 'light'
       }
     </script>
-    <link rel="stylesheet" href="../page.css" />
+    <link rel="stylesheet" href="./page.css" />
   </head>
   <body>
     <header class="topbar">
       <a class="brand" href="/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
-      <a class="open" href="/">Open the app →</a>
+      <a class="open" href="/mat">Open the app →</a>
     </header>
     <main>
       <section>
         <span class="tag">Free · No sign-up · Works offline</span>
         <h1>Free NMMS practice app for Class 8</h1>
         <p>Prepare for both papers of the National Means-cum-Merit Scholarship exam, MAT and SAT, on your phone or on the classroom projector.</p>
-        <a class="btn" href="/">Start practising</a>
+        <a class="btn" href="/mat">Start practising</a>
         <p class="updated muted">Updated for the 2026-27 syllabus, with question papers up to 2025-26.</p>
       </section>
 
@@ -82,7 +92,7 @@
           <li>New practice questions whenever you run out</li>
           <li>Quick tests, and a list of your mistakes to retry</li>
         </ul>
-        <a class="go" href="/">See the MAT chapters →</a>
+        <a class="go" href="/mat">See the MAT chapters →</a>
       </section>
 
       <section class="card">
@@ -158,8 +168,8 @@
         <p class="small">AI is used to help build this app, so some facts, answers or translations may be wrong. If you are unsure about anything, please check it with your teacher or textbook.</p>
       </section>
 
-      <a class="btn" href="/">Start practising</a>
-      <p class="about-note"><a class="go" href="../about/">About this app</a></p>
+      <a class="btn" href="/mat">Start practising</a>
+      <p class="about-note"><a class="go" href="./about/">About this app</a></p>
     </main>
   </body>
 </html>

@@ -247,7 +247,7 @@ function TestSwitch({ sat }: { sat: boolean }) {
   const t = useT()
   return (
     <nav className="seg test-switch" aria-label={t.sat.tabsLabel}>
-      <a className={sat ? undefined : 'on'} href={href('')} aria-current={sat ? undefined : 'page'}>
+      <a className={sat ? undefined : 'on'} href={href('mat')} aria-current={sat ? undefined : 'page'}>
         {t.sat.tabMat}
       </a>
       <a className={sat ? 'on' : undefined} href={href('sat')} aria-current={sat ? 'page' : undefined}>

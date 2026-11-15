@@ -1,0 +1,101 @@
+<!doctype html>
+<!-- The link preview image (app/public/og-image.png, 1200×630) shown when the site is shared on WhatsApp and
+     elsewhere. Render it again after changing this file or the numbers in it (landing page, data/topics.ts):
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --hide-scrollbars \
+       --window-size=1200,630 --screenshot=app/public/og-image.png tools/og-image.html
+     Everything sits in the middle, so a square crop (a small WhatsApp thumbnail) still shows the icon and name. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      body {
+        background: #2f5bea;
+        color: #fff;
+        font-family: Helvetica, Arial, 'Noto Sans Kannada', 'Kannada Sangam MN', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .brand svg {
+        width: 132px;
+        height: 132px;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px rgba(10, 20, 60, 0.35);
+      }
+      h1 {
+        margin: 0;
+        font-size: 104px;
+        font-weight: 700;
+        letter-spacing: -2px;
+      }
+      .tag {
+        margin: 26px 0 34px;
+        font-size: 44px;
+        font-weight: 700;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        max-width: 1060px;
+      }
+      .chips span {
+        background: rgba(255, 255, 255, 0.16);
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        border-radius: 999px;
+        padding: 10px 24px;
+        font-size: 30px;
+      }
+      .chips .free {
+        background: #f59e0b;
+        border-color: #f59e0b;
+        color: #1a1d29;
+        font-weight: 700;
+      }
+      .url {
+        margin-top: 34px;
+        font-size: 32px;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand">
+      <!-- public/icon.svg on a white tile, so it stands out from the blue -->
+      <svg viewBox="0 0 512 512" aria-hidden="true">
+        <rect width="512" height="512" fill="#ffffff" />
+        <g font-family="Helvetica, Arial, sans-serif" font-weight="700" text-anchor="middle" fill="#2f5bea">
+          <text x="256" y="238" font-size="120" letter-spacing="-2">2, 4, 8</text>
+          <rect x="178" y="282" width="156" height="118" rx="24" fill="#f59e0b" />
+          <text x="256" y="377" font-size="104" fill="#1a1d29">?</text>
+        </g>
+      </svg>
+      <h1>NMMS Prep</h1>
+    </div>
+    <p class="tag">MAT and SAT practice for Class 8</p>
+    <div class="chips">
+      <span class="free">Free</span>
+      <span>41 MAT chapters</span>
+      <span>80 SAT topics</span>
+      <span>Past exam questions</span>
+      <span>Works offline</span>
+      <span>English · ಕನ್ನಡ</span>
+    </div>
+    <p class="url">mystudyprep.in</p>
+  </body>
+</html>

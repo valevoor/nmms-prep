@@ -82,7 +82,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
 
   if (phase === 'intro')
     return (
-      <Page title={t.test.title} back="">
+      <Page title={t.test.title} back="mat">
         <section className="card intro">
           <h2>
             {t.test.heading(name)}
@@ -116,7 +116,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
     const pct = Math.round((100 * score) / qs.length)
     const skipped = qs.filter((q) => !answers[q.id]).length
     return (
-      <Page title={t.test.results} back="">
+      <Page title={t.test.results} back="mat">
         <section className="card result">
           <p className="big-score">
             {score}/{qs.length}
@@ -172,7 +172,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
   const q = qs[index]
   const answered = Object.keys(answers).length
   return (
-    <Page title={t.test.title} back="" right={<TimerBadge left={left} total={SECONDS} />}>
+    <Page title={t.test.title} back="mat" right={<TimerBadge left={left} total={SECONDS} />}>
       <section className="card question">
         <div className="q-head">
           <span>{t.test.questionOf(index + 1, qs.length)}</span>

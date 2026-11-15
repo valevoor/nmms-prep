@@ -86,7 +86,7 @@ export function CubeCut() {
   const w2 = both ? words(DICTS[otherLang].cut, n, dir, k, cut, painted) : undefined
 
   return (
-    <Page title={t.title} back="">
+    <Page title={t.title} back="mat">
       <section className="card explore-card">
         <div className="fold-wrap">
           <CutScene ref={scene} n={n} dir={dir} k={k} cut={cut} gap={gap} painted={painted} label={t.scene} />

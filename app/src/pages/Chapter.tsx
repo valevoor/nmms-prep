@@ -20,7 +20,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
   const base = `mat/${t.id}`
   const factTab = FACT_CHAPTERS[t.id]
   return (
-    <Page title={tr.chapters[t.chapter] ?? t.name} back="">
+    <Page title={tr.chapters[t.chapter] ?? t.name} back="mat">
       <section className="card topic-card">
         <div className="topic-head">
           <ChapterArt chapter={t.chapter} size={72} />

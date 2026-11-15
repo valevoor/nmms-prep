@@ -4,7 +4,7 @@ import { TopicIdContext, useT } from './lib/i18n'
 import { getTopic } from './data/topics'
 import type { ReadyTopic } from './data/topics'
 import { setLastTopic } from './lib/lastTopic'
-import { href, useRoute } from './lib/router'
+import { href, navigate, useRoute } from './lib/router'
 import { Chapter } from './pages/Chapter'
 import { Classroom } from './pages/Classroom'
 import { CubeCut } from './pages/CubeCut'
@@ -60,7 +60,7 @@ function NotFound() {
   return (
     <Page title={t.common.notFound} back="">
       <p>{t.common.notFoundBody}</p>
-      <a className="btn btn-primary" href={href('')}>
+      <a className="btn btn-primary" href={href('mat')}>
         {t.common.goHome}
       </a>
     </Page>
@@ -71,14 +71,18 @@ export default function App() {
   const { parts } = useRoute()
   const [kind, topicId, view, mode] = parts
   const topic = kind === 'mat' ? getTopic(topicId) : undefined
-  // Home's MAT and SAT tabs (/ and /sat) share one scroll position, as one page.
-  const home = parts.length === 0 || (kind === 'sat' && parts.length === 1)
+  // Home's MAT and SAT tabs (/mat and /sat) share one scroll position, as one page.
+  const home = (kind === 'mat' || kind === 'sat') && parts.length === 1
   useScrollOnRouteChange(home ? '' : parts.join('/'))
   useLayoutEffect(() => {
     if (topic) setLastTopic(topic.id)
   }, [topic])
+  // / is the landing page (public/index.html); the app's own / (an old offline copy) is MAT Home.
+  useLayoutEffect(() => {
+    if (parts.length === 0) navigate('mat', true)
+  }, [parts.length])
 
-  if (home) return <Home />
+  if (home || parts.length === 0) return <Home />
   if (kind === 'facts' && parts.length <= 2) {
     const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
     return tab ? <Facts tab={tab} /> : <NotFound />
