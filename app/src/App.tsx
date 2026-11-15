@@ -31,6 +31,7 @@ import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
 import { QuickTest } from './pages/QuickTest'
 import { MockExam } from './pages/MockExam'
+import { MockPrint } from './pages/MockPrint'
 import { GuessRule } from './pages/GuessRule'
 
 const MODES: PracticeMode[] = ['warmup', 'book', 'exam', 'more', 'mistakes']
@@ -84,12 +85,8 @@ export default function App() {
   }, [parts.length])
 
   if (home || parts.length === 0) return <Home />
-  if (kind === 'mock' && parts.length === 1)
-    return (
-      <TopicIdContext.Provider value="mock">
-        <MockExam />
-      </TopicIdContext.Provider>
-    )
+  if (kind === 'mock' && (parts.length === 1 || (parts.length === 2 && topicId === 'print')))
+    return <TopicIdContext.Provider value="mock">{parts.length === 1 ? <MockExam /> : <MockPrint />}</TopicIdContext.Provider>
   if (kind === 'facts' && parts.length <= 2) {
     const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
     return tab ? <Facts tab={tab} /> : <NotFound />

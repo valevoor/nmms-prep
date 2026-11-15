@@ -5327,3 +5327,336 @@ kbd {
 .mock-subjects h2 {
   font-size: 1.1rem;
 }
+
+/* ---------- printed mock exam (/mock/print) ---------- */
+
+.mock-print {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.print-off {
+  opacity: 0.5;
+}
+
+/* On screen, the paper is a preview: a white sheet below the choices. */
+.paper {
+  margin-top: 20px;
+}
+
+.paper-part {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.paper-part + .paper-part {
+  margin-top: 20px;
+}
+
+.paper-run {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.paper-title {
+  font-size: 1.15rem;
+  margin: 4px 0 10px;
+}
+
+.paper-solutions-title {
+  margin-top: 24px;
+}
+
+.paper-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 20px;
+  margin: 6px 0 12px;
+}
+
+.paper-field {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.paper-line {
+  flex: 1;
+  border-bottom: 1px solid var(--text);
+  min-height: 1.4em;
+}
+
+.paper-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 6px;
+}
+
+.paper-rules {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.paper-draft {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.paper-test {
+  font-size: 1.05rem;
+  margin: 18px 0 6px;
+  padding-top: 10px;
+  border-top: 2px solid var(--text);
+}
+
+.paper-direction {
+  margin: 14px 0 8px;
+  font-size: 0.95rem;
+}
+
+.paper-keep {
+  break-inside: avoid;
+}
+
+/* A SAT question's note can name the answer ("The book's key gives C"), so the question paper leaves it out. */
+.paper-group .sat-note {
+  display: none;
+}
+
+/* Large pictures (Venn diagrams, SAT diagrams) at a size that leaves room for the rest of the page. */
+.paper .fig-diagram .fig-paper,
+.paper .sat-fig .fig-paper {
+  max-width: 320px;
+}
+
+.paper .sat-fig .fig-img {
+  max-height: 240px;
+}
+
+.paper .options-fig .option-value {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.paper-q {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  break-inside: avoid;
+}
+
+.paper-no {
+  flex: none;
+  min-width: 2.2em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.paper-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-answer {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+/* The exam's answer buttons, drawn as printed options: "(A) 24". */
+.paper .options {
+  gap: 4px 16px;
+  margin-top: 6px;
+}
+
+.paper .option {
+  min-height: 0;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  gap: 6px;
+}
+
+.paper .option-key {
+  display: inline;
+  width: auto;
+  height: auto;
+  background: none;
+  font-weight: 600;
+}
+
+.paper .stem-prompt,
+.paper .sat-prompt {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.paper .option-key::before {
+  content: '(';
+}
+
+.paper .option-key::after {
+  content: ')';
+}
+
+.paper .option-value {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.paper .options-fig .option {
+  flex-direction: row;
+  align-items: flex-start;
+  --fig-h: 56px;
+}
+
+.paper .stem,
+.paper .series {
+  margin: 0;
+}
+
+/* Answer sheet: a row of circles for each question, in columns. */
+.paper-omr,
+.paper-key {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 24px;
+}
+
+.paper-omr li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+  break-inside: avoid;
+}
+
+.paper-bubble {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--text);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.paper-key {
+  columns: 3;
+}
+
+.paper-key li {
+  padding: 2px 0;
+  break-inside: avoid;
+}
+
+@media (min-width: 600px) {
+  .paper-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .paper .options:not(.options-text):not(.options-wide) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .paper-omr {
+    columns: 3;
+  }
+
+  .paper-key {
+    columns: 5;
+  }
+}
+
+/* Printed: black on white whatever the theme, only the paper, each part on its own pages. */
+@media print {
+  :root,
+  :root[data-theme] {
+    --bg: #fff;
+    --surface: #fff;
+    --surface-2: #fff;
+    --text: #000;
+    --muted: #333;
+    --border: #bbb;
+    --primary: #000;
+    --accent: #000;
+    --accent-soft: #fff;
+    --accent-ink: #000;
+    --accent-line: #000;
+    --shadow: none;
+    color-scheme: light;
+  }
+
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  .topbar,
+  .no-print {
+    display: none !important;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  .paper {
+    margin: 0;
+  }
+
+  .paper-part {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .paper-part + .paper-part {
+    margin-top: 0;
+    break-before: page;
+  }
+
+  .paper-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .paper .options:not(.options-text):not(.options-wide) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .paper-omr {
+    columns: 4;
+  }
+
+  .paper-key {
+    columns: 6;
+  }
+
+  .fig-paper {
+    box-shadow: none;
+  }
+}

@@ -38,7 +38,8 @@ import {
 } from '../lib/mock'
 import type { MockConfig, MockExam as Mock, MockItem, MockLength, MockResult, MockTest } from '../lib/mock'
 import { recordAnswer, recordSatAnswer } from '../lib/progress'
-import { href } from '../lib/router'
+import { printPath, newPaperCode } from '../lib/mockPrint'
+import { href, navigate } from '../lib/router'
 import { termsText } from '../lib/series'
 import type { OptionKey } from '../types'
 
@@ -319,6 +320,9 @@ function Start({ current, history }: { current: Mock | null; history: MockResult
           {t.mock.start(total, minutes)}
         </button>
       )}
+      <button className="btn mock-print" disabled={missing.length > 0 || total === 0} onClick={() => navigate(printPath(config, newPaperCode()))}>
+        {t.mock.printButton}
+      </button>
       <p className="muted mock-note">{t.mock.savedNote}</p>
 
       {mine.length > 0 && (
