@@ -6,6 +6,9 @@ import { READY_TOPICS, getTopic } from './data/topics'
 
 /** The Landing page is plain HTML, so its numbers can't read the app's data. These keep them true. */
 describe('Landing page numbers', () => {
+  it('links to the mock exam', () => {
+    expect(landing).toContain('href="/mock"')
+  })
   it('counts the MAT chapters', () => {
     expect(landing).toContain(`${READY_TOPICS.length} MAT chapters`)
     expect(landing).toContain(`${READY_TOPICS.length} chapters`)
