@@ -71,4 +71,22 @@ describe('generateFigureNumbers', () => {
       expect(q.kn?.working).toBeTruthy()
     }
   }, 60000)
+
+  it('gives four clues in both languages, the last setting up the missing figure without its answer', () => {
+    const rng = mulberry32(7)
+    for (let i = 0; i < 300; i++) {
+      const q = buildFigureNumbers(rng)
+      const answer = q.options[q.answer]
+      expect(q.clues).toHaveLength(4)
+      expect(q.kn?.clues).toHaveLength(4)
+      for (const c of q.kn!.clues!) expect(c).toMatch(KANNADA)
+      for (const last of [q.clues!.at(-1)!, q.kn!.clues!.at(-1)!]) {
+        expect(last).toMatch(/= \?$/)
+        expect(last).not.toMatch(new RegExp(`= ${answer}(?![0-9])`))
+      }
+      // The third clue shows the rule on the two complete figures: it must agree with the working.
+      const shown = q.working.split('; ').slice(0, 2)
+      for (const w of shown) expect(q.clues![2]).toContain(w)
+    }
+  })
 })

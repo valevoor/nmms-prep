@@ -1255,6 +1255,119 @@ a {
   color: var(--muted);
 }
 
+/* ---------- clues (components/ClueCard.tsx): one at a time, under the question's figure ---------- */
+
+.clue-open {
+  width: 100%;
+  margin: 12px 0 2px;
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.clue-open:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.clue-card {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 2px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.clue-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+}
+
+.clue-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.clue-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-line);
+}
+
+.clue-dots i.on {
+  background: var(--accent);
+}
+
+.clue-dots i.at {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent);
+}
+
+.clue-text {
+  margin: 0;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.clue-card .bi {
+  display: grid;
+  gap: 6px;
+}
+
+.clue-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.clue-nav .btn {
+  min-height: 44px;
+  padding: 6px 10px;
+}
+
+.clue-offer {
+  display: grid;
+  gap: 8px;
+}
+
+.clue-offer .clue-open {
+  margin: 0;
+}
+
+.clue-used {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Classroom: big enough to read from the back of the room. */
+.clue-lg.clue-open,
+.clue-lg .clue-nav .btn {
+  min-height: 52px;
+  font-size: 1.1rem;
+}
+
+.clue-lg .clue-head {
+  font-size: 1.1rem;
+}
+
+.clue-lg .clue-text {
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+}
+
+.clue-lg .clue-dots i {
+  width: 12px;
+  height: 12px;
+}
+
 /* ---------- practice ---------- */
 
 .tabs {
@@ -4331,6 +4444,14 @@ kbd {
   stroke: var(--accent);
   stroke-width: 2.5;
   stroke-dasharray: 4 3;
+}
+
+/* How hard a question is (lib/levels.ts), beside its label in Practice and Classroom. */
+.chip-level {
+  background: var(--surface-2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  margin-right: 4px;
 }
 
 /* "Real exam" tag on past-paper questions in Practice. */

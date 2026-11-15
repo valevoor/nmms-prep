@@ -1,0 +1,128 @@
+{
+  "topic": "age-problems",
+  "_note": "Step-by-step clues for Age Problems (Chapter 37): the book questions and the past-paper questions filed under the chapter, by question id. Each list goes from what to call the unknown age, to the ages at the other time, to the equation, and stops before the last step. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "ag-b01": [
+      "Call Ram's age now x. Then write his age 15 years from now and 5 years ago, using x.",
+      "In 15 years he will be x + 15. Five years ago he was x − 5.",
+      "\"Five times\" his age then gives the equation: x + 15 = 5 × (x − 5).",
+      "Open the bracket: x + 15 = 5x − 25. Move the x's to one side and the numbers to the other: 4x = 40. What is x?"
+    ],
+    "ag-b02": [
+      "Call the father's age now x. The two ages add up to 90, so the son is 90 − x.",
+      "After 5 years, the father is x + 5 and the son is 90 − x + 5 = 95 − x.",
+      "The father is then 3 times the son: x + 5 = 3 × (95 − x) = 285 − 3x.",
+      "Add 3x to both sides and take away 5: 4x = 280. What is x?"
+    ],
+    "ag-b03": [
+      "Some years ago, both were younger by the same number of years. Call that number x.",
+      "x years ago, Hari was 20 − x and Gaurav was 30 − x.",
+      "Their ratio was 3 : 5, so 5 × (20 − x) = 3 × (30 − x). That is 100 − 5x = 90 − 3x.",
+      "So 2x = 100 − 90. What is x?"
+    ],
+    "ag-b04": [
+      "Call Thavan's age now x. Then write his age 15 years from now and 5 years ago, using x.",
+      "In 15 years he will be x + 15. Five years ago he was x − 5.",
+      "\"3 times\" gives the equation: x + 15 = 3 × (x − 5) = 3x − 15.",
+      "So 2x = 15 + 15. What is x?"
+    ],
+    "ag-b05": [
+      "Call the son's age x. The father is 4 times as old: 4x.",
+      "In 5 years, the son will be x + 5 and the father 4x + 5.",
+      "Then the father is 3 times the son: 4x + 5 = 3 × (x + 5) = 3x + 15.",
+      "So x = 10: the son is 10 and the father is 40. The question asks for the sum of their ages: 10 + 40 = ?"
+    ],
+    "ag-b06": [
+      "A ratio of 5 : 6 means the ages are 5 parts and 6 parts. Call one part k: the ages are 5k and 6k.",
+      "In 6 years they are 5k + 6 and 6k + 6, in the ratio 7 : 8.",
+      "So 8 × (5k + 6) = 7 × (6k + 6): 40k + 48 = 42k + 42, so 2k = 6.",
+      "The difference of the ages is 6k − 5k, which is just k. What is k?"
+    ],
+    "ag-b07": [
+      "Four years ago the ratio was 2 : 3, so call their ages then 2k and 3k.",
+      "From four years ago to four years from now is 8 years. Then they are 2k + 8 and 3k + 8, in the ratio 5 : 7.",
+      "So 7 × (2k + 8) = 5 × (3k + 8): 14k + 56 = 15k + 40, so k = 16.",
+      "Four years ago they were 2 × 16 and 3 × 16. Add 4 to each for their ages now. What are they?"
+    ],
+    "ag-b08": [
+      "The difference between two people's ages never changes. Call it d.",
+      "Now the sum is 11 times the difference: 11d. In five years each is 5 years older, so the sum grows by 10: 11d + 10.",
+      "Then the sum is 13 times the difference: 11d + 10 = 13d, so 2d = 10 and d = 5.",
+      "Now the sum is 11 × 5 = 55 and the difference is 5. Two ages add up to 55 and differ by 5: what is the bigger one?"
+    ],
+    "ka1920m-55": [
+      "First find Shashank's age now: in 6 years he will be 26.",
+      "Shashank is 26 − 6 = 20 now.",
+      "The ratio 4 : 3 means Shashank's 20 is 4 parts, so one part is 20 ÷ 4 = 5.",
+      "Prashanth is 3 parts. What is 3 × 5?"
+    ],
+    "ka21m-48": [
+      "A baby every two years means the children's ages go up in steps of 2.",
+      "Call the youngest x. The five ages are x, x + 2, x + 4, x + 6 and x + 8.",
+      "Add them: 5x + 20 = 40, so 5x = 20 and x = 4.",
+      "The eldest is x + 8. What is that?"
+    ],
+    "ka23m-68": [
+      "Work down the family one person at a time, starting with Komala, who is 50.",
+      "Ramya is half of 50, plus 5: 25 + 5 = 30.",
+      "Sneha is half of Ramya's age, minus 5: 30 ÷ 2 − 5 = ?"
+    ],
+    "ka23m-69": [
+      "Call your brother's age x. Write the sentence as a sum: twice his age, minus 4, is your age.",
+      "That gives 2x − 4 = 28.",
+      "Add 4 to both sides: 2x = 32. What is x?"
+    ],
+    "ka2324m-75": [
+      "Call your age now x. Twenty years ago you were x − 20.",
+      "\"One third of my present age\" is x ÷ 3. So x − 20 = x ÷ 3.",
+      "Take x ÷ 3 from both sides: x − x ÷ 3 = 20. So two thirds of x is 20.",
+      "If two thirds of x is 20, one third of x is 10. What is x?"
+    ],
+    "ka2324m-76": [
+      "The ratio is 5 : 7, so call P's age 5k and Q's age 7k.",
+      "In 6 years, P will be 5k + 6. Q's age now minus that is 2.",
+      "7k − (5k + 6) = 2, so 2k − 6 = 2 and 2k = 8.",
+      "So k = 4: P is 5 × 4 and Q is 7 × 4. The question asks for the sum of their ages: what is it?"
+    ],
+    "ka2324m-77": [
+      "Call the son's age now x. The father is 24 years older: x + 24.",
+      "In two years, the son will be x + 2 and the father x + 26.",
+      "Then the father is twice the son: x + 26 = 2 × (x + 2) = 2x + 4.",
+      "Take x and 4 from both sides. What is x?"
+    ],
+    "ka2425m-31": [
+      "Call the son's age now s. The father is 30 years older: s + 30.",
+      "After 3 years, the son is s + 3 and the father s + 33.",
+      "The father is then 3 times the son: s + 33 = 3 × (s + 3) = 3s + 9. So 2s = 24 and s = 12.",
+      "The question asks for the father's age now, s + 30. What is it?"
+    ],
+    "ka2425m-32": [
+      "Start from the one age you know: Koushik is 10.",
+      "Ankitha is 3 years younger than Koushik: 10 − 3 = 7.",
+      "Preetham is twice Ankitha's age: 2 × 7 = ?"
+    ],
+    "ka2425m-33": [
+      "Call the children's total age now c. The father is 3 times that: 3c.",
+      "In 6 years the father is 3c + 6. Each of the three children is 6 years older, so their total grows by 3 × 6 = 18: c + 18.",
+      "The father is then twice the children's total: 3c + 6 = 2 × (c + 18) = 2c + 36.",
+      "So c = 30. The father is 3c. What is that?"
+    ],
+    "ka2526m-25": [
+      "Call the daughter's age now d. The mother is 30 years older: d + 30.",
+      "After 10 years, the daughter is d + 10 and the mother d + 40.",
+      "\"Thrice\" gives: d + 40 = 3 × (d + 10) = 3d + 30. So 2d = 10 and d = 5.",
+      "The question asks for the mother's age now, d + 30. What is it?"
+    ],
+    "ka2526m-26": [
+      "A ratio of 2 : 1 means A has 2 parts and B has 1 part: 3 parts in all.",
+      "The 3 parts add up to 57, so one part is 57 ÷ 3 = 19.",
+      "B is 1 part and A is 2 parts. What are A and B, in that order?"
+    ],
+    "ka2526m-27": [
+      "The ages go up in steps of 3. Call the youngest y.",
+      "The five ages are y, y + 3, y + 6, y + 9 and y + 12. They add up to 5y + 30.",
+      "5y + 30 = 50, so 5y = 20 and y = 4.",
+      "The eldest is y + 12. The question asks for the youngest plus the eldest: what is that?"
+    ]
+  }
+}

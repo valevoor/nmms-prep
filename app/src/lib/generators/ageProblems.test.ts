@@ -56,4 +56,30 @@ describe('generateAgeProblem', () => {
     }
     expect([...kinds].sort()).toEqual(['ag-ratio', 'ag-sum', 'ag-times'])
   }, 60000)
+
+  it('gives four clues in both languages, the last leaving the answer to find', () => {
+    const rng = mulberry32(37)
+    const KN = /[ಀ-೿]/
+    for (let i = 0; i < 500; i++) {
+      const q = generateAgeProblem(rng)
+      const answer = q.options[q.answer].replace(/ years$/, '')
+      expect(q.clues).toHaveLength(4)
+      expect(q.kn?.clues).toHaveLength(4)
+      for (const c of q.kn!.clues!) expect(c).toMatch(KN)
+      for (const last of [q.clues!.at(-1)!, q.kn!.clues!.at(-1)!]) {
+        expect(last).toContain('?')
+        expect(last, last).not.toMatch(new RegExp(`=\\s*${answer}(?![0-9]|\\s*[+−×÷])`))
+      }
+      // "3k = 24 − 12": the k it gives must be a whole number that fits the clue's own ratio equation.
+      for (const c of q.clues!) {
+        const m = c.match(/(\d*)k = (\d+) − (\d+)/)
+        if (!m) continue
+        const k = (Number(m[2]) - Number(m[3])) / Number(m[1] || 1)
+        expect(Number.isInteger(k) && k > 0, c).toBe(true)
+        const eq = q.clues!.join(' ').match(/(\d+) × \((\d*)k \+ (\d+)\) = (\d+) × \((\d*)k \+ (\d+)\)/)!
+        const [l1, a1, b1, l2, a2, b2] = eq.slice(1).map((x) => Number(x || 1))
+        expect(l1 * (a1 * k + b1), c).toBe(l2 * (a2 * k + b2))
+      }
+    }
+  })
 })

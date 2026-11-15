@@ -1,0 +1,27 @@
+{
+  "topic": "age-problems",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: no equation, just work from a known age or split a total; 2: one simple equation (a gap in years, or children a fixed step apart); 3: an equation linking two different times, or a ratio some years ago; 4: two conditions at once (a sum and a later multiple, two ratios, the sum and the difference, three children). Practice and Classroom ask the questions in this order (lib/levels.ts). tools/check_levels.ts checks them.",
+  "levels": {
+    "ka2425m-32": 1,
+    "ka23m-68": 1,
+    "ka2526m-26": 1,
+    "ka1920m-55": 1,
+    "ka23m-69": 2,
+    "ka21m-48": 2,
+    "ka2526m-27": 2,
+    "ka2324m-77": 2,
+    "ka2425m-31": 2,
+    "ka2526m-25": 2,
+    "ag-b01": 3,
+    "ag-b04": 3,
+    "ka2324m-75": 3,
+    "ag-b05": 3,
+    "ag-b03": 3,
+    "ka2324m-76": 3,
+    "ag-b02": 4,
+    "ag-b06": 4,
+    "ag-b07": 4,
+    "ag-b08": 4,
+    "ka2425m-33": 4
+  }
+}

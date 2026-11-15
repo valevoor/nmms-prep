@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { OPTION_KEYS } from '../../types'
 import type { Question } from '../../types'
-import { generateNumberMatrix } from './numberMatrix'
+import { buildNumberMatrix, generateNumberMatrix } from './numberMatrix'
 import { mulberry32 } from './numberSeries'
 
 // An independent reading (not using numberMatrix.ts): the table is read back, each option is put
@@ -56,4 +56,24 @@ describe('generateNumberMatrix', () => {
     // Some blanks are numbers the rule starts from, so the rule is worked backwards.
     expect(inputBlank).toBeGreaterThan(100)
   }, 60000)
+
+  it('gives four clues in both languages, the last setting up the blank without its answer', () => {
+    const rng = mulberry32(11)
+    const KN = /[ಀ-೿]/
+    for (let i = 0; i < 300; i++) {
+      const q = buildNumberMatrix(rng)
+      const answer = q.options[q.answer]
+      expect(q.clues).toHaveLength(4)
+      expect(q.kn?.clues).toHaveLength(4)
+      for (const c of q.kn!.clues!) expect(c).toMatch(KN)
+      for (const last of [q.clues!.at(-1)!, q.kn!.clues!.at(-1)!]) {
+        expect(last).toContain('?')
+        expect(last).not.toMatch(new RegExp(`= ${answer}(?![0-9])`))
+        expect(last).not.toMatch(new RegExp(`\\? = ${answer}(?![0-9])`))
+      }
+      // The third clue shows the rule on the two complete lines: the same sums as the working.
+      const done = q.working.split('; ').filter((w) => !w.includes('?') && !w.endsWith(`= ${answer}`))
+      for (const w of done) expect(q.clues![2]).toContain(w)
+    }
+  })
 })

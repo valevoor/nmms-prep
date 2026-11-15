@@ -278,6 +278,8 @@ export interface Question {
   /** 'wrong' questions: index of the changed term and the value it should have been. */
   wrongIndex?: number
   fix?: string
+  /** Step-by-step clues, set by the generators. Book and past-paper questions get theirs from data/clues/ (lib/clues.ts). */
+  clues?: string[]
   /** Kannada text, set by the generators. Book questions get theirs from data/mat/*.kn.json instead. */
   kn?: QuestionText
 }
@@ -290,6 +292,8 @@ export interface QuestionText {
   note?: string
   /** Only for questions whose options are words (Guess the rule). */
   options?: Record<OptionKey, string>
+  /** Generated questions' clues (see Question.clues). */
+  clues?: string[]
 }
 
 export interface TopicMeta {

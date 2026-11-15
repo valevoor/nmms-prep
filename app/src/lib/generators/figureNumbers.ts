@@ -114,6 +114,34 @@ const NAMES: Record<Shape, { en: string; kn: string }> = {
   },
 }
 
+/** Clue 2: a nudge towards the rule's kind of sum, without its numbers. */
+function hint(formula: string): Text {
+  const t = (en: string, kn: string): Text => ({ en, kn })
+  if (/^\(a \+ b\) × \d$/.test(formula))
+    return t('Add the two numbers first. The answer is a few times bigger than the sum.', 'ಮೊದಲು ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ. ಉತ್ತರವು ಮೊತ್ತದ ಕೆಲವು ಪಟ್ಟು ಇದೆ.')
+  if (/^\(a − b\) × \d$/.test(formula))
+    return t('Find the difference first. The answer is a few times bigger than the difference.', 'ಮೊದಲು ವ್ಯತ್ಯಾಸವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ. ಉತ್ತರವು ವ್ಯತ್ಯಾಸದ ಕೆಲವು ಪಟ್ಟು ಇದೆ.')
+  if (/^a × b [+−] \d$/.test(formula))
+    return t('Multiply the two numbers. How far is the answer from what you get?', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಗುಣಿಸಿ. ಸಿಕ್ಕ ಸಂಖ್ಯೆಯಿಂದ ಉತ್ತರ ಎಷ್ಟು ದೂರ ಇದೆ?')
+  if (formula === 'a² + b') return t('Square the left number, then use the right one.', 'ಎಡ ಸಂಖ್ಯೆಯ ವರ್ಗ ಮಾಡಿ, ನಂತರ ಬಲ ಸಂಖ್ಯೆಯನ್ನು ಬಳಸಿ.')
+  if (formula === 'a² − b²') return t('Square both numbers.', 'ಎರಡೂ ಸಂಖ್ಯೆಗಳ ವರ್ಗ ಮಾಡಿ.')
+  if (formula === '(a ÷ b)²') return t('Divide the left number by the right one. The answers are square numbers.', 'ಎಡ ಸಂಖ್ಯೆಯನ್ನು ಬಲ ಸಂಖ್ಯೆಯಿಂದ ಭಾಗಿಸಿ. ಉತ್ತರಗಳು ವರ್ಗ ಸಂಖ್ಯೆಗಳು.')
+  if (/^\(a \+ b\) ÷ \d$/.test(formula))
+    return t('Add the two numbers. The answer is smaller than the sum, so divide.', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ. ಉತ್ತರವು ಮೊತ್ತಕ್ಕಿಂತ ಚಿಕ್ಕದು, ಆದ್ದರಿಂದ ಭಾಗಿಸಿ.')
+  if (formula === 'a + b + c') return t('The answer is not much bigger than the numbers. Try adding.', 'ಉತ್ತರವು ಸಂಖ್ಯೆಗಳಿಗಿಂತ ಹೆಚ್ಚು ದೊಡ್ಡದಲ್ಲ. ಕೂಡಿಸಿ ನೋಡಿ.')
+  if (formula === '(a + c) ÷ b') return t('Add two of the numbers, then divide by the third.', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ, ನಂತರ ಮೂರನೆಯದರಿಂದ ಭಾಗಿಸಿ.')
+  if (formula === '(a + b) × c') return t('Add two of the numbers, then use the third.', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ, ನಂತರ ಮೂರನೆಯದನ್ನು ಬಳಸಿ.')
+  if (formula === '2 × (a + b) − c') return t('Add two of the numbers and double the sum, then use the third.', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ ಮೊತ್ತವನ್ನು ಎರಡು ಪಟ್ಟು ಮಾಡಿ, ನಂತರ ಮೂರನೆಯದನ್ನು ಬಳಸಿ.')
+  return t('Multiply two of the numbers, then use the third.', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಗುಣಿಸಿ, ನಂತರ ಮೂರನೆಯದನ್ನು ಬಳಸಿ.')
+}
+
+/** Clue 1: which numbers make which, per shape. */
+const WHERE: Record<Shape, Text> = {
+  vee: { en: 'The number below comes from the two numbers at the top.', kn: 'ಕೆಳಗಿನ ಸಂಖ್ಯೆಯು ಮೇಲಿನ ಎರಡು ಸಂಖ್ಯೆಗಳಿಂದ ಬರುತ್ತದೆ.' },
+  boxes: { en: 'The number in the circle comes from the three numbers in the boxes.', kn: 'ವೃತ್ತದಲ್ಲಿರುವ ಸಂಖ್ಯೆಯು ಚೌಕಗಳಲ್ಲಿರುವ ಮೂರು ಸಂಖ್ಯೆಗಳಿಂದ ಬರುತ್ತದೆ.' },
+  triangle: { en: 'The number in the middle comes from the three corner numbers.', kn: 'ಮಧ್ಯದ ಸಂಖ್ಯೆಯು ಮೂರು ಮೂಲೆಗಳ ಸಂಖ್ಯೆಗಳಿಂದ ಬರುತ್ತದೆ.' },
+}
+
 const PROMPT: Text = {
   en: 'Find how the numbers in the figures are related, and find the missing number.',
   kn: 'ಆಕೃತಿಗಳಲ್ಲಿರುವ ಸಂಖ್ಯೆಗಳ ಸಂಬಂಧವನ್ನು ಗುರುತಿಸಿ, ಬಿಟ್ಟು ಹೋಗಿರುವ ಸಂಖ್ಯೆಯನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.',
@@ -238,6 +266,14 @@ export function buildFigureNumbers(rng: Rng): Question {
     const names = NAMES[shape]
     const rl: Text = { en: `${names.en} ${rule.formula}.`, kn: `${names.kn} = ${rule.formula}.` }
     const working = same(figs.map((v, i) => `${fill(rule.formula, v)} = ${i === 2 ? answer : outs[i]}`).join('; '))
+    // Where to look, a nudge, the rule shown on the complete figures, then the missing one set up but not worked out.
+    const [f1, f2, f3] = figs.map((v) => fill(rule.formula, v))
+    const clues: Text[] = [
+      { en: `${WHERE[shape].en} Find the rule from the first two figures.`, kn: `${WHERE[shape].kn} ಮೊದಲ ಎರಡು ಆಕೃತಿಗಳಿಂದ ನಿಯಮ ಕಂಡುಹಿಡಿಯಿರಿ.` },
+      hint(rule.formula),
+      { en: `Figure 1: ${f1} = ${outs[0]} ✓. Check figure 2: ${f2} = ${outs[1]} ✓.`, kn: `ಆಕೃತಿ 1: ${f1} = ${outs[0]} ✓. ಆಕೃತಿ 2 ಪರಿಶೀಲಿಸಿ: ${f2} = ${outs[1]} ✓.` },
+      { en: `Now figure 3: ${f3} = ?`, kn: `ಈಗ ಆಕೃತಿ 3: ${f3} = ?` },
+    ]
     return {
       id: `gen-fignum-${(counter++).toString(36)}-${int(rng, 0, 1e9).toString(36)}`,
       terms: [],
@@ -250,7 +286,8 @@ export function buildFigureNumbers(rng: Rng): Question {
       working: working.en,
       pattern: 'fignum-rule',
       generated: true,
-      kn: { prompt: PROMPT.kn, rule: rl.kn, working: working.kn },
+      clues: clues.map((x) => x.en),
+      kn: { prompt: PROMPT.kn, rule: rl.kn, working: working.kn, clues: clues.map((x) => x.kn) },
     }
   }
 }

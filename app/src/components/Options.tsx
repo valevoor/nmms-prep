@@ -12,10 +12,12 @@ interface Props {
   /** Show right/wrong colouring. */
   reveal?: boolean
   onPick?: (k: OptionKey) => void
+  /** A wrong pick to mark while the answer stays hidden (Practice, before offering a clue). */
+  wrong?: OptionKey
   size?: 'md' | 'lg'
 }
 
-export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
+export function Options({ q, chosen, reveal, onPick, wrong, size = 'md' }: Props) {
   const t = useT()
   const { first, second, otherLang } = useQuestionTexts(q)
   const options = first.options
@@ -30,7 +32,7 @@ export function Options({ q, chosen, reveal, onPick, size = 'md' }: Props) {
       {OPTION_KEYS.map((k) => {
         let state = ''
         if (reveal && k === q.answer) state = 'correct'
-        else if (reveal && k === chosen) state = 'wrong'
+        else if ((reveal && k === chosen) || k === wrong) state = 'wrong'
         else if (k === chosen) state = 'selected'
         return (
           <button

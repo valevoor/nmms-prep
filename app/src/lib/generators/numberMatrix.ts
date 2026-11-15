@@ -1,6 +1,7 @@
 import { OPTION_KEYS } from '../../types'
 import type { OptionKey, Question } from '../../types'
 import { both, same } from '../i18n/gen'
+import type { Text } from '../i18n/gen'
 import { int, pick, shuffle } from './numberSeries'
 import type { Rng } from './numberSeries'
 
@@ -67,6 +68,25 @@ const RULES: Rule[] = [
 
 /** Writes the formula with the letters (or numbers) put in: "(9 − 6)³", "a × 2 + b". */
 const fill = (formula: string, x: string, y: string) => formula.replace(/[xy]/g, (v) => (v === 'x' ? x : y))
+
+/** Clue 2: a nudge towards the rule's kind of sum, without its numbers. */
+function hint(formula: string): Text {
+  const t = (en: string, kn: string): Text => ({ en, kn })
+  if (/^x × \d \+ y$/.test(formula)) return t('Multiply one number by a small number, then add the other.', 'ಒಂದು ಸಂಖ್ಯೆಯನ್ನು ಒಂದು ಚಿಕ್ಕ ಸಂಖ್ಯೆಯಿಂದ ಗುಣಿಸಿ, ನಂತರ ಇನ್ನೊಂದನ್ನು ಕೂಡಿಸಿ.')
+  if (/^\(x \+ y\) × \d$/.test(formula)) return t('Add the two numbers first. The answer is a few times bigger than the sum.', 'ಮೊದಲು ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಕೂಡಿಸಿ. ಉತ್ತರವು ಮೊತ್ತದ ಕೆಲವು ಪಟ್ಟು ಇದೆ.')
+  if (formula.startsWith('(x − y)')) return t('Find the difference of the two numbers. The answers are square or cube numbers.', 'ಎರಡು ಸಂಖ್ಯೆಗಳ ವ್ಯತ್ಯಾಸ ಕಂಡುಹಿಡಿಯಿರಿ. ಉತ್ತರಗಳು ವರ್ಗ ಅಥವಾ ಘನ ಸಂಖ್ಯೆಗಳು.')
+  if (formula === 'x² + y²' || formula === 'x³ + y²') return t('The numbers made are big: try squares and cubes of the other two.', 'ಬರುವ ಸಂಖ್ಯೆಗಳು ದೊಡ್ಡವು: ಉಳಿದ ಎರಡರ ವರ್ಗ ಮತ್ತು ಘನಗಳನ್ನು ನೋಡಿ.')
+  if (formula === 'x² − y') return t('Square one number, then use the other.', 'ಒಂದು ಸಂಖ್ಯೆಯ ವರ್ಗ ಮಾಡಿ, ನಂತರ ಇನ್ನೊಂದನ್ನು ಬಳಸಿ.')
+  if (formula.startsWith('x × y')) return t('Multiply the two numbers. Is the answer exactly that, or a little more or less?', 'ಎರಡು ಸಂಖ್ಯೆಗಳನ್ನು ಗುಣಿಸಿ. ಉತ್ತರ ಅದಕ್ಕೆ ಸಮವೇ, ಅಥವಾ ಸ್ವಲ್ಪ ಹೆಚ್ಚು ಅಥವಾ ಕಡಿಮೆಯೇ?')
+  if (formula === '√x + √y') return t('The two numbers are square numbers. Use their square roots.', 'ಎರಡು ಸಂಖ್ಯೆಗಳು ವರ್ಗ ಸಂಖ್ಯೆಗಳು. ಅವುಗಳ ವರ್ಗಮೂಲಗಳನ್ನು ಬಳಸಿ.')
+  return t('The number made sits between the other two. Think of halfway.', 'ಬರುವ ಸಂಖ್ಯೆ ಉಳಿದ ಎರಡರ ನಡುವೆ ಇದೆ. ಸರಿಯಾಗಿ ನಡುವಿನದನ್ನು ಯೋಚಿಸಿ.')
+}
+
+/** Names for a line (row or column) and a place in it, in both languages. */
+const LINE = {
+  row: { en: (n: number) => `Row ${n + 1}`, kn: (n: number) => `${n + 1}ನೇ ಅಡ್ಡಸಾಲು`, place: { en: ['1st', '2nd', '3rd'], kn: ['1ನೇ', '2ನೇ', '3ನೇ'] } },
+  col: { en: (n: number) => `Column ${n + 1}`, kn: (n: number) => `${n + 1}ನೇ ಕಂಬಸಾಲು`, place: { en: ['top', 'middle', 'bottom'], kn: ['ಮೇಲಿನ', 'ಮಧ್ಯದ', 'ಕೆಳಗಿನ'] } },
+}
 
 const LETTERS = ['a', 'b', 'c']
 const transpose = (m: number[][]) => m[0].map((_, j) => m.map((r) => r[j]))
@@ -181,6 +201,22 @@ export function buildNumberMatrix(rng: Rng): Question {
       return pos === out ? `${fill(rule.formula, s(ix), s(iy))} = ${answer}` : `${sum} → ? = ${answer}`
     })
     const working = same(steps.join('; '))
+    // Which way to look and which number is made, a nudge, the rule on the two complete lines, then the blank set up.
+    const names = LINE[dir]
+    const others = [0, 1, 2].filter((n) => n !== line)
+    const shown = others.map((n) => `${fill(rule.formula, String(lines[n][ix]), String(lines[n][iy]))} = ${lines[n][out]} ✓`)
+    const cell = (k: number) => (k === pos ? '?' : String(lines[line][k]))
+    const setUp = `${fill(rule.formula, cell(ix), cell(iy))} = ${cell(out)}`
+    const clues: Text[] = [
+      dir === 'row'
+        ? { en: `Look along each row. In every row, the ${names.place.en[out]} number comes from the other two.`, kn: `ಪ್ರತಿ ಅಡ್ಡಸಾಲನ್ನು ನೋಡಿ. ಪ್ರತಿ ಅಡ್ಡಸಾಲಿನಲ್ಲಿ ${names.place.kn[out]} ಸಂಖ್ಯೆ ಉಳಿದ ಎರಡರಿಂದ ಬರುತ್ತದೆ.` }
+        : { en: `Look down each column. In every column, the ${names.place.en[out]} number comes from the other two.`, kn: `ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲಿ ಮೇಲಿನಿಂದ ಕೆಳಗೆ ನೋಡಿ. ಪ್ರತಿ ಕಂಬಸಾಲಿನಲ್ಲಿ ${names.place.kn[out]} ಸಂಖ್ಯೆ ಉಳಿದ ಎರಡರಿಂದ ಬರುತ್ತದೆ.` },
+      hint(rule.formula),
+      { en: `${names.en(others[0])}: ${shown[0]}. ${names.en(others[1])}: ${shown[1]}.`, kn: `${names.kn(others[0])}: ${shown[0]}. ${names.kn(others[1])}: ${shown[1]}.` },
+      pos === out
+        ? { en: `${names.en(line)}: ${setUp}`, kn: `${names.kn(line)}: ${setUp}` }
+        : { en: `${names.en(line)}: ${setUp}. What is ??`, kn: `${names.kn(line)}: ${setUp}. ? ಎಷ್ಟು?` },
+    ]
     const prompt = both((g) => g.mxPrompt)
     return {
       id: `gen-mx-${(counter++).toString(36)}-${int(rng, 0, 1e9).toString(36)}`,
@@ -194,7 +230,8 @@ export function buildNumberMatrix(rng: Rng): Question {
       working: working.en,
       pattern: dir === 'row' ? 'mx-row' : 'mx-col',
       generated: true,
-      kn: { prompt: prompt.kn, rule: rl.kn, working: working.kn },
+      clues: clues.map((c) => c.en),
+      kn: { prompt: prompt.kn, rule: rl.kn, working: working.kn, clues: clues.map((c) => c.kn) },
     }
   }
 }

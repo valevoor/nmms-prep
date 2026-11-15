@@ -1,0 +1,220 @@
+{
+  "topic": "figure-numbers",
+  "_note": "Step-by-step clues for Figures and Number Relationship (Chapter 24): the book questions and the past-paper questions filed under the chapter, by question id. Each list goes from where to look, to the rule shown on a complete figure, to the missing figure set up but not worked out. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "fn-b01": [
+      "This is one figure, not three. The numbers follow one path, so look for where it starts and which way it goes.",
+      "Start at 90 (top right) and go left along the top row: 90, 110, 85. Then go down and along the next row, like a snake.",
+      "Look at the steps: 90 → 110 is +20, 110 → 85 is −25. The steps grow by 5 each time and switch between adding and taking away.",
+      "The path ends 75, 125, ?. From 75 to 125 is +50. What is the next step?"
+    ],
+    "fn-b02": [
+      "Find the rule from the two complete rows of boxes, 4, 6, 1, 19 and 9, 7, 3, 5. The ? is the 4th box of the row 8, 6, 2.",
+      "The 4th number comes from the first three. The 3rd number is small: try its cube (1³ = 1, 3³ = 27).",
+      "Double the 1st and the 2nd numbers and add them: 4 × 2 + 6 × 2 = 20. Then 20 − 1³ = 19 ✓.",
+      "Check: 9 × 2 + 7 × 2 − 3³ = 18 + 14 − 27 = 5 ✓.",
+      "Now: 8 × 2 + 6 × 2 − 2³ = ?"
+    ],
+    "fn-b03": [
+      "Each triangle inside the box faces one side of the box, and that side holds two small numbers. The ? faces the left side: 8 and 6.",
+      "Read each side's two numbers clockwise (the way a clock's hands turn). Top: 3, then 4. Right: 8, then 4.",
+      "Double the first, add the square of the second, then halve: (3 × 2 + 4²) ÷ 2 = 22 ÷ 2 = 11 ✓.",
+      "Check the right side: (8 × 2 + 4²) ÷ 2 = 16 ✓. The bottom, read clockwise, is 13 then 4: (13 × 2 + 4²) ÷ 2 = 21 ✓.",
+      "The left side, read clockwise, is 8 then 6: (8 × 2 + 6²) ÷ 2 = ?"
+    ],
+    "fn-b04": [
+      "The two numbers at the top make the number below.",
+      "13 + 15 = 28, but the number below is 84. How many times bigger is 84 than 28?",
+      "28 × 3 = 84. Check: (36 + 54) × 3 = 90 × 3 = 270 ✓.",
+      "Now: (45 + 63) × 3 = ?"
+    ],
+    "fn-b05": [
+      "Find the rule from the first and third figures, which are complete. The ? is in the corner box (bottom right) of the middle figure.",
+      "The corner number is small. Add the other two numbers: 27 + 68 = 95. How do you get 19 from 95?",
+      "95 ÷ 5 = 19 ✓. Check: (51 + 84) ÷ 5 = 135 ÷ 5 = 27 ✓.",
+      "Now: (43 + 62) ÷ 5 = ?"
+    ],
+    "fn-b06": [
+      "At each corner there are two numbers: one outside the triangle and one just inside it.",
+      "At each corner, take the outside number from the inside one: 16 − 12, 17 − 13 and 18 − 14.",
+      "That gives 4 + 4 + 4 = 12, the number in the middle ✓.",
+      "Now the second triangle: (23 − 18) + (24 − 19) + (25 − 20) = ?"
+    ],
+    "fn-b07": [
+      "Each row is one group. The first number in the row comes from the other two.",
+      "Row 1 is 8, 3, 21. Add the 2nd and the 3rd: 21 + 3 = 24. How do you get 8 from 24 and 3?",
+      "24 ÷ 3 = 8 ✓. Check row 2: (25 + 5) ÷ 5 = 6 ✓.",
+      "Row 3: (? + 2) ÷ 2 = 12, so ? + 2 = 12 × 2. What is ??"
+    ],
+    "fn-b08": [
+      "There are four numbers round each oval. Not all of them have to be used.",
+      "Compare the left and right numbers with the middle one: 2 and 8 give 4; 1 and 9 give 9.",
+      "8 ÷ 2 = 4 ✓ and 9 ÷ 1 = 9 ✓: the right number divided by the left. The top and bottom numbers don't change it.",
+      "Now: 6 ÷ 3 = ?"
+    ],
+    "fn-b09": [
+      "The three numbers in the boxes make the number in the arrow's tip. The tips are big, so try multiplying.",
+      "Multiply the numbers in pairs: 1st × 2nd, 2nd × 3rd and 3rd × 1st. Then add the three answers.",
+      "10 × 5 + 5 × 3 + 3 × 10 = 50 + 15 + 30 = 95 ✓. Check: 3 × 4 + 4 × 5 + 5 × 3 = 12 + 20 + 15 = 47 ✓.",
+      "Last figure: 4 × 8 + 8 × ? + ? × 4 = 68. That is 32 + 12 × ? = 68. What is ??"
+    ],
+    "fn-b10": [
+      "Find the rule from the first and third figures. The ? is the bottom-left number of the middle figure.",
+      "The corner numbers 25 and 64 are square numbers: 5² and 8².",
+      "30 ÷ 6 = 5 and 5² = 25 ✓. Check: 56 ÷ 7 = 8 and 8² = 64 ✓.",
+      "Middle figure: 36 = 6², so ? ÷ 3 = 6. What is ??"
+    ],
+    "fn-b11": [
+      "Each small number goes with the triangle straight across the centre from it.",
+      "So 1 goes with −2, 2 with 5 and 3 with 24. The ? is across from 4.",
+      "Try cubes: 1³ = 1, 2³ = 8, 3³ = 27. How far is each cube from its partner?",
+      "1 − 3 = −2, 8 − 3 = 5, 27 − 3 = 24: the cube minus 3 ✓.",
+      "Now: 4³ − 3 = ?"
+    ],
+    "fn-b12": [
+      "Read round the circle from the ?, anticlockwise: ?, 20, 36, 68, 132, 260.",
+      "Each number is nearly double the one before. 20 × 2 = 40, but the next number is 36.",
+      "So the rule is: double, then take away 4. Check: 36 × 2 − 4 = 68 ✓ and 68 × 2 − 4 = 132 ✓.",
+      "Work backwards: ? × 2 − 4 = 20, so ? × 2 = 24. What is ??"
+    ],
+    "fn-b13": [
+      "The three numbers in the boxes make the number in the triangle. The middle box divides the other two exactly.",
+      "20 ÷ 4 = 5 and 32 ÷ 4 = 8. Add them: 5 + 8 = 13 ✓.",
+      "Check: 42 ÷ 6 + 54 ÷ 6 = 7 + 9 = 16 ✓.",
+      "Now: 15 ÷ 3 + 51 ÷ 3 = ?"
+    ],
+    "fn-b14": [
+      "Each point of the star goes with the point straight across from it. 8 is across from the ?.",
+      "The pairs are 4 and 25, and 6 and 45. The 81 in the middle is used too: √81 = 9.",
+      "Square the small number and add 9: 4² + 9 = 25 ✓ and 6² + 9 = 45 ✓.",
+      "Now: 8² + 9 = ?"
+    ],
+    "fn-b15": [
+      "The box has four quarters. Each quarter has two small numbers and one big number.",
+      "The big numbers are much bigger, so think of squares. Use the sum and the difference of the two small numbers.",
+      "4 and 9: the sum is 13 and the difference is 5. 13² + 5² = 169 + 25 = 194 ✓.",
+      "Check: 11 and 8 give 19² + 3² = 361 + 9 = 370 ✓.",
+      "The ? quarter has 3 and 7: (7 + 3)² + (7 − 3)² = ?"
+    ],
+    "ka1920m-31": [
+      "The middle number comes from the four numbers around it.",
+      "Add the four outer numbers: 16 + 13 + 15 + 14 = 58. The middle is 29.",
+      "58 ÷ 2 = 29 ✓. Check: (12 + 9 + 11 + 10) ÷ 2 = 42 ÷ 2 = 21 ✓.",
+      "Now: (8 + 5 + 7 + 6) ÷ 2 = ?"
+    ],
+    "ka1920m-32": [
+      "The middle numbers 343 and 512 are cubes: 7³ and 8³. Find how the four outer numbers make 7 and 8.",
+      "Multiply the numbers that face each other: left × right and top × bottom.",
+      "5 × 2 − 1 × 3 = 10 − 3 = 7, and 7³ = 343 ✓. Check: 6 × 3 − 2 × 5 = 8, and 8³ = 512 ✓.",
+      "Now: 7 × 2 − 2 × 4 = ? Then cube it."
+    ],
+    "ka1920m-34": [
+      "The middle numbers 169, 196 and 225 are squares: 13², 14² and 15².",
+      "Make 13 from the corners 3 (top), 6 and 10. Try adding the bottom two and taking away the top.",
+      "6 + 10 − 3 = 13 ✓. Check the third triangle: 10 + 13 − 8 = 15, and 15² = 225 ✓.",
+      "Middle triangle: 196 = 14², so 7 + 11 − ? = 14. What is ??"
+    ],
+    "ka21m-39": [
+      "The number inside comes from the three corners. It is smaller than the biggest corner, so think of an average.",
+      "Add the corners and divide by 3: (6 + 8 + 10) ÷ 3 = 24 ÷ 3 = 8 ✓.",
+      "Check: (12 + 16 + 17) ÷ 3 = 45 ÷ 3 = 15 ✓.",
+      "Now: (18 + 20 + 25) ÷ 3 = ?"
+    ],
+    "ka21m-40": [
+      "Find the rule from the first and third circles. The ? is inside the middle circle.",
+      "Pair the numbers that face each other: top with bottom, left with right. Multiply each pair.",
+      "5 × 3 = 15 and 7 × 2 = 14. 15 + 14 = 29 ✓.",
+      "Check: 9 × 3 + 6 × 4 = 27 + 24 = 51 ✓.",
+      "Middle circle: 6 × 5 + 4 × 3 = ?"
+    ],
+    "ka21m-41": [
+      "Each arrow joins two numbers. Compare the two arrows in the same figure.",
+      "First figure: 36 + 35 = 71 and 33 + 38 = 71. Both arrows add up to the same number.",
+      "Check: 47 + 46 = 93 and 44 + 49 = 93 ✓.",
+      "Third figure: 56 + 52 = 108, so ? + 65 = 108. What is ??"
+    ],
+    "ka21m-42": [
+      "The middle numbers 7 and 9 are small and the outer ones are big. Think of squares.",
+      "Add the three outer numbers: 22 + 13 + 14 = 49.",
+      "49 = 7², the middle number ✓. Check: 18 + 31 + 32 = 81 = 9² ✓.",
+      "Now: 30 + 45 + 46 = ? Which number squared gives that?"
+    ],
+    "ka21m-43": [
+      "The middle numbers 25 and 64 are squares: 5² and 8².",
+      "Make 5 from 6 and 30: 30 ÷ 6 = 5, and 5² = 25 ✓.",
+      "Check: 56 ÷ 7 = 8, and 8² = 64 ✓.",
+      "Now: 72 ÷ 8 = ? Then square it."
+    ],
+    "ka23m-43": [
+      "Each figure is two crossed bars. The middle number comes from the four numbers at the ends.",
+      "Pair each top number with the bottom number across from it on the same bar: 72 with 6, and 21 with 3.",
+      "72 ÷ 6 = 12 and 21 ÷ 3 = 7. 12 + 7 = 19, one less than 20, so add 1.",
+      "Check: 36 ÷ 4 + 40 ÷ 5 + 1 = 9 + 8 + 1 = 18 ✓.",
+      "Now: 48 ÷ 8 + 56 ÷ 7 + 1 = ?"
+    ],
+    "ka23m-45": [
+      "The middle numbers 16, 81 and 36 are squares: 4², 9² and 6².",
+      "Multiply the numbers that face each other, left × right and top × bottom, and take one from the other.",
+      "First figure: 12 × 5 − 8 × 7 = 60 − 56 = 4, and 4² = 16 ✓.",
+      "Check: 5 × 3 − 3 × 2 = 15 − 6 = 9, and 9² = 81 ✓.",
+      "Third figure: 36 = 6², so 7 × 6 − 9 × ? = 6. That is 42 − 9 × ? = 6. What is ??"
+    ],
+    "ka23m-46": [
+      "Each figure has a number in the middle and two pairs of numbers: one pair at the top, one at the bottom.",
+      "In each pair, the right number comes from the left one. Second figure: 2 gives 8, and 4 gives 64.",
+      "2³ = 8 and 4³ = 64, and the middle number is 3. First figure: 2¹ = 2 and 3¹ = 3, with 1 in the middle ✓.",
+      "Third figure: 6 gives 36 and 7 gives 49. Which power is that?"
+    ],
+    "ka2324m-57": [
+      "The number in the middle comes from the four corners.",
+      "Pair the corners across each diagonal: top left with bottom right, and top right with bottom left. Find each difference.",
+      "First square: 7 − 5 = 2 and 3 − 2 = 1. Square them and add: 2² + 1² = 5 ✓.",
+      "Check: 11 − 8 = 3 and 7 − 4 = 3. 3² + 3² = 18 ✓.",
+      "Now: 9 − 7 = 2 and 13 − 6 = 7. 2² + 7² = ?"
+    ],
+    "ka2324m-58": [
+      "The numbers on the arms are all squares: 36 = 6², 16 = 4², 25 = 5², 9 = 3².",
+      "Add their square roots: 6 + 4 + 5 + 3 = 18. The middle is 20, so add 2 more.",
+      "Check the third figure: 14 + 11 + 12 + 13 = 50, and 50 + 2 = 52 ✓.",
+      "Middle figure: 10 + 8 + 9 + 7 + 2 = ?"
+    ],
+    "ka2324m-59": [
+      "Read the column of digits as one number: 1, 7, 2, 8 makes 1728.",
+      "1728 is a cube: 12 × 12 × 12. And the bottom row adds up to 12: 4 + 5 + 3 = 12.",
+      "Check: 2744 = 14³, and 5 + 7 + 2 = 14 ✓.",
+      "Third figure: 4096 = 16³ (16 × 16 = 256 and 256 × 16 = 4096). So 6 + ? + 1 = 16. What is ??"
+    ],
+    "ka2425m-17": [
+      "The numbers inside have decimals (2.5 and 14.5), so the rule has a division in it.",
+      "First circle: 3 at the top, 4 on the left, 2 on the right and 8 at the bottom. Square the top and left numbers and add: 3² + 4² = 25.",
+      "Divide by the right number plus the bottom one: 25 ÷ (2 + 8) = 2.5 ✓.",
+      "Check the third circle: (3² + 7²) ÷ (2 + 2) = 58 ÷ 4 = 14.5 ✓.",
+      "Middle circle: (7² + 5²) ÷ (1 + 3) = ?"
+    ],
+    "ka2425m-19": [
+      "The number in the arrow's tip comes from the numbers in the boxes, but maybe not all of them.",
+      "Try the first and the last box: 2 × 6 = 12. The tip is 4, and 12 ÷ 3 = 4.",
+      "Check: 6 × 10 = 60, and 60 ÷ 3 = 20 ✓.",
+      "Now: 8 × 12 ÷ 3 = ?"
+    ],
+    "ka2526m-85": [
+      "In each row of boxes, the 4th number comes from the first three.",
+      "First row: 12 × 6 = 72, and 72 ÷ 18 = 4 ✓. So: 1st × 3rd ÷ 2nd.",
+      "Check: 14 × 7 ÷ 49 = 98 ÷ 49 = 2 ✓.",
+      "Now: 18 × 5 ÷ 6 = ?"
+    ],
+    "ka2526m-86": [
+      "The corner numbers are all squares: 100 = 10², 121 = 11², 64 = 8². Use their square roots.",
+      "First triangle: the roots are 10 (top), 11 (left) and 8 (right). 11 − 8 = 3, and 10 × 3 = 30 ✓.",
+      "Check: the roots are 11, 16 and 14. 11 × (16 − 14) = 22 ✓.",
+      "Third triangle: the roots are 9, 12 and 10. 9 × (12 − 10) = ?"
+    ],
+    "ka2526m-87": [
+      "The middle numbers (4 and 5) are small and the outside ones are big. Think of multiplying, and of square numbers.",
+      "Pair the numbers that face each other: top with bottom, left with right. Multiply each pair.",
+      "Figure 1: 12 × 6 = 72 and 8 × 7 = 56. 72 − 56 = 16 = 4² ✓.",
+      "Check: 9 × 5 − 10 × 2 = 45 − 20 = 25 = 5² ✓.",
+      "Now: 13 × 5 − 8 × 2 = ? Which number times itself gives that?"
+    ]
+  }
+}

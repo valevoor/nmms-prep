@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { BiLabel } from '../components/Bi'
+import { ClueCard } from '../components/ClueCard'
 import { Explanation } from '../components/Explanation'
 import { LangSwitch } from '../components/LangSwitch'
 import { Options } from '../components/Options'
@@ -10,7 +11,9 @@ import { useCountdown } from '../lib/countdown'
 import { paperQuestions } from '../data/papers'
 import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
+import { cluesFor } from '../lib/clues'
 import { useT } from '../lib/i18n'
+import { byLevel, levelOf } from '../lib/levels'
 import { questionLabel } from '../lib/source'
 import type { Question } from '../types'
 
@@ -22,17 +25,21 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
   const [source, setSource] = useState<Source>(pastOnly(topic) ? 'exam' : 'book')
   const [fresh, setFresh] = useState<Question[]>(() => (topic.generate ? [topic.generate()] : []))
   // Past-paper questions filed under this chapter; the button only shows when there are some.
-  const exam = useMemo(() => paperQuestions(topic.id), [topic.id])
-  const list = source === 'book' ? topic.questions : source === 'exam' ? exam : fresh
+  const exam = useMemo(() => byLevel(paperQuestions(topic.id)), [topic.id])
+  // Easiest first, where the chapter has levels.
+  const book = useMemo(() => byLevel(topic.questions), [topic.questions])
+  const list = source === 'book' ? book : source === 'exam' ? exam : fresh
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [explained, setExplained] = useState(false)
+  const [clues, setClues] = useState(0)
   const [seconds, setSeconds] = useState(60)
   const [running, setRunning] = useState(false)
   const [timerKey, setTimerKey] = useState(0)
   const left = useCountdown(seconds, running, timerKey, () => setRunning(false))
 
   const q = list[index]
+  const clueCount = cluesFor(q, 'en').length
 
   const go = useCallback(
     (delta: number) => {
@@ -43,6 +50,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
       setIndex(next)
       setRevealed(false)
       setExplained(false)
+      setClues(0)
       setRunning(false)
       setTimerKey((k) => k + 1)
     },
@@ -54,6 +62,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
     setIndex(0)
     setRevealed(false)
     setExplained(false)
+    setClues(0)
     setRunning(false)
     setTimerKey((k) => k + 1)
   }
@@ -69,7 +78,8 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
       } else if (e.key === 'e' || e.key === 'E') {
         setRevealed(true)
         setExplained((x) => !x)
-      } else if (e.key === 't' || e.key === 'T') setRunning((r) => !r)
+      } else if (e.key === 'c' || e.key === 'C') setClues((n) => Math.min(n + 1, clueCount))
+      else if (e.key === 't' || e.key === 'T') setRunning((r) => !r)
       else if (e.key === 'f' || e.key === 'F') {
         if (document.fullscreenElement) void document.exitFullscreen()
         else void document.documentElement.requestFullscreen?.()
@@ -77,7 +87,7 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [go])
+  }, [go, clueCount])
 
   return (
     <Page
@@ -127,14 +137,14 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
       <section className="card question class-card">
         <div className="q-head">
           <span>
-            {q.paper && <span className="chip chip-exam">{t.common.realExam}</span>} {source === 'fresh' ? t.classroom.newQuestion : questionLabel(q, t)} · {index + 1}
+            {q.paper && <span className="chip chip-exam">{t.common.realExam}</span>}{levelOf(q) && <span className="chip chip-level" title={t.common.levelOf(levelOf(q)!)} aria-label={t.common.levelOf(levelOf(q)!)}>{t.common.level(levelOf(q)!)}</span>} {source === 'fresh' ? t.classroom.newQuestion : questionLabel(q, t)} · {index + 1}
             {source !== 'fresh' && t.classroom.of(list.length)}
           </span>
           <span className="muted">
             <BiLabel get={(d) => askLabel(d, topic)} />
           </span>
         </div>
-        <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} />
+        <QuestionStem q={q} size="lg" reveal={revealed ? q.options[q.answer] : undefined} extra={<ClueCard key={q.id} q={q} shown={clues} onShow={setClues} size="lg" />} />
         <Options q={q} size="lg" reveal={revealed} />
         {explained && <Explanation q={q} size="lg" />}
       </section>
@@ -157,7 +167,12 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
         </button>
       </div>
       <p className="kbd-help muted">
-        {t.classroom.keys} <kbd>Space</kbd> {t.classroom.keyReveal} · <kbd>E</kbd> {t.classroom.keyExplain} · <kbd>←</kbd> <kbd>→</kbd> {t.classroom.keyMove} · <kbd>T</kbd>{' '}
+        {t.classroom.keys} <kbd>Space</kbd> {t.classroom.keyReveal} · <kbd>E</kbd> {t.classroom.keyExplain} ·{' '}
+        {clueCount > 0 && (
+          <>
+            <kbd>C</kbd> {t.clues.keyClue} ·{' '}
+          </>
+        )}<kbd>←</kbd> <kbd>→</kbd> {t.classroom.keyMove} · <kbd>T</kbd>{' '}
         {t.classroom.keyTimer} · <kbd>F</kbd> {t.classroom.keyFull}
       </p>
     </Page>

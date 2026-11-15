@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { useT } from '../lib/i18n'
 import { useQuestionTexts } from '../lib/i18n/content'
 import { BiBlock } from './Bi'
@@ -12,28 +13,39 @@ interface Props {
   /** Answer text to write into the series' blank(s). */
   reveal?: string
   size?: 'md' | 'lg'
+  /** Shown under the question's figure or table, or under the question when it has neither (the clue card). */
+  extra?: ReactNode
 }
 
 /** The question itself: a series or analogy, or (layout 'text') a sentence with an optional table and sequence. */
-export function QuestionStem({ q, reveal, size = 'md' }: Props) {
+export function QuestionStem({ q, reveal, size = 'md', extra }: Props) {
   const { first, second, lang, otherLang } = useQuestionTexts(q)
   const t = useT()
-  if (q.figures && q.layout !== 'text') return <FigureStem q={q} reveal={!!reveal} size={size} />
+  if (q.figures && q.layout !== 'text')
+    return (
+      <>
+        <FigureStem q={q} reveal={!!reveal} size={size} />
+        {extra}
+      </>
+    )
   if (q.layout !== 'text')
     return (
       <>
         <NumberGrid q={q} />
         {q.pyramid && <PyramidView rows={q.pyramid} />}
         <SeriesView terms={q.terms} reveal={reveal} size={size} layout={q.layout} />
+        {extra}
       </>
     )
   // A number matrix is drawn as a boxed grid, and the answer is written into its blank(s).
   const matrix = q.pattern.startsWith('mx-')
   const fills = matrix && reveal ? reveal.split(', ') : []
   let blank = 0
+  const hasFig = !!q.figures && q.figures.terms.length > 0
   return (
     <div className={`stem stem-${size}`}>
-      {q.figures && q.figures.terms.length > 0 && <FigureStem q={q} size={size} />}
+      {hasFig && <FigureStem q={q} size={size} />}
+      {hasFig && extra}
       {q.table && q.pattern.startsWith('lv-') && (
         <div className="key-tables">
           {[q.table, q.table2].filter(Boolean).map((table, n) => (
@@ -41,6 +53,7 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
           ))}
         </div>
       )}
+      {!hasFig && q.table && q.pattern.startsWith('lv-') && extra}
       {q.table && !q.pattern.startsWith('lv-') && (
         <table className={matrix ? 'matrix-table' : 'code-table'}>
           <tbody>
@@ -59,9 +72,11 @@ export function QuestionStem({ q, reveal, size = 'md' }: Props) {
           </tbody>
         </table>
       )}
+      {!hasFig && q.table && !q.pattern.startsWith('lv-') && extra}
       {first.prompt && <BiBlock className="stem-prompt" text={first.prompt} other={second?.prompt} lang={lang} otherLang={otherLang} />}
       {/* "= 11" stays on one line when an equation wraps. */}
       {q.terms.length > 0 && <p className="stem-seq">{q.terms.join('\u2002').replace(/ = /g, ' =\u00a0')}</p>}
+      {!hasFig && !q.table && extra}
     </div>
   )
 }

@@ -52,6 +52,8 @@ export const en = {
     /** Past-paper questions: "Karnataka 2020-21 · Q2". */
     paperQ: (state: string, year: string, n: number | undefined) => `${state} ${year} · Q${n}`,
     realExam: 'Real exam',
+    level: (n: number) => ['Easy', 'Medium', 'Harder', 'Hardest'][n - 1],
+    levelOf: (n: number) => `Level ${n} of 4`,
     keyOfficial: 'answer from the official key',
     keyWorkedOutPaper: 'answer worked out by us (the paper has no answer key)',
     states: { karnataka: 'Karnataka' },
@@ -515,6 +517,17 @@ export const en = {
     changes: 'Which characters change?',
     same: 'same',
     looksLike: (ch: string) => `looks like ${ch}`,
+  },
+  clues: {
+    need: '💡 Need a clue?',
+    title: (n: number, m: number) => `💡 Clue ${n} of ${m}`,
+    back: '‹ Back',
+    next: 'Next clue ›',
+    used: (n: number, m: number) => `💡 You used ${n} of ${m} clues.`,
+    wrongFirst: '✗ Not quite. Want a clue before you see the answer?',
+    tryWithClue: '💡 Try again with a clue',
+    showAnswer: 'Show the answer',
+    keyClue: 'clue',
   },
   practice: {
     book: 'Book',

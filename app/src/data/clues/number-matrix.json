@@ -1,0 +1,198 @@
+{
+  "topic": "number-matrix",
+  "_note": "Step-by-step clues for Number Matrix (Chapter 27): the book questions and the past-paper questions filed under the chapter, by question id. Each list goes from which way to look (rows or columns), to the rule shown on a complete row or column, to the blank set up but not worked out. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "nm-b01": [
+      "Look along each row. The 1st numbers 27, 125 and 8 are cubes: 3³, 5³ and 2³.",
+      "Make 3 from the other two numbers in row 1, 6 and 9. Try taking one from the other.",
+      "Row 1: 9 − 6 = 3, and 3³ = 27 ✓. Row 2: 8 − 3 = 5, and 5³ = 125 ✓.",
+      "Row 3: 8 = 2³, so ? − 4 = 2. What is ??"
+    ],
+    "nm-b02": [
+      "Look along each row. The 1st and 3rd numbers are squares: 9 = 3², 36 = 6², 49 = 7², 121 = 11².",
+      "Use their square roots. Row 2: the roots are 3 and 6, and the middle number is 9.",
+      "3 + 6 = 9 ✓. Row 3: 7 + 11 = 18 ✓.",
+      "Row 1: √4 + √25 = ?"
+    ],
+    "nm-b03": [
+      "Look down each column this time. The bottom number comes from the two above it.",
+      "Column 1 is 5, 11, 21. 5 + 11 = 16, which is 5 short of 21. So the 5 is used twice.",
+      "5 × 2 + 11 = 21 ✓. Column 2: 8 × 2 + 17 = 33 ✓.",
+      "Column 3: 7 × 2 + 15 = ?"
+    ],
+    "nm-b04": [
+      "Look along each row. The last numbers 25, 36 and 64 are squares: 5², 6² and 8².",
+      "Make 5 in row 1 from 11 and 12. Try adding all their digits.",
+      "1 + 1 + 1 + 2 = 5, and 5² = 25 ✓. Row 2: 2 + 1 + 3 + 0 = 6, and 6² = 36 ✓.",
+      "Row 3: 64 = 8², and the digits of 32 add up to 5. So the digits of ? add up to 3. Which option is that?"
+    ],
+    "nm-b05": [
+      "Look down each column. The bottom number comes from the two above it.",
+      "Column 1 is 2, 3, 17. Try powers: 2³ = 8 and 3² = 9.",
+      "2³ + 3² = 8 + 9 = 17 ✓. Column 2: 3³ + 2² = 27 + 4 = 31 ✓.",
+      "Column 3: ?³ + 3² = 36, so ?³ = 27. What is ??"
+    ],
+    "nm-b06": [
+      "Change each letter to its place in the alphabet: A = 1, B = 2 … Z = 26.",
+      "Column 1 is T, O, E: that is 20, 15, 5. Look down each column.",
+      "20 − 15 = 5 ✓: top − middle = bottom. Column 2: Z − P = 26 − 16 = 10, which is J ✓.",
+      "Column 3: V − G = 22 − 7 = ? Which letter is at that place?"
+    ],
+    "nm-b07": [
+      "Look down each column. It has four numbers: the bottom one comes from the three above it.",
+      "Column 2 is 1, 22, 2, 23. 22 + 2 = 24, and 24 − 1 = 23.",
+      "So 2nd + 3rd − 1st = 4th. Column 3: 40 + 5 − 2 = 43 ✓.",
+      "Column 1: 21 + 1 − ? = 20. What is ??"
+    ],
+    "nm-b08": [
+      "Look down each column. The bottom numbers are big, so try multiplying the three above them.",
+      "Column 1: 9 × 5 × 3 = 135 ✓.",
+      "Check column 2: 5 × 7 × 4 = 140 ✓.",
+      "Column 3: 6 × ? × 5 = 150, so 30 × ? = 150. What is ??"
+    ],
+    "nm-b09": [
+      "Look along each row. The middle number sits between the other two.",
+      "Row 1: 26, 32, 38 goes up by 6 each time, so the middle is halfway.",
+      "(26 + 38) ÷ 2 = 32 ✓. Row 2: (13 + 25) ÷ 2 = 19 ✓.",
+      "Row 3: (24 + 36) ÷ 2 = ?"
+    ],
+    "nm-b10": [
+      "Look along each row. The 3rd number is big, so think of squares and cubes of the first two.",
+      "Row 1: 2³ = 8 and 4² = 16.",
+      "8 + 16 = 24 ✓. Row 2: 5³ + 7² = 125 + 49 = 174 ✓.",
+      "Row 3: 6³ + 3² = ?"
+    ],
+    "nm-b11": [
+      "Two numbers are missing. Look along each row: the 3rd and the 4th numbers each come from one earlier number.",
+      "Row 1: 69 = 23 × 3, and 9 = 6 + 3.",
+      "Check row 2: 29 × 3 = 87 ✓ and 10 + 3 = 13 ✓.",
+      "Row 3: the 3rd number is 37 × 3 = ? and the 4th is 5 + 3 = ?"
+    ],
+    "nm-b12": [
+      "Look down each column. The bottom number comes from the three above it.",
+      "Column 1 is 2, 6, 9, 50. 6 × 9 = 54, which is 4 more than 50, and 4 = 2².",
+      "So 2nd × 3rd − (1st)² = 4th. Column 3: 2 × 24 − 5² = 48 − 25 = 23 ✓.",
+      "Column 2: 8 × 15 − 4² = ?"
+    ],
+    "nm-b13": [
+      "Look along each row. The 3rd number comes from the first two.",
+      "Row 1: 11 × 2 = 22, and 30 − 22 = 8, which is half of 16.",
+      "So 1st ÷ 2 + 2nd × 2 = 3rd. Row 3: 32 ÷ 2 + 15 × 2 = 16 + 30 = 46 ✓.",
+      "Row 2: ? ÷ 2 + 13 × 2 = 36, so ? ÷ 2 = 10. What is ??"
+    ],
+    "nm-b14": [
+      "Look along each row. Here no number is made from the others: compare whole rows.",
+      "Multiply row 1: 14 × 8 × 7 = 784.",
+      "Row 2: 7 × 16 × 7 = 784 too. Every row multiplies to 784.",
+      "Row 3: ? × 4 × 7 = 784, so ? × 28 = 784. What is ??"
+    ],
+    "nm-b15": [
+      "Look down each column. The bottom number comes from the two above it.",
+      "Column 1: 5 × 8 = 40, and 40 − 35 = 5, the top number.",
+      "So top × middle − top = bottom. Column 2: 3 × 10 − 3 = 27 ✓.",
+      "Column 3: 3 × 8 − 3 = ?"
+    ],
+    "ka1920m-35": [
+      "Look along each row. Each row goes up or down by the same step.",
+      "Row 1: 12, 23, 34 goes up by 11. Row 3: 41, 28, 15 goes down by 13.",
+      "Row 2 starts at 9 and ends at 27, so it goes up in two equal steps.",
+      "One step is (27 − 9) ÷ 2. Then ? is 9 plus one step. What is ??"
+    ],
+    "ka1920m-36": [
+      "Look along each row, and add up each complete row.",
+      "Row 1: 23 + 45 + 43 = 111.",
+      "Row 2: 36 + 47 + 28 = 111 too. Every row adds up to 111.",
+      "Row 3: 42 + 46 + ? = 111. What is ??"
+    ],
+    "ka1920m-37": [
+      "Look along each row. The 3rd number is big, so think of squares and cubes of the first two.",
+      "Row 1: 2³ = 8 and 4² = 16.",
+      "8 + 16 = 24 ✓. Row 2: 3³ + 5² = 27 + 25 = 52 ✓.",
+      "Row 3: 6³ + 8² = ?"
+    ],
+    "ka21m-29": [
+      "Look along each row. The 1st number is bigger than the other two, so try multiplying them.",
+      "Row 1: 8 × 7 = 56, and 56 = 2 × 28.",
+      "Row 2: 6 × 9 = 54 = 2 × 27 ✓. So 2nd × 3rd = 2 × 1st.",
+      "Row 3: ? × 5 = 2 × 25. What is ??"
+    ],
+    "ka21m-32": [
+      "Look along each row. The middle number comes from the 1st and the 3rd.",
+      "Row 1: 5 × 7 = 35, which is 12 short of 47. And 12 = 5 + 7.",
+      "So 1st × 3rd + 1st + 3rd = middle. Row 3: 7 × 8 + 7 + 8 = 71 ✓.",
+      "Row 2: 6 × 4 + 6 + 4 = ?"
+    ],
+    "ka21m-33": [
+      "Look down each column. The bottom number comes from the two above it.",
+      "Column 1 is 2, 3, 17. Try powers: 2³ = 8 and 3² = 9.",
+      "2³ + 3² = 8 + 9 = 17 ✓. Column 2: 3³ + 2² = 27 + 4 = 31 ✓.",
+      "Column 3: ?³ + 3² = 36, so ?³ = 27. What is ??"
+    ],
+    "ka23m-15": [
+      "Look along each row. Try adding the digits of each number.",
+      "Row 1: the digits of 23 add up to 5, and the digits of 15 add up to 6.",
+      "5 × 6 = 30 ✓. Row 2: (2 + 7) × (2 + 2) = 9 × 4 = 36 ✓.",
+      "Row 3: (3 + 6) × (1 + 4) = ?"
+    ],
+    "ka23m-16": [
+      "Look along each row. The middle number comes from the 1st and the 3rd. It is big, so think of squares and cubes.",
+      "Row 1: 3³ = 27 and 2² = 4.",
+      "27 + 4 = 31 ✓. Row 3: 7³ + 6² = 343 + 36 = 379 ✓.",
+      "Row 2: 5³ + 4² = ?"
+    ],
+    "ka23m-17": [
+      "Look down each column. The bottom number comes from the three above it.",
+      "Column 1: 5 × 2 × 8 = 80, and the bottom number 40 is half of that.",
+      "Column 2: 5 × 4 × 3 = 60, and half of 60 is 30 ✓.",
+      "Column 3: 2 × 1 × 10 = 20. What is half of it?"
+    ],
+    "ka2324m-20": [
+      "Look along each row. The middle number comes from the 1st and the 3rd.",
+      "Row 1: 11 × 7 = 77, which is 5 short of 82.",
+      "So 1st × 3rd + 5 = middle. Row 2: 9 × 6 + 5 = 59 ✓.",
+      "Row 3: 12 × 7 + 5 = ?"
+    ],
+    "ka2324m-21": [
+      "Look along each row. The 3rd numbers 125 and 216 are cubes: 5³ and 6³.",
+      "Make 5 from 18 and 13: 18 − 13 = 5.",
+      "So (1st − 2nd)³ = 3rd. Row 3: (23 − 17)³ = 6³ = 216 ✓.",
+      "Row 2: (24 − 15)³ = ?"
+    ],
+    "ka2324m-22": [
+      "Look along each row. The 3rd number comes from the first two.",
+      "Row 2: 6² = 36, and 48 − 36 = 12, which is half of 24.",
+      "So (2nd)² + 1st ÷ 2 = 3rd. Row 3: 5² + 18 ÷ 2 = 25 + 9 = 34 ✓.",
+      "Row 1: 7² + 16 ÷ 2 = ?"
+    ],
+    "ka2425m-75": [
+      "Look along each row, and add up each complete row.",
+      "Row 1: 18 + 13 + 31 = 62.",
+      "Row 2: 25 + 18 + 19 = 62 too. Every row adds up to 62.",
+      "Row 3: 21 + 29 + ? = 62. What is ??"
+    ],
+    "ka2425m-76": [
+      "Look down each column. Each column goes up or down by the same step.",
+      "Column 1: 13, 16, 19 goes up by 3. Column 3: 17, 14, 11 goes down by 3.",
+      "Column 2 goes from 10 to 24 in two equal steps, so one step is (24 − 10) ÷ 2 = 7.",
+      "So ? is 10 plus one step. What is ??"
+    ],
+    "ka2425m-77": [
+      "Look along each row. The middle number comes from the 1st and the 3rd.",
+      "Row 1: 3 × 7 = 21 and 2 × 4 = 8. 21 + 8 = 29.",
+      "So 3 × 1st + 2 × 3rd = middle. Row 2: 3 × 11 + 2 × 8 = 33 + 16 = 49 ✓.",
+      "Row 3: 3 × ? + 2 × 9 = 57, so 3 × ? = 39. What is ??"
+    ],
+    "ka2526m-55": [
+      "Look along each row. The middle number comes from the 1st and the 3rd.",
+      "Row 1: 4 × 5 = 20 and 3 × 4 = 12. 20 + 12 = 32.",
+      "So 4 × 1st + 3 × 3rd = middle. Row 3: 4 × 7 + 3 × 6 = 28 + 18 = 46 ✓.",
+      "Row 2: 4 × 9 + 3 × 3 = ?"
+    ],
+    "ka2526m-56": [
+      "Look along each row. The 3rd numbers 512 and 125 are cubes: 8³ and 5³.",
+      "Use the cube roots. Row 2: 16 and 8 (the cube root of 512). The middle number 12 is halfway between them.",
+      "(16 + 8) ÷ 2 = 12 ✓. Row 3: (9 + 5) ÷ 2 = 7 ✓.",
+      "Row 1: 343 = 7³, so ? = (13 + 7) ÷ 2. What is ??"
+    ]
+  }
+}
