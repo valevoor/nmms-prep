@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { PAPER_FILES } from '../data/papers'
+import { PAPER_FILES, paperQuestions } from '../data/papers'
 import { SAT_TOPICS, SECTION_SUBJECT, satSolved } from '../data/sat'
 import { READY_TOPICS, getTopic } from '../data/topics'
 import { answerOf, available, buildMock, byChapter, byTest, chapterShares, mockSeconds, newMock, satRef, scoreMock, shares, slowestChapter } from './mock'
@@ -81,8 +81,13 @@ describe('MAT', () => {
     checkItems(items)
   })
 
-  it('gives fewer questions when chosen chapters without a generator run out', () => {
-    const t = READY_TOPICS.find((x) => !x.generate)!
+  it('never asks a generated question', () => {
+    const ids = new Set(READY_TOPICS.flatMap((t) => [...t.questions, ...paperQuestions(t.id)].map((q) => q.id)))
+    for (const seed of [1, 2, 3]) for (const x of buildMock({ tests: ['mat'], length: 90 }, seeded(seed))) expect(ids.has(x.q!.id)).toBe(true)
+  })
+
+  it('gives fewer questions when chosen chapters run out', () => {
+    const t = READY_TOPICS.find((x) => x.id === 'calendar')!
     const n = available('mat', [t.id])
     const items = buildMock({ tests: ['mat'], length: 90, mat: [t.id] }, seeded(4))
     expect(n).toBeLessThan(90)

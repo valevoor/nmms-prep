@@ -2,8 +2,8 @@
  * Mock exam (/mock): a paper under one clock, a minute per question, as in the real exam. The student picks
  * MAT, SAT or both (MAT comes first, as in the exam), all chapters or only some, and the length.
  *
- * MAT, all chapters: a mixed paper takes each chapter's share of the past papers' questions, from the book,
- * the past papers and the chapter's generator; or a real past paper as printed (questions under review left out).
+ * MAT, all chapters: a mixed paper takes each chapter's share of the past papers' questions, from the book and
+ * the past papers only (never generated questions); or a real past paper as printed (questions under review left out).
  *
  * SAT, all topics: the real paper's subjects (35 science, 35 social science, 20 maths in a full paper),
  * each subject's topics in the same mix as the past papers. Only questions with an answer are asked: the
@@ -33,8 +33,6 @@ export type MockLength = (typeof LENGTHS)[number]
 export const PASS_PERCENT = 40
 /** A real paper gets the real exam's time, whatever its count after questions under review are left out. */
 const PAPER_MINUTES = 90
-/** In a mixed MAT paper, about this share of each chapter's questions is newly generated (where it has a generator). */
-const GENERATED_SHARE = 0.4
 /** The SAT paper's subjects, in the paper's order (science, social science, maths), and their share of a full paper. */
 export const SAT_SPLIT: [SatSubject, number][] = [
   ['science', 35],
@@ -53,7 +51,7 @@ export interface MockConfig {
   length: MockLength
 }
 
-/** A question of the exam. A MAT question is stored whole (generated ones exist nowhere else); a SAT one by where it is. */
+/** A question of the exam. A MAT question is stored whole (exams saved before generated questions were dropped hold some); a SAT one by where it is. */
 export interface MockItem {
   /** A MAT chapter id or a SAT topic id. */
   topic: string
@@ -157,28 +155,19 @@ const matPool = (id: string): Question[] => [...(getTopic(id)?.questions ?? []),
 export function chapterShares(total: number, chosen?: string[]): { topic: string; n: number }[] {
   const rows = READY_TOPICS.filter((t) => !chosen || chosen.includes(t.id))
     .sort((a, b) => a.chapter - b.chapter)
-    .map((t) => ({ topic: t.id, weight: paperQuestions(t.id).length || (chosen ? 1 : 0), cap: t.generate ? Infinity : matPool(t.id).length }))
+    .map((t) => ({ topic: t.id, weight: paperQuestions(t.id).length || (chosen ? 1 : 0), cap: matPool(t.id).length }))
     .filter((x) => x.weight > 0)
   return shares(rows, total)
     .filter((x) => x.n > 0)
     .map(({ topic, n }) => ({ topic, n }))
 }
 
-/** A chapter's questions for a mixed MAT paper: some generated, the rest from the book and past papers, never the same one twice. */
+/** A chapter's questions for a mixed MAT paper: from the book and past papers, never the same one twice. */
 function chapterQuestions(topicId: string, n: number, rng: () => number): Question[] {
-  const topic = getTopic(topicId)
-  if (!topic) return []
-  const pool = shuffle(matPool(topicId), rng)
   const seen = new Set<string>()
   const out: Question[] = []
-  while (out.length < n) {
-    const fresh = topic.generate && (rng() < GENERATED_SHARE || pool.length === 0)
-    if (fresh) {
-      out.push(topic.generate!(rng))
-      continue
-    }
-    const q = pool.pop()
-    if (!q) break
+  for (const q of shuffle(matPool(topicId), rng)) {
+    if (out.length >= n) break
     if (seen.has(q.id)) continue
     seen.add(q.id)
     out.push(q)
@@ -240,9 +229,9 @@ export function buildMock(c: MockConfig, rng: () => number = Math.random): MockI
   return [...(c.tests.includes('mat') ? matItems(c, rng) : []), ...(c.tests.includes('sat') ? satItems(c, rng) : [])]
 }
 
-/** How many questions a choice of chapters can give a test (generated MAT chapters never run out). */
+/** How many questions a choice of chapters can give a test. */
 export function available(test: MockTest, chosen: string[]): number {
-  if (test === 'mat') return chosen.reduce((s, id) => s + (getTopic(id)?.generate ? Infinity : matPool(id).length), 0)
+  if (test === 'mat') return chosen.reduce((s, id) => s + new Set(matPool(id).map((q) => q.id)).size, 0)
   return chosen.reduce((s, id) => s + (getSatTopic(id) ? satSolved(getSatTopic(id)!).length : 0), 0)
 }
 
