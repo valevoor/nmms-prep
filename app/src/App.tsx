@@ -30,6 +30,7 @@ import type { SatPracticeMode } from './pages/SatPractice'
 import { Practice } from './pages/Practice'
 import type { PracticeMode } from './pages/Practice'
 import { QuickTest } from './pages/QuickTest'
+import { MockExam } from './pages/MockExam'
 import { GuessRule } from './pages/GuessRule'
 
 const MODES: PracticeMode[] = ['book', 'exam', 'more', 'mistakes']
@@ -83,6 +84,12 @@ export default function App() {
   }, [parts.length])
 
   if (home || parts.length === 0) return <Home />
+  if (kind === 'mock' && parts.length === 1)
+    return (
+      <TopicIdContext.Provider value="mock">
+        <MockExam />
+      </TopicIdContext.Provider>
+    )
   if (kind === 'facts' && parts.length <= 2) {
     const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
     return tab ? <Facts tab={tab} /> : <NotFound />

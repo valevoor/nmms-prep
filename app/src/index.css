@@ -2915,6 +2915,28 @@ kbd {
   cursor: pointer;
 }
 
+/* Home's version: shows the current language and theme ("EN | ☀️ ▾"). */
+.settings-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.settings-chip-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+}
+
+.settings-chip-caret {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .settings-btn.on,
 .settings-btn:hover {
   border-color: var(--primary);
@@ -4703,4 +4725,451 @@ kbd {
 
 .revise-chapter:first-child {
   margin-top: 0;
+}
+
+/* ---------- mock exam (/mat/mock, pages/MockExam.tsx) ---------- */
+
+.mock-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* On a phone the bar has no room for the name; the link keeps it as its label. */
+@media (max-width: 460px) {
+  .mock-link {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .mock-link-text {
+    display: none;
+  }
+}
+
+.mock-link:hover {
+  background: var(--surface);
+}
+
+/* An exam waiting to be resumed. */
+.mock-link-open::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.mock-resume {
+  border-color: var(--primary);
+}
+
+.mock-resume h2,
+.mock-grid h2,
+.mock-chapters h2 {
+  font-size: 1.1rem;
+}
+
+.mock-choice {
+  margin: 0 0 14px;
+  padding: 0;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.mock-choice legend {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px 16px 6px;
+  font-weight: 700;
+}
+
+.mock-option {
+  clear: both;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 12px;
+  align-items: start;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.mock-option input {
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--primary);
+}
+
+.mock-option > span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.mock-option > span > span {
+  font-size: 0.88rem;
+}
+
+.mock-option.on {
+  background: var(--primary-soft);
+}
+
+.mock-done {
+  color: var(--good);
+  font-weight: 600;
+}
+
+.mock-more {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mock-length {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mock-length .mock-option + .mock-option {
+  border-left: 1px solid var(--border);
+}
+
+.mock-start {
+  width: 100%;
+}
+
+.mock-note {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.mock-confirm {
+  border-color: var(--text);
+}
+
+.mock-confirm h3 {
+  margin-bottom: 4px;
+}
+
+.mock-confirm p {
+  margin: 0;
+}
+
+.mock-history {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mock-history li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 16px;
+}
+
+.mock-history li + li {
+  border-top: 1px solid var(--border);
+}
+
+.mock-history strong {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.meter.mock-clock {
+  height: 4px;
+  margin: 0 0 12px;
+}
+
+.mock-clock .meter-fill {
+  background: var(--primary);
+}
+
+.mock-mark {
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.mock-mark.on,
+.pal.pal-marked {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent-ink);
+}
+
+.mock-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 12px;
+  font-size: 0.85rem;
+}
+
+.mock-key span {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.mock-key .pal-marked {
+  margin-left: 10px;
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.meter.mock-pass {
+  position: relative;
+  overflow: visible;
+  height: 12px;
+  margin: 8px 8px 12px;
+}
+
+.mock-pass-line {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 2px;
+  background: var(--text);
+}
+
+.mock-chapters {
+  padding: 0;
+  overflow: hidden;
+}
+
+.mock-chapters > h2,
+.mock-chapters > p {
+  margin: 0;
+  padding: 0 16px;
+}
+
+.mock-chapters > h2 {
+  padding-top: 16px;
+}
+
+.mock-chapters > p {
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.mock-chapters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mock-chapters a {
+  display: grid;
+  grid-template-columns: 1fr auto 16px;
+  column-gap: 10px;
+  row-gap: 6px;
+  align-items: center;
+  min-height: 60px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.mock-chapters a:hover {
+  background: var(--surface-2);
+}
+
+.mock-chapters .meter {
+  grid-column: 1 / 3;
+}
+
+.mock-chapters .chapter-row-go {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+.mock-ch-name {
+  font-weight: 600;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.mock-ch-score {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.meter-fill.mock-weak {
+  background: var(--bad);
+}
+
+.meter-fill.mock-mid {
+  background: var(--accent);
+}
+
+.mock-actions {
+  margin: 0 0 8px;
+}
+
+.mock-actions .btn {
+  flex: 1;
+}
+
+.mock-lengths {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mock-lengths .mock-option {
+  grid-template-columns: 1fr;
+  gap: 4px;
+  justify-items: start;
+}
+
+.mock-lengths .mock-option + .mock-option {
+  border-left: 1px solid var(--border);
+}
+
+.mock-pickers {
+  clear: both;
+  border-top: 1px solid var(--border);
+}
+
+.mock-picker + .mock-picker {
+  border-top: 1px solid var(--border);
+}
+
+.mock-picker summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-picker summary .muted {
+  font-weight: 400;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.mock-picker-tools {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 8px;
+}
+
+.mock-picker-tools button {
+  min-height: 40px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.mock-picker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+}
+
+.mock-picker label {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 48px;
+  padding: 6px 16px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.mock-picker input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.mock-warn {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.95rem;
+}
+
+/* With MAT and SAT together, the first SAT question starts a new row of the grid. */
+.pal.pal-break {
+  grid-column-start: 1;
+}
+
+.mock-tests {
+  margin: 8px 0 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mock-pass-ok {
+  color: var(--good);
+}
+
+.mock-pass-no {
+  color: var(--bad);
+}
+
+.mock-subjects h2 {
+  font-size: 1.1rem;
 }

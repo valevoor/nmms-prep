@@ -1,8 +1,5 @@
 import { useT } from '../lib/i18n'
-import { setTheme, THEME_ORDER, useTheme } from '../lib/theme'
-import type { ThemeChoice } from '../lib/theme'
-
-const ICONS: Record<ThemeChoice, string> = { light: '☀️', dark: '🌙', auto: '🌓' }
+import { setTheme, THEME_ICONS, THEME_ORDER, useTheme } from '../lib/theme'
 
 /** Light / Dark / Auto. Starts on Light; "Auto" follows the phone's setting. */
 export function ThemeSwitch() {
@@ -21,7 +18,7 @@ export function ThemeSwitch() {
           title={tr.settings[t]}
           aria-label={tr.settings[t]}
         >
-          <span aria-hidden>{ICONS[t]}</span>
+          <span aria-hidden>{THEME_ICONS[t]}</span>
           <span className="theme-name">{tr.settings[t]}</span>
         </button>
       ))}

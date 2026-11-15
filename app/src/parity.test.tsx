@@ -29,7 +29,7 @@ vi.mock('react', async (orig) => {
   const r = await orig<typeof import('react')>()
   return { ...r, useSyncExternalStore: <T,>(s: (l: () => void) => () => void, get: () => T, server?: () => T) => r.useSyncExternalStore(s, get, server ?? get) }
 })
-vi.mock('./lib/theme', () => ({ THEME_ORDER: ['light', 'dark', 'auto'], useTheme: () => 'light', setTheme: () => {} }))
+vi.mock('./lib/theme', () => ({ THEME_ORDER: ['light', 'dark', 'auto'], THEME_ICONS: { light: '☀️', dark: '🌙', auto: '🌓' }, useTheme: () => 'light', setTheme: () => {} }))
 const route = vi.hoisted(() => ({ path: '' }))
 vi.mock('./lib/router', () => ({
   href: (p: string) => `/${p.replace(/^\//, '')}`,

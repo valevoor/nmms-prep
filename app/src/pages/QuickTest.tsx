@@ -172,7 +172,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
   const q = qs[index]
   const answered = Object.keys(answers).length
   return (
-    <Page title={t.test.title} back="mat" right={<TimerBadge left={left} total={SECONDS} />}>
+    <Page title={t.test.title} back="mat" right={<TimerBadge left={left} total={SECONDS} />} hideMock>
       <section className="card question">
         <div className="q-head">
           <span>{t.test.questionOf(index + 1, qs.length)}</span>

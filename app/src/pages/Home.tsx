@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { ChapterArt } from '../components/ChapterArt'
-import { LangSwitch } from '../components/LangSwitch'
 import { Page } from '../components/Page'
 import { Rich } from '../components/Rich'
-import { ThemeSwitch } from '../components/ThemeSwitch'
+import { SettingsMenu } from '../components/SettingsMenu'
 import { READY_TOPICS, UPCOMING_MAT, getTopic } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { useLocale, useT } from '../lib/i18n'
@@ -268,12 +267,7 @@ export function Home() {
   return (
     <Page
       title={t.home.title}
-      right={
-        <div className="topbar-switches">
-          <LangSwitch />
-          <ThemeSwitch />
-        </div>
-      }
+      right={<SettingsMenu chip />}
     >
       <TestSwitch sat={sat} />
       {sat ? (

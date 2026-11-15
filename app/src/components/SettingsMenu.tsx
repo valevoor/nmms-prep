@@ -1,16 +1,20 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { useBothAvailable, useT } from '../lib/i18n'
+import { useBothAvailable, useLocale, useT } from '../lib/i18n'
 import { onRouteChange } from '../lib/router'
+import { THEME_ICONS, useTheme } from '../lib/theme'
 import { BothToggle } from './Bi'
 import { LangSwitch } from './LangSwitch'
 import { ThemeSwitch } from './ThemeSwitch'
 
 /**
  * The "Aa" button in the top bar of every page but Home, which opens the language and theme
- * switches (and EN+ಕ where a chapter offers it). Home shows the switches themselves.
+ * switches (and EN+ಕ where a chapter offers it). On Home (`chip`) the button shows the current
+ * language and theme instead ("EN | ☀️ ▾"), so a first-time visitor can see where to change them.
  */
-export function SettingsMenu() {
+export function SettingsMenu({ chip = false }: { chip?: boolean }) {
   const t = useT()
+  const locale = useLocale()
+  const theme = useTheme()
   const both = useBothAvailable()
   const [open, setOpen] = useState(false)
   const box = useRef<HTMLDivElement>(null)
@@ -43,14 +47,27 @@ export function SettingsMenu() {
       <button
         ref={button}
         type="button"
-        className={`settings-btn${open ? ' on' : ''}`}
+        className={`settings-btn${chip ? ' settings-chip' : ''}${open ? ' on' : ''}`}
         aria-expanded={open}
         aria-controls={id}
-        aria-label={t.settings.title}
+        aria-label={chip ? `${t.settings.title}: ${locale === 'en' ? 'English' : 'ಕನ್ನಡ'}, ${t.settings[theme]}` : t.settings.title}
         title={t.settings.title}
         onClick={() => setOpen((o) => !o)}
       >
-        <span aria-hidden>Aa</span>
+        {chip ? (
+          <>
+            <span aria-hidden lang={locale}>
+              {locale === 'en' ? 'EN' : 'ಕ'}
+            </span>
+            <span className="settings-chip-sep" aria-hidden />
+            <span aria-hidden>{THEME_ICONS[theme]}</span>
+            <span className="settings-chip-caret" aria-hidden>
+              ▾
+            </span>
+          </>
+        ) : (
+          <span aria-hidden>Aa</span>
+        )}
       </button>
       {open && (
         <div className="settings-panel" id={id} role="group" aria-label={t.settings.title}>

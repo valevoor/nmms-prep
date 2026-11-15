@@ -5,6 +5,7 @@ export type ThemeChoice = 'light' | 'dark' | 'auto'
 /** Same key as the inline script in index.html, which applies the theme before first paint. */
 const KEY = 'nmms-theme'
 export const THEME_ORDER: ThemeChoice[] = ['light', 'dark', 'auto']
+export const THEME_ICONS: Record<ThemeChoice, string> = { light: '☀️', dark: '🌙', auto: '🌓' }
 
 const systemDark = window.matchMedia('(prefers-color-scheme: dark)')
 const listeners = new Set<() => void>()

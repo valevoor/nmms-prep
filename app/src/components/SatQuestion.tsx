@@ -11,10 +11,16 @@ import { OPTION_KEYS } from '../types'
 import type { OptionKey } from '../types'
 
 /**
+ * How a solved question's answer buttons behave: `practice` shows right and wrong at the first pick; `exam`
+ * (the mock exam) only marks the pick, which can be changed; `review` shows the right answer and the pick.
+ */
+export type SatAnswerMode = 'practice' | 'exam' | 'review'
+
+/**
  * A question's prompt, table, picture and options, in the current language (and the other one with "EN+ಕ").
  * A solved question gets the answer buttons; the others list their options as printed.
  */
-export function SatQuestionBody({ paper, q, chosen, onPick }: { paper: SatPaper; q: SatQuestion; chosen?: OptionKey; onPick: (k: OptionKey) => void }) {
+export function SatQuestionBody({ paper, q, chosen, onPick, mode = 'practice' }: { paper: SatPaper; q: SatQuestion; chosen?: OptionKey; onPick: (k: OptionKey) => void; mode?: SatAnswerMode }) {
   const t = useT()
   const lang = useLocale()
   const otherLang = otherLocale(lang)
@@ -52,7 +58,7 @@ export function SatQuestionBody({ paper, q, chosen, onPick }: { paper: SatPaper;
         </div>
       )}
       {q.answer ? (
-        <AnswerOptions q={q} text={text} other={other} otherLang={otherLang} chosen={chosen} onPick={onPick} render={render} />
+        <AnswerOptions q={q} text={text} other={other} otherLang={otherLang} chosen={chosen} onPick={onPick} render={render} mode={mode} />
       ) : q.optionFigures ? (
         <ul className="sat-opts sat-opts-fig" aria-label={t.common.answerOptions}>
           {OPTION_KEYS.map((k) => (
@@ -123,7 +129,7 @@ export function SatExplanation({ paper, q }: { paper: SatPaper; q: SatQuestion }
 }
 
 /** A solved question's options as the MAT answer buttons: the first pick shows which one is right. */
-function AnswerOptions({ q, text, other, otherLang, chosen, onPick, render }: { q: SatQuestion; text: SatQuestionText; other?: SatQuestionText; otherLang: Locale; chosen?: OptionKey; onPick: (k: OptionKey) => void; render: (s: string) => ReactNode }) {
+function AnswerOptions({ q, text, other, otherLang, chosen, onPick, render, mode }: { q: SatQuestion; text: SatQuestionText; other?: SatQuestionText; otherLang: Locale; chosen?: OptionKey; onPick: (k: OptionKey) => void; render: (s: string) => ReactNode; mode: SatAnswerMode }) {
   const t = useT()
   const figs = q.optionFigures
   // Sentences and long expressions get the full width, one option per row.
@@ -131,10 +137,11 @@ function AnswerOptions({ q, text, other, otherLang, chosen, onPick, render }: { 
   return (
     <div className={`options options-md${long ? ' options-text' : ''}${figs ? ' options-fig' : ''}`} role="radiogroup" aria-label={t.common.answerOptions}>
       {OPTION_KEYS.map((k) => {
-        const state = chosen && k === q.answer ? 'correct' : chosen && k === chosen ? 'wrong' : ''
+        const reveal = mode === 'review' || (mode === 'practice' && !!chosen)
+        const state = reveal && k === q.answer ? 'correct' : reveal && k === chosen ? 'wrong' : k === chosen ? 'selected' : ''
         const second = other?.options[k]
         return (
-          <button key={k} type="button" role="radio" aria-checked={k === chosen} className={`option ${state}`} disabled={!!chosen} onClick={() => onPick(k)}>
+          <button key={k} type="button" role="radio" aria-checked={k === chosen} className={`option ${state}`} disabled={mode === 'exam' ? false : reveal} onClick={() => onPick(k)}>
             <span className="option-key">{k}</span>
             <span className="option-value">
               {figs ? (
