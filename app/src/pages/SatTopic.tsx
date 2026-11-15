@@ -7,7 +7,7 @@ import { satKey, satMastery, satMistakes, summarize, useProgress } from '../lib/
 import { href } from '../lib/router'
 
 /**
- * One SAT topic (#/sat/<id>): a textbook chapter, or a few related ones combined for revision. It shows
+ * One SAT topic (/sat/<id>): a textbook chapter, or a few related ones combined for revision. It shows
  * where to study each chapter in the textbook, what it covers, and Practice, which asks its study-book and past exam questions; a topic with
  * solved questions also shows its progress, as a MAT chapter does.
  * An "Old syllabus" or Miscellaneous topic has no textbook chapter, so it says why instead.
@@ -29,7 +29,7 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
   const only = t.chapters.length === 1 ? t.chapters[0] : undefined
   const canRevise = topicRevisions(t).length > 0
   return (
-    <Page title={satTopicName(t, lang)} back="?test=sat">
+    <Page title={satTopicName(t, lang)} back="sat">
       <section className="card topic-card">
         <div>
           <span className="chip">
@@ -91,7 +91,7 @@ export function SatTopic({ topic: t }: { topic: Topic }) {
           </div>
         )}
         {mistakes.length > 0 && (
-          <a className="mistakes-link" href={href(`${base}/practice?mode=mistakes`)}>
+          <a className="mistakes-link" href={href(`${base}/practice/mistakes`)}>
             {tr.home.retryWrong(mistakes.length)}
           </a>
         )}

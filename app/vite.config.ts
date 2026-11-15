@@ -21,8 +21,8 @@ const staticPagesInDev: Plugin = {
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Relative base so the build works from any folder (GitHub Pages, a school server, a USB stick).
-  base: './',
+  // The app uses path routes (/mat/number-series), so it is served from the site's root.
+  base: '/',
   plugins: [
     staticPagesInDev,
     react(),
@@ -35,8 +35,8 @@ export default defineConfig({
         name: 'NMMS Prep: Mental Ability',
         short_name: 'NMMS Prep',
         description: 'Free offline practice for the NMMS MAT and SAT papers (Class 8).',
-        start_url: './',
-        scope: './',
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
         orientation: 'any',
         background_color: '#f6f7fb',
@@ -55,8 +55,10 @@ export default defineConfig({
         // paper, and 4 MiB with the social science revision sheets. Anything over the limit is left out of the
         // offline cache, so keep it above the script's size.
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
-        // The talk deck at /slides/ is added after the build; don't answer it with the app's index.html.
-        navigateFallbackDenylist: [/\/slides\//],
+        // Offline, every app path (/mat/number-series/learn) is answered with index.html. The talk deck at
+        // /slides/ is added after the build, so it is left out.
+        navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/slides\//, /^\/(welcome|about)\//],
       },
     }),
   ],

@@ -74,7 +74,7 @@ function Sheet({ chapter, sheet, many }: { chapter: SatChapter; sheet: { en: Rev
 }
 
 /**
- * Revision for a SAT topic (#/sat/<id>/revise), one sheet per textbook chapter: key terms, formulas with an
+ * Revision for a SAT topic (/sat/<id>/revise), one sheet per textbook chapter: key terms, formulas with an
  * example and the book page, and common mistakes. It is for reading only: Practice and Flash cards are on
  * the topic page. MAT's counterpart is Learn.
  */

@@ -52,7 +52,7 @@ function ChapterRow({ t }: { t: ReadyTopic }) {
   const past = PAST[t.id]
   return (
     <li>
-      <a className="chapter-row" href={href(`t/${t.id}`)}>
+      <a className="chapter-row" href={href(`mat/${t.id}`)}>
         <ChapterArt chapter={t.chapter} size={40} />
         <span className="chapter-row-main">
           <span className="chapter-row-name">
@@ -103,7 +103,7 @@ function ContinueCard() {
   const t = id ? getTopic(id) : undefined
   if (!t) return null
   return (
-    <a className="card continue-card" href={href(`t/${t.id}`)}>
+    <a className="card continue-card" href={href(`mat/${t.id}`)}>
       <ChapterArt chapter={t.chapter} size={48} />
       <span className="continue-main">
         <span className="continue-label">{tr.home.continue}</span>
@@ -250,7 +250,7 @@ function TestSwitch({ sat }: { sat: boolean }) {
       <a className={sat ? undefined : 'on'} href={href('')} aria-current={sat ? undefined : 'page'}>
         {t.sat.tabMat}
       </a>
-      <a className={sat ? 'on' : undefined} href={href('?test=sat')} aria-current={sat ? 'page' : undefined}>
+      <a className={sat ? 'on' : undefined} href={href('sat')} aria-current={sat ? 'page' : undefined}>
         {t.sat.tabSat}
       </a>
     </nav>
@@ -259,7 +259,7 @@ function TestSwitch({ sat }: { sat: boolean }) {
 
 export function Home() {
   const t = useT()
-  const sat = useRoute().query.get('test') === 'sat'
+  const sat = useRoute().parts[0] === 'sat'
   const [sort, setSort] = useState(getSort)
   const changeSort = (s: Sort) => {
     setSort(s)
@@ -353,7 +353,7 @@ export function Home() {
       )}
       {/* A real page, not a hash route, so that Google can index it (public/about/index.html). */}
       <p className="about-link">
-        <a href="./about/">{t.home.about}</a>
+        <a href="/about/">{t.home.about}</a>
       </p>
     </Page>
   )

@@ -10,22 +10,24 @@
  * (only the 3D cube scene is loaded later, and they don't show it).
  */
 import { registerSW } from 'virtual:pwa-register'
+import { onRouteChange } from './router'
 
 const CHECK_EVERY_MS = 60 * 60 * 1000
 
-/** #/t/<topic>/test and #/t/<topic>/classroom: a reload there would throw away the session. */
+/** /mat/<topic>/test and /mat/<topic>/classroom: a reload there would throw away the session. */
 function busy() {
-  const parts = window.location.hash.replace(/^#\/?/, '').split('?')[0].split('/')
-  return parts[0] === 't' && (parts[2] === 'test' || parts[2] === 'classroom')
+  const parts = window.location.pathname.split('/').filter(Boolean)
+  return parts[0] === 'mat' && (parts[2] === 'test' || parts[2] === 'classroom')
 }
 
 function reloadWhenFree() {
+  let stop = () => {}
   const reload = () => {
     if (busy()) return
-    window.removeEventListener('hashchange', reload)
+    stop()
     window.location.reload()
   }
-  window.addEventListener('hashchange', reload)
+  stop = onRouteChange(reload)
   reload()
 }
 

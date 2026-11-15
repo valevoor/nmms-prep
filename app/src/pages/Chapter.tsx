@@ -17,7 +17,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
   const s = summarize(p, t.questions.length)
   const m = mastery(p, t)
   const meterLabel = m.exam ? tr.home.examCorrect(m.right, m.total) : tr.home.bookCorrect(m.right, m.total)
-  const base = `t/${t.id}`
+  const base = `mat/${t.id}`
   const factTab = FACT_CHAPTERS[t.id]
   return (
     <Page title={tr.chapters[t.chapter] ?? t.name} back="">
@@ -54,7 +54,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           <a className="btn btn-primary" href={href(`${base}/learn`)}>
             {tr.home.learn}
           </a>
-          <a className="btn" href={href(`${base}/practice?mode=${m.exam ? 'exam' : 'book'}`)}>
+          <a className="btn" href={href(`${base}/practice/${m.exam ? 'exam' : 'book'}`)}>
             {tr.home.practice}
           </a>
           <a className="btn" href={href(`${base}/test`)}>
@@ -135,7 +135,7 @@ export function Chapter({ topic: t }: { topic: ReadyTopic }) {
           </a>
         )}
         {p.mistakes.length > 0 && (
-          <a className="mistakes-link" href={href(`${base}/practice?mode=mistakes`)}>
+          <a className="mistakes-link" href={href(`${base}/practice/mistakes`)}>
             {tr.home.retryWrong(p.mistakes.length)}
           </a>
         )}

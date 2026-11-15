@@ -165,7 +165,7 @@ export function Learn({ topic }: { topic: ReadyTopic }) {
       )}
 
       <div className="cta">
-        <a className="btn btn-primary btn-lg" href={href(`t/${topic.id}/practice?mode=book`)}>
+        <a className="btn btn-primary btn-lg" href={href(`mat/${topic.id}/practice/book`)}>
           {t.learn.startPractising}
         </a>
       </div>

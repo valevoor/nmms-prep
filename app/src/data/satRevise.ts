@@ -1,5 +1,5 @@
 /**
- * Revision sheets for SAT textbook chapters (#/sat/<topic>/revise): key terms, formulas with an example, and
+ * Revision sheets for SAT textbook chapters (/sat/<topic>/revise): key terms, formulas with an example, and
  * common mistakes. Written in our own words from the textbook pages, with the page numbers; not copied from
  * it, because the books are marked "not to be republished". tools/check_sat_revise.ts re-works every example.
  * Kannada (a draft) is in <chapter>.kn.json, keyed by id; what it leaves out, such as a formula that is only

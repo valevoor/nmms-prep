@@ -12,7 +12,7 @@ import { satSource } from '../lib/source'
 export type SatPracticeMode = 'book' | 'exam' | 'mistakes'
 
 /**
- * A SAT topic's questions one at a time (#/sat/<id>/practice), like MAT's Practice: the Book tab asks the study
+ * A SAT topic's questions one at a time (/sat/<id>/practice), like MAT's Practice: the Book tab asks the study
  * book's questions and Past exams the papers' ones. Pick an answer to a solved question, see if it's right and how to
  * solve it, then go on. A question without an answer yet is shown as printed, to read and discuss. The Mistakes tab
  * asks again the ones last answered wrong. With no mode asked for, it opens on the book's questions if it has any.
@@ -71,7 +71,7 @@ export function SatPractice({ topic, mode: asked }: { topic: SatTopic; mode?: Sa
         {(['book', 'exam', 'mistakes'] as SatPracticeMode[])
           .filter((m) => (m === 'book' ? book.length > 0 : m === 'exam' ? all.length > 0 : true))
           .map((m) => (
-          <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`${base}/practice?mode=${m}`)} aria-current={m === mode ? 'page' : undefined}>
+          <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`${base}/practice/${m}`)} aria-current={m === mode ? 'page' : undefined}>
             {t.practice[m]}
           </a>
         ))}
@@ -81,7 +81,7 @@ export function SatPractice({ topic, mode: asked }: { topic: SatTopic; mode?: Sa
         <section className="card empty">
           <h3>{t.practice.noMistakes}</h3>
           <p className="muted">{t.practice.noMistakesBody}</p>
-          <a className="btn btn-primary" href={href(`${base}/practice?mode=${start}`)}>
+          <a className="btn btn-primary" href={href(`${base}/practice/${start}`)}>
             {start === 'book' ? t.practice.practiseBook : t.practice.exam}
           </a>
         </section>
@@ -100,7 +100,7 @@ export function SatPractice({ topic, mode: asked }: { topic: SatTopic; mode?: Sa
                   {t.practice.retryMistakes(mistakes.length)}
                 </button>
               ) : (
-                <a className="btn btn-primary" href={href(`${base}/practice?mode=mistakes`)}>
+                <a className="btn btn-primary" href={href(`${base}/practice/mistakes`)}>
                   {t.practice.retryMistakes(mistakes.length)}
                 </a>
               ))}

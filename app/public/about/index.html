@@ -41,7 +41,7 @@
     <script>
       // Same saved theme as the app (default Light). Kept in sync with src/lib/theme.ts.
       try {
-        // This page's links into the app use #/, which must now open the app (see index.html).
+        // This page's links into the app go to /, which must now open the app, not come back here (see index.html).
         sessionStorage.setItem('nmms-in-app', '1')
         var t = localStorage.getItem('nmms-theme')
         var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
@@ -54,8 +54,8 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="../#/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
-      <a class="open" href="../#/">Open the app →</a>
+      <a class="brand" href="/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
+      <a class="open" href="/">Open the app →</a>
     </header>
     <main>
       <h1>About NMMS Prep</h1>

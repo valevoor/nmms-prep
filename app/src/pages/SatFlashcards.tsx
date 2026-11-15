@@ -14,7 +14,7 @@ import { href } from '../lib/router'
 const math = (s: string) => <MathText text={s} />
 
 /**
- * Flash cards for a SAT topic (#/sat/<id>/flashcards), made from its revision sheets: the student recalls a
+ * Flash cards for a SAT topic (/sat/<id>/flashcards), made from its revision sheets: the student recalls a
  * term or formula, shows the answer and says whether they knew it. A card they didn't know comes back later
  * in the round, and first on the next visit.
  */

@@ -66,7 +66,7 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
       (['book', 'exam', 'more', 'mistakes'] as PracticeMode[])
         .filter((m) => (m === 'exam' ? exam.length > 0 : m === 'book' ? !pastOnly(topic) : m === 'more' ? !!topic.generate : true))
         .map((m) => (
-        <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`t/${topic.id}/practice?mode=${m}`)} aria-current={m === mode ? 'page' : undefined}>
+        <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`mat/${topic.id}/practice/${m}`)} aria-current={m === mode ? 'page' : undefined}>
           {t.practice[m]}
         </a>
       )),
@@ -83,7 +83,7 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
         <section className="card empty">
           <h3>{t.practice.noMistakes}</h3>
           <p className="muted">{t.practice.noMistakesBody}</p>
-          <a className="btn btn-primary" href={href(`t/${topic.id}/practice?mode=${start}`)}>
+          <a className="btn btn-primary" href={href(`mat/${topic.id}/practice/${start}`)}>
             {start === 'exam' ? t.practice.exam : t.practice.practiseBook}
           </a>
         </section>
@@ -100,7 +100,7 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
                   {t.practice.retryMistakes(progress.mistakes.length)}
                 </button>
               ) : (
-                <a className="btn btn-primary" href={href(`t/${topic.id}/practice?mode=mistakes`)}>
+                <a className="btn btn-primary" href={href(`mat/${topic.id}/practice/mistakes`)}>
                   {t.practice.retryMistakes(progress.mistakes.length)}
                 </a>
               ))}
@@ -110,11 +110,11 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
               </button>
             )}
             {topic.generate && (
-              <a className="btn" href={href(`t/${topic.id}/practice?mode=more`)}>
+              <a className="btn" href={href(`mat/${topic.id}/practice/more`)}>
                 {t.practice.moreQuestions}
               </a>
             )}
-            <a className="btn" href={href(`t/${topic.id}/test`)}>
+            <a className="btn" href={href(`mat/${topic.id}/test`)}>
               {t.practice.takeTest}
             </a>
           </div>

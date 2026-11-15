@@ -67,7 +67,7 @@ export function GuessRule({ topic }: { topic: ReadyTopic }) {
             <button className="btn btn-primary" onClick={play}>
               {t.game.playAgain}
             </button>
-            <a className="btn" href={href(`t/${topic.id}/learn`)}>
+            <a className="btn" href={href(`mat/${topic.id}/learn`)}>
               {t.game.reviewTips}
             </a>
           </div>

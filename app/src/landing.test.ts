@@ -25,7 +25,7 @@ describe('Landing page links into the app', () => {
   const TOOL = { try: 'reflect', punch: 'punch' } as const
 
   it('opens tools that exist', () => {
-    const links = [...landing.matchAll(/href="\.\.\/#\/t\/([^/"]+)\/([^/"]+)"/g)]
+    const links = [...landing.matchAll(/href="\/mat\/([^/"]+)\/([^/"]+)"/g)]
     expect(links.length).toBeGreaterThan(0)
     for (const [link, topicId, tool] of links) {
       expect(tool in TOOL, link).toBe(true)

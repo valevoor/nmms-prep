@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { useBothAvailable, useT } from '../lib/i18n'
+import { onRouteChange } from '../lib/router'
 import { BothToggle } from './Bi'
 import { LangSwitch } from './LangSwitch'
 import { ThemeSwitch } from './ThemeSwitch'
@@ -29,11 +30,11 @@ export function SettingsMenu() {
     }
     document.addEventListener('pointerdown', onPointer)
     document.addEventListener('keydown', onKey)
-    window.addEventListener('hashchange', close)
+    const stopRoute = onRouteChange(close)
     return () => {
       document.removeEventListener('pointerdown', onPointer)
       document.removeEventListener('keydown', onKey)
-      window.removeEventListener('hashchange', close)
+      stopRoute()
     }
   }, [open])
 

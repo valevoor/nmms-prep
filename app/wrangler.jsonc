@@ -4,6 +4,8 @@
   "name": "nmms-prep",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    // App paths (/mat/number-series/learn) aren't files: answer them with index.html.
+    "not_found_handling": "single-page-application"
   }
 }

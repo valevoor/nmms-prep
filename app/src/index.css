@@ -2529,7 +2529,7 @@ kbd {
   fill: var(--good-soft);
 }
 
-/* ---------- Facts to remember (#/facts) ---------- */
+/* ---------- Facts to remember (/facts) ---------- */
 
 .facts-card {
   display: flex;
@@ -2951,7 +2951,7 @@ kbd {
   display: inline;
 }
 
-/* ---------- Shapes and sizes (#/shapes) ---------- */
+/* ---------- Shapes and sizes (/shapes) ---------- */
 
 .shapes-card {
   background: var(--primary-soft);
@@ -3187,7 +3187,7 @@ kbd {
   margin: 0;
 }
 
-/* Cubes colouring 3D explorer (#/t/cubes-colouring/explore). The paints are the colours of a real
+/* Cubes colouring 3D explorer (/mat/cubes-colouring/explore). The paints are the colours of a real
    painted cube, so they stay the same in both themes; three.js reads them from here. */
 :root {
   --paint-red: #d63b3b;
@@ -3439,7 +3439,7 @@ kbd {
   accent-color: var(--primary);
 }
 
-/* Dice fold (#/t/dice/fold). The dice is a paper object, so its colours stay the same in both themes;
+/* Dice fold (/mat/dice/fold). The dice is a paper object, so its colours stay the same in both themes;
    the three pair colours match the Shapes page's blue, amber and pink. */
 :root {
   --fold-face: #ffffff;
@@ -3562,7 +3562,7 @@ kbd {
   vertical-align: -2px;
 }
 
-/* Draw and fold (#/t/fold-sheet/draw). The sheet is a paper object on a light desk, so its colours
+/* Draw and fold (/mat/fold-sheet/draw). The sheet is a paper object on a light desk, so its colours
    stay the same in both themes, as the dice's do. The paper is half see-through: where the folded
    half lies on the other, both halves' shapes show. */
 :root {
@@ -3709,7 +3709,7 @@ kbd {
   text-align: center;
 }
 
-/* Fold and punch (#/t/paper-punch/punch). Paper on a desk, so like the Draw and fold sheet its colours
+/* Fold and punch (/mat/paper-punch/punch). Paper on a desk, so like the Draw and fold sheet its colours
    stay the same in both themes. The paper is opaque and two-toned (cream front, tan back), so a layer
    that has turned over shows; the holes are cut out of it with a mask, so the desk shows through. */
 :root {
@@ -3828,7 +3828,7 @@ kbd {
   cursor: not-allowed;
 }
 
-/* Try a mirror / Try water (#/t/mirror-image/try, #/t/water-image/try). */
+/* Try a mirror / Try water (/mat/mirror-image/try, /mat/water-image/try). */
 :root {
   --rf-water: #e3effd;
 }
@@ -4107,7 +4107,7 @@ kbd {
   text-align: center;
 }
 
-/* Cut the cube (#/t/cubes-cutting/cut). The cube is an object, so its colours stay the same in both
+/* Cut the cube (/mat/cubes-cutting/cut). The cube is an object, so its colours stay the same in both
    themes: blue paint outside, grey when unpainted, amber for the faces the knife makes. */
 :root {
   --cut-paint-top: #c4d2ff;
@@ -4319,7 +4319,7 @@ kbd {
   margin-right: 4px;
 }
 
-/* ---------- SAT (Home's SAT tab, #/sat/<chapter>, its past questions) ---------- */
+/* ---------- SAT (Home's SAT tab, /sat/<chapter>, its past questions) ---------- */
 
 /* The MAT / SAT switch at the top of Home: links styled like the segmented buttons. */
 .test-switch {

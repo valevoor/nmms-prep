@@ -1,4 +1,4 @@
-/** The numbers on the "Facts to remember" page (#/facts). The words for it are in the i18n dictionaries. */
+/** The numbers on the "Facts to remember" page (/facts). The words for it are in the i18n dictionaries. */
 
 export const FACT_TABS = ['primes', 'squares', 'cubes'] as const
 export type FactTab = (typeof FACT_TABS)[number]

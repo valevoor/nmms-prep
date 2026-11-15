@@ -136,17 +136,17 @@ export interface ReadyTopic {
   guessRule?: {
     make: () => Question
   }
-  /** Has a 3D explorer at #/t/<id>/explore (pages/CubeExplorer.tsx). */
+  /** Has a 3D explorer at /mat/<id>/explore (pages/CubeExplorer.tsx). */
   explore?: boolean
-  /** Has a cube to cut in two and pull apart in 3D at #/t/<id>/cut (pages/CubeCut.tsx). */
+  /** Has a cube to cut in two and pull apart in 3D at /mat/<id>/cut (pages/CubeCut.tsx). */
   cut?: boolean
-  /** Has an open dice that folds in 3D at #/t/<id>/fold (pages/DiceFold.tsx). */
+  /** Has an open dice that folds in 3D at /mat/<id>/fold (pages/DiceFold.tsx). */
   fold?: boolean
-  /** Has a see-through sheet to draw on and fold in 3D at #/t/<id>/draw (pages/SheetFold.tsx). */
+  /** Has a see-through sheet to draw on and fold in 3D at /mat/<id>/draw (pages/SheetFold.tsx). */
   draw?: boolean
-  /** Has a sheet to fold in 3D and cut holes through at #/t/<id>/punch (pages/PunchFold.tsx). */
+  /** Has a sheet to fold in 3D and cut holes through at /mat/<id>/punch (pages/PunchFold.tsx). */
   punch?: boolean
-  /** Has a page to type characters or place shapes and see their mirror or water image, at #/t/<id>/try (pages/Reflect.tsx). */
+  /** Has a page to type characters or place shapes and see their mirror or water image, at /mat/<id>/try (pages/Reflect.tsx). */
   reflect?: 'mirror' | 'water'
 }
 

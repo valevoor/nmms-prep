@@ -68,15 +68,17 @@ function NotFound() {
 }
 
 export default function App() {
-  const { parts, query } = useRoute()
-  const [kind, topicId, view] = parts
-  const topic = kind === 't' ? getTopic(topicId) : undefined
-  useScrollOnRouteChange(parts.join('/'))
+  const { parts } = useRoute()
+  const [kind, topicId, view, mode] = parts
+  const topic = kind === 'mat' ? getTopic(topicId) : undefined
+  // Home's MAT and SAT tabs (/ and /sat) share one scroll position, as one page.
+  const home = parts.length === 0 || (kind === 'sat' && parts.length === 1)
+  useScrollOnRouteChange(home ? '' : parts.join('/'))
   useLayoutEffect(() => {
     if (topic) setLastTopic(topic.id)
   }, [topic])
 
-  if (parts.length === 0) return <Home />
+  if (home) return <Home />
   if (kind === 'facts' && parts.length <= 2) {
     const tab = FACT_TABS.find((k) => k === (topicId ?? 'primes'))
     return tab ? <Facts tab={tab} /> : <NotFound />
@@ -94,35 +96,34 @@ export default function App() {
   }
   if (kind === 'sat') {
     const satTopic = getSatTopic(topicId)
-    if (!satTopic || parts.length > 3) return <NotFound />
+    if (!satTopic || parts.length > (view === 'practice' ? 4 : 3)) return <NotFound />
     if (!view) return <SatTopic topic={satTopic} />
     if ((view === 'revise' || view === 'flashcards') && topicRevisions(satTopic).length > 0)
       return <TopicIdContext.Provider value="sat">{view === 'revise' ? <SatRevise topic={satTopic} /> : <SatFlashcards topic={satTopic} />}</TopicIdContext.Provider>
     // "questions" was the old list of past questions, which Practice now asks.
     if (view === 'practice' || view === 'questions') {
-      const asked = query.get('mode')
-      const mode = asked === 'book' || asked === 'exam' || asked === 'mistakes' ? (asked as SatPracticeMode) : undefined
+      const tab = mode === 'book' || mode === 'exam' || mode === 'mistakes' ? (mode as SatPracticeMode) : undefined
       return (
         <TopicIdContext.Provider value="sat">
-          <SatPractice key={mode ?? ''} topic={satTopic} mode={mode} />
+          <SatPractice key={tab ?? ''} topic={satTopic} mode={tab} />
         </TopicIdContext.Provider>
       )
     }
     return <NotFound />
   }
-  if (!topic) return <NotFound />
+  if (!topic || parts.length > (view === 'practice' ? 4 : 3)) return <NotFound />
   // The rule game shows series and rules, not sentences, so it doesn't offer both languages at once.
-  return <TopicIdContext.Provider value={view === 'rule' ? undefined : topic.id}>{topicPage(topic, view, query)}</TopicIdContext.Provider>
+  return <TopicIdContext.Provider value={view === 'rule' ? undefined : topic.id}>{topicPage(topic, view, mode)}</TopicIdContext.Provider>
 }
 
-function topicPage(topic: ReadyTopic, view: string | undefined, query: URLSearchParams) {
+function topicPage(topic: ReadyTopic, view: string | undefined, tab: string | undefined) {
   switch (view) {
     case undefined:
       return <Chapter topic={topic} />
     case 'learn':
       return <Learn topic={topic} />
     case 'practice': {
-      const m = query.get('mode') as PracticeMode
+      const m = tab as PracticeMode
       // The exam tab exists only for chapters with past-paper questions.
       const mode = MODES.includes(m) && (m !== 'exam' || paperQuestions(topic.id).length > 0) ? m : 'book'
       return <Practice key={mode} topic={topic} mode={mode} />

@@ -1,5 +1,5 @@
 /**
- * The painted cube behind the Cubes colouring 3D explorer (#/t/cubes-colouring/explore): a big cube with
+ * The painted cube behind the Cubes colouring 3D explorer (/mat/cubes-colouring/explore): a big cube with
  * painted faces, cut into n × n × n small cubes. Kept free of three.js so the counts can be tested.
  */
 

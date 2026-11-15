@@ -1,7 +1,7 @@
 import type { NetCell } from './generators/dice'
 
 /**
- * Folding an open dice (a cube net) in 3D, for the dice fold page (#/t/dice/fold). One square stays
+ * Folding an open dice (a cube net) in 3D, for the dice fold page (/mat/dice/fold). One square stays
  * put (the root) and every other square hinges on the edge it shares with its parent, so the dice
  * forms behind the root. Angles follow CSS: x right, y down, z towards the viewer, so the same numbers
  * drive components/DiceFold.tsx and the opposite pairs worked out here.

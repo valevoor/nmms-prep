@@ -154,7 +154,7 @@ export const en = {
     sortMost: 'Most asked',
     about: 'About this app',
   },
-  /** The SAT (Scholastic Aptitude Test) chapters: Home's SAT tab, #/sat/<chapter> and its past questions. */
+  /** The SAT (Scholastic Aptitude Test) chapters: Home's SAT tab, /sat/<chapter> and its past questions. */
   sat: {
     tabsLabel: 'Which test',
     tabMat: 'MAT',
@@ -217,7 +217,7 @@ export const en = {
     optionPicture: (k: string) => `Option ${k}`,
     footnote: 'SAT topics follow the 2026-27 Karnataka Class 7 and 8 textbooks, with related chapters combined for revision. All maths chapters are listed; for Science and Social Science, only chapters that the Karnataka SAT papers of 2019-20 to 2025-26 asked about. Questions on topics the new textbooks dropped are under “Old syllabus” chapters.',
   },
-  /** The "Facts to remember" page (#/facts) and the links to it. */
+  /** The "Facts to remember" page (/facts) and the links to it. */
   facts: {
     title: 'Facts to remember',
     homeSub: 'Primes to 100 · Squares 1–30 · Cubes 1–20',
@@ -251,7 +251,7 @@ export const en = {
     chapterBody: 'Many questions in this chapter use squares, cubes or prime numbers.',
     learnLink: 'All the facts, with tricks →',
   },
-  /** The "Shapes and sizes" page (#/shapes). The maths in formulas (4 × a, 2 × (5 + 3)) is in data/shapes.ts. */
+  /** The "Shapes and sizes" page (/shapes). The maths in formulas (4 × a, 2 × (5 + 3)) is in data/shapes.ts. */
   shapes: {
     title: 'Shapes and sizes',
     homeSub: 'Perimeter · Area · Volume · Open a solid flat',

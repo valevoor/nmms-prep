@@ -1,4 +1,4 @@
-/** The "Shapes and sizes" page (#/shapes): the four flat shapes, the solids they build, and their worked numbers. */
+/** The "Shapes and sizes" page (/shapes): the four flat shapes, the solids they build, and their worked numbers. */
 
 export const SHAPE_IDS = ['square', 'rect', 'tri', 'circle'] as const
 export type ShapeId = (typeof SHAPE_IDS)[number]

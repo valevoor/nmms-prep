@@ -30,11 +30,12 @@ vi.mock('react', async (orig) => {
   return { ...r, useSyncExternalStore: <T,>(s: (l: () => void) => () => void, get: () => T, server?: () => T) => r.useSyncExternalStore(s, get, server ?? get) }
 })
 vi.mock('./lib/theme', () => ({ THEME_ORDER: ['light', 'dark', 'auto'], useTheme: () => 'light', setTheme: () => {} }))
-const route = vi.hoisted(() => ({ query: '' }))
+const route = vi.hoisted(() => ({ path: '' }))
 vi.mock('./lib/router', () => ({
-  href: (p: string) => `#/${p.replace(/^\//, '')}`,
+  href: (p: string) => `/${p.replace(/^\//, '')}`,
   navigate: () => {},
-  useRoute: () => ({ parts: [], query: new URLSearchParams(route.query) }),
+  onRouteChange: () => () => {},
+  useRoute: () => ({ parts: route.path.split('/').filter(Boolean), query: new URLSearchParams() }),
 }))
 vi.mock('./lib/progress', async (orig) => {
   const p = await orig<typeof import('./lib/progress')>()
@@ -50,8 +51,8 @@ const SAT_SOLVED = SAT_TOPICS.find((t) => t.subject === 'maths' && t.chapters.le
 const SAT_REVISE = SAT_TOPICS.find((t) => t.chapters.some((c) => c.id === REVISIONS[0].en.chapter))!
 const SAT_UNSOLVED = SAT_TOPICS.find((t) => t.chapters.length === 1 && satQuestions(t).length > 0 && satSolved(t).length === 0)!
 
-function render(el: ReactElement, query = ''): string {
-  route.query = query
+function render(el: ReactElement, path = ''): string {
+  route.path = path
   return renderToStaticMarkup(el)
 }
 
@@ -102,7 +103,7 @@ const PAIRS: Pair[] = [
   {
     name: 'Home: list row',
     mat: () => region(render(createElement(Home)), 'chapter-row'),
-    sat: () => region(render(createElement(Home), 'test=sat'), 'chapter-row', 'meter-thin'),
+    sat: () => region(render(createElement(Home), 'sat'), 'chapter-row', 'meter-thin'),
     matOnly: {
       'chapter-art': 'SAT topics have no chapter picture',
     },
@@ -114,7 +115,7 @@ const PAIRS: Pair[] = [
   {
     name: 'Home: hero',
     mat: () => region(render(createElement(Home)), 'hero'),
-    sat: () => region(render(createElement(Home), 'test=sat'), 'hero'),
+    sat: () => region(render(createElement(Home), 'sat'), 'hero'),
     matOnly: {},
     satOnly: { 'sat-jump': 'Jump-to-subject buttons; the SAT list is split by subject, MAT has one list' },
   },

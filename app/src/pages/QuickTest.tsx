@@ -133,7 +133,7 @@ export function QuickTest({ topic }: { topic: ReadyTopic }) {
             <button className="btn btn-primary" onClick={start}>
               {t.test.newTest}
             </button>
-            <a className="btn" href={href(`t/${topic.id}/practice?mode=mistakes`)}>
+            <a className="btn" href={href(`mat/${topic.id}/practice/mistakes`)}>
               {t.test.retryMistakes}
             </a>
           </div>

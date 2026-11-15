@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The app answers nested paths (/mat/number-series/learn), so relative URLs (figures/…) start from the root. -->
+    <base href="/" />
     <meta name="description" content="Free NMMS exam practice with 41 MAT chapters, 80 SAT topics, past exam questions and worked solutions. No sign-up, and it works offline." />
     <link rel="canonical" href="https://mystudyprep.in/welcome/" />
     <meta property="og:type" content="website" />
@@ -16,13 +18,14 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>NMMS Prep: Free MAT and SAT Practice App for Class 8</title>
     <script>
-      // The main URL opens the landing page (public/welcome/index.html), with or without #/. The installed app and
-      // links to a chapter or tab go straight in. #/ is also how the landing and About pages enter the app, so once
-      // this tab has seen one of those pages or the app (nmms-in-app), #/ opens the app and a reload stays there.
+      // The main URL (/, or the old /#/) opens the landing page (public/welcome/index.html). The installed app and
+      // links to a chapter or tab go straight in. / is also how the landing and About pages enter the app, so once
+      // this tab has seen one of those pages or the app (nmms-in-app), / opens the app and a reload stays there.
+      // Old hash routes (/#/t/…) open the app, and src/lib/router.ts turns them into paths.
       try {
         var installed = navigator.standalone || matchMedia('(display-mode: standalone)').matches
-        var homeLink = location.hash === '#/' && !sessionStorage.getItem('nmms-in-app')
-        if ((!location.hash || homeLink) && !installed && !/\/(welcome|about)\/?$/.test(location.pathname)) location.replace('./welcome/')
+        var home = location.pathname === '/' && (!location.hash || location.hash === '#/')
+        if (home && !installed && !sessionStorage.getItem('nmms-in-app')) location.replace('/welcome/')
         else sessionStorage.setItem('nmms-in-app', '1')
       } catch (e) {
         // Storage blocked: open the app.
