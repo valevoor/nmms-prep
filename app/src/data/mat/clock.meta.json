@@ -8,7 +8,7 @@
     },
     {
       "title": "The angle between the hands",
-      "body": "Hour hand = 30 × hours + ½ × minutes; minute hand = 6 × minutes. Subtract. If the answer is over 180°, the smaller angle is 360° minus it."
+      "body": "Angle = |30H − (11/2)M|, where H is the hour and M is the minutes. At 4:20 the angle is |120 − 110| = 10°. If the answer is over 180°, the smaller angle is 360° minus it."
     },
     {
       "title": "Reflex angle",
