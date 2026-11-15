@@ -1,16 +1,12 @@
 {
   "topic": "arithmetical-operations",
-  "intro": "In these questions the signs of an equation are hidden, coded or mixed up. You choose the signs (or the swap) that make the equation true. Everything depends on doing × and ÷ before + and −.",
+  "intro": "In these questions the signs of an equation are hidden, coded or mixed up. You choose the signs (or the swap) that make the equation true. Everything depends on working it out in the right order: BODMAS.",
   "tips": [
     {
-      "title": "× and ÷ before + and −",
+      "title": "BODMAS: the order to work it out",
       "visual": "order",
-      "body": "Work out × and ÷ first, from left to right. Then do + and −, from left to right. In 12 + 12 − 12 ÷ 12 − 12, first 12 ÷ 12 = 1, which leaves 12 + 12 − 1 − 12 = 11.",
-      "caption": "× and ÷ first, then + and −."
-    },
-    {
-      "title": "Brackets come first of all",
-      "body": "Anything inside ( ), { } or [ ] is worked out before the rest. (5 + 2) × 15 ÷ 105 = 7 × 15 ÷ 105 = 105 ÷ 105 = 1."
+      "body": "BODMAS tells you what to do first.\nB – Brackets: ( ) first, then { }, then [ ].\nO – Of and powers: ½ of 10 = 5, and 3² = 9.\nD and M – Division ÷ and Multiplication ×, from left to right.\nA and S – Addition + and Subtraction −, from left to right.\nD and M are equal, so do whichever comes first from the left; the same goes for A and S.\nIn the picture, 12 + 12 − 12 ÷ 12 − 12: first 12 ÷ 12 = 1, which leaves 12 + 12 − 1 − 12 = 11.\nWith brackets: 10 + (6 − 2) × 3 ÷ 2 = 10 + 4 × 3 ÷ 2 = 10 + 12 ÷ 2 = 10 + 6 = 16.",
+      "caption": "BODMAS: brackets, then of, then ÷ and ×, then + and −."
     },
     {
       "title": "Try the options one by one",
@@ -22,7 +18,7 @@
     },
     {
       "title": "Signs with changed meanings",
-      "body": "If \"+ means ÷\", every + in an option is really a ÷. Rewrite the whole option before working it out: {(19 × 11) + 15} ÷ 2 becomes {(19 + 11) ÷ 15} − 2 = 2 − 2 = 0."
+      "body": "Example: + means ÷, × means +, − means × and ÷ means −.\n1. Write the code as a key first: + → ÷   × → +   − → ×   ÷ → −\n2. Copy the option onto a new line, changing each sign as you copy it, by looking at the key. Never change the signs in the original line.\n3. Now work out the new line with BODMAS.\n{(19 × 11) + 15} ÷ 2 becomes {(19 + 11) ÷ 15} − 2 = 2 − 2 = 0.\nThe trap: changing one sign at a time in the same line. Change × to + and you get {(19 + 11) + 15} ÷ 2. Then, when you change + to ÷, the + that was a × gets changed a second time: {(19 ÷ 11) ÷ 15} ÷ 2. That is wrong.\nIf you still mix them up, first write A, B, C, D in place of the signs, then turn each letter into its new sign."
     },
     {
       "title": "Swapping two signs or two numbers",
