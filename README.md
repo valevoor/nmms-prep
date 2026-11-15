@@ -116,7 +116,7 @@ Every push to `main` publishes automatically via GitHub Actions (`.github/workfl
 
 The app used to live at https://valevoor.github.io/nmms-prep/. GitHub Pages now serves only `github-pages-redirect/` (published by `.github/workflows/github-pages-redirect.yml`), which sends every old link to the same page on mystudyprep.in and removes the old offline copy from students' phones. Progress saved on the old address stays there: browsers keep each site's data apart.
 
-**Visit counts.** The live site counts visits anonymously with [GoatCounter](https://www.goatcounter.com) and [Umami](https://umami.is): no cookies, nothing stored on the phone, no names or logins. Visits made offline aren't counted. GoatCounter is configured in `app/src/lib/analytics.ts`, and Umami via the cloud tracker script in `app/index.html`.
+**Visit counts.** The live site counts visits with [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), turned on in the Cloudflare dashboard (no code in the repo): no cookies, nothing stored on the phone, no names or logins. Visits made offline aren't counted.
 
 To share the app, send the link, or print a QR code of it for the classroom. Students open it once and tap "Add to Home Screen"; after that it works offline, and updates arrive the next time they open it.
 

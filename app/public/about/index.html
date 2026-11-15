@@ -73,16 +73,5 @@
         <p class="small"><a href="https://www.linkedin.com/in/vishwanathalevoor/" rel="me noopener">Vishwanath</a>, an NMMS teaching volunteer, developed this app. For feedback or support, you can reach Vishwanath on <a href="https://www.linkedin.com/in/vishwanathalevoor/" rel="me noopener">LinkedIn</a>.</p>
       </section>
     </main>
-    <script>
-      // One anonymous visit count, as in src/lib/analytics.ts. Live site only; fails silently offline.
-      try {
-        if (/(^|\.)mystudyprep\.in$/.test(location.hostname) && navigator.onLine && !navigator.webdriver) {
-          navigator.sendBeacon(
-            'https://nmms-prep.goatcounter.com/count?' +
-              new URLSearchParams({ p: '/about', t: document.title, r: document.referrer, s: [screen.width, screen.height, devicePixelRatio || 1].join(), rnd: Math.random().toString(36).slice(2) }),
-          )
-        }
-      } catch (e) {}
-    </script>
   </body>
 </html>
