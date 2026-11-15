@@ -64,6 +64,9 @@ li {
   margin-bottom: 6px;
 }
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -91,11 +94,27 @@ li {
   color: var(--primary-ink);
   font-weight: 800;
 }
-.open {
+.nav {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  padding: 0 4px;
+  color: var(--muted);
   font-size: 16px;
+  text-decoration: none;
+}
+.back {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-right: 4px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 20px;
   text-decoration: none;
 }
 main {

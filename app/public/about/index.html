@@ -28,7 +28,7 @@
         "@type": "AboutPage",
         "url": "https://mystudyprep.in/about/",
         "name": "About NMMS Prep",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-15",
         "mainEntity": {
           "@type": "WebApplication",
           "name": "NMMS Prep",
@@ -58,9 +58,20 @@
   </head>
   <body>
     <header class="topbar">
+      <a class="back" id="back" href="/" aria-label="Back">←</a>
       <a class="brand" href="/"><span class="logo" aria-hidden="true">N</span> NMMS Prep</a>
-      <a class="open" href="/mat">Open the app →</a>
     </header>
+    <script>
+      // Back to the page we came from (the landing page or the app's Home); opened directly, it goes to /.
+      document.getElementById('back').addEventListener('click', function (e) {
+        try {
+          if (history.length > 1 && document.referrer && new URL(document.referrer).origin === location.origin) {
+            e.preventDefault()
+            history.back()
+          }
+        } catch (err) {}
+      })
+    </script>
     <main>
       <h1>About NMMS Prep</h1>
 
