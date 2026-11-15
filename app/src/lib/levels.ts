@@ -1,3 +1,9 @@
+import aoLevels from '../data/levels/arithmetical-operations.json'
+import ssLevels from '../data/levels/signs-symbols.json'
+import lmLevels from '../data/levels/letter-matrix.json'
+import lvLevels from '../data/levels/letter-values.json'
+import pyLevels from '../data/levels/pyramid.json'
+import fnLevels from '../data/levels/figure-numbers.json'
 import ageLevels from '../data/levels/age-problems.json'
 import matrixLevels from '../data/levels/number-matrix.json'
 import type { Question } from '../types'
@@ -10,6 +16,12 @@ import type { Question } from '../types'
 export const LEVEL_FILES: { topic: string; levels: Record<string, number> }[] = [
   { topic: matrixLevels.topic, levels: matrixLevels.levels },
   { topic: ageLevels.topic, levels: ageLevels.levels },
+  { topic: aoLevels.topic, levels: aoLevels.levels },
+  { topic: ssLevels.topic, levels: ssLevels.levels },
+  { topic: lmLevels.topic, levels: lmLevels.levels },
+  { topic: lvLevels.topic, levels: lvLevels.levels },
+  { topic: pyLevels.topic, levels: pyLevels.levels },
+  { topic: fnLevels.topic, levels: fnLevels.levels },
 ]
 
 export const MAX_LEVEL = 4

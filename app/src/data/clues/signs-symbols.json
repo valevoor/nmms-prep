@@ -1,0 +1,141 @@
+{
+  "topic": "signs-symbols",
+  "_note": "Step-by-step clues for Signs and Symbols (Chapter 18): the book questions and the past-paper questions filed under the chapter, by question id. Each list says where the = (or < or >) probably goes, works out part of each side or rules out a wrong option, and leaves the last check to the student: it never names the right option. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ss-b01": [
+      "The middle sign compares the two sides (=, < or >). Work out each side on its own.",
+      "Option B gives 6 + 8 > 9 + 7, that is 14 > 16. False.",
+      "Try the other options the same way. Which one is true?"
+    ],
+    "ss-b02": [
+      "All four numbers are elevens: 22, 33, 66 and 11 are 2, 3, 6 and 1 elevens.",
+      "2 + 3 = 5 and 6 − 1 = 5.",
+      "So 22 + 33 and 66 − 11 are equal. Which option gives those signs, in order?"
+    ],
+    "ss-b03": [
+      "48 is at both ends. If = goes before the last 48, the left side must come back to 48.",
+      "÷ 8 and then × 8 cancel out.",
+      "Which option has ÷ and × on the 8s, and then =?"
+    ],
+    "ss-b04": [
+      "The numbers are small, so the signs are probably + and −. Put = before the 10.",
+      "11 − 8 = 3. What must you add to 3 to make 10?",
+      "Which option gives those signs, in order?"
+    ],
+    "ss-b05": [
+      "There are four signs, and one of them is =. Work out each side on its own, × and ÷ first.",
+      "45 ÷ 15 = 3, and 2 × 3 = 6.",
+      "3 + 3 = 6. Which option gives those signs, in order?"
+    ],
+    "ss-b06": [
+      "One sign is =. Work out each side on its own, × and ÷ first.",
+      "8 ÷ 2 = 4, so 30 + 8 ÷ 2 = 34. And 40 − 6 = 34.",
+      "Which option gives those signs, in order?"
+    ],
+    "ss-b07": [
+      "One sign compares the two sides (=, < or >). Work out each side on its own, × first.",
+      "Option A gives 13 × 5 < 15 ÷ 5 × 9, that is 65 < 27. False.",
+      "Try the other options the same way. Which one is true?"
+    ],
+    "ss-b08": [
+      "47 is the biggest number and comes last, so = probably goes just before it.",
+      "18 ÷ 3 = 6, and 6 × 5 = 30.",
+      "30 + 17 = 47. Which option gives those signs, in order?"
+    ],
+    "ss-b09": [
+      "One sign compares the two sides. Work out each side on its own, × first.",
+      "Option A gives 23 = 8 + 4 × 21 − 7. The right side is 8 + 84 − 7 = 85, so it says 23 equals 85. False.",
+      "Try the other options the same way. Which one is true?"
+    ],
+    "ss-b10": [
+      "One sign is =. Work out each side on its own, × and ÷ first.",
+      "84 − 14 = 70. Can 35, 14 and 7 make 70?",
+      "35 × 14 ÷ 7 = 35 × 2. Which option gives those signs, in order?"
+    ],
+    "ss-b11": [
+      "28 comes twice at the end, so = is probably between them.",
+      "7 ÷ 14 = 1/2, and 1/2 × 28 = 14.",
+      "14 + 14 = 28. Which option gives those signs, in order?"
+    ],
+    "ss-b12": [
+      "As printed, the right side 7 + 36 ÷ 54 − 5 is not even a whole number, so something must change.",
+      "91 = 7 × 13, so 91 ÷ 7 = 13 would be neat. That needs a ÷ right after 91.",
+      "Which swap puts ÷ after 91? Then check: is 91 ÷ 7 + 36 equal to 54 − 5?"
+    ],
+    "ss-b14": [
+      "As printed, 9 ÷ 27 is a fraction (1/3), so the left side is not a whole number.",
+      "28 = 7 + 21, and 21 = 3 × 7. You need a 3 from 9 and 27.",
+      "27 ÷ 9 = 3. Which swap gives that? Check the left side after it."
+    ],
+    "ss-b15": [
+      "As printed, 14 × 22 = 308, far bigger than 81.",
+      "Make the product smaller: 14 × 5 = 70. Then you need 11 more, and 22 ÷ 2 = 11.",
+      "Which swap gives 14 × 5 + 22 ÷ 2? Check that it is 81."
+    ],
+    "ka1920m-41": [
+      "Work out each side of = on its own, × first.",
+      "If = comes right after 24, the right side must make 24 from 9, 2 and 6.",
+      "9 × 2 = 18, and 18 + 6 = 24. Which option gives those signs, in order?"
+    ],
+    "ka1920m-42": [
+      "Work out each side of = on its own, × first.",
+      "6 × 4 = 24, and 16 + 8 = 24.",
+      "Which option gives those signs, in order?"
+    ],
+    "ka1920m-43": [
+      "62 and 58 are close: 62 = 58 + 4. Can 48 and 12 make 4?",
+      "48 ÷ 12 = 4.",
+      "So = comes right after 62. Which option gives those signs, in order?"
+    ],
+    "ka21m-35": [
+      "Work out each side of = on its own, × first.",
+      "4 × 8 = 32. Can 20 and 12 make 32?",
+      "Which option gives those signs, in order?"
+    ],
+    "ka21m-36": [
+      "Work out × and ÷ from left to right.",
+      "12 ÷ 4 = 3, and 3 × 2 = 6.",
+      "Which option gives those signs, in order?"
+    ],
+    "ka23m-11": [
+      "Work out each side of = on its own, × first.",
+      "7 × 3 = 21, and 21 − 9 = 12.",
+      "So = comes right after 12. Which option gives those signs, in order?"
+    ],
+    "ka23m-12": [
+      "The last number, 2, is small. Put = before it and make 2 from 8, 3, 10 and 5.",
+      "3 × 10 ÷ 5 = 6.",
+      "8 − 6 = 2. Which option gives those signs, in order?"
+    ],
+    "ka2324m-16": [
+      "Work out each side of = on its own, × first.",
+      "3 × 8 + 4 = 28. Can 30 and 2 make 28?",
+      "Which option gives those signs, in order?"
+    ],
+    "ka2324m-17": [
+      "Do the brackets first, then × and ÷.",
+      "The last number, 3, is small, so = probably goes just before it.",
+      "(4 + 2) × 6 = 36, and 36 ÷ 12 = 3. Which option gives those signs, in order?"
+    ],
+    "ka2425m-10": [
+      "Letters next to each other are multiplied: ab is a × b, and abcd is a × b × c × d.",
+      "ab ÷ abcd leaves 1 ÷ (c × d). Then × acd brings back a.",
+      "That leaves a, and × a makes a². Which option gives those signs, in order?"
+    ],
+    "ka2425m-11": [
+      "Put each option's numbers into * ÷ * + * = * − * and work out both sides.",
+      "Option A: 40 ÷ 10 + 6 = 10, but 8 − 2 = 6. Not equal.",
+      "Check the other options the same way. Which one makes both sides equal?"
+    ],
+    "ka2526m-34": [
+      "Write the powers out: 10³ = 1000, 10² = 100, 10¹ = 10 and 10⁰ = 1.",
+      "To get 0, an amount must be taken away from itself.",
+      "1000 ÷ 100 = 10, and 10 × 1 = 10. Which option makes 10 − 10?"
+    ],
+    "ka2526m-35": [
+      "Put each option's numbers into * + * ÷ * = * × * and work out both sides, ÷ and × first.",
+      "Option A: 6 + 12 ÷ 3 = 10, but 2 × 7 = 14. Not equal.",
+      "Check the other options the same way. Which one makes both sides equal?"
+    ]
+  }
+}

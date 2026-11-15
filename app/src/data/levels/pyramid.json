@@ -1,0 +1,25 @@
+{
+  "topic": "pyramid",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: every letter moves the same way, straight down or one box along; 2: down and to the right, or across the middle line like a mirror within one pair of groups; 3: the mirror found between the 1st and 3rd groups and used on the 2nd, a letter that stays in the middle, or a move towards the middle; 4: two different moves in one group, or a rule read from the groups alone. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "py-b01": 1,
+    "py-b05": 1,
+    "py-b13": 1,
+    "py-b03": 2,
+    "py-b04": 2,
+    "py-b02": 2,
+    "py-b08": 2,
+    "py-b10": 2,
+    "ka23m-22": 2,
+    "ka2324m-28": 2,
+    "ka2425m-68": 2,
+    "ka2526m-64": 2,
+    "py-b06": 3,
+    "py-b07": 3,
+    "py-b09": 3,
+    "ka2425m-66": 3,
+    "ka2425m-67": 3,
+    "ka23m-21": 4,
+    "ka2526m-66": 4
+  }
+}

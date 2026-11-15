@@ -1,0 +1,31 @@
+{
+  "topic": "arithmetical-operations",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: one swap or code with small whole numbers that is easy to spot; 2: a swap that needs both sides worked out, the = sign moved, or several swaps tried; 3: putting in four signs, or a code with brackets or squares; 4: algebra, fractions, percentages, or a meaning swap applied to every option. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "ao-b11": 1,
+    "ka1920m-44": 1,
+    "ka23m-14": 1,
+    "ka21m-38": 1,
+    "ao-b15": 1,
+    "ao-b10": 2,
+    "ao-b12": 2,
+    "ao-b13": 2,
+    "ka21m-37": 2,
+    "ka23m-13": 2,
+    "ka2324m-18": 2,
+    "ka2324m-19": 2,
+    "ao-b01": 3,
+    "ao-b02": 3,
+    "ao-b04": 3,
+    "ao-b05": 3,
+    "ao-b06": 3,
+    "ao-b14": 3,
+    "ka2425m-13": 3,
+    "ao-b03": 4,
+    "ao-b07": 4,
+    "ao-b08": 4,
+    "ao-b09": 4,
+    "ka2425m-12": 4,
+    "ka2526m-36": 4
+  }
+}

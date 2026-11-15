@@ -1,0 +1,21 @@
+{
+  "topic": "letter-values",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: find a few letters' values to write a code or match one; 2: a few letters' values, then one more step (a product, a square, or a total of zero); 3: every letter of four options worked out and compared; 4: letters written as row-and-column pairs across two matrices. Practice and Classroom ask the questions in this order (lib/levels.ts). tools/check_levels.ts checks them.",
+  "levels": {
+    "lv-b02": 1,
+    "lv-b06": 1,
+    "lv-b03": 1,
+    "lv-b09": 1,
+    "lv-b13": 2,
+    "lv-b07": 2,
+    "lv-b08": 2,
+    "lv-b01": 3,
+    "lv-b04": 3,
+    "lv-b05": 3,
+    "lv-b10": 3,
+    "lv-b11": 3,
+    "lv-b12": 3,
+    "lv-b14": 4,
+    "lv-b15": 4
+  }
+}

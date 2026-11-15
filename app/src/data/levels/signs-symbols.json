@@ -1,0 +1,33 @@
+{
+  "topic": "signs-symbols",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: three signs between four small numbers, where = is easy to place; 2: × and ÷ worked left to right, or numbers to place in a given pattern; 3: four signs, a comparison (< or >), brackets, or a swap that has to be tried; 4: fractions, letters or powers. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "ss-b01": 1,
+    "ss-b02": 1,
+    "ss-b04": 1,
+    "ka1920m-41": 1,
+    "ka1920m-42": 1,
+    "ka21m-35": 1,
+    "ka23m-11": 1,
+    "ss-b03": 2,
+    "ka21m-36": 2,
+    "ka1920m-43": 2,
+    "ka2425m-11": 2,
+    "ka2526m-35": 2,
+    "ss-b05": 3,
+    "ss-b06": 3,
+    "ss-b07": 3,
+    "ss-b08": 3,
+    "ss-b09": 3,
+    "ss-b10": 3,
+    "ss-b12": 3,
+    "ss-b14": 3,
+    "ss-b15": 3,
+    "ka23m-12": 3,
+    "ka2324m-16": 3,
+    "ka2324m-17": 3,
+    "ss-b11": 4,
+    "ka2425m-10": 4,
+    "ka2526m-34": 4
+  }
+}

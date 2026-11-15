@@ -14,11 +14,11 @@ import { PAPER_FILES } from '../app/src/data/papers'
 import { CLUE_FILES } from '../app/src/lib/clues'
 
 const KANNADA = /[ಀ-೿]/
-// English words: lowercase letters, but not maths or units.
-const WORDS = /\b(?!(?:km|cm)\b)[a-z]{2,}/
+// English words: lowercase letters, but not units or the algebra terms ad, abc, abcd (Arithmetical Operations Q3).
+const WORDS = /\b(?!(?:km|cm|ad|abc|abcd)\b)[a-z]{2,}/
 const problems: string[] = []
 
-type Q = { id: string; status?: string; answer: string; options: Record<string, string> }
+type Q = { id: string; status?: string; answer: string; options: Record<string, string>; terms?: string[]; pyramid?: string[][] }
 
 for (const f of CLUE_FILES) {
   const book = (CHAPTER_FILES.find((c) => c.id === f.topic)?.questions ?? []) as Q[]
@@ -44,9 +44,12 @@ for (const f of CLUE_FILES) {
     }
     if (en.length < 3 || en.length > 6) problems.push(`${f.topic}: ${q.id} has ${en.length} clues (3–6 wanted)`)
     if (!kn || kn.length !== en.length) problems.push(`${f.topic}: ${q.id} has ${en.length} clues in English but ${kn?.length ?? 0} in Kannada`)
+    // Lowercase letter groups taken from the question itself ("glmn" in a pyramid) are not English words.
+    const own = new Set(JSON.stringify([q.terms, q.options, q.pyramid]).match(/[a-z]+/g) ?? [])
     kn?.forEach((c, i) => {
-      if (!KANNADA.test(c)) problems.push(`${f.topic}: ${q.id} Kannada clue ${i + 1} has no Kannada script`)
-      if (WORDS.test(c)) problems.push(`${f.topic}: ${q.id} Kannada clue ${i + 1} still has English words: "${c}"`)
+      // A clue that is only a sum ("(5 + 2) × 15 = 105.") reads the same in both languages.
+      if (!KANNADA.test(c) && c !== en[i]) problems.push(`${f.topic}: ${q.id} Kannada clue ${i + 1} has no Kannada script`)
+      if (WORDS.test(c.replace(/[a-z]+/g, (w) => (own.has(w) ? '' : w)))) problems.push(`${f.topic}: ${q.id} Kannada clue ${i + 1} still has English words: "${c}"`)
     })
     // "10 years" is looked for as 10.
     const answer = q.options[q.answer].replace(/\s+[^\d,\s].*$/, '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')

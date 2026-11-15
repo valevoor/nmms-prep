@@ -1,3 +1,13 @@
+import aoClues from '../data/clues/arithmetical-operations.json'
+import aoCluesKn from '../data/clues/arithmetical-operations.kn.json'
+import ssClues from '../data/clues/signs-symbols.json'
+import ssCluesKn from '../data/clues/signs-symbols.kn.json'
+import lmClues from '../data/clues/letter-matrix.json'
+import lmCluesKn from '../data/clues/letter-matrix.kn.json'
+import lvClues from '../data/clues/letter-values.json'
+import lvCluesKn from '../data/clues/letter-values.kn.json'
+import pyClues from '../data/clues/pyramid.json'
+import pyCluesKn from '../data/clues/pyramid.kn.json'
 import ageClues from '../data/clues/age-problems.json'
 import ageCluesKn from '../data/clues/age-problems.kn.json'
 import figNumClues from '../data/clues/figure-numbers.json'
@@ -19,6 +29,11 @@ export const CLUE_FILES: { topic: string; en: Record<string, string[]>; kn: Reco
   { topic: figNumClues.topic, en: figNumClues.clues, kn: figNumCluesKn.clues },
   { topic: matrixClues.topic, en: matrixClues.clues, kn: matrixCluesKn.clues },
   { topic: ageClues.topic, en: ageClues.clues, kn: ageCluesKn.clues },
+  { topic: aoClues.topic, en: aoClues.clues, kn: aoCluesKn.clues },
+  { topic: ssClues.topic, en: ssClues.clues, kn: ssCluesKn.clues },
+  { topic: lmClues.topic, en: lmClues.clues, kn: lmCluesKn.clues },
+  { topic: lvClues.topic, en: lvClues.clues, kn: lvCluesKn.clues },
+  { topic: pyClues.topic, en: pyClues.clues, kn: pyCluesKn.clues },
 ]
 
 const CLUES: Record<Locale, Record<string, string[]>> = {

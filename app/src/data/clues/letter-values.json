@@ -1,0 +1,81 @@
+{
+  "topic": "letter-values",
+  "_note": "Step-by-step clues for Numbers and Letters by a Rule (Chapter 29), by question id. Each list repeats how a letter gets its value, works out a few letters (or rules out an option), and leaves the rest to the student. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "lv-b01": [
+      "Each letter's value is its row number ÷ its column number: S = 16 ÷ 2 = 8.",
+      "Big values come from a big row and the small column 2: S = 8, P = 24 ÷ 2 = 12, G = 32 ÷ 2 = 16.",
+      "Work out each group's total. MEIL = 6 + 4 + 3 + 4 = 17. Which group has the biggest total?"
+    ],
+    "lv-b02": [
+      "Each letter's value is its row number ÷ its column number.",
+      "G is in row 32, column 2: 32 ÷ 2 = 16. I is in row 24, column 8: 24 ÷ 8 = 3.",
+      "Now work out R (row 32, column 4) and L (row 32, column 8). Which option matches all four?"
+    ],
+    "lv-b03": [
+      "Each letter's value is its row number × its column number.",
+      "B = 1 × 3 = 3 and L = 2 × 2 = 4.",
+      "Now work out U (row 1, column 2) and E (row 2, column 3). What is B + L + U + E?"
+    ],
+    "lv-b04": [
+      "Each letter's value is its row number × its column number.",
+      "The letters in row 3 are worth the most: O = 3, R = 6 and P = 9.",
+      "Work out each group's total. HELB = 2 + 6 + 4 + 3 = 15. Which group has the biggest total?"
+    ],
+    "lv-b05": [
+      "Each letter's value is its row number × its column number.",
+      "The values are G = 1, U = 2, B = 3, H = 2, L = 4, E = 6, O = 3, R = 6 and P = 9.",
+      "Multiply each group. PGU = 9 × 1 × 2 = 18. Which group gives 72?"
+    ],
+    "lv-b06": [
+      "Each letter's value is its row number + its column number.",
+      "H = 4 + 4 = 8 and O = 6 + 4 = 10.",
+      "Now work out S (row 6, column 6) and T (row 8, column 8). Which option matches all four?"
+    ],
+    "lv-b07": [
+      "Each letter's value is its row number + its column number.",
+      "T = 8 + 8 = 16 and O = 6 + 4 = 10.",
+      "P is in row 6, column 8. What is 16 × 10 × P?"
+    ],
+    "lv-b08": [
+      "Each letter's value is its row number − its column number. It can be below zero.",
+      "The letters where the row and column numbers are the same (A, K, U and P) are each worth 0.",
+      "A total of 0 comes from all zeros, or from values above and below zero cancelling out. Work out each group: which one adds up to 0?"
+    ],
+    "lv-b09": [
+      "Each letter's value is its row number − its column number.",
+      "Y = 8 − 2 = 6, N = 8 − 6 = 2 and P = 8 − 8 = 0. Three options start with YNP.",
+      "The last letter must be worth 2. Z = 8 − 4 = 4 and I = 4 − 2 = 2. Which option is right?"
+    ],
+    "lv-b10": [
+      "Each letter's value is its row number − its column number.",
+      "A letter worth 0 makes the whole product 0: A = 2 − 2 = 0, so IZAS is out.",
+      "Work out the rest: I = 2, Z = 4, Y = 6 and S = 2. Which group multiplies to 96?"
+    ],
+    "lv-b11": [
+      "Each letter's value is its row number + its column number.",
+      "The letters in row 3 are worth the most: F = 4, S = 5 and G = 6.",
+      "Work out each group's total. FISH = 4 + 4 + 5 + 3 = 16. Which group has the biggest total?"
+    ],
+    "lv-b12": [
+      "Each letter's value is its row number + its column number.",
+      "Small values: U = 2, R = 3 and H = 3. Big values: G = 6, S = 5 and L = 5.",
+      "Multiply each group. SORH = 5 × 4 × 3 × 3 = 180. Which group gives the smallest product?"
+    ],
+    "lv-b13": [
+      "Each letter's value is its row number + its column number.",
+      "U = 1 + 1 = 2 and R = 1 + 2 = 3.",
+      "L is in row 2, column 3. Add U + R + L, then square the total. What do you get?"
+    ],
+    "lv-b14": [
+      "Each letter is written as its row number, then its column number: in Matrix 1, 02 is row 0, column 2.",
+      "Matrix 1 uses the numbers 0 to 4, and Matrix 2 uses 5 to 9. S, E and T are in Matrix 1; O is in Matrix 2.",
+      "Option A: 33 is S ✓ and 20 is E ✓, but 11 is H, not T. Check the other options the same way: which one gives S, E, T, O?"
+    ],
+    "lv-b15": [
+      "Each letter is written as its row number, then its column number: in Matrix 1, 11 is row 1, column 1.",
+      "H and E are in Matrix 1, so their pairs use 0 to 4. P and R are in Matrix 2, so their pairs use 5 to 9.",
+      "Most options get H, E and P right. Check the last pair of each option in Matrix 2: which one is R?"
+    ]
+  }
+}

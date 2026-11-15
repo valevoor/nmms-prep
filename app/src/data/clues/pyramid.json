@@ -1,0 +1,101 @@
+{
+  "topic": "pyramid",
+  "_note": "Step-by-step clues for Number and Letter Pyramid (Chapter 30): the book questions and the past-paper questions filed under the chapter, by question id. Each list says which two groups to compare, names the move in the pyramid (straight down, down and right, one box along, or across the middle line like a mirror), then asks the student to make that move on the last group. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "py-b01": [
+      "Find each letter of the groups in the pyramid. Compare the 1st group with the 2nd.",
+      "a → c, b → f, c → g, d → h: each letter moves one row straight down.",
+      "Check: the 2nd group, cfgh, moves the same way to the 3rd, glmn ✓. Now move each letter of glmn one row straight down. What do you get?"
+    ],
+    "py-b02": [
+      "Find each letter in the pyramid. The 3rd and 4th groups are a pair: compare beqj with diyp.",
+      "b ↔ d, e ↔ i, q ↔ y, j ↔ p: each letter swaps to the same place on the other side of the pyramid's middle line, like a mirror.",
+      "Do the same to abje. a is on the middle line, so it stays. What do b, j and e become?"
+    ],
+    "py-b03": [
+      "Find each letter in the pyramid. Compare the 1st group with the 2nd.",
+      "b → g, d → i, f → m, h → o: each letter moves one row down and one box to the right.",
+      "Move each letter of egkm one row down and one box to the right. What do you get?"
+    ],
+    "py-b04": [
+      "Find each letter in the pyramid. Compare the 1st group with the 2nd.",
+      "b → g, g → n, f → m, c → h: each letter moves one row down and one box to the right.",
+      "Move each letter of elkf one row down and one box to the right. What do you get?"
+    ],
+    "py-b05": [
+      "Find each letter in the pyramid. Compare the 1st group with the 2nd.",
+      "a → c, b → f, a → c, d → h: each letter moves one row straight down.",
+      "Move each letter of hmho one row straight down. What do you get?"
+    ],
+    "py-b06": [
+      "Find each letter and number in the pyramid. Compare the 1st group with the 3rd: B1C2 and F3E2.",
+      "B ↔ F, 1 ↔ 3, C ↔ E, and 2 stays: the 3rd group is the mirror image of the 1st across the pyramid's middle line.",
+      "So the 4th group is the mirror image of the 2nd, G4H5. What do G, 4, H and 5 become?"
+    ],
+    "py-b07": [
+      "Find each letter and number in the pyramid. Compare the 1st group with the 3rd: 1CU15 and 3EW17.",
+      "1 ↔ 3, C ↔ E, U ↔ W, 15 ↔ 17: the 3rd group is the mirror image of the 1st across the pyramid's middle line.",
+      "So the 4th group is the mirror image of the 2nd, 4HS13. What do 4, H, S and 13 become?"
+    ],
+    "py-b08": [
+      "The 1st and 2nd groups are a pair, and so are the 3rd and 4th. Compare A21 with A23.",
+      "A is on the middle line, so it stays, and so does 2. 1 ↔ 3: they swap sides, like a mirror.",
+      "Do the same to D78. D is on the middle line. What do 7 and 8 become?"
+    ],
+    "py-b09": [
+      "Find each letter and number in the pyramid. Compare the 1st group with the 3rd: A2B1 and A4D1.",
+      "A and 1 are on the middle line, so they stay; 2 ↔ 4 and B ↔ D swap sides. The 3rd group is the mirror image of the 1st.",
+      "So the 4th group is the mirror image of the 2nd, E10J5. What do E, 10, J and 5 become?"
+    ],
+    "py-b10": [
+      "The 1st and 2nd groups are a pair. Find JRS5 and PXW9 in the pyramid.",
+      "J ↔ P, R ↔ X, S ↔ W, 5 ↔ 9: each swaps to the same place on the other side of the middle line.",
+      "Do the same to EST2. What do E, S, T and 2 become?"
+    ],
+    "py-b13": [
+      "Find each letter and number in the pyramid. Compare the 1st group with the 2nd.",
+      "B → C, 2 → 3, 4 → 5, E → F: each moves one box to the right in its own row.",
+      "Move each part of 12MR18 one box to the right. What do you get?"
+    ],
+    "ka23m-21": [
+      "Compare the 1st group with the 2nd: J A C becomes N 18 G.",
+      "J → N and C → G: the outer letters move to the same place on the other side of their row's middle. The middle letter A goes up a row: it is 1st in its row, so it becomes the last number of the row above, 18.",
+      "Do the same to K B D. K and D move across their rows; B is 2nd in its row, so it becomes 2nd from the end of the row above. What do you get?"
+    ],
+    "ka23m-22": [
+      "The 1st and 2nd groups are a pair. Find 12, A and 1 in the pyramid, then 18, I and 11.",
+      "12 → 18, A → I, 1 → 11: each moves to the place the same distance from the middle, on the other side of its row.",
+      "Do the same to 14 C 3. What do you get?"
+    ],
+    "ka2324m-28": [
+      "Compare the 1st group with the 2nd: 37 j 27 c becomes 41 n 31 g.",
+      "37 ↔ 41, j ↔ n, 27 ↔ 31, c ↔ g: each moves to the same place on the other side of its row's middle.",
+      "Do the same to j 27 c 9. What do you get?"
+    ],
+    "ka2425m-66": [
+      "Compare the 1st group with the 2nd: 13HK becomes 17JG.",
+      "1 is alone at the top, so it stays. 3 ↔ 7, H ↔ J, K ↔ G: each moves to the same place on the other side of its row's middle.",
+      "Do the same to 39SV. V is in the middle of its row. What do you get?"
+    ],
+    "ka2425m-67": [
+      "Compare the 1st group with the 2nd: 3F11S becomes DGNT.",
+      "3 → D, F → G, 11 → N, S → T: each moves one place towards the middle of its row.",
+      "Do the same to 7L15Y. 7 is at the right end of its row, so it moves one place left. What do you get?"
+    ],
+    "ka2425m-68": [
+      "Compare the 1st group with the 2nd: AN15 becomes CO11.",
+      "A ↔ C, N ↔ O, 15 ↔ 11: each moves to the same place on the other side of its row's middle.",
+      "Do the same to 3TW. What do 3, T and W become?"
+    ],
+    "ka2526m-64": [
+      "Compare the 1st group with the 2nd: 8N21 becomes 14R23.",
+      "8 ↔ 14, N ↔ R, 21 ↔ 23: each moves to the same place on the other side of its row's middle.",
+      "The 4th group, J13Q, is the mirror of the missing 3rd. Mirror it back: what do J, 13 and Q become?"
+    ],
+    "ka2526m-66": [
+      "Split each group into four parts: E, N, 20, 18 and then I, R, 24, 26.",
+      "E → I and N → R move 4 letters on. 20 → 24 is + 4, and 18 → 26 is + 8.",
+      "Do the same to 2, 9, N and L: 4 on for the first three parts and 8 on for the last. What do you get?"
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "topic": "letter-matrix",
+  "_note": "Step-by-step clues for Letter Matrix (Chapter 28): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to do with the letters (count steps, or use their places A = 1 … Z = 26), shows the rule on a complete row or column, then sets up the blank. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "lm-b01": [
+      "Look along each row and count how far each letter moves in the alphabet.",
+      "Row 1: B → D is +2 and D → G is +3. Row 2, H → J → M, is the same.",
+      "Row 3: N → P is +2. What is 3 letters after P?"
+    ],
+    "lm-b02": [
+      "Look along each row and count how far each letter moves in the alphabet.",
+      "Row 1: U → W is +2 and W → Z is +3. Row 2, A → C → F, is the same.",
+      "Row 3: G → I is +2. What is 3 letters after I?"
+    ],
+    "lm-b03": [
+      "Change each letter to its place in the alphabet (A = 1 … Z = 26), and look down each column.",
+      "Column 1: O = 15, C = 3 and L = 12. 15 − 3 = 12: top − middle = bottom.",
+      "Check column 2: T − K = 20 − 11 = 9, which is I ✓. Column 3: Y − G = 25 − 7 = ? Which letter is that?"
+    ],
+    "lm-b04": [
+      "Change each letter to its place in the alphabet, and look down each column.",
+      "Column 1: F = 6, E = 5 and K = 11. 6 + 5 = 11: top + middle = bottom.",
+      "Column 2: I + ? = Q, so 9 + ? = 17. Which letter is at that place?"
+    ],
+    "lm-b05": [
+      "Change each letter to its place in the alphabet, and look down each column.",
+      "Column 1: W = 23, M = 13 and J = 10. 23 − 13 = 10: top − middle = bottom.",
+      "Column 2: S − I = 19 − 9 = ? Which letter is that?"
+    ],
+    "lm-b06": [
+      "Each row has a letter, a number and a letter. Compare the number with the first letter's place.",
+      "C is the 3rd letter and O the 15th: the number is the first letter's place.",
+      "The last letter is the first letter's opposite (A ↔ Z, B ↔ Y …), so their places add up to 27. M = 13: what is 27 − 13, and which letter is at that place?"
+    ],
+    "lm-b07": [
+      "Each row has a letter, a number and a letter. Compare the number with the first letter's place.",
+      "R is the 18th letter and V the 22nd: the number is the first letter's place.",
+      "The last letter is the first letter's opposite (A ↔ Z, B ↔ Y …), so their places add up to 27. Y = 25: what is 27 − 25, and which letter is at that place?"
+    ],
+    "lm-b08": [
+      "The number tells you something about going from the first letter to the last.",
+      "F → I: G and H are skipped, which is 2. C → H: D, E, F and G are skipped, which is 4.",
+      "M → V: how many letters are skipped between them?"
+    ],
+    "lm-b09": [
+      "Look at the letter between the first and the last in each row: M, (N), O.",
+      "N is the 14th letter, so counted back from Z it is 27 − 14 = 13. That is the number.",
+      "Check: Q, R, S → R = 18, and 27 − 18 = 9 ✓. Row 3: C, D, E → D = 4. What is 27 − 4?"
+    ],
+    "lm-b10": [
+      "Look at the letter between the first and the last in each row: P, (Q), R.",
+      "Q is the 17th letter, and 27 − 17 = 10. That is the number.",
+      "Check: K, L, M → L = 12, and 27 − 12 = 15 ✓. Row 3: U, V, W → V = 22. What is 27 − 22?"
+    ],
+    "lm-b11": [
+      "Change letters to their places, and look along each row.",
+      "Row 1: N = 14 and G = 7, and 7 × 2 = 14: middle × number = first.",
+      "Check row 2: H × 3 = 8 × 3 = 24, which is X ✓. Row 3: ? × 4 = P = 16. Which letter is ??"
+    ],
+    "lm-b12": [
+      "Change letters to their places, and look along each row.",
+      "Row 1: R = 18 and B = 2, and 9 × 2 = 18: number × middle = first.",
+      "Check row 2: 7 × C = 7 × 3 = 21, which is U ✓. Row 3: 8 × ? = H = 8. Which letter is ??"
+    ],
+    "lm-b13": [
+      "Look along each row and count how far each letter moves. After Z, start again at A.",
+      "Row 1: E → J is +5 and J → M is +3. Row 2: Y → D is +5 (Z, A, B, C, D), then D → G is +3.",
+      "Row 3: count 5 on from L to get ?, and 3 more should reach T. Which letter is ??"
+    ],
+    "lm-b14": [
+      "Change letters to their places, and look down each column.",
+      "Column 1: C = 3, O = 15 and E = 5. 3 × 5 = 15: top × bottom = middle.",
+      "Check column 2: F × C = 6 × 3 = 18, which is R ✓. Column 3: D × F = 4 × 6 = ? Which letter is that?"
+    ],
+    "lm-b15": [
+      "Change letters to their places, and look down each column.",
+      "Column 1: H = 8, P = 16 and B = 2. 8 × 2 = 16: top × bottom = middle.",
+      "Check column 3: C × F = 3 × 6 = 18, which is R ✓. Column 2: F × D = 6 × 4 = ? Which letter is that?"
+    ],
+    "ka1920m-38": [
+      "Count each letter's place from Z backwards: Z = 1, Y = 2, X = 3 …",
+      "Row 1: I = 18, R = 9 and Y = 2. 18 ÷ 9 = 2: 1st ÷ 2nd = 3rd.",
+      "Check row 2: C (24) ÷ U (6) = 4, which is W ✓. Row 3: G (20) ÷ W (4) = ? Which letter is that, counted from Z?"
+    ],
+    "ka1920m-39": [
+      "Change letters to their places and add up each row.",
+      "Row 1: D + J + L = 4 + 10 + 12 = 26. Row 2: 13 + 5 + 8 = 26 too.",
+      "Row 3: 16 + ? + 3 = 26. Which letter is ??"
+    ],
+    "ka1920m-40": [
+      "Read each letter as its place (A = 1, C = 3, F = 6 …), then add up each row.",
+      "Row 1: 8 + 1 + 6 = 15. Row 2: 3 + 5 + 7 = 15.",
+      "Row 3: ? + 9 + 2 = 15. Which letter is ??"
+    ],
+    "ka21m-30": [
+      "Change letters to their places and look down each column.",
+      "Column 1: D + A + C = 4 + 1 + 3 = 8 = 2 × 4, twice the top. Column 2: I + G + K = 9 + 7 + 11 = 27 = 3 × 9, three times the top.",
+      "So column 3 adds up to 4 × J = 40. J + L = 22, so ? = 40 − 22. Which letter is that?"
+    ],
+    "ka21m-31": [
+      "This one is not about places in the alphabet. Look at how each letter is drawn.",
+      "Count the straight lines: L and T have 2; Z, H and K have 3; E, M and W have 4.",
+      "Each column has letters with the same number of lines. The ? is in the column of L and T: which option has 2 lines?"
+    ],
+    "ka21m-34": [
+      "Each row has a letter and two numbers. Change the letter to its place.",
+      "Row 2: H = 8, 8 + 5 = 13 and 13 × 2 = 26. Row 3: N = 14, 14 + 3 = 17 and 17 × 2 = 34.",
+      "Row 1: M = 13. What is 2 × (13 + 2)?"
+    ],
+    "ka23m-18": [
+      "Change letters to their places and look along each row.",
+      "Row 1: H = 8, 8 − 5 = 3 and 3² = 9, which is I. Row 2: 11 − G (7) = 4 and 4² = 16, which is P.",
+      "Row 3: M = 13 and 13 − 8 = 5. What is 5², and which letter is at that place?"
+    ],
+    "ka23m-19": [
+      "Look along each row and count how far each letter moves.",
+      "Row 1: L → Q is +5 and Q → T is +3. Row 2 goes back: M → H is −5 and H → E is −3.",
+      "Row 3 goes forward like row 1: what is 5 letters after N? Check that 3 more reaches V."
+    ],
+    "ka23m-20": [
+      "Look along each row and down each column.",
+      "Each row goes forward 2: E G I and K M O. Each column goes forward 6: E, K, ?.",
+      "What is 6 letters after K? Check that it is 2 before S."
+    ],
+    "ka2324m-23": [
+      "Change letters to their places and look along each row.",
+      "Row 1: C = 3, H = 8 and Q = 17. 3² + 8 = 17.",
+      "Check row 3: B, F → 2² + 6 = 10, which is J ✓. Row 2: D, G → 4² + 7 = ? Which letter is that?"
+    ],
+    "ka2324m-24": [
+      "Change letters to their places and look down each column.",
+      "Column 1: O = 15, H = 8 and G = 7. 8 + 7 = 15: the top is the sum of the two below.",
+      "Column 2: W = 23 = K (11) + ?. Which letter is ??"
+    ],
+    "ka2324m-25": [
+      "Read letters as their places and look along each row.",
+      "Row 1: 5 × D = 5 × 4 = 20, which is T. Row 2: L (12) × 2 = 24, which is X.",
+      "Row 3: 7 × C = 7 × 3 = ? Which letter is that?"
+    ],
+    "ka2425m-78": [
+      "Change letters to their places and look along each row.",
+      "Row 1: J − A = 10 − 1 = 9, which is I. Row 2: N − H = 14 − 8 = 6, which is F.",
+      "Row 3: Q − ? = K, so 17 − ? = 11. Which letter is ??"
+    ],
+    "ka2425m-79": [
+      "Look at each row's three letters together.",
+      "Row 1 is E, D, F: the letters D, E, F mixed up. Row 3 is V, T, U: T, U, V.",
+      "Row 2 has G and H. Which letter makes three in a row with them?"
+    ],
+    "ka2425m-80": [
+      "Each row has two letters and a number. Compare the number with the letters' places.",
+      "Row 1: M = 13 and the number is 16. Row 2: K = 11 and the number is 14. Both are the 2nd letter + 3.",
+      "Row 3: O = 15. What is 15 + 3?"
+    ],
+    "ka2526m-16": [
+      "Count each letter's place from Z backwards: Z = 1, Y = 2, X = 3 …",
+      "Row 2: E = 22, Y = 2 and P = 11. 22 ÷ 2 = 11: 1st ÷ 2nd = 3rd.",
+      "Row 1: A = 26 and N = 13. 26 ÷ 13 = ? Which letter is that, counted from Z?"
+    ],
+    "ka2526m-17": [
+      "Look along each row and down each column.",
+      "The rows go +3, +2: C F H and I L N. The columns go +6: C, I, ?.",
+      "What is 6 letters after I? Check that R is 3 letters after it."
+    ]
+  }
+}

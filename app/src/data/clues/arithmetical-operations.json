@@ -1,0 +1,141 @@
+{
+  "topic": "arithmetical-operations",
+  "_note": "Step-by-step clues for Arithmetical Operations (Chapter 17): the book questions and the past-paper questions filed under the chapter, by question id. Each list starts with the order of operations or the code, then narrows down where the signs or numbers must go, and leaves the last check to the student: it never names the right option. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ao-b01": [
+      "Do × and ÷ before + and −, going from left to right.",
+      "The answer, 45, is the first number. So the signs after 45 must change it and then change it back.",
+      "÷ 5 and then × 5 cancel out. So do + 1 and then − 1.",
+      "Check each option this way. Which one leaves 45?"
+    ],
+    "ao-b02": [
+      "Do × and ÷ before + and −, going from left to right.",
+      "11 is one less than 12, and 12 ÷ 12 = 1 makes a 1 to take away.",
+      "You need something like 12 + 12 − 1 − 12. Where must the ÷ go?",
+      "Check each option with ÷ done first. Which one gives 11?"
+    ],
+    "ao-b03": [
+      "Letters next to each other are multiplied: ad means a × d, and abc means a × b × c.",
+      "2a is a + a. So the first sign is +, and the rest must turn ad, abc and abcd into a.",
+      "ad × abc ÷ abcd = (a × d × a × b × c) ÷ (a × b × c × d). Cancel what is on both top and bottom: what is left?",
+      "Check the options that start with +. Which one leaves 2a?"
+    ],
+    "ao-b04": [
+      "Change each letter to its sign: K is +, L is ×, N is − and M is ÷.",
+      "Option A, K L N M, gives 50 + 40 × 30 − 20 ÷ 10 = 50 + 1200 − 2. Far too big.",
+      "40 × 30 is big, so a ÷ must bring it down: 40 × 30 ÷ 20 = 60. Then 50 + 60 − 10 = 100.",
+      "So the signs are +, ×, ÷, −. Which option is that, in letters?"
+    ],
+    "ao-b05": [
+      "Work out the squares first: 4, 25, 49 and 1.",
+      "Change each letter to its sign: K is +, L is ×, N is − and M is ÷.",
+      "4 × 25 = 100, and 100 + 49 + 1 = 150.",
+      "So the signs are ×, +, +. Which option is that, in letters?"
+    ],
+    "ao-b06": [
+      "Change each symbol to its sign: □ is +, △ is ÷, ◇ is × and ○ is −.",
+      "The answer is 1, so the last step is probably a number divided by itself: something ÷ 105.",
+      "(5 + 2) × 15 = 105.",
+      "So the signs are +, ×, ÷. Which option is that, in symbols?"
+    ],
+    "ao-b07": [
+      "Change each symbol to its sign: □ is +, △ is ÷, ◇ is × and ○ is −.",
+      "17/16 = 1/16 + 1. Which signs make 1/16 and 1 out of quarters?",
+      "1/4 × 1/4 = 1/16, and 1/4 ÷ 1/4 = 1.",
+      "So the signs are ×, +, ÷. Which option is that, in symbols?"
+    ],
+    "ao-b08": [
+      "In each option, change the signs back: + becomes ÷, × becomes +, − becomes × and ÷ becomes −.",
+      "Option A, {(19 + 11) ÷ 15} − 2, becomes {(19 ÷ 11) − 15} × 2. That is not 0.",
+      "For 0, the last step must take a number away from itself. Look for an option whose last sign becomes −.",
+      "Change the signs in the other options and work them out. Which one gives 0?"
+    ],
+    "ao-b09": [
+      "In each option, change the signs back: + becomes ÷, × becomes +, − becomes × and ÷ becomes −.",
+      "(p + q) − q × p becomes (p ÷ q) × q + p.",
+      "(p ÷ q) × q = p, so it is p + p. Two options start this way, with different right sides.",
+      "Which right side is the same as p + p?"
+    ],
+    "ao-b10": [
+      "Swap the two signs everywhere they appear, then do × and ÷ first.",
+      "36 = 12 × 3. So 12 and 3 should probably be multiplied.",
+      "For the first sign to become ×, it must swap with ×. Check that swap: does the left side give 36?"
+    ],
+    "ao-b11": [
+      "Work out the left side as it is: 63 − 26 + 1 = 38, not 88.",
+      "88 is bigger than 63, so 26 must be added, not taken away.",
+      "Which swap turns − 26 into + 26? Check that it gives 88."
+    ],
+    "ao-b12": [
+      "Do ÷ and × first. As printed, 5 + 3 − 3 = 5 is already true, so look for a swap that keeps it true.",
+      "Swapping 5 and 6 gives 6 + 5 ÷ 2 − 3 × 1, which is not a whole number. Not that one.",
+      "Check the other swaps the same way. Which one still gives 5?"
+    ],
+    "ao-b13": [
+      "Do × first. As printed, 12 + 9 − 110 = −89, not −77.",
+      "Swapping 9 and 11 gives 12 + 11 − 10 × 9 = 23 − 90 = −67. Not that one either.",
+      "Check the other swaps the same way. Which one gives −77?"
+    ],
+    "ao-b14": [
+      "Change each letter to its sign: P is ÷, Q is ×, R is − and S is +.",
+      "The last step is something ÷ 8 = 60, so the bracket must come to 480.",
+      "125 × 5 = 625, and 625 − 150 + 5 = 480.",
+      "So the signs are ×, −, + in the bracket and ÷ after it. Which option is that, in letters?"
+    ],
+    "ao-b15": [
+      "Change each letter to its sign: P is ÷, Q is ×, R is − and S is +.",
+      "50 is close to 7 × 7 = 49. You need 1 more.",
+      "7 ÷ 7 = 1. So the signs are ×, +, ÷. Which option is that, in letters?"
+    ],
+    "ka1920m-44": [
+      "Do × first. As printed, 8 + 8 − 5 = 11, not 2.",
+      "To get 2, something big must be taken away: a × just after the − would do that.",
+      "Which swap puts the × after the −? Check that it gives 2."
+    ],
+    "ka21m-37": [
+      "Work out each side. The left is 18; the right is 8 ÷ 4 × 3 = 6. Not equal.",
+      "Swapping a sign with = changes which numbers are on each side. If = came right after 12, the left side would be just 12.",
+      "Then the right side is 6 + 8 ÷ 4 × 3. Is that 12? Which swap does this?"
+    ],
+    "ka21m-38": [
+      "As printed, 30 − 5 + 4 = 29, not 9. The product is too big.",
+      "Make the number multiplied by 3 smaller: which swap puts 5 in front of × 3?",
+      "Check that swap: 5 × 3 − 10 + 4 = ?"
+    ],
+    "ka23m-13": [
+      "As printed, 16 + 14 = 30, which is far from 2.",
+      "Swapping a sign with = changes which numbers are on each side. Try making the left side just 16.",
+      "Then the right side is 6 ÷ 3 × 7 + 2. Is that 16? Which swap does this?"
+    ],
+    "ka23m-14": [
+      "As printed, 2 × 2 − 6 = −2, not 10. You need 16 before taking away 6.",
+      "16 = 8 ÷ 2 × 4. Which swap turns 8 ÷ 4 × 2 into 8 ÷ 2 × 4?",
+      "Check that swap: does it give 10?"
+    ],
+    "ka2324m-18": [
+      "Work out each side. Left: 6 − 8 = −2. Right: 4 + 10 ÷ 5 = 6. −2 is not bigger than 6.",
+      "The left side must grow and the right side must shrink: − should become + on the left, and + should become − on the right.",
+      "Which swap does both? Check: is 6 + 8 bigger than 4 − 10 ÷ 5?"
+    ],
+    "ka2324m-19": [
+      "Work out each side. Left: 8 + 2 = 10. Right: 4 − 2 = 2. Not equal.",
+      "The left side is too big and the right side too small. Swap a big number on the left with a smaller one on the right.",
+      "Check each number swap this way. Which one makes both sides equal?"
+    ],
+    "ka2425m-12": [
+      "Work out the left side: 1 − 3/4 + 1/2 = 3/4, not 1/4.",
+      "Swapping = with a sign moves numbers to the other side. Try making the left side just 1.",
+      "Then the right side is 3/4 + 1/2 − 1/4. Is that 1? Which swap does this?"
+    ],
+    "ka2425m-13": [
+      "Do the bracket first: 20 ÷ (8 + 12) = 1, so the left side is 6, not 2.",
+      "For 20 ÷ (8 + ?) to be a whole number, 8 + ? must divide 20: so it is 10 or 20.",
+      "8 + 2 = 10. Which swap puts 2 in the bracket? Check both sides after it."
+    ],
+    "ka2526m-36": [
+      "Work out the right side first: 20% of 60 = 12.",
+      "The left side as printed: 2³ = 8 and (9 − 1) × 5/4 = 10, so 8 + 10 − 7 = 11. One short of 12.",
+      "To get one more, 2³ = 8 must become 9 = 3². Which swap does that?"
+    ]
+  }
+}
