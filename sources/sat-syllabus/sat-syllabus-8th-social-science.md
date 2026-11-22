@@ -41,7 +41,7 @@
 
 ---
 
-## Part 1 (`sat-syllabus/textbooks/8th English SS Part 1 2026-27.pdf`)
+## Part 1 (`sources/sat-syllabus/textbooks/8th English SS Part 1 2026-27.pdf`)
 
 ### `ss-8-01-sources` — Chapter 1: Sources
 - **Book Metadata:** Class 8 Social Science Part 1 | Chapter 1 | Book pp. 1–7 (PDF pp. 15–21) | **Sub-Discipline:** History
@@ -709,7 +709,7 @@
 
 ---
 
-## Part 2 (`sat-syllabus/textbooks/8th English SS Part 2 2026-27.pdf`)
+## Part 2 (`sources/sat-syllabus/textbooks/8th English SS Part 2 2026-27.pdf`)
 
 ### `ss-8-16-mauryas-kushans` — Chapter 16: Mauryas and Kushans
 - **Book Metadata:** Class 8 Social Science Part 2 | Chapter 16 | Book pp. 1–5 (PDF pp. 3–7) | **Sub-Discipline:** History

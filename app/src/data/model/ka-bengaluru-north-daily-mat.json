@@ -3,7 +3,7 @@
   "state": "karnataka",
   "issuer": "bengaluru-north",
   "test": "MAT",
-  "source": "NMMS MAT daily practice papers with answers from the Office of the Deputy Director of Public Instruction, Bengaluru North district (question-papers/model-question-papers/ka-bengaluru-north-daily-mat.pdf). Not a real exam paper. Each printed section is numbered from Q1; a section can feed more than one chapter, so every question names its own. The paper's answer key is checked by tools/check_model.ts.",
+  "source": "NMMS MAT daily practice papers with answers from the Office of the Deputy Director of Public Instruction, Bengaluru North district (sources/question-papers/model/ka-bengaluru-north-daily-mat.pdf). Not a real exam paper. Each printed section is numbered from Q1; a section can feed more than one chapter, so every question names its own. The paper's answer key is checked by tools/check_model.ts.",
   "sections": [
     {"no": 1, "title": "Number Series", "pages": [1, 3], "directions": "Complete the following number series by choosing the correct number from the given choices.", "dropped": [{"paperNo": 4, "same": "ka21m-03"}, {"paperNo": 7, "same": "ka1920m-05"}, {"paperNo": 20, "same": "ns-b02"}]},
     {"no": 2, "title": "Letter Series", "pages": [4, 5], "directions": "Four alternatives are given for each letter sequence given below. Complete the sequence by choosing the correct one.", "dropped": []},

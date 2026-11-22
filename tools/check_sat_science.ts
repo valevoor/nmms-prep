@@ -4,7 +4,7 @@
  * to compute, the pairs of a match-the-following, the true statements or the T/F marks, a balanced equation,
  * or, for facts and pictures, whether each option is true. Exactly one option must fit, and it must be the
  * key. Every answered question needs `keyFrom` and a solution in English and Kannada whose concept cites the
- * syllabus section it uses (a number from sat-syllabus/*.md), or, for a chapter the 2026-27 textbooks dropped,
+ * syllabus section it uses (a number from sources/sat-syllabus/*.md), or, for a chapter the 2026-27 textbooks dropped,
  * says "Old syllabus – <chapter>:", or, for a Miscellaneous question (in no chapter, old or new), "Beyond the syllabus:".
  * A science question with no answer must say why in its note.
  * Run from app/:  npx tsx ../tools/check_sat_science.ts

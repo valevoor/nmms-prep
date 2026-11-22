@@ -38,7 +38,7 @@
 
 ---
 
-## Part 1 (`sat-syllabus/textbooks/7th English SS Part-1 2026-27.pdf`)
+## Part 1 (`sources/sat-syllabus/textbooks/7th English SS Part-1 2026-27.pdf`)
 
 ### `ss-7-01-major-developments-world` — Chapter 1: Major Developments in the World
 - **Book Metadata:** Class 7 Social Science Part 1 | Chapter 1 | Book pp. 1–10 (PDF pp. 15–24) | **Sub-Discipline:** History (World History & Religions)
@@ -587,7 +587,7 @@
 
 ---
 
-## Part 2 (`sat-syllabus/textbooks/7th English SS Part-2 2026-27.pdf`)
+## Part 2 (`sources/sat-syllabus/textbooks/7th English SS Part-2 2026-27.pdf`)
 
 ### `ss-7-15-social-religious-reforms` — Chapter 15: Social and Religious Reforms
 - **Book Metadata:** Class 7 Social Science Part 2 | Chapter 15 | Book pp. 1–13 (PDF pp. 3–15) | **Sub-Discipline:** History (Modern Indian History — 19th Century Renaissance)

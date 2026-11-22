@@ -1,6 +1,6 @@
 ---
 name: textbook-extract
-description: Get accurate content out of the large textbook PDFs in sat-syllabus/textbooks/ (many pages are scans with no usable text). Use whenever a task needs what a textbook actually says, such as writing or checking a SAT revision sheet, finding which book page covers something, confirming a formula or definition, or adding SAT science or social science revision. Use it even if the user just says "check the book" or "go through the textbook".
+description: Get accurate content out of the large textbook PDFs in sources/sat-syllabus/textbooks/ (many pages are scans with no usable text). Use whenever a task needs what a textbook actually says, such as writing or checking a SAT revision sheet, finding which book page covers something, confirming a formula or definition, or adding SAT science or social science revision. Use it even if the user just says "check the book" or "go through the textbook".
 ---
 
 # Textbook extract
@@ -18,7 +18,7 @@ mkdir -p .textbook-cache && swiftc -O -o .textbook-cache/textbook .claude/skills
 **1. Survey the book.** One sample page proves little, because books are mixed: Class 8 Maths Part 1 has real text on only 131 of 200 pages.
 
 ```bash
-.textbook-cache/textbook survey "sat-syllabus/textbooks/8th English Maths Part 1 2026-27.pdf"
+.textbook-cache/textbook survey "sources/sat-syllabus/textbooks/8th English Maths Part 1 2026-27.pdf"
 ```
 
 Note the offset (book page = PDF page − offset). It differs between books, so don't reuse one. If few sampled pages agree, read one page by eye to confirm it.
@@ -35,7 +35,7 @@ Note the offset (book page = PDF page − offset). It differs between books, so 
 .textbook-cache/textbook find "<pdf>" "hypotenuse|right triangle" --offset 2 --from 33 --to 54
 ```
 
-With `--offset`, `--from`, `--to` and the output are all book pages. The chapter's page range is in `sat-syllabus/*.md`.
+With `--offset`, `--from`, `--to` and the output are all book pages. The chapter's page range is in `sources/sat-syllabus/*.md`.
 
 **4. Read the pages that matter as images.** Start with the chapter's summary page, then the pages that state formulas, definitions or numbers.
 
@@ -51,7 +51,7 @@ Then open each PNG with the Read tool. Images cost context, so choose pages usin
 
 - **Never take a formula or number from OCR without seeing the page.** OCR handles prose well but damages maths: on book p. 87 of Class 8 Part 2, d² = 24² + 32² came out as "242 + 322", and √1600 lost its root sign. Exponents and fractions vanish without any warning.
 - **No search match doesn't mean the book lacks it.** OCR missed `abcabc` and `1001` on a page that covers them. Render the likely page before you drop something or call it missing.
-- **The syllabus notes aren't the book.** `sat-syllabus/*.md` is a good index and shows what to look for, but one note described a topic that a search of that chapter couldn't find. Confirm against the page.
+- **The syllabus notes aren't the book.** `sources/sat-syllabus/*.md` is a good index and shows what to look for, but one note described a topic that a search of that chapter couldn't find. Confirm against the page.
 - **Only cite a page after finding the idea on it.** Guessed page numbers were often wrong by a page or more.
 - **Keep extracted text out of git.** The books are marked "not to be republished" and the repo is public. `.textbook-cache/` is git-ignored, so leave extracted text there or in the scratchpad.
 - **OCR here is English only.** It hasn't been tried on Kannada textbooks, so don't expect it to work on them. Read those pages as images.

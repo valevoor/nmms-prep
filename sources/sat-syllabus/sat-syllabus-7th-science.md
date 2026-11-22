@@ -23,7 +23,7 @@
 
 ---
 
-## Part 1 (`sat-syllabus/textbooks/7th English Science Part - 1 2026-27.pdf`)
+## Part 1 (`sources/sat-syllabus/textbooks/7th English Science Part - 1 2026-27.pdf`)
 
 ### `sci-7-01-ever-evolving-science` — Chapter 1: The Ever-Evolving World of Science
 - **Book Metadata:** Class 7 Science Part 1 | Chapter 1 | Book pp. 1–6 (PDF pp. 17–22) | **Sub-Discipline:** Scientific Inquiry
@@ -301,7 +301,7 @@
 
 ---
 
-## Part 2 (`sat-syllabus/textbooks/7th English Science Part - 2 2026-27.pdf`)
+## Part 2 (`sources/sat-syllabus/textbooks/7th English Science Part - 2 2026-27.pdf`)
 
 ### `sci-7-07-heat-transfer-water-cycle` — Chapter 7: Heat Transfer in Nature
 - **Book Metadata:** Class 7 Science Part 2 | Chapter 7 | Book pp. 1–16 (PDF pp. 5–20) | **Sub-Discipline:** Physics & Earth Science (Thermal Physics & Hydrology)

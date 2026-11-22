@@ -1,8 +1,8 @@
 # Class 8 Mathematics Syllabus & Concept Mapping Guide (NMMS SAT Prep)
 
 **Source Textbooks:**
-- **Part 1:** *Ganita Prakash — Textbook of Mathematics for Grade 8, Part 1* (2026–27 Edition, KTBS / NCERT Revised Syllabus) — `sat-syllabus/textbooks/8th English Maths Part 1 2026-27.pdf` (200 PDF pages; Book pp. 1–182; offset: $\text{PDF Page} = \text{Book Page} + 18$)
-- **Part 2:** *Ganita Prakash — Textbook of Mathematics for Grade 8, Part 2* (2026–27 Edition, KTBS / NCERT Revised Syllabus) — `sat-syllabus/textbooks/8th English Maths Part 2 2026-27.pdf` (176 PDF pages; Book pp. 1–174; offset: $\text{PDF Page} = \text{Book Page} + 2$)
+- **Part 1:** *Ganita Prakash — Textbook of Mathematics for Grade 8, Part 1* (2026–27 Edition, KTBS / NCERT Revised Syllabus) — `sources/sat-syllabus/textbooks/8th English Maths Part 1 2026-27.pdf` (200 PDF pages; Book pp. 1–182; offset: $\text{PDF Page} = \text{Book Page} + 18$)
+- **Part 2:** *Ganita Prakash — Textbook of Mathematics for Grade 8, Part 2* (2026–27 Edition, KTBS / NCERT Revised Syllabus) — `sources/sat-syllabus/textbooks/8th English Maths Part 2 2026-27.pdf` (176 PDF pages; Book pp. 1–174; offset: $\text{PDF Page} = \text{Book Page} + 2$)
 
 **Purpose:** This guide provides an exhaustive, concept-level index of the 14 chapters across Class 8 Mathematics (Parts 1 and 2). Because *Ganita Prakash* replaces conventional chapter titles with thematic, inquiry-driven titles (e.g., *Power Play*, *We Distribute, Yet Things Multiply*, *Fractions in Disguise*, *Tales by Dots, Bars, and Lines*), each chapter section below explicitly maps creative textbook headings to **canonical NMMS SAT Mathematics syllabus topics**, key formulas, algebraic identities, geometric theorems, Indian mathematical heritage notes, and strict disambiguation rules for categorizing previous-year questions (PYQs).
 

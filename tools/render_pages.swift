@@ -6,7 +6,7 @@ import CoreGraphics
 import ImageIO
 import UniformTypeIdentifiers
 let args = CommandLine.arguments
-let d = CGPDFDocument(URL(fileURLWithPath: "NMMS.pdf") as CFURL)!
+let d = CGPDFDocument(URL(fileURLWithPath: "sources/study-book/NMMS.pdf") as CFURL)!
 let out = args[1]
 for n in args.dropFirst(2).compactMap({Int($0)}) {
   let p = d.page(at: n)!

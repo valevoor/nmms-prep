@@ -24,7 +24,7 @@
 
 ---
 
-## Part 1 (`sat-syllabus/textbooks/8th English Science Part 1 2026-27.pdf`)
+## Part 1 (`sources/sat-syllabus/textbooks/8th English Science Part 1 2026-27.pdf`)
 
 ### `sci-8-01-investigative-world` — Chapter 1: Exploring the Investigative World of Science
 - **Book Metadata:** Class 8 Science Part 1 | Chapter 1 | Book pp. 1–7 (PDF pp. 19–25) | **Sub-Discipline:** Scientific Inquiry
@@ -334,7 +334,7 @@
 
 ---
 
-## Part 2 (`sat-syllabus/textbooks/8th English Science Part 2 2026-27.pdf`)
+## Part 2 (`sources/sat-syllabus/textbooks/8th English Science Part 2 2026-27.pdf`)
 
 ### `sci-8-08-elements-compounds-mixtures` — Chapter 8: Nature of Matter: Elements, Compounds, and Mixtures
 - **Book Metadata:** Class 8 Science Part 2 | Chapter 8 | Book pp. 1–18 (PDF pp. 7–24) | **Sub-Discipline:** Chemistry (Classification of Matter)

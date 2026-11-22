@@ -1,6 +1,6 @@
 /**
  * Checks the answers to the study book's SAT social science questions (data/sat/book.json, subject "social").
- * The book has an answer key, and each answer here was checked against the syllabus notes (sat-syllabus/*.md):
+ * The book has an answer key, and each answer here was checked against the syllabus notes (sources/sat-syllabus/*.md):
  * every question has a rule saying which options are true, with a short reason, and exactly one option must be true
  * and match the answer. A key that is wrong is corrected (keyFrom "solved", with a note saying so); a question with
  * no single right answer has no answer and a note (English and Kannada) saying why. These answers have no worked

@@ -1,6 +1,6 @@
 /**
  * The SAT (Scholastic Aptitude Test) side of the app: its chapters (data/sat/chapters.json, built from
- * sat-syllabus/ by tools/build_sat_chapters.ts), the Karnataka SAT past papers (data/pyq/*-sat.json) and the
+ * sources/sat-syllabus/ by tools/build_sat_chapters.ts), the Karnataka SAT past papers (data/pyq/*-sat.json) and the
  * study book's SAT questions (data/sat/book.json, from NMMS.pdf, with the book's key; shown in Practice's Book tab).
  * Each question is filed under the syllabus chapter it belongs to (`topic`), or under none (`null`) when
  * the 2026-27 textbooks no longer cover it. For revision, related chapters are combined into one topic

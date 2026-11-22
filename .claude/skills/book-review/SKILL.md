@@ -1,6 +1,6 @@
 ---
 name: book-review
-description: Check the answers in a question source (a study book such as NMMS.pdf, or a past question paper in question-papers/pyq/) and produce an errata report for its authors or publisher, as a web page and an A4 PDF. Use when the user asks to fact-check or verify a book or paper, find wrong answer keys, misprints or questions with no single answer, write up such findings for the people who made it, or refresh or re-send an earlier report.
+description: Check the answers in a question source (a study book such as NMMS.pdf, or a past question paper in sources/question-papers/pyq/) and produce an errata report for its authors or publisher, as a web page and an A4 PDF. Use when the user asks to fact-check or verify a book or paper, find wrong answer keys, misprints or questions with no single answer, write up such findings for the people who made it, or refresh or re-send an earlier report.
 ---
 
 # Book review
@@ -33,7 +33,7 @@ swift .claude/skills/book-review/scripts/pdf_pages.swift png <pdf> <out-dir> 269
 
 - **Work every answer out again, independently of the key.** A key is wrong only when the working shows it.
 - **When the printed question can't give any option** (a lost index, a missing length, a figure that doesn't match its text), say what the printed text gives and what reading the key needs.
-- **Facts:** check them against the syllabus or textbook the source is based on (`sat-syllabus/*.md`, and the `textbook-extract` skill for the textbook itself). If the key matches the textbook but the textbook is wrong, say both.
+- **Facts:** check them against the syllabus or textbook the source is based on (`sources/sat-syllabus/*.md`, and the `textbook-extract` skill for the textbook itself). If the key matches the textbook but the textbook is wrong, say both.
 - **Two right options, or none,** means "no single answer". Name each option that fits, and why.
 - **Assertion–reason:** a true R that doesn't explain A means "both true, not the explanation". Read each question's own option order, since sources differ.
 - **Other language versions:** compare them wherever the English is odd. A key sometimes fits only the translation.

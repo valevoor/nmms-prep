@@ -1,6 +1,6 @@
 /**
  * Builds app/src/data/sat/chapters.json, the SAT chapters the app shows, from the syllabus files in
- * sat-syllabus/ (chapter ID, number, part, title, pages, sub-discipline and topic aliases). Every chapter is
+ * sources/sat-syllabus/ (chapter ID, number, part, title, pages, sub-discipline and topic aliases). Every chapter is
  * kept, because each has a revision sheet (data/satRevise.ts), whether or not a past paper has asked about it.
  * Run from app/ after adding a SAT paper or changing a question's chapter:  npx tsx ../tools/build_sat_chapters.ts
  */
@@ -8,7 +8,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = join(import.meta.dirname, '..')
-const SYLLABUS = join(ROOT, 'sat-syllabus')
+const SYLLABUS = join(ROOT, 'sources', 'sat-syllabus')
 const PYQ = join(ROOT, 'app/src/data/pyq')
 const OUT = join(ROOT, 'app/src/data/sat/chapters.json')
 

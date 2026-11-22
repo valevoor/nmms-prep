@@ -28,7 +28,7 @@
 
 ---
 
-## Part 1 (`sat-syllabus/textbooks/7th English Maths  Part - 1 2026-27.pdf`)
+## Part 1 (`sources/sat-syllabus/textbooks/7th English Maths  Part - 1 2026-27.pdf`)
 
 ### `math-7-01-large-numbers` — Chapter 1: Large Numbers Around Us
 - **Book Metadata:** Class 7 Mathematics Part 1 | Chapter 1 | Book pp. 1–23 (PDF pp. 19–41) | **Sub-Discipline:** Number Systems & Arithmetic
@@ -412,7 +412,7 @@
 
 ---
 
-## Part 2 (`sat-syllabus/textbooks/7th English Maths Part - 2 2026-27.pdf`)
+## Part 2 (`sources/sat-syllabus/textbooks/7th English Maths Part - 2 2026-27.pdf`)
 
 ### `math-7-09-geometric-twins` — Chapter 9 (Part 2, Chapter 1): Geometric Twins
 - **Book Metadata:** Class 7 Mathematics Part 2 | Chapter 1 (Overall Ch. 9) | Book pp. 1–23 (PDF pp. 3–25) | **Sub-Discipline:** Geometry (Congruence of Triangles)

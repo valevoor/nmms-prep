@@ -34,14 +34,14 @@ struct Band: Decodable {
 }
 struct Spec: Decodable {
   let dir: String
-  /// The PDF to crop from, relative to the project root (default NMMS.pdf); e.g. a past paper in question-papers/pyq/.
+  /// The PDF to crop from, relative to the project root (default sources/study-book/NMMS.pdf); e.g. a past paper in sources/question-papers/pyq/.
   let pdf: String?
   let bands: [Band]
 }
 
 let args = CommandLine.arguments
 let spec = try! JSONDecoder().decode(Spec.self, from: Data(contentsOf: URL(fileURLWithPath: args[1])))
-let pdf = CGPDFDocument(URL(fileURLWithPath: spec.pdf ?? "NMMS.pdf") as CFURL)!
+let pdf = CGPDFDocument(URL(fileURLWithPath: spec.pdf ?? "sources/study-book/NMMS.pdf") as CFURL)!
 let outDir = "app/public/figures/\(spec.dir)"
 try! FileManager.default.createDirectory(atPath: outDir, withIntermediateDirectories: true)
 
