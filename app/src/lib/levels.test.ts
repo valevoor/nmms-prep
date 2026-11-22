@@ -16,8 +16,15 @@ describe('byLevel', () => {
     }
   })
 
-  it('leaves a chapter without levels as it is', () => {
-    const topic = READY_TOPICS.find((t) => t.id === 'number-series')!
-    expect(byLevel(topic.questions)).toBe(topic.questions)
+  it('leaves a list without levels as it is', () => {
+    const make = READY_TOPICS.find((t) => t.id === 'number-series')!.generate!
+    const generated = [make(), make(), make()]
+    expect(byLevel(generated)).toBe(generated)
+  })
+
+  it('gives every book and past-paper question students see a level', () => {
+    for (const topic of READY_TOPICS)
+      for (const q of [...topic.questions, ...paperQuestions(topic.id)])
+        if (q.status !== 'needs-review') expect(levelOf(q), q.id).toBeGreaterThan(0)
   })
 })

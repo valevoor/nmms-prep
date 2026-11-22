@@ -1,0 +1,116 @@
+{
+  "topic": "clock",
+  "_note": "Step-by-step clues for Clock (Chapter 10): the book questions and the past-paper questions filed under the chapter, by question id. Each list gives the speed of the hands (minute hand 6° a minute, hour hand 30° an hour and ½° a minute) or the rule for mirrors and gaining clocks, places both hands from 12, then sets up the last subtraction. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "cl-b01": [
+      "The hour hand goes all the way round, 360°, in 12 hours. So it turns 360 ÷ 12 = 30° an hour.",
+      "From 9 in the morning to 3 in the afternoon is 6 hours.",
+      "6 × 30° = ?"
+    ],
+    "cl-b02": [
+      "Measure both hands from 12. The minute hand turns 6° a minute. The hour hand turns 30° an hour, plus ½° for every minute past the hour.",
+      "At 6:30 the hour hand is at 30 × 6 + ½ × 30 = 195°. The minute hand is at 6 × 30 = 180°. They are 15° apart.",
+      "The reflex angle is the big angle the other way round: 360° − 15° = ?"
+    ],
+    "cl-b05": [
+      "A mirror swaps left and right. The real time and the mirror time always add up to 12:00, so take the mirror time away from 11:60.",
+      "11:60 − 11:25 = 0:35.",
+      "On a clock face, 0 o'clock is written as 12. So what is the real time?"
+    ],
+    "cl-b06": [
+      "Measure both hands from 12. The minute hand turns 6° a minute. The hour hand turns 30° an hour, plus ½° for every minute past the hour.",
+      "At 5:50 the hour hand is at 30 × 5 + ½ × 50 = 175°. The minute hand is at 6 × 50 = 300°.",
+      "The angle between them is 300° − 175° = ?"
+    ],
+    "cl-b07": [
+      "Measure both hands from 12. The minute hand turns 6° a minute. The hour hand turns 30° an hour, plus ½° for every minute past the hour.",
+      "At 9:10 the hour hand is at 30 × 9 + ½ × 10 = 275°. The minute hand is at 6 × 10 = 60°. 275° − 60° = 215°.",
+      "215° is more than 180°, and 'the angle between the hands' means the smaller one: 360° − 215° = ?"
+    ],
+    "cl-b08": [
+      "Measure both hands from 12. The minute hand turns 6° a minute. The hour hand turns 30° an hour, plus ½° for every minute past the hour.",
+      "At 7:28 the hour hand is at 30 × 7 + ½ × 28 = 224°. The minute hand is at 6 × 28 = 168°. They are 56° apart.",
+      "The reflex angle is the big angle the other way round: 360° − 56° = ?"
+    ],
+    "cl-b09": [
+      "The watch gains 15 minutes in 24 hours, the same amount every hour.",
+      "From 12 noon to 4:00 am is 16 hours. In 16 hours it gains 15 × 16 ÷ 24 = 10 minutes.",
+      "The watch is 10 minutes fast. What does it show at 4:00 am?"
+    ],
+    "cl-b10": [
+      "The minute hand gains 5½ minute spaces on the hour hand every minute. To gain g spaces it takes g × 12/11 minutes.",
+      "At 6:00 the hour hand is at the 6, 30 minute spaces ahead of the minute hand.",
+      "To catch up 30 spaces takes 30 × 12/11 = 360/11 minutes. Write 360/11 as a mixed number: what time is it?"
+    ],
+    "cl-b11": [
+      "The minute hand gains 5½ minute spaces on the hour hand every minute. To gain g spaces it takes g × 12/11 minutes.",
+      "At 9:00 the hour hand is at the 9, 45 minute spaces ahead of the minute hand.",
+      "To catch up 45 spaces takes 45 × 12/11 = 540/11 minutes. Write 540/11 as a mixed number: what time is it?"
+    ],
+    "ka21m-52": [
+      "At 10:30 the minute hand points at the 6. So on this watch the 6 faces south and the 12 faces north.",
+      "Then the 3 faces east and the 9 faces west.",
+      "At 10:30 the hour hand is half-way between 10 and 11, between the 9 (west) and the 12 (north). Which way is that?"
+    ],
+    "ka23m-59": [
+      "Measure both hands from 12. The minute hand turns 6° a minute. The hour hand turns 30° an hour, plus ½° for every minute past the hour.",
+      "At 6:50 the minute hand is at 6 × 50 = 300°. The hour hand is at 30 × 6 + ½ × 50 = 205°.",
+      "The angle between them is 300° − 205° = ?"
+    ],
+    "ka23m-60": [
+      "The hour hand turns 30° in 60 minutes.",
+      "So it turns 30 ÷ 60 = 0.5° every minute.",
+      "In 10 minutes: 10 × 0.5° = ?"
+    ],
+    "ka23m-61": [
+      "Think about 12 hours first. The hands come together a little after each hour: 1:05, 2:11, 3:16…",
+      "Between 11 and 1 they meet only once, at 12:00. So in 12 hours they meet 11 times, not 12.",
+      "A day has two lots of 12 hours: 11 × 2 = ?"
+    ],
+    "ka2324m-72": [
+      "Use the formula: angle = |30 × hours − 5.5 × minutes|. (5.5 = 6 − ½: how much faster the minute hand turns each minute.)",
+      "At 3:30: 30 × 3 = 90 and 5.5 × 30 = 165.",
+      "|90 − 165| = ?"
+    ],
+    "ka2324m-73": [
+      "India is 4 hours 30 minutes ahead, so add 4 h 30 min to the London time.",
+      "11:40 p.m. + 20 minutes is 12:00 midnight. That leaves 4 h 10 min to add.",
+      "What time is it 4 h 10 min after midnight? Is that a.m. or p.m.?"
+    ],
+    "ka2324m-74": [
+      "The hands point opposite ways (180°) once in most hours. Look at each hour, 5 to 6 and 6 to 7.",
+      "At exactly 6:00 the hour hand is at 6 and the minute hand at 12: opposite. Between 5 and 6 this happens at 6:00, and between 6 and 7 also at 6:00.",
+      "Both hours give the same moment. So how many times is it in all?"
+    ],
+    "ka2425m-43": [
+      "Use the formula: angle = |30 × hours − 5.5 × minutes|. (5.5 = 6 − ½: how much faster the minute hand turns each minute.)",
+      "At 12:20, the hour is 12, which counts as 0 (the 12 is at the top). 5.5 × 20 = 110.",
+      "|30 × 0 − 110| = ?"
+    ],
+    "ka2425m-44": [
+      "Use the formula: angle = |30 × hours − 5.5 × minutes|. (5.5 = 6 − ½: how much faster the minute hand turns each minute.)",
+      "Between 3 and 4 the hour is 3, so the angle is |90 − 5.5 × minutes|.",
+      "Try each option's minutes: 5.5 × 30, 5.5 × 40, 5.5 × 35, 5.5 × 25. Which one gives an angle of 75°?"
+    ],
+    "ka2425m-45": [
+      "The clock gains 3 minutes every hour, so in each real hour it shows 60 + 3 = 63 minutes.",
+      "From 7:00 in the morning to 5:30 in the evening the clock shows 10 h 30 min = 630 minutes.",
+      "630 ÷ 63 real hours have passed since 7:00. What is the correct time?"
+    ],
+    "ka2526m-61": [
+      "Think about 12 hours first. The hands point opposite ways once in each hour.",
+      "But between 5 and 7 it happens only once, at 6:00. So in 12 hours it is 11 times, not 12.",
+      "A day has two lots of 12 hours: 2 × 11 = ?"
+    ],
+    "ka2526m-62": [
+      "A mirror swaps left and right. The real time and the mirror time always add up to 12:00, so take the mirror time away from 11:60.",
+      "Write 3.25 as 3:25.",
+      "11:60 − 3:25 = ? Take the hours and the minutes away separately."
+    ],
+    "ka2526m-63": [
+      "Once the minute hand has passed the hour hand, angle = 5.5 × minutes − 30 × hours.",
+      "Here the hour is 3 and the angle is 180°: 5.5 × m − 90 = 180, so 5.5 × m = 270 and m = 270 ÷ 5.5 = 540/11.",
+      "Write 540/11 as a mixed number. Which option is it?"
+    ]
+  }
+}

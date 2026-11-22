@@ -34,7 +34,7 @@ struct Band: Decodable {
 }
 struct Spec: Decodable {
   let dir: String
-  /// The PDF to crop from, relative to the project root (default NMMS.pdf); e.g. a past paper in pyq/.
+  /// The PDF to crop from, relative to the project root (default NMMS.pdf); e.g. a past paper in question-papers/pyq/.
   let pdf: String?
   let bands: [Band]
 }

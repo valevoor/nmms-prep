@@ -1,0 +1,145 @@
+{
+  "topic": "directions",
+  "_note": "Step-by-step clues for Directions (Chapter 7): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to draw first (the walk, the places, or where the sun and the shadow are), turns each 'left' and 'right' into a compass direction, then adds up the moves north–south and east–west and asks for the result. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "dr-b01": [
+      "In the morning the sun is in the east, so shadows fall to the west. In the evening it is the other way round.",
+      "Uday faces Vishal. The shadow falls west, and it is on Uday's left. So Uday's left hand points west.",
+      "Stand so your left hand points west. Which way are you facing?"
+    ],
+    "dr-b02": [
+      "Draw a compass with all 8 directions. Find how far South-East has to turn to become North.",
+      "South-East → East → North-East → North: 3 steps of 45°, so 135° anticlockwise. North-East → West is the same turn.",
+      "Turn West 3 steps anticlockwise: West → South-West → … Where do you stop?"
+    ],
+    "dr-b03": [
+      "At 6 o'clock the hour hand points at the 6. So the 6 on the dial faces north.",
+      "The dial is upside down: 12 faces south. Then 3 and 9 swap too: 3 faces west and 9 faces east.",
+      "At 9.15 the minute hand points at the 3. Which way does the 3 face?"
+    ],
+    "dr-b04": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "15 km north, 10 km west, 5 km south, 10 km east. The 10 km west and 10 km east cancel.",
+      "North and south: 15 − 5 is left over. So which side of his house is he?"
+    ],
+    "dr-b05": [
+      "Draw the main road as a line, 150 km long, with a car at each end.",
+      "The first car goes 25 km, turns off and back, then another 25 km along. The turn off and back cancel, so it has moved 25 + 25 = 50 km along the road.",
+      "The other car has come 35 km towards it. What is 150 − 50 − 35?"
+    ],
+    "dr-b06": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "15 m west. Facing west, left is south: 20 m south. Facing south, left is east: 15 m east. Facing east, right is south: 12 m south.",
+      "The 15 m west and 15 m east cancel. Add the south parts: 20 + 12. How far, and which way from X?"
+    ],
+    "dr-b07": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "North (how far is unknown), then left is west: 1 km, then left again is south: 2 km.",
+      "He ends exactly west of the start, level with it. So the ride south undid the ride north. How far north did he ride?"
+    ],
+    "dr-b08": [
+      "Everyone faces north, so 'right' is east and 'behind' is south. Draw A in the middle.",
+      "P is east of A. Q is south of P. R is north of A.",
+      "Stand at R and look at Q. Is Q further north or south? Further east or west?"
+    ],
+    "dr-b09": [
+      "Hemant's house is in the east, so he walks west to the crossing. Draw the crossing with four roads.",
+      "Walking west, his left is south (the theatre), straight ahead is west (the hospital), and behind is east (home).",
+      "Which road is left over for the university?"
+    ],
+    "dr-b10": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "10 km south. Facing south, right is west: 5 km west. Facing west, right is north: 10 km north. Facing north, left is west: 10 km west.",
+      "The 10 km south and 10 km north cancel. Add the west parts: 5 + 10. How far is home?"
+    ],
+    "dr-b11": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "90 m east, right (south) 20 m, right (west) 30 m, then north 100 m.",
+      "East–west: 90 − 30 = 60 m east. North–south: 100 − 20 = 80 m north.",
+      "The straight line from the start is the long side of a right triangle: √(60² + 80²) = ?"
+    ],
+    "dr-b12": [
+      "No direction is given, so pick one: draw P to Q going east, 9 feet.",
+      "Then right (south) 4 feet, right (west) 9 feet, right (north) 3 feet. The 9 feet east and west cancel.",
+      "North–south: 4 south and 3 north. How far from P is he?"
+    ],
+    "dr-b13": [
+      "Draw P. Put Q above it (north), R to the right of Q (east), and S to the left of P (west).",
+      "R is up and to the right. S is down and to the left.",
+      "Stand at R and look at S. Is S further north or south? Further east or west?"
+    ],
+    "dr-b14": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "15 m north, left (west) 30 m, right (north) 25 m.",
+      "She is 15 + 25 = 40 m north and 30 m west of the start.",
+      "The straight line is √(40² + 30²). How long is it, and is she north-east or north-west?"
+    ],
+    "dr-b15": [
+      "Draw P. Q is south-west of P, so put Q down and to the left.",
+      "R is east of Q and south-east of P, so R is level with Q, down and to the right of P. T is straight above R, on the line from Q through P.",
+      "The line from Q through P keeps going the same way past P. Which way is that from P?"
+    ],
+    "ka1920m-57": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "6 km south. Facing south, left is east: 5 km. Then left is north: 3 km. Then left is west: 9 km.",
+      "North–south: 6 − 3 = 3 km south. East–west: 9 − 5 = 4 km west.",
+      "The straight line home is √(3² + 4²) = ?"
+    ],
+    "ka23m-37": [
+      "Each right turn goes one quarter clockwise: North → East → South → West. A left turn goes one quarter back.",
+      "North, then right: East. Then right again: South.",
+      "Facing south, turn left. Which way is she going now?"
+    ],
+    "ka23m-38": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "5 km north, right (east) 8 km, right (south) 11 km.",
+      "North–south: 11 − 5 = 6 km south. East–west: 8 km east.",
+      "The straight line home is √(6² + 8²) = ?"
+    ],
+    "ka2324m-51": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "8 km north, right (east) 4 km, right (south) 8 km, left (east) 10 km.",
+      "The 8 km north and 8 km south cancel. Add the east parts: 4 + 10. How far from his house is he?"
+    ],
+    "ka2324m-52": [
+      "In the morning the sun is in the east, so shadows fall to the west. In the evening it is the other way round.",
+      "Satish's shadow falls west, and it is on Raju's right. So Raju's right hand points west: Raju faces south.",
+      "They are face to face, so Satish faces the opposite way to Raju. Which way is that?"
+    ],
+    "ka2324m-53": [
+      "Draw a compass with all 8 directions; each step between them is 45°.",
+      "North-East, 90° clockwise (2 steps): East, then South-East.",
+      "Now turn 135° anticlockwise (3 steps) from South-East. Where do you stop?"
+    ],
+    "ka2425m-83": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "12 km north, right (east) 5 km, right (south) 16 km, right (west) 5 km. The 5 km east and west cancel.",
+      "North–south: 16 south and 12 north. How far, and which way from home?"
+    ],
+    "ka2425m-84": [
+      "Draw a compass with all 8 directions. Find how far South-West has to turn to become North.",
+      "South-West → West → North-West → North: 3 steps of 45°, so 135° clockwise. Every direction turns the same way.",
+      "Turn each option's first direction 3 steps clockwise. Which statement doesn't come out right?"
+    ],
+    "ka2425m-85": [
+      "In the morning the sun is in the east, so shadows fall to the west. In the evening it is the other way round.",
+      "In the evening Suresh's shadow falls east, and it is on Mahesh's left. So Mahesh's left hand points east.",
+      "Stand so your left hand points east. Which way are you facing?"
+    ],
+    "ka2526m-43": [
+      "A 180° turn faces the opposite way. A 90° clockwise turn goes one quarter: North → East → South → West.",
+      "Facing West, turn 180°: now she faces East.",
+      "From East, turn 90° clockwise. Which way does she face?"
+    ],
+    "ka2526m-44": [
+      "Draw it on paper with north at the top, east on the right. Draw each part of the walk as an arrow.",
+      "5 km north, right (east) 6 km, left (north) 7 km, left (west) 6 km. The 6 km east and west cancel.",
+      "Add the north parts: 5 + 7. How far from the start is he?"
+    ],
+    "ka2526m-45": [
+      "Draw P, then each walk on its own.",
+      "Giri: west 20, right (north) 30, right (east) 20, so he is 30 m north of P. Suri: east 40, left (north) 60, left (west) 40, so he is 60 m north of P.",
+      "Both are straight north of P. How far apart are they, and which of them is further north?"
+    ]
+  }
+}

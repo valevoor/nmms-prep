@@ -1,0 +1,171 @@
+{
+  "topic": "venn-diagrams",
+  "_note": "Step-by-step clues for Venn Diagrams (Chapter 32): the book questions and the past-paper questions filed under the chapter, by question id. Each list asks the student to take the groups two at a time (is every one of these also one of those, do some overlap, or have they nothing in common), gives the facts for this question, then asks which drawing shows them. For the survey questions it says which parts of the circles to add. The last clue never names the diagram. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "vd-b01": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Some animals eat both plants and meat, so Herbivorous and Carnivorous overlap. A dog eats both, so it goes in the overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b02": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Oviparous animals lay eggs. A lizard lays eggs, so it is inside. A bat gives birth to live young, so it is outside. A bat is never a lizard.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b03": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Every professor is a graduate: Professor inside Graduate. Some graduates and some professors are singers: Singer overlaps both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b04": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "A comet is part of the solar system, and the solar system is part of a galaxy: each one inside the next.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b05": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Mammals are living organisms, and a dog is a mammal. A pigeon is a living organism but a bird, not a mammal.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b06": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Zero and the natural numbers are integers, but zero is not a natural number: two separate circles inside Integers. No integer is irrational: a circle outside.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b07": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Rhombuses and rectangles are parallelograms. A square is both a rhombus and a rectangle, so Rhombus and Rectangle overlap and Square is in the overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b08": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Some scientists have won the Nobel prize, so the two groups overlap. C.V. Raman is a scientist who won it, so he is in the overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b09": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Even numbers and primes are both natural numbers. 2 is even and prime, so Even and Prime overlap, both inside Natural Numbers.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "vd-b10": [
+      "Everyone inside the Coffee circle drinks coffee, including the part it shares with Tea.",
+      "The Coffee circle has two parts: coffee only, and both coffee and tea.",
+      "Add the numbers in those two parts. How many is that?"
+    ],
+    "vd-b11": [
+      "'Only tea' means tea but not coffee.",
+      "That is the part of the Tea circle outside the Coffee circle.",
+      "Which number is in that part?"
+    ],
+    "vd-b12": [
+      "'Both' means coffee and tea.",
+      "That is the part where the two circles overlap.",
+      "Which number is in that part?"
+    ],
+    "vd-b13": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "Two circles overlap, and a small circle is inside the overlap: two groups some things share, and one thing that is in both. Is a tiger herbivorous? Is an elephant wild?",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ],
+    "vd-b14": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "Two circles apart, both inside a big circle: two things with nothing in common, both part of one bigger thing.",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ],
+    "vd-b15": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "Three circles, each overlapping the other two, and all three meet in the middle: a person could be in any one, any two, or all three.",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ],
+    "ka1920m-22": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "All mothers are women: Mothers inside Women. Some nurses are women and some are mothers, but some nurses are men: Nurses cuts across both and goes outside.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka1920m-23": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "No one is a husband and a wife at once, or a husband and a child of the same family. No pair has anything in common.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka21m-25": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Bengaluru is in Karnataka: inside. Hyderabad is not in Karnataka: apart from both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka21m-26": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Iron is a metal: inside. Carbon is not a metal: apart from both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka21m-27": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Singers and musicians are all humans: both inside. Some singers are musicians: those two overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka21m-28": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Some employees are literate, some are rich, and some literates are rich. But none of the groups holds another: all three overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka23m-39": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "A person can be an author and a teacher, a teacher and a farmer, or all three. No group holds another: all three overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka23m-40": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "All mothers are ladies: Mothers inside Ladies. Some doctors are ladies and some are mothers, but some are men: Doctors cuts across both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka23m-41": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Every square is a quadrilateral, and every quadrilateral is a polygon: each one inside the next.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2324m-54": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "An apple is a fruit: inside. Jasmine is a flower, not a fruit: apart from both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2324m-55": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Some wild animals eat plants and some do not: Wild animals and Herbivorous overlap. A deer is a wild animal that eats plants: in the overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2324m-56": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "One big circle with two separate circles inside it: two groups that both belong to a bigger group, with nothing in common.",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ],
+    "ka2425m-04": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Dr. A.P.J. Abdul Kalam was both a Bharatharathna awardee and a President. Some awardees were Presidents and some were not: the two big groups overlap, with Kalam in the overlap.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2425m-05": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Krishnarajasagar Dam is in Mandya, and Mandya is in Karnataka: each one inside the next.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2425m-06": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "A big circle with a small circle inside it, and another small circle outside both: one group inside another, and a third with nothing in common with them.",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ],
+    "ka2526m-40": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "All mothers are women: Mothers inside Women. Some women and some mothers are players, and some players are men: Players cuts across both.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2526m-41": [
+      "Take the groups two at a time. For each pair ask: is every one of these also one of those (circle inside circle)? Are some both (circles overlap)? Or nothing in common (circles apart)?",
+      "Aluminium and copper both conduct electricity: both inside. Nothing is both aluminium and copper: the two are apart.",
+      "Draw that with circles. Which diagram matches your drawing?"
+    ],
+    "ka2526m-42": [
+      "Start from the diagram. Say in words what it shows: which circle is inside which, which overlap, which are apart.",
+      "Three circles in a row: the middle one cuts both of the others, but the outer two do not meet. So the middle group shares with each, but the outer two share nothing.",
+      "Test each option against that picture. Which group of three fits it exactly?"
+    ]
+  }
+}

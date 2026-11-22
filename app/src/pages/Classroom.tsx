@@ -8,7 +8,7 @@ import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
 import { TimerBadge } from '../components/Timer'
 import { useCountdown } from '../lib/countdown'
-import { paperQuestions } from '../data/papers'
+import { modelQuestions, paperQuestions } from '../data/papers'
 import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { cluesFor } from '../lib/clues'
@@ -17,7 +17,7 @@ import { byLevel, levelOf } from '../lib/levels'
 import { questionLabel } from '../lib/source'
 import type { Question } from '../types'
 
-type Source = 'book' | 'exam' | 'fresh'
+type Source = 'book' | 'exam' | 'model' | 'fresh'
 const TIME_CHOICES = [30, 60, 90, 120]
 
 export function Classroom({ topic }: { topic: ReadyTopic }) {
@@ -26,9 +26,11 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
   const [fresh, setFresh] = useState<Question[]>(() => (topic.generate ? [topic.generate()] : []))
   // Past-paper questions filed under this chapter; the button only shows when there are some.
   const exam = useMemo(() => byLevel(paperQuestions(topic.id)), [topic.id])
+  // Model-paper questions (practice papers, not real exams); the button only shows when there are some.
+  const model = useMemo(() => byLevel(modelQuestions(topic.id)), [topic.id])
   // Easiest first, where the chapter has levels.
   const book = useMemo(() => byLevel(topic.questions), [topic.questions])
-  const list = source === 'book' ? book : source === 'exam' ? exam : fresh
+  const list = source === 'book' ? book : source === 'exam' ? exam : source === 'model' ? model : fresh
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [explained, setExplained] = useState(false)
@@ -111,6 +113,11 @@ export function Classroom({ topic }: { topic: ReadyTopic }) {
           {exam.length > 0 && (
             <button className={source === 'exam' ? 'on' : ''} onClick={() => switchSource('exam')}>
               {t.practice.exam}
+            </button>
+          )}
+          {model.length > 0 && (
+            <button className={source === 'model' ? 'on' : ''} onClick={() => switchSource('model')}>
+              {t.practice.model}
             </button>
           )}
           {topic.generate && (

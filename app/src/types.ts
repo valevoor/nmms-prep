@@ -272,6 +272,8 @@ export interface Question {
   /** Past-paper questions: the paper's id (data/papers.ts) and the question's number in it. */
   paper?: string
   paperNo?: number
+  /** Model-paper questions (practice papers, not real exams): the model paper's id (data/papers.ts); `paperNo` is the number printed in its section. */
+  model?: string
   /** Book questions only. */
   bookNo?: number
   sourcePage?: number

@@ -1,0 +1,141 @@
+{
+  "topic": "calendar",
+  "_note": "Step-by-step clues for Calendar (Chapter 9): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to count (the days in between, or the odd days left over after whole weeks), shows the count month by month or year by year, then asks the student to move on that many days from the day they know. The last clue never gives the day. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ca-b01": [
+      "Count the odd days (days left over after whole weeks) from the start of the calendar. 2000 whole years have 0 odd days.",
+      "In 2001: January 31 days = 3 odd days, February 28 = 0, March 3, April 2, May 3, and 1 June adds 1. That is 12.",
+      "12 = 7 + 5. With 0 = Sunday, 1 = Monday…, which day is 5?"
+    ],
+    "ca-b02": [
+      "One week has 7 days. Turn the 6 weeks into days first.",
+      "6 weeks = 6 × 7 = 42 days.",
+      "Add the 8 extra days: 42 + 8 = ?"
+    ],
+    "ca-b03": [
+      "Count the odd days (days left over after whole weeks) from the start of the calendar. 1600 whole years have 0 odd days.",
+      "1 January 1601 adds 1 odd day. With 0 = Sunday, 1 = Monday, so 1 January 1601 was a Monday.",
+      "Monday is the 1st. Count on to the first Saturday: which date is it?"
+    ],
+    "ca-b04": [
+      "Every 7 days the weekday comes back round. So only the days left over after whole weeks matter.",
+      "From the 6th to the 14th is 14 − 6 = 8 days = 1 week + 1 day.",
+      "Count 1 days on from Friday. Which day do you reach?"
+    ],
+    "ca-b05": [
+      "Every 7 days the weekday comes back round. So only the days left over after whole weeks matter.",
+      "78 = 11 × 7 + 1: 11 whole weeks and 1 day left over.",
+      "Count 1 days on from Sunday. Which day do you reach?"
+    ],
+    "ca-b06": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "From 14 March 2022 to 14 March 2023 there is no 29 February (February 2023 has 28 days). So it is 365 days.",
+      "Count 1 days on from Monday. Which day do you reach?"
+    ],
+    "ca-b07": [
+      "1 December is a Sunday. Count on to the first Wednesday: Monday 2, Tuesday 3, Wednesday 4.",
+      "Each Wednesday after that is 7 days later: 4, 11, …",
+      "Keep adding 7. Which date is the fourth Wednesday?"
+    ],
+    "ca-b08": [
+      "Two years have the same calendar when they start on the same day and are both ordinary (or both leap) years.",
+      "Each ordinary year adds 1 odd day and each leap year 2. From 1991: 1991 +1, 1992 +2, 1993 +1, … Add until you reach a multiple of 7.",
+      "1991 to 2001 add up to 14 odd days, 2 whole weeks. Which year starts next, and is it a leap year?"
+    ],
+    "ca-b09": [
+      "Work out today first. The day before yesterday was Saturday.",
+      "So yesterday was Sunday and today is Monday.",
+      "The day after tomorrow is 2 days after today. Which day is that?"
+    ],
+    "ca-b10": [
+      "Write down the dates of all the Saturdays and Sundays. Day 1 is a Saturday.",
+      "Saturdays: 1, 8, 15, 22, 29. Sundays: 2, 9, 16, 23, 30. The 2nd and 4th Saturdays are 8 and 22.",
+      "Holidays: 5 Sundays + 2 Saturdays. How many of the 30 days are left for work?"
+    ],
+    "ca-b11": [
+      "Count the odd days in whole centuries: 100 years = 76 ordinary + 24 leap years = 124 odd days = 5 left over after weeks.",
+      "100 years: 5 odd days (Friday). 200: 10 → 3 (Wednesday). 300: 15 → 1 (Monday). 400: 20 + 1 → 0 (Sunday). Then it repeats.",
+      "So a century can only end on a Monday, Wednesday, Friday or Sunday. Which option is one of these?"
+    ],
+    "ca-b12": [
+      "Every 4th year is a leap year: 100 ÷ 4 = 25.",
+      "But the 100th year is a century year, and a century year is a leap year only if it divides by 400.",
+      "In an ordinary century, take that one away from 25. How many are left?"
+    ],
+    "ca-b13": [
+      "Count month by month, and count both the first and last days. 1996 divides by 4, so it is a leap year.",
+      "26–31 January: 6 days. February: 29. March: 31. April: 30. 1–15 May: 15.",
+      "6 + 29 + 31 + 30 + 15 = ?"
+    ],
+    "ca-b14": [
+      "Virat only goes to the market on Sundays, so 10 days ago was a Sunday.",
+      "10 = 7 + 3: one whole week and 3 days left over.",
+      "Count 3 days on from Sunday. Which day do you reach?"
+    ],
+    "ca-b15": [
+      "Count the days from 26 January to 5 March 2000. 2000 divides by 400, so it is a leap year.",
+      "5 more days in January + 29 in February + 5 in March = 39 = 5 × 7 + 4.",
+      "Count 4 days on from Wednesday. Which day do you reach?"
+    ],
+    "ka1920m-58": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "Teachers' Day is 5 September. This paper is from 2019, and from 5 September 2019 to 5 September 2020, 29 February 2020 comes in between.",
+      "Count 2 days on from Thursday. Which day do you reach?"
+    ],
+    "ka1920m-59": [
+      "Independence Day is 15 August; Republic Day is 26 January. Count the days in between, month by month.",
+      "16 (rest of August) + 30 + 31 + 30 + 31 + 26 = 164 = 23 × 7 + 3.",
+      "Count 3 days on from Thursday. Which day do you reach?"
+    ],
+    "ka21m-51": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "6 February 2000 to 6 February 2001: 29 February 2000 comes in between, so 6 February 2001 is 2 days on from Sunday.",
+      "Then 6 February to 6 March 2001: February 2001 has 28 days, exactly 4 weeks. So which day is 6 March 2001?"
+    ],
+    "ka23m-35": [
+      "Every 7 days the weekday comes back round. So only the days left over after whole weeks matter.",
+      "Republic Day is 26 January, 25 days after 1 January. 25 = 3 × 7 + 4.",
+      "Count 4 days on from Saturday. Which day do you reach?"
+    ],
+    "ka23m-36": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "15 August 2021 to 15 August 2025: 2022 +1, 2023 +1, 2024 +2 (29 February 2024), 2025 +1 = 5 days.",
+      "Count 5 days on from Friday. Which day do you reach?"
+    ],
+    "ka2324m-49": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "15 August 2021 to 15 August 2025: 2022 +1, 2023 +1, 2024 +2 (29 February 2024), 2025 +1 = 5 days.",
+      "Count 5 days on from Sunday. Which day do you reach?"
+    ],
+    "ka2324m-50": [
+      "An ordinary year has 365 days and a leap year 366. A year that divides by 4 (and isn't a century) is a leap year.",
+      "2023 does not divide by 4: 365 days. 2024 = 4 × 506: a leap year, 366 days.",
+      "365 + 366 = ?"
+    ],
+    "ka2425m-34": [
+      "Turn both into days from today. The third day after tomorrow is 4 days from today.",
+      "That day is Sunday, so today is 4 days before Sunday: Wednesday. 'The previous day of the day before yesterday' is 3 days ago.",
+      "Count 3 days back from Wednesday. Which day is it?"
+    ],
+    "ka2425m-35": [
+      "One year on, the weekday moves on by 1 day (365 = 52 weeks + 1), or by 2 if a 29 February comes in between.",
+      "29 February 2024 to 29 February 2028 is 4 years with one extra 29 February: 4 × 365 + 1 = 1461 days = 208 weeks + 5 days.",
+      "Count 5 days on from Thursday. Which day do you reach?"
+    ],
+    "ka2425m-36": [
+      "Write down the dates of all the Sundays and Saturdays. Day 1 is a Sunday.",
+      "Sundays: 1, 8, 15, 22, 29 (5). Saturdays: 7, 14, 21, 28, so the 2nd and 4th are 14 and 28 (2).",
+      "Take away the Sundays, those Saturdays and the 2 government holidays from 31. How many days are left?"
+    ],
+    "ka2526m-83": [
+      "Count the days from 26 January to 10 March 2012. 2012 divides by 4, so February has 29 days.",
+      "5 more days in January + 29 in February + 10 in March = 44 = 6 × 7 + 2.",
+      "Count 2 days on from Sunday. Which day do you reach?"
+    ],
+    "ka2526m-84": [
+      "Every 7 days the weekday comes back round. So only the days left over after whole weeks matter.",
+      "408 = 58 × 7 + 2: 58 whole weeks and 2 days left over.",
+      "Count 2 days on from Sunday. Which day do you reach?"
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "topic": "blood-relations",
+  "_note": "Step-by-step clues for Blood Relations (Chapter 8): the book questions and the past-paper questions filed under the chapter, by question id. Each list says to draw a family tree (or, for a long description, to start from the far end and work back to the speaker), finds the link that joins the family, then asks what the last person is to the first. The last clue never names the relation. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "br-b01": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "P's son is S's brother, so S, and her sister R, are P's children too.",
+      "Q is the brother of R's father P. What is a father's brother to R?"
+    ],
+    "br-b02": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "Raju is Sonu's maternal uncle: the brother of Sonu's mother, Sarika.",
+      "Rita is Sarika's daughter, so she is the daughter of Raju's sister. What is she to Raju?"
+    ],
+    "br-b04": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "R and S are sister and brother, so they have the same parents. P is their father, so Q is their mother: P's wife.",
+      "Q is the wife of T's brother P. What is a brother's wife to T?"
+    ],
+    "br-b05": [
+      "Read the description from the end and work back to the speaker, one 'of' at a time.",
+      "The girl's uncle's father is her grandfather. His daughter is the girl's mother (or her aunt).",
+      "The boy is the son of that woman. If she is the girl's mother, what is he to the girl? Which option fits?"
+    ],
+    "br-b06": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "Raju is Prema's brother and Neha is Raju's sister, so Prema, Raju and Neha are brothers and sisters.",
+      "Anand is Prema's son and Rashmi is Neha's daughter: their mothers are sisters. What are they to each other?"
+    ],
+    "br-b07": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "Eashwari is Badri's daughter, and Deva is her brother. So Badri is Deva's father.",
+      "Deva's uncle is his father's brother. Who is Badri's brother?"
+    ],
+    "br-b08": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "C is A's daughter, and G is C's brother. So G is A's son.",
+      "G's uncle is his father's brother. Who is A's brother?"
+    ],
+    "br-b09": [
+      "Read the description from the end and work back to the speaker, one 'of' at a time.",
+      "X's father's father is X's grandfather. His granddaughter is X's sister (or cousin).",
+      "Y is the husband of X's sister. What is a sister's husband to X?"
+    ],
+    "br-b10": [
+      "Read the description from the end and work back to the speaker, one 'of' at a time.",
+      "Raju's mother's husband is Raju's father. His mother is Raju's grandmother.",
+      "The woman is that grandmother's daughter: Raju's father's sister. What is she to Raju?"
+    ],
+    "br-b12": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "E is B's daughter, and D is E's brother. So D is B's son.",
+      "D's grandmother is the mother of his parent B. Who is B's mother?"
+    ],
+    "br-b13": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "C and D are both B's children, so D is C's brother. And C is E's wife.",
+      "D is the brother of E's wife. What is a wife's brother to E?"
+    ],
+    "br-b14": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "A's son is D's brother, so C and D are A's sons.",
+      "B is the brother of C's father A. What is a father's brother to C?"
+    ],
+    "br-b15": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "A is B's brother and D's brother, so A, B and D share parents. C is D's father and E is B's mother.",
+      "C is the father and E is the mother of the same children. What is E to C?"
+    ],
+    "ka1920m-46": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "Reeta is Sarika's daughter, and Sarika is Raju's sister.",
+      "What is a sister's daughter to Raju?"
+    ],
+    "ka1920m-47": [
+      "Read the description from the end and work back to the speaker, one 'of' at a time.",
+      "The father of her uncle is her grandfather. His daughter is the girl's mother (or her aunt).",
+      "The boy is that woman's son. If she is the girl's mother, what is he to the girl? Which option fits?"
+    ],
+    "ka21m-49": [
+      "Read the description from the end and work back to the speaker, one 'of' at a time.",
+      "Harsha's daughter's father is Harsha himself. So 'the father of my daughter's father' is Harsha's father.",
+      "The man's only brother is Harsha's father. What is the man to Harsha?"
+    ],
+    "ka21m-50": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "T is Q's daughter, and S is T's brother. So S is Q's child too.",
+      "S's grandfather is the father of S's parent Q. Who is Q's father?"
+    ],
+    "ka23m-26": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "P × Q: P is the son of Q. Q − S: Q is the wife of S.",
+      "So S is Q's husband. What is S to Q's son P? Which statement matches?"
+    ],
+    "ka23m-27": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "T − S: T is the wife of S. S × B: S is the son of B. B − M: B is the wife of M.",
+      "Check each statement against these three facts. Is S a son or a daughter? Which statement is wrong?"
+    ],
+    "ka23m-28": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "P's son is S's brother, so S, and her sister R, are P's children too.",
+      "Q is the father of R's father P. What is a father's father to R?"
+    ],
+    "ka2324m-39": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "P × R: P is the brother of R. R = Q: R is the daughter of Q.",
+      "P is the brother of Q's daughter, so P is Q's child too, and a boy. Which statement matches?"
+    ],
+    "ka2324m-40": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "X + Y: X is the father of Y. Y = Z: Y is the daughter of Z. So Z is Y's other parent, the mother.",
+      "X is a father, so X is a man. Check each statement: which one can't be true?"
+    ],
+    "ka2324m-41": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "A's son is D's brother, so D, and her sister C, are A's children too.",
+      "B is the brother of C's father A. What is a father's brother to C?"
+    ],
+    "ka2425m-28": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "M = P: M is the daughter of P. P × R: P is the sister of R.",
+      "So M is a girl, and her mother P is R's sister. Which statement matches?"
+    ],
+    "ka2425m-29": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "G is the son of C, and A is G's grandfather. C and D are the only two children of B.",
+      "F is D's husband, so D is a woman. E is A's daughter-in-law, the wife of A's son.",
+      "D's brother must be B's other child. Who is that?"
+    ],
+    "ka2425m-30": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "P + Q: P is the father of Q. Q = R: Q is the daughter of R.",
+      "P and R are both Q's parents, and P is the father. What are P and R to each other? Which statement matches?"
+    ],
+    "ka2526m-04": [
+      "Write what each sign means next to it. Then read the expression one sign at a time, from left to right.",
+      "K ÷ L: K is the father of L. L × M: L is the brother of M.",
+      "L is a brother, so L is a man, and K is the father of both L and M. Check each statement: which one can't be true?"
+    ],
+    "ka2526m-06": [
+      "Draw a family tree: parents above their children, a line between brothers and sisters, = for husband and wife. Mark men and women.",
+      "P is Q's brother, and P and S are brothers. So P, Q and S are all children of the same parents.",
+      "R is the father of S and T is the mother of Q. What is T to R?"
+    ]
+  }
+}

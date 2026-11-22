@@ -1,0 +1,136 @@
+{
+  "topic": "arrangement",
+  "_note": "Step-by-step clues for Arrangement (Chapter 33): the book questions and the past-paper questions filed under the chapter, by question id. Each list gives the rule for ranks in a row (total = from one end + from the other − 1), or says which clue to place first in a seating, then builds the row or the circle step by step and asks the question on it. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ar-b01": [
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "So rank from the last = total − rank + 1.",
+      "50 − 20 + 1 = ?"
+    ],
+    "ar-b02": [
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "So total = from the top + from the bottom − 1.",
+      "10 + 25 − 1 = ?"
+    ],
+    "ar-b03": [
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "The lab is 7th from both ends, so total = 7 + 7 − 1.",
+      "7 + 7 − 1 = ?"
+    ],
+    "ar-b04": [
+      "Undo the move first. The book is now 10th from the left after moving 5 places right, so before it was 10 − 5 = 5th from the left.",
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "Its place from the right was 18 − 5 + 1 = ?"
+    ],
+    "ar-b05": [
+      "Write the digits in ascending order, under the original number, one digit under each.",
+      "Sorted: 0 0 1 1 2 2 4 4 4 5 5 5 6 7 7 8 8 9 9 9.",
+      "Compare the two rows place by place. In how many places is the digit the same?"
+    ],
+    "ar-b06": [
+      "Write the letters of MATHEMATICS in alphabetical order, under the word, one letter under each.",
+      "Sorted: A A C E H I M M S T T.",
+      "Compare the two rows place by place. In how many places is the letter the same?"
+    ],
+    "ar-b07": [
+      "After the switch, Trupti sits in Hema's old place. So Hema's place is 16th from the left, and it is also 10th from the right.",
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "16 + 10 − 1 = ?"
+    ],
+    "ar-b08": [
+      "Find Savita's rank from the top first: six ranks below 25th is 25 + 6 = 31st.",
+      "Use the rank rule: from one end + from the other end = total + 1 (the person is counted twice).",
+      "From the last: 45 − 31 + 1 = ?"
+    ],
+    "ar-b12": [
+      "Check the number 4 against each rule, one at a time: is it prime? Is it even? Is it composite?",
+      "4 = 2 × 2, so it is not prime. It is even. A number with factors other than 1 and itself is composite.",
+      "So which seeds go in line 4: which rules does 4 pass?"
+    ],
+    "ar-b13": [
+      "Draw 10 boxes for the digits. The first composite number is 4 and the first perfect number is 6 (1 + 2 + 3 = 6). So the 4th digit is 4 and the 6th is 6.",
+      "Beside the 4 are halves of it: the 3rd and 5th are 2. The last two are half of 6: 3 and 3. The first two are three times the last: 9 and 9.",
+      "The 7th and 8th digits are 2 + 6 and 6 − 2. Fill them in: which option is the number?"
+    ],
+    "ar-b14": [
+      "Draw two rows of six seats facing each other. Row 1 faces south, so its people's left is on your right as you look down at the page. Start with E and X: one of them is at an end.",
+      "Then place F (one seat between E and F), Z, A and the rest, checking every clue. You should get row 1: D A E C F B, and row 2: Y V W U Z X.",
+      "F faces Z. In row 2, count the people sitting between Y and Z. How many?"
+    ],
+    "ar-b15": [
+      "Draw two rows of six seats facing each other. Row 1 faces south, so its people's left is on your right as you look down at the page. Start with E and X: one of them is at an end.",
+      "Then place F (one seat between E and F), Z, A and the rest, checking every clue. You should get row 1: D A E C F B, and row 2: Y V W U Z X.",
+      "For each option, count the people sitting between the two. Three pairs have the same number between them. Which pair is different?"
+    ],
+    "ka23m-50": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place A, then D two seats to A's right. B sits between C and D, so B is next to D and C next to B. E takes the last seat.",
+      "Check that E is not between A and C. Going clockwise the circle is A, C, B, D, E.",
+      "Check each statement against the circle A, C, B, D, E. Which one is true?"
+    ],
+    "ka23m-51": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place A, then D two seats to A's right. B sits between C and D, so B is next to D and C next to B. E takes the last seat.",
+      "Check that E is not between A and C. Going clockwise the circle is A, C, B, D, E.",
+      "Going right means anticlockwise. Count to the right from each person in the options. Which statement fits A?"
+    ],
+    "ka23m-52": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place A, then D two seats to A's right. B sits between C and D, so B is next to D and C next to B. E takes the last seat.",
+      "Check that E is not between A and C. Going clockwise the circle is A, C, B, D, E.",
+      "Who are E's two neighbours in the circle?"
+    ],
+    "ka2324m-86": [
+      "Write each fact as taller > shorter: Swetha > Sneha > Prema, and Prema > Tara > Rekha.",
+      "Join them into one line: Swetha > Sneha > Prema > Tara > Rekha.",
+      "Five people: the middle one is 3rd. Who is it?"
+    ],
+    "ka2324m-87": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place D, then E two seats to D's right and C two seats to E's right. A can't be next to D, so A sits between E and C, and B is next to D.",
+      "Going to the right from D: D, B, E, A, C.",
+      "Who is next to A going to the right?"
+    ],
+    "ka2324m-88": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place D, then E two seats to D's right and C two seats to E's right. A can't be next to D, so A sits between E and C, and B is next to D.",
+      "Going to the right from D: D, B, E, A, C.",
+      "Who sits between D and E?"
+    ],
+    "ka2425m-86": [
+      "Draw five seats in a row. E is 1st and A sits next to E, so A is 2nd.",
+      "A is third to the left of B, so B is three seats to the right of A: 2 + 3 = 5th.",
+      "Fourth to the right of E (1st) is the 5th seat. Who sits there?"
+    ],
+    "ka2425m-87": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place R, then T two seats to R's right and S two seats to T's right. Q is not between T and S, so P sits there and Q is next to R.",
+      "Going to the right from R: R, Q, T, P, S.",
+      "Who is next to R going to the right?"
+    ],
+    "ka2425m-88": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Place R, then T two seats to R's right and S two seats to T's right. Q is not between T and S, so P sits there and Q is next to R.",
+      "Going to the right from R: R, Q, T, P, S.",
+      "R and P are not neighbours. Who sits between them on the short way round?"
+    ],
+    "ka2526m-67": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Going to the left from Parnika: Anamika, then Mahima (between Anamika and Nelvin), then Nelvin.",
+      "Rahim is between Parnika and Shankar, so he takes Parnika's other side, and Shankar sits between Rahim and Nelvin.",
+      "Going to the left: Parnika, Anamika, Mahima, Nelvin, … Who comes after Nelvin?"
+    ],
+    "ka2526m-68": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Going to the left from Parnika: Anamika, then Mahima (between Anamika and Nelvin), then Nelvin.",
+      "Rahim is between Parnika and Shankar, so he takes Parnika's other side, and Shankar sits between Rahim and Nelvin.",
+      "Who are Parnika's two neighbours? Which statement fits?"
+    ],
+    "ka2526m-69": [
+      "Draw a circle. Facing the centre, a person's right is the anticlockwise way round and their left is clockwise.",
+      "Going to the left from Parnika: Anamika, then Mahima (between Anamika and Nelvin), then Nelvin.",
+      "Rahim is between Parnika and Shankar, so he takes Parnika's other side, and Shankar sits between Rahim and Nelvin.",
+      "With six seats, the person opposite is three seats away. Count three seats on from Mahima: who is there?"
+    ]
+  }
+}

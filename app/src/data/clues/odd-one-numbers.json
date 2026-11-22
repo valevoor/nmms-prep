@@ -1,0 +1,171 @@
+{
+  "topic": "odd-one-numbers",
+  "_note": "Step-by-step clues for Odd One Out: Numbers (Chapter 5): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to look at (the digits, the pair, a list such as primes or cubes), shows the rule on two of the options, then asks the student to check the other two. The last clue never names the odd one. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "oo-b01": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "363: 3 + 3 = 6, the middle digit. 462: 4 + 2 = 6, the middle digit. The middle digit is the sum of the outer two.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b03": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "Add the digits: 3 + 7 + 8 + 2 = 20, and 5 + 7 + 2 + 6 = 20. They add up to the same total.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b04": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "1 → 1² + 1 + 1 = 3. 3 → 3² + 3 + 1 = 13. The second number is n² + n + 1.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b05": [
+      "Three of the numbers share one property. Read each one backwards, from right to left.",
+      "57875 backwards is 57875 again, and 86468 backwards is 86468. They read the same both ways.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b06": [
+      "Three of the groups follow one rule. Look at how the numbers in each group are linked.",
+      "1, 2, 5: 1³ + 2² = 1 + 4 = 5. 2, 3, 17: 2³ + 3² = 8 + 9 = 17. The 3rd number is (1st)³ + (2nd)².",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b07": [
+      "Three of the options follow one rule. Turn each letter into its place in the alphabet (A = 1, B = 2…).",
+      "17/GA: G = 7, A = 1, the digits of 17 in reverse. 29/IB: I = 9, B = 2, the digits of 29 in reverse.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b08": [
+      "Three of the pairs follow one rule. Add the digits of each number in a pair.",
+      "52 → 5 + 2 = 7 and 142 → 1 + 4 + 2 = 7. 54 → 9 and 126 → 9. Both numbers in a pair have the same digit sum.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b09": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "324 → 3 × 2 × 4 = 24. 123 → 1 × 2 × 3 = 6. The second number is the digits of the first multiplied.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b10": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "725: 7 − 2 = 5, the last digit. 761: 7 − 6 = 1, the last digit. 1st digit − 2nd digit = 3rd digit.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b11": [
+      "Three of the numbers share one property. Each one is close to a cube: 125, 216, 343, 512.",
+      "124 = 5³ − 1 and 215 = 6³ − 1: one less than a cube.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b12": [
+      "Three of the fractions follow one rule. Add the top and the bottom of each.",
+      "11 + 14 = 25 = 5², and 13 + 23 = 36 = 6². The sum is a square number.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b13": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "263: 2 × 3 = 6, the middle digit. 482: 4 × 2 = 8, the middle digit. 1st digit × 3rd digit = middle digit.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b14": [
+      "Three of the numbers share one property. Are they prime, squares, cubes, or multiples of something?",
+      "37 and 47 divide only by 1 and themselves: they are prime.",
+      "Check the other two: does either divide by 3? Which one is not prime?"
+    ],
+    "oo-b15": [
+      "Each option is a digit, a letter and a digit. Put the two digits together and compare with the letter's place in the alphabet.",
+      "1P6: 16, and P is the 16th letter. 2T0: 20, and T is the 20th letter.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b16": [
+      "Three of the numbers follow one rule. Compare each with a cube: 1, 8, 64, 125.",
+      "2 = 1³ + 1 and 10 = 2³ + 2: each is n³ + n.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b17": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "56 ÷ 8 = 7 and 147 ÷ 21 = 7. The first number is 7 times the second.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b18": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "15 × 3 + 1 = 46 and 12 × 3 + 1 = 37. The second number is 3 times the first, plus 1.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b19": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "5² × 2 = 50 and 11² × 2 = 242. The second number is twice the square of the first.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b20": [
+      "Three of the numbers follow one rule. Take away 1 from each, then divide by 3.",
+      "28 → 27 → 9 = 3², and 76 → 75 → 25 = 5². Each is 3 × a square + 1.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b21": [
+      "Three of the numbers share one property. Are they prime, squares, cubes, or multiples of something?",
+      "110 = 11 × 10 and 154 = 11 × 14: they divide by 11.",
+      "Check the other two: which one does not divide by 11?"
+    ],
+    "oo-b23": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "2316: 2 + 3 + 1 = 6, the last digit. 3148: 3 + 1 + 4 = 8, the last digit. The first three digits add up to the last.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b24": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "10² − 10 = 90 and 9² − 9 = 72. The second number is n² − n.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "oo-b25": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "123 → 1 + 2 + 3 = 6, and 6 ÷ 2 = 3. 356 → 3 + 5 + 6 = 14, and 14 ÷ 2 = 7. The second number is half the digit sum.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka1920m-18": [
+      "Three of the groups follow one rule. Look at how the numbers in each group are linked.",
+      "3, 4, 5: 3² + 4² = 9 + 16 = 25 = 5². 6, 8, 10: 36 + 64 = 100 = 10². The squares of the two small numbers add up to the square of the big one.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka21m-20": [
+      "Three of the pairs follow one rule. Write each number as two numbers next to each other, multiplied.",
+      "72 = 8 × 9 and 56 = 7 × 8: they share the 8. 42 = 6 × 7 and 30 = 5 × 6: they share the 6.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka21m-21": [
+      "Three of the numbers follow one rule. Look at the digits inside each number.",
+      "5204: 5 + 2 = 7. 6122: 6 + 1 = 7. The first two digits add up to 7.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka23m-09": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "6 × 8 + 1 = 49 and 6 × 5 + 1 = 31. The first number is 6 times the second, plus 1.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka23m-49": [
+      "Three of the groups follow one rule. Look at how the numbers in each group are linked.",
+      "2, 4, 8: √4 × 2² = 2 × 4 = 8. 3, 16, 36: √16 × 3² = 4 × 9 = 36. The 3rd number is √(2nd) × (1st)².",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2324m-06": [
+      "Three of the numbers share one property. Are they prime, squares, cubes, or multiples of something?",
+      "53 and 71 divide only by 1 and themselves: they are prime.",
+      "Check the other two: add the digits to test for 3. Which one is not prime?"
+    ],
+    "ka2324m-07": [
+      "Three of the pairs follow one rule. Write each number as two numbers next to each other, multiplied.",
+      "56 = 8 × 7 and 42 = 7 × 6. 90 = 10 × 9 and 72 = 9 × 8. The second number shares one factor and steps down by 1.",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2425m-23": [
+      "All four are cubes of odd numbers: 9³, 7³, 5³, 3³. So look for something else that only one of them is.",
+      "Is any of them also a square: a whole number multiplied by itself? Try 5 × 5, 11 × 11, 18 × 18, 27 × 27.",
+      "Which one is a square as well as a cube?"
+    ],
+    "ka2425m-24": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "2 × 3 = 6, 4 × 5 = 20, 8 × 9 = 72. The second number is the first times the next number.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2526m-23": [
+      "Three of the pairs follow one rule. In each pair, what do you do to the first number to get the second?",
+      "5³ + 5² = 125 + 25 = 150 and 7³ + 7² = 343 + 49 = 392. The second number is n³ + n².",
+      "Check the other two options the same way. Which one doesn't follow the rule?"
+    ]
+  }
+}

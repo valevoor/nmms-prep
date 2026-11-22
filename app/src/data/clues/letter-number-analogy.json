@@ -1,0 +1,126 @@
+{
+  "topic": "letter-number-analogy",
+  "_note": "Step-by-step clues for Letter and Number Analogy (Chapter 14): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to compare in the complete pair (how far each letter moves, or the letters' places in the alphabet), shows the rule letter by letter, then sets up the same steps on the other word. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ln-b01": [
+      "LIGHT has 5 letters but its code has 10. So each letter becomes two letters.",
+      "L → KM, I → HJ, G → FH: each letter becomes the letter before it and the letter after it.",
+      "Do the same to S, O, U, N, D: S → RT, O → NP… What is the whole code?"
+    ],
+    "ln-b02": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "P → R +2, I → G −2, G → J +3, E → B −3, O → S +4, N → J −4.",
+      "Move the letters of PARROT the same way: P + 2, A − 2, R + 3, R − 3, O + 4, T − 4. Which option is it?"
+    ],
+    "ln-b03": [
+      "M is the 13th letter. How is 196 made from 13?",
+      "196 = 14², and 14 = 13 + 1. Add 1 to the place, then square.",
+      "Work backwards: 289 = 17², and 17 − 1 = 16. Which letter is 16th?"
+    ],
+    "ln-b04": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "R = 18 and 18² = 324. K = 11 and 11² = 121. Each letter's place is squared.",
+      "N = 14 and H = 8. What are 14² and 8²?"
+    ],
+    "ln-b06": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "C → H +5, S → N −5, M → H −5, K → P +5.",
+      "Move FVRJ the same way: F + 5, V − 5, R − 5, J + 5. Which option is it?"
+    ],
+    "ln-b07": [
+      "Compare F12O23E18 with 6L15W5R part by part: F with 6, 12 with L, and so on.",
+      "F is the 6th letter, and L is the 12th. Each letter becomes its place number, and each number becomes the letter in that place.",
+      "Do the same to L5A22E19: L → 12, 5 → E… What is the whole code?"
+    ],
+    "ln-b08": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "SBF = 19 + 2 + 6 = 27 = 3³, and RVX = 18 + 22 + 24 = 64 = 4³. Add the places, then take the cube root: 3/4.",
+      "CAD = 3 + 1 + 4 and KIG = 11 + 9 + 7. What are the cube roots of these sums?"
+    ],
+    "ln-b09": [
+      "Compare the top of each half with the bottom of the other: PTI with KGR, and DHU with WSF.",
+      "D ↔ W, H ↔ S, U ↔ F: each letter becomes its opposite (A ↔ Z, B ↔ Y…). Then top and bottom swap places.",
+      "So the top is the opposite of FJS and the bottom is the opposite of RVG. Which option is it?"
+    ],
+    "ln-b10": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "M + G + P = 13 + 7 + 16 = 36, and √36 = 6. Add the places, then take the square root.",
+      "R + T + Z = 18 + 20 + 26. What is the square root of that sum?"
+    ],
+    "ln-b11": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "H + L + I + D = 8 + 12 + 9 + 4 = 33, and 33 × 2 = 66. Add all four places, then double.",
+      "P + G + K + J = 16 + 7 + 11 + 10. Double that sum: which option is it?"
+    ],
+    "ln-b12": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "B → D +2, A → D +3, T → X +4: the moves grow by 1.",
+      "Move CUP the same way: C + 2, U + 3, P + 4. Which option is it?"
+    ],
+    "ln-b13": [
+      "The code starts with 18, and R (18th) is the last letter of TEACHER. Try writing the word backwards: R E H C A E T.",
+      "Odd places (R, H, A, T) become their place numbers 18, 8, 1, 20. Even places (E, C, E) become their opposite letters: E ↔ V, C ↔ X.",
+      "STUDENT backwards is T N E D U T S. Turn the odd places into numbers and the even places into opposite letters. Which option is it?"
+    ],
+    "ln-b14": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "DAISY = 4 + 1 + 9 + 19 + 25 = 58, and 58 ÷ 2 = 29. Add the places, then halve.",
+      "OXLIP = 15 + 24 + 12 + 9 + 16. Halve that sum: which option is it?"
+    ],
+    "ln-b15": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "EMU = 5 + 13 + 21 = 39, and 39² = 1521. Add the places, then square.",
+      "OWL = 15 + 23 + 12. Square that sum: which option is it?"
+    ],
+    "ka1920m-28": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "C → E +2, E → J +5, H → Y +17.",
+      "Move A G D the same way: A + 2, G + 5, D + 17. Which option is it?"
+    ],
+    "ka1920m-29": [
+      "Use the complete pair, T P D G : 7 11 4 7. D is 4th and G is 7th from A, but T and P are not 7th and 11th from A.",
+      "Count T and P from Z instead: Z, Y, X, W, V, U, T is 7th, and P is 11th. So the first two letters count from Z, the last two from A.",
+      "For V K N T: count V and K from Z, and N and T from A. Which option is it?"
+    ],
+    "ka1920m-30": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "P → S +3, Q → M −4, R → W +5.",
+      "Move E F G the same way: E + 3, F − 4, G + 5. Which option is it?"
+    ],
+    "ka21m-13": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "M → L −1, A → B +1, S → R −1, K → L +1: back 1 and forward 1 take turns.",
+      "Do the same to LOCKDOWN: L − 1, O + 1, C − 1, K + 1… Which option is it?"
+    ],
+    "ka21m-14": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "C → D +1, O → Q +2, R → U +3, O → S +4: each letter moves one more place than the one before.",
+      "Move VIRUS the same way: V + 1, I + 2, R + 3, U + 4, S + 5. Which option is it?"
+    ],
+    "ka2324m-14": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "P → S +3, I → E −4, N → S +5, K → E −6: the moves grow and change direction.",
+      "Move BLUE the same way: B + 3, L − 4, U + 5, E − 6. Which option is it?"
+    ],
+    "ka2324m-15": [
+      "L is the 12th letter. How is 169 made from 12?",
+      "169 = 13², and 13 = 12 + 1. Add 1 to the place, then square.",
+      "Work backwards: 289 = 17², and 17 − 1 = 16. Which letter is 16th?"
+    ],
+    "ka2425m-54": [
+      "Compare the complete pair letter by letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "A → C +2, N → Q +3, D → I +5.",
+      "Move HER the same way: H + 2, E + 3, R + 5. Which option is it?"
+    ],
+    "ka2425m-55": [
+      "Turn the letters into their places in the alphabet (A 1, B 2, … Z 26) and compare with the numbers.",
+      "PAPER = 16 + 1 + 16 + 5 + 18 = 56, and 56 × 4 = 224. Add the places, then multiply by 4.",
+      "COVER = 3 + 15 + 22 + 5 + 18. Multiply that sum by 4: which option is it?"
+    ],
+    "ka2526m-47": [
+      "The code uses the same letters as BENGALURU, in a new order. Number the letters of BENGALURU 1 to 9.",
+      "EGLR are the letters in even places (2, 4, 6, 8). UUANB are the odd places (9, 7, 5, 3, 1), from the end.",
+      "For DAVANGERE: write the even-place letters, then the odd-place letters from the end. Which option is it?"
+    ]
+  }
+}

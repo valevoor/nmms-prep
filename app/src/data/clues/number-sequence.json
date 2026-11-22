@@ -1,0 +1,166 @@
+{
+  "topic": "number-sequence",
+  "_note": "Step-by-step clues for Number and Letter Sequence (Chapter 13): the book questions and the past-paper questions filed under the chapter, by question id. For a counting question the clues say which numbers or letters count (primes, squares, vowels…), show the first place that fits, then ask the student to go on to the end and count. For a position question they find the first letter or number, then ask for the count from it. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ns2-b01": [
+      "You need a prime number with an even number right after it. Primes: 2, 3, 5, 7, 11… (1 is not prime). Even: 0, 2, 4, 6, 8…",
+      "Start at the left and check each place in turn. The first one that fits is 2 8.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b02": [
+      "You need three numbers in a row: even, odd, even. Look at each odd number and check both its neighbours.",
+      "Start at the left and check each place in turn. The first one that fits is 6 1 4.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b03": [
+      "You need three in a row: prime, even, prime. The prime numbers here are 2, 3, 5, 7, 11, 13… 1 is not a prime, and 2 is the only even prime.",
+      "Start at the left and check each place in turn. The first one that fits is 3 4 5.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b04": [
+      "The factors of 4 are 1, 2 and 4. You need one of them with an odd number right after it.",
+      "Start at the left and check each place in turn. The first one that fits is 2 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b05": [
+      "You need three in a row: odd, then an even number bigger than 3 (4, 6, 8…), then odd.",
+      "Start at the left and check each place in turn. The first one that fits is 7 6 5.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b06": [
+      "The vowels are A, E, I, O, U; every other letter is a consonant. You need three in a row: vowel, consonant, vowel.",
+      "Start at the left and check each place in turn. The first one that fits is A M E.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b08": [
+      "Count 8 letters from the left. Put your finger on the 8th.",
+      "The 8th letter from the left is M.",
+      "Now count 6 letters to the left of M (8 − 6 = 2: it is the 2nd from the left). Which letter is it?"
+    ],
+    "ns2-b09": [
+      "You need a K with a vowel (A, E, I, O, U) right before it. Look at each K and check the letter before it.",
+      "Start at the left and check each place in turn. The first one that fits is E K.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b10": [
+      "The square numbers here are 0, 1, 4, 9, 16 (0 = 0 × 0 counts). You need three in a row: odd, square, odd.",
+      "Start at the left and check each place in turn. The first one that fits is 3 4 5.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b11": [
+      "The square numbers are 1, 4, 9, 16, 25… You need a square with an odd number right after it.",
+      "Start at the left and check each place in turn. The first one that fits is 4 1.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b12": [
+      "You need a p with a vowel (a, e, i, o, u) on both sides. Look at each p and check its two neighbours.",
+      "Start at the left and check each place in turn. The first one that fits is o p a.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b13": [
+      "Take the numbers two at a time, side by side: 1st and 2nd, 2nd and 3rd, and so on. Add each pair. You want the pairs that do NOT make 5.",
+      "Start at the left and check each place in turn. The first one that fits is 1 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b14": [
+      "Count the numbers in the series. The one exactly in the middle has as many numbers on its left as on its right.",
+      "There are 27 numbers, so the middle one is the 14th (13 on each side). The 14th number is 9.",
+      "Three places to the left of the 14th is the 11th number. What is it?"
+    ],
+    "ns2-b15": [
+      "Take the numbers two at a time, side by side. You want pairs where both numbers are prime. The prime numbers here are 2, 3, 5, 7, 11, 13… 1 is not a prime, and 2 is the only even prime.",
+      "Start at the left and check each place in turn. The first one that fits is 2 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b16": [
+      "The square numbers here are 1, 4 and 9. Look at each 2 and check that the numbers on both sides are squares.",
+      "Start at the left and check each place in turn. The first one that fits is 1 2 4.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b17": [
+      "Look at each 7. It counts only if the number before it is 8 AND the number after it is not 3.",
+      "Start at the left and check each place in turn. The first one that fits is 8 7 6.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b18": [
+      "Look at each 2. It counts only if the number after it is 1 AND the number before it is not 4.",
+      "Start at the left and check each place in turn. The first one that fits is 1 2 1.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ns2-b19": [
+      "Number the letters 1, 2, 3… from the first. The prime places are 2, 3, 5, 7, 11… (1 is not prime).",
+      "The letters in those places are B (2), C (3), E (5), G (7), K (11).",
+      "Leave out the vowels (A, E, I, O, U). How many consonants are left?"
+    ],
+    "ns2-b20": [
+      "Number the letters 1, 2, 3… from the first. You only need the even places: 2, 4, 6, 8…",
+      "Check each even place for a vowel (a, e, i, o, u). The first one is e, in place 6.",
+      "Go on to the last letter, checking only even places. How many vowels do you find?"
+    ],
+    "ka1920m-09": [
+      "You need three in a row: odd, prime, odd. The middle one must be prime: 3, 5, 7 (1 and 9 are odd but not prime).",
+      "Start at the left and check each place in turn. The first one that fits is 3 7 5.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka1920m-10": [
+      "Look at each 3 and check the number just before it. Is it odd (1, 3, 5, 7, 9)?",
+      "Start at the left and check each place in turn. The first one that fits is 1 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka23m-62": [
+      "You need three in a row: odd, even, odd. Look at each even number and check both its neighbours.",
+      "Start at the left and check each place in turn. The first one that fits is 7 4 9.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka23m-63": [
+      "Look at each 2 and check the number just before it. Is it prime (2, 3, 5, 7)?",
+      "Start at the left and check each place in turn. The first one that fits is 3 2.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka23m-64": [
+      "Take the numbers two at a time, side by side. Take the smaller from the bigger: you want pairs that differ by 3.",
+      "Start at the left and check each place in turn. The first one that fits is 0 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka23m-65": [
+      "Count 8 numbers from the left. Put your finger on the 8th.",
+      "The 8th number from the left is 1.",
+      "Now count 3 places to its right (it is the 11th from the left). Which number is it?"
+    ],
+    "ka2324m-89": [
+      "You need exactly 6 4 3, in that order. Look at each 4 and check the numbers on both sides.",
+      "Start at the left and check each place in turn. The first one that fits is 6 4 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka2324m-90": [
+      "You need three in a row: prime, even, prime. The prime numbers here are 2, 3, 5, 7, 11, 13… 1 is not a prime, and 2 is the only even prime.",
+      "Start at the left and check each place in turn. The first one that fits is 5 4 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka2425m-81": [
+      "You need three in a row: odd, prime, odd. The prime numbers here are 2, 3, 5, 7, 11, 13… 1 is not a prime, and 2 is the only even prime.",
+      "Start at the left and check each place in turn. The first one that fits is 1 2 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka2425m-82": [
+      "Write the alphabet with its places: A 1, B 2, C 3… You need the places that are multiples of 3: 3, 6, 9… up to 24.",
+      "The letters in those places are C, F, I, L, O, R, U, X.",
+      "How many of them are vowels (A, E, I, O, U)?"
+    ],
+    "ka2526m-31": [
+      "The square numbers here are 1, 4 and 9. Look at each 7 and check that the numbers on both sides are squares.",
+      "Start at the left and check each place in turn. The first one that fits is 1 7 4.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka2526m-32": [
+      "The squares bigger than 2 are 4 and 9. Look at each 4 and 9 and check that both its neighbours are prime (2, 3, 5, 7).",
+      "Start at the left and check each place in turn. The first one that fits is 7 9 3.",
+      "Go on to the end of the series the same way, marking every place that fits. How many marks are there?"
+    ],
+    "ka2526m-33": [
+      "This time count from the right end of the series (Q is 1st from the right).",
+      "Counting from the right, the 8th letter is J.",
+      "Now count 4 letters to the right of J: K is the 1st. Which is the 4th?"
+    ]
+  }
+}

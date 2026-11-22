@@ -1,0 +1,71 @@
+{
+  "topic": "cubes-cutting",
+  "_note": "Step-by-step clues for Cubes and Cutting (Chapter 26): the book questions by question id. Each list says how many small cubes fit along an edge, says to count the figure layer by layer (or column by column, or face by face for the area), gives the layers it should find, then sets up the sum. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "cc-b01": [
+      "Each edge of the big cube is cut into 3 parts, so a full layer is 3 × 3 = 9 cubes.",
+      "There are 3 layers of 3 × 3 small cubes.",
+      "3 × 3 × 3 = ?"
+    ],
+    "cc-b02": [
+      "Each edge of the big cube is cut into 3 parts, so a full layer is 3 × 3 = 9 cubes.",
+      "Count layer by layer, from the top. In each layer count the rows, then the cubes in a row.",
+      "The bottom layer is full, 3 × 3. The two layers above have the front row cut away: 3 × 2 each. 6 + 6 + 9 = ?"
+    ],
+    "cc-b03": [
+      "Each edge of the big cube is cut into 3 parts, so a full layer is 3 × 3 = 9 cubes.",
+      "Count layer by layer, from the top. In each layer count the rows, then the cubes in a row.",
+      "The cube is cut into steps: top 3 × 1, middle 3 × 2, bottom 3 × 3. 3 + 6 + 9 = ?"
+    ],
+    "cc-b04": [
+      "Each edge of the big cube is cut into 3 parts, so a full layer is 3 × 3 = 9 cubes.",
+      "Count what is missing in each layer: compare each layer with a full one.",
+      "Bottom: 0 missing. Middle: 3 × 1. Top: 3 × 2. 0 + 3 + 6 = ? (Check: 27 − 18 should give the same.)"
+    ],
+    "cc-b05": [
+      "Each edge of the big cube is cut into 3 parts, so a full layer is 3 × 3 = 9 cubes.",
+      "The cubes to add are exactly the ones that were cut away. Count what is missing in each layer.",
+      "Bottom: 0. Middle: 3 × 1. Top: 3 × 2. 0 + 3 + 6 = ?"
+    ],
+    "cc-b06": [
+      "Each small cube face is 1 square unit. Count the faces you can see from each of the six sides: top, bottom, front, back, left, right.",
+      "For steps like these, every uncovered face is seen from exactly one side. Top, bottom, front and back each show 9; left and right each show 6.",
+      "6 + 6 + 9 + 9 + 9 + 9 = ?"
+    ],
+    "cc-b07": [
+      "Each edge of the big cube is cut into 4 parts, so a full layer is 4 × 4 = 16 cubes.",
+      "Count layer by layer, from the top. In each layer count the rows, then the cubes in a row.",
+      "The cube is cut into 4 steps: each layer down has one more row of 4. 4 + 8 + 12 + 16 = ?"
+    ],
+    "cc-b08": [
+      "Each edge of the big cube is cut into 4 parts, so a full layer is 4 × 4 = 16 cubes.",
+      "Count what is missing in each layer: compare each layer with a full one.",
+      "Bottom: 0 missing. Next: 4 × 1. Next: 4 × 2. Top: 4 × 3. 0 + 4 + 8 + 12 = ? (Check: 64 − 40 should give the same.)"
+    ],
+    "cc-b09": [
+      "Each edge of the big cube is cut into 4 parts, so a full layer is 4 × 4 = 16 cubes.",
+      "The cubes to add are exactly the ones that were cut away. Count what is missing in each layer.",
+      "Bottom: 0. Next: 4 × 1. Next: 4 × 2. Top: 4 × 3. 0 + 4 + 8 + 12 = ?"
+    ],
+    "cc-b12": [
+      "The pile stands in a corner, so every cube you can see rests on cubes you can't see.",
+      "Count it in layers from the top: 1, then 1 + 2 = 3, then 1 + 2 + 3 = 6, then 1 + 2 + 3 + 4 = 10.",
+      "1 + 3 + 6 + 10 = ?"
+    ],
+    "cc-b13": [
+      "How many small cubes fit along one edge? 8 cm ÷ 2 cm = 4.",
+      "Then the cube is 4 layers of 4 × 4.",
+      "4 × 4 × 4 = ?"
+    ],
+    "cc-b14": [
+      "How many small cubes fit along one edge? 15 cm ÷ 3 cm = 5.",
+      "Then the cube is 5 layers of 5 × 5.",
+      "5 × 5 × 5 = ?"
+    ],
+    "cc-b15": [
+      "64 = 4 × 4 × 4, so each edge is 4 small cubes long.",
+      "Taking a layer off every face takes 1 cube off both ends of each edge: 4 − 2 = 2 are left along each edge.",
+      "2 × 2 × 2 = ?"
+    ]
+  }
+}

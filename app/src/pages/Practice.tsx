@@ -5,7 +5,7 @@ import { Explanation } from '../components/Explanation'
 import { Options } from '../components/Options'
 import { Page } from '../components/Page'
 import { QuestionStem } from '../components/QuestionStem'
-import { paperQuestions } from '../data/papers'
+import { modelQuestions, paperQuestions } from '../data/papers'
 import { askLabel, pastOnly } from '../data/topics'
 import type { ReadyTopic } from '../data/topics'
 import { cluesFor } from '../lib/clues'
@@ -16,7 +16,7 @@ import { href } from '../lib/router'
 import { questionLabel } from '../lib/source'
 import type { OptionKey, Question } from '../types'
 
-export type PracticeMode = 'warmup' | 'book' | 'exam' | 'more' | 'mistakes'
+export type PracticeMode = 'warmup' | 'book' | 'exam' | 'model' | 'more' | 'mistakes'
 
 export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: PracticeMode }) {
   const t = useT()
@@ -31,9 +31,11 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
   const [frozen, setFrozen] = useState<Question[] | null>(null)
   // Past-paper questions filed under this chapter; the tab only shows when there are some.
   const exam = useMemo(() => byLevel(paperQuestions(topic.id)), [topic.id])
+  // Model-paper questions (practice papers, not real exams), in their own tab; it only shows when there are some.
+  const model = useMemo(() => byLevel(modelQuestions(topic.id)), [topic.id])
   // Easiest first, where the chapter has levels.
   const book = useMemo(() => byLevel(topic.questions), [topic.questions])
-  const live = mode === 'warmup' ? round : mode === 'book' ? book : mode === 'exam' ? exam : mode === 'mistakes' ? progress.mistakes : extra
+  const live = mode === 'warmup' ? round : mode === 'book' ? book : mode === 'exam' ? exam : mode === 'model' ? model : mode === 'mistakes' ? progress.mistakes : extra
   const queue = mode === 'more' ? extra : (frozen ?? live)
 
   const [index, setIndex] = useState(0)
@@ -104,14 +106,14 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
   const counter = mode === 'more' ? t.practice.rightCount(score.right, score.done) : `${Math.min(index + 1, queue.length)} / ${queue.length}`
   const tabs = useMemo(
     () =>
-      (['warmup', 'book', 'exam', 'more', 'mistakes'] as PracticeMode[])
-        .filter((m) => (m === 'warmup' ? !!topic.warmup : m === 'exam' ? exam.length > 0 : m === 'book' ? !pastOnly(topic) : m === 'more' ? !!topic.generate : true))
+      (['warmup', 'book', 'exam', 'model', 'more', 'mistakes'] as PracticeMode[])
+        .filter((m) => (m === 'warmup' ? !!topic.warmup : m === 'exam' ? exam.length > 0 : m === 'model' ? model.length > 0 : m === 'book' ? !pastOnly(topic) : m === 'more' ? !!topic.generate : true))
         .map((m) => (
         <a key={m} className={`tab${m === mode ? ' tab-active' : ''}`} href={href(`mat/${topic.id}/practice/${m}`)} aria-current={m === mode ? 'page' : undefined}>
           {t.practice[m]}
         </a>
       )),
-    [mode, topic, t, exam.length],
+    [mode, topic, t, exam.length, model.length],
   )
 
   return (
@@ -157,9 +159,9 @@ export function Practice({ topic, mode: asked }: { topic: ReadyTopic; mode: Prac
                 </button>
               </>
             )}
-            {(mode === 'book' || mode === 'exam') && (
+            {(mode === 'book' || mode === 'exam' || mode === 'model') && (
               <button className="btn" onClick={restart}>
-                {mode === 'exam' ? t.practice.examAgain : t.practice.bookAgain}
+                {mode === 'exam' ? t.practice.examAgain : mode === 'model' ? t.practice.modelAgain : t.practice.bookAgain}
               </button>
             )}
             {topic.generate && (

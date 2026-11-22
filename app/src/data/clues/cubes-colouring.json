@@ -1,0 +1,81 @@
+{
+  "topic": "cubes-colouring",
+  "_note": "Step-by-step clues for Cubes and Colouring (Chapter 28): the book questions by question id. Each list says where on the big cube the small cubes asked about sit (corners, edges, faces, inside, or along the edge where two coloured faces meet), gives the count for that place in a cube cut n × n × n, then sets up the sum for this cube. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "col-b01": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "Three painted faces meet only at a corner of the big cube. A cube has 8 corners, whatever the size.",
+      "So how many small cubes have three faces painted?"
+    ],
+    "col-b02": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "Two painted faces meet along an edge. Leave out the 2 corner cubes: each edge has n − 2 such cubes, and a cube has 12 edges.",
+      "12 × (3 − 2) = ?"
+    ],
+    "col-b03": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "One painted face only: the middle of a face, away from its edges. Each face has (n − 2)² of these.",
+      "There are 6 faces: 6 × (3 − 2)² = ?"
+    ],
+    "col-b04": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "No painted face: the cubes hidden inside. Take off one layer on every side, leaving a cube (n − 2) on each edge.",
+      "(3 − 2)³ = ?"
+    ],
+    "col-b05": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "Green (right) and yellow (front) are next to each other: they meet along one edge. Cubes with only those two colours sit on that edge, without its 2 corners.",
+      "3 − 2 = ?"
+    ],
+    "col-b06": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "Red is on the top and blue on the bottom. Do those two faces ever touch?",
+      "A small cube can only have both colours if the two faces meet. How many cubes can have red and blue?"
+    ],
+    "col-b07": [
+      "Each edge is cut into 3 parts, so the big cube is 3 × 3 × 3 small cubes.",
+      "Purple, brown and blue: back, left (in some order) and bottom. These three faces meet at one corner.",
+      "Each corner has exactly one small cube. How many small cubes have all three colours?"
+    ],
+    "col-b08": [
+      "Each edge is cut into 4 parts, so the big cube is 4 × 4 × 4 small cubes.",
+      "The number of small cubes is n × n × n, here 4 layers of 4 × 4.",
+      "4 × 4 × 4 = ?"
+    ],
+    "col-b09": [
+      "Each edge is cut into 4 parts, so the big cube is 4 × 4 × 4 small cubes.",
+      "Two painted faces meet along an edge. Leave out the 2 corner cubes: each edge has n − 2 such cubes, and a cube has 12 edges.",
+      "12 × (4 − 2) = ?"
+    ],
+    "col-b10": [
+      "Each edge is cut into 4 parts, so the big cube is 4 × 4 × 4 small cubes.",
+      "No painted face: the cubes hidden inside. Take off one layer on every side, leaving a cube (n − 2) on each edge.",
+      "(4 − 2)³ = ?"
+    ],
+    "col-b11": [
+      "Each edge is cut into 4 parts, so the big cube is 4 × 4 × 4 small cubes.",
+      "Only brown: the middle of the brown face, away from its edges. One face has (n − 2)² of these.",
+      "(4 − 2)² = ?"
+    ],
+    "col-b12": [
+      "Each edge is cut into 4 parts, so the big cube is 4 × 4 × 4 small cubes.",
+      "Brown (front), blue (top) and yellow (right) all meet at one corner, top front right.",
+      "Each corner has exactly one small cube. How many small cubes have all three colours?"
+    ],
+    "col-b13": [
+      "Each edge is cut into 5 parts, so the big cube is 5 × 5 × 5 small cubes.",
+      "Two painted faces meet along an edge. Leave out the 2 corner cubes: each edge has n − 2 such cubes, and a cube has 12 edges.",
+      "12 × (5 − 2) = ?"
+    ],
+    "col-b14": [
+      "Each edge is cut into 5 parts, so the big cube is 5 × 5 × 5 small cubes.",
+      "Only purple: the middle of the purple face, away from its edges. One face has (n − 2)² of these.",
+      "(5 − 2)² = ?"
+    ],
+    "col-b15": [
+      "Each edge is cut into 5 parts, so the big cube is 5 × 5 × 5 small cubes.",
+      "Purple (top) and grey (right) are next to each other: they meet along one edge. Cubes with only those two colours sit on that edge, without its 2 corners.",
+      "5 − 2 = ?"
+    ]
+  }
+}

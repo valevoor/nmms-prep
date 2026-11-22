@@ -1961,6 +1961,10 @@ a {
 
 .seg {
   display: inline-flex;
+  /* Classroom can have four sources (Book, Past exams, Model papers, New questions): wrap rather than clip at 360px. */
+  flex-wrap: wrap;
+  max-width: 100%;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;

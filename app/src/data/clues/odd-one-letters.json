@@ -1,0 +1,146 @@
+{
+  "topic": "odd-one-letters",
+  "_note": "Step-by-step clues for Odd One Out: Letters (Chapter 11): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to look at (the jumps between letters, their places in the alphabet, vowels, shapes), shows the rule on two of the options, then asks the student to check the rest. The last clue never names the odd one. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ol-b01": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "PONML goes back one letter at a time: P, O, N, M, L. CBAZY does too: after A comes Z.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b02": [
+      "Look at the first letter of each option, then at the three after it.",
+      "AJKL: A is a vowel, then J K L in a row. IXYZ: I is a vowel, then X Y Z in a row.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b03": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "C → A goes back 2. R → P goes back 2.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b05": [
+      "Count the letters skipped between neighbours in each option.",
+      "X (W V) U (T) S R: 2 skipped, then 1, then none. EBZY does the same: E (D C) B (A) Z Y.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b06": [
+      "Split each option into two pairs: CP | GT. How far apart are the letters in each pair?",
+      "C (3) → P (16) is 13 places, and G (7) → T (20) is 13. JW and BO are 13 apart too. 13 is half the alphabet.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b07": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "DHBP → 4, 8, 2, 16: all even. LRFH → 12, 18, 6, 8: all even.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b08": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "DGK: D + G = 4 + 7 = 11 = K. KCN: K + C = 11 + 3 = 14 = N. The first two places add up to the third.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b09": [
+      "This one is about how the letters look. Picture each capital letter: is it made of straight lines or curves?",
+      "H, K, L, M are all straight lines. V, W, F, I are all straight lines too.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b10": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "A → Z → X → U goes back 1, 2, 3 (after A comes Z). T → S → Q → N goes back 1, 2, 3 as well.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b11": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "BD: 2 × 4 = 8 = 2³. IC: 9 × 3 = 27 = 3³. Multiply the two places: you get a cube.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b12": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "CJ 13: C + J = 3 + 10 = 13. MP 29: M + P = 13 + 16 = 29. The number is the sum of the two places.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b13": [
+      "Look at the letters in each option. Is there anything you can see without counting?",
+      "RDJY has four different letters. So do EAPS and CTIZ.",
+      "Which option uses a letter twice?"
+    ],
+    "ol-b14": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "B → D → G → K jumps +2, +3, +4. P → R → U → Y jumps +2, +3, +4 too.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ol-b15": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "DAC: 4 + 1 + 3 = 8 = 2³. OJB: 15 + 10 + 2 = 27 = 3³. The places add up to a cube.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka1920m-17": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "Z → W → R goes back 3, then back 5. T → Q → L goes back 3, then back 5.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka1920m-20": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "R → W → C moves +5, then +6 (going past Z back to A). P → U → A does the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka21m-22": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "G → L → I → P moves +5, −3, +7. J → O → L → S moves the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka21m-24": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "L → N → Q → U moves +2, +3, +4. T → V → Y → C does too (after Z, count on from A).",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka23m-10": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "B → G → K → N → P moves +5, +4, +3, +2. A → F → J → M → O moves the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka23m-47": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "MAT: 13 + 1 + 20 = 34. COP: 3 + 15 + 16 = 34. The places add up to the same total.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka23m-48": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "P → T → L moves +4, then −8. V → Z → R moves the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2324m-08": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "CAD: 3 + 1 + 4 = 8 = 2³. KIG: 11 + 9 + 7 = 27 = 3³. The places add up to a cube.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2324m-09": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "C → H → L → E moves +5, +4, −7. L → Q → U → N moves the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2324m-10": [
+      "Each option is a letter, a number and a letter. Turn the letters into their places in the alphabet.",
+      "R40V: R = 18, V = 22, 4 places on, and 18 + 22 = 40. D12H: D = 4, H = 8, 4 places on, and 4 + 8 = 12.",
+      "Check both parts of the rule on the other options: the gap of 4 and the sum. Which one breaks it?"
+    ],
+    "ka2425m-26": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. In each option, find the jump from each letter to the next.",
+      "B → C → G → P moves +1, +4, +9 (the squares 1, 4, 9). F → G → K → T moves the same.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2425m-27": [
+      "Turn each letter into its place in the alphabet: A 1, B 2, … Z 26.",
+      "S83B: S × B = 19 × 2 = 38, written backwards 83. L84D: L × D = 12 × 4 = 48, written backwards 84.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2526m-18": [
+      "Read each matrix row by row as four letters, then find the jumps between them.",
+      "E H J M goes +3, +2, +3. G J L O goes +3, +2, +3 too.",
+      "Check the other options the same way. Which one doesn't follow the rule?"
+    ],
+    "ka2526m-24": [
+      "Look for the vowels (A, E, I, O, U) in each option.",
+      "ACD has A, and HIJ has I.",
+      "Check the other two. Which option has no vowel?"
+    ]
+  }
+}

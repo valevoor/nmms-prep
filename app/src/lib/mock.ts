@@ -18,7 +18,7 @@
  */
 import { useSyncExternalStore } from 'react'
 import { del, get, set } from 'idb-keyval'
-import { PAPER_FILES, paperQuestions } from '../data/papers'
+import { modelQuestions, PAPER_FILES, paperQuestions } from '../data/papers'
 import { SAT_TOPICS, SECTION_SUBJECT, getSatTopic, satQuestions, satSolved } from '../data/sat'
 import type { PaperQuestionRef, SatSubject } from '../data/sat'
 import { READY_TOPICS, getTopic } from '../data/topics'
@@ -148,8 +148,8 @@ export function shares<T extends { weight: number; cap: number }>(rows: T[], tot
   return out
 }
 
-/** A MAT chapter's questions that aren't generated: the book's and the past papers'. */
-const matPool = (id: string): Question[] => [...(getTopic(id)?.questions ?? []), ...paperQuestions(id)]
+/** A MAT chapter's questions that aren't generated: the book's, the past papers' and the model papers'. */
+const matPool = (id: string): Question[] => [...(getTopic(id)?.questions ?? []), ...paperQuestions(id), ...modelQuestions(id)]
 
 /** How many questions each MAT chapter gets: its share of all past-paper questions (a chosen chapter never asked gets one share). */
 export function chapterShares(total: number, chosen?: string[]): { topic: string; n: number }[] {
@@ -162,7 +162,7 @@ export function chapterShares(total: number, chosen?: string[]): { topic: string
     .map(({ topic, n }) => ({ topic, n }))
 }
 
-/** A chapter's questions for a mixed MAT paper: from the book and past papers, never the same one twice. */
+/** A chapter's questions for a mixed MAT paper: from the book, past papers and model papers, never the same one twice. */
 function chapterQuestions(topicId: string, n: number, rng: () => number): Question[] {
   const seen = new Set<string>()
   const out: Question[] = []

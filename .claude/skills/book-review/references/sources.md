@@ -11,7 +11,7 @@ Each book or paper under review is a folder `sources/<id>/`. Name it like the pr
  "heading": "Answer check of the NMMS study material",
  "audience": "the book's authors at KSQAAC",
  "pdf": "NMMS.pdf",
- "keyPdf": "pyq/ka-2023-24-mat-key.pdf",
+ "keyPdf": "question-papers/pyq/ka-2023-24-mat-key.pdf",
  "pageOffset": 9,
  "pdfFile": "Spardha-Yashassu-Answer-Check.pdf",
  "intro": "We checked every answer in the book …",

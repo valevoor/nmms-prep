@@ -1,0 +1,146 @@
+{
+  "topic": "counting-figures",
+  "_note": "Step-by-step clues for Counting Figures (Chapter 31): the book questions and the past-paper questions filed under the chapter, by question id. Each list gives a way to count without missing any (by size, by the lines that make each shape, or one part of the figure at a time), gives the counts for the first sizes or parts, then sets up the total. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "cf-b01": [
+      "Every triangle here has the top corner. So look at where the lines from the top cut the base, and the short cross line.",
+      "Along the base there are 4 small parts. Any run of parts next to each other makes a triangle: 1 + 2 + 3 + 4 = 10. The cross line has 3 parts: 1 + 2 + 3 = 6.",
+      "10 + 6 = ?"
+    ],
+    "cf-b02": [
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "The lines cut the square into 8 small triangles. Two small ones along a side make a bigger triangle: 4 of those. Each diagonal cuts the square into two halves: 4 more.",
+      "8 + 4 + 4 = ?"
+    ],
+    "cf-b03": [
+      "The star has a small triangle at each of its 5 points.",
+      "Each of its 5 lines is also the long side of a bigger triangle: a point together with the part of the middle next to it.",
+      "5 + 5 = ?"
+    ],
+    "cf-b04": [
+      "The big triangle has 4 small triangles along each side. Count by size, and count the ones pointing up and pointing down separately.",
+      "Size 1: 10 up + 6 down = 16. Size 2: 6 up + 1 down = 7. Size 3: 3. Size 4: 1.",
+      "16 + 7 + 3 + 1 = ?"
+    ],
+    "cf-b05": [
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "A 4 × 4 grid has 16 squares of 1 × 1, 9 of 2 × 2, 4 of 3 × 3 and 1 of 4 × 4.",
+      "16 + 9 + 4 + 1 = ?"
+    ],
+    "cf-b06": [
+      "Count one part of the figure at a time: the squares over the corners, where they overlap, the big square, and the small square in the centre.",
+      "4 squares over the corners; 4 small squares where they overlap the big one; the big square with its 4 quarters (5); the centre square with its 4 quarters (5).",
+      "4 + 4 + 5 + 5 = ?"
+    ],
+    "cf-b07": [
+      "Count the straight squares and the tilted squares separately.",
+      "The middle square and its 4 quarters make 5. The tilted square joining the middles of its sides is 1, and the 4 tilted squares around it make 4.",
+      "5 + 1 + 4 = ?"
+    ],
+    "cf-b08": [
+      "Count every box whose four sides are all drawn, big ones as well as small ones.",
+      "The whole figure, the strip on the right, everything left of that strip, its top strip, the part under the top strip, and the 2 parts that part is cut into.",
+      "1 + 1 + 1 + 1 + 1 + 2 = ?"
+    ],
+    "cf-b09": [
+      "A rectangle is fixed by choosing 2 of the lines one way and 2 of the lines the other way. With k parts in a row there are 1 + 2 + … + k ways to choose.",
+      "Here there are 4 boxes in a row and 4 rows: 1 + 2 + 3 + 4 = 10 ways each way.",
+      "10 × 10 = ?"
+    ],
+    "cf-b11": [
+      "A rectangle is fixed by choosing 2 of the lines one way and 2 of the lines the other way. With k parts in a row there are 1 + 2 + … + k ways to choose.",
+      "Parallelograms work the same way. 3 parts along a row: 1 + 2 + 3 = 6. 2 rows: 1 + 2 = 3.",
+      "6 × 3 = ?"
+    ],
+    "cf-b12": [
+      "A rectangle is fixed by choosing 2 of the lines one way and 2 of the lines the other way. With k parts in a row there are 1 + 2 + … + k ways to choose.",
+      "Parallelograms work the same way. 3 parts along each row and 3 rows: 1 + 2 + 3 = 6 each way.",
+      "6 × 6 = ?"
+    ],
+    "ka1920m-51": [
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "A 4 × 4 grid has 16 squares of 1 × 1, 9 of 2 × 2, 4 of 3 × 3 and 1 of 4 × 4.",
+      "16 + 9 + 4 + 1 = ?"
+    ],
+    "ka1920m-52": [
+      "A straight line right across a circle through its centre (a diameter) cuts it into 2 semicircles; two diameters across each other make 4.",
+      "The 3 circles round the centre are cut by both lines: 3 × 4 = 12. The 6 small circles are cut by one line each: 6 × 2 = 12.",
+      "12 + 12 = ?"
+    ],
+    "ka1920m-53": [
+      "Five lines come down from the top. Any two of them make a triangle with the base.",
+      "With the base: any 2 of the 5 lines, 4 + 3 + 2 + 1 = 10. The short line across meets only 3 of the lines: 2 + 1 = 3 more.",
+      "10 + 3 = ?"
+    ],
+    "ka1920m-54": [
+      "The lines run in three directions: flat, slanting one way, slanting the other way. A parallelogram needs two lines from one direction and two from another.",
+      "Slanting both ways: 3 × 3 = 9. Flat lines with each slant: 3 + 3 = 6.",
+      "9 + 6 = ?"
+    ],
+    "ka21m-63": [
+      "Count one quarter of the square at a time, then the triangles made of halves of the square.",
+      "Each quarter with small lines has 13 (9 small, the quarter itself, and 3 made of several parts). Each plain quarter has 1. The diagonals cut the square into halves: 4 more.",
+      "13 + 13 + 1 + 1 + 4 = ?"
+    ],
+    "ka21m-64": [
+      "Every two small triangles that share a side make a parallelogram; bigger ones are made of 4 small triangles.",
+      "8 are made of 2 small triangles. 4 are made of 4: two along the bottom row, and two slanting across both rows.",
+      "8 + 4 = ?"
+    ],
+    "ka21m-65": [
+      "A straight line right across a circle through its centre (a diameter) cuts it into 2 semicircles; two diameters across each other make 4.",
+      "A line from the centre to the edge only does not make semicircles. The big circle and the three small circles have one diameter each: 4 × 2 = 8. The two middle circles have two: 2 × 4 = 8.",
+      "8 + 8 = ?"
+    ],
+    "ka21m-66": [
+      "A rectangle is fixed by choosing 2 of the lines one way and 2 of the lines the other way. With k parts in a row there are 1 + 2 + … + k ways to choose.",
+      "Here there are 5 up-and-down lines (4 parts: 1 + 2 + 3 + 4 = 10 pairs) and 4 across lines (3 parts: 1 + 2 + 3 = 6 pairs).",
+      "10 × 6 = ?"
+    ],
+    "ka23m-23": [
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "Count the single boxes first. Then the rectangles made of 2 boxes next to each other, then 3, and so on up to the whole figure.",
+      "Add up all your counts. How many rectangles?"
+    ],
+    "ka23m-24": [
+      "Count the triangles and the squares separately. Only shapes with four equal sides and square corners are squares.",
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "How many triangles, and how many squares? Which option has both numbers?"
+    ],
+    "ka23m-25": [
+      "Every triangle is made of three lines that meet in pairs.",
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "Count the shapes in each figure, A to D, the same careful way. Which one has the number asked for?"
+    ],
+    "ka2324m-29": [
+      "Count the small triangles first: the ones at the points and along the edges.",
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "Then add the larger triangles made of two or more parts. How many in all?"
+    ],
+    "ka2324m-30": [
+      "A semicircle is half a circle: either a circle cut by a straight line through its centre, or a curved half drawn on its own.",
+      "The big circle cut by the line: 2. Above the line: 2 medium arcs and 2 small arcs. Below the line: 2 small arcs and 1 medium arc.",
+      "2 + 2 + 2 + 2 + 1 = ?"
+    ],
+    "ka2324m-31": [
+      "Count the rectangles in each figure, including the ones made of several parts.",
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "Count the shapes in each figure, A to D, the same careful way. Which one has the number asked for?"
+    ],
+    "ka2425m-01": [
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "The two diagonals and the slanting line through the middle make 6 small triangles. Two of them together make the top and the bottom triangle (2 more), and each diagonal cuts the shape into two big triangles (4 more).",
+      "6 + 2 + 4 = ?"
+    ],
+    "ka2425m-03": [
+      "A circle cut by a straight line through its centre makes 2 semicircles; a single arc on one side of the line makes 1.",
+      "Count by size, smallest first, and write down each count so you don't count a shape twice.",
+      "Count the shapes in each figure, A to D, the same careful way. Which one has the number asked for?"
+    ],
+    "ka2526m-39": [
+      "Name every rectangle by its corners, first with MN drawn in.",
+      "With MN: ABCD, ABFE, EFCD, EMND, MFCN, AGJI and HBLK. Which of these use MN as a side?",
+      "Those disappear when MN is removed. How many fewer rectangles is that?"
+    ]
+  }
+}

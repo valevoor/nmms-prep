@@ -1,0 +1,30 @@
+{
+  "topic": "letter-number-analogy",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: every letter moves the same way, or one letter's place is squared; 2: moves that take turns (+5, −5; −1, +1), or the places added up; 3: moves that grow (+1, +2, +3…) or change sign (+3, −4, +5), or the places added and then squared, rooted or halved; 4: two rules at once (opposite letters and a swap, numbers and letters traded, a word written backwards, counting from Z, letters taken in a new order). Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "ln-b01": 3,
+    "ln-b02": 3,
+    "ln-b03": 2,
+    "ln-b04": 1,
+    "ln-b06": 2,
+    "ln-b07": 4,
+    "ln-b08": 3,
+    "ln-b09": 4,
+    "ln-b10": 3,
+    "ln-b11": 3,
+    "ln-b12": 3,
+    "ln-b13": 4,
+    "ln-b14": 3,
+    "ln-b15": 3,
+    "ka1920m-28": 2,
+    "ka1920m-29": 4,
+    "ka1920m-30": 2,
+    "ka21m-13": 2,
+    "ka21m-14": 3,
+    "ka2324m-14": 3,
+    "ka2324m-15": 2,
+    "ka2425m-54": 2,
+    "ka2425m-55": 3,
+    "ka2526m-47": 4
+  }
+}

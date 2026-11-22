@@ -8,7 +8,7 @@
  * Run from app/:  npx tsx ../tools/check_i18n.ts
  */
 import { CHAPTER_FILES } from '../app/src/data/chapters'
-import { PAPER_FILES } from '../app/src/data/papers'
+import { MODEL_FILES, PAPER_FILES } from '../app/src/data/papers'
 import { SAT_SOURCES } from '../app/src/data/sat'
 
 const KANNADA = /[ಀ-೿]/
@@ -65,6 +65,10 @@ for (const c of CHAPTER_FILES) checkChapter(c.name, c.questions, c.kn, c.meta, c
 for (const p of PAPER_FILES) {
   checkQuestions(p.id, p.questions, p.kn)
   console.log(`${p.id}: ${Object.keys(p.kn).length}/${p.questions.length} questions`)
+}
+for (const p of MODEL_FILES) {
+  checkQuestions(p.id, p.questions, p.kn)
+  console.log(`${p.id} (model paper): ${Object.keys(p.kn).length}/${p.questions.length} questions`)
 }
 
 /** English words in a SAT option or table cell (not units like “km”, algebra like “at” or “abc”, or roman numerals). */

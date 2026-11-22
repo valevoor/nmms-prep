@@ -25,7 +25,8 @@ for (const f of CLUE_FILES) {
   const papers = PAPER_FILES.flatMap((p) => (p.questions as (Q & { topic?: string })[]).filter((q) => q.topic === f.topic))
   const all = [...book, ...papers]
   const byId = new Map(all.map((q) => [q.id, q]))
-  if (!book.length) problems.push(`${f.topic}: no such chapter`)
+  // Past-paper-only chapters (Superimpose, Missing Figures, Miscellaneous) have no book questions.
+  if (!CHAPTER_FILES.some((c) => c.id === f.topic)) problems.push(`${f.topic}: no such chapter`)
 
   for (const id of Object.keys(f.en)) {
     const q = byId.get(id)

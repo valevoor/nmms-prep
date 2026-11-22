@@ -1,0 +1,20 @@
+{
+  "topic": "number-patterns",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: a straight line of numbers moved a row or a few columns; 2: a shape moved a few rows or columns; 3: a shape flipped like a mirror; 4: a five- or six-number shape, or squares of the table's numbers. Practice and Classroom ask the questions in this order (lib/levels.ts). tools/check_levels.ts checks them.",
+  "levels": {
+    "np-b01": 3,
+    "np-b02": 2,
+    "np-b03": 4,
+    "np-b04": 3,
+    "np-b05": 1,
+    "np-b06": 1,
+    "np-b07": 3,
+    "np-b08": 4,
+    "np-b09": 4,
+    "np-b10": 4,
+    "np-b11": 3,
+    "np-b12": 1,
+    "np-b13": 2,
+    "np-b14": 2
+  }
+}

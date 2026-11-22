@@ -1,0 +1,33 @@
+{
+  "topic": "calendar",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: days in the same month, or a number of days to split into weeks; 2: days counted across one or two months, or one year on; 3: days counted across several months with a leap year, several years on, or the holidays in a month; 4: odd days counted from the start of the calendar (centuries), or a year with the same calendar. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "ca-b01": 4,
+    "ca-b02": 1,
+    "ca-b03": 4,
+    "ca-b04": 1,
+    "ca-b05": 1,
+    "ca-b06": 2,
+    "ca-b07": 1,
+    "ca-b08": 4,
+    "ca-b09": 1,
+    "ca-b10": 3,
+    "ca-b11": 4,
+    "ca-b12": 2,
+    "ca-b13": 3,
+    "ca-b14": 1,
+    "ca-b15": 3,
+    "ka1920m-58": 2,
+    "ka1920m-59": 3,
+    "ka21m-51": 3,
+    "ka23m-35": 1,
+    "ka23m-36": 3,
+    "ka2324m-49": 3,
+    "ka2324m-50": 1,
+    "ka2425m-34": 2,
+    "ka2425m-35": 3,
+    "ka2425m-36": 3,
+    "ka2526m-83": 3,
+    "ka2526m-84": 1
+  }
+}

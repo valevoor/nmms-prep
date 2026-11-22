@@ -160,6 +160,9 @@ const PAIRS: Pair[] = [
     mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'exam' })), 'card question'),
     sat: () => region(render(createElement(SatPractice, { topic: SAT_UNSOLVED, mode: 'exam' })), 'card question'),
     matOnly: {
+      'chip-level': 'Every MAT chapter ranks its questions by level (lib/levels.ts); SAT questions have no levels',
+      'clue-open': 'MAT questions have step-by-step clues (lib/clues.ts); SAT questions have solutions instead',
+      'clue-md': 'As clue-open',
       options: 'Drift: SAT lists unanswered options in sat-opts, as there is nothing to pick',
       'options-md': 'Drift: as options',
       option: 'Drift: as options',
@@ -172,7 +175,6 @@ const PAIRS: Pair[] = [
       'sat-opts': 'Drift: see options',
       'sat-key': 'Drift: see option-key',
       actions: 'A question without an answer has only a Next button, below it',
-      btn: 'As actions',
       'btn-primary': 'As actions',
       'btn-lg': 'As actions',
     },
@@ -188,7 +190,12 @@ const PAIRS: Pair[] = [
     name: 'Practice: question card',
     mat: () => region(render(createElement(Practice, { topic: MAT, mode: 'exam' })), 'card question'),
     sat: () => region(render(createElement(SatPractice, { topic: SAT_SOLVED, mode: 'exam' })), 'card question'),
-    matOnly: {},
+    matOnly: {
+      'chip-level': 'Every MAT chapter ranks its questions by level (lib/levels.ts); SAT questions have no levels',
+      'clue-open': 'MAT questions have step-by-step clues (lib/clues.ts); SAT questions have solutions instead',
+      'clue-md': 'As clue-open',
+      btn: 'The clue button (SAT has its buttons outside this card only when a question has no answer)',
+    },
     satOnly: {
       'sat-q': 'Scopes the rules for paper pictures and long option sentences',
       'sat-prompt': 'Drift: MAT draws the prompt with QuestionStem',

@@ -1,0 +1,26 @@
+{
+  "topic": "water-image",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest), judged by eye from the figures. 1: a word in capitals or a few plain shapes; 2: letters and digits, or shapes with a symbol; 3: shaded parts, letters inside shapes, or a row of symbols; 4: a long string of small mixed characters, or a detailed picture. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "wat-b01": 1,
+    "wat-b02": 2,
+    "wat-b03": 2,
+    "wat-b05": 2,
+    "wat-b06": 1,
+    "wat-b08": 3,
+    "wat-b09": 3,
+    "wat-b10": 2,
+    "wat-b11": 2,
+    "wat-b13": 3,
+    "wat-b14": 3,
+    "wat-b15": 3,
+    "ka1920m-89": 3,
+    "ka1920m-90": 3,
+    "ka21m-80": 2,
+    "ka2324m-33": 3,
+    "ka2324m-34": 4,
+    "ka2425m-64": 4,
+    "ka2425m-65": 3,
+    "ka2526m-21": 1
+  }
+}

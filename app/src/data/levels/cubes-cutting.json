@@ -1,0 +1,19 @@
+{
+  "topic": "cubes-cutting",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: a whole cube (n × n × n); 2: a cube cut by a set size, or steps cut from a 3 × 3 × 3 cube; 3: steps on a 4 × 4 × 4 cube, the cubes removed or to be added, or a layer taken off every face; 4: cubes hidden in a corner pile, or the area of the outside. Practice and Classroom ask the questions in this order (lib/levels.ts). tools/check_levels.ts checks them.",
+  "levels": {
+    "cc-b01": 1,
+    "cc-b02": 2,
+    "cc-b03": 2,
+    "cc-b04": 3,
+    "cc-b05": 3,
+    "cc-b06": 4,
+    "cc-b07": 3,
+    "cc-b08": 3,
+    "cc-b09": 3,
+    "cc-b12": 4,
+    "cc-b13": 2,
+    "cc-b14": 2,
+    "cc-b15": 3
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "topic": "number-patterns",
+  "_note": "Step-by-step clues for Number Patterns (Chapter 15): the book questions by question id. Each list says to find the complete pair's groups in the table, names the move from the first group to the second (moved so many rows or columns, or flipped like a mirror), then asks the student to make that move on the other group. The last clue never gives the answer. tools/check_clues.ts checks them.",
+  "clues": {
+    "np-b01": [
+      "Find both groups of the complete pair in the table: 1 11 15 21, then 21 27 35 37. Mark them.",
+      "The second group is the first one flipped left to right, like a mirror image.",
+      "Find 21 27 35 37 in the table and flip it left to right the same way. Which numbers do you land on?"
+    ],
+    "np-b02": [
+      "Find both groups of the complete pair in the table: 12 13 24 25, then 11 14 23 26. Mark them.",
+      "The second group has the same shape as the first, moved 4 columns right.",
+      "Find 11 14 23 26 in the table and move it 4 columns right too. Which numbers do you land on?"
+    ],
+    "np-b03": [
+      "These numbers are not in the table, but they are squares: 4 = 2², 9 = 3², 16 = 4², and 121 = 11², 100 = 10², 81 = 9².",
+      "In the table, 11 10 9 are just below 2 3 4. So the second group is the squares of the numbers below.",
+      "16 25 36 are 4² 5² 6². Find the numbers just below 4, 5 and 6, and square them. Which option is it?"
+    ],
+    "np-b04": [
+      "Find both groups of the complete pair in the table: 3 14 25, then 36 23 10. Mark them.",
+      "The second group is the first one flipped left to right, like a mirror image.",
+      "Find 36 23 10 in the table and flip it left to right the same way. Which numbers do you land on?"
+    ],
+    "np-b05": [
+      "Find both groups of the complete pair in the table: 6 18 30, then 7 19 31. Mark them.",
+      "The second group has the same shape as the first, moved 5 columns left.",
+      "Find 7 19 31 in the table and move it 5 columns left too. Which numbers do you land on?"
+    ],
+    "np-b06": [
+      "Find both groups of the complete pair in the table: 37 38 39, then 42 41 40. Mark them.",
+      "The second group has the same shape as the first, moved 1 row down.",
+      "Find 42 41 40 in the table and move it 1 row down too. Which numbers do you land on?"
+    ],
+    "np-b07": [
+      "Find both groups of the complete pair in the table: 6 18 30 29, then 8 9 10 22. Mark them.",
+      "The second group is the first one flipped left to right, like a mirror image.",
+      "Find 8 9 10 22 in the table and flip it left to right the same way. Which numbers do you land on?"
+    ],
+    "np-b08": [
+      "Find both groups of the complete pair in the table: 2 14 26 15 4, then 4 16 28 17 6. Mark them.",
+      "The second group has the same shape as the first, moved 4 rows down.",
+      "Find 4 16 28 17 6 in the table and move it 4 rows down too. Which numbers do you land on?"
+    ],
+    "np-b09": [
+      "Find both groups of the complete pair in the table: 24 11 22 9 20 7, then 19 8 21 10 23 12. Mark them.",
+      "The second group is the first one flipped top to bottom, like a mirror image.",
+      "Find 19 8 21 10 23 12 in the table and flip it top to bottom the same way. Which numbers do you land on?"
+    ],
+    "np-b10": [
+      "Find both groups of the complete pair in the table: 1 14 25 32 19, then 2 13 26 31 20. Mark them.",
+      "The second group has the same shape as the first, moved 2 rows down.",
+      "Find 2 13 26 31 20 in the table and move it 2 rows down too. Which numbers do you land on?"
+    ],
+    "np-b11": [
+      "Find both groups of the complete pair in the table: 13 26 33, then 33 20 7. Mark them.",
+      "The second group is the first one flipped top to bottom, like a mirror image.",
+      "Find 33 20 7 in the table and flip it top to bottom the same way. Which numbers do you land on?"
+    ],
+    "np-b12": [
+      "Find both groups of the complete pair in the table: 1 2 3, then 16 17 18. Mark them.",
+      "The second group has the same shape as the first, moved 2 columns right.",
+      "Find 16 17 18 in the table and move it 2 columns right too. Which numbers do you land on?"
+    ],
+    "np-b13": [
+      "Find both groups of the complete pair in the table: 7 31 13, then 8 32 14. Mark them.",
+      "The second group has the same shape as the first, moved 4 rows down.",
+      "Find 8 32 14 in the table and move it 4 rows down too. Which numbers do you land on?"
+    ],
+    "np-b14": [
+      "Find both groups of the complete pair in the table: 31 20 9, then 25 32 21. Mark them.",
+      "The second group has the same shape as the first, moved 2 columns left.",
+      "Find 25 32 21 in the table and move it 2 columns left too. Which numbers do you land on?"
+    ]
+  }
+}

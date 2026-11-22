@@ -1,0 +1,201 @@
+{
+  "topic": "letter-series",
+  "_note": "Step-by-step clues for Letter Series (Chapter 3): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to look at (the jumps between letters, each place in the groups on its own, or a block that repeats), shows the rule on the groups that are given, then sets up the missing letters without writing them. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "ls-b01": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. Find the jump from each letter to the next.",
+      "K → M is +2, M → P is +3, P → T is +4, T → Y is +5. The jumps grow by 1.",
+      "Next is Y + 6. After Z, carry on from A again: Y (25) + 6 = 31, and 31 − 26 = 5. Which letter is 5th?"
+    ],
+    "ls-b02": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: B, G, L, Q go forward 5. 2nd letters: Y, T, O, J go back 5.",
+      "So the next group is Q + 5 and J − 5. Which letters are they?"
+    ],
+    "ls-b03": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: C, D, E, F (+1). Middle letters: A, E, I, O, the vowels in order. Last letters: X, W, V, U (−1).",
+      "So the next group is F + 1, the vowel after O, then U − 1. Which option is it?"
+    ],
+    "ls-b04": [
+      "The letters jump about, so try two series taking turns: the 1st, 3rd, 5th… letters and the 2nd, 4th, 6th… letters.",
+      "Odd places: C, D, E, F, G. Even places: K, L, M, N. Each goes forward 1.",
+      "The 10th letter is in the even places and the 11th in the odd places. So they are N + 1 and G + 1. Which letters?"
+    ],
+    "ls-b05": [
+      "Look at the first letter of each group, then at the order inside one group.",
+      "The groups start E, H, K, N (+3). Inside a group: the 1st letter, then 2 on, then 1 on: E, G, F.",
+      "The next group starts at N + 3 = Q. Then Q + 2, then Q + 1. Which option is it?"
+    ],
+    "ls-b06": [
+      "Compare each word with the one before. Which letters have gone?",
+      "ENVIRONMENT → NVIRONMEN: the first letter E and the last letter T are dropped.",
+      "Drop the first and last letters of VIRONME. What is left?"
+    ],
+    "ls-b07": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. Find the jump from each letter to the next.",
+      "G → J → M → P → S: each jump is +3.",
+      "So the blanks are S + 3 and then 3 more. Which letters are they?"
+    ],
+    "ls-b08": [
+      "Each group is a letter, a number and a letter. Look at each part on its own.",
+      "1st letters: Z, X, V, T (−2). Numbers: 2, 4, 6, 8 (+2). Last letters: A, D, G, J (+3).",
+      "So the next group is T − 2, 8 + 2, J + 3. Which option is it?"
+    ],
+    "ls-b09": [
+      "Each group uses 4 letters in a row. Find which 4, then the order they are written in.",
+      "ACDB uses A B C D, written 1st, 3rd, 4th, 2nd. EGHF uses E F G H in the same order.",
+      "After IJKL come M N O P. Write them 1st, 3rd, 4th, 2nd. Which option is it?"
+    ],
+    "ls-b10": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: X, V, T, R go back 2. 2nd letters: C, E, G, I go forward 2.",
+      "So the next group is R − 2 and I + 2. Which letters are they?"
+    ],
+    "ls-b11": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. Find the jump from each letter to the next.",
+      "B → G → L → Q → V: each jump is +5.",
+      "Next is V + 5. After Z, carry on from A: V (22) + 5 = 27, and 27 − 26 = 1. Which letter is 1st?"
+    ],
+    "ls-b12": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: K, L, ?, N, O (+1). 2nd letters: F, E, ?, C, B (−1). 3rd letters: U, V, ?, X, Y (+1).",
+      "Which letter comes between L and N, between E and C, and between V and X?"
+    ],
+    "ls-b13": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. Find the jump from each letter to the next.",
+      "B → D +2, D → F +2, F → I +3, I → L +3, L → P +4. Each jump comes twice, then grows by 1.",
+      "The next jump is +4 again: P (16) + 4 = 20. Which letter is 20th?"
+    ],
+    "ls-b14": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: B, D, F, H go forward 2. 2nd letters: C, F, I, L go forward 3.",
+      "So the next group is H + 2 and L + 3. Which letters are they?"
+    ],
+    "ls-b15": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: B, D, F, H (+2). 2nd letters: D, G, J, M (+3). 3rd letters: F, K, P, U (+5).",
+      "So the next group is H + 2, M + 3, U + 5. Which option is it?"
+    ],
+    "ls-b16": [
+      "Each group is a number, a letter and a number. Look at each part on its own.",
+      "First numbers: 2, 4, 8, 16 (double). Letters: A, B, D, G (+1, +2, +3). Last numbers: 10, 12, 15, 19 (+2, +3, +4).",
+      "So the next group is 16 × 2, G + 4, 19 + 5. Which option is it?"
+    ],
+    "ls-b17": [
+      "Split each group into two pairs: VU | EF, TS | GH…",
+      "The first pairs count backwards: VU, TS, RQ, PO. The second pairs count forwards: EF, GH, IJ, KL.",
+      "What pair comes after PO going backwards, and after KL going forwards?"
+    ],
+    "ls-b18": [
+      "X, Y and Z stay the same in every group. Look only at the numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23.",
+      "They are the prime numbers in order.",
+      "What are the next three primes after 23? Check each option's numbers."
+    ],
+    "ls-b19": [
+      "Each group uses 3 letters in a row. Find which 3, then the order they are written in.",
+      "EFD uses D E F, written 2nd, 3rd, 1st. HIG uses G H I the same way. The groups start at D, G, J (+3).",
+      "The next 3 letters are M N O. Write them 2nd, 3rd, 1st. Which option is it?"
+    ],
+    "ls-b20": [
+      "B is in the middle of every group. Look only at the outside letters.",
+      "KBL, LBK: K and L, forwards then backwards. MBN, NBM: M and N, forwards then backwards.",
+      "The next pair of letters after M N is O P. Written forwards around B, which option is it?"
+    ],
+    "ls-b21": [
+      "Each letter has a number. Compare the number with the letter's place in the alphabet.",
+      "D is 4th, H is 8th, L is 12th, P is 16th. The letters jump by 4, and the number is the place.",
+      "The next letter is P + 4. Which letter is 20th?"
+    ],
+    "ka1920m-06": [
+      "Look for a short block of letters that repeats. Try splitting the series into groups of 3 or 4.",
+      "Try a block of 4: a ? d b | ? c d ? | a ?. The 1st block has a _ d b and the 2nd _ c d _, so the block is a c d b.",
+      "Write the block again and again under the series. Which letters fall in the boxes?"
+    ],
+    "ka1920m-07": [
+      "The letters don't come in equal blocks. Count how many times each letter is written.",
+      "Each letter is written one more time than the one before: l twice, m three times, n four times.",
+      "Write l l | m m m | n n n n under the series. Which letters fall in the boxes?"
+    ],
+    "ka1920m-08": [
+      "Split the series into groups of four: p q ? r | q r p ? | ? p q ?",
+      "Each group is p q r in turn, starting one letter later each time, with its last letter doubled: p q r r, then q r p p.",
+      "The 3rd group starts with r. Write all three groups. Which letters fall in the boxes?"
+    ],
+    "ka21m-06": [
+      "Look for a block of letters that repeats. Try splitting the series into two halves of 6.",
+      "a ? b b ? a | a ? b ? c a. Put the two halves together: the block is a c b b c a.",
+      "Write the block again and again under the series. Which letters fall in the boxes?"
+    ],
+    "ka21m-07": [
+      "Split the series into groups of four: p q ? s | ? r s ? | r s ? q",
+      "Each group uses p q r s in order, starting one letter later each time: p q r s, then q r s p.",
+      "The 3rd group starts with r. Write all three groups. Which letters fall in the boxes?"
+    ],
+    "ka21m-08": [
+      "Look for a short block of letters that repeats. Try splitting the series into groups of 3 or 4.",
+      "Try a block of 4: y x ? y | y ? x ? | ? x. The block is y x x y.",
+      "Write the block again and again under the series. Which letters fall in the boxes?"
+    ],
+    "ka23m-72": [
+      "Split the series into groups of three: l m ? | n ? o | ? q q | r ? s",
+      "In each group a letter is followed by the next letter written twice: p q q.",
+      "Write l m m | n o o | p q q | r s s under the series. Which letters fall in the boxes?"
+    ],
+    "ka23m-73": [
+      "Split the series into groups of three: a b ? | b ? a | ? c c | c ? a",
+      "The groups pair up: a b b with its reverse b b a, then a c c with its reverse c c a.",
+      "Write a b b | b b a | a c c | c c a under the series. Which letters fall in the boxes?"
+    ],
+    "ka23m-74": [
+      "Split the series into pairs: a ? | a ? | a c | ? d | ? e",
+      "Every pair starts with a, and the second letters go a, b, c, d, e.",
+      "Write a a | a b | a c | a d | a e under the series. Which letters fall in the boxes?"
+    ],
+    "ka2324m-63": [
+      "Each group has one more letter than the one before. Look at the letters skipped between groups.",
+      "D (E F) GH (I J) KLM (N O) PQRS: two letters are skipped each time.",
+      "After S, skip two letters, then write five in a row. Which option is it?"
+    ],
+    "ka2324m-64": [
+      "Each group is a letter, a number and a letter. Look at each part on its own.",
+      "First letters: A, D, H, M (+3, +4, +5). Numbers: 3, 10, 17, 24 (+7). Last letters: Y, U, R, P (−4, −3, −2).",
+      "So the next group is M + 6, 24 + 7, P − 1. Which option is it?"
+    ],
+    "ka2324m-65": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: A, C, ?, J, O (+2, +3, +4, +5). 2nd letters: M, P, ?, V, Y (+3). 3rd letters: W, S, ?, N, M (−4, −3, −2, −1).",
+      "So the missing group is C + 3, P + 3, S − 3. Which option is it?"
+    ],
+    "ka2425m-14": [
+      "Each group is a letter, a number and a letter. Look at each part on its own.",
+      "First letters: B, E, H, K (+3). Numbers: 16, 11, 7, 4 (−5, −4, −3). Last letters: T, R, P, N (−2).",
+      "So the next group is K + 3, 4 − 2, N − 2. Which option is it?"
+    ],
+    "ka2425m-15": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: D, G, ?, M, P (+3). Middle letters: V, T, ?, P, N (−2). Last letters: D, G, ?, P, V (+3, +4, +5, +6).",
+      "So the missing group is G + 3, T − 2, G + 4. Which option is it?"
+    ],
+    "ka2425m-16": [
+      "The groups go backwards through the alphabet from Y, and each has one more letter. Look at the letters skipped between groups.",
+      "Y | XW | (V) UTS | (R Q) PONM: 0, 1, 2 letters skipped. Next, 3 are skipped.",
+      "After M, skip L, K and J, then write five letters backwards. Which option is it?"
+    ],
+    "ka2526m-76": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "1st letters: B, D, F, H (+2). 2nd letters: C, E, G, I (+2). 3rd letters: E, I, M, Q (+4).",
+      "So the next group is H + 2, I + 2, Q + 4. Which option is it?"
+    ],
+    "ka2526m-77": [
+      "Look at each place in the groups on its own: all the 1st letters, then all the 2nd letters, and so on.",
+      "Every place goes forward 3: A, D, G, J; O, R, U, X; C, F, I, L.",
+      "So the next group is J + 3, X + 3, L + 3. For X + 3, go past Z and on from A. Which option is it?"
+    ],
+    "ka2526m-78": [
+      "Write the alphabet with each letter's place: A 1, B 2, … Z 26. Find the jump from each letter to the next.",
+      "B = 2, E = 5, K = 11, Q = 17. The jumps +3, +6, +6 don't make a clear rule, but 2, 5, 11, 17 are all prime numbers.",
+      "They are every other prime: 2, (3), 5, (7), 11, (13), 17. Skip the next prime, 19. Which prime comes after it, and which letter is in that place?"
+    ]
+  }
+}

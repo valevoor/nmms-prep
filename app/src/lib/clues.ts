@@ -18,6 +18,48 @@ import type { Question } from '../types'
 import { useShowBoth } from './i18n/both'
 import { otherLocale } from './i18n/content'
 import { useLocale } from './i18n/locale'
+import numberSeriesClues from '../data/clues/number-series.json'
+import numberSeriesCluesKn from '../data/clues/number-series.kn.json'
+import numberAnalogyClues from '../data/clues/number-analogy.json'
+import numberAnalogyCluesKn from '../data/clues/number-analogy.kn.json'
+import numberSequenceClues from '../data/clues/number-sequence.json'
+import numberSequenceCluesKn from '../data/clues/number-sequence.kn.json'
+import wrongNumberClues from '../data/clues/wrong-number.json'
+import wrongNumberCluesKn from '../data/clues/wrong-number.kn.json'
+import oddOneNumbersClues from '../data/clues/odd-one-numbers.json'
+import oddOneNumbersCluesKn from '../data/clues/odd-one-numbers.kn.json'
+import letterSeriesClues from '../data/clues/letter-series.json'
+import letterSeriesCluesKn from '../data/clues/letter-series.kn.json'
+import oddOneLettersClues from '../data/clues/odd-one-letters.json'
+import oddOneLettersCluesKn from '../data/clues/odd-one-letters.kn.json'
+import letterNumberAnalogyClues from '../data/clues/letter-number-analogy.json'
+import letterNumberAnalogyCluesKn from '../data/clues/letter-number-analogy.kn.json'
+import numberPatternsClues from '../data/clues/number-patterns.json'
+import numberPatternsCluesKn from '../data/clues/number-patterns.kn.json'
+import codingDecodingClues from '../data/clues/coding-decoding.json'
+import codingDecodingCluesKn from '../data/clues/coding-decoding.kn.json'
+import directionsClues from '../data/clues/directions.json'
+import directionsCluesKn from '../data/clues/directions.kn.json'
+import bloodRelationsClues from '../data/clues/blood-relations.json'
+import bloodRelationsCluesKn from '../data/clues/blood-relations.kn.json'
+import calendarClues from '../data/clues/calendar.json'
+import calendarCluesKn from '../data/clues/calendar.kn.json'
+import clockClues from '../data/clues/clock.json'
+import clockCluesKn from '../data/clues/clock.kn.json'
+import vennDiagramsClues from '../data/clues/venn-diagrams.json'
+import vennDiagramsCluesKn from '../data/clues/venn-diagrams.kn.json'
+import arrangementClues from '../data/clues/arrangement.json'
+import arrangementCluesKn from '../data/clues/arrangement.kn.json'
+import statementsDecisionsClues from '../data/clues/statements-decisions.json'
+import statementsDecisionsCluesKn from '../data/clues/statements-decisions.kn.json'
+import cubesColouringClues from '../data/clues/cubes-colouring.json'
+import cubesColouringCluesKn from '../data/clues/cubes-colouring.kn.json'
+import cubesCuttingClues from '../data/clues/cubes-cutting.json'
+import cubesCuttingCluesKn from '../data/clues/cubes-cutting.kn.json'
+import diceClues from '../data/clues/dice.json'
+import diceCluesKn from '../data/clues/dice.kn.json'
+import countingFiguresClues from '../data/clues/counting-figures.json'
+import countingFiguresCluesKn from '../data/clues/counting-figures.kn.json'
 import type { Locale } from './i18n/locale'
 
 /**
@@ -34,6 +76,27 @@ export const CLUE_FILES: { topic: string; en: Record<string, string[]>; kn: Reco
   { topic: lmClues.topic, en: lmClues.clues, kn: lmCluesKn.clues },
   { topic: lvClues.topic, en: lvClues.clues, kn: lvCluesKn.clues },
   { topic: pyClues.topic, en: pyClues.clues, kn: pyCluesKn.clues },
+  { topic: numberSeriesClues.topic, en: numberSeriesClues.clues, kn: numberSeriesCluesKn.clues },
+  { topic: numberAnalogyClues.topic, en: numberAnalogyClues.clues, kn: numberAnalogyCluesKn.clues },
+  { topic: numberSequenceClues.topic, en: numberSequenceClues.clues, kn: numberSequenceCluesKn.clues },
+  { topic: wrongNumberClues.topic, en: wrongNumberClues.clues, kn: wrongNumberCluesKn.clues },
+  { topic: oddOneNumbersClues.topic, en: oddOneNumbersClues.clues, kn: oddOneNumbersCluesKn.clues },
+  { topic: letterSeriesClues.topic, en: letterSeriesClues.clues, kn: letterSeriesCluesKn.clues },
+  { topic: oddOneLettersClues.topic, en: oddOneLettersClues.clues, kn: oddOneLettersCluesKn.clues },
+  { topic: letterNumberAnalogyClues.topic, en: letterNumberAnalogyClues.clues, kn: letterNumberAnalogyCluesKn.clues },
+  { topic: numberPatternsClues.topic, en: numberPatternsClues.clues, kn: numberPatternsCluesKn.clues },
+  { topic: codingDecodingClues.topic, en: codingDecodingClues.clues, kn: codingDecodingCluesKn.clues },
+  { topic: directionsClues.topic, en: directionsClues.clues, kn: directionsCluesKn.clues },
+  { topic: bloodRelationsClues.topic, en: bloodRelationsClues.clues, kn: bloodRelationsCluesKn.clues },
+  { topic: calendarClues.topic, en: calendarClues.clues, kn: calendarCluesKn.clues },
+  { topic: clockClues.topic, en: clockClues.clues, kn: clockCluesKn.clues },
+  { topic: vennDiagramsClues.topic, en: vennDiagramsClues.clues, kn: vennDiagramsCluesKn.clues },
+  { topic: arrangementClues.topic, en: arrangementClues.clues, kn: arrangementCluesKn.clues },
+  { topic: statementsDecisionsClues.topic, en: statementsDecisionsClues.clues, kn: statementsDecisionsCluesKn.clues },
+  { topic: cubesColouringClues.topic, en: cubesColouringClues.clues, kn: cubesColouringCluesKn.clues },
+  { topic: cubesCuttingClues.topic, en: cubesCuttingClues.clues, kn: cubesCuttingCluesKn.clues },
+  { topic: diceClues.topic, en: diceClues.clues, kn: diceCluesKn.clues },
+  { topic: countingFiguresClues.topic, en: countingFiguresClues.clues, kn: countingFiguresCluesKn.clues },
 ]
 
 const CLUES: Record<Locale, Record<string, string[]>> = {

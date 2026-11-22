@@ -1,0 +1,30 @@
+{
+  "topic": "arrangement",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: one rank rule (from the last, or the total); 2: a rank found in two steps, a row of five, or people put in order of height; 3: a circle of five or six to build from three clues, digits or letters sorted and compared, or a rule checked against a number; 4: two facing rows of six from many clues, or a number built digit by digit from clues. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "ar-b01": 1,
+    "ar-b02": 1,
+    "ar-b03": 1,
+    "ar-b04": 2,
+    "ar-b05": 3,
+    "ar-b06": 3,
+    "ar-b07": 2,
+    "ar-b08": 2,
+    "ar-b12": 3,
+    "ar-b13": 4,
+    "ar-b14": 4,
+    "ar-b15": 4,
+    "ka23m-50": 3,
+    "ka23m-51": 3,
+    "ka23m-52": 3,
+    "ka2324m-86": 2,
+    "ka2324m-87": 3,
+    "ka2324m-88": 3,
+    "ka2425m-86": 2,
+    "ka2425m-87": 3,
+    "ka2425m-88": 3,
+    "ka2526m-67": 3,
+    "ka2526m-68": 3,
+    "ka2526m-69": 3
+  }
+}

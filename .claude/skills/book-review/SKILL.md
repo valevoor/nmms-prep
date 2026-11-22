@@ -1,6 +1,6 @@
 ---
 name: book-review
-description: Check the answers in a question source (a study book such as NMMS.pdf, or a past question paper in pyq/) and produce an errata report for its authors or publisher, as a web page and an A4 PDF. Use when the user asks to fact-check or verify a book or paper, find wrong answer keys, misprints or questions with no single answer, write up such findings for the people who made it, or refresh or re-send an earlier report.
+description: Check the answers in a question source (a study book such as NMMS.pdf, or a past question paper in question-papers/pyq/) and produce an errata report for its authors or publisher, as a web page and an A4 PDF. Use when the user asks to fact-check or verify a book or paper, find wrong answer keys, misprints or questions with no single answer, write up such findings for the people who made it, or refresh or re-send an earlier report.
 ---
 
 # Book review

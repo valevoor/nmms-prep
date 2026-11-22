@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { PAPER_FILES, paperQuestions } from '../data/papers'
+import { modelQuestions, PAPER_FILES, paperQuestions } from '../data/papers'
 import { SAT_TOPICS, SECTION_SUBJECT, satSolved } from '../data/sat'
 import { READY_TOPICS, getTopic } from '../data/topics'
 import { answerOf, available, buildMock, byChapter, byTest, chapterShares, mockSeconds, newMock, satRef, scoreMock, shares, slowestChapter } from './mock'
@@ -82,7 +82,7 @@ describe('MAT', () => {
   })
 
   it('never asks a generated question', () => {
-    const ids = new Set(READY_TOPICS.flatMap((t) => [...t.questions, ...paperQuestions(t.id)].map((q) => q.id)))
+    const ids = new Set(READY_TOPICS.flatMap((t) => [...t.questions, ...paperQuestions(t.id), ...modelQuestions(t.id)].map((q) => q.id)))
     for (const seed of [1, 2, 3]) for (const x of buildMock({ tests: ['mat'], length: 90 }, seeded(seed))) expect(ids.has(x.q!.id)).toBe(true)
   })
 

@@ -1,0 +1,230 @@
+{
+  "topic": "coding-decoding",
+  "_note": "Step-by-step clues for Coding and Decoding (Chapter 6): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to compare (each letter with its code letter, the letters' places in the alphabet, or words in a table that share a letter), shows the rule on the example, then sets up the same steps on the new word. The last clue never gives the code. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "cd-b01": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "H → I +1, O → Q +2, M → P +3, E → I +4: each letter moves one more than the one before.",
+      "Do the same to STEM: S + 1, T + 2, E + 3, M + 4. Which option is it?"
+    ],
+    "cd-b02": [
+      "PHOBN has the letters of MANGO's code backwards. Read it from the end: N B O H P.",
+      "M → N, A → B, N → O, G → H, O → P: each letter moves 1 forward, then the code is written backwards.",
+      "Undo it for NFFO: write it backwards, then move each letter 1 back. Which word do you get?"
+    ],
+    "cd-b03": [
+      "Write each letter of BENGALURU above its code letter. B → Y, E → V, A → Z: is there a link with the ends of the alphabet?",
+      "Each letter swaps with its opposite: A ↔ Z, B ↔ Y, C ↔ X… The two places always add up to 27.",
+      "Swap each letter of SHIMOGA: S (19) ↔ 27 − 19 = 8th letter, and so on. Which option is it?"
+    ],
+    "cd-b04": [
+      "TWENTY and WTNEYT use the same letters. Split them into pairs: TW EN TY and WT NE YT.",
+      "Each pair of letters swaps places: TW → WT, EN → NE, TY → YT.",
+      "Do the same to THIRTY: TH → HT, IR → ?, TY → ?. Which option is it?"
+    ],
+    "cd-b05": [
+      "MONKEY and YEKNOM use the same letters. Read YEKNOM from the end.",
+      "Read backwards, YEKNOM is MONKEY: the code is the word written backwards.",
+      "Read REGIT backwards. Which word is it?"
+    ],
+    "cd-b06": [
+      "The code is all digits. Compare it with the places of the letters: A 1, B 2, … Z 26.",
+      "T = 20, I = 9, T = 20, A = 1, N = 14: 20 9 20 1 14. Each letter is written as its place.",
+      "Write the places of W, O, R, D one after another. Which option is it?"
+    ],
+    "cd-b07": [
+      "POTATO → 16 15 TA 20 15. Which letters became numbers, and which stayed?",
+      "P = 16, O = 15, T = 20, O = 15: the first two and last two letters become their places. The middle two, T A, stay as letters.",
+      "Do the same to TOMATO: T O → places, M A → stay, T O → places. Which option is it?"
+    ],
+    "cd-b08": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "B → E, U → X, N → Q: every letter moves 3 forward.",
+      "Do the same to MOTHER: each letter + 3. Which option is it?"
+    ],
+    "cd-b09": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 3. So N = 3.",
+      "Go on the same way: P = 2, I = 4, T = 1. Then A = 7, B = 6 and E = 5 are what is left.",
+      "Now write the code for each letter of BEAN, in order. Which option is it?"
+    ],
+    "cd-b10": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 3. So N = 3.",
+      "Go on the same way: P = 2, I = 4, T = 1. Then A = 7, B = 6 and E = 5 are what is left.",
+      "Now write the code for each letter of PAINT, in order. Which option is it?"
+    ],
+    "cd-b11": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 3. So N = 3.",
+      "Go on the same way: P = 2, I = 4, T = 1. Then A = 7, B = 6 and E = 5 are what is left.",
+      "Now write the code for each letter of TAB, in order. Which option is it?"
+    ],
+    "cd-b12": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "MIN and PIT share only I, and their codes share only 3. So I = 3. In the same way N = 5, M = 1, T = 2, P = 8, E = 7.",
+      "A and B are 9 and 4, in some order. MEAN starts 1 7 and ends 5.",
+      "Which option is 1 7 _ 5, with 9 or 4 in the gap?"
+    ],
+    "cd-b13": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "MIN and PIT share only I, and their codes share only 3. So I = 3. In the same way N = 5, M = 1, T = 2, P = 8, E = 7.",
+      "From the MEAN question, A = 9, so B = 4. BEATER is B E A T E R.",
+      "Write B, E, A, T, E: 4 7 9 2 7. Which option starts like that?"
+    ],
+    "ka1920m-60": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "P → U +5, A → E +4, L → O +3, M → O +2: the moves go 5, 4, 3, 2.",
+      "Do the same to YEAR: Y + 5 (after Z, go on from A), E + 4, A + 3, R + 2. Which option is it?"
+    ],
+    "ka1920m-61": [
+      "Write each word above its code: E A R T H over 4 1 5 9 0, and P A C E over 2 1 3 4.",
+      "Each letter has its own digit: E = 4, A = 1, R = 5, T = 9, H = 0, P = 2, C = 3.",
+      "Now write the code for each letter of PEACH, in order. Which option is it?"
+    ],
+    "ka1920m-62": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "F → D −2, O → P +1, R → P −2, G → H +1: back 2 and forward 1 take turns.",
+      "Do the same to REQUEST: R − 2, E + 1, Q − 2, U + 1…. Which option is it?"
+    ],
+    "ka1920m-63": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "K → N, O → R, D → G: every letter moves 3 forward.",
+      "Do the same to TIPTUR: each letter + 3. Which option is it?"
+    ],
+    "ka1920m-64": [
+      "The code is a single number. Add up the places of the letters (A 1, B 2, … Z 26) and compare with it.",
+      "T + A + G = 20 + 1 + 7 = 28, and 28 × 4 = 112. Add the places, then multiply by 4.",
+      "P + E + N = 16 + 5 + 14. Multiply that by 4: which option is it?"
+    ],
+    "ka21m-53": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "F is in FRUIT, FUN and FOX, and only x is in all three codes. So F = x. Find U, N, R, I, O… the same way.",
+      "In the same way A = n, I = p and R = c.",
+      "Now write the code for each letter of AIR, in order. Which option is it?"
+    ],
+    "ka21m-54": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "F is in FRUIT, FUN and FOX, and only x is in all three codes. So F = x. Find U, N, R, I, O… the same way.",
+      "In the same way L = o, I = p, S = k and T = s.",
+      "Now write the code for each letter of LIST, in order. Which option is it?"
+    ],
+    "ka21m-55": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "F is in FRUIT, FUN and FOX, and only x is in all three codes. So F = x. Find U, N, R, I, O… the same way.",
+      "In the same way O = y, S = k, E = j. B is in UMBRELLA only, so it is f or d.",
+      "Write the code for B, O, S, E. Which option fits, with f or d for B?"
+    ],
+    "ka21m-56": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "F is in FRUIT, FUN and FOX, and only x is in all three codes. So F = x. Find U, N, R, I, O… the same way.",
+      "In the same way U = m, R = c, N = z. B is f or d (from UMBRELLA).",
+      "Write the code for B, U, R, N. Which option fits?"
+    ],
+    "ka21m-57": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "M → P +3, A → E +4, C → F +3, H → L +4: +3 and +4 take turns.",
+      "Do the same to PICTURE: P + 3, I + 4, C + 3, T + 4…. Which option is it?"
+    ],
+    "ka21m-58": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "M → N +1, A → Z −1, S → U +2, T → R −2, E → H +3, R → O −3.",
+      "Do the same to PERSON: P + 1, E − 1, R + 2, S − 2, O + 3, N − 3. Which option is it?"
+    ],
+    "ka21m-59": [
+      "Compare TABLE with DKAZS. Try writing TABLE backwards first: ELBAT.",
+      "E → D, L → K, B → A, A → Z, T → S: each letter of the backwards word moves 1 back.",
+      "CHAIR backwards is RIAHC. Move each letter 1 back. Which option is it?"
+    ],
+    "ka21m-60": [
+      "The code 1920921186 is all digits. It starts with 19 and ends with 6: S is 19th and F is 6th.",
+      "S 19, T 20, I 9, U 21, R 18, F 6: the word is written backwards, each letter as its place.",
+      "PIGEON backwards is N O E G I P. Write their places one after another. Which option is it?"
+    ],
+    "ka21m-61": [
+      "The code is a single number. Add up the places of the letters (A 1, B 2, … Z 26) and compare with it.",
+      "L + I + O + N = 12 + 9 + 15 + 14 = 50, and 50 × 3 = 150. Add the places, then multiply by 3.",
+      "G + O + A + T = 7 + 15 + 1 + 20. Multiply that by 3: which option is it?"
+    ],
+    "ka21m-62": [
+      "First find the day: the third day after Monday. Count Tuesday, Wednesday, …",
+      "Letters in odd places (A 1, C 3, E 5…) are capitals, and letters in even places (B 2, D 4…) are small.",
+      "Write the day, checking each letter's place: T is 20th, so small. Which option is it?"
+    ],
+    "ka23m-29": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "T → V +2, E → H +3, M → Q +4, then P → N −2, L → I −3, E → A −4.",
+      "Do the same to CHURCH: C + 2, H + 3, U + 4, R − 2, C − 3, H − 4. Which option is it?"
+    ],
+    "ka23m-30": [
+      "COMPUTER has 8 letters and so does its code. Write COMPUTER backwards: RETUPMOC.",
+      "RETUPMOC → RFUVQNPC: the first and last letters stay, and each letter in between moves 1 forward.",
+      "STUDENTS backwards is STNEDUTS. Keep the ends and move the middle letters 1 forward. Which option is it?"
+    ],
+    "ka23m-31": [
+      "The codes are small numbers. Count the letters in each word.",
+      "DRIVER has 6 letters and its code is 12. SMILE has 5 and its code is 10. The code is twice the number of letters.",
+      "How many letters has CAR? Double it: which option is it?"
+    ],
+    "ka2324m-42": [
+      "The code is a single number. Add up the places of the letters (A 1, B 2, … Z 26) and compare with it.",
+      "CLOCK = 3 + 12 + 15 + 3 + 11 = 44, and 44 × 5 = 220. Add the places, then multiply by 5.",
+      "WATCH = 23 + 1 + 20 + 3 + 8. Multiply that by 5: which option is it?"
+    ],
+    "ka2324m-43": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "L → N +2, I → G −2, G → J +3, H → E −3, T → X +4.",
+      "Do the same to SOUND: S + 2, O − 2, U + 3, N − 3, D + 4. Which option is it?"
+    ],
+    "ka2324m-44": [
+      "Write each word above its code: E A R T H over 1 2 3 4 5, and S A T U R N over 6 2 4 7 3 8.",
+      "Each letter keeps its own digit: E 1, A 2, R 3, T 4, H 5, S 6, U 7, N 8.",
+      "Now write the code for each letter of URANUS, in order. Which option is it?"
+    ],
+    "ka2425m-20": [
+      "HORSE has 5 letters and its code has 10, so each letter becomes two letters: GI PN QS TR DF.",
+      "H → GI (before, after), O → PN (after, before), R → QS (before, after): the two neighbours, with their order taking turns.",
+      "Do the same to TIGER: T → SU, I → after then before… Which option is it?"
+    ],
+    "ka2425m-21": [
+      "Each letter has one digit. Compare it with the letter's place: M is 13th and its digit is 4.",
+      "M = 13 → 1 + 3 = 4, O = 15 → 6, N = 14 → 5, K = 11 → 2: add the digits of the place.",
+      "R = 18, U = 21, S = 19, T = 20. Add the digits of each (if you get 10, add again). Which option is it?"
+    ],
+    "ka2425m-22": [
+      "Write each word above its code: B R A Z I L over 6 5 4 3 2 1, and C A N A D A over 7 4 8 4 9 4.",
+      "Each letter has its own digit: I 2, A 4, C 7, N 8, D 9.",
+      "Now write the code for each letter of INDIA, in order. Which option is it?"
+    ],
+    "ka2526m-49": [
+      "The code starts with 20 and ends with 16: T is 20th and P is 16th. Write PRESIDENT backwards: TNEDISERP.",
+      "Odd places (T, E, I, E, P) become their place numbers. Even places become their opposite letters (N ↔ M, D ↔ W, S ↔ H, R ↔ I).",
+      "MINISTERS backwards is SRETSINIM. Do the same to it. Which option is it?"
+    ],
+    "ka2526m-50": [
+      "The code is a single number. Add up the places of the letters (A 1, B 2, … Z 26) and compare with it.",
+      "CARBON = 3 + 1 + 18 + 2 + 15 + 14 = 53, and 53 × 4 = 212. Add the places, then multiply by 4.",
+      "OXYGEN = 15 + 24 + 25 + 7 + 5 + 14. Multiply that by 4: which option is it?"
+    ],
+    "ka2526m-51": [
+      "Write each letter of the word above its code letter. How far does each letter move in the alphabet? (A 1, B 2, … Z 26.)",
+      "F → D −2, R → O −3, U → Q −4, then I → K +2, T → W +3, S → W +4.",
+      "Do the same to GRAPES: G − 2, R − 3, A − 4, P + 2, E + 3, S + 4. Which option is it?"
+    ],
+    "ka2526m-73": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 4. So N = 4. In the same way P = 5, A = 9, I = 7, B = 6, T = 8, E = 3.",
+      "Now write the code for each letter of BAT, in order. Which option is it?"
+    ],
+    "ka2526m-74": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 4. So N = 4. In the same way P = 5, A = 9, I = 7, B = 6, T = 8, E = 3.",
+      "Now write the code for each letter of NEAT, in order. Which option is it?"
+    ],
+    "ka2526m-75": [
+      "Compare two words in the table that share just one letter. Their codes share just one symbol: that symbol is the shared letter's code.",
+      "PAN and NIB share only N, and their codes share only 4. So N = 4. In the same way P = 5, A = 9, I = 7, B = 6, T = 8, E = 3.",
+      "Now write the code for each letter of PAINT, in order. Which option is it?"
+    ]
+  }
+}

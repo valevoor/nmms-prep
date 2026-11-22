@@ -1,0 +1,21 @@
+{
+  "topic": "cubes-colouring",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: the corners (always 8) or the number of small cubes (n³); 2: cubes with two faces painted (on the edges) or none (inside); 3: cubes with one face painted, or only one colour (the middle of a face); 4: cubes with two or three particular colours, which first needs the faces to be next to each other or opposite. Practice and Classroom ask the questions in this order (lib/levels.ts). tools/check_levels.ts checks them.",
+  "levels": {
+    "col-b01": 1,
+    "col-b02": 2,
+    "col-b03": 3,
+    "col-b04": 2,
+    "col-b05": 4,
+    "col-b06": 4,
+    "col-b07": 4,
+    "col-b08": 1,
+    "col-b09": 2,
+    "col-b10": 2,
+    "col-b11": 3,
+    "col-b12": 4,
+    "col-b13": 2,
+    "col-b14": 3,
+    "col-b15": 4
+  }
+}

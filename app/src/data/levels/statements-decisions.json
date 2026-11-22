@@ -1,0 +1,32 @@
+{
+  "topic": "statements-decisions",
+  "_note": "How hard each question is, 1 (easy) to 4 (hardest). 1: two 'all' statements in a chain; 2: an 'all' and a 'some', where a decision only turns a statement round; 3: 'some' statements chained, or 'no' mixed with 'all'; 4: three statements or three decisions, or a statement with 'most'. Practice and Classroom ask the questions in this order (lib/levels.ts). Questions marked needs-review have none. tools/check_levels.ts checks them.",
+  "levels": {
+    "sd-b01": 1,
+    "sd-b02": 2,
+    "sd-b03": 3,
+    "sd-b04": 2,
+    "sd-b05": 3,
+    "sd-b06": 4,
+    "sd-b07": 2,
+    "sd-b08": 4,
+    "sd-b09": 3,
+    "sd-b10": 4,
+    "sd-b11": 3,
+    "sd-b12": 2,
+    "sd-b13": 2,
+    "sd-b14": 2,
+    "sd-b15": 3,
+    "ka21m-89": 2,
+    "ka23m-81": 1,
+    "ka23m-82": 2,
+    "ka2324m-84": 1,
+    "ka2324m-85": 2,
+    "ka2425m-89": 2,
+    "ka2425m-90": 3,
+    "ka2526m-13": 1,
+    "ka2526m-14": 4,
+    "ka2526m-15": 2,
+    "ka21m-90": 4
+  }
+}

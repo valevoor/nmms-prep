@@ -1,6 +1,6 @@
 // Dumps a PDF's text with the runs in the Nudi font (Kannada; PDFKit reports it as Helvetica) wrapped in
 // ⟦ ⟧, for tools/nudi.ts to convert. Used for the Karnataka papers whose Kannada is real text (macOS only).
-// Run from the project root:  swift tools/extract_nudi.swift "pyq/<paper>.pdf" > marked.txt
+// Run from the project root:  swift tools/extract_nudi.swift "question-papers/pyq/<paper>.pdf" > marked.txt
 import PDFKit
 import AppKit
 let d = PDFDocument(url: URL(fileURLWithPath: CommandLine.arguments[1]))!

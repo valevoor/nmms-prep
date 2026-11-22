@@ -1,0 +1,146 @@
+{
+  "topic": "number-analogy",
+  "_note": "Step-by-step clues for Number Analogy (Chapter 2): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to try on the complete pair (divide, square, cube, the digits), shows the rule that turns its first number into its second, then sets up the same step on the other pair. The last clue never gives the answer. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "na-b01": [
+      "Look at the complete pair first, 28 : 4. What do you do to 28 to get 4?",
+      "28 is much bigger than 4, so try dividing: 28 ÷ 7 = 4.",
+      "Do the same to 504: 504 ÷ 7 = ?"
+    ],
+    "na-b02": [
+      "Look at the complete pair first, 56 : 121. What do you do to 56 to get 121?",
+      "121 is a square: 11². And 5 + 6 = 11. So add the two digits, then square the sum.",
+      "For 75: 7 + 5 = 12. What is 12²?"
+    ],
+    "na-b03": [
+      "Look at the complete pair first, 32 : 2. How is 32 made from 2?",
+      "2 × 2 × 2 × 2 × 2 = 32: the first number is the second to the power 5, 2⁵.",
+      "Here the second number is 3, so the first is 3⁵ = 3 × 3 × 3 × 3 × 3 = ?"
+    ],
+    "na-b04": [
+      "Look at the complete pair first, 23 : 51. What do you do to 23 to get 51?",
+      "51 is a little more than double 23 (46). The extra is 5, which is 2 + 3, the sum of the digits.",
+      "For 37: double it and add its digits, 37 × 2 + (3 + 7) = 74 + 10 = ?"
+    ],
+    "na-b05": [
+      "Look at the complete pair first, 12 : 156. What do you do to 12 to get 156?",
+      "12² = 144, and 144 + 12 = 156. The second number is n² + n.",
+      "Now work backwards: which number n gives n² + n = 210? Try the options: is it near √210, a bit less than 15?"
+    ],
+    "na-b06": [
+      "Look at the complete pair first, 8 : 256. What do you do to 8 to get 256?",
+      "8³ = 512, and 512 ÷ 2 = 256. Cube the number, then halve it.",
+      "12³ = 1728. Half of 1728 = ?"
+    ],
+    "na-b07": [
+      "Look at the complete pair first, 5 : 150. What do you do to 5 to get 150?",
+      "5³ = 125, and 150 − 125 = 25 = 5². The second number is n³ + n².",
+      "For 7: 7³ + 7² = 343 + 49 = ?"
+    ],
+    "na-b08": [
+      "The numbers are big, with no easy sum between them. Add the digits of each number instead.",
+      "2 + 7 + 8 + 3 = 20 and 3 + 1 + 4 + 2 = 10. The second number's digits add up to half of the first's.",
+      "4 + 5 + 6 + 5 = 20, so the answer's digits must add up to 10. Which option's digits do?"
+    ],
+    "na-b09": [
+      "Look at the complete pair first, 625 : 7. What do you do to 625 to get 7?",
+      "625 is a square: √625 = 25. And 2 + 5 = 7. Take the square root, then add its digits.",
+      "√576 = 24. What do its digits add up to?"
+    ],
+    "na-b10": [
+      "18 : 50 doesn't turn one into the other by an easy step. Look at each number on its own: divide each by 2.",
+      "18 ÷ 2 = 9 = 3², 50 ÷ 2 = 25 = 5², 98 ÷ 2 = 49 = 7². Each is 2 × the square of an odd number: 3, 5, 7…",
+      "The next odd number is 9: 2 × 9² = 2 × 81 = ?"
+    ],
+    "na-b11": [
+      "Look at the complete pair first, 41 : 9. What do you do to 41 to get 9?",
+      "9 = 3², and 4 − 1 = 3. Take the smaller digit from the bigger, then square.",
+      "For 85: (8 − 5)² = ?"
+    ],
+    "na-b12": [
+      "Look at the complete pair first, 169 : 39. What do you do to 169 to get 39?",
+      "169 = 13², and 39 = 13 × 3. Both come from 13: the first is its square, the second is 3 times it.",
+      "48 = 16 × 3, so the missing number is the square of 16. What is 16²?"
+    ],
+    "na-b13": [
+      "Look at the complete pair first, 250 : 10. What do you do to 250 to get 10?",
+      "Halve both: 125 and 5. 125 = 5³. So the first is n³ × 2 and the second is n × 2, with n = 5.",
+      "128 ÷ 2 = 64 = 4³, so n = 4. The answer is 4 × 2 = ?"
+    ],
+    "na-b14": [
+      "Look at the complete pair first, 7 : 329. What do you do to 7 to get 329?",
+      "7³ = 343, and 343 − 329 = 14 = 7 × 2. The second number is n³ − 2n.",
+      "For 9: 9³ − 9 × 2 = 729 − 18 = ?"
+    ],
+    "na-b15": [
+      "Look at the complete pair first, 24 : 13. What do you do to 24 to get 13?",
+      "Half of 24 is 12, and 12 + 1 = 13. Halve the number, then add 1.",
+      "Now work backwards from 29: take away 1, then double. 29 − 1 = 28, and 28 × 2 = ?"
+    ],
+    "ka1920m-26": [
+      "Look at the complete pair first, 120 : 145. What do you do to 120 to get 145?",
+      "Both are next to squares: 120 = 11² − 1 and 145 = 12² + 1. The squares go 11, 12, one minus 1, one plus 1.",
+      "195 = 14² − 1. So the answer is the next square plus 1: 15² + 1 = ?"
+    ],
+    "ka1920m-27": [
+      "Look at the complete pair first, 8 : 256. What do you do to 8 to get 256?",
+      "8³ = 512, and 512 ÷ 2 = 256. Cube the number, then halve it.",
+      "Work backwards from 108: double it to get 216. Which number cubed makes 216?"
+    ],
+    "ka21m-09": [
+      "Look at the complete pair first, 11 : 1320. What do you do to 11 to get 1320?",
+      "1320 = 10 × 11 × 12: the number before, the number, and the number after, multiplied.",
+      "Which three numbers in a row multiply to 720? Try 8 × 9 × 10. Which one is in the middle?"
+    ],
+    "ka21m-10": [
+      "Look at the complete pair first, 4 1/5 : 215. Write 4 1/5 as one fraction.",
+      "4 1/5 = 21/5. Its top 21 and bottom 5 written side by side make 215.",
+      "3 1/4 = (3 × 4 + 1)/4 = 13/4. Write its top and bottom side by side. Which option is it?"
+    ],
+    "ka21m-12": [
+      "Look at the complete pair first, 3 : 39. What do you do to 3 to get 39?",
+      "3³ = 27, 3² = 9, and 27 + 9 + 3 = 39. The second number is n³ + n² + n.",
+      "For 4: 4³ + 4² + 4 = 64 + 16 + 4 = ?"
+    ],
+    "ka23m-06": [
+      "Look at the complete pair first, 17 : 23. What do you do to 17 to get 23?",
+      "17 and 23 are both prime. The primes after 17 are 19, 23: 23 is the 2nd prime after 17.",
+      "Count two primes on from 29. The first is 31; what is the second?"
+    ],
+    "ka23m-07": [
+      "Look at the complete pair first, 0.06 : 0.000072. Forget the decimal point for a moment: 6 and 72.",
+      "6³ = 216, and 216 ÷ 3 = 72. With the decimals: 0.06³ = 0.000216, and 0.000216 ÷ 3 = 0.000072. Cube, then divide by 3.",
+      "0.09³ = 0.000729 (6 places after the point). Divide it by 3, keeping 6 places. Which option is it?"
+    ],
+    "ka23m-08": [
+      "Look at the complete pair first, 17 : 27. What do you do to 17 to get 27?",
+      "17 + 1 = 18, and 18 × 3/2 = 27. Add 1, then multiply by 3/2 (half as much again).",
+      "For 11: 11 + 1 = 12. What is 12 × 3/2?"
+    ],
+    "ka2324m-11": [
+      "Look at the complete pair first, 45 : 81. What do you do to 45 to get 81?",
+      "81 = 9², and 4 + 5 = 9. Add the digits, then square the sum.",
+      "For 38: 3 + 8 = 11. What is 11²?"
+    ],
+    "ka2324m-12": [
+      "Look at the complete pair first, 34 : 70. What do you do to 34 to get 70?",
+      "70 is a little more than double 34 (68). 34 × 2 + 2 = 70: double, then add 2.",
+      "For 78: 78 × 2 + 2 = ?"
+    ],
+    "ka2324m-13": [
+      "Look at the complete pair first, 6 : 108. What do you do to 6 to get 108?",
+      "6³ = 216, and 216 ÷ 2 = 108. Cube the number, then halve it.",
+      "8³ = 512. Half of 512 = ?"
+    ],
+    "ka2425m-51": [
+      "Look at the complete pair first, 8 : 64. What do you do to 8 to get 64?",
+      "64 = 4³, and 4 is half of 8. Halve the number, then cube it.",
+      "Half of 12 is 6. What is 6³?"
+    ],
+    "ka2425m-52": [
+      "Look at the complete pair first, 6 : 258. What do you do to 6 to get 258?",
+      "6³ = 216, 6² = 36, and 216 + 36 + 6 = 258. The second number is n³ + n² + n.",
+      "For 7: 7³ + 7² + 7 = 343 + 49 + 7 = ?"
+    ]
+  }
+}

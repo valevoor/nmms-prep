@@ -1,0 +1,136 @@
+{
+  "topic": "statements-decisions",
+  "_note": "Step-by-step clues for Statements and Decisions (Chapter 36): the book questions and the past-paper questions filed under the chapter, by question id. The clues are the method, the same for every question with circles: draw each statement as circles, look for a second drawing that still fits the statements, and keep only the decisions that are true in every drawing. The last clue never names the option. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "sd-b01": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b02": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b03": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b04": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b05": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b06": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b07": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b08": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b09": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b10": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b11": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b12": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b13": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b14": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "sd-b15": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka21m-89": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka23m-81": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka23m-82": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2324m-84": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2324m-85": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2425m-89": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2425m-90": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2526m-13": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2526m-14": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka2526m-15": [
+      "Draw each group as a circle. 'All A are B': circle A inside circle B. 'Some A are B': the circles overlap. 'No A is B': the circles are apart.",
+      "Now try to draw it another way that still fits the statements. 'Some A are B' also means 'some B are A', but never 'all'. A circle that only has to touch one group can be moved away from the others.",
+      "A decision follows only if it is true in every drawing. Check each one: which option lists exactly those?"
+    ],
+    "ka21m-90": [
+      "There is only one statement. Read it carefully: 'most' means more than half, but not all.",
+      "If most members are good players, the rest, some members, are not good players.",
+      "Does the statement say anything about how the team plays or wins? Which decisions follow?"
+    ]
+  }
+}

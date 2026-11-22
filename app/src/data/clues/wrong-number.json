@@ -1,0 +1,166 @@
+{
+  "topic": "wrong-number",
+  "_note": "Step-by-step clues for Wrong Number in a Series (Chapter 4): the book questions and the past-paper questions filed under the chapter, by question id. Each list says what to look at first, shows the rule on terms that fit it, then asks the student to check the rest term by term. The last clue never names the wrong term. Questions marked needs-review have none. tools/check_clues.ts checks them.",
+  "clues": {
+    "wn-b01": [
+      "One term has been changed. Find the difference between neighbouring terms and look for a pattern.",
+      "+4, +9, +16, +25: the differences are the squares 2², 3², 4², 5². The next one should be 6² = 36.",
+      "What should come after 89: 89 + 36? Is that the number printed?"
+    ],
+    "wn-b02": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "5 = 2³ − 3, 24 = 3³ − 3, 61 = 4³ − 3, 122 = 5³ − 3. Each term is a cube minus 3.",
+      "The last term should be 6³ − 3. Work it out: does it match the last number printed?"
+    ],
+    "wn-b03": [
+      "One term has been changed. The terms go up and down, so try two series taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "2nd, 4th, 6th… terms: 6, 11, 16, 21 (+5) all fit. 1st, 3rd, 5th… terms: 7, ?, 13, 16, 19 should go up by 3.",
+      "What should the 3rd term be: 7 + 3? Which printed term is not that?"
+    ],
+    "wn-b04": [
+      "One term has been changed. Every term ends in 0: divide each by 10 first.",
+      "You get 32, 64, 125, 216, 343. Most are cubes: 4³, 5³, 6³, 7³. So each term is n³ × 10.",
+      "The first term should be 3³ × 10. Work it out: is that what is printed?"
+    ],
+    "wn-b05": [
+      "One term has been changed. Add each pair of neighbouring terms and compare with the term after them.",
+      "3 + 4 = 7, 4 + 7 = 11, 7 + 11 = 18, 11 + 18 = 29. Each term is the sum of the two before it.",
+      "The last term should be 18 + 29. Work it out: is that what is printed?"
+    ],
+    "wn-b06": [
+      "One number doesn't fit, but the numbers don't grow by a rule. Look at the three digits inside each number.",
+      "147: (1 + 7) ÷ 2 = 4. 258: (2 + 8) ÷ 2 = 5. The middle digit is the average of the outer two.",
+      "Check 134, 345 and 357 the same way. Which one's middle digit is not the average?"
+    ],
+    "wn-b07": [
+      "One term has been changed. Each term is about double the one before: double each and compare with the next.",
+      "2 × 2 + 1 = 5, 5 × 2 − 1 = 9, 9 × 2 + 1 = 19, 19 × 2 − 1 = 37: × 2 + 1 and × 2 − 1 take turns.",
+      "Go on: 37 × 2 + 1, then that × 2 − 1. Which printed term doesn't match?"
+    ],
+    "wn-b08": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "2 = 1³ + 1, 10 = 2³ + 2, 30 = 3³ + 3, 130 = 5³ + 5. Each term is n³ + n.",
+      "The 4th term should be 4³ + 4. Work it out: is that what is printed?"
+    ],
+    "wn-b09": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 8, 27, 64, 125, 216.",
+      "12 = 2³ + 2², 36 = 3³ + 3², 80 = 4³ + 4², 150 = 5³ + 5². Each term is a cube plus a square.",
+      "The last term should be 6³ + 6². Work it out: is that what is printed?"
+    ],
+    "wn-b10": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "14 = 2³ + 2² + 2, 39 = 3³ + 3² + 3, 84 = 4³ + 4² + 4. Each term is n³ + n² + n.",
+      "Check the ends too. The first term should be 1³ + 1² + 1 and the last 5³ + 5² + 5. Which printed term doesn't match?"
+    ],
+    "wn-b11": [
+      "One term has been changed. The terms go up and down, so try two series taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "2nd, 4th, 6th terms: 18, 36, 72, each double the one before. 1st, 3rd terms: 15, 29: 15 × 2 − 1 = 29.",
+      "The 5th term should be 29 × 2 − 1. Work it out: is that what is printed?"
+    ],
+    "wn-b12": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "2 = 1³ + 1, 10 = 2³ + 2, 30 = 3³ + 3, 68 = 4³ + 4. Each term is n³ + n.",
+      "The last term should be 5³ + 5. Work it out: is that what is printed?"
+    ],
+    "wn-b13": [
+      "One term has been changed. The terms go up and down, so try two series taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "1st, 3rd, 5th… terms: 81, 27, 9, 3, … are powers of 3 going down (3⁴, 3³, 3², 3¹). 2nd, 4th… terms: 64, 16, 4, 1 are powers of 4 going down.",
+      "After 3¹ comes 3⁰. Any number to the power 0 is 1, not 0. So which printed term is wrong?"
+    ],
+    "wn-b14": [
+      "One term has been changed. Each term is about 3 times the one before: multiply each by 3 and compare with the next.",
+      "2 × 3 + 1 = 7, 7 × 3 + 2 = 23, 23 × 3 + 3 = 72: × 3, then + 1, + 2, + 3…",
+      "The last term should be 72 × 3 + 4. Work it out: is that what is printed?"
+    ],
+    "wn-b15": [
+      "One term has been changed. Find the difference between neighbouring terms and look for a pattern.",
+      "+1, +4, +9, +16: the differences are the squares 1², 2², 3², 4². The next one should be 5² = 25.",
+      "What should come after 32: 32 + 25? Is that the number printed?"
+    ],
+    "wn-b16": [
+      "One term has been changed. Each term is close to a square: 80 is near 81 = 9², 50 near 49 = 7², 24 near 25 = 5².",
+      "80 = 9² − 1, 50 = 7² + 1, 24 = 5² − 1, 10 = 3² + 1, 0 = 1² − 1. Odd squares going down, with + 1 and − 1 taking turns.",
+      "The first term should be 11² + 1. Work it out: is that what is printed?"
+    ],
+    "ka1920m-11": [
+      "One number doesn't fit. 39, 65, 91 and 104 all divide by the same number. Which one?",
+      "39 = 13 × 3, 65 = 13 × 5, 91 = 13 × 7, 104 = 13 × 8. They are multiples of 13.",
+      "Which printed number is not a multiple of 13?"
+    ],
+    "ka1920m-12": [
+      "One number doesn't fit. 103, 107, 109 and 113 divide only by 1 and themselves.",
+      "So the series is made of prime numbers. An even number bigger than 2 is never prime.",
+      "Which printed number is not prime?"
+    ],
+    "ka1920m-13": [
+      "One term has been changed. Try writing each term as two numbers multiplied.",
+      "20 = 4 × 5, 30 = 5 × 6, 42 = 6 × 7, 72 = 8 × 9: a number times the next.",
+      "The 4th term should be 7 × 8. Work it out: is that what is printed?"
+    ],
+    "ka1920m-14": [
+      "One term has been changed. Divide each term by the one before: about how many times is it?",
+      "4 × 1 + 1 = 5, 5 × 2 + 2 = 12: multiply by 1, 2, 3, 4 and add the same number.",
+      "The 4th term should be 12 × 3 + 3. Work it out: is that what is printed? (Check it gives the 5th term too.)"
+    ],
+    "ka1920m-15": [
+      "One term has been changed. Find the difference between neighbouring terms and look for a pattern.",
+      "The differences should go up by 2: +6, +8, +10, +12. 5 + 6 = 11 and 11 + 8 = 19 fit.",
+      "The 4th term should be 19 + 10, and then + 12 gives 41. Which printed term doesn't match?"
+    ],
+    "ka21m-15": [
+      "One term has been changed. All the terms are even: halve each one.",
+      "You get 1, 4, 9, 16, 27. The first four are squares 1², 2², 3², 4². So each term is 2 × a square.",
+      "The last term should be 2 × 5². Work it out: is that what is printed?"
+    ],
+    "ka21m-16": [
+      "One term has been changed. Divide each term by its place: the 1st by 1, the 2nd by 2, and so on.",
+      "4 ÷ 1 = 4 = 2², 18 ÷ 2 = 9 = 3², 100 ÷ 4 = 25 = 5², 180 ÷ 5 = 36 = 6². Each term is n × (n + 1)².",
+      "The 3rd term should be 3 × 4². Work it out: is that what is printed?"
+    ],
+    "ka21m-17": [
+      "Here the options are pairs of terms. Split the series into two taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "1st, 3rd, 5th… terms should be 0, 1, 3, 6, 10 (+1, +2, +3, +4). 2nd, 4th… terms should be the odd numbers 1, 3, 5, 7, 9.",
+      "So the 9th term should be 10 and the 10th should be 9. Which printed pair is the wrong way round?"
+    ],
+    "ka21m-18": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "4 = 1³ + 3, 30 = 3³ + 3, 67 = 4³ + 3, 128 = 5³ + 3. Each term is a cube plus 3.",
+      "The 2nd term should be 2³ + 3. Work it out: is that what is printed?"
+    ],
+    "ka21m-19": [
+      "One term has been changed. The numbers get smaller fast: work from the right, dividing.",
+      "2 ÷ 1 = 2, 4 ÷ 2 = 2, 12 ÷ 3 = 4. Each term is divided by 5, 4, 3, 2, 1 in turn.",
+      "The 2nd term should be 240 ÷ 5, and then ÷ 4 gives 12. Which printed term doesn't match?"
+    ],
+    "ka23m-04": [
+      "One number doesn't fit. 61, 67, 71 and 73 divide only by 1 and themselves.",
+      "So the series is the prime numbers in order. A number ending in 5 divides by 5.",
+      "Which printed number is not prime?"
+    ],
+    "ka23m-05": [
+      "One term has been changed. The terms go up and down, so try two series taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "1st, 3rd, 5th… terms: 2, 3, 7, 16, adding 1², 2², 3². 2nd, 4th… terms: 1, 2, 10, …, adding 1³, 2³, 3³.",
+      "The last term should be 10 + 3³. Work it out: is that what is printed?"
+    ],
+    "ka2324m-04": [
+      "One term has been changed. The numbers grow fast, so compare each one with a cube: 1, 8, 27, 64, 125, 216.",
+      "0 = 1³ − 1, 7 = 2³ − 1, 26 = 3³ − 1, 124 = 5³ − 1. Each term is a cube minus 1.",
+      "The 4th term should be 4³ − 1. Work it out: is that what is printed?"
+    ],
+    "ka2324m-05": [
+      "One term has been changed. Find the difference between neighbouring terms and look for a pattern.",
+      "+2, +3, +5: the differences are the prime numbers in order, 2, 3, 5, 7, 11.",
+      "The 5th term should be 11 + 7, and then + 11 gives 29. Which printed term doesn't match?"
+    ],
+    "ka2425m-49": [
+      "One term has been changed. The terms go up and down, so try two series taking turns: the 1st, 3rd, 5th… and the 2nd, 4th, 6th…",
+      "1st, 3rd, 5th terms: 6 = 2² + 2, 18 = 4² + 2, 38 = 6² + 2. 2nd, 4th, 6th terms: 30 = 3³ + 3, …, 346 = 7³ + 3.",
+      "The 4th term should be 5³ + 3. Work it out: is that what is printed?"
+    ],
+    "ka2425m-50": [
+      "One term has been changed. Find the difference between neighbouring terms and look for a pattern.",
+      "The differences should be the squares in turn: +1, +4, +9, +16, +25. 31 + 1 = 32 fits.",
+      "The 3rd term should be 32 + 4, and then + 9 gives 45. Which printed term doesn't match?"
+    ]
+  }
+}

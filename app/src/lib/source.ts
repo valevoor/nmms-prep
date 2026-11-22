@@ -1,20 +1,22 @@
-import { getPaper } from '../data/papers'
+import { getModel, getPaper } from '../data/papers'
 import type { SatPaper, SatQuestion } from '../data/sat'
 import type { Question } from '../types'
 import type { Dict } from './i18n'
 
-/** Where a question comes from: "Book Q5", "Practice question" or a past paper ("Karnataka 2020-21 · Q2"). */
+/** Where a question comes from: "Book Q5", "Practice question", a past paper ("Karnataka 2020-21 · Q2") or a model paper ("Model paper, Bengaluru North · Q5"). */
 export function questionLabel(q: Question, t: Dict): string {
   if (q.generated) return t.common.practiceQuestion
   const paper = q.paper ? getPaper(q.paper) : undefined
   if (paper) return t.common.paperQ(t.common.states[paper.state], paper.year, q.paperNo)
+  const model = q.model ? getModel(q.model) : undefined
+  if (model) return t.common.modelQ(t.common.issuers[model.issuer] ?? model.issuer, q.paperNo)
   return t.common.bookQ(q.bookNo)
 }
 
 /** The line under an explanation: the question's source and where its answer comes from. */
 export function sourceLine(q: Question, t: Dict): string {
   if (q.generated) return t.common.madeByApp
-  const key = q.paper ? (q.keyFrom === 'book' ? t.common.keyOfficial : t.common.keyWorkedOutPaper) : q.keyFrom === 'book' ? t.common.keyFromBook : t.common.keyWorkedOut
+  const key = q.model ? (q.keyFrom === 'book' ? t.common.keyFromModel : t.common.keyWorkedOut) : q.paper ? (q.keyFrom === 'book' ? t.common.keyOfficial : t.common.keyWorkedOutPaper) : q.keyFrom === 'book' ? t.common.keyFromBook : t.common.keyWorkedOut
   return `${questionLabel(q, t)} · ${key}`
 }
 
